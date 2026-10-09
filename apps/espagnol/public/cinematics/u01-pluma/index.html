@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u01-pluma</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      .plan { position: absolute; inset: 0; }
+      #world { position: absolute; inset: 0; transform-origin: 50% 60%; }
+      #night { position: absolute; inset: 0; background: radial-gradient(ellipse at 66% 48%, #3a1c6e 0%, #1d2160 38%, #0b0d2a 80%); }
+      #dawn { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 42%, #fff1b5 0%, #ffc83d 22%, #ff8a47 48%, #8f1d4e 78%, #1d2160 100%); opacity: 0; }
+      #stars { position: absolute; inset: 0; }
+      #floor { position: absolute; left: 0; right: 0; top: 880px; height: 320px; background-size: auto, 90px 90px; }
+      #raysB { position: absolute; left: 160px; top: -260px; width: 1600px; height: 1600px; opacity: 0; mix-blend-mode: screen; }
+      #flash { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 30; }
+      #spell { position: absolute; left: 0; top: 0; z-index: 8; opacity: 0; }
+      #beam { position: absolute; left: 0; top: 0; height: 26px; width: 560px; margin-top: -13px; border-radius: 13px; background: linear-gradient(90deg, rgba(255,243,176,0), #fff3b0 30%, #ffc83d 70%, #fff); box-shadow: 0 0 40px 12px rgba(255,200,61,.8); transform-origin: 0 50%; opacity: 0; z-index: 7; }
+      #cracks { position: absolute; left: 0; top: 0; z-index: 6; filter: drop-shadow(0 0 12px #fff3b0); }
+      #sombra { position: absolute; left: 0; top: 0; width: 760px; height: 912px; z-index: 5; }
+      .shard { position: absolute; left: 0; top: 0; width: 34px; height: 40px; opacity: 0; z-index: 9; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+      .dust { position: absolute; left: 0; top: 0; z-index: 9; }
+      #banner { position: absolute; left: 50%; top: 168px; margin-left: -520px; width: 1040px; z-index: 40; text-align: center; }
+      #banner .rb { position: relative; display: inline-flex; align-items: center; gap: 26px; padding: 20px 76px 24px 40px; background: linear-gradient(180deg, #1d2160, #14173f); border: 6px solid #ffc83d; border-radius: 26px; box-shadow: 0 0 0 5px #14173f, 0 14px 0 -2px rgba(0,0,0,.35), 0 0 60px rgba(66,224,160,.5); }
+      #banner small { display: block; font: 900 28px/1 Nunito, sans-serif; letter-spacing: .3em; color: #42e0a0; text-transform: uppercase; }
+      #banner b { display: block; margin-top: 8px; font: 400 70px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 5px 0 rgba(0,0,0,.4); white-space: nowrap; }
+      #banner .fi { flex: none; filter: drop-shadow(0 0 14px rgba(155,255,214,.9)); }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      /* plan 2 */
+      #p2 { visibility: hidden; background: #0d5a7a; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq:not(.m-plq-salamanca), #mapbox .m-med:not(.m-med-madrid):not(.m-med-salamanca) { display: none; }
+      #mapbox .m-med text { display: none; }
+      #wipe { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 31; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u01-pluma" data-start="0" data-width="1920" data-height="1200" data-duration="9.66">
+      <div id="p1" class="plan">
+        <div id="world">
+          <div id="night"></div>
+          <div id="stars"></div>
+          <div id="floor"></div>
+          <div id="dawn"></div>
+          <div id="raysB"></div>
+          <div id="actors" style="position:absolute;inset:0"></div>
+        </div>
+        <div id="banner"></div>
+        <div id="flash"></div>
+      </div>
+      <div id="p2" class="plan">
+        <div id="mapbox" data-layout-allow-overflow></div>
+      </div>
+      <div id="wipe"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.66" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.46,"v":1},{"t":9.66,"v":0}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/quetzal.ae8070b510.mp3" data-start="3.3" data-duration="2.894" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/ignacio.e9366070ca.mp3" data-start="7.144" data-duration="1.566" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-cast.mp3" data-start="0.3" data-duration="0.465" data-track-index="3" data-volume="0.55"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.5" data-duration="1.104" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-hit.mp3" data-start="1.7" data-duration="1.159" data-track-index="5" data-volume="0.7"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/item-get.mp3" data-start="3.1" data-duration="0.526" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up-big.mp3" data-start="3.3" data-duration="1.015" data-track-index="7" data-volume="0.5"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="6.344" data-duration="0.212" data-track-index="8" data-volume="0.5"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/star.mp3" data-start="8.444" data-duration="0.121" data-track-index="9" data-volume="0.45"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/bell.mp3" data-start="8.444" data-duration="1.216" data-track-index="10" data-volume="0.25"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u01-pluma","cinematica":"u01-pluma","part":1,"parts":1,"total":9.66,"meta":{"cinematica":"u01-pluma","titulo":"Primera pluma","tipo":"pluma","unidad":"¡Hola! Me presento","numero":1,"lugar":"Madrid","pluma":"Pluma de la Voz","plumaNum":1,"rotulo":""},"plans":[{"n":1,"t0":0,"t1":6.544,"vista":"La Sombra se dissout en poussière dorée ; une plume verte brillante tombe lentement et Álex la rattrape. Flash de lumière.","camara":"","rotulo":"","personajes":["quetzal","viajero"],"lines":[{"who":"quetzal","es":"¡Gracias, amigo! ¡Hola!","key":"quetzal.ae8070b510","t":3.3,"d":2.894,"words":[{"w":"¡Gracias,","t":3.3,"d":0.655},{"w":"amigo!","t":4.216,"d":1.644},{"w":"¡Hola!","t":5.904,"d":0.14}]}]},{"n":2,"t0":6.544,"t1":9.41,"vista":"La carte du monde : une empreinte lumineuse indique Salamanca.","camara":"","rotulo":"","personajes":["ignacio"],"lines":[{"who":"ignacio","es":"Ahora, a Salamanca.","key":"ignacio.e9366070ca","t":7.144,"d":1.566,"words":[{"w":"Ahora,","t":7.144,"d":0.364},{"w":"a","t":7.844,"d":0.134},{"w":"Salamanca.","t":7.978,"d":0.582}]}]}],"sfx":[{"t":0.3,"f":"rpg/spell-cast"},{"t":0.5,"f":"rpg/spell-magic"},{"t":1.7,"f":"rpg/spell-hit"},{"t":3.1,"f":"rpg/item-get"},{"t":3.3,"f":"rpg/level-up-big"},{"t":6.344,"f":"ui/swoosh-out"},{"t":8.444,"f":"ui/star"},{"t":8.444,"f":"rpg/bell"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var rnd = Q.rng(33);
+
+        // ============ PLAN 1 : la Sombra se brise ============
+        // fond : nuit etoilee, sol en azulejos
+        var st = ""; for (var i = 0; i < 80; i++) st += '<circle cx="' + (rnd() * 1920).toFixed(0) + '" cy="' + (rnd() * 800).toFixed(0) + '" r="' + (1 + rnd() * 2.4).toFixed(1) + '" fill="#fff3d1" opacity="' + (0.25 + rnd() * 0.6).toFixed(2) + '"/>';
+        $("#stars").innerHTML = '<svg width="1920" height="1200" viewBox="0 0 1920 1200">' + st + "</svg>";
+        $("#floor").style.backgroundImage = "linear-gradient(180deg, rgba(29,33,96,.55), rgba(11,13,42,.96)), url('" + Q.azulejoDataUri({ a: "#1d2160", b: "#19b7aa", c: "#ffc83d" }, 90) + "')";
+        var rays = ""; for (var r = 0; r < 18; r++) { var a = (r / 18) * 6.283, b = a + 0.12; rays += '<path d="M800 800L' + (800 + Math.cos(a) * 1100).toFixed(0) + " " + (800 + Math.sin(a) * 1100).toFixed(0) + "L" + (800 + Math.cos(b) * 1100).toFixed(0) + " " + (800 + Math.sin(b) * 1100).toFixed(0) + 'Z"/>'; }
+        $("#raysB").innerHTML = '<svg width="1600" height="1600" viewBox="0 0 1600 1600"><g fill="#ffe9a8" opacity=".34">' + rays + "</g></svg>";
+        var actors = $("#actors");
+        var SOX = 1210, SOY = 70; // position de la Sombra (coin haut-gauche)
+        var sh = mk(actors, ""); sh.id = "sombra"; sh.style.cssText = "position:absolute;left:0;top:0;width:760px;height:912px;z-index:5";
+        sh.innerHTML = Q.sombra({ uid: "sbp", width: 760, height: 912, arm: true });
+        gsap.set(sh, { x: SOX - 380, y: SOY });
+        var alex = S.chr(actors, "viajero", 520, 905, 360);
+        alex.el.style.zIndex = 4;
+        S.breathe(tl, alex, 0, 4);
+        Q.sombraFloat(tl, sh, 0, 2, 1.8);
+        Q.sombraEyes(tl, sh, 0.1, "open", 0.5);
+        Q.charBlink(tl, alex.svg, 0.9);
+
+        // camera : leger push-in tendu vers le duel, secousse a l'explosion, puis respiration large
+        tl.fromTo("#world", { scale: 1.0 }, { scale: 1.1, duration: 1.7, ease: "power2.in" }, 0);
+        tl.to("#world", { keyframes: [{ x: -22, y: 10, duration: 0.05 }, { x: 18, y: -12, duration: 0.05 }, { x: -12, y: 8, duration: 0.05 }, { x: 8, y: -4, duration: 0.05 }, { x: 0, y: 0, duration: 0.08 }], ease: "power1.inOut" }, 1.7);
+        tl.to("#world", { scale: 1.0, duration: 1.5, ease: "power3.out" }, 1.75);
+
+        // hechizo : le cercle runique s'allume devant Alex, le rayon fonce sur la Sombra
+        var spell = mk(actors, ""); spell.id = "spell";
+        var runes = ""; for (var k = 0; k < 12; k++) { var ang = (k / 12) * 6.283; runes += '<path d="' + Q.sparklePath(Math.cos(ang) * 98, Math.sin(ang) * 98, 12, 4) + '" fill="#ffe9a8"/>'; }
+        spell.innerHTML = '<svg width="260" height="260" viewBox="-130 -130 260 260"><circle r="120" fill="none" stroke="#ffc83d" stroke-width="6"/><circle r="84" fill="none" stroke="#fff3b0" stroke-width="3" stroke-dasharray="8 10"/><path d="M0 -76L66 38L-66 38Z M0 76L66 -38L-66 -38Z" fill="none" stroke="#ffe9a8" stroke-width="4"/>' + runes + '<circle r="34" fill="#fff3b0" opacity=".85"/></svg>';
+        var HX = 800, HY = 560;
+        gsap.set(spell, { x: HX - 130, y: HY - 130, transformOrigin: "130px 130px" });
+        tl.fromTo(spell, { scale: 0, rotation: -90, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.5, ease: "back.out(1.8)" }, 0.3);
+        tl.to(spell, { rotation: 140, duration: 1.4, ease: "none" }, 0.8);
+        tl.to(spell, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, 1.75);
+        var armR = alex.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -92, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.7)" }, 0.25);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, 2.2);
+        Q.charEmote(tl, alex.svg, 0.3, "happy", 0.3);
+        var beam = mk(actors, ""); beam.id = "beam";
+        var bx = HX + 30, by = HY - 30, tx = SOX, ty = SOY + 380, len = Math.hypot(tx - bx, ty - by);
+        gsap.set(beam, { x: bx, y: by, width: len, rotation: Math.atan2(ty - by, tx - bx) * 180 / Math.PI });
+        tl.fromTo(beam, { scaleX: 0, opacity: 1 }, { scaleX: 1, duration: 0.3, ease: "power3.out", immediateRender: false }, 0.75);
+        tl.to(beam, { opacity: 0.55, duration: 0.07, yoyo: true, repeat: 7, ease: "none" }, 1.05);
+        tl.to(beam, { opacity: 0, duration: 0.2 }, 1.7);
+        // la Sombra se fissure (traits de lumiere)
+        var cr = mk(actors, ""); cr.id = "cracks";
+        var crs = [["M1390 250L1350 340L1400 410L1330 500L1380 600", 0.9], ["M1310 420L1430 470L1380 560L1470 620", 1.0], ["M1230 330L1300 410L1250 520L1330 640L1290 760", 1.05], ["M1500 400L1440 480L1490 560", 1.1], ["M1380 600L1330 720L1400 810L1350 920", 1.15]];
+        cr.innerHTML = '<svg width="1920" height="1200" viewBox="0 0 1920 1200">' + crs.map(function (c, i) { return '<path class="cr" d="' + c[0] + '" fill="none" stroke="#fff7dc" stroke-width="' + (9 - i) + '" stroke-linecap="round" stroke-linejoin="round"/>'; }).join("") + "</svg>";
+        Array.prototype.forEach.call(cr.querySelectorAll(".cr"), function (p, i) {
+          var l = p.getTotalLength(); p.style.strokeDasharray = l; p.style.strokeDashoffset = l;
+          tl.to(p, { strokeDashoffset: 0, duration: 0.35, ease: "power2.out" }, crs[i][1]);
+        });
+        tl.fromTo(sh, { filter: "brightness(1)" }, { filter: "brightness(2.2)", duration: 0.5, ease: "power2.in", immediateRender: false }, 1.2);
+        tl.to(sh, { x: "+=10", duration: 0.04, ease: "none", yoyo: true, repeat: 15 }, 1.1);
+        // EXPLOSION : eclair blanc, eclats de lumiere, poussiere doree
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 1, duration: 0.07, ease: "power2.out", immediateRender: false }, 1.7);
+        tl.to("#flash", { opacity: 0, duration: 0.6, ease: "power2.out" }, 1.78);
+        tl.to(sh, { opacity: 0, scale: 1.18, duration: 0.25, ease: "power2.out", transformOrigin: "50% 50%" }, 1.72);
+        tl.to("#cracks", { opacity: 0, duration: 0.2 }, 1.72);
+        tl.to("#dawn", { opacity: 1, duration: 1.4, ease: "power2.inOut" }, 1.72);
+        tl.fromTo("#raysB", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 0.65, scale: 1, rotation: 0, duration: 0.9, ease: "expo.out" }, 1.72);
+        tl.to("#raysB", { rotation: 30, duration: W - 1.7, ease: "none" }, 2.4);
+        tl.to("#raysB", { opacity: 0, duration: 0.6 }, W - 1.0);
+        tl.to("#night", { opacity: 0, duration: 1.2 }, 1.8);
+        for (var s = 0; s < 70; s++) {
+          var sd = mk(actors, "shard"); sd.style.background = s % 3 === 0 ? "#fff7dc" : s % 3 === 1 ? "#ffc83d" : "#ff9f1c";
+          var ang2 = rnd() * 6.283, d = 260 + rnd() * 760, x0 = SOX + (rnd() - 0.5) * 200, y0 = SOY + 360 + (rnd() - 0.5) * 360, sc = 0.4 + rnd() * 1.1;
+          tl.fromTo(sd, { x: x0, y: y0, opacity: 1, scale: sc, rotation: rnd() * 360 }, { x: x0 + Math.cos(ang2) * d, y: y0 + Math.sin(ang2) * d * 0.8 - 80, rotation: "+=" + (200 + rnd() * 400), duration: 0.8 + rnd() * 0.4, ease: "power3.out", immediateRender: false }, 1.72 + rnd() * 0.04);
+          tl.to(sd, { y: "-=" + (120 + rnd() * 220), opacity: 0, scale: 0.1, duration: 1.3 + rnd() * 0.6, ease: "power1.in" }, 2.5 + rnd() * 0.3);
+        }
+        for (var q = 0; q < 26; q++) {
+          var dt = mk(actors, "dust", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16 + rnd() * 4, 4) + '" fill="' + (q % 2 ? "#fff3b0" : "#ffc83d") + '"/></svg>');
+          var dx = 200 + rnd() * 1500, dy = 600 + rnd() * 400;
+          tl.fromTo(dt, { x: dx, y: dy, opacity: 0, scale: 0.3 + rnd() * 0.7 }, { y: dy - 500 - rnd() * 250, x: dx + (rnd() - 0.5) * 160, opacity: 1, duration: 1.4, ease: "sine.out", immediateRender: false }, 1.9 + rnd() * 1.2);
+          tl.to(dt, { opacity: 0, duration: 0.8, ease: "sine.in" }, 3.1 + rnd() * 1.0);
+        }
+
+        // la plume verte descend de la lumiere, Alex la rattrape
+        var fe = S.feather(actors, 80); fe.style.zIndex = 11;
+        gsap.set(fe, { x: 1000, y: -300, rotation: -20, opacity: 0, transformOrigin: "50% 8%" });
+        var fT = 2.0, fD = 1.3;
+        tl.set(fe, { opacity: 1 }, fT);
+        tl.to(fe, { motionPath: { path: [{ x: 1000, y: -300 }, { x: 900, y: 40 }, { x: 560, y: 180 }, { x: 760, y: 360 }, { x: 640, y: 520 }], curviness: 1.4 }, duration: fD, ease: "sine.inOut" }, fT);
+        tl.fromTo(fe, { rotation: -40 }, { rotation: 35, duration: fD / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, fT);
+        var catchT = fT + fD;
+        tl.to(armR, { rotation: -150, svgOrigin: "258 306", duration: 0.3, ease: "power2.out" }, catchT - 0.5);
+        tl.to(armR, { rotation: -20, svgOrigin: "258 306", duration: 0.4, ease: "back.out(1.6)" }, catchT + 0.1);
+        S.hop(tl, alex, catchT - 0.15, 56);
+        // la plume tourne au-dessus de la main, puis file vers le Quetzal
+        var qx = 1330, qy = 470;
+        var qzEl = S.quetzal(actors, qx, qy + 240, 520, "fly", true, "qpl"); qzEl.style.zIndex = 10;
+        gsap.set(qzEl, { x: 1100, y: -50, opacity: 0, scaleX: -1 });
+        tl.set(qzEl, { opacity: 1 }, catchT - 0.9);
+        tl.to(qzEl, { x: 0, y: 0, duration: 1.0, ease: "power2.out" }, catchT - 0.9);
+        Q.quetzalFlap(tl, qzEl, catchT - 0.9, 8, 0.4, 0.8);
+        tl.to(fe, { x: 1330 - 40, y: 380, rotation: 0, scale: 0.8, duration: 0.7, ease: "power2.inOut" }, catchT + 0.35);
+        tl.to(fe, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" }, catchT + 1.0);
+        Q.quetzalPoseTo(tl, qzEl, "happy", catchT + 0.9, 0.5, "back.out(1.6)");
+        Q.quetzalRegrow(tl, qzEl, catchT + 1.0);
+        Q.quetzalFlap(tl, qzEl, catchT + 1.5, 6, 0.38, 0.6);
+        Q.quetzalBlink(tl, qzEl, catchT + 2.4);
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.6, duration: 0.08, ease: "power2.out", immediateRender: false }, catchT + 0.05);
+        tl.to("#flash", { opacity: 0, duration: 0.5, ease: "power2.out" }, catchT + 0.13);
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.7, duration: 0.1, ease: "power2.out", immediateRender: false }, catchT + 1.05);
+        tl.to("#flash", { opacity: 0, duration: 0.7, ease: "power2.out" }, catchT + 1.15);
+        // etincelles de la prise
+        for (var z = 0; z < 10; z++) {
+          var sp = mk(actors, "star", '<svg width="54" height="54" viewBox="-27 -27 54 54"><path d="' + Q.sparklePath(0, 0, 24, 6) + '" fill="#fff3b0"/></svg>');
+          var za = (z / 10) * 6.283, zx = 640 + Math.cos(za) * 20, zy = 480 + Math.sin(za) * 20;
+          tl.fromTo(sp, { x: zx, y: zy, scale: 0, opacity: 1 }, { x: zx + Math.cos(za) * 150, y: zy + Math.sin(za) * 150, scale: 0.7 + (z % 3) * 0.3, rotation: 90, duration: 0.5, ease: "back.out(2.4)", immediateRender: false }, catchT + 0.05 + z * 0.015);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, catchT + 0.5 + z * 0.015);
+        }
+        // Quetzal parle (« ¡Gracias, amigo! ¡Hola! »)
+        C.talkQuetzal(tl, qzEl, L1);
+        Q.charEmote(tl, alex.svg, L1.t, "happy", 0.3);
+        Q.charWave(tl, alex.svg, L1.words[L1.words.length - 1].t - 0.1, 1.0, "L");
+
+        // bandeau de la plume : « Pluma 1 - Pluma de la Voz »
+        var ban = $("#banner");
+        ban.innerHTML = '<div class="rb"><span class="fi">' + Q.featherSvg({ uid: "fb", width: 60, height: 180 }).replace('viewBox="0 0 120 360"', 'viewBox="0 0 120 360" style="margin:-28px 0"') + '</span><span><small>Pluma ' + (PLAN.meta.plumaNum || 1) + '</small><b>' + (PLAN.meta.pluma || "Pluma de la Voz") + "</b></span></div>";
+        var bt = L1.t - 0.2;
+        tl.fromTo("#banner", { y: -240, scale: 0.8, opacity: 0, transformOrigin: "50% 0" }, { y: 0, scale: 1, opacity: 1, duration: 0.7, ease: "back.out(1.7)" }, bt);
+        tl.fromTo("#banner .rb", { rotation: -2 }, { rotation: 1, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, bt + 0.5);
+        tl.to("#banner", { y: -240, opacity: 0, duration: 0.4, ease: "power3.in" }, W - 0.5);
+
+        // ============ TRANSITION : eclair de lumiere, la carte s'ouvre ============
+        tl.fromTo("#wipe", { opacity: 0 }, { opacity: 1, duration: 0.22, ease: "power2.in", immediateRender: false }, W - 0.25);
+        tl.set("#p1", { visibility: "hidden" }, W);
+        tl.set("#p2", { visibility: "visible" }, W);
+        tl.to("#wipe", { opacity: 0, duration: 0.45, ease: "power2.out" }, W + 0.02);
+
+        // ============ PLAN 2 : la carte, l'empreinte lumineuse vers Salamanca ============
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "done", salamanca: "current", sevilla: "open", valencia: "open" }, player: "madrid", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("salamanca"));
+        var mad = Q.mapRegion("madrid"), sal = Q.mapRegion("salamanca");
+        var mid = { x: (mad.x + sal.x) / 2, y: (mad.y + sal.y) / 2 };
+        Q.mapCamSet(gsap, mapbox, { x: mad.x, y: mad.y }, 2.2);
+        Q.mapCamMove(tl, mapbox, mid, 2.9, W, 0.9, "power2.out");
+        Q.mapFogDrift(tl, mapbox, W, 4);
+        Q.mapPulse(tl, mapbox, W, 4, 0.9);
+        // le pion part de Madrid ; les nuages de Salamanca se dissipent a l'arrivee
+        Q.mapTravel(tl, mapbox, "madrid", "salamanca", L2.t + 0.15, 1.2, gsap);
+        Q.mapFogClear(tl, mapbox, "salamanca", L2.t + 1.25, 1.7);
+        Q.mapCamMove(tl, mapbox, { x: sal.x + 10, y: sal.y }, 3.4, L2.t + 1.0, 1.6, "power2.inOut");
+        // empreinte lumineuse sur Salamanca
+        var fp = mk($("#p2"), "star", '<svg width="260" height="260" viewBox="-130 -130 260 260"><circle r="100" fill="none" stroke="#ffe9a8" stroke-width="8"/><circle r="60" fill="#ffc83d" opacity=".35"/><path d="' + Q.sparklePath(0, 0, 70, 14) + '" fill="#fff3b0"/></svg>');
+        fp.style.zIndex = 8;
+                gsap.set(fp, { x: 960 - 130 + 0, y: 600 - 130, opacity: 0 });
+        tl.fromTo(fp, { scale: 0.2, opacity: 0, rotation: -30 }, { scale: 1.3, opacity: 0.9, rotation: 0, duration: 0.7, ease: "back.out(1.6)" }, L2.t + 1.9);
+        tl.to(fp, { scale: 1.6, opacity: 0, duration: 0.8, ease: "power2.out" }, L2.t + 2.55);
+
+        // ============ cadre + sous-titres ============
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.4 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u01-pluma"] = tl;
+      })();
+    </script>
+  </body>
+</html>

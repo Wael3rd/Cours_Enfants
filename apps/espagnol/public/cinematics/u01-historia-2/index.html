@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u01-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      #stage { position: absolute; inset: 0; }
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      .star { position: absolute; left: 0; top: 0; }
+      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, rgba(155,255,214,.5), rgba(155,255,214,0) 62%); mix-blend-mode: screen; z-index: 20; opacity: 0; pointer-events: none; }
+      .st-feather { filter: drop-shadow(0 0 14px rgba(155,255,214,.8)); }
+      .dot { position: absolute; left: 0; top: 0; width: 18px; height: 18px; border-radius: 50%; background: #9bffd6; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u01-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="9.989">
+      <div id="stage"></div>
+      <div class="vflash" id="vflash"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.989" data-media-start="9.942" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.689,"v":1},{"t":9.989,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/ignacio.81ef280a77.mp3" data-start="1.3" data-duration="3.868" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/quetzal.4f370da724.mp3" data-start="5.468" data-duration="3.571" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.1" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-00.mp3" data-start="1" data-duration="0.233" data-track-index="5" data-volume="0.6"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/item-get.mp3" data-start="0.9" data-duration="0.526" data-track-index="6" data-volume="0.18"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="9.689" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u01-historia-2","cinematica":"u01-historia","part":2,"parts":4,"total":9.989,"meta":{"cinematica":"u01-historia","titulo":"La Academia de Viajeros","tipo":"historia","unidad":"¡Hola! Me presento","numero":1,"lugar":"Madrid","pluma":"Pluma de la Voz","plumaNum":1,"rotulo":""},"plans":[{"n":2,"t0":0,"t1":9.739,"vista":"Une plume verte tombe du plafond. Le Quetzal, presque sans plumes, entre en titubant et se pose sur le bureau.","camara":"gros plan sur le Quetzal","rotulo":"","personajes":["ignacio","quetzal"],"lines":[{"who":"ignacio","es":"Mira, es el Quetzal. Está muy cansado.","key":"ignacio.81ef280a77","t":1.3,"d":3.868,"words":[{"w":"Mira,","t":1.3,"d":0.422},{"w":"es","t":1.987,"d":0.176},{"w":"el","t":2.163,"d":0.176},{"w":"Quetzal.","t":2.338,"d":0.434},{"w":"Está","t":3.942,"d":0.319},{"w":"muy","t":4.261,"d":0.26},{"w":"cansado.","t":4.521,"d":0.497}]},{"who":"quetzal","es":"Hola… Sin plumas… no puedo volar.","key":"quetzal.4f370da724","t":5.468,"d":3.571,"words":[{"w":"Hola…","t":5.468,"d":0.387},{"w":"Sin","t":6.906,"d":0.257},{"w":"plumas…","t":7.163,"d":0.432},{"w":"no","t":7.943,"d":0.198},{"w":"puedo","t":8.142,"d":0.374},{"w":"volar.","t":8.515,"d":0.374}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/spell-magic"},{"t":1,"f":"rpg/step-00"},{"t":0.9,"f":"rpg/item-get"},{"t":9.689,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var $ = function (s) { return document.querySelector(s); };
+
+        // ---------- decor, Ignacio, Quetzal (sans plumes) ----------
+        var room = S.room($("#stage"));
+        var ign = S.chr(room.actors, "ignacio", 1250, 1015, 360);
+        var QX = 1840, QY = 792; // point de pose sur le bureau
+        var qz = S.quetzal(room.qlayer, QX, QY, 430, "fly", true, "q2");
+        var qsvg = qz.querySelector("svg");
+        S.ambience(tl, room, T);
+        S.breathe(tl, ign, 0, T);
+        S.camSet(room, 1500, 230, 1.12);
+
+        // ---------- la plume verte tombe du plafond (tournoie, se pose sur le bureau) ----------
+        var fe = S.feather(room.qlayer, 70);
+        var fT = 0.15, fD = 1.55;
+        gsap.set(fe, { x: 1640, y: -330, rotation: -30 });
+        tl.to(fe, { motionPath: { path: [{ x: 1640, y: -330 }, { x: 1740, y: 20 }, { x: 1590, y: 330 }, { x: 1690, y: 590 }, { x: 1650, y: 748 }], curviness: 1.5 }, duration: fD, ease: "sine.inOut" }, fT);
+        tl.fromTo(fe, { rotation: -40 }, { rotation: 30, duration: fD * 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, fT);
+        tl.to(fe, { rotation: 78, duration: 0.35, ease: "power2.out" }, fT + fD);
+        for (var i = 0; i < 9; i++) { // poussiere verte dans son sillage
+          var d = S.mk(room.actors, "dot"); d.setAttribute("data-layout-allow-overflow", "");
+          var tt = fT + 0.15 + i * 0.15, dx = 1640 + Math.sin(i * 1.1) * 120, dy = -200 + i * 105;
+          tl.fromTo(d, { x: dx, y: dy, scale: 0.3, opacity: 0 }, { y: dy + 90, scale: 1, opacity: 0.9, duration: 0.3, ease: "power1.out", immediateRender: false }, tt);
+          tl.to(d, { y: dy + 200, scale: 0, opacity: 0, duration: 0.5, ease: "power1.in" }, tt + 0.3);
+        }
+        tl.fromTo("#vflash", { opacity: 0 }, { opacity: 0.6, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, fT + fD - 0.05);
+
+        // ---------- camera : suit la plume (tilt vers le bas) puis plan serre sur le Quetzal ----------
+        S.cam(tl, room, 1600, 520, 1.25, 0.35, 1.2, "power2.inOut");
+        S.cam(tl, room, 1700, 640, 1.5, 1.75, 1.15, "power3.inOut");
+        S.cam(tl, room, 1720, 650, 1.6, 3.0, T - 3.0, "sine.inOut");
+        tl.fromTo("#stage", { rotation: -1.2, transformOrigin: "50% 50%" }, { rotation: 0, duration: 2.0, ease: "power2.out" }, 0);
+
+        // ---------- le Quetzal entre en titubant et se pose ----------
+        var land = 2.25;
+        gsap.set(qz, { x: 760, y: -540, rotation: 12 });
+        tl.to(qz, { motionPath: { path: [{ x: 760, y: -540 }, { x: 560, y: -300 }, { x: 330, y: -430 }, { x: 150, y: -170 }, { x: 90, y: -40 }, { x: 0, y: 0 }], curviness: 1.25 }, duration: land - 1.05, ease: "power1.inOut" }, 1.05);
+        Q.quetzalFlap(tl, qz, 1.05, 4, 0.34, 0.85);
+        Q.quetzalFlap(tl, qz, 2.4 - 1.0, 1, 0.3, 0.6);
+        tl.fromTo(qz, { rotation: 12 }, { rotation: -8, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 2 }, 1.05);
+        tl.to(qz, { rotation: 0, duration: 0.3, ease: "power2.out" }, land - 0.1);
+        Q.quetzalPoseTo(tl, qz, "sad", land - 0.15, 0.55, "power2.out");
+        tl.fromTo(qz, { scaleY: 1 }, { scaleY: 0.86, transformOrigin: "50% 80%", duration: 0.1, ease: "power2.in", yoyo: true, repeat: 1, immediateRender: false }, land);
+        // petits nuages de poussiere a l'atterrissage
+        for (var k = 0; k < 7; k++) {
+          var st = S.mk(room.actors, "star", '<svg width="50" height="50" viewBox="-25 -25 50 50"><circle r="20" fill="#f5e6c8" opacity=".7"/></svg>'); st.setAttribute("data-layout-allow-overflow", "");
+          var sx = QX - 140 + k * 46;
+          tl.fromTo(st, { x: sx, y: QY - 30, scale: 0.3, opacity: 0.9 }, { x: sx + (k - 3) * 22, y: QY - 70 - (k % 3) * 18, scale: 1 + (k % 3) * 0.3, opacity: 0, duration: 0.7, ease: "power2.out", immediateRender: false }, land + 0.02);
+        }
+        Q.quetzalBlink(tl, qz, 3.2); Q.quetzalBlink(tl, qz, 5.9); Q.quetzalBlink(tl, qz, 8.2);
+        // il tremble de fatigue, ses plumes ternes ondulent
+        tl.fromTo(qz, { x: 0 }, { x: 5, duration: 0.07, ease: "sine.inOut", yoyo: true, repeat: 9 }, L2.t + 0.2);
+        Q.quetzalSway(tl, qz, L1.t, 2.6, 0.6);
+
+        // ---------- Ignacio : il montre le Quetzal, il le presente ----------
+        C.talkBounce(tl, ign.b, L1, 5); C.talkChar(tl, ign, L1);
+        tl.to(ign.b, { x: 14, rotation: 3, duration: 0.4, ease: "power2.out" }, L1.t);
+        tl.to(ign.b, { x: 0, rotation: 0, duration: 0.5, ease: "power2.inOut" }, L1.t + L1.d);
+        var armR = ign.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -74, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.6)" }, L1.t - 0.05);
+        tl.to(armR, { rotation: -62, svgOrigin: "258 306", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, L1.t + 0.4);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.4, ease: "power2.inOut" }, L2.t - 0.1);
+        Q.charEmote(tl, ign.svg, L1.t + 1.9, "worry", 0.3);
+        Q.charBlink(tl, ign.svg, 4.3);
+        tl.to(ign.b, { y: 6, scaleY: 0.985, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: 1 }, L2.t + 0.5);
+
+        // ---------- Quetzal parle (bec) ----------
+        C.talkQuetzal(tl, qz, L2);
+        tl.to(qz, { y: 6, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 1 }, L2.words[1].t);
+
+        // ---------- cadre + sous-titres ----------
+        C.frame(tl, root, PLAN, { seed: 8, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u01-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

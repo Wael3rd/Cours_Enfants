@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u01-capsula-hispanos-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .plan { position: absolute; inset: 0; }
+      .mapbox { position: absolute; left: 0; top: 0; width: 1920px; height: 1440px; transform-origin: 0 0; }
+      .mapbox svg.x-svg { width: 1920px; height: 1440px; }
+      #veil { position: absolute; inset: 0; background: #0d1038; opacity: .7; }
+      #cards { position: absolute; left: 0; top: 0; width: 1920px; height: 1200px; }
+      .card { position: absolute; top: 186px; width: 500px; height: 690px; box-sizing: border-box; border-radius: 40px; background: linear-gradient(180deg, #1d2160, #14173f); border: 8px solid #f5e6c8; box-shadow: 0 0 0 5px #14173f, 0 24px 0 -4px rgba(0,0,0,.35), inset 0 0 0 5px rgba(255,200,61,.55); text-align: center; overflow: hidden; }
+      .card .flag { position: absolute; left: 50%; top: 34px; margin-left: -170px; filter: drop-shadow(0 8px 0 rgba(0,0,0,.35)); }
+      .card .mon { position: absolute; left: 0; right: 0; top: 262px; height: 290px; display: grid; place-items: center; }
+      .card .mon i { position: absolute; width: 280px; height: 280px; border-radius: 50%; }
+      .card .mon svg { position: relative; }
+      .card .nm { position: absolute; left: 0; right: 0; bottom: 38px; font: 400 66px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 5px 0 rgba(0,0,0,.4); }
+      .card .nm::before { content: ""; position: absolute; left: 70px; right: 70px; top: -26px; height: 6px; border-radius: 3px; background: #ffc83d; }
+      .chip { position: absolute; left: 0; top: 0; z-index: 12; padding: 8px 28px 12px; border-radius: 999px; background: rgba(13,16,56,.94); border: 4px solid #19b7aa; font: 900 42px/1 Nunito, sans-serif; color: #f5e6c8; white-space: nowrap; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      #more { position: absolute; left: 0; right: 0; top: 880px; text-align: center; font: 400 70px/1 "Alfa Slab One", serif; color: #ffc83d; text-shadow: 0 5px 0 rgba(0,0,0,.45); z-index: 13; opacity: 0; }
+      #trail { position: absolute; left: 0; top: 0; width: 1920px; height: 1440px; z-index: 8; }
+      #pinl { position: absolute; left: 0; top: 0; z-index: 10; padding: 8px 26px 12px; border-radius: 999px; background: rgba(13,16,56,.94); border: 4px solid #ffc83d; font: 400 44px/1 "Alfa Slab One", serif; color: #f5e6c8; white-space: nowrap; }
+      .ring { position: absolute; left: 0; top: 0; width: 70px; height: 70px; margin: -35px 0 0 -35px; border-radius: 50%; border: 6px solid #ffc83d; opacity: 0; z-index: 10; }
+      .spark { position: absolute; left: 0; top: 0; z-index: 11; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u01-capsula-hispanos-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.653">
+      <div id="p3" class="plan">
+        <div id="map3" class="mapbox" data-layout-allow-overflow></div>
+        <div id="veil"></div>
+        <div id="cards"></div>
+      </div>
+      <div id="p4" class="plan" style="visibility:hidden">
+        <div id="cam4" class="mapbox" data-layout-allow-overflow>
+          <div id="map4" class="mapbox" data-layout-allow-overflow></div>
+          <svg id="trail" viewBox="0 0 1920 1440" data-layout-allow-overflow><defs><mask id="trm" maskUnits="userSpaceOnUse" x="-2000" y="-2000" width="6000" height="6000"><path id="trmp" d="" fill="none" stroke="#fff" stroke-width="40"/></mask></defs><path id="trailp" d="" fill="none" stroke="#9bffd6" stroke-width="9" stroke-linecap="round" stroke-dasharray="2 22" mask="url(#trm)"/></svg>
+          <div id="pin" data-layout-allow-overflow></div>
+          <div id="feather" data-layout-allow-overflow></div>
+        </div>
+        <div id="pinl">Madrid</div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.653" data-media-start="9.049" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.453,"v":1},{"t":8.653,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.a57ad46a12.mp3" data-start="0.6" data-duration="3.167" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.04eb23de43.mp3" data-start="5.167" data-duration="2.336" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.5"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="4" data-volume="0.55"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="1.226" data-duration="0.1" data-track-index="5" data-volume="0.55"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="1.901" data-duration="0.1" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/combo.mp3" data-start="3.361" data-duration="0.352" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="4.467" data-duration="0.212" data-track-index="8" data-volume="0.5"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/spell-magic.mp3" data-start="6.167" data-duration="1.104" data-track-index="9" data-volume="0.3"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/level-up.mp3" data-start="7.753" data-duration="0.37" data-track-index="10" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u01-capsula-hispanos-2","cinematica":"u01-capsula-hispanos","part":2,"parts":2,"total":8.653,"meta":{"cinematica":"u01-capsula-hispanos","titulo":"El español en el mundo","tipo":"capsula","unidad":"¡Hola! Me presento","numero":1,"lugar":"Madrid","pluma":"Pluma de la Voz","plumaNum":1,"rotulo":""},"plans":[{"n":3,"t0":0,"t1":4.667,"vista":"Zoom sur l'Espagne, le Mexique et l'Argentine : drapeaux et silhouettes (Sagrada Familia, pyramide, obélisque).","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"España, México, Argentina… ¡y muchos más!","key":"narrador.a57ad46a12","t":0.6,"d":3.167,"words":[{"w":"España,","t":0.6,"d":0.436},{"w":"México,","t":1.276,"d":0.436},{"w":"Argentina…","t":1.951,"d":0.612},{"w":"¡y","t":2.791,"d":0.139},{"w":"muchos","t":2.931,"d":0.43},{"w":"más!","t":3.361,"d":0.256}]}]},{"n":4,"t0":4.667,"t1":8.403,"vista":"Retour sur la carte : la plume du Quetzal s'envole vers l'ouest.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El viaje del Quetzal empieza en España.","key":"narrador.04eb23de43","t":5.167,"d":2.336,"words":[{"w":"El","t":5.167,"d":0.178},{"w":"viaje","t":5.345,"d":0.335},{"w":"del","t":5.68,"d":0.23},{"w":"Quetzal","t":5.91,"d":0.439},{"w":"empieza","t":6.349,"d":0.439},{"w":"en","t":6.788,"d":0.178},{"w":"España.","t":6.966,"d":0.387}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/pop"},{"t":1.226,"f":"ui/pop"},{"t":1.901,"f":"ui/pop"},{"t":3.361,"f":"ui/combo"},{"t":4.467,"f":"ui/swoosh-out"},{"t":6.167,"f":"rpg/spell-magic"},{"t":7.753,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var P3 = C.planOf(PLAN, 3), P4 = C.planOf(PLAN, 4), L3 = P3.lines[0], L4 = P4.lines[0], T = PLAN.total, W = P4.t0;
+        var $ = function (s) { return document.querySelector(s); }, $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        // ============ PLAN 3 : trois pays, trois cartes ============
+        $("#map3").innerHTML = Q.explainerMap({ uid: "x3", width: 1920, height: 1440 });
+        $$("#map3 .x-hi").forEach(function (g) { g.setAttribute("opacity", "1"); });
+        tl.fromTo("#map3", { scale: 1.0 }, { scale: 1.06, duration: W + 0.3, ease: "sine.inOut", transformOrigin: "50% 40%" }, 0);
+        var defs = [
+          { code: "es", mon: "sagrada", name: "España", c1: "#C9573B", c2: "#FFC83D", w: 0 },
+          { code: "mx", mon: "piramide", name: "México", c1: "#0E9F6E", c2: "#42E0A0", w: 1 },
+          { code: "ar", mon: "obelisco", name: "Argentina", c1: "#2B7FC9", c2: "#9ED3FF", w: 2 },
+        ];
+        var X = [110, 710, 1310];
+        defs.forEach(function (d, i) {
+          var card = mk($("#cards"), "card");
+          card.style.left = X[i] + "px";
+          card.innerHTML = '<div class="flag">' + Q.flagSvg(d.code, { width: 340, uid: "fl" + i }) + '</div><div class="mon"><i style="background:radial-gradient(circle at 40% 35%,' + d.c2 + ',' + d.c1 + ')"></i>' + Q.monumentSvg(d.mon, { size: 250, c: "#14173F", a: "#FFF3D1" }) + '</div><div class="nm">' + d.name + "</div>";
+          var wd = L3.words[Math.min(d.w, L3.words.length - 1)], t = wd.t - 0.12;
+          tl.fromTo(card, { y: 900, rotation: (i - 1) * 9, scale: 0.7, opacity: 1 }, { y: 0, rotation: (i - 1) * -1.6, scale: 1, duration: 0.7, ease: "back.out(1.5)", immediateRender: true }, t);
+          tl.fromTo(card.querySelector(".mon svg"), { scale: 0.6, rotation: -8 }, { scale: 1, rotation: 0, duration: 0.6, ease: "elastic.out(1,0.55)", immediateRender: true }, t + 0.35);
+          tl.fromTo(card.querySelector(".flag"), { rotation: -6, y: -10 }, { rotation: 0, y: 0, duration: 0.5, ease: "back.out(2)", immediateRender: true }, t + 0.25);
+          // flottement
+          tl.to(card, { y: -12, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 3 }, t + 0.8);
+        });
+        // « ¡y muchos mas ! » : les cartes reculent, une volee de pays-pastilles monte dessous
+        var more = L3.words[Math.max(0, L3.words.length - 3)].t - 0.1;
+        tl.to(".card", { scale: 0.72, transformOrigin: "50% 0%", duration: 0.6, ease: "power3.inOut", stagger: 0.04 }, more);
+        var names = ["Colombia", "Perú", "Chile", "Cuba", "Venezuela", "Ecuador", "Guatemala", "Bolivia", "Uruguay"];
+        var rowA = [210, 520, 740, 960, 1230], rowB = [300, 620, 940, 1260];
+        names.forEach(function (n, i) {
+          var ch = mk($("#p3"), "chip", n), x = i < 5 ? rowA[i] : rowB[i - 5], y = i < 5 ? 735 : 835;
+          gsap.set(ch, { x: x, y: y + 120, opacity: 0, scale: 0.5 });
+          tl.to(ch, { y: y, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.9)" }, more + 0.3 + i * 0.12);
+          tl.to(ch, { y: y - 8, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, more + 1.0 + i * 0.12);
+          tl.to(ch, { opacity: 0, y: y - 70, scale: 0.8, duration: 0.4, ease: "power2.in" }, W - 0.5 + i * 0.015);
+        });
+        tl.to("#cards", { y: 40, opacity: 0, duration: 0.45, ease: "power3.in" }, W - 0.5);
+
+        // ============ PLAN 4 : la plume s'envole vers l'ouest ============
+        tl.set("#p4", { visibility: "visible" }, W - 0.4);
+        tl.fromTo("#p4", { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power2.out" }, W - 0.4);
+        $("#map4").innerHTML = Q.explainerMap({ uid: "x4", width: 1920, height: 1440 });
+        $$("#map4 .x-hi").forEach(function (g) { g.setAttribute("opacity", "1"); });
+        var SC = 1920 / 1600, pr = function (lon, lat) { var p = Q.mapProj(lon, lat); return [p[0] * SC, p[1] * SC]; };
+        var mad = pr(-3.7, 40.4), dest = pr(-98, 21), mid = [(mad[0] + dest[0]) / 2 + 40, Math.min(mad[1], dest[1]) - 160];
+        // camera (tout le plan 4 vit dans le repere de la carte) : serree sur l'Espagne, puis elle recule en suivant la plume
+        var cam4 = function (px, py, s, at, dur, ease) { tl.to("#cam4", { x: 960 - px * s, y: 520 - py * s, scale: s, duration: dur, ease: ease }, at); };
+        gsap.set("#cam4", { x: 960 - mad[0] * 1.6, y: 520 - mad[1] * 1.6, scale: 1.6, transformOrigin: "0 0" });
+        var pinEl = $("#pin");
+        pinEl.innerHTML = '<svg width="80" height="100" viewBox="-40 -90 80 100"><path d="M0 0C-28 -34 -32 -50 -32 -58A32 32 0 1 1 32 -58C32 -50 28 -34 0 0Z" fill="#C9573B" stroke="#FFF3D1" stroke-width="6"/><circle cx="0" cy="-58" r="12" fill="#FFF3D1"/></svg>';
+        pinEl.style.cssText = "position:absolute;left:0;top:0;z-index:10;width:80px;height:100px;transform-origin:40px 90px";
+        gsap.set(pinEl, { x: mad[0] - 40, y: mad[1] - 90, scale: 0.55 });
+        var ring = mk($("#cam4"), "ring"); gsap.set(ring, { x: mad[0], y: mad[1] });
+        tl.fromTo(pinEl, { scale: 0.1, opacity: 0 }, { scale: 0.55, opacity: 1, duration: 0.55, ease: "bounce.out" }, W + 0.05);
+        tl.fromTo(ring, { scale: 0.3, opacity: 1 }, { scale: 1.6, opacity: 0, duration: 0.9, ease: "power2.out", repeat: 2 }, W + 0.4);
+        var pl = $("#pinl"); gsap.set(pl, { x: 1030, y: 400 });
+        tl.fromTo(pl, { scale: 0, opacity: 0, transformOrigin: "0 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.4)" }, W + 0.45);
+        tl.to(pl, { opacity: 0, duration: 0.3, ease: "power2.in" }, L4.words[3].t - 0.15);
+        // la plume
+        var fe = $("#feather"); fe.innerHTML = Q.featherSvg({ uid: "f4", width: 40, height: 120 });
+        fe.style.cssText = "position:absolute;left:0;top:0;z-index:11;width:40px;height:120px;filter:drop-shadow(0 0 10px rgba(155,255,214,.9))";
+        var tf = L4.words[3].t - 0.05, fdur = T - tf - 0.4;
+        var path = "M" + mad[0] + " " + mad[1] + " Q" + mid[0] + " " + mid[1] + " " + dest[0] + " " + dest[1];
+        $("#trailp").setAttribute("d", path); $("#trmp").setAttribute("d", path);
+        var len = $("#trmp").getTotalLength();
+        $("#trmp").style.strokeDasharray = len; $("#trmp").style.strokeDashoffset = len;
+        tl.to("#trmp", { strokeDashoffset: 0, duration: fdur, ease: "power1.inOut" }, tf);
+        gsap.set(fe, { x: mad[0] - 20, y: mad[1] - 60, opacity: 0 });
+        tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, tf - 0.1);
+        tl.to(fe, { motionPath: { path: "#trailp", align: "#trailp", alignOrigin: [0.5, 0.5], autoRotate: -90 }, duration: fdur, ease: "power1.inOut" }, tf);
+        tl.fromTo(fe.firstChild, { rotation: -14 }, { rotation: 14, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(fdur / 0.45)) }, tf);
+        cam4(mid[0] - 40, mid[1] + 200, 1.0, tf - 0.1, fdur + 0.1, "power2.inOut");
+        // etincelles au depart
+        for (var k = 0; k < 8; k++) {
+          var sp = mk($("#cam4"), "spark", '<svg width="30" height="30" viewBox="-23 -23 46 46"><path d="' + Q.sparklePath(0, 0, 20, 5) + '" fill="#9bffd6"/></svg>');
+          var ang = (k / 8) * 6.283, sx = mad[0] + Math.cos(ang) * 14, sy = mad[1] - 25 + Math.sin(ang) * 14;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 40, y: sy + Math.sin(ang) * 40, scale: 0.8, duration: 0.4, ease: "back.out(3)", immediateRender: false }, tf + k * 0.04);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, tf + 0.45 + k * 0.04);
+        }
+
+        // ============ cadre + sous-titres ============
+        C.frame(tl, root, PLAN, { seed: 12, fadeOut: 0.35 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u01-capsula-hispanos-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

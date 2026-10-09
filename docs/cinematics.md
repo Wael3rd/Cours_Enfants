@@ -139,3 +139,49 @@ Toutes les clés sont optionnelles (valeurs par défaut) ; `team = { name, prima
 
 Appel : `playCinematic({ src, data: { '<id>': payload } })`. `win=false` avec score égal → « MATCH NUL » ; défaite → « BEAU MATCH ! » (jamais punitif).
 Limites : au rendu MP4 les valeurs sont celles de `DEFAULTS` (pas de `--variables` câblé) ; les noms très longs sont réduits automatiquement (prénom ≤ ~12 lettres conseillé).
+
+## 8. App espagnol — cinématiques de l'unité 1 (contrat de données)
+
+Étape `cinematic_ref` de `u01.json` → `cinematica: "<id>"`. Une cinématique = **une ou plusieurs compositions** jouées **à la suite** par l'app
+(≤ 12 s chacune, conseil HyperFrames : des plans, pas un film). Le découpage est lu dans `apps/espagnol/public/cinematics/manifest.json` :
+
+```json
+{ "u01-historia": { "parts": [ { "id": "u01-historia-1", "duration": 9.942 }, … ], "total": 39.2 } }
+```
+
+| `cinematica` (u01.json) | compositions (dossiers) | durée | contenu |
+|---|---|---|---|
+| `u01-intro` | `u01-intro` | 9,6 s | carte du monde (brouillard en nuages) → carte-titre « Capítulo 1 · ¡Hola! · Madrid » → skyline de Madrid, Quetzal en vol |
+| `u01-historia` | `u01-historia-1` … `-4` | 9,9 + 10,0 + 9,2 + 10,1 s | Academia de Viajeros : accueil · plume + Quetzal · Sombra sur la carte · arrivée de Marina |
+| `u01-capsula-hispanos` | `u01-capsula-hispanos-1`, `-2` | 9,0 + 8,7 s | planisphère explainer + compteur 600 M · 3 cartes-pays + plume vers l'ouest |
+| `u01-pluma` | `u01-pluma` | 9,7 s | la Sombra se brise, plume rattrapée, le Quetzal repousse, carte → Salamanca (le brouillard se dissipe) |
+
+Jouer = enchaîner `playCinematic({ src: '…/cinematics/<part.id>/index.html', data })` pour chaque `part`, avec les **mêmes** `data` ; `result` ≠ `'ended'` ⇒ stop.
+Chaque partie démarre par un fondu depuis l'encre et finit par un fondu vers l'encre (≈ 0,3 s) : l'enchaînement est un fondu-croisé naturel.
+
+**Données runtime** (canal `player`, `setRuntimeData('player', { name })`) — valeur par défaut `"Álex"` (rendu MP4 : `--variables '{"playerName":"Inès"}'`).
+Seuls le prénom du **sous-titre** (mot « Álex » → `.pname`), la plaque d'orateur du joueur et l'initiale du pion de carte suivent le nom ;
+**la voix reste `viajero.*` (« Álex »)** : les mp3 sont pré-générés (limite connue).
+
+**Timings générés** — `node tools/cinematics/es-build.mjs` (`--check` : n'écrit rien, signale partie > 12 s / mp3 manquant). Il lit `u01.json` (répliques, titres, nom de la plume)
+et la durée **réelle** des mp3 (`apps/espagnol/public/audio/es/<key>.mp3`, ffprobe + `silencedetect` pour recaler chaque mot sur les pauses de la voix), puis réécrit dans chaque `index.html` :
+`window.PLAN` (plans, répliques `{who,es,key,t,d,words:[{w,t,d}]}`, SFX), les balises `<audio>` (voix copiées dans `<id>/assets/voz/`, SFX/musique dans `_shared/sfx|music/`,
+musique `data-media-start` continue d'une partie à l'autre), `data-duration`, et `manifest.json`. Les animations lisent `PLAN` : **corriger une réplique ou régénérer un mp3 puis relancer le script suffit**.
+La découpe en parties, les respirations (`lead`/`tail`/`min`) et les SFX (ancrés sur un plan `pN`, une réplique `lN.M` ou un mot `wN.M.K`) sont dans la constante `CINES` du script.
+Un nouveau texte joué doit avoir son mp3 (`tools/tts/generate.py` avec les entrées de `audio-manifest.json`).
+
+**Bibliothèques partagées** (`_shared/`, pas de réseau) : `qart.js` (généré par `npm run art` depuis `src/art/core/src/*.js` : `worldMap`, `explainerMap`, `madridSkyline`, `academiaRoom`,
+`character` (Álex / Marina / Don Ignacio, chibis vectoriels : `charTalk`, `charWalk`, `charWave`, `charNod`, `charEmote`, `charBlink`), `quetzal*`, `sombra*`, `featherSvg`, `flagSvg`, `cloudSvg`/`mapFogHtml`, `moteField`…) ·
+`qcine.js` (`QCine` : prénom du joueur, sous-titres mot à mot avec boîte JRPG + portrait + plaque d'orateur, cadre commun papel picado / grain / fondus, `talkChar`, `talkQuetzal`) ·
+`qstage.js` (`QStage` : salle, personnages, caméra de salle `cam(px,py,zoom)`, ambiance).
+
+**Pièges rencontrés** (à garder en tête pour les prochaines) :
+- `gsap.fromTo` qui démarre plus tard applique son état « from » **dès t = 0** : ajouter `immediateRender: false` (flash, confettis, traits…) sinon l'élément est visible avant son tour.
+- Caméra de carte : `Q.mapCamTo` passe `svgOrigin` dans le tween et **fait dériver x/y** (GSAP recale l'origine) → dans les compositions : `Q.mapCamSet(gsap, el, cible, s)` puis `Q.mapCamMove(tl, el, cible, s, at, dur, ease)` (nouveau, sans `svgOrigin`).
+- Ne jamais tweener `transformOrigin` sur le conteneur de la caméra de salle (`.st-cam` : origine `0 0`, roulis via le parent `#stage`).
+- `check` : `data-layout-allow-overflow` / `data-layout-allow-orbit` sur les calques volontairement plus grands que le cadre ou qui pivotent autour d'un point (bras, plumes) ; `visibility:hidden` sur le plan qui n'est pas à l'écran.
+- Texte jamais fondu par `opacity` seul si possible (le contrôle de contraste échantillonne en plein fondu) : plaques d'orateur animées en `scale`.
+
+**Brouillard de guerre de la carte** (`06-map.js`) : vrais nuages stylisés (3 couches fond indigo / lavande / crème, ombre indigo décalée, reflets, halo de traits translucides — sans filtre, léger sur tablette) ;
+`mapFogClear` les écarte par couches (devant d'abord) en gonflant et en les effaçant, `mapFogDrift` les fait respirer, `mapFogHtml(id)` produit un banc pour une scène où la région n'est pas verrouillée.
+Vérification visuelle : `npx hyperframes snapshot apps/espagnol/public/cinematics/<id> --at 1,3,5` (images dans `<id>/snapshots/`, gitignorées).

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u01-capsula-hispanos-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .plan { position: absolute; inset: 0; }
+      #mapbox { position: absolute; left: 120px; top: -30px; width: 1680px; height: 1260px; transform-origin: 0 0; }
+      #mapbox svg { width: 1680px; height: 1260px; }
+      #veil { position: absolute; inset: 0; background: #0d1038; opacity: 0; }
+      #kick { position: absolute; left: 96px; top: 168px; z-index: 22; }
+      #kick small { display: block; font: 900 30px/1 Nunito, sans-serif; letter-spacing: .3em; color: #19b7aa; text-transform: uppercase; }
+      #kick b { display: block; margin-top: 10px; font: 400 92px/1.02 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 6px 0 rgba(0,0,0,.4); }
+      #kickbar { position: absolute; left: 96px; top: 158px; width: 140px; height: 8px; border-radius: 4px; background: #ffc83d; z-index: 22; transform-origin: 0 50%; }
+      .pill { position: absolute; left: 0; top: 0; z-index: 21; display: flex; align-items: center; gap: 14px; padding: 8px 26px 12px 18px; border-radius: 999px; background: rgba(13,16,56,.94); border: 4px solid #19b7aa; font: 900 40px/1 Nunito, sans-serif; color: #f5e6c8; white-space: nowrap; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      .pill i { width: 18px; height: 18px; border-radius: 50%; background: #19b7aa; display: block; flex: none; }
+      .pill.mute { border-color: #8f93c7; color: #c9ccee; font-size: 34px; }
+      .pill.mute i { background: #8f93c7; }
+      .ring { position: absolute; left: 0; top: 0; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%; border: 6px solid #ffc83d; opacity: 0; z-index: 20; }
+      .lead { position: absolute; left: 0; top: 0; z-index: 20; height: 4px; background: #19b7aa; transform-origin: 0 50%; border-radius: 2px; }
+      #big { position: absolute; left: 0; right: 0; top: 230px; text-align: center; z-index: 22; }
+      #num { font: 400 214px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #0e7f82, 0 18px 0 rgba(0,0,0,.35); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+      #pers { margin-top: 18px; font: 900 78px/1 Nunito, sans-serif; color: #ffc83d; letter-spacing: .12em; text-transform: uppercase; }
+      #waffle { position: absolute; left: 160px; top: 596px; z-index: 21; width: 1600px; display: grid; grid-template-columns: repeat(25, 44px); gap: 10px 10px; justify-content: center; }
+      #waffle b { display: block; width: 44px; height: 44px; border-radius: 50%; background: #2a3079; }
+      #legend { position: absolute; left: 160px; right: 160px; top: 848px; z-index: 22; display: flex; justify-content: space-between; align-items: center; font: 800 34px/1 Nunito, sans-serif; color: #c9ccee; }
+      #legend span { display: inline-flex; align-items: center; gap: 12px; } #legend i { display: inline-block; width: 24px; height: 24px; border-radius: 50%; }
+      #src { font: 700 26px/1 Nunito, sans-serif; color: #8f93c7; }
+      #dots { position: absolute; inset: 0; opacity: .5; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u01-capsula-hispanos-1" data-start="0" data-width="1920" data-height="1200" data-duration="9.049">
+      <div id="p1" class="plan">
+        <div id="mapbox" data-layout-allow-overflow></div>
+        <div id="veil"></div>
+        <div id="kickbar"></div>
+        <div id="kick"><small>Cápsula cultural</small><b id="kt">El español en el mundo</b></div>
+      </div>
+      <div id="p2" class="plan" style="visibility:hidden">
+        <div id="big"><div id="num">0</div><div id="pers">personas</div></div>
+        <div id="waffle"></div>
+        <div id="legend"><span><i style="background:#ffc83d"></i><b id="lg1">500 millones: lengua materna</b></span><span id="src">Fuente: Instituto Cervantes</span></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.049" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.749,"v":1},{"t":9.049,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.f1f6303030.mp3" data-start="0.6" data-duration="2.418" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.ed8c684e84.mp3" data-start="4.618" data-duration="3.081" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/star.mp3" data-start="0.55" data-duration="0.121" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1.416" data-duration="0.121" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="1.974" data-duration="0.121" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="2.396" data-duration="0.121" data-track-index="7" data-volume="0.5"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="3.818" data-duration="0.212" data-track-index="8" data-volume="0.45"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/tick.mp3" data-start="4.818" data-duration="0.045" data-track-index="9" data-volume="0.35"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/coins.mp3" data-start="5.118" data-duration="0.796" data-track-index="10" data-volume="0.2"></audio>
+      <audio id="a-sfx9" src="./_shared/sfx/steel00.mp3" data-start="4.902" data-duration="0.917" data-track-index="11" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u01-capsula-hispanos-1","cinematica":"u01-capsula-hispanos","part":1,"parts":2,"total":9.049,"meta":{"cinematica":"u01-capsula-hispanos","titulo":"El español en el mundo","tipo":"capsula","unidad":"¡Hola! Me presento","numero":1,"lugar":"Madrid","pluma":"Pluma de la Voz","plumaNum":1,"rotulo":""},"plans":[{"n":1,"t0":0,"t1":3.918,"vista":"Planisphère animé (style explainer Vox) : l'Espagne, les pays hispanophones d'Amérique (du Mexique à l'Argentine, Cuba, Porto Rico… mais PAS le Brésil, lusophone) et la Guinée équatoriale s'illuminent en turquoise.","camara":"plan fixe sur la carte","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El español se habla en muchos países.","key":"narrador.f1f6303030","t":0.6,"d":2.418,"words":[{"w":"El","t":0.6,"d":0.194},{"w":"español","t":0.794,"d":0.479},{"w":"se","t":1.272,"d":0.194},{"w":"habla","t":1.466,"d":0.365},{"w":"en","t":1.831,"d":0.194},{"w":"muchos","t":2.024,"d":0.422},{"w":"países.","t":2.446,"d":0.422}]}]},{"n":2,"t0":3.918,"t1":8.799,"vista":"Compteur animé qui monte jusqu'à « 600 000 000 », call-out « personas » (source : Instituto Cervantes, environ 600 millions de locuteurs, dont environ 500 millions de langue maternelle).","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Unos seiscientos millones de personas hablan español.","key":"narrador.ed8c684e84","t":4.618,"d":3.081,"words":[{"w":"Unos","t":4.618,"d":0.284},{"w":"seiscientos","t":4.902,"d":0.651},{"w":"millones","t":5.553,"d":0.494},{"w":"de","t":6.047,"d":0.179},{"w":"personas","t":6.225,"d":0.494},{"w":"hablan","t":6.719,"d":0.389},{"w":"español.","t":7.107,"d":0.441}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/star"},{"t":1.416,"f":"ui/star"},{"t":1.974,"f":"ui/star"},{"t":2.396,"f":"ui/star"},{"t":3.818,"f":"ui/swoosh-out"},{"t":4.818,"f":"ui/tick"},{"t":5.118,"f":"rpg/coins"},{"t":4.902,"f":"jingles/steel00"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var $ = function (s) { return document.querySelector(s); }, $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+        $("#kt").textContent = PLAN.meta.titulo || "El español en el mundo";
+
+        // ============ PLAN 1 : planisphere explainer, plan fixe ============
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.explainerMap({ uid: "xm", width: 1680, height: 1260 });
+        var S = 1.05, OX = 120, OY = -30;
+        var P = function (lon, lat) { var p = Q.mapProj(lon, lat); return [OX + p[0] * S, OY + p[1] * S]; };
+        // plan fixe sur la carte (aucun mouvement de camera) : tout le mouvement vient des pays qui s'allument
+        // titre : barre doree qui se trace, puis texte qui monte
+        tl.fromTo("#kickbar", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.25);
+        tl.fromTo("#kick small", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.35);
+        tl.fromTo("#kick b", { y: 50, opacity: 0, clipPath: "inset(0 0 100% 0)" }, { y: 0, opacity: 1, clipPath: "inset(0 0 0% 0)", duration: 0.7, ease: "expo.out" }, 0.45);
+        tl.to("#kick", { x: -40, opacity: 0, duration: 0.4, ease: "power3.in" }, W - 0.35);
+        tl.to("#kickbar", { opacity: 0, duration: 0.3 }, W - 0.35);
+
+        // les pays hispanophones s'allument en cascade, calés sur la voix
+        var steps = [
+          { sel: ".x-hi-es", w: 0, at: P(-3.7, 40.4), label: "España", dx: -430, dy: 150 },
+          { sel: ".x-hi-mx", w: 3, at: P(-102, 23.5), label: "México y Centroamérica", dx: -60, dy: 170 },
+          { sel: ".x-hi-sa", w: 5, at: P(-70, -12), label: "Sudamérica", dx: -190, dy: 70 },
+        ];
+        steps.forEach(function (s, i) {
+          var wd = L1.words[Math.min(s.w, L1.words.length - 1)], t = wd.t - 0.05;
+          tl.fromTo(s.sel, { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, t);
+          tl.fromTo(s.sel, { filter: "brightness(2.2)" }, { filter: "brightness(1)", duration: 0.7, ease: "power2.out", immediateRender: false }, t);
+          var ring = document.createElement("div"); ring.className = "ring"; ring.setAttribute("data-layout-allow-overflow", ""); ring.style.left = s.at[0] + "px"; ring.style.top = s.at[1] + "px"; $("#p1").appendChild(ring);
+          tl.fromTo(ring, { scale: 0.3, opacity: 1 }, { scale: 3.4, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, t);
+          tl.fromTo(ring, { scale: 0.3, opacity: 1 }, { scale: 2.4, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, t + 0.22);
+          // pastille + trait
+          var px = s.at[0] + s.dx, py = s.at[1] + s.dy;
+          var pill = document.createElement("div"); pill.className = "pill"; pill.setAttribute("data-layout-allow-overflow", ""); pill.innerHTML = "<i></i><span>" + s.label + "</span>"; $("#p1").appendChild(pill);
+          var w = s.label.length * 21 + 90; px = Math.max(60, Math.min(px, 1860 - w));
+          gsap.set(pill, { x: px, y: py });
+          var ln = document.createElement("div"); ln.className = "lead"; ln.setAttribute("data-layout-allow-overflow", ""); $("#p1").appendChild(ln);
+          var cx = px + 40, cy = py + 30, dx = s.at[0] - cx, dy = s.at[1] - cy, len = Math.hypot(dx, dy);
+          gsap.set(ln, { x: cx, y: cy, width: len, rotation: Math.atan2(dy, dx) * 180 / Math.PI, transformOrigin: "0 50%" });
+          tl.fromTo(ln, { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, t + 0.1);
+          tl.fromTo(pill, { scale: 0, opacity: 0, transformOrigin: "20% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2.4)", immediateRender: true }, t + 0.18);
+          tl.to([pill, ln], { opacity: 0, duration: 0.3, ease: "power2.in" }, W - 0.45);
+        });
+        // Guinee equatoriale : la pastille turquoise de la carte + petit pays
+        var gq = P(10, 1.7), gx = 1500 * S + OX, gy = 706 * S + OY;
+        (function () {
+          var t = L1.words[L1.words.length - 1].t - 0.05;
+          tl.fromTo(".x-gq-dot", { opacity: 0, scale: 0.2, svgOrigin: "0 0" }, { opacity: 1, scale: 1, svgOrigin: "0 0", duration: 0.6, ease: "back.out(3)" }, t);
+          tl.fromTo(".x-gq-ring", { opacity: 1, scale: 0.6, svgOrigin: "0 0" }, { opacity: 0, scale: 2.4, svgOrigin: "0 0", duration: 0.9, ease: "power2.out" }, t);
+          var pill = document.createElement("div"); pill.className = "pill"; pill.setAttribute("data-layout-allow-overflow", ""); pill.innerHTML = "<i></i><span>Guinea Ecuatorial</span>"; $("#p1").appendChild(pill);
+          gsap.set(pill, { x: gx - 430, y: gy + 60 });
+          var ln = document.createElement("div"); ln.className = "lead"; ln.setAttribute("data-layout-allow-overflow", ""); $("#p1").appendChild(ln);
+          var cx = gx - 380, cy = gy + 90, dx = gx - cx, dy = gy - cy;
+          gsap.set(ln, { x: cx, y: cy, width: Math.hypot(dx, dy), rotation: Math.atan2(dy, dx) * 180 / Math.PI, transformOrigin: "0 50%" });
+          tl.fromTo(ln, { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, t + 0.1);
+          tl.fromTo(pill, { scale: 0, opacity: 0, transformOrigin: "20% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2.4)" }, t + 0.18);
+          tl.to([pill, ln], { opacity: 0, duration: 0.3, ease: "power2.in" }, W - 0.45);
+          // Brasil : lusophone, reste sombre
+          var bz = P(-52, -10), br = document.createElement("div"); br.className = "pill mute"; br.setAttribute("data-layout-allow-overflow", ""); br.innerHTML = "<i></i><span>Brasil: portugués</span>"; $("#p1").appendChild(br);
+          gsap.set(br, { x: bz[0] - 130, y: bz[1] - 20 });
+          tl.fromTo(br, { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)" }, t + 0.5);
+          tl.to(br, { opacity: 0, duration: 0.3 }, W - 0.45);
+        })();
+
+        // ============ TRANSITION : fondu dans la carte, la carte reste en fond ============
+        tl.to("#veil", { opacity: 0.82, duration: 0.5, ease: "power2.inOut" }, W - 0.35);
+        tl.to(mapbox, { scale: 1.2, duration: T - W + 0.7, ease: "sine.inOut", transformOrigin: "60% 40%" }, W - 0.35);
+        tl.set("#p2", { visibility: "visible" }, W - 0.3);
+
+        // ============ PLAN 2 : 600 000 000 ============
+        var waf = $("#waffle"), dots = [];
+        for (var i = 0; i < 100; i++) { var b = document.createElement("b"); b.setAttribute("data-layout-allow-overflow", ""); waf.appendChild(b); dots.push(b); }
+        // 100 points = 600 M (1 point = 6 M) ; 83 points or = ~500 M de langue maternelle
+        var cnt = { v: 0 }, t0 = L2.t, tEnd = L2.words[2].t + 0.35, fmt = function (n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); };
+        tl.fromTo("#big", { y: 40, opacity: 0, scale: 0.9, transformOrigin: "50% 40%" }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.6)" }, W + 0.0);
+        tl.to(cnt, { v: 600000000, duration: tEnd - t0, ease: "power2.out", onUpdate: function () { $("#num").textContent = fmt(cnt.v); } }, t0);
+        tl.fromTo("#pers", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, L2.words[4].t - 0.1);
+        dots.forEach(function (d, i) {
+          var at = t0 + (i / 100) * (tEnd - t0) * 0.9, c = i < 83 ? "#ffc83d" : "#19b7aa";
+          tl.fromTo(d, { scale: 0, backgroundColor: "#2a3079" }, { scale: 1, backgroundColor: c, duration: 0.3, ease: "back.out(3)", immediateRender: true }, at);
+        });
+        tl.fromTo("#legend", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, L2.words[5].t - 0.1);
+        tl.fromTo("#num", { scale: 1 }, { scale: 1.06, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "50% 50%" }, tEnd);
+
+        // ============ cadre + sous-titres ============
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u01-capsula-hispanos-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

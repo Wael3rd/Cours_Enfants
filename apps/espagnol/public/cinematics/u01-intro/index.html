@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u01-intro</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      #p2 { visibility: hidden; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      /* plan 1 : carte */
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq:not(.m-plq-madrid), #mapbox .m-med:not(.m-med-madrid) { display: none; }
+      #mapbox .m-med text { display: none; }
+      #mapdim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 20; }
+      #rays { mix-blend-mode: screen; position: absolute; left: 260px; top: -90px; width: 1400px; height: 1400px; opacity: 0; }
+      .center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 150px; }
+      #tc { position: relative; width: 1240px; padding: 44px 40px 30px; box-sizing: border-box; text-align: center; }
+      .tcbox { position: absolute; inset: 0; border-radius: 44px; background: linear-gradient(180deg, #1d2160, #14173f); border: 8px solid #f5e6c8; box-shadow: 0 0 0 6px #14173f, 0 26px 0 -4px rgba(0,0,0,.3), inset 0 0 0 6px rgba(255,200,61,.6); }
+      #tc .band { position: absolute; left: 26px; right: 26px; height: 40px; border-radius: 10px; opacity: .9; background-size: auto 40px; }
+      #tc .band.t { top: 18px; } #tc .band.b { bottom: 18px; }
+      .tc-kicker { position: relative; margin-top: 44px; text-shadow: 0 0 24px rgba(11,13,42,.9), 0 6px 0 rgba(0,0,0,.45); font: 400 54px/1 "Alfa Slab One", serif; letter-spacing: .22em; color: #ffc83d; text-shadow: 0 4px 0 rgba(0,0,0,.4); }
+      .tc-hola { position: relative; margin: 10px 0 0; font: 400 276px/1.02 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 12px 0 #c9573b, 0 20px 0 rgba(0,0,0,.35); letter-spacing: .02em; }
+      .tc-city { position: relative; display: inline-block; margin: 14px 0 38px; padding: 12px 70px 16px; font: 400 76px/1 "Alfa Slab One", serif; letter-spacing: .12em; color: #fff3d1; background: linear-gradient(180deg, #e0694a, #c9573b); box-shadow: 0 8px 0 #7e2f1e; clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%); }
+      .cf { position: absolute; left: 0; top: 0; width: 28px; height: 36px; opacity: 0; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+      /* plan 2 : skyline */
+      #glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 76% 52%, rgba(255,206,110,.35), rgba(255,206,110,0) 55%); mix-blend-mode: screen; }
+      #chip { position: absolute; left: 96px; top: 170px; display: flex; align-items: center; gap: 18px; padding: 12px 34px 14px 18px; border-radius: 999px; background: rgba(20,23,63,.92); border: 4px solid #ffc83d; box-shadow: 0 6px 0 rgba(0,0,0,.3); z-index: 25; }
+      #chip b { font: 400 44px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #f5e6c8; }
+      #chip svg { display: block; }
+      .bird { position: absolute; left: 0; top: 0; z-index: 6; }
+      #qz svg { overflow: visible; }
+      #qz { position: absolute; left: 0; top: 0; width: 380px; height: 456px; z-index: 8; }
+      .spark { position: absolute; left: 0; top: 0; z-index: 9; }
+      #motes { position: absolute; left: 0; top: 0; z-index: 7; }
+      .streak { position: absolute; left: 0; height: 6px; width: 700px; border-radius: 3px; background: linear-gradient(90deg, rgba(255,243,209,0), #fff3d1); opacity: 0; z-index: 60; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u01-intro" data-start="0" data-width="1920" data-height="1200" data-duration="9.581">
+      <div id="p1" class="plan" data-layout-allow-overflow>
+        <div id="mapbox" data-layout-allow-overflow></div>
+        <div id="mapdim"></div>
+        <div id="rays" data-layout-allow-overflow></div>
+        <div class="center"><div id="tc"></div></div>
+        <div id="flash"></div>
+      </div>
+      <div id="p2" class="plan" data-layout-allow-overflow>
+        <div id="skyL" class="lay" data-layout-allow-overflow></div>
+        <div id="sunL" class="lay" data-layout-allow-overflow></div>
+        <div id="farL" class="lay" data-layout-allow-overflow></div>
+        <div id="midL" class="lay" data-layout-allow-overflow></div>
+        <div id="motes" data-layout-allow-overflow></div>
+        <div id="qz" data-layout-allow-overflow></div>
+        <div id="nearL" class="lay" data-layout-allow-overflow></div>
+        <div id="glow"></div>
+        <div id="chip"></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.581" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.381,"v":1},{"t":9.581,"v":0}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.0fc0acbceb.mp3" data-start="0.5" data-duration="1.514" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.17cbaa74b3.mp3" data-start="4.7" data-duration="1.997" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/narrador.e3ef4edcdc.mp3" data-start="6.997" data-duration="1.734" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0.05" data-duration="0.208" data-track-index="3" data-volume="0.5"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/steel00.mp3" data-start="1.551" data-duration="0.917" data-track-index="4" data-volume="0.55"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-cast.mp3" data-start="1.571" data-duration="0.465" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="3.9" data-duration="0.212" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/bell.mp3" data-start="4.35" data-duration="1.741" data-track-index="7" data-volume="0.28"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="6.4" data-duration="0.121" data-track-index="8" data-volume="0.4"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/pop.mp3" data-start="5.6" data-duration="0.1" data-track-index="9" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u01-intro","cinematica":"u01-intro","part":1,"parts":1,"total":9.581,"meta":{"cinematica":"u01-intro","titulo":"Capítulo 1 · ¡Hola! · Madrid","tipo":"intro","unidad":"¡Hola! Me presento","numero":1,"lugar":"Madrid","pluma":"Pluma de la Voz","plumaNum":1,"rotulo":"Capítulo 1 · ¡Hola! · Madrid"},"plans":[{"n":1,"t0":0,"t1":4.1,"vista":"Carte du monde en papel picado qui zoome sur l'Espagne puis sur Madrid ; un point doré pulse. Carte-titre « Capítulo 1 · ¡Hola! · Madrid ».","camara":"zoom avant progressif","rotulo":"Capítulo 1 · ¡Hola! · Madrid","personajes":[],"lines":[{"who":"narrador","es":"Capítulo uno: ¡Hola!","key":"narrador.0fc0acbceb","t":0.5,"d":1.514,"words":[{"w":"Capítulo","t":0.5,"d":0.545},{"w":"uno:","t":1.045,"d":0.255},{"w":"¡Hola!","t":1.551,"d":0.313}]}]},{"n":2,"t0":4.1,"t1":9.331,"vista":"Silhouettes dorées de la Puerta de Alcalá, du Palacio Real et de la Plaza Mayor qui défilent sur un coucher de soleil, bordure de papel picado.","camara":"travelling latéral lent","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Madrid, la capital de España.","key":"narrador.17cbaa74b3","t":4.7,"d":1.997,"words":[{"w":"Madrid,","t":4.7,"d":0.502},{"w":"la","t":5.326,"d":0.184},{"w":"capital","t":5.51,"d":0.454},{"w":"de","t":5.964,"d":0.184},{"w":"España.","t":6.147,"d":0.4}]},{"who":"narrador","es":"Aquí empieza tu aventura.","key":"narrador.e3ef4edcdc","t":6.997,"d":1.734,"words":[{"w":"Aquí","t":6.997,"d":0.322},{"w":"empieza","t":7.319,"d":0.5},{"w":"tu","t":7.819,"d":0.202},{"w":"aventura.","t":8.021,"d":0.56}]}]}],"sfx":[{"t":0.05,"f":"ui/swoosh-in"},{"t":1.551,"f":"jingles/steel00"},{"t":1.571,"f":"rpg/spell-cast"},{"t":3.9,"f":"ui/swoosh-out"},{"t":4.35,"f":"rpg/bell"},{"t":6.4,"f":"ui/star"},{"t":5.6,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), W = P2.t0;
+        var rot = (PLAN.meta.rotulo || "Capítulo 1 · ¡Hola! · Madrid").split(" · ");
+        var $ = function (s) { return document.querySelector(s); };
+
+        // ============================ PLAN 1 : la carte ============================
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wm", states: { madrid: "current", salamanca: "open", sevilla: "open", valencia: "open" }, player: "madrid", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var mad = Q.mapRegion("madrid");
+        var S1 = 3.4, off = 215 / (1.2 * S1); // Madrid ancre en haut du cadre (la carte-titre occupe le centre)
+        Q.mapCamSet(gsap, mapbox, { x: 640, y: 640 }, 0.74);
+        Q.mapCamMove(tl, mapbox, { x: mad.x, y: mad.y + off }, S1, 0.1, 2.3, "power3.inOut");
+        tl.fromTo(mapbox, { rotation: -2.5, transformOrigin: "50% 50%" }, { rotation: 0, duration: 2.4, ease: "power2.out" }, 0.1);
+        Q.mapFogDrift(tl, mapbox, 0, W + 0.2);
+        Q.mapPulse(tl, mapbox, 1.6, 4, 0.9);
+        tl.to(mapbox, { scale: 1.05, transformOrigin: "50% 30%", duration: W - 2.4, ease: "sine.inOut" }, 2.4);
+        // le pion saute quand on arrive
+        tl.fromTo(mapbox.querySelector(".m-token"), { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.0);
+        tl.to(mapbox.querySelector(".m-plq-madrid"), { opacity: 0, duration: 0.3 }, tK - 0.1);
+
+        // carte-titre (affiche de voyage)
+        var tc = $("#tc");
+        var tile = Q.azulejoDataUri({ a: "#1d2160", b: "#19b7aa", c: "#ffc83d" }, 40);
+        tc.innerHTML = '<div class="tcbox"><div class="band t" style="background-image:url(\'' + tile + '\')"></div><div class="band b" style="background-image:url(\'' + tile + '\')"></div></div>' +
+          '<div class="tc-kicker">' + rot[0].toUpperCase() + '</div><div class="tc-hola">' + (rot[1] || "¡Hola!").toUpperCase() + '</div><div class="tc-city">' + (rot[2] || "Madrid").toUpperCase() + '</div>';
+        // rayons derriere la carte
+        var rays = ""; for (var i = 0; i < 16; i++) { var a = (i / 16) * Math.PI * 2, b = a + Math.PI / 20; rays += '<path d="M700 700L' + (700 + Math.cos(a) * 760).toFixed(1) + " " + (700 + Math.sin(a) * 760).toFixed(1) + "L" + (700 + Math.cos(b) * 760).toFixed(1) + " " + (700 + Math.sin(b) * 760).toFixed(1) + 'Z"/>'; }
+        $("#rays").innerHTML = '<svg width="1400" height="1400" viewBox="0 0 1400 1400"><g fill="#ffd76a" opacity=".42">' + rays + "</g></svg>";
+        // confettis de papel picado (positions deterministes)
+        var rnd = Q.rng(21), cols = ["#d93472", "#ffc83d", "#19b7aa", "#c9573b", "#0e9f6e", "#ff9f1c"], cfs = [];
+        for (var k = 0; k < 44; k++) { var d = document.createElement("div"); d.className = "cf"; d.setAttribute("data-layout-allow-overflow", ""); d.style.background = cols[k % cols.length]; $("#p1").insertBefore(d, $("#flash")); cfs.push(d); }
+
+        var tK = C.wordT(PLAN, 1, 1, 1), tH = C.wordT(PLAN, 1, 1, 3);
+        tl.set(tc, { opacity: 0 }, 0);
+        tl.set(mapbox.parentNode.querySelector("#mapdim"), { opacity: 0 }, 0);
+        tl.to("#mapdim", { opacity: 0.55, duration: 0.5, ease: "power2.out" }, tH - 0.35);
+        tl.fromTo(tc, { opacity: 0, y: 90, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, tK + 0.1);
+        tl.set(".tc-hola, .tc-city", { opacity: 0 }, 0);
+        tl.fromTo(".tcbox", { scaleY: 0.05, opacity: 0, transformOrigin: "50% 50%" }, { scaleY: 1, opacity: 1, duration: 0.42, ease: "back.out(1.4)" }, tH - 0.12);
+        tl.fromTo(".tc-kicker", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, tK + 0.1);
+        // ¡HOLA! claque
+        tl.fromTo(".tc-hola", { opacity: 0, scale: 2.6, rotation: -7, transformOrigin: "50% 60%" }, { opacity: 1, scale: 1, rotation: -2, duration: 0.5, ease: "expo.out" }, tH - 0.02);
+        tl.fromTo("#flash", { opacity: 0.75 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, tH);
+        tl.fromTo("#rays", { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 0.55, scale: 1, rotation: 0, duration: 0.7, ease: "expo.out" }, tH - 0.02);
+        tl.to("#rays", { rotation: 24, duration: W - tH, ease: "none" }, tH + 0.7);
+        tl.to("#p1", { keyframes: [{ x: -16, duration: 0.05 }, { x: 14, duration: 0.05 }, { x: -9, duration: 0.05 }, { x: 5, duration: 0.05 }, { x: 0, duration: 0.06 }], ease: "power1.inOut" }, tH);
+        tl.fromTo(".tc-city", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 0 50%)", x: -40 }, { opacity: 1, clipPath: "polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%)", x: 0, duration: 0.45, ease: "power3.out" }, tH + 0.32);
+        tl.to("#tc", { y: -10, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 1 }, tH + 0.6);
+        cfs.forEach(function (c, i) {
+          var ang = rnd() * Math.PI * 2, dist = 380 + rnd() * 560, x1 = 960 + Math.cos(ang) * dist, y1 = 480 + Math.sin(ang) * dist * 0.7;
+          var t0 = tH + 0.04 + rnd() * 0.06;
+          tl.fromTo(c, { x: 960, y: 520, opacity: 1, scale: 0.4 + rnd() * 0.8, rotation: 0 }, { x: x1, y: y1, rotation: (rnd() - 0.5) * 540, duration: 0.55, ease: "expo.out", immediateRender: false }, t0);
+          tl.to(c, { y: y1 + 520 + rnd() * 200, x: x1 + (rnd() - 0.5) * 160, rotation: "+=" + ((rnd() - 0.5) * 360), opacity: 0, duration: 1.5 + rnd() * 0.4, ease: "power1.in" }, t0 + 0.5);
+        });
+        // plus de lumiere : etincelles autour de la carte-titre
+        for (var s = 0; s < 8; s++) {
+          var sp = document.createElement("div"); sp.className = "spark"; sp.setAttribute("data-layout-allow-overflow", ""); sp.innerHTML = '<svg width="60" height="60" viewBox="-30 -30 60 60"><path d="' + Q.sparklePath(0, 0, 26, 6) + '" fill="#fff3d1"/></svg>'; $("#p1").insertBefore(sp, $("#flash"));
+          var sx = 220 + rnd() * 1480, sy = 130 + rnd() * 560, st = tH + 0.25 + s * 0.12;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, rotation: 0, opacity: 1 }, { scale: 0.6 + rnd() * 0.7, rotation: 90, duration: 0.3, ease: "back.out(3)" }, st);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, st + 0.35);
+        }
+
+        // ============================ WHIP-PAN vers le plan 2 ============================
+        var streaks = [];
+        for (var q = 0; q < 7; q++) { var sk = document.createElement("div"); sk.className = "streak"; sk.setAttribute("data-layout-allow-overflow", ""); sk.style.top = 140 + q * 150 + (q % 2) * 40 + "px"; root.appendChild(sk); streaks.push(sk); }
+        tl.fromTo("#p1", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, W - 0.24);
+        tl.set("#p1", { visibility: "hidden" }, W + 0.2);
+        tl.set("#p2", { visibility: "visible" }, W - 0.2);
+        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.5, ease: "power3.out" }, W - 0.16);
+        streaks.forEach(function (sk, i) {
+          tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, W - 0.22 + i * 0.012);
+        });
+
+        // ============================ PLAN 2 : Madrid au coucher du soleil ============================
+        var sky = Q.madridSkyline({ uid: "sk" });
+        $("#skyL").innerHTML = sky.sky; $("#sunL").innerHTML = sky.sun; $("#farL").innerHTML = sky.far; $("#midL").innerHTML = sky.mid; $("#nearL").innerHTML = sky.near;
+        var span = P2.t1 - P2.t0 + 0.3, t0 = P2.t0 - 0.1;
+        // travelling lateral lent : calques a des vitesses differentes (parallaxe)
+        tl.fromTo("#skyL", { x: 0 }, { x: -120, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#sunL", { x: 0 }, { x: -160, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#farL", { x: 0 }, { x: -320, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#midL", { x: 0 }, { x: -700, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#nearL", { x: 0 }, { x: -1280, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#motes", { x: 0 }, { x: -520, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#p2", { scale: 1.06, transformOrigin: "50% 60%" }, { scale: 1.0, duration: span, ease: "sine.out" }, t0);
+        // le soleil respire, ses rayons tournent
+        var rays2 = $("#sunL .sk-rays");
+        tl.fromTo(rays2, { rotation: 0, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py }, { rotation: 22, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py, duration: span, ease: "none" }, t0);
+        tl.fromTo("#sunL .sk-disc", { scale: 0.97, svgOrigin: sky.sunX + " " + sky.sunY }, { scale: 1.03, svgOrigin: sky.sunX + " " + sky.sunY, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: C.reps(span, 1.8) }, t0);
+        // grandes nuages de crepuscule : derive lente
+        document.querySelectorAll("#skyL .m-cloud").forEach(function (c, i) { tl.to(c, { x: 60 + (i % 3) * 40, duration: span, ease: "none" }, t0); });
+        // fenetres qui scintillent (finis)
+        document.querySelectorAll("#nearL svg rect[fill='#FFC24A']").forEach(function (r, i) { if (i % 6 === 0) tl.to(r, { opacity: 0.35, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, t0 + 0.4 + (i % 7) * 0.5); });
+        // poussiere doree
+        $("#motes").innerHTML = Q.moteField({ n: 46, w: 2400, h: 1200, seed: 9, rmin: 2, rmax: 6, stars: true });
+        document.querySelectorAll("#motes .k-mote").forEach(function (m, i) {
+          var x = +m.dataset.x, y = +m.dataset.y;
+          tl.fromTo(m, { x: x, y: y, opacity: 0 }, { x: x + 40 - (i % 5) * 20, y: y - 160 - (i % 7) * 30, opacity: 0.9, duration: span * 0.5, ease: "sine.out" }, t0 + (i % 9) * 0.1);
+          tl.to(m, { opacity: 0, duration: span * 0.5, ease: "sine.in" }, t0 + span * 0.5 + (i % 9) * 0.1);
+        });
+        // oiseaux
+        for (var bI = 0; bI < 6; bI++) {
+          var bd = document.createElement("div"); bd.className = "bird"; bd.setAttribute("data-layout-allow-overflow", "");
+          bd.innerHTML = '<svg width="70" height="34" viewBox="-35 -17 70 34"><path class="wing" d="M-30 -2Q-16 -18 0 2Q16 -18 30 -2" stroke="#3b2373" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+          $("#p2").insertBefore(bd, $("#qz"));
+          var by = 190 + bI * 62 + (bI % 2) * 30, bs = 0.7 + (bI % 3) * 0.25, bx0 = 2100 + bI * 150;
+          tl.fromTo(bd, { x: bx0, y: by, scale: bs }, { x: bx0 - 2800, y: by - 90 + (bI % 3) * 40, duration: span + 1.0, ease: "none" }, t0 - 0.3);
+          tl.fromTo(bd.querySelector(".wing"), { scaleY: 1, svgOrigin: "0 0" }, { scaleY: -0.7, svgOrigin: "0 0", duration: 0.32 + bI * 0.03, ease: "sine.inOut", yoyo: true, repeat: C.reps(span + 1.0, 0.32 + bI * 0.03) * 1 + 1 }, t0 - 0.3);
+        }
+        // le Quetzal traverse le ciel (vol en arc devant le soleil)
+        var qz = $("#qz");
+        qz.innerHTML = Q.quetzal({ uid: "qf", width: 380, height: 456 });
+        Q.quetzalSet(qz, "fly", gsap);
+        var fT0 = P2.t0 + 0.2, fDur = P2.t1 - P2.t0 - 0.2;
+        tl.fromTo(qz, { x: -460, y: 430 }, { motionPath: { path: [{ x: -460, y: 430 }, { x: 260, y: 300 }, { x: 960, y: 250 }, { x: 1560, y: 340 }, { x: 2200, y: 200 }], curviness: 1.3 }, duration: fDur, ease: "power1.inOut" }, fT0);
+        Q.quetzalFlap(tl, qz, fT0, Math.floor(fDur / 0.46), 0.46, 0.9);
+        Q.quetzalSway(tl, qz, fT0, 1.6, 1.4); Q.quetzalSway(tl, qz, fT0 + 1.6, 1.6, 1.4); Q.quetzalSway(tl, qz, fT0 + 3.2, 1.6, 1.4);
+        Q.quetzalBlink(tl, qz, fT0 + 1.0);
+        tl.fromTo(qz, { scale: 0.8 }, { scale: 1.05, duration: fDur, ease: "sine.inOut" }, fT0);
+        // sillage d'etincelles verts
+        for (var z = 0; z < 14; z++) {
+          var sp2 = document.createElement("div"); sp2.className = "spark"; sp2.setAttribute("data-layout-allow-overflow", ""); sp2.innerHTML = '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>'; $("#p2").insertBefore(sp2, $("#nearL"));
+          var tz = fT0 + 0.2 + z * (fDur / 15), px = -460 + (2660 * (z + 1)) / 15, py = 330 + Math.sin(z * 0.8) * 70;
+          tl.fromTo(sp2, { x: px, y: py, scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.2, ease: "back.out(3)" }, tz);
+          tl.to(sp2, { y: py + 90, scale: 0, opacity: 0, duration: 0.55, ease: "power2.in" }, tz + 0.2);
+        }
+        // pastille de lieu
+        var chip = $("#chip");
+        chip.innerHTML = '<svg width="46" height="58" viewBox="0 0 46 58"><path d="M23 56C6 36 4 28 4 22a19 19 0 1 1 38 0c0 6-2 14-19 34Z" fill="#c9573b" stroke="#fff3d1" stroke-width="4"/><circle cx="23" cy="22" r="7" fill="#fff3d1"/></svg><b>' + (rot[2] || "Madrid").toUpperCase() + ", ESPAÑA</b>";
+        tl.fromTo(chip, { x: -700, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, P2.t0 + 0.35);
+        tl.to(chip, { x: -700, opacity: 0, duration: 0.4, ease: "power3.in" }, P2.t1 - 0.5);
+
+        // ============================ cadre commun + sous-titres ============================
+        C.frame(tl, root, PLAN, { seed: 11 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u01-intro"] = tl;
+      })();
+    </script>
+  </body>
+</html>

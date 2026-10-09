@@ -1,0 +1,54 @@
+{
+  "u01-intro": {
+    "parts": [
+      {
+        "id": "u01-intro",
+        "duration": 9.581
+      }
+    ],
+    "total": 9.581
+  },
+  "u01-historia": {
+    "parts": [
+      {
+        "id": "u01-historia-1",
+        "duration": 9.942
+      },
+      {
+        "id": "u01-historia-2",
+        "duration": 9.989
+      },
+      {
+        "id": "u01-historia-3",
+        "duration": 9.155
+      },
+      {
+        "id": "u01-historia-4",
+        "duration": 10.147
+      }
+    ],
+    "total": 39.233
+  },
+  "u01-capsula-hispanos": {
+    "parts": [
+      {
+        "id": "u01-capsula-hispanos-1",
+        "duration": 9.049
+      },
+      {
+        "id": "u01-capsula-hispanos-2",
+        "duration": 8.653
+      }
+    ],
+    "total": 17.702
+  },
+  "u01-pluma": {
+    "parts": [
+      {
+        "id": "u01-pluma",
+        "duration": 9.66
+      }
+    ],
+    "total": 9.66
+  }
+}
