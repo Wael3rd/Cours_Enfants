@@ -15,6 +15,10 @@ export interface AppOptions {
   backgroundColor: string;
   /** Sous-chemins du site a ne jamais capter par ce service worker (ex. les autres apps pour le hub). */
   foreignScopes?: string[];
+  /** Motifs supplementaires exclus du precache (ex. 'audio/**' : telecharge a la demande, voir runtimeCaching). */
+  precacheIgnore?: string[];
+  /** Regles Workbox runtimeCaching (ex. CacheFirst dedie pour l'audio telecharge par unite). */
+  runtimeCaching?: NonNullable<NonNullable<Parameters<typeof VitePWA>[0]>['workbox']>['runtimeCaching'];
 }
 
 /**
@@ -56,7 +60,8 @@ export function appConfig(o: AppOptions): UserConfig {
         workbox: {
           // TOUT en precache : app, polices, images, audio, cinematiques (html/js/woff2...).
           globPatterns: ['**/*.{js,css,html,json,svg,png,jpg,jpeg,webp,gif,ico,woff,woff2,ttf,mp3,ogg,wav,m4a,mp4,webm,webmanifest}'],
-          globIgnores: isHub ? ['maths/**', 'espagnol/**'] : [],
+          globIgnores: [...(isHub ? ['maths/**', 'espagnol/**'] : []), ...(o.precacheIgnore ?? [])],
+          runtimeCaching: o.runtimeCaching,
           maximumFileSizeToCacheInBytes: 30 * 1024 * 1024, // defaut workbox = 2 Mo : le runtime HyperFrames fait 500 Ko, une voix/musique plus
           navigateFallback: `${o.base}index.html`,
           navigateFallbackDenylist: (o.foreignScopes ?? []).map((s) => new RegExp(`^${s}`)),
