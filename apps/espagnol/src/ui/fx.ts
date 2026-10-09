@@ -38,13 +38,13 @@ export function sparks(el: Element | null | undefined, colors = ['#ffc83d', '#d9
 }
 
 /** Texte flottant (ex. "¡Genial!") qui monte et s'efface. */
-export function floatText(at: Element | null | undefined, text: string, color = '#fff'): void {
+export function floatText(at: Element | null | undefined, text: string, color = '#fff', dy = 0): void {
   if (!at) return;
   const r = rect(at);
   const el = document.createElement('div');
   el.textContent = text;
   Object.assign(el.style, {
-    position: 'fixed', left: `${r.left + r.width / 2}px`, top: `${r.top}px`, zIndex: '90', pointerEvents: 'none', willChange: 'transform, opacity',
+    position: 'fixed', left: `${r.left + r.width / 2}px`, top: `${r.top + dy}px`, zIndex: '90', pointerEvents: 'none', willChange: 'transform, opacity',
     font: '400 44px/1 "Alfa Slab One", Georgia, serif', color, textShadow: '0 4px 0 rgba(0,0,0,.45)', whiteSpace: 'nowrap',
   });
   document.body.appendChild(el);

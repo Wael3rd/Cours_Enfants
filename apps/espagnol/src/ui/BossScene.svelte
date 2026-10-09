@@ -50,7 +50,7 @@
     sfx('spell');
     const a = center(qEl);
     const b = center(sEl);
-    floatText(qEl, spell, '#ffe08a');
+    floatText(scene, spell, '#ffe08a', 120);
     await orb('#ffd34d', { x: a.x + 40, y: a.y - 20 }, b);
     sfx('hit');
     haptic('good');
@@ -96,25 +96,25 @@
 <div class="scene" bind:this={scene}>
   <div class="bgfx" aria-hidden="true"></div>
   <div class="hearts" bind:this={hearts} role="img" aria-label={`${lives} corazones`}>
-    {#each Array(maxLives) as _, i}<span class="h" class:lost={i >= lives}><Icon name="heart" size={40} /></span>{/each}
+    {#each Array(maxLives) as _, i}<span class="h" class:lost={i >= lives}><Icon name="heart" size={34} /></span>{/each}
   </div>
   <div class="hp">
     <b>{name}</b>
     <span class="bar"><i style:transform="scaleX({Math.max(0, hp)})"></i></span>
   </div>
-  <div class="q" bind:this={qEl}><QuetzalMascot bind:this={quetzal} pose="perched" width={140} /></div>
-  <div class="s" bind:this={sEl} class:gone={defeated}><SombraFigure bind:this={sombra} width={150} arm /></div>
+  <div class="q" bind:this={qEl}><QuetzalMascot bind:this={quetzal} pose="perched" width={112} /></div>
+  <div class="s" bind:this={sEl} class:gone={defeated}><SombraFigure bind:this={sombra} width={128} arm /></div>
 </div>
 
 <style>
-  .scene { position: relative; flex: none; height: 232px; overflow: hidden; background: radial-gradient(ellipse at 75% 60%, #4a2a9a, #1b0d3a 70%); box-shadow: inset 0 -10px 24px rgba(0, 0, 0, 0.5); }
+  .scene { position: relative; flex: none; height: 176px; overflow: hidden; background: radial-gradient(ellipse at 75% 60%, #4a2a9a, #1b0d3a 70%); box-shadow: inset 0 -10px 24px rgba(0, 0, 0, 0.5); }
   .bgfx { position: absolute; inset: 0; background: repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 38px); }
-  .hearts { position: absolute; left: 20px; top: 12px; display: flex; gap: 4px; z-index: 2; }
+  .hearts { position: absolute; left: 20px; top: 10px; display: flex; gap: 4px; z-index: 2; }
   .h { color: #ff4f7b; filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.5)); transition: transform 0.3s cubic-bezier(0.2, 1.6, 0.4, 1), color 0.3s; }
   .h.lost { color: #4a3f6a; transform: scale(0.8); }
-  .hp { position: absolute; right: 24px; top: 14px; z-index: 2; width: 420px; display: grid; gap: 6px; text-align: right; }
+  .hp { position: absolute; right: 24px; top: 10px; z-index: 2; width: 420px; display: grid; gap: 6px; text-align: right; }
   .hp b { font: 400 26px/1 var(--q-font-title); color: #d6c8ff; text-shadow: 0 3px 0 #000a; }
-  .bar { display: block; height: 26px; border-radius: 14px; overflow: hidden; background: #0b0d2a; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6), 0 0 0 3px #a99bff; }
+  .bar { display: block; height: 22px; border-radius: 14px; overflow: hidden; background: #0b0d2a; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6), 0 0 0 3px #a99bff; }
   .bar i { display: block; height: 100%; width: 100%; transform-origin: 100% 50%; background: linear-gradient(180deg, #c8b8ff, #7b4cf0 55%, #4a2a9a); transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.1, 1); }
   .q { position: absolute; left: 90px; bottom: 6px; }
   .s { position: absolute; right: 80px; bottom: 0; }

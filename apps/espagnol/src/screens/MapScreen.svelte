@@ -1,6 +1,6 @@
 <script lang="ts">
   /** Accueil : carte du monde (pan/zoom), HUD (niveau, plumas, Mision del dia, diccionario, perfil, ajustes), Quetzal perche. */
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import { gsap, haptic, prefersReducedMotion } from '@ce/core';
   import { game } from '../state/game.svelte';
   import { content, loadUnit } from '../engine/data';
@@ -21,9 +21,15 @@
 
   const t = now();
   const s = $derived(game.state);
-  const states = mapStates(content, game.state, t);
+  const real = mapStates(content, game.state, t);
   const cur = currentUnit(content, game.state);
   const curRegion = (cur && regionOf(cur)) || 'madrid';
+  // Voyage apres une plume : la nouvelle region demarre sous le brouillard, le jeton part de la region precedente
+  const [tFrom, tTo] = (game.state.flags.travel ?? '').split(':');
+  const traveling = !!(tFrom && tTo && real[tTo]);
+  let states = $state<Record<string, 'locked' | 'open' | 'current' | 'done'>>(traveling ? { ...real, [tTo]: 'locked' } : real);
+  let player = $state(traveling ? tFrom : curRegion);
+  let banner = $state('');
   const lvl = $derived(playerLevel(s));
   const plumas = $derived(Object.keys(s.plumas).length);
   const missionDone = $derived(s.missionDone === ymd(t));
@@ -36,8 +42,33 @@
   let leaving = false;
   let root: HTMLElement | undefined = $state();
 
+  async function runTravel() {
+    leaving = true;
+    await new Promise((r) => setTimeout(r, 1100));
+    sfx('magic');
+    map?.clearFog(tTo, 1.8);
+    await new Promise((r) => setTimeout(r, 900));
+    sfx('step');
+    const tl = map?.travel(tFrom, tTo, 2.6);
+    const end = () => {
+      states = real;
+      player = curRegion;
+      game.mutate((st) => delete st.flags.travel);
+      void tick().then(() => {
+        map?.focus(curRegion, 1.25, 0);
+        banner = `¡Nueva región: ${content.units.find((u) => u.id === cur?.id)?.lugar ?? ''}!`;
+        sfx('level');
+        setTimeout(() => (banner = ''), 3200);
+        leaving = false;
+      });
+    };
+    if (tl && tl.duration() > 0) tl.eventCallback('onComplete', end);
+    else end();
+  }
+
   onMount(() => {
     music.setMode('menu');
+    if (traveling) void runTravel();
     if (!root || prefersReducedMotion()) return;
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     tl.from(root.querySelector('.hud-l'), { x: -120, opacity: 0, duration: 0.6 }, 0.1)
@@ -86,7 +117,7 @@
 
 <div class="scr map" bind:this={root}>
   <div class="mapwrap">
-    <WorldMap bind:this={map} {states} player={curRegion} {initial} focusOn={curRegion} zoom={1.25} onselect={open} />
+    <WorldMap bind:this={map} {states} {player} {initial} focusOn={traveling ? tFrom : curRegion} zoom={traveling ? 1.6 : 1.25} onselect={open} />
   </div>
   <div class="vignette"></div>
 
@@ -105,6 +136,8 @@
     <RoundBtn icon={s.settings.music ? 'music' : 'musicoff'} label={s.settings.music ? 'Quitar la música' : 'Poner la música'} variant="nuit" onclick={toggleMusic} />
     <RoundBtn icon="gear" label="Ajustes" variant="nuit" onclick={() => go({ name: 'settings' })} />
   </div>
+
+  {#if banner}<div class="banner">{banner}</div>{/if}
 
   {#if events.length}
     <button class="evento" type="button" onclick={() => open(regionOf(events[0]) ?? 'oaxaca')}>
@@ -147,6 +180,8 @@
   .plumas b { font: 400 34px/1 var(--q-font-title); }
   .evento { position: absolute; left: 50%; top: 20px; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; height: 64px; padding: 0 28px; border: 0; border-radius: 999px; cursor: pointer; font: 400 28px/1 var(--q-font-title); color: #fff; background: linear-gradient(180deg, #ff7aa8, var(--q-magenta)); box-shadow: 0 6px 0 #5e0f33, inset 0 0 0 3px rgba(255, 255, 255, 0.4); animation: bob 2s ease-in-out infinite; }
   @keyframes bob { 50% { transform: translateX(-50%) translateY(-6px); } }
+  .banner { position: absolute; left: 50%; top: 130px; transform: translateX(-50%); z-index: 6; padding: 14px 40px 16px; border-radius: 999px; font: 400 44px/1 var(--q-font-title); color: var(--q-nuit); background: linear-gradient(180deg, #ffe08a, var(--q-sol)); box-shadow: 0 7px 0 #6b3d08, 0 0 40px rgba(255, 200, 61, 0.6); animation: bnr 0.5s cubic-bezier(0.2, 1.6, 0.4, 1); white-space: nowrap; }
+  @keyframes bnr { from { transform: translateX(-50%) scale(0.4); opacity: 0; } }
   .bird { position: absolute; left: 20px; bottom: 14px; z-index: 4; }
   .birdbtn { all: unset; cursor: pointer; display: block; padding: 8px 18px 0; touch-action: manipulation; }
   .bubble { position: absolute; left: 150px; bottom: 190px; white-space: nowrap; padding: 12px 24px; border-radius: 22px 22px 22px 4px; font: 800 28px/1 var(--q-font-body); color: var(--q-nuit); background: var(--q-papel); box-shadow: 0 5px 0 #7d5a1c, 0 10px 20px rgba(0, 0, 0, 0.35); animation: popin 0.25s cubic-bezier(0.2, 1.6, 0.4, 1); }

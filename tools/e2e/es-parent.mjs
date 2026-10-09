@@ -93,11 +93,19 @@ page.on('pageerror', (e) => errors.push(e.message));
 page.on('response', (r) => r.status() >= 400 && !r.url().includes('/audio/es/') && errors.push(r.status() + ' ' + r.url()));
 
 try {
-  await page.goto(`${ORIGIN}/espagnol/`);
-  await page.waitForSelector('h1:has-text("La Leyenda del Quetzal")');
-
-  // porte parent : appui long 3 s
-  const gate = await page.locator('.gate button').boundingBox();
+  // l'espace parent s'ouvre depuis Ajustes (porte : appui long 3 s)
+  const toSettings = async () => {
+    await page.waitForFunction(() => window.__q);
+    await page.evaluate(() => {
+      const { game, nav } = window.__q;
+      game.mutate((s) => { s.flags.prologue = '1'; s.profile.name ||= 'Test'; });
+      nav.go({ name: 'settings' }, { root: true });
+    });
+    await page.waitForSelector('.set .gate button');
+  };
+  await page.goto(`${ORIGIN}/espagnol/?debug`);
+  await toSettings();
+  const gate = await page.locator('.set .gate button').boundingBox();
   await page.mouse.move(gate.x + gate.width / 2, gate.y + gate.height / 2);
   await page.mouse.down();
   await page.waitForTimeout(1000);
@@ -157,8 +165,8 @@ try {
   // persistance : recharger -> sauvegarde conservee
   await page.waitForTimeout(700);
   await page.reload();
-  await page.waitForSelector('h1:has-text("La Leyenda del Quetzal")');
-  const g2 = await page.locator('.gate button').boundingBox();
+  await toSettings();
+  const g2 = await page.locator('.set .gate button').boundingBox();
   await page.mouse.move(g2.x + g2.width / 2, g2.y + g2.height / 2);
   await page.mouse.down();
   await page.waitForTimeout(3300);

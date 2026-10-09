@@ -129,7 +129,7 @@
         <p>{quest.titulo}</p>
       </div>
       <div class="stars">
-        {#each [0, 1, 2] as i}<span class="star"><Icon name="star" size={128} class={i < outcome.stars ? 'on' : 'off'} /></span>{/each}
+        {#each [0, 1, 2] as i}<span class="star"><Icon name="star" size={104} class={i < outcome.stars ? 'on' : 'off'} /></span>{/each}
       </div>
       <div class="stats">
         <div class="stat"><b>{pct} %</b><span>aciertos</span></div>
@@ -144,7 +144,7 @@
         <div class="cards">
           <p class="lbl">Cartas nuevas</p>
           <div class="row">
-            {#each shownCards as v}<div class="cd"><VocabCard {v} size={150} /></div>{/each}
+            {#each shownCards as v}<div class="cd"><VocabCard {v} size={132} /></div>{/each}
             {#if cards.length > shownCards.length}<span class="more">+{cards.length - shownCards.length}</span>{/if}
           </div>
         </div>
@@ -182,9 +182,9 @@
   .end { z-index: 3; align-items: center; }
   .rays { position: absolute; left: 50%; top: 30%; width: 2000px; height: 2000px; margin: -1000px 0 0 -1000px; background: repeating-conic-gradient(from 0deg, rgba(255, 200, 61, 0.1) 0deg 7deg, transparent 7deg 22deg); -webkit-mask: radial-gradient(closest-side, #000 15%, transparent 70%); mask: radial-gradient(closest-side, #000 15%, transparent 70%); animation: spin 40s linear infinite; pointer-events: none; }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .col { position: relative; flex: 1; width: 100%; max-width: 1100px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 14px 30px; }
+  .col { position: relative; flex: 1; width: 100%; max-width: 1100px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 10px 30px; }
   .hd { text-align: center; }
-  .hd h1 { font-size: 76px; line-height: 1; }
+  .hd h1 { font-size: 64px; line-height: 1; }
   .hd p { margin: 8px 0 0; font: 800 30px var(--q-font-body); color: var(--q-papel2); }
   .stars { display: flex; gap: 18px; margin: 0 0 4px; }
   .star { display: block; will-change: transform; opacity: 0; }

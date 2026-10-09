@@ -16,12 +16,14 @@
     accent?: string;
     cps?: number;
     showButtons?: boolean;
+    /** version basse (combats, ecrans charges) */
+    compact?: boolean;
     onaudio?: () => void;
     onslow?: () => void;
     onhint?: () => void;
     ondone?: () => void;
   }
-  let { name, text, portrait, portraitSvg, accent = '#ffc83d', cps = 34, showButtons = true, onaudio, onslow, onhint, ondone }: Props = $props();
+  let { name, text, portrait, portraitSvg, accent = '#ffc83d', cps = 34, showButtons = true, compact = false, onaudio, onslow, onhint, ondone }: Props = $props();
 
   let n = $state(0);
   let done = $derived(n >= text.length);
@@ -52,13 +54,13 @@
   }
 </script>
 
-<div class="dlg" style:--accent={accent}>
+<div class="dlg" class:compact style:--accent={accent}>
   <div class="portrait" bind:this={portraitEl}>
     <div class="halo"></div>
     {#if portraitSvg}{@html portraitSvg}{:else if portrait}<img src={portrait} alt="" draggable="false" />{/if}
   </div>
   <div class="plate"><span>{name}</span></div>
-  <Panel padding="30px 36px 28px 220px">
+  <Panel padding={compact ? '20px 30px 20px 180px' : '30px 36px 28px 220px'}>
     <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
     <div class="txt" onclick={skip}>
       <p><span class="seen">{text.slice(0, n)}</span><span class="rest">{text.slice(n)}</span></p>
@@ -96,5 +98,13 @@
   .tool { width: 76px; height: 76px; border-radius: 50%; border: 0; display: grid; place-items: center; color: var(--q-nuit); cursor: pointer; background: linear-gradient(180deg, #ffe08a, var(--q-sol)); box-shadow: 0 5px 0 #6b3d08, inset 0 0 0 3px rgba(255, 255, 255, 0.45); touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 0.06s; }
   .tool:active { transform: translateY(4px); box-shadow: 0 1px 0 #6b3d08, inset 0 0 0 3px rgba(255, 255, 255, 0.45); }
   .tool.hint { background: linear-gradient(180deg, #7ff3e4, var(--q-turquesa)); box-shadow: 0 5px 0 #07474f, inset 0 0 0 3px rgba(255, 255, 255, 0.45); }
+  .compact { padding-top: 44px; }
+  .compact .portrait { width: 140px; height: 180px; left: 22px; bottom: 8px; }
+  .compact .plate { left: 180px; top: 14px; }
+  .compact .plate span { font-size: 24px; padding: 5px 22px 7px; }
+  .compact .txt { min-height: 78px; padding-right: 220px; }
+  .compact p { font-size: 28px; line-height: 1.3; }
+  .compact .tool { width: 60px; height: 60px; }
+  .compact .tool :global(svg) { width: 32px; height: 32px; }
   .tool:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
 </style>

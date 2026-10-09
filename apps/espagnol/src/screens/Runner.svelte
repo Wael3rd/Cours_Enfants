@@ -141,7 +141,7 @@
 
   // expose l'etape courante pour les tests e2e (?debug)
   $effect(() => {
-    if (typeof window !== 'undefined' && (window as unknown as { __q?: unknown }).__q) (window as unknown as { __qstep?: unknown }).__qstep = cur?.step;
+    if (typeof window !== 'undefined' && (window as unknown as { __q?: unknown }).__q) { (window as unknown as { __qstep?: unknown }).__qstep = cur?.step; (window as unknown as { __qidx?: number }).__qidx = idx; }
   });
 
   // prechauffe les voix de l'etape courante et de la suivante
@@ -306,7 +306,7 @@
   <main class="area" bind:this={stepArea}>
     {#if cur && Comp}
       {#key `${idx}:${cur.step.id}`}
-        <div class="stepwrap">
+        <div class="stepwrap" class:fbshown={!!result && graded}>
           <Comp step={cur.step as never} {result} {onanswer} onhint={openHint} />
         </div>
       {/key}
@@ -314,9 +314,9 @@
   </main>
 
   {#if result && graded}
-    <div class="fb {result.outcome}" bind:this={feedbackEl} role="status">
+    <div class="fbk {result.outcome}" bind:this={feedbackEl} role="status">
       <div class="mood">
-        {#key result}<QuetzalMascot pose={mood === 'happy' ? 'happy' : 'sad'} width={96} idle={false} />{/key}
+        {#key result}<QuetzalMascot pose={mood === 'happy' ? 'happy' : 'sad'} width={74} idle={false} />{/key}
       </div>
       <div class="txt">
         <h3>{msg}</h3>
@@ -373,14 +373,15 @@
   .area { position: relative; flex: 1; min-height: 0; overflow: hidden; }
   .stepwrap { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; overscroll-behavior: contain; animation: stepin 0.4s cubic-bezier(0.2, 0.9, 0.1, 1); }
   @keyframes stepin { from { transform: translateX(60px); opacity: 0; } }
-  .fb { position: absolute; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; gap: 22px; padding: 14px 30px 18px 22px; min-height: 140px; will-change: transform; }
-  .fb.correct { background: linear-gradient(180deg, #2fd698, #0e9f6e); box-shadow: 0 -8px 0 #5df0b0, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #02281d; }
-  .fb.partial { background: linear-gradient(180deg, #ffe08a, #ffb21e); box-shadow: 0 -8px 0 #fff3b0, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #3a1d02; }
-  .fb.wrong { background: linear-gradient(180deg, #ffa3b0, #e8434f); box-shadow: 0 -8px 0 #ffd0d6, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #3a0612; }
-  .mood { flex: none; width: 96px; height: 100px; display: grid; place-items: end center; }
+  .stepwrap.fbshown { padding-bottom: 104px; }
+  .fbk { position: absolute; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; align-items: center; gap: 22px; padding: 8px 30px 12px 22px; min-height: 100px; will-change: transform; }
+  .fbk.correct { background: linear-gradient(180deg, #2fd698, #0e9f6e); box-shadow: 0 -8px 0 #5df0b0, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #02281d; }
+  .fbk.partial { background: linear-gradient(180deg, #ffe08a, #ffb21e); box-shadow: 0 -8px 0 #fff3b0, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #3a1d02; }
+  .fbk.wrong { background: linear-gradient(180deg, #ffa3b0, #e8434f); box-shadow: 0 -8px 0 #ffd0d6, 0 -16px 40px rgba(0, 0, 0, 0.4); color: #3a0612; }
+  .mood { flex: none; width: 74px; height: 84px; display: grid; place-items: end center; overflow: visible; }
   .txt { flex: 1; min-width: 0; }
-  .txt h3 { margin: 0; font: 400 46px/1 var(--q-font-title); text-shadow: 0 3px 0 rgba(255, 255, 255, 0.35); }
-  .txt p { margin: 6px 0 0; font: 800 28px/1.2 var(--q-font-body); }
+  .txt h3 { margin: 0; font: 400 40px/1 var(--q-font-title); text-shadow: 0 3px 0 rgba(255, 255, 255, 0.35); }
+  .txt p { margin: 4px 0 0; font: 800 24px/1.2 var(--q-font-body); }
   .txt .warn { font-weight: 900; }
   .xp { flex: none; display: grid; justify-items: center; gap: 2px; }
   .xp b { padding: 6px 20px 8px; border-radius: 999px; font: 900 32px/1 var(--q-font-body); color: #fff; background: rgba(11, 13, 42, 0.8); }

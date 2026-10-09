@@ -40,6 +40,7 @@
   <div class="dlg">
     {#key reaction?.audio ?? 'q'}
       <DialogBox
+        compact
         name={npc?.nombre ?? step.pnj}
         portrait={bustOf(step.pnj) ? undefined : reaction ? emojiUrl(reaction.emoji) : portraitOf(step.pnj)}
         portraitSvg={bustOf(step.pnj)}
@@ -74,15 +75,12 @@
 <style>
   .dc { min-height: 100%; display: flex; flex-direction: column; gap: 8px; padding: 4px 30px 12px; }
   .dlg { flex: none; }
-  .dlg :global(.dlg) { padding-top: 56px; }
-  .dlg :global(.txt) { min-height: 108px; }
-  .dlg :global(p) { font-size: 31px; }
   .opts { flex: none; display: grid; gap: 12px; align-content: start; padding-top: 6px; max-width: 1040px; width: 100%; margin: 0 auto; }
   .opts.two { grid-template-columns: 1fr 1fr; }
   .row { display: flex; align-items: center; gap: 12px; }
-  .say { flex: none; width: 64px; height: 64px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--q-nuit); background: linear-gradient(180deg, #ffe08a, var(--q-sol)); box-shadow: 0 5px 0 #6b3d08; touch-action: manipulation; }
+  .say { flex: none; width: 60px; height: 60px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--q-nuit); background: linear-gradient(180deg, #ffe08a, var(--q-sol)); box-shadow: 0 5px 0 #6b3d08; touch-action: manipulation; }
   .say:active { transform: translateY(4px); box-shadow: 0 1px 0 #6b3d08; }
-  .opt { flex: 1; min-height: 80px; padding: 8px 26px; border: 0; border-radius: 22px; text-align: left; cursor: pointer; font: 900 33px/1.15 var(--q-font-body); color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel2)); box-shadow: 0 7px 0 #7d5a1c, inset 0 0 0 3px rgba(255, 255, 255, 0.5); touch-action: manipulation; transition: transform 0.08s, box-shadow 0.08s; }
+  .opt { flex: 1; min-height: 72px; padding: 8px 26px; border: 0; border-radius: 22px; text-align: left; cursor: pointer; font: 900 31px/1.15 var(--q-font-body); color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel2)); box-shadow: 0 7px 0 #7d5a1c, inset 0 0 0 3px rgba(255, 255, 255, 0.5); touch-action: manipulation; transition: transform 0.08s, box-shadow 0.08s; }
   .opt:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 2px 0 #7d5a1c; }
   .opt.right { background: linear-gradient(180deg, #7ff0bc, #1fb97a); box-shadow: 0 7px 0 #066a4a, 0 0 0 5px #42e0a0; }
   .opt.wrong { background: linear-gradient(180deg, #ffa3b0, #e8434f); box-shadow: 0 7px 0 #7a1f2f; }

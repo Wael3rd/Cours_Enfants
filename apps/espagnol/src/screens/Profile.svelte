@@ -91,7 +91,7 @@
       <Panel padding="22px 28px">
         <div class="plrow">
           <div class="qz" style:filter="saturate({0.25 + frac * 0.75}) brightness({0.85 + frac * 0.15})">
-            <QuetzalMascot bind:this={quetzal} pose="perched" bare={plumas === 0} branch width={190} />
+            <QuetzalMascot bind:this={quetzal} pose="perched" bare={plumas === 0} branch width={150} />
           </div>
           <div class="pls">
             <h3 class="h-rpg">Las plumas del Quetzal</h3>
@@ -146,8 +146,8 @@
 
 <style>
   .pf { z-index: 2; }
-  .body { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px 28px; padding: 6px 28px 30px; align-content: start; }
-  .hero { display: flex; align-items: center; gap: 24px; }
+  .body { flex: 1; min-height: 0; display: grid; grid-template-columns: auto 1fr; gap: 22px 28px; padding: 6px 28px 30px; align-content: start; align-items: start; }
+  .hero { grid-column: 1 / -1; display: flex; align-items: center; gap: 36px; padding-left: 20px; }
   .stage { position: relative; width: 250px; height: 300px; flex: none; display: grid; place-items: center; }
   .halo { position: absolute; inset: 20px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 200, 61, 0.55), transparent); }
   .av { position: relative; width: 240px; height: 240px; object-fit: contain; filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.25)); }
@@ -161,13 +161,12 @@
   .nums li { display: grid; padding: 6px 16px 8px; border-radius: 16px; background: rgba(11, 13, 42, 0.6); box-shadow: inset 0 0 0 3px rgba(255, 200, 61, 0.4); }
   .nums b { font: 400 34px/1 var(--q-font-title); color: var(--q-sol); }
   .nums span { font: 800 18px var(--q-font-body); color: var(--q-papel2); }
-  .pl { grid-column: 1 / -1; }
-  .plrow { display: flex; align-items: center; gap: 30px; }
+  .plrow { display: flex; align-items: center; gap: 20px; }
   .pls { flex: 1; display: grid; gap: 6px; }
   .pls h3 { font-size: 36px; }
   .cnt { margin: 0; font: 900 26px var(--q-font-body); color: var(--q-papel); }
   .feathers { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
-  .f { display: grid; justify-items: center; gap: 2px; width: 108px; padding: 8px 4px; border-radius: 18px; color: #6b72b8; background: rgba(255, 255, 255, 0.06); }
+  .f { display: grid; justify-items: center; gap: 2px; width: 96px; padding: 8px 4px; border-radius: 18px; color: #6b72b8; background: rgba(255, 255, 255, 0.06); }
   .f small { font: 800 18px var(--q-font-body); color: var(--q-papel2); opacity: 0.7; text-align: center; }
   .f.got { color: #42e0a0; background: rgba(66, 224, 160, 0.14); box-shadow: inset 0 0 0 3px rgba(66, 224, 160, 0.6); filter: drop-shadow(0 0 10px rgba(66, 224, 160, 0.5)); }
   .f.got small { opacity: 1; }
