@@ -51,6 +51,13 @@ class AppStore {
     this.state.club = { ...club };
     this.save();
   }
+  /** La cinematique de strategie de cette zone a ete montree (arrivee sur la zone). */
+  markStrategySeen(zone: number): void {
+    if (!this.state.strategySeen.includes(zone)) {
+      this.state.strategySeen.push(zone);
+      this.save();
+    }
+  }
   markPlacementDone(): void {
     this.state.placementDone = true;
     void this.saveNow();

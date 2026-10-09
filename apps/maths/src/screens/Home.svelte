@@ -15,6 +15,7 @@
   import Crest from '../art/Crest.svelte';
   import Ball from '../art/Ball.svelte';
   import ParentEntry from '../parent/ParentEntry.svelte';
+  import { hasStrategy, playStrategy } from '../lib/cine.ts';
 
   const club = $derived(app.state.club);
   const look = $derived(app.state.look);
@@ -34,7 +35,13 @@
 
   onMount(() => {
     applyAudioSettings();
-    say('home_welcome');
+    // 1re arrivee sur une zone : le Coach explique sa strategie (une fois par zone), sinon accueil vocal habituel.
+    const zone = app.state.profile.progress.focusZone;
+    let strat: ReturnType<typeof setTimeout> | undefined;
+    if (app.state.setupDone && app.state.placementDone && !app.state.strategySeen.includes(zone) && hasStrategy(zone)) {
+      app.markStrategySeen(zone);
+      strat = setTimeout(() => void playStrategy(zone), 700);
+    } else say('home_welcome');
     const ctx = gsap.context(() => {
       // Entree orchestree : l'avatar glisse, le bouton MATCH claque, puis il "respire".
       gsap.from('.home-avatar', { x: -120, opacity: 0, duration: 0.6, ease: 'ceSnap', delay: 0.15 });
@@ -45,7 +52,7 @@
       }
     });
     if (starNum) countUp(starNum, rewards.stars - rewards.starsSpent, { duration: 0.8 });
-    return () => ctx.revert();
+    return () => { clearTimeout(strat); ctx.revert(); };
   });
 
   function cheer() {

@@ -46,6 +46,8 @@ export interface AppState {
   settings: Settings;
   profile: Profile;
   createdAt: number;
+  /** Zones (1..9) dont la cinematique de strategie a deja ete montree a l'arrivee (une seule fois par zone). */
+  strategySeen: number[];
 }
 
 export const SESSION_MINUTES_CHOICES = [2, 3, 5] as const;
@@ -64,6 +66,7 @@ export const defaultState = (): AppState => ({
   settings: defaultSettings(),
   profile: newProfile(),
   createdAt: Date.now(),
+  strategySeen: [],
 });
 
 /** Ancienne numerotation (v2) -> nouvelle : 9 (soustractions) disparait -> 8 ; 10 (Ligue) -> 9. */
@@ -137,5 +140,6 @@ export function normalizeState(raw: unknown): AppState {
   return {
     setupDone: r.setupDone === true || played, placementDone: r.placementDone === true || played,
     club, look, childName: name || d.childName, settings, profile, createdAt: num(r.createdAt, d.createdAt),
+    strategySeen: Array.isArray(r.strategySeen) ? [...new Set((r.strategySeen as unknown[]).filter((z): z is number => Number.isInteger(z) && (z as number) >= 1 && (z as number) <= 9))] : [],
   };
 }

@@ -8,10 +8,10 @@
   import { app } from '../state/store.svelte.ts';
   import { nav } from '../lib/nav.svelte.ts';
   import { AnswerEntry } from '../lib/entry.svelte.ts';
-  import { cine } from '../lib/cine.ts';
+  import { playStrategy } from '../lib/cine.ts';
   import { kitColors } from '../lib/kit.ts';
   import { sfx, haptic, say, sayVariant, sayHint } from '../lib/sound.ts';
-  import { STRATEGY_CINEMATICS, STRATEGY_SHOW, strategyKey } from '../audio/voice-lines.ts';
+  import { STRATEGY_SHOW, strategyKey } from '../audio/voice-lines.ts';
   import { ZONES, isZoneWon, zoneFacts, hintFor, zoneRatio, type Question, type Session, type VisualHint } from '../engine/index.ts';
   import Stage from '../ui/Stage.svelte';
   import Keypad from '../ui/Keypad.svelte';
@@ -65,9 +65,9 @@
     nav.zone = id;
     phase = 'learn';
     sfx('swoosh-in', 0.6);
-    const key = ZONES[id - 1].key;
-    if (STRATEGY_CINEMATICS.includes(key)) await cine(`strategy-${key}`, {});
-    say(strategyKey(id));
+    // La cinematique du Coach dit deja la strategie ; sinon (ou si elle echoue) la consigne vocale prend le relais.
+    if (await playStrategy(id)) app.markStrategySeen(id);
+    else say(strategyKey(id));
   }
 
   function startPractice() {

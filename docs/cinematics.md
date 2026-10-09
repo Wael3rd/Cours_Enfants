@@ -185,3 +185,13 @@ Un nouveau texte joué doit avoir son mp3 (`tools/tts/generate.py` avec les entr
 **Brouillard de guerre de la carte** (`06-map.js`) : vrais nuages stylisés (3 couches fond indigo / lavande / crème, ombre indigo décalée, reflets, halo de traits translucides — sans filtre, léger sur tablette) ;
 `mapFogClear` les écarte par couches (devant d'abord) en gonflant et en les effaçant, `mapFogDrift` les fait respirer, `mapFogHtml(id)` produit un banc pour une scène où la région n'est pas verrouillée.
 Vérification visuelle : `npx hyperframes snapshot apps/espagnol/public/cinematics/<id> --at 1,3,5` (images dans `<id>/snapshots/`, gitignorées).
+
+## 9. Cinématiques de stratégie maths (`strategy-<clé de zone>`, 9 compositions, 8,7 à 11,9 s)
+
+Une par zone (clés de `engine/zones.ts` : echauffement, plus2, doubles, amoureux10, presquedoubles, plus10, plus9, passer-dizaine, ligue). Aucune donnée dynamique (voix pré-générée, pas de prénom).
+**Les `index.html` sont générés** : `node tools/cinematics/strategy-build.mjs [--no-tts] [zone…]` assemble `tools/cinematics/strategy/template.html` + `strategy/scenes/<clé>.js` (la scène) + `strategy-scripts.json`
+(phrases du Coach, badge, SFX `[phrase, fraction, fichier, volume]`). Une phrase = un mp3 Henri (`generate.py`, cache) dans `<id>/assets/vo-<i>.mp3` ; ffprobe mesure chaque durée → `window.PLAN = {t, d, total}`,
+balises `<audio>`, `data-duration` (≤ 12 s, vérifié par `tests/strategy-cinematics.test.ts`). La scène lit `T(i, f)` = début de la phrase i + f × sa durée : corriger un texte puis relancer suffit.
+Kit commun `_shared/strat.js` (`window.Strat` : petit joueur `token`, terrain, `frame10` = cadre à 10, `eq`, `pop/unpop/hop/arc`, Coach) + `strat.css`. Contrôle visuel : `node tools/cinematics/strategy-snap.mjs <clé…>` (une image à la fin de chaque phrase).
+Branchement : `STRATEGY_CINEMATICS` (voice-lines.ts) → `playStrategy(zone)` (`lib/cine.ts`) joué dans l'Entraînement (à la place de la consigne vocale `strategy_N`) et à la 1re arrivée sur la zone de travail
+(Home, 0,7 s après l'affichage ; `AppState.strategySeen` = zones déjà montrées).

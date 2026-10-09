@@ -132,6 +132,8 @@ export function variants(group: string): string[] {
   return out;
 }
 
-/** Emplacement des cinematiques de strategie a venir : `public/cinematics/strategy-<cle de zone>/index.html`.
- *  Ajouter ici la cle de zone (ex. 'doubles') quand la composition existe : l'entrainement la jouera avant la pratique. */
-export const STRATEGY_CINEMATICS: readonly string[] = [];
+/** Cinematiques de strategie : `public/cinematics/strategy-<cle de zone>/index.html` (voix du Coach dans la composition, pas dans VOICE).
+ *  Jouees dans l'Entrainement avant la pratique, et a la 1re arrivee sur une zone (accueil). Generees par `node tools/cinematics/strategy-build.mjs`. */
+export const STRATEGY_CINEMATICS: readonly string[] = [
+  'echauffement', 'plus2', 'doubles', 'amoureux10', 'presquedoubles', 'plus10', 'plus9', 'passer-dizaine', 'ligue',
+];

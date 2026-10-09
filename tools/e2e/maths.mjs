@@ -151,6 +151,10 @@ try {
 
   // ---------- 3. Accueil
   await page.waitForSelector('#btn-match');
+  // 1re arrivee sur la zone de depart : le Coach explique sa strategie (cinematique strategy-<zone>, une seule fois par zone).
+  const strat = await page.waitForSelector('.cine', { timeout: 6000 }).then(() => true, () => false);
+  if (strat) await skipCine('');
+  check('cinématique de stratégie jouée à la 1re arrivée sur la zone', strat);
   await wait(1400);
   await shot('09-accueil');
   check('accueil : MATCH, Sprint, Tirs au but, Entraînement', (await page.locator('#btn-match, #btn-sprint, #btn-penalties, #btn-training').count()) === 4);
@@ -277,6 +281,8 @@ try {
   await wait(600);
   await shot('28-entrainement-zones');
   await click('#zone-1');
+  await skipCine('');
+  check('entraînement : cinématique de stratégie de la zone 1', true);
   await page.waitForSelector('#btn-practice');
   await wait(900);
   await shot('29-entrainement-coach');
