@@ -1,0 +1,13 @@
+/* Kit graphique La Leyenda del Quetzal - tokens + polices (Alfa Slab One titres, Nunito texte). */
+@import './fonts.css';
+:root {
+  --q-nuit: #14173f; --q-nuit2: #1d2160; --q-nuit3: #2b318a; --q-encre: #0b0d2a;
+  --q-terracotta: #c9573b; --q-terracotta2: #9e3d29; --q-sol: #ffc83d; --q-sol2: #ff9f1c;
+  --q-turquesa: #19b7aa; --q-turquesa2: #0e7f82; --q-magenta: #d93472; --q-magenta2: #8f1d4e;
+  --q-quetzal: #0e9f6e; --q-quetzal2: #066a4a; --q-papel: #f5e6c8; --q-papel2: #e6ce9f;
+  --q-el: #3a8dff; --q-la: #e8434f;
+  --q-font-title: 'Alfa Slab One', Georgia, serif;
+  --q-font-body: 'Nunito', system-ui, sans-serif;
+  --q-ease: cubic-bezier(0.2, 0.9, 0.1, 1);
+}
+.q-title { font-family: var(--q-font-title); letter-spacing: 0.02em; }

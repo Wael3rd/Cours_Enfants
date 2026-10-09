@@ -21,6 +21,7 @@ Sous-ensembles latin + latin-ext, woff2, declares dans `assets/fonts/fonts.css` 
 | Nunito (variable) | Vernon Adams, Cyreal, Jacques Le Bailly | https://fonts.google.com/specimen/Nunito |
 | Lilita One | Juan Montoreano | https://fonts.google.com/specimen/Lilita+One |
 | Rye | Sol Matas | https://fonts.google.com/specimen/Rye |
+| Alfa Slab One | JM Solé | https://fonts.google.com/specimen/Alfa+Slab+One |
 
 ## Emoji 3D - Microsoft Fluent Emoji, licence MIT
 
