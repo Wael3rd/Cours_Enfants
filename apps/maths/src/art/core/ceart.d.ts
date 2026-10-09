@@ -51,3 +51,6 @@ export function medal(...a: any[]): any;
 export function cardBack(...a: any[]): any;
 export function cardPack(...a: any[]): any;
 export function track(...a: any[]): any;
+export function playerSide(...a: any[]): any;
+export function setRunSide(...a: any[]): any;
+export function runSide(...a: any[]): any;

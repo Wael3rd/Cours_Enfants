@@ -12,6 +12,7 @@
   import ScoreBug from './ScoreBug.svelte';
   import LowerThird from './LowerThird.svelte';
   import PlayerCard from './PlayerCard.svelte';
+  import PlayerSide from './PlayerSide.svelte';
 
   const poses = ['idle', 'course', 'frappe', 'celebration', 'decu'] as const;
   const hairs = ['court', 'boucles', 'pique', 'long'] as const;
@@ -66,6 +67,18 @@
         <Keeper width={200} number={1} />
         <Keeper width={200} pose="plongeon" primary="#FF8A1F" />
         <Coach width={200} />
+      </div>
+    </section>
+
+    <section>
+      <h2>Tous les tons de peau (cheveux noirs) et profil en course</h2>
+      <div class="row">
+        {#each [0, 1, 2, 3, 4, 5] as s}<Player skin={s} hairColor={s % 2 ? 0 : 5} hair={s % 3 === 0 ? 'boucles' : 'court'} number={s + 1} width={120} />{/each}
+      </div>
+      <div class="row">
+        {#each [1, 5] as s}<PlayerSide skin={s} hairColor={0} number={s} width={170} speed={1.4} />{/each}
+        <PlayerSide skin={3} hair="boucles" ghost width={170} />
+        {#each [0, 2, 4, 5] as s}<PlayerCard rarity="argent" name="Test" number={s} position="MIL" width={140} player={{ hair: 'court', skin: s, hairColor: 0 }} />{/each}
       </div>
     </section>
 

@@ -100,6 +100,13 @@ export function player(opts) {
   if (kit === 'rayures') for (let x = 140; x < 262; x += 30) pat += `<rect x="${x}" y="280" width="15" height="140" fill="${secondary}"/>`;
   if (kit === 'cerceaux') for (let y = 300; y < 414; y += 34) pat += `<rect x="130" y="${y}" width="140" height="16" fill="${secondary}"/>`;
   if (kit === 'bande') pat = `<polygon points="120,322 270,276 270,318 120,364" fill="${secondary}"/>`;
+  // Lisibilite de tous les tons : contour clair sur cheveux sombres, ombre portee sous la frange, reflets sur peau foncee.
+  const darkHair = lum(hair) < 0.07, darkSkin = lum(skin) < 0.22;
+  const rim = darkHair ? shade(hair, 0.55) : shade(hair, -0.4);
+  const hairShade = `<path d="M90 156 C104 112 296 112 310 156 L310 190 C270 160 130 160 90 190Z" fill="#000" opacity="${darkSkin ? 0.3 : 0.12}"/>`;
+  const faceLight = darkSkin
+    ? `<ellipse cx="200" cy="124" rx="70" ry="22" fill="#fff" opacity=".13"/><ellipse cx="126" cy="214" rx="26" ry="18" fill="#fff" opacity=".16"/><ellipse cx="274" cy="214" rx="26" ry="18" fill="#fff" opacity=".16"/><ellipse cx="200" cy="224" rx="14" ry="9" fill="#fff" opacity=".18"/>`
+    : '';
   const hs = hairSvg(opts.hair || 'court', hair, shade(hair, -0.3));
   const cap = role === 'coach'
     ? `<path d="M88 150 C84 84 134 52 200 52 C266 52 316 84 312 150 L88 150Z" fill="${secondary}"/><path d="M88 150 C140 138 260 138 312 150 L312 158 C260 148 140 148 88 158Z" fill="${shade(secondary, -0.25)}"/><path d="M96 152 C130 176 270 176 330 148 C310 136 280 140 262 142Z" fill="${shade(secondary, -0.1)}"/><circle cx="200" cy="92" r="14" fill="${primary}"/>`
@@ -128,15 +135,15 @@ ${bodyDeco}
 </g></g></g>
 ${armSvg(138, -1, o)}${armSvg(262, 1, o)}
 <g class="p-head" transform="translate(200,290) scale(${headScale})"><g class="j"><g transform="translate(-200,-290)">
-<g class="p-hair-back">${hs.back}</g>
-<circle cx="82" cy="190" r="21" fill="${skin}"/><circle cx="82" cy="190" r="11" fill="${o.skinD}" opacity=".55"/><circle cx="318" cy="190" r="21" fill="${skin}"/><circle cx="318" cy="190" r="11" fill="${o.skinD}" opacity=".55"/>
-<path d="M82 160 C82 98 130 58 200 58 C270 58 318 98 318 160 C318 232 270 286 200 286 C130 286 82 232 82 160Z" fill="url(#${u}f)"/>
+<g class="p-hair-back" stroke="${rim}" stroke-width="3" stroke-linejoin="round">${hs.back}</g>
+<circle cx="82" cy="190" r="21" fill="${skin}" stroke="${shade(skin, -0.34)}" stroke-width="4"/><circle cx="82" cy="190" r="11" fill="${o.skinD}" opacity=".55"/><circle cx="318" cy="190" r="21" fill="${skin}" stroke="${shade(skin, -0.34)}" stroke-width="4"/><circle cx="318" cy="190" r="11" fill="${o.skinD}" opacity=".55"/>
+<path d="M82 160 C82 98 130 58 200 58 C270 58 318 98 318 160 C318 232 270 286 200 286 C130 286 82 232 82 160Z" fill="url(#${u}f)" stroke="${shade(skin, -0.34)}" stroke-width="4"/>${faceLight}
 <ellipse cx="124" cy="228" rx="23" ry="13" fill="#FF5E7A" opacity=".32"/><ellipse cx="276" cy="228" rx="23" ry="13" fill="#FF5E7A" opacity=".32"/>
 <g class="p-eyes">${eye(152)}${eye(248)}${happy}</g>
-<path d="M192 224 Q200 232 208 224" stroke="${o.skinD}" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M190 224 Q200 234 210 224" stroke="${shade(skin, -0.4)}" stroke-width="5" fill="none" stroke-linecap="round"/>
 ${mustache}
 ${exprSvg(o)}
-<g class="p-hair-front">${hs.front}</g>${cap}
+${hairShade}<g class="p-hair-front" stroke="${rim}" stroke-width="3" stroke-linejoin="round">${hs.front}</g>${cap}
 </g></g></g>
 </g></svg>`;
 }
