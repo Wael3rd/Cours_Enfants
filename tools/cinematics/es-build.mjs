@@ -318,8 +318,156 @@ const CINES = {
   },
   // ------------------------------------------------------------------------------------------------------------ unite 4 : Ciudad de Mexico (Coyoacan)
   //@@U04
+  'u04-intro': {
+    region: 'mexico', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [{
+      plans: [1, 2], lead: { 1: 0.4, 2: 0.4 }, tail: { 1: 0.2, 2: 0.4 }, min: { 1: 3.7 },
+      sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0.05, vol: 0.5 },
+        { f: 'jingles/steel00', at: 'w1.1.3', off: 0, vol: 0.5 },
+        { f: 'rpg/spell-cast', at: 'w1.1.3', off: 0.02, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.55 },
+        { f: 'rpg/bell', at: 'p2', off: 1.6, vol: 0.18 },
+        { f: 'ui/star', at: 'l2.2', off: 0.1, vol: 0.35 },
+        { f: 'ui/pop', at: 'l2.1', off: 0.6, vol: 0.3 },
+      ],
+    }],
+  },
+  'u04-historia': {
+    region: 'mexico', music: { vol: 0.18, offsetFrom: 0 },
+    parts: [
+      { plans: [1], lead: { 1: 0.8 }, tail: { 1: 0.6 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'rpg/step-grass-000', at: 'p1', off: 0.2, vol: 0.2 },
+        { f: 'ui/pop', at: 'l1.1', off: -0.1, vol: 0.4 },
+        { f: 'rpg/step-00', at: 'l1.1.end', off: 0.2, vol: 0.3 }, { f: 'rpg/step-01', at: 'l1.1.end', off: 0.4, vol: 0.3 }, { f: 'rpg/step-02', at: 'l1.1.end', off: 0.6, vol: 0.3 },
+        { f: 'ui/pop', at: 'l1.2', off: -0.05, vol: 0.35 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [2], lead: { 2: 0.6 }, tail: { 2: 0.6 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'l2.1', off: -0.05, vol: 0.3 },
+        { f: 'ui/pop', at: 'l2.2', off: -0.05, vol: 0.3 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 3, lines: [1] }], lead: { 3: 0.7 }, tail: { 3: 0.5 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'rpg/step-grass-001', at: 'p3', off: 0.2, vol: 0.2 },
+        { f: 'ui/pop', at: 'l3.1', off: -0.05, vol: 0.35 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 3, lines: [2] }], lead: { 3: 0.9 }, tail: { 3: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'rpg/spell-hit', at: 'l3.1', off: -0.5, vol: 0.3 },
+        { f: 'rpg/spell-magic', at: 'l3.1', off: 0.1, vol: 0.25 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [4], lead: { 4: 0.6 }, tail: { 4: 0.7 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: 0, vol: 0.45 },
+        { f: 'rpg/spell-magic', at: 'p4', off: 0.3, vol: 0.28 },
+        { f: 'ui/star', at: 'l4.1', off: 0.4, vol: 0.4 },
+        { f: 'ui/pop', at: 'l4.2', off: 0.0, vol: 0.35 },
+        { f: 'rpg/level-up', at: 'l4.2.end', off: -0.35, vol: 0.4 },
+      ] },
+    ],
+  },
+  'u04-capsula-frida': {
+    region: 'mexico', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1, 2], lead: { 1: 0.6, 2: 0.5 }, tail: { 1: 0.6, 2: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'ui/star', at: 'w1.1.3', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.6', off: -0.05, vol: 0.5 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.1, vol: 0.45 },
+        { f: 'ui/tick', at: 'p2', off: 1.0, vol: 0.3 },
+        { f: 'rpg/coins', at: 'p2', off: 1.6, vol: 0.2 },
+        { f: 'ui/pop', at: 'w2.1.9', off: -0.05, vol: 0.45 },
+      ] },
+      { plans: [3], lead: { 3: 0.5 }, tail: { 3: 0.9 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: -0.1, vol: 0.45 },
+        { f: 'ui/pop', at: 'w3.1.3', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w3.1.7', off: -0.05, vol: 0.5 },
+        { f: 'ui/star', at: 'w3.1.15', off: -0.05, vol: 0.45 },
+      ] },
+      { plans: [4, 5], lead: { 4: 0.5, 5: 0.5 }, tail: { 4: 0.6, 5: 1.0 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: -0.1, vol: 0.45 },
+        { f: 'ui/pop', at: 'w4.1.4', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w4.1.6', off: -0.05, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p5', off: -0.2, vol: 0.45 },
+        { f: 'ui/pop', at: 'w5.1.2', off: -0.05, vol: 0.4 },
+        { f: 'ui/star', at: 'l5.1.end', off: -0.6, vol: 0.4 },
+        { f: 'rpg/level-up', at: 'end', off: -0.9, vol: 0.35 },
+      ] },
+    ],
+  },
+  'u04-pluma': {
+    region: 'mexico', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1, 2], lead: { 1: 0.6, 2: 0.4 }, tail: { 1: 0.4, 2: 0.7 }, sfx: [
+        { f: 'rpg/spell-magic', at: 'p1', off: 0.1, vol: 0.4 },
+        { f: 'rpg/item-get', at: 'p1', off: 0.6, vol: 0.5 },
+        { f: 'rpg/level-up-big', at: 'l2.1', off: 0.0, vol: 0.4 },
+      ] },
+      { plans: [3], lead: { 3: 0.6 }, tail: { 3: 1.2 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.45 },
+        { f: 'rpg/spell-cast', at: 'l3.1', off: 0.2, vol: 0.3 },
+        { f: 'ui/star', at: 'l3.1.end', off: 0.1, vol: 0.4 },
+      ] },
+    ],
+  },
   // ------------------------------------------------------------------------------------------------------------ evento : Dia de Muertos (Oaxaca)
-  //@@E01
+  'e01-intro': {
+    region: 'mexico', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1, 2], lead: { 1: 0.5, 2: 0.5 }, tail: { 1: 0.3, 2: 0.5 }, min: { 1: 4.1 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0.05, vol: 0.5 },
+        { f: 'jingles/steel00', at: 'w1.1.3', off: 0, vol: 0.5 },
+        { f: 'rpg/spell-cast', at: 'w1.1.3', off: 0.02, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.55 },
+        { f: 'ui/star', at: 'l2.1', off: 0.8, vol: 0.35 },
+        { f: 'ui/pop', at: 'w2.1.6', off: 0, vol: 0.3 },
+      ] },
+      { plans: [3], lead: { 3: 0.5 }, tail: { 3: 0.8 }, sfx: [
+        { f: 'rpg/spell-magic', at: 'p3', off: 0.5, vol: 0.25 },
+        { f: 'ui/pop', at: 'p3', off: 2.0, vol: 0.25 },
+        { f: 'ui/pop', at: 'p3', off: 2.4, vol: 0.25 },
+        { f: 'ui/pop', at: 'p3', off: 2.8, vol: 0.25 },
+      ] },
+    ],
+  },
+  'e01-capsula-muertos': {
+    region: 'mexico', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1], lead: { 1: 0.6 }, tail: { 1: 0.9 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0.0, vol: 0.4 },
+        { f: 'ui/tick', at: 'w1.1.4', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w1.1.12', off: 0, vol: 0.35 },
+        { f: 'ui/tick', at: 'w1.1.19', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w1.1.22', off: 0, vol: 0.35 },
+      ] },
+      { plans: [2], lead: { 2: 0.5 }, tail: { 2: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0.0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w2.1.5', off: 0, vol: 0.35 },
+        { f: 'ui/pop', at: 'w2.1.6', off: 0, vol: 0.35 },
+        { f: 'ui/pop', at: 'w2.1.7', off: 0, vol: 0.35 },
+        { f: 'ui/pop', at: 'w2.1.8', off: 0, vol: 0.35 },
+        { f: 'rpg/item-get', at: 'w2.1.13', off: 0, vol: 0.2 },
+      ] },
+      { plans: [3], lead: { 3: 0.6 }, tail: { 3: 1.0 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0.0, vol: 0.4 },
+        { f: 'ui/star', at: 'w3.1.14', off: 0, vol: 0.4 },
+        { f: 'rpg/door-open', at: 'l3.1.end', off: -0.9, vol: 0.3 },
+      ] },
+      { plans: [4, 5], lead: { 4: 0.35, 5: 0.3 }, tail: { 4: 0.15, 5: 0.45 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: 0.0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w4.1.7', off: 0, vol: 0.35 },
+        { f: 'ui/pop', at: 'w4.1.9', off: 0, vol: 0.35 },
+        { f: 'ui/swoosh-out', at: 'p5', off: -0.2, vol: 0.45 },
+        { f: 'ui/star', at: 'w5.1.2', off: 0, vol: 0.4 },
+        { f: 'rpg/level-up', at: 'l5.1.end', off: -0.9, vol: 0.35 },
+      ] },
+    ],
+  },
 };
 
 // ---------------------------------------------------------------------------------------------------------- utilitaires

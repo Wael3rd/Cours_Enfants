@@ -178,25 +178,25 @@ export function oaxacaSkyline(opts) {
     garl += `<path d="M${r1(a.x)} ${r1(a.y)}Q${r1(mid)} ${r1(a.y + sag * 2)} ${r1(b.x)} ${r1(b.y)}" stroke="#F5E6C8" stroke-width="3" fill="none" opacity=".85"/>`;
     for (let k = 1; k <= 7; k++) { const t = k / 8, fx = a.x + (b.x - a.x) * t, fy = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * (a.y + sag * 2) + t * t * b.y; garl += `<g class="m-flag" data-px="${r1(fx)}" data-py="${r1(fy)}"><path d="M${r1(fx - 20)} ${r1(fy)}H${r1(fx + 20)}V${r1(fy + 44)}L${r1(fx + 10)} ${r1(fy + 38)}L${r1(fx)} ${r1(fy + 46)}L${r1(fx - 10)} ${r1(fy + 38)}L${r1(fx - 20)} ${r1(fy + 44)}Z${circlePath(fx, fy + 22, 7)}" fill="${cols[(i + k) % cols.length]}" fill-rule="evenodd"/></g>`; }
   }
-  const mid = scSvg(W, H, `${houses}${garl}${scRect(0, base, W, 40, '#4B2F55')}`, 'ox-mid');
   // premier plan : pavés, petales de cempasuchil, bougies le long de la rue
   const gid = g('cg'); let stones = '', petals = '', can = '';
   for (let r = 0; r < 7; r++) { const y = 900 + r * r * 5 + r * 22; for (let xx = (r % 2) * 50; xx < W; xx += 100 + r * 8) stones += `<path d="M${xx} ${y}q${50 + r * 4} -16 ${100 + r * 8} 0" stroke="#2B1840" stroke-width="3" fill="none" opacity=".45"/>`; }
   for (let i = 0; i < 90; i++) { const px = 40 + (i / 90) * 3100 + (rnd() - 0.5) * 60, py = 960 + Math.sin(i * 0.3) * 40 + (rnd() - 0.5) * 80; petals += `<ellipse class="ox-petal" cx="${r1(px)}" cy="${r1(py)}" rx="${r1(9 + rnd() * 6)}" ry="${r1(5 + rnd() * 3)}" transform="rotate(${r1(rnd() * 180)} ${r1(px)} ${r1(py)})" fill="${i % 3 ? OX.naranja : OX.amar}"/>`; }
   for (let i = 0; i < 9; i++) can += oxCandle(180 + i * 360, 1150 - (i % 2) * 40, 54, gid, 1.2);
-  const near = scSvg(W, H, `<defs>${oxGlowDef(gid)}</defs>${scRect(0, 880, W, 320, '#5A3358')}${scRect(0, 880, W, 12, '#7A4A6E')}${stones}${petals}${can}`, 'ox-near');
-  return { sky, sun, far, mid, near, W, H, moonX: mx, moonY: my, doors, stall: { x: 1700 } };
+  const mid = scSvg(W, H, `${houses}${garl}${scRect(0, base, W, H - base, '#5A3358')}${scRect(0, base + 14, W, 10, '#7A4A6E')}${stones}`, 'ox-mid');
+  const near = scSvg(W, H, `<defs>${oxGlowDef(gid)}</defs>${petals}${can}`, 'ox-near');
+  return { sky, sun, far, mid, near, W, H, moonX: mx, moonY: my, doors, stall: { x: 1950 } };
 }
 
 /** Etal de rue (viewBox 640 x 420) : table a nappe brodee, pan de muerto, calaveras de azucar, alebrijes, fanions. Pied de table en (320, 410). */
 export function oaxacaStall(opts) {
   opts = opts || {};
   const W = opts.width || 640;
-  let s = `<rect x="40" y="70" width="12" height="340" fill="#6B3E26"/><rect x="588" y="70" width="12" height="340" fill="#6B3E26"/><path d="M20 90Q320 40 620 90L620 130H20Z" fill="${OX.magenta}"/>${oxFlags(30, 126, 580, 11, 5, [OX.amar, OX.turq, OX.naranja, OX.viol], 60)}`;
+  let s = `<rect x="40" y="70" width="12" height="340" fill="#6B3E26"/><rect x="588" y="70" width="12" height="340" fill="#6B3E26"/><path d="M20 126Q320 100 620 126" stroke="#F5E6C8" stroke-width="4" fill="none"/>${oxFlags(30, 126, 150, 3, 5, [OX.amar, OX.turq, OX.magenta], 60).replace(/<path d="M30 126H180"[^>]*>/, "")}${oxFlags(460, 126, 150, 3, 7, [OX.viol, OX.naranja, OX.turq], 60).replace(/<path d="M460 126H610"[^>]*>/, "")}`;
   s += `<rect x="40" y="250" width="560" height="160" fill="${OX.viol}"/><rect x="40" y="250" width="560" height="14" fill="#B58BE0"/>${embroideryBand(60, 350, 520, 36, '#FFFDF4', OX.magenta)}`;
   [90, 170, 250].forEach((x, i) => { s += oxPan(x + 30, 232, 40 + (i % 2) * 6); });
   [[360, '#D93472'], [440, '#19B7AA'], [520, '#FFC83D']].forEach((c, i) => { s += oxCalavera(c[0] + 10, 214, 34, [c[1], OX.naranja, OX.turq]); });
-  [[330, 168], [480, 164]].forEach((a, i) => { s += `<g class="ox-alebrije"><ellipse cx="${a[0]}" cy="${a[1]}" rx="46" ry="26" fill="${i ? OX.turq : OX.naranja}"/><circle cx="${a[0] + 44}" cy="${a[1] - 18}" r="22" fill="${i ? OX.amar : OX.magenta}"/><path d="M${a[0] + 36} ${a[1] - 34}l-6 -22l16 12ZM${a[0] + 56} ${a[1] - 34}l8 -20l6 22Z" fill="${OX.viol}"/><circle cx="${a[0] + 50}" cy="${a[1] - 20}" r="4" fill="#2A1040"/><path d="M${a[0] - 40} ${a[1] + 20}v28M${a[0] - 14} ${a[1] + 24}v26M${a[0] + 14} ${a[1] + 24}v26M${a[0] + 36} ${a[1] + 20}v28" stroke="#6B3E26" stroke-width="7" stroke-linecap="round"/><g fill="#fff" opacity=".8"><circle cx="${a[0] - 20}" cy="${a[1] - 4}" r="5"/><circle cx="${a[0]}" cy="${a[1] + 6}" r="5"/><circle cx="${a[0] + 16}" cy="${a[1] - 8}" r="5"/></g></g>`; });
+  [[96, 172], [560, 172]].forEach((a, i) => { s += `<g class="ox-alebrije"><ellipse cx="${a[0]}" cy="${a[1]}" rx="46" ry="26" fill="${i ? OX.turq : OX.naranja}"/><circle cx="${a[0] + 44}" cy="${a[1] - 18}" r="22" fill="${i ? OX.amar : OX.magenta}"/><path d="M${a[0] + 36} ${a[1] - 34}l-6 -22l16 12ZM${a[0] + 56} ${a[1] - 34}l8 -20l6 22Z" fill="${OX.viol}"/><circle cx="${a[0] + 50}" cy="${a[1] - 20}" r="4" fill="#2A1040"/><path d="M${a[0] - 40} ${a[1] + 20}v28M${a[0] - 14} ${a[1] + 24}v26M${a[0] + 14} ${a[1] + 24}v26M${a[0] + 36} ${a[1] + 20}v28" stroke="#6B3E26" stroke-width="7" stroke-linecap="round"/><g fill="#fff" opacity=".8"><circle cx="${a[0] - 20}" cy="${a[1] - 4}" r="5"/><circle cx="${a[0]}" cy="${a[1] + 6}" r="5"/><circle cx="${a[0] + 16}" cy="${a[1] - 8}" r="5"/></g></g>`; });
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="${W}" height="${Math.round(W * 420 / 640)}" class="ox-stall" aria-hidden="true" style="overflow:visible">${s}</svg>`;
 }
 

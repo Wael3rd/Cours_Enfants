@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>e01-intro-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #veil { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 26; }
+      .shadow { position: absolute; left: 0; top: 0; opacity: 0; }
+      .shadow .in { filter: brightness(0); }
+      .photo { position: absolute; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="e01-intro-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.269">
+      <div id="stage"></div>
+      <div id="veil" data-layout-ignore></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.269" data-media-start="9.998" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.069,"v":1},{"t":6.269,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/sombra.6f7e607f48.mp3" data-start="0.5" data-duration="4.719" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.5" data-duration="1.104" data-track-index="3" data-volume="0.25"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="2" data-duration="0.1" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.4" data-duration="0.1" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="2.8" data-duration="0.1" data-track-index="6" data-volume="0.25"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"e01-intro-2","cinematica":"e01-intro","part":2,"parts":2,"total":6.269,"meta":{"cinematica":"e01-intro","titulo":"Evento · Día de Muertos · Oaxaca","tipo":"intro","unidad":"Día de Muertos","numero":0,"lugar":"Oaxaca","pluma":"Pluma de Cempasúchil","plumaNum":0,"rotulo":"Evento · Día de Muertos · Oaxaca","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":6.019,"vista":"Une bougie s’éteint ; l’ombre de la Sombra glisse sur un mur. Xóchitl serre une photo contre elle.","camara":"","rotulo":"","personajes":["sombra","xochitl"],"lines":[{"who":"sombra","es":"Sin recuerdos, no hay fiesta… Apago las velas.","key":"sombra.6f7e607f48","t":0.5,"d":4.719,"words":[{"w":"Sin","t":0.5,"d":0.304},{"w":"recuerdos,","t":0.804,"d":0.72},{"w":"no","t":1.749,"d":0.298},{"w":"hay","t":2.047,"d":0.386},{"w":"fiesta…","t":2.433,"d":0.649},{"w":"Apago","t":3.56,"d":0.561},{"w":"las","t":4.122,"d":0.386},{"w":"velas.","t":4.507,"d":0.561}]}]}],"sfx":[{"t":0.5,"f":"rpg/spell-magic"},{"t":2,"f":"ui/pop"},{"t":2.4,"f":"ui/pop"},{"t":2.8,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.patioOfrenda({ uid: "po" });
+        var room = S.set($("#stage"), set, { below: "#2B1840", motes: 16, moteColors: ["#FFD98A", "#FFB347", "#FFE9A8"] });
+        var A = set.altar;
+
+        // ---------- ambiance : bougies (flamme qui respire >= 0,9 s), halo doux de l'autel ----------
+        var flames = room.back.querySelectorAll(".of-vela .of-flame"), glows = room.back.querySelectorAll(".of-vela .of-glow");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scale: 0.95, svgOrigin: f.dataset.px + " " + f.dataset.py }, { scale: 1.05, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.9 + (i % 3) * 0.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 0.9) }, (i % 4) * 0.12); });
+        glows.forEach(function (g, i) { tl.fromTo(g, { opacity: 0.75 }, { opacity: 1, duration: 1.6 + (i % 3) * 0.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.6) }, (i % 4) * 0.2); });
+        S.drift(tl, room, T);
+
+        // ---------- Xochitl entre et serre une photo contre elle ----------
+        var XW = 360, xo = S.chr(room.actors, "xochitl", 1060, 1000, XW);
+        var ph = S.mk(xo.b, "photo", Q.oxProp("foto", { width: 96, uid: "xph", kind: 0 })); ph.style.cssText += ";left:" + (XW / 2 - 42) + "px;top:" + (XW * 1.65 * 0.52) + "px;width:96px"; ph.setAttribute("data-layout-allow-overflow", "");
+        S.walk(tl, xo, 1500, 1060, 0.05, 1.0, 0.3, "power1.out");
+        tl.fromTo(xo.el, { opacity: 0 }, { opacity: 1, duration: 0.3, immediateRender: false }, 0.05);
+        tl.set(xo.el, { opacity: 0 }, 0);
+        tl.to(xo.svg.querySelector(".c-armL"), { rotation: -48, svgOrigin: "142 306", duration: 0.5, ease: "back.out(1.4)" }, 1.1);
+        tl.to(xo.svg.querySelector(".c-armR"), { rotation: 48, svgOrigin: "258 306", duration: 0.5, ease: "back.out(1.4)" }, 1.1);
+        tl.to(ph, { opacity: 1, duration: 0.3 }, 1.2);
+        Q.charEmote(tl, xo.svg, 1.2, "worry", 0.4);
+        S.breathe(tl, xo, 1.7, T - 1.7, 0.8);
+        Q.charBlink(tl, xo.svg, 3.2);
+        tl.to(xo.b, { y: -10, duration: 0.3, ease: "sine.out" }, 4.6); tl.to(xo.b, { y: 0, duration: 0.5, ease: "sine.inOut" }, 4.9);
+        Q.charEmote(tl, xo.svg, 4.6, "neutral", 0.5);
+
+        // ---------- l'ombre de la Sombra glisse sur le mur de droite a gauche ----------
+        var sh = S.mk(room.qlayer, "shadow", '<div class="in">' + Q.sombra({ view: "110 10 300 300", width: 960, height: 960, uid: "psh" }) + "</div>"); sh.setAttribute("data-layout-allow-overflow", ""); sh.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        sh.style.cssText += ";top:-20px";
+        var t0 = L1.t, X0 = 1900, X1 = -420, D = 4.6;
+        gsap.set(sh, { x: X0 });
+        tl.set(sh, { opacity: 0 }, 0);
+        tl.fromTo(sh, { x: X0, scaleX: 0.9 }, { x: X1, scaleX: 1.12, duration: D, ease: "sine.inOut", immediateRender: false, transformOrigin: "50% 40%" }, t0 + 0.2);
+        tl.to(sh, { opacity: 0.55, duration: 0.8, ease: "sine.inOut" }, t0 + 0.2);
+        tl.to(sh, { opacity: 0, duration: 0.8, ease: "sine.inOut" }, t0 + 0.2 + D - 0.8);
+        // chaque bougie s'eteint en 0,5 s quand l'ombre passe devant (la plus a droite d'abord) ; la derniere (a gauche) reste, plus petite
+        var cs = set.candles;
+        function when(x) { var u = (X0 + 480 - x) / (X0 - X1); return t0 + 0.2 + D * (0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, u)))) ; }
+        flames.forEach(function (f, i) {
+          var tc = when(cs[i].x + 300);
+          if (i === 0) { tl.to(f, { scale: 0.55, duration: 0.8, ease: "sine.inOut" }, tc); tl.to(glows[i], { opacity: 0.35, duration: 0.8, ease: "sine.inOut" }, tc); return; }
+          tl.to(f, { scale: 0.1, opacity: 0, duration: 0.5, ease: "power2.in", svgOrigin: f.dataset.px + " " + f.dataset.py }, tc);
+          tl.to(glows[i], { opacity: 0, duration: 0.6, ease: "sine.inOut" }, tc);
+        });
+        tl.to(".po-light", { opacity: 0.3, duration: 1.6, ease: "sine.inOut" }, t0 + 1.2);
+        tl.to("#veil", { opacity: 0.38, duration: 1.4, ease: "sine.inOut" }, t0 + 1.4);
+
+        // ---------- camera : push-in lent entre l'autel et Xochitl, leger recul vers la gauche ----------
+        S.camSet(room, 880, 760, 1.0);
+        S.cam(tl, room, 800, 740, 1.16, 0.0, T, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["e01-intro-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>
