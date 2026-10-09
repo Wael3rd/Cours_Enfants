@@ -10,7 +10,7 @@
   import { music } from '../services/music';
   import { setSound } from '../services/audio';
   import { speechSupport } from '../services/speech';
-  import { setHaptics } from '@ce/core';
+  import { setHaptics, setSoftMotion } from '@ce/core';
   import TopBar from '../ui/TopBar.svelte';
   import Toggle from '../ui/Toggle.svelte';
   import Emoji from '../ui/Emoji.svelte';
@@ -22,6 +22,7 @@
   let ParentComp = $state<typeof import('../parent/ParentSpace.svelte').default | null>(null);
   const st = $derived(game.state.settings);
   const mic = speechSupport();
+  const sysReduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   onMount(() => {
     music.setMode('menu');
@@ -32,6 +33,7 @@
     game.mutate((s) => (s.settings[k] = v));
     if (k === 'sound') setSound(v as boolean);
     if (k === 'haptics') setHaptics(v as boolean);
+    if (k === 'reducedMotion') setSoftMotion(v as boolean);
     if (k === 'music') music.setEnabled(v as boolean);
     if (k === 'lentoDefault') ui.lento = v as boolean;
   }
@@ -64,6 +66,7 @@
       <Toggle icon="music" label="Música" sub="Aventura de fondo" checked={st.music} onchange={(v) => set('music', v)} />
       <Toggle icon="turtle" label="Voz lenta" sub="Las voces hablan más despacio" checked={st.lentoDefault} onchange={(v) => set('lentoDefault', v)} />
       <Toggle icon="bolt" label="Vibración" sub="Al tocar y al acertar" checked={st.haptics} onchange={(v) => set('haptics', v)} />
+      <Toggle icon="bolt" label="Animaciones suaves" sub="Menos movimiento y destellos en las animaciones" checked={st.reducedMotion || sysReduced} onchange={(v) => set('reducedMotion', v)} />
       <Toggle icon="mic" label="Micrófono" sub={mic === 'ok' ? 'Para los hechizos de voz' : 'No disponible: te evalúas tú'} checked={st.speechEnabled} onchange={(v) => set('speechEnabled', v)} />
     </section>
 

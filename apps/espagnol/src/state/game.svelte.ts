@@ -1,4 +1,4 @@
-import { downloadText, setHaptics } from '@ce/core';
+import { downloadText, setHaptics, setSoftMotion } from '@ce/core';
 import { content, loadUnits } from '../engine/data';
 import { autoDownloadPlan } from '../services/offline';
 import { addTime } from '../engine/progress';
@@ -54,6 +54,7 @@ class Game {
   applySettings(): void {
     setSound(this.state.settings.sound);
     setHaptics(this.state.settings.haptics);
+    setSoftMotion(this.state.settings.reducedMotion);
   }
 
   /** Temps passe : compte uniquement quand l'app est visible et que l'enfant a touche l'ecran il y a < 45 s. */

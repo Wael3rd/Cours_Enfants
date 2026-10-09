@@ -60,7 +60,7 @@
     music.setMode('off');
     const srcs = parts.map((p) => `${BASE}${p}/index.html`);
     srcs.slice(0, 2).forEach((u) => void preloadCinematic(u));
-    const r = await playCinematicSequence({ srcs, data: { player: { name: playerName(game.state) } }, skipLabel: 'Saltar' });
+    const r = await playCinematicSequence({ srcs, data: { player: { name: playerName(game.state) }, motion: { soft: prefersReducedMotion() } }, skipLabel: 'Saltar' });
     if (!alive) return;
     if (r === 'error') {
       mode = 'fallback';
