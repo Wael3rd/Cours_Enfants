@@ -1,0 +1,43 @@
+/* Habillage commun des cinematiques de strategie (strategy-*). Polices relatives a ce fichier. */
+@font-face { font-family: "Anton"; src: url("./Anton-latin.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Fredoka"; src: url("./Fredoka-latin.woff2") format("woff2"); font-weight: 300 700; }
+html, body { margin: 0; background: #070c2b; }
+#root, #root * { pointer-events: none; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; }
+.abs { position: absolute; left: 0; top: 0; }
+#bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 28% 40%, #1b2f86 0%, #0b1244 55%, #070c2b 100%); }
+#spot { position: absolute; left: -60px; top: 380px; width: 620px; height: 820px; background: radial-gradient(ellipse at 50% 60%, rgba(255, 244, 190, 0.38), rgba(255, 244, 190, 0) 68%); }
+#board { position: absolute; left: 520px; top: 70px; width: 1360px; height: 800px; border-radius: 36px; overflow: hidden; box-shadow: 0 0 0 10px #0a1030, 0 24px 60px rgba(0, 0, 0, 0.55); }
+#board svg { display: block; }
+#field { position: absolute; left: 520px; top: 70px; width: 1360px; height: 800px; border-radius: 36px; overflow: hidden; }
+#field .tk, #field .it { position: absolute; }
+#field .tk { transform-origin: 50% 100%; }
+#field .it { transform-origin: 50% 50%; }
+#field .tk svg { display: block; width: 100%; height: auto; overflow: visible; }
+#field .it svg { display: block; width: 100%; height: 100%; overflow: visible; }
+#coach { position: absolute; left: 40px; top: 540px; width: 400px; height: 600px; transform-origin: 50% 100%; }
+#coach svg { display: block; width: 100%; height: 100%; }
+#badge { position: absolute; left: 130px; top: 70px; width: 260px; height: 260px; border-radius: 50%; box-sizing: border-box; border: 12px solid #fff;
+  background: radial-gradient(circle at 35% 30%, #ffe27a, #ffb21f 70%); box-shadow: 0 14px 0 #b36b00, 0 24px 40px rgba(0, 0, 0, 0.5);
+  display: flex; align-items: center; justify-content: center; font-family: "Anton", sans-serif; font-size: 130px; line-height: 1; color: #0a1030; white-space: nowrap; }
+#zname { position: absolute; left: 20px; top: 372px; width: 440px; text-align: center; color: #fff; font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 46px; line-height: 1.1; }
+#zname b { display: block; font-family: "Anton", sans-serif; font-weight: 400; font-size: 58px; letter-spacing: 3px; color: #ffd23f; margin-bottom: 4px; }
+.plate { position: absolute; left: 520px; top: 900px; width: 1360px; height: 250px; border-radius: 36px; background: rgba(10, 16, 48, 0.88); box-shadow: 0 0 0 6px rgba(255, 210, 63, 0.9); }
+.eq { position: absolute; left: 520px; top: 900px; width: 1360px; height: 250px; display: flex; align-items: center; justify-content: center; gap: 30px;
+  font-family: "Anton", sans-serif; font-size: 200px; line-height: 1; color: #fff; white-space: nowrap; }
+.eq .e { display: inline-block; transform-origin: 50% 60%; }
+.eq .op { color: #ff8fa3; }
+.eq .res { color: #ffd23f; }
+.eq .fam { color: #7fe3ff; }
+.nb { position: absolute; font-family: "Anton", sans-serif; font-size: 190px; line-height: 1; color: #fff; text-align: center; white-space: nowrap;
+  -webkit-text-stroke: 10px #0a1030; paint-order: stroke fill; text-shadow: 0 8px 0 rgba(10, 16, 48, 0.9); transform-origin: 50% 60%; }
+.nb.gold { color: #ffd23f; }
+.nb.sm { font-size: 130px; -webkit-text-stroke: 8px #0a1030; }
+.lbl { position: absolute; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 66px; line-height: 1; color: #0a1030; background: #fff; border-radius: 40px; padding: 14px 34px; white-space: nowrap; transform-origin: 50% 50%; box-shadow: 0 8px 0 rgba(10, 16, 48, 0.6); }
+.lbl.gold { background: #ffd23f; }
+.lbl.pink { background: #ff8fa3; }
+.lbl.cyan { background: #7fe3ff; }
+#flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+#vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(7, 12, 43, 0) 60%, rgba(7, 12, 43, 0.6) 100%); }
+#fadein { position: absolute; inset: 0; background: #070c2b; }
+.nb.md { font-size: 160px; -webkit-text-stroke: 9px #0a1030; }

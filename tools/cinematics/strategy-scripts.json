@@ -1,0 +1,471 @@
+{
+ "voice": {
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ "lead": 0.3,
+ "tail": 0.5,
+ "gap": 0.12,
+ "zones": {
+  "echauffement": {
+   "lines": [
+    "Plus zéro, rien ne change : sept.",
+    "Plus un : un joueur entre !",
+    "Sept plus un, huit !",
+    "Un joueur sort : huit moins un, sept !"
+   ],
+   "badge": "+1",
+   "znum": "1",
+   "zname": "Échauffement",
+   "title": "Zone 1 · Échauffement",
+   "sfx": [
+    [
+     0,
+     0.05,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.1,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     2,
+     0.55,
+     "star",
+     0.7
+    ],
+    [
+     3,
+     0.12,
+     "swoosh-out",
+     0.6
+    ],
+    [
+     3,
+     0.8,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "plus2": {
+   "lines": [
+    "Plus deux : deux passes !",
+    "Une passe : sept. Encore une : huit !",
+    "Et huit moins deux, six."
+   ],
+   "badge": "+2",
+   "znum": "2",
+   "zname": "Les +2",
+   "title": "Zone 2 · Les +2",
+   "sfx": [
+    [
+     0,
+     0.05,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.03,
+     "kick",
+     0.45
+    ],
+    [
+     1,
+     0.53,
+     "kick",
+     0.45
+    ],
+    [
+     1,
+     0.8,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.2,
+     "kick",
+     0.4
+    ],
+    [
+     2,
+     0.7,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "doubles": {
+   "lines": [
+    "Les doubles : deux équipes en miroir !",
+    "Six et six, douze !",
+    "La moitié de douze ? Six !"
+   ],
+   "badge": "2×",
+   "znum": "3",
+   "zname": "Les doubles",
+   "title": "Zone 3 · Les doubles",
+   "sfx": [
+    [
+     0,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     0,
+     0.4,
+     "swoosh-in",
+     0.5
+    ],
+    [
+     0,
+     0.55,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.5,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.3,
+     "swoosh-out",
+     0.5
+    ],
+    [
+     2,
+     0.62,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "amoureux10": {
+   "lines": [
+    "Amoureux de dix : ensemble, ça fait dix !",
+    "Sept joueurs : il en manque trois !",
+    "Sept plus trois, dix !",
+    "Dix moins sept ? Trois !"
+   ],
+   "badge": "10",
+   "znum": "4",
+   "zname": "Les amoureux de 10",
+   "title": "Zone 4 · Les amoureux de 10",
+   "sfx": [
+    [
+     0,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     2,
+     0.1,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     2,
+     0.6,
+     "star",
+     0.7
+    ],
+    [
+     3,
+     0.55,
+     "combo",
+     0.6
+    ],
+    [
+     3,
+     0.62,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "presquedoubles": {
+   "lines": [
+    "Six plus sept ? Six plus six, douze.",
+    "Un remplaçant arrive : plus un, treize !",
+    "Treize moins sept, six."
+   ],
+   "badge": "+1",
+   "znum": "5",
+   "zname": "Presque-doubles",
+   "title": "Zone 5 · Presque-doubles",
+   "sfx": [
+    [
+     0,
+     0.35,
+     "pop",
+     0.5
+    ],
+    [
+     0,
+     0.62,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.05,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     1,
+     0.72,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.2,
+     "swoosh-out",
+     0.5
+    ],
+    [
+     2,
+     0.7,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "plus10": {
+   "lines": [
+    "Plus dix : une équipe entière arrive !",
+    "Sept plus dix, dix-sept.",
+    "Le sept reste là. Un un arrive devant !",
+    "Dix-sept moins dix, sept."
+   ],
+   "badge": "+10",
+   "znum": "6",
+   "zname": "Les +10",
+   "title": "Zone 6 · Les +10",
+   "sfx": [
+    [
+     0,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     0,
+     0.35,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     1,
+     0.5,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.4,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     3,
+     0.15,
+     "swoosh-out",
+     0.5
+    ],
+    [
+     3,
+     0.72,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "plus9": {
+   "lines": [
+    "Plus neuf : presque plus dix !",
+    "Huit plus dix, dix-huit.",
+    "Un joueur sort : moins un. Dix-sept !",
+    "Dix-sept moins neuf, huit."
+   ],
+   "badge": "+9",
+   "znum": "7",
+   "zname": "Les +9",
+   "title": "Zone 7 · Les +9",
+   "sfx": [
+    [
+     0,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     0,
+     0.4,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.1,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     1,
+     0.55,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.25,
+     "swoosh-out",
+     0.6
+    ],
+    [
+     2,
+     0.65,
+     "star",
+     0.7
+    ],
+    [
+     3,
+     0.72,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "passer-dizaine": {
+   "lines": [
+    "Huit plus cinq : remplis d'abord le cadre !",
+    "Huit plus deux, dix.",
+    "Il reste trois : dix plus trois, treize !",
+    "Treize moins cinq, huit."
+   ],
+   "badge": "10+",
+   "znum": "8",
+   "zname": "Passer la dizaine",
+   "title": "Zone 8 · Passer la dizaine",
+   "sfx": [
+    [
+     0,
+     0.1,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.12,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     1,
+     0.62,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.2,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     2,
+     0.68,
+     "star",
+     0.7
+    ],
+    [
+     3,
+     0.15,
+     "swoosh-out",
+     0.5
+    ],
+    [
+     3,
+     0.64,
+     "level-up",
+     0.6
+    ]
+   ]
+  },
+  "ligue": {
+   "lines": [
+    "Trente-cinq plus vingt-quatre !",
+    "Les paquets de dix : trois plus deux, cinq.",
+    "Les ballons seuls : cinq plus quatre, neuf.",
+    "Cinquante-neuf !"
+   ],
+   "badge": "10",
+   "znum": "9",
+   "zname": "Ligue des Champions",
+   "title": "Zone 9 · Ligue des Champions",
+   "sfx": [
+    [
+     0,
+     0.02,
+     "pop",
+     0.5
+    ],
+    [
+     0,
+     0.45,
+     "pop",
+     0.5
+    ],
+    [
+     1,
+     0.2,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     1,
+     0.82,
+     "star",
+     0.7
+    ],
+    [
+     2,
+     0.18,
+     "swoosh-in",
+     0.6
+    ],
+    [
+     2,
+     0.8,
+     "star",
+     0.7
+    ],
+    [
+     3,
+     0.4,
+     "level-up-big",
+     0.6
+    ]
+   ]
+  }
+ }
+}
