@@ -107,7 +107,7 @@
 </div>
 
 <style>
-  .scene { position: relative; flex: none; height: 176px; overflow: hidden; background: radial-gradient(ellipse at 75% 60%, #4a2a9a, #1b0d3a 70%); box-shadow: inset 0 -10px 24px rgba(0, 0, 0, 0.5); }
+  .scene { container-type: inline-size; position: relative; flex: none; height: 176px; overflow: hidden; background: radial-gradient(ellipse at 75% 60%, #4a2a9a, #1b0d3a 70%); box-shadow: inset 0 -10px 24px rgba(0, 0, 0, 0.5); }
   .bgfx { position: absolute; inset: 0; background: repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 38px); }
   .hearts { position: absolute; left: 20px; top: 10px; display: flex; gap: 4px; z-index: 2; }
   .h { color: #ff4f7b; filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.5)); transition: transform 0.3s cubic-bezier(0.2, 1.6, 0.4, 1), color 0.3s; }
@@ -119,4 +119,10 @@
   .q { position: absolute; left: 90px; bottom: 6px; }
   .s { position: absolute; right: 90px; bottom: -4px; }
   .s.gone { visibility: hidden; }
+  /* portrait / etroit : les coeurs passent sous la barre de vie, entre les deux personnages */
+  @container (max-width: 1000px) {
+    .hp { top: 8px; margin-left: -160px; width: 320px; }
+    .hearts { left: 50%; transform: translateX(-50%); top: 74px; gap: 2px; }
+    .hearts :global(svg) { width: 28px; height: 28px; }
+  }
 </style>

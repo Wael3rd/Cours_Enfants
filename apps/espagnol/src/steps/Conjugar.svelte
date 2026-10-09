@@ -105,7 +105,7 @@
 
 <style>
   .cj { height: 100%; display: flex; flex-direction: column; gap: 12px; padding: 6px 40px 10px; }
-  .forge { position: relative; flex: 1; min-height: 0; border-radius: 30px; overflow: hidden; background: radial-gradient(ellipse at 50% 100%, rgba(255, 106, 43, 0.5), rgba(120, 30, 20, 0.35) 40%, rgba(20, 10, 30, 0.9) 85%), linear-gradient(180deg, #2a1230, #14091f); box-shadow: inset 0 0 0 4px rgba(255, 159, 28, 0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 20px 14px; }
+  .forge { position: relative; flex: 1; min-height: 0; border-radius: 30px; overflow: hidden; background: radial-gradient(ellipse at 50% 100%, rgba(255, 106, 43, 0.5), rgba(120, 30, 20, 0.35) 40%, rgba(20, 10, 30, 0.9) 85%), linear-gradient(180deg, #2a1230, #14091f); box-shadow: inset 0 0 0 4px rgba(255, 159, 28, 0.5); display: flex; flex-direction: column; align-items: center; justify-content: safe center; padding: 14px 20px 14px; container-type: size; }
   .embers i { position: absolute; bottom: -10px; width: 8px; height: 8px; border-radius: 50%; background: #ffb347; opacity: 0; animation: rise var(--d) ease-in infinite; }
   @keyframes rise { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 0.9; } 100% { transform: translateY(-420px) scale(0.3); opacity: 0; } }
   .verb { position: absolute; left: 26px; top: 16px; }
@@ -131,4 +131,21 @@
   .piece:global(.dragging) { cursor: grabbing; box-shadow: 0 24px 26px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 138, 28, 1), inset 0 0 0 3px rgba(255, 255, 255, 0.5); }
   .forged { position: absolute; right: 26px; top: 14px; margin: 0; text-align: right; font: 400 44px/1 var(--q-font-title); color: var(--q-sol); text-shadow: 0 4px 0 #8a4a05; z-index: 6; }
   .forged :global(.sp) { text-decoration: none; }
+  /* combat / retour de reponse : peu de hauteur -> tout se reduit pour rester dans le cadre (jamais rogne en haut) */
+  @container (max-height: 400px) {
+    .work { gap: 8px; margin-bottom: -18px; }
+    .suj { font-size: 36px; margin-right: 6px; }
+    .ingot { min-width: 68px; height: 62px; padding: 0 16px; font-size: 38px; border-radius: 14px; }
+    .slot { min-width: 84px; height: 66px; }
+    .anvilwrap { width: 270px; }
+    .hammer { width: 110px; height: 110px; right: -40px; top: -76px; transform-origin: 71px 128px; }
+    .bank { min-height: 70px; margin-top: 4px; gap: 14px; }
+    .forged { font-size: 34px; }
+  }
+  @container (max-height: 300px) {
+    .anvilwrap { width: 200px; }
+    .ingot { min-width: 56px; height: 52px; font-size: 32px; }
+    .slot { min-width: 70px; height: 56px; }
+    .bank { min-height: 58px; }
+  }
 </style>

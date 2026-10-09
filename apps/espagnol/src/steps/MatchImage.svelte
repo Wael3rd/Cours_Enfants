@@ -77,7 +77,11 @@
 <style>
   .mi { height: 100%; display: flex; flex-direction: column; gap: 14px; padding: 6px 40px 16px; }
   .cols { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; justify-items: stretch; max-width: 980px; width: 100%; margin: 0 auto; }
-  .col { display: grid; gap: 10px; align-content: center; grid-auto-rows: minmax(0, 82px); }
+  .col { display: grid; gap: 10px; align-content: center; grid-auto-rows: minmax(46px, 82px); }
+  .tile { min-height: 0; overflow: hidden; }
+  .tile :global(img.em), .tile :global(.flag) { max-height: 82%; width: auto; }
+  .cols { container-type: size; }
+  @container (max-height: 420px) { .col { gap: 6px; } .tile.word { font-size: 30px; } .tile { border-radius: 16px; box-shadow: 0 5px 0 #7d5a1c, inset 0 0 0 3px rgba(255, 255, 255, 0.5); } .tile.img { box-shadow: 0 5px 0 #07082a, inset 0 0 0 3px rgba(255, 200, 61, 0.55); } .n { font-size: 40px; } }
   .tile { position: relative; border: 0; border-radius: 22px; display: grid; place-items: center; cursor: pointer; color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel2)); box-shadow: 0 7px 0 #7d5a1c, inset 0 0 0 3px rgba(255, 255, 255, 0.5); touch-action: manipulation; transition: transform 0.08s, box-shadow 0.08s, background 0.2s; }
   .tile.word { font: 900 36px/1 var(--q-font-body); }
   .tile.img { background: radial-gradient(circle at 50% 35%, #3a41a8, var(--q-nuit) 80%); box-shadow: 0 7px 0 #07082a, inset 0 0 0 3px rgba(255, 200, 61, 0.55); }
