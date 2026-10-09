@@ -7,7 +7,8 @@
 //     au meme moment (fenetre de 0,1 s) couvrent >= 10 % de l'ecran (equivalent WCAG du rectangle 341x256 sur 1024x768).
 //     Echec au-dela de 3 flashs dans n'importe quelle seconde.
 //  2. EBLOUISSEMENT (plus strict que WCAG) : la luminance moyenne de l'ecran ou d'une moitie d'ecran monte de plus de
-//     0,12 en 0,1 s (flash blanc plein ecran, coupe brutale vers une image claire). Echec des la 1re occurrence.
+//     0,2 en 0,1 s (flash blanc plein ecran, coupe brutale vers une image claire ; un fondu >= 0,3 s depuis le noir passe).
+//     Echec des la 1re occurrence.
 //  3. SCINTILLEMENT (indicateur, avertissement seulement) : petits eclats sur place (une case de 1/24e de la largeur
 //     qui s'allume en <= 2 images puis s'eteint : flashs de foule, etincelles, confettis qui papillotent). Heuristique
 //     (les petits mouvements vifs peuvent compter) : avertit au-dela de 3 par seconde. La regle "<= 2 flashs de foule
@@ -32,7 +33,7 @@ export const DEFAULTS = {
   areaFrac: 0.1, // part de l'ecran (transitions simultanees) qui fait une transition "generale"
   areaWindow: 3, // images regroupees pour mesurer l'aire d'une transition (0,1 s a 30 i/s)
   maxFlashesPerSec: 3,
-  glareDelta: 0.12, // hausse de luminance moyenne (ecran entier ou moitie) ...
+  glareDelta: 0.2, // hausse de luminance moyenne (ecran entier ou moitie) ... (un fondu plein ecran de 0,3 s vers une image claire reste en dessous)
   glareWindow: 0.1, // ... en 0,1 s
   cells: 24, // grille de scintillement : 24 cases en largeur (cases carrees)
   blinkDelta: 0.08, // hausse rapide d'une case

@@ -80,12 +80,15 @@ async function captureComposition(browser, url) {
     const dur = await page.evaluate(() => window.__player.getDuration());
     const frames = [];
     let w = 0, h = 0;
+    // garde-fou : une image qui ne se rend pas en 15 s (composition bloquee) arrete la capture avec une erreur
+    const guard = (p, what) => Promise.race([p, new Promise((_, ko) => setTimeout(() => ko(new Error(`${what} bloque (> 15 s)`)), 15000))]);
     for (let i = 0; i <= Math.floor(dur * FPS); i++) {
-      await page.evaluate(async (t) => {
+      const t = Math.min(i / FPS, dur - 0.001);
+      await guard(page.evaluate(async (t) => {
         const r = window.__player.renderSeek ? window.__player.renderSeek(t) : window.__player.seek(t);
         if (r && r.then) await r;
-      }, Math.min(i / FPS, dur - 0.001));
-      const s = await cdp.send('Page.captureScreenshot', { format: 'png' });
+      }, t), `positionnement a ${t.toFixed(2)} s`);
+      const s = await guard(cdp.send('Page.captureScreenshot', { format: 'png' }), `capture a ${t.toFixed(2)} s`);
       const f = await frameFromPng(Buffer.from(s.data, 'base64'));
       frames.push(f.y); w = f.w; h = f.h;
     }

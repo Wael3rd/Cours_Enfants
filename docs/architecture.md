@@ -106,7 +106,8 @@ vient du **mouvement** (push-in, glissements, overshoot, échelle), **pas de la 
 - **Contrôle** : `npm run a11y:flash` (après `npm run build`) — `tools/a11y/flash-check.mjs` rend chaque cinématique image
   par image à 30 i/s (timeline positionnée comme le rendu HyperFrames), capture 10 s de l'accueil (screencast Playwright,
   MP4 de contrôle dans `tools/a11y/out/`) et mesure la luminance relative par image : **échec** si > 3 flashs généraux/s
-  ou **éblouissement** (luminance moyenne de l'écran ou d'une moitié qui monte de > 0,12 en 0,1 s) ; « scintillement »
+  ou **éblouissement** (luminance moyenne de l'écran ou d'une moitié qui monte de > 0,2 en 0,1 s, soit plus vite qu'un
+  fondu de 0,3 s depuis le noir) ; « scintillement »
   (petits éclats sur place) = indicateur seulement. Options : `espagnol`, `home`, `<dossier>`, `--video f.mp4`,
   `--only a,b`, `--soft`, `--json`, `--report-only`. Garde-fous statiques : `tests/safe-motion.test.ts`.
 
