@@ -34,6 +34,7 @@
   const plumas = $derived(Object.keys(s.plumas).length);
   const missionDone = $derived(s.missionDone === ymd(t));
   const events = activeEvents(content, game.state, t);
+  // les evenements ouverts ne sont pas sous le brouillard : ils sont deja dans `real` via mapStates
   const initial = $derived(playerName(s).charAt(0).toUpperCase());
 
   let map: WorldMap | undefined = $state();
@@ -117,7 +118,7 @@
 
 <div class="scr map" bind:this={root}>
   <div class="mapwrap">
-    <WorldMap bind:this={map} {states} {player} {initial} focusOn={traveling ? tFrom : curRegion} zoom={traveling ? 1.6 : 1.25} onselect={open} />
+    <WorldMap bind:this={map} {states} {player} {initial} highlight={events.map((u) => regionOf(u) ?? '')} focusOn={traveling ? tFrom : curRegion} zoom={traveling ? 1.6 : 1.25} onselect={open} />
   </div>
   <div class="vignette"></div>
 
@@ -141,7 +142,7 @@
 
   {#if events.length}
     <button class="evento" type="button" onclick={() => open(regionOf(events[0]) ?? 'oaxaca')}>
-      <span>★</span> {events[0].titulo}
+      <span>★</span> ¡Evento: {events[0].titulo}!
     </button>
   {/if}
 
@@ -178,7 +179,7 @@
   .hud-r { position: absolute; right: 22px; top: 18px; display: flex; align-items: center; gap: 16px; }
   .plumas { display: flex; align-items: center; gap: 8px; height: 62px; padding: 0 22px 0 16px; border-radius: 999px; color: var(--q-nuit); background: linear-gradient(180deg, #7ff3e4, var(--q-turquesa)); box-shadow: 0 5px 0 #07474f, inset 0 0 0 3px rgba(255, 255, 255, 0.45); }
   .plumas b { font: 400 34px/1 var(--q-font-title); }
-  .evento { position: absolute; left: 50%; top: 20px; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; height: 64px; padding: 0 28px; border: 0; border-radius: 999px; cursor: pointer; font: 400 28px/1 var(--q-font-title); color: #fff; background: linear-gradient(180deg, #ff7aa8, var(--q-magenta)); box-shadow: 0 6px 0 #5e0f33, inset 0 0 0 3px rgba(255, 255, 255, 0.4); animation: bob 2s ease-in-out infinite; }
+  .evento { position: absolute; left: 50%; top: 138px; z-index: 5; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; height: 64px; padding: 0 28px; border: 0; border-radius: 999px; cursor: pointer; font: 400 28px/1 var(--q-font-title); color: #fff; background: linear-gradient(180deg, #ff7aa8, var(--q-magenta)); box-shadow: 0 6px 0 #5e0f33, inset 0 0 0 3px rgba(255, 255, 255, 0.4); animation: bob 2s ease-in-out infinite; }
   @keyframes bob { 50% { transform: translateX(-50%) translateY(-6px); } }
   .banner { position: absolute; left: 50%; top: 130px; transform: translateX(-50%); z-index: 6; padding: 14px 40px 16px; border-radius: 999px; font: 400 44px/1 var(--q-font-title); color: var(--q-nuit); background: linear-gradient(180deg, #ffe08a, var(--q-sol)); box-shadow: 0 7px 0 #6b3d08, 0 0 40px rgba(255, 200, 61, 0.6); animation: bnr 0.5s cubic-bezier(0.2, 1.6, 0.4, 1); white-space: nowrap; }
   @keyframes bnr { from { transform: translateX(-50%) scale(0.4); opacity: 0; } }

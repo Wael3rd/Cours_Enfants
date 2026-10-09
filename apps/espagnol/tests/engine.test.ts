@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import {
   ACCENT_WARNING,
   activeEvents,
+  setEventForced,
   addDays,
   applyStepResult,
   buildContent,
@@ -217,6 +218,12 @@ describe('evenements', () => {
     expect(unitStatus(cc, s, ev, NOW)).toBe('closed');
     expect(unitStatus(cc, s, ev, new Date(2026, 9, 28))).toBe('available');
     expect(activeEvents(cc, s, new Date(2026, 9, 28)).length).toBe(1);
+    // ouverture forcee par le parent (hors fenetre)
+    setEventForced(s, 'e01', true);
+    expect(unitStatus(cc, s, ev, NOW)).toBe('available');
+    expect(activeEvents(cc, s, NOW).length).toBe(1);
+    setEventForced(s, 'e01', false);
+    expect(unitStatus(cc, s, ev, NOW)).toBe('closed');
     // plus aucune heuristique par mots-cles : sans `evento`, "Navidad" / "Muertos" = unite ordinaire
     expect(eventWindow({ ...ev, evento: undefined, titulo: '¡Feliz Navidad!', lugar: 'Madrid' } as Unit)).toBeNull();
     expect(eventWindow({ ...ev, evento: { desde: '03-01', hasta: '03-10' } } as unknown as Unit)).toEqual({ from: '03-01', to: '03-10' });

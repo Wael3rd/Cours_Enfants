@@ -1,7 +1,7 @@
 <script lang="ts">
   import { game } from '../state/game.svelte';
   import { content } from '../engine/data';
-  import { activeEvents, STATE_VERSION } from "../engine/progress";
+  import { activeEvents, eventForced, setEventForced, STATE_VERSION } from "../engine/progress";
   import { loadLentoSet } from '../services/audio';
   import { AVG_AUDIO_BYTES, estimateBytes, unitAudioUrls } from '../services/offline';
   import { speechSupport } from '../services/speech';
@@ -182,7 +182,7 @@
         {#each [...content.main, ...content.events] as u}
           {@const list = objs.filter((o) => o.unit === u.id)}
           {#if list.length}
-            <h3>{u.emoji} Unité {u.numero} · {u.titulo}</h3>
+            <h3>{u.emoji} {u.numero ? `Unité ${u.numero}` : 'Événement'} · {u.titulo}</h3>
             <ul class="objs">
               {#each list as o}
                 <li><span class="chip {o.status}"><span aria-hidden="true">{STATUS[o.status][0]}</span> {STATUS[o.status][1]}</span><span><span lang="es">{o.es}</span><br /><small>{o.fr}</small></span></li>
@@ -209,6 +209,9 @@
         <label class="check"><input type="checkbox" checked={s.settings.haptics} onchange={(e) => set('haptics', e.currentTarget.checked)} /> Vibrations</label>
         <label class="check"><input type="checkbox" checked={s.settings.lentoDefault} onchange={(e) => set('lentoDefault', e.currentTarget.checked)} /> Lire les voix au ralenti par défaut</label>
         <label class="check"><input type="checkbox" checked={s.settings.speechEnabled} onchange={(e) => set('speechEnabled', e.currentTarget.checked)} /> Reconnaissance vocale (« hechizos »)</label>
+        {#each content.events as ev (ev.id)}
+          <label class="check" data-testid="force-{ev.id}"><input type="checkbox" checked={eventForced(s, ev.id)} onchange={(e) => { const on = e.currentTarget.checked; game.mutate((st) => setEventForced(st, ev.id, on)); }} /> Ouvrir l’événement « {ev.titulo} » maintenant (test, hors des dates)</label>
+        {/each}
         <p class="note">
           Reconnaissance vocale sur cet appareil :
           {speech === 'ok' ? 'disponible (nécessite une connexion Internet)' : speech === 'offline' ? 'indisponible hors connexion — l’élève s’auto-évalue' : speech === 'insecure' ? 'indisponible (HTTPS requis)' : 'non prise en charge par ce navigateur — l’élève s’auto-évalue'}.

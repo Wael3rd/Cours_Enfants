@@ -48,9 +48,22 @@ export type QuestStatus = 'locked' | 'available' | 'done';
 export type UnitStatus = 'locked' | 'available' | 'done' | 'closed';
 
 /** Unite evenement ouverte a cette date ? */
-export function eventOpen(u: Unit, now: Date): boolean {
+export function eventOpen(u: Unit, now: Date, s?: GameState): boolean {
   const w = eventWindow(u);
-  return !!w && inWindow(w, now);
+  if (!w) return false;
+  return inWindow(w, now) || (!!s && eventForced(s, u.id));
+}
+
+/** Evenements ouverts de force par le parent (test) : `state.flags.forceEvents` = ids separes par des virgules. */
+export function eventForced(s: GameState, unitId: string): boolean {
+  return (s.flags.forceEvents ?? '').split(',').includes(unitId);
+}
+
+export function setEventForced(s: GameState, unitId: string, on: boolean): void {
+  const ids = (s.flags.forceEvents ?? '').split(',').filter((x) => x && x !== unitId);
+  if (on) ids.push(unitId);
+  if (ids.length) s.flags.forceEvents = ids.join(',');
+  else delete s.flags.forceEvents;
 }
 
 export function unitDone(s: GameState, u: Unit): boolean {
@@ -63,7 +76,7 @@ export function unitDone(s: GameState, u: Unit): boolean {
  */
 export function unitStatus(c: Content, s: GameState, u: Unit, now: Date): UnitStatus {
   if (unitDone(s, u)) return 'done';
-  if (eventWindow(u)) return eventOpen(u, now) ? 'available' : 'closed';
+  if (eventWindow(u)) return eventOpen(u, now, s) ? 'available' : 'closed';
   const i = c.main.findIndex((x) => x.id === u.id);
   if (i <= 0) return 'available';
   return unitDone(s, c.main[i - 1]) ? 'available' : 'locked';
@@ -88,7 +101,7 @@ export function currentUnit(c: Content, s: GameState): Unit | null {
 
 /** Evenements ouverts maintenant et pas encore termines. */
 export function activeEvents(c: Content, s: GameState, now: Date): Unit[] {
-  return c.events.filter((u) => !unitDone(s, u) && eventOpen(u, now));
+  return c.events.filter((u) => !unitDone(s, u) && eventOpen(u, now, s));
 }
 
 /** Prochaine quete a jouer dans une unite (null si l'unite est finie). */
