@@ -46,16 +46,16 @@
     </header>
     <div class="body">
       <div class="stage"><Player primary={kit.primary} secondary={kit.secondary} shoe={kit.shoe} skin={look.skin} hair={look.hair} hairColor={look.hairColor} number={look.number} {pose} width={360} /></div>
-      <div class="items" role="list">
+      <div class="items">
         {#if tab === 'jersey'}
-          <button type="button" class="it" class:sel={kit.jerseyId === 'club'} role="listitem" aria-label="Maillot du club" onclick={() => choose('club')}>
+          <button type="button" class="it" class:sel={kit.jerseyId === 'club'} aria-label="Maillot du club" onclick={() => choose('club')}>
             <span class="swatch" style:background="linear-gradient(135deg, {club.primary} 55%, {club.secondary} 55%)"></span>
             <span class="nm disp">Mon club</span>
           </button>
         {/if}
         {#each items as it (it.id)}
           {@const open = isUnlocked(it.unlock, ctx)}
-          <button type="button" class="it" class:sel={tab === 'jersey' ? kit.jerseyId === it.id : kit.bootsId === it.id} class:locked={!open} role="listitem" aria-label={it.name} onclick={() => choose(it.id, it)}>
+          <button type="button" class="it" class:sel={tab === 'jersey' ? kit.jerseyId === it.id : kit.bootsId === it.id} class:locked={!open} aria-label={it.name} onclick={() => choose(it.id, it)}>
             <span class="swatch" style:background="linear-gradient(135deg, {it.colors[0]} 55%, {it.colors[1]} 55%)"></span>
             <span class="nm disp">{it.name}</span>
             {#if !open}

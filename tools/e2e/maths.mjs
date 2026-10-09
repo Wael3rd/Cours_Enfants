@@ -10,7 +10,7 @@ const out = join(import.meta.dirname, 'out');
 mkdirSync(out, { recursive: true });
 const arg = process.argv[2];
 const PORT = 4179;
-const URL = arg ?? `http://localhost:${PORT}/maths/`;
+const BASE = arg ?? `http://localhost:${PORT}/maths/`;
 let server = null;
 if (!arg) {
   server = spawn(process.execPath, ['scripts/preview.mjs'], { cwd: root, env: { ...process.env, PORT: String(PORT) }, stdio: 'ignore' });
@@ -27,6 +27,14 @@ const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 800 }, hasTouch: true });
 const page = await context.newPage();
 const errors = [];
+const external = [];
+const failed = [];
+context.on('request', (req) => {
+  const u = req.url();
+  if (/^(data|blob|about|chrome-extension):/.test(u)) return;
+  if (new URL(u).origin !== new URL(BASE).origin) external.push(u);
+});
+context.on('requestfailed', (req) => failed.push(`${req.url()} (${req.failure()?.errorText})`));
 page.on('pageerror', (e) => { errors.push(e.message); console.log('pageerror:', e.message); });
 page.on('console', (m) => { if (m.type() === 'error' && !/favicon|ERR_FAILED|net::/.test(m.text())) { errors.push(m.text()); console.log('console.error:', m.text()); } });
 
@@ -35,7 +43,7 @@ const wait = (ms) => page.waitForTimeout(ms);
 
 /** Lit le calcul affiche et renvoie la bonne reponse. */
 async function readAnswer() {
-  const txt = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
+  const txt = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
   const t = txt.replace(/−/g, '-').replace(/= \?$/, '').trim();
   let m = t.match(/^(\d+) \+ \? = (\d+)/);
   if (m) return { text: txt, answer: Number(m[2]) - Number(m[1]) };
@@ -66,7 +74,7 @@ async function answer(mode = 'fast') {
 async function waitCalcChange(prev, timeout = 8000) {
   await page.waitForFunction((p) => {
     const el = document.querySelector('.calc');
-    return !el || el.innerText.replace(/\s+/g, ' ').trim() !== p;
+    return !el || el.textContent.replace(/\s+/g, ' ').trim() !== p;
   }, prev, { timeout });
 }
 async function skipCine(name, atMs = 1500) {
@@ -80,7 +88,7 @@ async function skipCine(name, atMs = 1500) {
 const click = (sel) => page.locator(sel).first().click();
 
 try {
-  await page.goto(URL);
+  await page.goto(BASE);
   await page.evaluate(() => indexedDB.databases?.().then((dbs) => dbs.forEach((d) => indexedDB.deleteDatabase(d.name)))).catch(() => {});
   await page.reload();
 
@@ -117,7 +125,7 @@ try {
   await page.waitForSelector('.calc');
   for (let i = 0; i < 40; i++) {
     if (!(await page.locator('.calc').count())) break;
-    const prev = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
+    const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
     if (i === 3) await shot('06-detection-jeu');
     await answer(i < 14 ? 'fast' : 'wrong');
     await waitCalcChange(prev).catch(() => {});
@@ -158,10 +166,10 @@ try {
       if (await page.locator('.cine').count() || await page.locator('#btn-home').count()) break;
       await wait(200); continue;
     }
-    const prev = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
+    const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
     const mode = plan[n % plan.length]; n++;
     await answer(mode);
-    if (mode === 'fast' && n === 2) { await wait(330); await shot('13-match-but-en-jeu'); }
+    if (mode === 'fast' && n === 2) { await wait(520); await shot('13-match-but-en-jeu'); }
     if (mode === 'wrong' && n === 5) { await wait(500); await shot('14-match-erreur-indice'); }
     await waitCalcChange(prev, 12000).catch(() => {});
     await wait(60);
@@ -213,26 +221,28 @@ try {
   await shot('21-avatar');
   await click('header button[aria-label="Retour"]');
 
-  // ---------- 6. Sprint
-  await page.waitForSelector('#btn-sprint');
-  await click('#btn-sprint');
-  await page.waitForSelector('.count', { timeout: 15000 });
-  await wait(300);
-  await shot('22-sprint-depart');
-  await page.waitForSelector('.calc', { timeout: 10000 });
-  for (let i = 0; i < 10; i++) {
-    const prev = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
-    if (i === 4) await shot('23-sprint-course');
-    await answer(i === 6 ? 'wrong' : 'fast');
-    await waitCalcChange(prev).catch(() => {});
-    await wait(60);
+  // ---------- 6. Sprint (2 courses : la 2e affiche le fantome = record de la 1re, sans faute)
+  for (const run of [1, 2]) {
+    await page.waitForSelector('#btn-sprint');
+    await click('#btn-sprint');
+    await page.waitForSelector('.count', { timeout: 15000 });
+    await wait(300);
+    if (run === 1) await shot('22-sprint-depart');
+    await page.waitForSelector('.calc', { timeout: 10000 });
+    for (let i = 0; i < 10; i++) {
+      const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
+      if (i === 4) await shot(run === 1 ? '23-sprint-course' : '23b-sprint-fantome');
+      await answer(run === 1 && i === 6 ? 'wrong' : 'fast');
+      await waitCalcChange(prev).catch(() => {});
+      await wait(60);
+    }
+    await page.waitForSelector('.cine[data-state], #btn-home', { timeout: 15000 });
+    if (await page.locator('.cine[data-state]').count()) { await skipCine(run === 1 ? '24-cine-medaille' : '24b-cine-medaille-record', 2000); check(`médaille jouée (course ${run})`, true); }
+    await page.waitForSelector('#btn-home', { timeout: 15000 });
+    await wait(1800);
+    if (run === 1) await shot('25-sprint-recompenses');
+    await click('#btn-home');
   }
-  await page.waitForSelector('.cine[data-state], #btn-home', { timeout: 15000 });
-  if (await page.locator('.cine[data-state]').count()) { await skipCine('24-cine-medaille', 2000); check('médaille jouée', true); }
-  await page.waitForSelector('#btn-home', { timeout: 15000 });
-  await wait(1800);
-  await shot('25-sprint-recompenses');
-  await click('#btn-home');
 
   // ---------- 7. Tirs au but
   await page.waitForSelector('#btn-penalties');
@@ -242,7 +252,7 @@ try {
   await shot('26-tirs-au-but');
   const pen = ['fast', 'slow', 'wrong', 'fast', 'slow'];
   for (let i = 0; i < 5; i++) {
-    const prev = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
+    const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
     await answer(pen[i]);
     await wait(i === 0 ? 700 : i === 1 ? 650 : 850);
     await shot(`27-tirs-${['but', 'arret', 'capte', 'but2', 'arret2'][i]}`);
@@ -267,7 +277,7 @@ try {
   await shot('30-entrainement-indice');
   for (let i = 0; i < 15; i++) {
     if (!(await page.locator('.calc').count())) break;
-    const prev = (await page.locator('.calc').first().innerText()).replace(/\s+/g, ' ').trim();
+    const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
     if (i === 8) await shot('31-entrainement-indice-estompe');
     await answer(i === 2 ? 'wrong' : 'fast');
     await waitCalcChange(prev, 6000).catch(() => {});
@@ -296,6 +306,7 @@ try {
     check(`SW : cinématiques, SFX et voix en précache (${cached.count ?? 0} entrées)`, cached.ok);
     await page.reload();
     await context.setOffline(true);
+    failed.length = 0;
     await page.reload();
     await page.waitForSelector('#btn-match', { timeout: 15000 });
     check('hors-ligne : l\'accueil se recharge depuis le cache', true);
@@ -304,8 +315,11 @@ try {
     await page.waitForSelector('.calc', { timeout: 10000 });
     check('hors-ligne : match-intro + écran de match fonctionnent', true);
     await shot('32-hors-ligne-match');
+    const bad404 = failed.filter((f) => !/favicon|ERR_ABORTED/.test(f));
+    check('hors-ligne : aucune requête en échec', bad404.length === 0, bad404.slice(0, 3).join(' | '));
     await context.setOffline(false);
   }
+  check(`aucune requête hors origine (${external.length})`, external.length === 0, external.join(' | '));
   check('aucune erreur JS', errors.length === 0, errors.slice(0, 3).join(' | '));
 } catch (e) {
   check('exécution sans exception', false, String(e?.stack ?? e).split('\n').slice(0, 4).join(' | '));

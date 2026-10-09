@@ -19,7 +19,8 @@
   let fresh = $state<string | null>(null);
   let opening = $state(false);
   const RARITY_ORDER = ['legende', 'or', 'argent', 'bronze'];
-  const sorted = $derived([...CARDS].sort((a, b) => RARITY_ORDER.indexOf(a.rarity) - RARITY_ORDER.indexOf(b.rarity) || a.number - b.number));
+  // Cartes obtenues d'abord (les plus rares en tete), puis les silhouettes.
+  const sorted = $derived([...CARDS].sort((a, b) => Number(ownsCard(rewards, b.id)) - Number(ownsCard(rewards, a.id)) || RARITY_ORDER.indexOf(a.rarity) - RARITY_ORDER.indexOf(b.rarity) || a.number - b.number));
   let scroller: HTMLDivElement | undefined = $state();
 
   async function open() {
@@ -53,10 +54,10 @@
       <div class="prog" aria-label="Étoiles vers le prochain paquet"><Icon name="star" size={34} /><span class="barw"><i style:width="{((PACK_COST - toNext) / PACK_COST) * 100}%"></i></span></div>
       <GameButton id="btn-open-pack" variant="go" size="md" disabled={packs < 1 || opening} onclick={open}><Icon name="album" size={40} />Paquet{#if packs > 0}<span class="badge disp">{packs}</span>{/if}</GameButton>
     </header>
-    <div bind:this={scroller} class="grid" role="list">
+    <div bind:this={scroller} class="grid">
       {#each sorted as c (c.id)}
         {@const has = ownsCard(rewards, c.id)}
-        <button type="button" class="slot" class:new={fresh === c.id} role="listitem" aria-label={has ? c.name : 'Carte à découvrir'} onclick={() => show(c)}>
+        <button type="button" class="slot" class:new={fresh === c.id} aria-label={has ? c.name : 'Carte à découvrir'} onclick={() => show(c)}>
           {#if has}<PlayerCard {...cardProps(c)} width={150} shine={false} />
           {:else}<div class="sil {c.rarity}"><span class="disp">?</span></div>{/if}
         </button>
@@ -65,7 +66,7 @@
   </div>
 
   {#if zoom}
-    <div class="zoom" role="dialog" aria-label={zoom.name} onpointerdown={() => (zoom = null)} use:pop>
+    <div class="zoom" role="dialog" tabindex="-1" aria-label={zoom.name} onpointerdown={() => (zoom = null)} use:pop>
       <div class="zc"><PlayerCard {...cardProps(zoom)} width={330} /></div>
       <div class="disp zn">{zoom.name}</div>
     </div>

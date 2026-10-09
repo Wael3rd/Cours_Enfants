@@ -166,7 +166,7 @@
           <div class="dots" aria-label="{idx} sur {total}">{#each Array.from({ length: total }, (_, i) => i) as i}<i class:on={i < idx}></i>{/each}</div>
         </div>
         <div class="mid">
-          {#if q}<CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} />{/if}
+          {#if q}<CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} size="md" />{/if}
         </div>
         <div class="help" class:err={wrong} style:opacity={wrong ? 1 : reveal}>
           {#if hint && (wrong || reveal > 0.18)}<HintVisual {hint} colorA={club.primary} caption={wrong || reveal > 0.55} compact />{/if}

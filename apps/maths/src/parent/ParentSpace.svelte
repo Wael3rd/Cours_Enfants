@@ -1,5 +1,6 @@
 <script lang="ts">
   import { app } from '../state/store.svelte.ts';
+  import { applyAudioSettings } from '../lib/sound.ts';
   import { heatmap, avgTimeSeries, summary } from '../engine/stats.ts';
   import { THRESHOLD_CHOICES_MS } from '../engine/progress.ts';
   import { MENTAL_ZONE } from '../engine/zones.ts';
@@ -197,7 +198,8 @@
             {/each}
           </div>
         </fieldset>
-        <label class="row chk"><input type="checkbox" checked={app.state.settings.sound} onchange={(e) => app.setSettings({ sound: e.currentTarget.checked })} /> Sons et bruitages</label>
+        <label class="row chk"><input type="checkbox" checked={app.state.settings.sound} onchange={(e) => { app.setSettings({ sound: e.currentTarget.checked }); applyAudioSettings(); }} /> Sons et bruitages</label>
+        <label class="row chk"><input type="checkbox" checked={app.state.settings.music} onchange={(e) => { app.setSettings({ music: e.currentTarget.checked }); applyAudioSettings(); }} /> Musique de stade</label>
         <label class="row chk"><input type="checkbox" checked={app.state.settings.voice} onchange={(e) => app.setSettings({ voice: e.currentTarget.checked })} /> Consignes dites à voix haute</label>
 
         <h2>Sauvegarde</h2>
@@ -207,6 +209,9 @@
           <input bind:this={fileInput} type="file" accept="application/json,.json" hidden onchange={doImport} aria-label="Fichier de sauvegarde" />
         </div>
         <small>La sauvegarde contient le prénom, les réglages et toute la progression. Importer remplace l'état actuel.</small>
+
+        <h2>Développement</h2>
+        <div class="actions"><button type="button" class="btn ghost" onclick={() => { location.hash = '#art'; location.reload(); }}>Laboratoire du kit graphique</button></div>
 
         <h2>Zone dangereuse</h2>
         {#if confirmReset}

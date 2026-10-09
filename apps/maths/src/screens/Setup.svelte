@@ -170,8 +170,8 @@
   .big:focus { outline: 5px solid var(--jaune); }
   .namerow { display: flex; gap: 16px; align-items: flex-start; }
   .gl { font-weight: 700; font-size: 1.15rem; opacity: 0.8; margin-bottom: 6px; }
-  .swatches, .patterns { display: flex; flex-wrap: wrap; gap: 12px; }
-  .sw { width: 62px; height: 62px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, 0.55); cursor: pointer; padding: 0; box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4); transition: transform 140ms var(--ease-pop); }
+  .swatches, .patterns { display: flex; flex-wrap: wrap; gap: 9px; }
+  .sw { width: 54px; height: 54px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, 0.55); cursor: pointer; padding: 0; box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4); transition: transform 140ms var(--ease-pop); }
   .sw.sel { border-color: #fff; transform: scale(1.18); box-shadow: 0 0 0 5px var(--jaune), 0 5px 0 rgba(0, 0, 0, 0.4); }
   .sw:active { transform: scale(0.92); transition: none; }
   .pat { min-width: 76px; min-height: 76px; border-radius: 16px; border: 4px solid transparent; background: rgba(255, 255, 255, 0.14); cursor: pointer; display: grid; place-items: center; padding: 4px; line-height: 0; transition: transform 140ms var(--ease-pop); }

@@ -42,5 +42,5 @@
   .zero { grid-column: span 2; }
   .back { background: linear-gradient(#FF7A8E, var(--corail)); --edge: #A82341; display: flex; align-items: center; justify-content: center; }
   .on, .key:active:not(:disabled) { transform: translateY(6px); box-shadow: 0 2px 0 var(--edge), 0 4px 8px rgba(0, 0, 0, 0.35), inset 0 3px 0 rgba(255, 255, 255, 0.25); transition: none; }
-  .key:disabled { opacity: 0.55; }
+  .key:disabled { opacity: 1; cursor: default; }
 </style>

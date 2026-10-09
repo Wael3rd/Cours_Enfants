@@ -41,6 +41,7 @@
   let goalText = $state(false);
   let run = $state(0);
   let firstGoalDone = false;
+  let adv = 0;
 
   let calc: CalcPanel | undefined = $state();
   let gauge: Gauge | undefined = $state();
@@ -104,13 +105,11 @@
       run = fb.fluent ? run + 1 : 0;
       if (fb.goal) {
         sfx('correct');
-        const p = scoreFlash();
-        pitch?.advance(1);
         const decisive = fb.score!.goals > fb.score!.rival && fb.index >= fb.total - 3;
         const big = !firstGoalDone || decisive;
         firstGoalDone = true;
-        void p;
-        await goalInGame(fb.score!.goals);
+        await goalInGame();
+        adv = 0;
         if (big) {
           const calcStr = asked.text.includes('?') ? asked.text.replace('?', String(asked.answer)) : `${asked.text} = ${asked.answer}`;
           await cine('goal', { name: app.state.childName, calc: calcStr, time: fmtTime(ms), scoreHome: fb.score!.goals, scoreAway: fb.score!.rival, home, away });
@@ -118,7 +117,8 @@
         if (run === 4 || run === 8) sfx('combo');
       } else {
         sfx('correct-pip');
-        pitch?.advance(Math.min(0.8, 0.28 * (1 + ((idx % 3) as number))));
+        adv = Math.min(0.8, adv + 0.22);
+        pitch?.advance(adv);
         if (Math.random() < 0.3) sayVariant('praise');
         await wait(380);
       }
@@ -139,8 +139,7 @@
   }
 
   /** But en jeu : tir, filet, "BUT !", foule, confettis. <= 0,8 s, la saisie suivante n'attend pas la fin. */
-  async function goalInGame(goals: number) {
-    void goals;
+  async function goalInGame() {
     haptic('win');
     const shot = pitch?.shoot() ?? Promise.resolve();
     sayVariant('goal');
@@ -158,8 +157,8 @@
     setTimeout(() => {
       if (goalEl) gsap.to(goalEl, { opacity: 0, scale: 1.15, duration: 0.2, onComplete: () => { goalText = false; } });
       pitch?.reset();
-    }, 380);
-    await wait(420); // saisie rendue ~0,6 s apres le tir
+    }, 330);
+    await wait(170); // la saisie suivante reprend ~0,5 s apres la validation, le reste de l'animation (<= 0,8 s) joue par-dessus
   }
 
   function scoreFlash() {
@@ -209,7 +208,7 @@
       </div>
       <div class="mid">
         {#if q}
-          <CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} />
+          <div class="calcbox" class:hide={!!hint}><CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} /></div>
         {/if}
         {#if hint}
           <div bind:this={hintBox} class="hintcard"><HintVisual {hint} colorA={club.primary} compact />
@@ -245,8 +244,9 @@
   .streak { display: flex; align-items: center; gap: 6px; font-size: 2.6rem; color: var(--jaune); text-shadow: 0 3px 0 #0A1030; }
   .pitchwrap { position: relative; }
   .goaltext { position: absolute; inset: 0; display: grid; place-items: center; font-size: clamp(110px, 20vh, 170px); color: var(--jaune); -webkit-text-stroke: 8px #0A1030; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(10, 16, 48, 0.55); pointer-events: none; will-change: transform, opacity; }
+  .calcbox.hide { visibility: hidden; }
   .mid { position: relative; flex: 1; display: grid; place-items: center; min-height: 0; }
-  .hintcard { position: absolute; inset: -8px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px 22px; border-radius: 26px; background: rgba(7, 12, 43, 0.9); border: 4px solid rgba(255, 255, 255, 0.85); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); }
+  .hintcard { position: absolute; inset: -8px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px 22px; border-radius: 26px; background: rgba(7, 12, 43, 0.97); border: 4px solid rgba(255, 255, 255, 0.85); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); }
   .ans { font-size: 4rem; color: var(--jaune); text-shadow: 0 4px 0 #0A1030; line-height: 1; }
   .bottom { padding-bottom: 6px; }
   .right { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; }

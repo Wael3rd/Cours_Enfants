@@ -44,15 +44,15 @@
       const goalX = w - PW - 120 - start;
       sfx('kick-quick');
       const tl = gsap.timeline({ onComplete: resolve });
-      tl.to(ballEl, { x: goalX, duration: 0.4, ease: 'power1.in' }, 0);
-      tl.to(ballEl, { y: -70, duration: 0.2, ease: 'power2.out' }, 0);
-      tl.to(ballEl, { y: -10, duration: 0.2, ease: 'power2.in' }, 0.2);
+      tl.to(ballEl, { x: goalX, duration: 0.34, ease: 'power1.in' }, 0);
+      tl.to(ballEl, { y: -70, duration: 0.17, ease: 'power2.out' }, 0);
+      tl.to(ballEl, { y: -10, duration: 0.17, ease: 'power2.in' }, 0.17);
       tl.add(() => {
         sfx('ball-net');
         gsap.fromTo(netEl!, { scaleX: 1 }, { scaleX: 1.22, duration: 0.09, yoyo: true, repeat: 3, ease: 'sine.inOut', transformOrigin: '0 50%' });
         gsap.fromTo(goalEl!, { y: 0 }, { y: -6, duration: 0.08, yoyo: true, repeat: 3 });
-      }, 0.4);
-      tl.to(ballEl, { x: goalX + 40, y: 14, opacity: 0, duration: 0.18, ease: 'power1.out' }, 0.4);
+      }, 0.34);
+      tl.to(ballEl, { x: goalX + 40, y: 14, opacity: 0, duration: 0.16, ease: 'power1.out' }, 0.34);
     });
   }
 

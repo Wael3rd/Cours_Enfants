@@ -22,7 +22,7 @@
 
   const kit = kitColors();
   const entry = new AnswerEntry();
-  const GW = 600; // largeur de la cage
+  const GW = 500; // largeur de la cage
   const k = GW / 900;
 
   let s: Session | undefined;
@@ -100,13 +100,13 @@
       const [tx, ty] = target(side, true);
       // gardien plonge du mauvais cote
       kpose = 'plongeon'; kflip = side > 0;
-      tl.to(keeperEl!, { x: -side * 150 * k * 1.4, y: -10, rotation: -side * 10, duration: 0.45, ease: 'power2.out' }, 0.05);
+      tl.to(keeperEl!, { x: -side * 120, y: -6, rotation: -side * 8, duration: 0.45, ease: 'power2.out' }, 0.05);
       tl.to(ballEl!, { x: tx - 450 * k, y: ty - 470 * k, scale: 0.55, duration: 0.42, ease: 'power1.in' }, 0);
       tl.add(() => { sfx('ball-net'); sfx('crowd-goal'); sayVariant('pen_goal'); }, 0.42);
     } else if (kind === 'save') {
       const [tx, ty] = target(side, true);
       kpose = 'plongeon'; kflip = side < 0;
-      tl.to(keeperEl!, { x: side * 160 * k * 1.3, y: -34, rotation: side * 8, duration: 0.4, ease: 'power3.out' }, 0.05);
+      tl.to(keeperEl!, { x: side * 125, y: -22, rotation: side * 6, duration: 0.4, ease: 'power3.out' }, 0.05);
       tl.to(ballEl!, { x: tx - 450 * k, y: ty - 470 * k, scale: 0.55, duration: 0.38, ease: 'power1.in' }, 0);
       tl.to(ballEl!, { x: tx - 450 * k + side * 120, y: -40, scale: 0.5, opacity: 0, duration: 0.35, ease: 'power2.out' }, 0.4);
       tl.add(() => { sfx('crowd-ohhh'); sfx('ball-hit'); sayVariant('pen_save'); }, 0.4);
@@ -162,12 +162,12 @@
       </div>
       <div bind:this={scene} class="scene" style:width="{GW}px" style:height="{GW * 0.62}px">
         <GoalNet width={GW} />
-        <div bind:this={keeperEl} class="keeper"><Keeper width={150} pose={kpose} flip={kflip} primary="#17B26A" /></div>
+        <div bind:this={keeperEl} class="keeper"><Keeper width={125} pose={kpose} flip={kflip} primary="#17B26A" /></div>
         <div bind:this={ballEl} class="ball"><Ball width={46} /></div>
         {#if tag}<div class="tag disp {tag.cls}">{tag.text}</div>{/if}
       </div>
       <div class="mid">
-        {#if q}<div class="calcw"><CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} />
+        {#if q}<div class="calcw"><div class="calcbox" class:hide={!!hint}><CalcPanel bind:this={calc} text={q.text} value={entry.value} digits={entry.digits} status={calcState} size="md" /></div>
           {#if hint}<div class="hintcard"><HintVisual {hint} colorA={kit.primary} compact /></div>{/if}</div>{/if}
       </div>
       <div class="bottom"><Gauge bind:this={gauge} /></div>
@@ -194,12 +194,13 @@
   .shot.save { background: #35D6FF; border-color: #fff; }
   .shot.caught { background: #7C8BC9; border-color: #fff; }
   .scene { position: relative; flex: none; }
-  .keeper { position: absolute; left: 50%; bottom: 14%; margin-left: -75px; will-change: transform; transform-origin: 50% 90%; }
+  .keeper { position: absolute; left: 50%; bottom: 14%; margin-left: -62px; will-change: transform; transform-origin: 50% 90%; }
   .ball { position: absolute; left: 50%; bottom: -2%; margin-left: -23px; will-change: transform; }
   .tag { position: absolute; left: 0; right: 0; top: 30%; text-align: center; font-size: 5.5rem; line-height: 1; color: var(--jaune); -webkit-text-stroke: 7px #0A1030; paint-order: stroke fill; pointer-events: none; will-change: transform, opacity; }
   .tag.save { color: var(--cyan); font-size: 4.4rem; }
   .tag.caught { color: #fff; font-size: 4.6rem; }
   .mid { flex: 1; display: grid; place-items: center; min-height: 0; align-self: stretch; }
+  .calcbox.hide { visibility: hidden; }
   .calcw { position: relative; display: grid; place-items: center; }
   .hintcard { position: absolute; inset: -14px -30px; display: flex; flex-direction: column; justify-content: center; padding: 8px 18px; border-radius: 24px; background: rgba(7, 12, 43, 0.93); border: 4px solid rgba(255, 255, 255, 0.85); }
   .bottom { align-self: stretch; padding-bottom: 4px; }

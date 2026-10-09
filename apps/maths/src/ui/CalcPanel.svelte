@@ -2,8 +2,8 @@
   /** Calcul ENORME + cases de reponse (une case par chiffre attendu, validation automatique). */
   import { gsap, shake } from '@ce/core';
 
-  let { text, value = '', digits = 1, status = 'idle', big = true }: {
-    text: string; value?: string; digits?: number; status?: 'idle' | 'ok' | 'bad'; big?: boolean;
+  let { text, value = '', digits = 1, status = 'idle', size = 'lg' }: {
+    text: string; value?: string; digits?: number; status?: 'idle' | 'ok' | 'bad'; size?: 'lg' | 'md';
   } = $props();
 
   let calc: HTMLDivElement | undefined = $state();
@@ -25,7 +25,7 @@
   });
 </script>
 
-<div class="panel" class:big>
+<div class="panel" class:md={size === 'md'}>
   <div bind:this={calc} class="calc disp num" class:long aria-live="polite">
     <span>{text}</span>{#if !hasBlank}<span class="eq">=</span><span class="q">?</span>{/if}
   </div>
@@ -45,6 +45,9 @@
     text-shadow: 0 6px 0 #0A1030, 0 12px 28px rgba(0, 0, 0, 0.5); will-change: transform, opacity; white-space: nowrap;
   }
   .calc.long { font-size: clamp(90px, 17vh, 150px); }
+  .md .calc { font-size: clamp(84px, 15vh, 128px); }
+  .md .calc.long { font-size: clamp(70px, 12vh, 100px); }
+  .md .slot { width: clamp(64px, 9.5vh, 84px); height: clamp(72px, 11vh, 96px); font-size: clamp(48px, 7.5vh, 66px); border-radius: 14px; }
   .eq { color: var(--jaune); }
   .q { color: var(--cyan); }
   .slots { display: flex; gap: 14px; }
