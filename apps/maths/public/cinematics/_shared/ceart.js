@@ -346,6 +346,8 @@ ${post('M112 476 V128 H788 V476')}</g>
 
 // ---------------------------------------------------------------- fond de stade en couches (1920x1200, horizon a y=620)
 // Couches empilables / animables separement : ciel, projecteurs (+rayons), foule (+flashs), pelouse.
+// Perf tablette : les couches statiques (ciel + tribunes + pelouse, ~2 500 noeuds SVG) sont rasterisees une fois en WebP
+// (`npm run art:raster` -> cinematics/_shared/img/) ; `stadium({ raster })` les utilise. Pas de mix-blend-mode (repeint couteux).
 const SW = 1920, SH = 1200, HZ = 620;
 function svgWrap(cls, body, defs) { return `<svg xmlns="http://www.w3.org/2000/svg" class="${cls}" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" preserveAspectRatio="xMidYMid slice"><defs>${defs || ''}</defs>${body}</svg>`; }
 
@@ -375,14 +377,31 @@ function stadiumLights(opts) {
   });
   const defs = `<linearGradient id="${u}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF8D0" stop-opacity=".42"/><stop offset=".7" stop-color="#FFF8D0" stop-opacity=".1"/><stop offset="1" stop-color="#FFF8D0" stop-opacity="0"/></linearGradient>
 <radialGradient id="${u}o"><stop offset="0" stop-color="#FFF6C8" stop-opacity=".85"/><stop offset=".25" stop-color="#FFE98A" stop-opacity=".35"/><stop offset="1" stop-color="#FFE98A" stop-opacity="0"/></radialGradient>`;
-  return svgWrap('st-lights', `<g class="st-beams" style="mix-blend-mode:screen">${beams}</g>${banks}`, defs);
+  return svgWrap('st-lights', `<g class="st-beams">${beams}</g>${banks}`, defs);
 }
 
-/** Tribunes : 14 rangees de supporters (graine fixe), panneaux LED, ~44 emplacements de flashs d'appareils photo (`.st-flash`). */
+/** Emplacements de flashs d'appareils photo (`.st-flash`, invisibles au repos) : `count` (12 par defaut), graine fixe.
+ * Politique "mouvement sur" : animes seulement par `crowdFlashes` (rares, fondus lents). */
+function flashSlots(count, u, seed) {
+  const r = rng(seed || 17); let s = '';
+  for (let i = 0; i < count; i++) {
+    const x = 60 + r() * (SW - 120), y = 350 + r() * 230, k = 0.7 + (y - 350) / 230 * 0.9;
+    s += `<g class="st-flash st-flash-${i}" opacity="0" transform="translate(${x.toFixed(0)},${y.toFixed(0)}) scale(${k.toFixed(2)})"><circle r="26" fill="url(#${u}f)"/><path d="M0 -26 L4 -4 L26 0 L4 4 L0 26 L-4 4 L-26 0 L-4 -4Z" fill="#fff" opacity=".85"/></g>`;
+  }
+  return s;
+}
+const FLASH_GRAD = (u) => `<radialGradient id="${u}f"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>`;
+/** Calque seul des flashs (pour le stade rasterise). */
+function stadiumFlashes(opts) {
+  opts = opts || {}; const u = opts.uid || uid('fl');
+  return svgWrap('st-flashes-layer', `<g class="st-flashes">${flashSlots(opts.flashes == null ? 12 : opts.flashes, u, opts.flashSeed)}</g>`, FLASH_GRAD(u));
+}
+
+/** Tribunes : 14 rangees de supporters (graine fixe), panneaux LED, `flashes` emplacements de flashs (`.st-flash`, 12 par defaut, 0 = aucun). */
 function stadiumCrowd(opts) {
   opts = opts || {}; const u = opts.uid || uid('cw'); const r = rng(opts.seed || 7);
   const cols = opts.colors || ['#E8212F', '#1B6BFF', '#FFD23F', '#FFFFFF', '#17B26A', '#FF8A1F'];
-  let rows = '', flashes = '';
+  let rows = '';
   const R = 14, y0 = 330, y1 = 598;
   rows += `<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}s)"/>`;
   for (let k = 0; k < R; k++) {
@@ -396,10 +415,7 @@ function stadiumCrowd(opts) {
     }
     rows += `<g class="st-row st-row-${k}">${row}</g><rect x="0" y="${(y + 34 * sc).toFixed(1)}" width="${SW}" height="${(4 + 3 * t).toFixed(1)}" fill="#050A26" opacity=".55"/>`;
   }
-  for (let i = 0; i < 44; i++) {
-    const x = 60 + r() * (SW - 120), y = 350 + r() * 230, s = 0.7 + (y - 350) / 230 * 0.9;
-    flashes += `<g class="st-flash st-flash-${i}" opacity="0" transform="translate(${x.toFixed(0)},${y.toFixed(0)}) scale(${s.toFixed(2)})"><circle r="26" fill="url(#${u}f)"/><path d="M0 -26 L4 -4 L26 0 L4 4 L0 26 L-4 4 L-26 0 L-4 -4Z" fill="#fff"/></g>`;
-  }
+  const nf = opts.flashes == null ? 12 : opts.flashes;
   // panneaux LED au pied de la tribune (formes abstraites, aucun texte : decor)
   let led = '';
   for (let i = 0; i < 6; i++) {
@@ -407,10 +423,10 @@ function stadiumCrowd(opts) {
     led += `<rect x="${i * w + 3}" y="${HZ - 10}" width="${w - 6}" height="40" fill="#0A1030"/><rect x="${i * w + 3}" y="${HZ - 10}" width="${w - 6}" height="5" fill="${c}"/>`;
     for (let k = 0; k < 5; k++) led += `<polygon points="${i * w + 40 + k * 52},${HZ + 6} ${i * w + 62 + k * 52},${HZ + 6} ${i * w + 78 + k * 52},${HZ + 22} ${i * w + 56 + k * 52},${HZ + 22}" fill="${c}" opacity="${(0.9 - k * 0.15).toFixed(2)}"/>`;
   }
-  const body = `${rows}<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}v)"/><g class="st-led">${led}</g><g class="st-flashes" style="mix-blend-mode:screen">${flashes}</g>`;
+  const body = `${rows}<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}v)"/><g class="st-led">${led}</g>${nf ? `<g class="st-flashes">${flashSlots(nf, u, opts.flashSeed)}</g>` : ''}`;
   const defs = `<linearGradient id="${u}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1146"/><stop offset="1" stop-color="#18246E"/></linearGradient>
 <linearGradient id="${u}v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03051A" stop-opacity=".78"/><stop offset=".6" stop-color="#050A26" stop-opacity=".3"/><stop offset="1" stop-color="#050A26" stop-opacity=".1"/></linearGradient>
-<radialGradient id="${u}f"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".4" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>`;
+${FLASH_GRAD(u)}`;
   return svgWrap('st-crowd', body, defs);
 }
 
@@ -440,11 +456,24 @@ function stadiumPitch(opts) {
   return `<svg xmlns="http://www.w3.org/2000/svg" class="st-pitch" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" preserveAspectRatio="xMidYMid slice"><defs>${defs}</defs><svg x="0" y="${HZ}" width="${SW}" height="${SH - HZ}" viewBox="0 ${HZ} ${SW} ${SH - HZ}" overflow="hidden">${body}</svg></svg>`;
 }
 
-/** Stade complet : 4 couches absolues dans un conteneur `.ce-stadium` (chaque couche = classe `st-sky|st-crowd|st-lights|st-pitch`). */
+/** Images rasterisees du stade (generees par `npm run art:raster`, dossier `cinematics/_shared/img/` de l'app maths). */
+const STADIUM_IMG = { base: 'stadium-base.webp', lights: 'stadium-lights.webp', soft: 'stadium-soft.webp' };
+
+/**
+ * Stade complet dans un conteneur `.ce-stadium`.
+ * - SVG (defaut) : 4 couches `st-sky|st-crowd|st-pitch|st-lights` (laboratoire du kit, generation des images).
+ * - `raster: '<dossier>/'` : image `stadium-base.webp` (ciel + tribunes + pelouse) + flashs SVG (`flashes`, 0 = aucun)
+ *   + projecteurs en SVG animables (`.st-bank-i`, `.st-beam-i`, `.st-halo`) ou, avec `lights: 'img'`, en image.
+ */
 function stadium(opts) {
   const o = opts || {};
   const L = 'position:absolute;left:0;top:0;width:100%;height:100%;display:block';
   const wrap = (s) => s.replace('<svg ', `<svg style="${L}" `);
+  if (o.raster) {
+    const img = (f, cls) => `<img class="${cls}" src="${o.raster}${f}" alt="" draggable="false" style="${L};object-fit:cover">`;
+    const fl = o.flashes == null ? 12 : o.flashes;
+    return `<div class="ce-stadium" style="position:absolute;inset:0;overflow:hidden">${img(STADIUM_IMG.base, 'st-base')}${fl ? wrap(stadiumFlashes(o)) : ''}${o.lights === 'img' ? img(STADIUM_IMG.lights, 'st-lights-img') : wrap(stadiumLights(o))}</div>`;
+  }
   return `<div class="ce-stadium" style="position:absolute;inset:0;overflow:hidden">${wrap(stadiumSky(o))}${wrap(stadiumCrowd(o))}${wrap(stadiumPitch(o))}${wrap(stadiumLights(o))}</div>`;
 }
 
@@ -540,6 +569,13 @@ ${stars}<text x="300" y="728" text-anchor="middle" font-family="Fredoka, sans-se
 }
 
 // ---------------------------------------------------------------- effets deterministes (utilisables dans une timeline GSAP pausee)
+// Politique "mouvement sur" (docs/architecture.md, controle : npm run a11y:flash) : rien ne flashe plus de 3 fois par seconde,
+// pas de flash blanc plein ecran (bloom <= 0,25 d'opacite, fondus >= 0,3 s), flashs de foule rares et doux (<= 2/s),
+// confettis sans papillotement rapide, secousses moderees. L'energie vient du mouvement, pas de la lumiere.
+let SOFT = false;
+/** Mode "Animations douces" (reglage parent, ou prefers-reduced-motion) : pas de flashs de foule ni de secousse, bloom et confettis reduits. */
+function setSoft(v) { SOFT = !!v; }
+function isSoft() { return SOFT; }
 /** Rayons tournants (sunburst). Renvoie un SVG carre `size` px ; a faire tourner. */
 function rays(opts) {
   opts = opts || {}; const n = opts.count || 14, size = opts.size || 2400, c = opts.color || '#fff', op = opts.opacity == null ? 0.16 : opts.opacity;
@@ -559,9 +595,10 @@ function speedLines(opts) {
   for (let i = 0; i < n; i++) { const y = r() * 1200, x = r() * 900, w = 380 + r() * 700, h = 3 + r() * 9; d += `<rect x="${x.toFixed(0)}" y="${y.toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(1)}" rx="${(h / 2).toFixed(1)}" fill="${c}" opacity="${(0.25 + r() * 0.5).toFixed(2)}"/>`; }
   return `<svg xmlns="http://www.w3.org/2000/svg" class="fx-speed" viewBox="0 0 1920 1200" width="1920" height="1200">${d}</svg>`;
 }
-/** Confettis balistiques : `host` = element positionne ; chaque morceau = x lineaire + y montee/descente (gravite) + rotation. Tout est calcule a la construction (seed). */
+/** Confettis balistiques : `host` = element positionne ; chaque morceau = x lineaire + y montee/descente (gravite) + rotation lente. Tout est calcule a la construction (seed).
+ * Nombre reel = 70 % de `count` (30 % en mode doux) : moins de noeuds animes sur tablette. */
 function confetti(gsap, tl, host, o) {
-  o = o || {}; const r = rng(o.seed || 5), n = o.count || 90, at = o.at || 0;
+  o = o || {}; const r = rng(o.seed || 5), n = Math.max(6, Math.round((o.count || 90) * (SOFT ? 0.3 : 0.7))), at = o.at || 0;
   const cols = o.colors || ['#FFD23F', '#FF4D6D', '#35D6FF', '#FFFFFF', '#FF8A1F', '#7CFF9E'];
   const xs = o.xSpread || 0, ox0 = o.x == null ? 960 : o.x, ox = ox0, oy = o.y == null ? 600 : o.y, power = o.power || 700, spread = o.spread == null ? 150 : o.spread, grav = o.gravity || 1500, dur = o.duration || 2.2;
   for (let i = 0; i < n; i++) {
@@ -580,14 +617,16 @@ function confetti(gsap, tl, host, o) {
     tl.to(el, { y: yApex, duration: Math.min(tUp, life), ease: 'power2.out' }, t0);
     if (life > tUp) tl.to(el, { y: yEnd, duration: life - tUp, ease: 'power2.in' }, t0 + tUp);
     tl.to(el, { rotation: '+=' + ((r() - 0.5) * 900).toFixed(0), duration: life, ease: 'none' }, t0);
-    tl.to(el, { scaleY: 0.15, duration: 0.18 + r() * 0.2, repeat: Math.max(1, Math.floor(life / 0.5)), yoyo: true, ease: 'sine.inOut' }, t0);
+    // retournement lent (<= ~1 par seconde) : pas de papillotement
+    if (!SOFT) { const flips = Math.max(1, Math.round(life / 1.1)); tl.to(el, { scaleY: 0.45, duration: life / (2 * flips), repeat: 2 * flips - 1, yoyo: true, ease: 'sine.inOut' }, t0); }
     tl.to(el, { opacity: 0, duration: 0.3, ease: 'power1.in' }, t0 + life - 0.3);
   }
 }
-/** Secousse amortie (deterministe) d'un element. */
+/** Secousse amortie (deterministe) d'un element : amplitude plafonnee a 10 px (cadre 1920), rien en mode doux. */
 function shake(gsap, tl, el, at, amp, dur) {
-  const a = amp || 14, d = dur || 0.4, steps = 8;
-  for (let i = 0; i < steps; i++) { const k = 1 - i / steps; tl.to(el, { x: (i % 2 ? -1 : 1) * a * k, y: (i % 3 === 0 ? -1 : 1) * a * 0.5 * k, duration: d / steps, ease: 'power1.inOut' }, at + (i * d) / steps); }
+  if (SOFT) return;
+  const a = Math.min(amp || 10, 10), d = Math.max(dur || 0.4, 0.3), steps = 6;
+  for (let i = 0; i < steps; i++) { const k = 1 - i / steps; tl.to(el, { x: (i % 2 ? -1 : 1) * a * k, y: (i % 3 === 0 ? -1 : 1) * a * 0.5 * k, duration: d / steps, ease: 'sine.inOut' }, at + (i * d) / steps); }
   tl.to(el, { x: 0, y: 0, duration: d / steps, ease: 'power2.out' }, at + d);
 }
 /** Compteur : texte pilote par la progression (seek-safe). fmt(v) -> string. */
@@ -596,15 +635,31 @@ function countUp(gsap, tl, el, from, to, at, dur, fmt, ease) {
   el.textContent = f(from);
   tl.to(o, { v: to, duration: dur, ease: ease || 'power2.out', onUpdate: () => { el.textContent = f(o.v); } }, at);
 }
-/** Flashs d'appareils photo de la foule : ordre et instants graines. */
+/** Flashs d'appareils photo de la foule (emplacements `.st-flash`), version sure : au plus 2 par seconde (x density),
+ * fondu d'entree 0,3 s et de sortie 0,45 s, emplacements tous differents (ordre graine). Aucun en mode doux. */
 function crowdFlashes(gsap, tl, root, at, dur, density, seed) {
-  const r = rng(seed || 9), list = root.querySelectorAll('.st-flash'); const n = Math.floor(list.length * (density == null ? 1 : density));
-  for (let i = 0; i < n; i++) { const t = at + r() * dur; tl.fromTo(list[i], { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1.1, duration: 0.05, ease: 'power2.out' }, t); tl.to(list[i], { opacity: 0, duration: 0.18, ease: 'power1.in' }, t + 0.06); }
+  const list = Array.prototype.slice.call(root.querySelectorAll('.st-flash'));
+  if (SOFT || !list.length) return;
+  const r = rng(seed || 9), n = Math.min(list.length, Math.max(1, Math.floor(2 * dur * Math.min(1, density == null ? 1 : density))));
+  for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)), x = list[i]; list[i] = list[j]; list[j] = x; }
+  const step = dur / n;
+  for (let i = 0; i < n; i++) {
+    const t = at + i * step + r() * step * 0.25;
+    tl.fromTo(list[i], { opacity: 0 }, { opacity: 0.7, duration: 0.3, ease: 'sine.out', immediateRender: false }, t);
+    tl.to(list[i], { opacity: 0, duration: 0.45, ease: 'sine.inOut' }, t + 0.32);
+  }
+}
+/** Bloom doux (remplace le flash blanc plein ecran) : `el` = calque plein cadre (degrade radial clair), opacite <= 0,25
+ * atteinte en >= 0,3 s puis fondu de 0,6 s. Mode doux : 0,12 max. */
+function bloom(gsap, tl, el, at, peak, rise) {
+  const p = Math.min(peak == null ? 0.22 : peak, SOFT ? 0.12 : 0.25), up = Math.max(rise || 0.3, 0.3);
+  tl.fromTo(el, { opacity: 0 }, { opacity: p, duration: up, ease: 'sine.out', immediateRender: false }, at);
+  tl.to(el, { opacity: 0, duration: 0.6, ease: 'sine.inOut' }, at + up + 0.01);
 }
 /** Balayage lumineux diagonal (shimmer) sur un element conteneur. */
 function sheen(gsap, tl, el, at, dur, fromX, toX) {
   tl.fromTo(el, { x: fromX, opacity: 0 }, { x: toX, opacity: 1, duration: dur, ease: 'power2.inOut' }, at);
-  tl.to(el, { opacity: 0, duration: 0.1 }, at + dur - 0.08);
+  tl.to(el, { opacity: 0, duration: 0.25, ease: 'sine.inOut' }, at + dur - 0.2);
 }
 
 // ---------------------------------------------------------------- trophee, medaille, paquet de cartes, piste
@@ -827,5 +882,5 @@ function runSide(gsap, tl, svg, at, dur, period) {
   return tl;
 }
 
-window.CEArt = {PAL,SKINS,HAIRS,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,lum,textOn,initialsOf,nest,POSES,player,gardien,coach,bust,poseVars,setExpr,setPose,toPose,idleCycle,runCycle,avatarOf,crest,ball,goal,stadiumSky,stadiumLights,stadiumCrowd,pitchPoint,stadiumPitch,stadium,scoreBug,lowerThird,cardFrame,rays,sparkle,speedLines,confetti,shake,countUp,crowdFlashes,sheen,trophy,medal,cardBack,cardPack,track,playerSide,setRunSide,runSide};
+window.CEArt = {PAL,SKINS,HAIRS,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,lum,textOn,initialsOf,nest,POSES,player,gardien,coach,bust,poseVars,setExpr,setPose,toPose,idleCycle,runCycle,avatarOf,crest,ball,goal,stadiumSky,stadiumLights,stadiumFlashes,stadiumCrowd,pitchPoint,stadiumPitch,STADIUM_IMG,stadium,scoreBug,lowerThird,cardFrame,setSoft,isSoft,rays,sparkle,speedLines,confetti,shake,countUp,crowdFlashes,bloom,sheen,trophy,medal,cardBack,cardPack,track,playerSide,setRunSide,runSide};
 })();

@@ -4,6 +4,7 @@
   import { app } from './state/store.svelte.ts';
   import { nav } from './lib/nav.svelte.ts';
   import { setupAudio, applyAudioSettings } from './lib/sound.ts';
+  import { applyMotionSettings } from './lib/motion.ts';
   import Setup from './screens/Setup.svelte';
   import Placement from './screens/Placement.svelte';
   import Home from './screens/Home.svelte';
@@ -25,6 +26,7 @@
     setupAudio();
     await app.load();
     applyAudioSettings();
+    applyMotionSettings();
     nav.go(!app.state.setupDone ? 'setup' : !app.state.placementDone ? 'placement' : 'home');
   });
 </script>

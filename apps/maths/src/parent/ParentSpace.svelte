@@ -1,6 +1,8 @@
 <script lang="ts">
   import { app } from '../state/store.svelte.ts';
   import { applyAudioSettings } from '../lib/sound.ts';
+  import { applyMotionSettings } from '../lib/motion.ts';
+  import { systemReducedMotion } from '@ce/core';
   import { heatmap, avgTimeSeries, summary } from '../engine/stats.ts';
   import { THRESHOLD_CHOICES_MS } from '../engine/progress.ts';
   import { MENTAL_ZONE } from '../engine/zones.ts';
@@ -17,6 +19,7 @@
     ['overview', "Vue d'ensemble"], ['history', 'Historique'], ['zones', 'Zones'], ['settings', 'Réglages'],
   ];
   let tab = $state<Tab>('overview');
+  const sysReduced = systemReducedMotion();
 
   const T = $derived(app.state.settings.thresholdMs);
   const profile = $derived(app.state.profile);
@@ -38,6 +41,8 @@
     if (!file) return;
     try {
       await app.importText(await file.text());
+      applyAudioSettings();
+      applyMotionSettings();
       message = `Sauvegarde importée : ${app.state.childName}, ${app.state.profile.history.length} sessions.`;
     } catch (err) {
       message = `Import impossible : ${(err as Error).message}`;
@@ -201,6 +206,8 @@
         <label class="row chk"><input type="checkbox" checked={app.state.settings.sound} onchange={(e) => { app.setSettings({ sound: e.currentTarget.checked }); applyAudioSettings(); }} /> Sons et bruitages</label>
         <label class="row chk"><input type="checkbox" checked={app.state.settings.music} onchange={(e) => { app.setSettings({ music: e.currentTarget.checked }); applyAudioSettings(); }} /> Musique de stade</label>
         <label class="row chk"><input type="checkbox" checked={app.state.settings.voice} onchange={(e) => app.setSettings({ voice: e.currentTarget.checked })} /> Consignes dites à voix haute</label>
+        <label class="row chk"><input id="soft-motion" type="checkbox" checked={app.state.settings.softMotion || sysReduced} disabled={sysReduced} onchange={(e) => { app.setSettings({ softMotion: e.currentTarget.checked }); applyMotionSettings(); }} /> Animations douces</label>
+        <small>Moins de lumière et de mouvement : pas d'éclats ni de secousses, fond du stade immobile, célébrations plus sobres.{#if sysReduced} Activées automatiquement : la tablette demande moins d'animations.{/if}</small>
 
         <h2>Sauvegarde</h2>
         <div class="actions">

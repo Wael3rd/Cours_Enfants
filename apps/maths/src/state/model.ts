@@ -16,6 +16,8 @@ export interface Settings extends EngineSettings {
   voice: boolean;
   /** Musique de stade douce (coupable depuis l'accueil). */
   music: boolean;
+  /** "Animations douces" (reglage parent) : effets lumineux et secousses encore reduits ; force aussi par prefers-reduced-motion. */
+  softMotion: boolean;
 }
 
 export type CrestPattern = 'auto' | 'stripes' | 'band' | 'chevron' | 'split' | 'plain';
@@ -52,7 +54,7 @@ export interface AppState {
 
 export const SESSION_MINUTES_CHOICES = [2, 3, 5] as const;
 
-export const defaultSettings = (): Settings => ({ ...defaultEngineSettings(), sound: true, voice: true, music: true });
+export const defaultSettings = (): Settings => ({ ...defaultEngineSettings(), sound: true, voice: true, music: true, softMotion: false });
 
 export const defaultClub = (): Club => ({ name: 'Les Lions', primary: '#E8212F', secondary: '#FFFFFF', pattern: 'auto', initials: 'LL' });
 export const defaultLook = (): AvatarLook => ({ skin: 1, hair: 'court', hairColor: 0, number: 10 });
@@ -108,6 +110,7 @@ export function normalizeState(raw: unknown): AppState {
   settings.sound = settings.sound !== false;
   settings.voice = settings.voice !== false;
   settings.music = settings.music !== false;
+  settings.softMotion = settings.softMotion === true;
 
   const pr = (r.profile ?? {}) as Partial<Profile>;
   const base = newProfile();

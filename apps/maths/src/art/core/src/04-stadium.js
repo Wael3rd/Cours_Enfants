@@ -1,5 +1,7 @@
 // ---------------------------------------------------------------- fond de stade en couches (1920x1200, horizon a y=620)
 // Couches empilables / animables separement : ciel, projecteurs (+rayons), foule (+flashs), pelouse.
+// Perf tablette : les couches statiques (ciel + tribunes + pelouse, ~2 500 noeuds SVG) sont rasterisees une fois en WebP
+// (`npm run art:raster` -> cinematics/_shared/img/) ; `stadium({ raster })` les utilise. Pas de mix-blend-mode (repeint couteux).
 const SW = 1920, SH = 1200, HZ = 620;
 function svgWrap(cls, body, defs) { return `<svg xmlns="http://www.w3.org/2000/svg" class="${cls}" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" preserveAspectRatio="xMidYMid slice"><defs>${defs || ''}</defs>${body}</svg>`; }
 
@@ -29,14 +31,31 @@ export function stadiumLights(opts) {
   });
   const defs = `<linearGradient id="${u}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF8D0" stop-opacity=".42"/><stop offset=".7" stop-color="#FFF8D0" stop-opacity=".1"/><stop offset="1" stop-color="#FFF8D0" stop-opacity="0"/></linearGradient>
 <radialGradient id="${u}o"><stop offset="0" stop-color="#FFF6C8" stop-opacity=".85"/><stop offset=".25" stop-color="#FFE98A" stop-opacity=".35"/><stop offset="1" stop-color="#FFE98A" stop-opacity="0"/></radialGradient>`;
-  return svgWrap('st-lights', `<g class="st-beams" style="mix-blend-mode:screen">${beams}</g>${banks}`, defs);
+  return svgWrap('st-lights', `<g class="st-beams">${beams}</g>${banks}`, defs);
 }
 
-/** Tribunes : 14 rangees de supporters (graine fixe), panneaux LED, ~44 emplacements de flashs d'appareils photo (`.st-flash`). */
+/** Emplacements de flashs d'appareils photo (`.st-flash`, invisibles au repos) : `count` (12 par defaut), graine fixe.
+ * Politique "mouvement sur" : animes seulement par `crowdFlashes` (rares, fondus lents). */
+function flashSlots(count, u, seed) {
+  const r = rng(seed || 17); let s = '';
+  for (let i = 0; i < count; i++) {
+    const x = 60 + r() * (SW - 120), y = 350 + r() * 230, k = 0.7 + (y - 350) / 230 * 0.9;
+    s += `<g class="st-flash st-flash-${i}" opacity="0" transform="translate(${x.toFixed(0)},${y.toFixed(0)}) scale(${k.toFixed(2)})"><circle r="26" fill="url(#${u}f)"/><path d="M0 -26 L4 -4 L26 0 L4 4 L0 26 L-4 4 L-26 0 L-4 -4Z" fill="#fff" opacity=".85"/></g>`;
+  }
+  return s;
+}
+const FLASH_GRAD = (u) => `<radialGradient id="${u}f"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".4" stop-color="#fff" stop-opacity=".3"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>`;
+/** Calque seul des flashs (pour le stade rasterise). */
+export function stadiumFlashes(opts) {
+  opts = opts || {}; const u = opts.uid || uid('fl');
+  return svgWrap('st-flashes-layer', `<g class="st-flashes">${flashSlots(opts.flashes == null ? 12 : opts.flashes, u, opts.flashSeed)}</g>`, FLASH_GRAD(u));
+}
+
+/** Tribunes : 14 rangees de supporters (graine fixe), panneaux LED, `flashes` emplacements de flashs (`.st-flash`, 12 par defaut, 0 = aucun). */
 export function stadiumCrowd(opts) {
   opts = opts || {}; const u = opts.uid || uid('cw'); const r = rng(opts.seed || 7);
   const cols = opts.colors || ['#E8212F', '#1B6BFF', '#FFD23F', '#FFFFFF', '#17B26A', '#FF8A1F'];
-  let rows = '', flashes = '';
+  let rows = '';
   const R = 14, y0 = 330, y1 = 598;
   rows += `<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}s)"/>`;
   for (let k = 0; k < R; k++) {
@@ -50,10 +69,7 @@ export function stadiumCrowd(opts) {
     }
     rows += `<g class="st-row st-row-${k}">${row}</g><rect x="0" y="${(y + 34 * sc).toFixed(1)}" width="${SW}" height="${(4 + 3 * t).toFixed(1)}" fill="#050A26" opacity=".55"/>`;
   }
-  for (let i = 0; i < 44; i++) {
-    const x = 60 + r() * (SW - 120), y = 350 + r() * 230, s = 0.7 + (y - 350) / 230 * 0.9;
-    flashes += `<g class="st-flash st-flash-${i}" opacity="0" transform="translate(${x.toFixed(0)},${y.toFixed(0)}) scale(${s.toFixed(2)})"><circle r="26" fill="url(#${u}f)"/><path d="M0 -26 L4 -4 L26 0 L4 4 L0 26 L-4 4 L-26 0 L-4 -4Z" fill="#fff"/></g>`;
-  }
+  const nf = opts.flashes == null ? 12 : opts.flashes;
   // panneaux LED au pied de la tribune (formes abstraites, aucun texte : decor)
   let led = '';
   for (let i = 0; i < 6; i++) {
@@ -61,10 +77,10 @@ export function stadiumCrowd(opts) {
     led += `<rect x="${i * w + 3}" y="${HZ - 10}" width="${w - 6}" height="40" fill="#0A1030"/><rect x="${i * w + 3}" y="${HZ - 10}" width="${w - 6}" height="5" fill="${c}"/>`;
     for (let k = 0; k < 5; k++) led += `<polygon points="${i * w + 40 + k * 52},${HZ + 6} ${i * w + 62 + k * 52},${HZ + 6} ${i * w + 78 + k * 52},${HZ + 22} ${i * w + 56 + k * 52},${HZ + 22}" fill="${c}" opacity="${(0.9 - k * 0.15).toFixed(2)}"/>`;
   }
-  const body = `${rows}<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}v)"/><g class="st-led">${led}</g><g class="st-flashes" style="mix-blend-mode:screen">${flashes}</g>`;
+  const body = `${rows}<rect x="0" y="${y0 - 10}" width="${SW}" height="${HZ - y0 + 10}" fill="url(#${u}v)"/><g class="st-led">${led}</g>${nf ? `<g class="st-flashes">${flashSlots(nf, u, opts.flashSeed)}</g>` : ''}`;
   const defs = `<linearGradient id="${u}s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1146"/><stop offset="1" stop-color="#18246E"/></linearGradient>
 <linearGradient id="${u}v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03051A" stop-opacity=".78"/><stop offset=".6" stop-color="#050A26" stop-opacity=".3"/><stop offset="1" stop-color="#050A26" stop-opacity=".1"/></linearGradient>
-<radialGradient id="${u}f"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".4" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>`;
+${FLASH_GRAD(u)}`;
   return svgWrap('st-crowd', body, defs);
 }
 
@@ -94,10 +110,23 @@ export function stadiumPitch(opts) {
   return `<svg xmlns="http://www.w3.org/2000/svg" class="st-pitch" viewBox="0 0 ${SW} ${SH}" width="${SW}" height="${SH}" preserveAspectRatio="xMidYMid slice"><defs>${defs}</defs><svg x="0" y="${HZ}" width="${SW}" height="${SH - HZ}" viewBox="0 ${HZ} ${SW} ${SH - HZ}" overflow="hidden">${body}</svg></svg>`;
 }
 
-/** Stade complet : 4 couches absolues dans un conteneur `.ce-stadium` (chaque couche = classe `st-sky|st-crowd|st-lights|st-pitch`). */
+/** Images rasterisees du stade (generees par `npm run art:raster`, dossier `cinematics/_shared/img/` de l'app maths). */
+export const STADIUM_IMG = { base: 'stadium-base.webp', lights: 'stadium-lights.webp', soft: 'stadium-soft.webp' };
+
+/**
+ * Stade complet dans un conteneur `.ce-stadium`.
+ * - SVG (defaut) : 4 couches `st-sky|st-crowd|st-pitch|st-lights` (laboratoire du kit, generation des images).
+ * - `raster: '<dossier>/'` : image `stadium-base.webp` (ciel + tribunes + pelouse) + flashs SVG (`flashes`, 0 = aucun)
+ *   + projecteurs en SVG animables (`.st-bank-i`, `.st-beam-i`, `.st-halo`) ou, avec `lights: 'img'`, en image.
+ */
 export function stadium(opts) {
   const o = opts || {};
   const L = 'position:absolute;left:0;top:0;width:100%;height:100%;display:block';
   const wrap = (s) => s.replace('<svg ', `<svg style="${L}" `);
+  if (o.raster) {
+    const img = (f, cls) => `<img class="${cls}" src="${o.raster}${f}" alt="" draggable="false" style="${L};object-fit:cover">`;
+    const fl = o.flashes == null ? 12 : o.flashes;
+    return `<div class="ce-stadium" style="position:absolute;inset:0;overflow:hidden">${img(STADIUM_IMG.base, 'st-base')}${fl ? wrap(stadiumFlashes(o)) : ''}${o.lights === 'img' ? img(STADIUM_IMG.lights, 'st-lights-img') : wrap(stadiumLights(o))}</div>`;
+  }
   return `<div class="ce-stadium" style="position:absolute;inset:0;overflow:hidden">${wrap(stadiumSky(o))}${wrap(stadiumCrowd(o))}${wrap(stadiumPitch(o))}${wrap(stadiumLights(o))}</div>`;
 }

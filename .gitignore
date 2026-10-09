@@ -14,3 +14,5 @@ snapshots/
 tools/e2e/out/
 tools/e2e/.es-dist/
 tools/e2e/_dev/out/
+tools/a11y/out/
+tools/perf/out/

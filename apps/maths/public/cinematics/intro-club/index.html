@@ -13,18 +13,20 @@
       html, body { margin: 0; background: #070c2b; }
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; }
-      #cam { position: absolute; inset: 0; transform-origin: 960px 700px; }
-      #stadium { position: absolute; inset: 0; filter: brightness(0.18) saturate(0.6); }
+      /* perf tablette : calques composes par le GPU (transform/opacite animes sans repeindre le contenu) */
+      #cam { position: absolute; inset: 0; transform-origin: 960px 700px; will-change: transform; }
+      #stadium { position: absolute; inset: 0; }
+      #dim { position: absolute; inset: 0; background: #070c2b; opacity: 0; will-change: opacity; }
       .spk { position: absolute; left: 0; top: 0; width: 150px; height: 150px; margin: -75px 0 0 -75px; opacity: 0; }
       .spk svg { width: 100%; height: 100%; }
       #veil { position: absolute; inset: 0; background: rgba(7, 12, 43, 0.82); opacity: 0; }
-      #rays { position: absolute; left: 960px; top: 520px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 520px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; will-change: transform, opacity; }
       #rays svg { width: 100%; height: 100%; }
-      #crestMain { position: absolute; left: 650px; top: 132px; width: 620px; opacity: 0; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.5)); }
+      #crestMain { position: absolute; left: 650px; top: 132px; width: 620px; opacity: 0; filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.5)); will-change: transform; }
       #crestMain svg { display: block; width: 100%; height: auto; }
       #ring { position: absolute; left: 960px; top: 520px; width: 420px; height: 420px; margin: -210px 0 0 -210px; border-radius: 50%; border: 20px solid #ffd23f; box-sizing: border-box; opacity: 0; }
       #sparks .spk { width: 110px; height: 110px; margin: -55px 0 0 -55px; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #line1 { position: absolute; left: 96px; top: 190px; height: 130px; padding: 0 56px 0 46px; line-height: 130px; background: #0a1030; color: #fff; font-family: "Fredoka", sans-serif; font-weight: 700;
         font-size: 84px; clip-path: polygon(0 0, 100% 0, calc(100% - 34px) 100%, 0 100%); opacity: 0; white-space: nowrap; }
       #name { position: absolute; left: 96px; top: 290px; font-family: "Anton", sans-serif; color: #ffd23f; line-height: 1.12; white-space: nowrap; opacity: 0;
@@ -42,6 +44,7 @@
     <div id="root" data-composition-id="intro-club" data-start="0" data-width="1920" data-height="1200" data-duration="7">
       <div id="cam">
         <div id="stadium" data-layout-ignore></div>
+        <div id="dim" data-layout-ignore></div>
         <div id="sparks" data-layout-ignore></div>
       </div>
       <div id="veil"></div>
@@ -78,10 +81,13 @@
       function merge(d) { d = d || {}; return { name: d.name || DEFAULTS.name, club: Object.assign({}, DEFAULTS.club, d.club) }; }
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("intro-club", function (d) { cur = merge(d); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
 
       var BANKS = [250, 700, 1220, 1670];
-      $("#stadium").innerHTML = CEArt.stadium();
+      // stade rasterise (tribunes en WebP) + projecteurs SVG animables + 8 emplacements de flashs (politique "mouvement sur")
+      $("#stadium").innerHTML = CEArt.stadium({ raster: "./_shared/img/", flashes: 8 });
       $("#rays").innerHTML = CEArt.rays({ count: 18, color: "#ffd23f", opacity: 1, size: 2400 });
       $("#sparks").innerHTML = BANKS.map(function (x, i) { return '<div class="spk" id="spk' + i + '" style="left:' + x + 'px;top:192px">' + CEArt.sparkle({ size: 150 }) + "</div>"; }).join("") +
         [[560, 300], [1360, 340], [700, 700], [1280, 720], [500, 520], [1420, 560]].map(function (p, i) { return '<div class="spk" id="spc' + i + '" style="left:' + p[0] + 'px;top:' + p[1] + 'px">' + CEArt.sparkle({ size: 110, color: "#ffe680" }) + "</div>"; }).join("");
@@ -100,7 +106,7 @@
 
       function build() {
         tl.clear();
-        gsap.set(["#cam", "#stadium", "#veil", "#rays", "#crestMain", "#ring", "#flash", "#line1", "#name", "#player", "#ltwrap", "#fade", ".spk"], { clearProps: "transform,opacity" });
+        gsap.set(["#cam", "#stadium", "#dim", "#veil", "#rays", "#crestMain", "#ring", "#flash", "#line1", "#name", "#player", "#ltwrap", "#fade", ".spk"], { clearProps: "transform,opacity" });
         render();
         var stad = $("#stadium"), svg = $("#player svg");
         CEArt.setPose(gsap, svg, "course");
@@ -108,30 +114,35 @@
         // ---- Plan A : allumage du stade (crane up)
         tl.set("#cam", { y: 300, scale: 1.28 }, 0);
         tl.to("#cam", { y: 0, scale: 1.0, duration: 2.6, ease: "power2.out" }, 0);
-        tl.fromTo("#stadium", { filter: "brightness(0.18) saturate(0.6)" }, { filter: "brightness(1) saturate(1)", duration: 1.9, ease: "power1.in" }, 0.4);
+        // le stade s'allume : voile sombre qui se leve (opacite seule, pas de filtre anime : fluide sur tablette)
+        tl.set("#dim", { opacity: 0.82 }, 0);
+        tl.to("#dim", { opacity: 0, duration: 1.9, ease: "sine.in" }, 0.4);
         BANKS.forEach(function (x, i) {
           var t = 0.35 + i * 0.4;
           var halo = $(".st-bank-" + i + " .st-halo"), bank = $(".st-bank-" + i), beam = $(".st-beam-" + i);
           tl.set(halo, { opacity: 0 }, 0);
           tl.set(beam, { opacity: 0 }, 0);
           tl.set(bank, { opacity: 0.3 }, 0);
-          tl.to(bank, { opacity: 1, duration: 0.12, ease: "power2.out" }, t);
-          tl.to(halo, { opacity: 1, duration: 0.12, ease: "power2.out" }, t);
-          tl.to(halo, { opacity: 0.35, duration: 0.06 }, t + 0.14);
-          tl.to(halo, { opacity: 1, duration: 0.08 }, t + 0.2);
-          tl.to(beam, { opacity: 1, duration: 0.45, ease: "power2.out" }, t + 0.05);
-          tl.fromTo("#spk" + i, { opacity: 1, scale: 0 }, { opacity: 1, scale: 1.5, duration: 0.18, ease: "back.out(2)" }, t);
-          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, t + 0.45);
+          // allumage doux (fondus >= 0,3 s, pas de gresillement du halo)
+          tl.to(bank, { opacity: 1, duration: 0.3, ease: "sine.out" }, t);
+          tl.to(halo, { opacity: 1, duration: 0.4, ease: "sine.out" }, t);
+          tl.to(beam, { opacity: 1, duration: 0.6, ease: "sine.out" }, t + 0.05);
+          tl.fromTo("#spk" + i, { opacity: 1, scale: 0 }, { opacity: 1, scale: 0.9, duration: 0.35, ease: "sine.out" }, t);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.45, ease: "sine.in" }, t + 0.4);
         });
         CEArt.crowdFlashes(gsap, tl, stad, 1.6, 1.1, 1, 5);
 
         // ---- Plan B : le blason claque
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.8, duration: 0.05, ease: "power1.out" }, 2.56);
-        tl.to("#flash", { opacity: 0, duration: 0.4, ease: "power2.out" }, 2.62);
+        // bloom chaud et doux (<= 0,22) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 2.5, 0.22, 0.3);
         tl.fromTo("#veil", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 2.55);
-        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.5, duration: 0.3, ease: "power2.out" }, 2.6);
-        tl.to("#rays", { rotation: 40, duration: 2.0, ease: "none" }, 2.6);
-        tl.fromTo("#crestMain", { scale: 6.5, rotation: -8, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 2.6);
+        // rayons discrets et lents (< 1 passage par seconde en un point)
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.18, duration: 0.5, ease: "sine.out" }, 2.6);
+        tl.to("#rays", { rotation: 16, duration: 2.0, ease: "none" }, 2.6);
+        // le blason arrive en grand et se pose (mouvement vif) mais apparait en fondu (0,3 s) : pas d'eclair lumineux
+        tl.set("#crestMain", { scale: 3.2, rotation: -8, opacity: 0 }, 0);
+        tl.to("#crestMain", { scale: 1, rotation: 0, duration: 0.45, ease: "expo.out" }, 2.6);
+        tl.to("#crestMain", { opacity: 1, duration: 0.3, ease: "sine.out" }, 2.6);
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 2.6);
         tl.to("#ring", { scale: 3, opacity: 0, duration: 0.6, ease: "expo.out" }, 2.6);
         CEArt.shake(gsap, tl, "#cam", 2.62, 20, 0.4);
@@ -141,16 +152,16 @@
         var sw = $("#crestMain .crest-sweep");
         tl.set(sw, { x: 0, opacity: 0 }, 0);
         tl.to(sw, { x: 330, duration: 0.5, ease: "power2.inOut" }, 3.3);
-        tl.to(sw, { opacity: 1, duration: 0.08 }, 3.3);
-        tl.to(sw, { opacity: 0, duration: 0.08 }, 3.72);
+        tl.to(sw, { opacity: 1, duration: 0.2, ease: "sine.out" }, 3.3);
+        tl.to(sw, { opacity: 0, duration: 0.2, ease: "sine.in" }, 3.62);
         for (var k = 0; k < 6; k++) {
-          tl.fromTo("#spc" + k, { opacity: 1, scale: 0 }, { opacity: 1, scale: 1 + (k % 3) * 0.3, duration: 0.2, ease: "back.out(2)" }, 3.0 + k * 0.08);
-          tl.to("#spc" + k, { opacity: 0, scale: 0, duration: 0.3, ease: "power2.in" }, 3.6 + k * 0.1);
+          tl.fromTo("#spc" + k, { opacity: 1, scale: 0 }, { opacity: 1, scale: 0.8 + (k % 3) * 0.2, duration: 0.4, ease: "sine.out" }, 3.0 + k * 0.14);
+          tl.to("#spc" + k, { opacity: 0, scale: 0, duration: 0.45, ease: "sine.in" }, 3.55 + k * 0.1);
         }
 
         // ---- Plan C : bienvenue
         tl.to("#crestMain", { x: 650, y: -260, scale: 0.4, duration: 0.55, ease: "power3.inOut" }, 4.5);
-        tl.to("#rays", { opacity: 0.18, duration: 0.5 }, 4.5);
+        tl.to("#rays", { opacity: 0.07, duration: 0.6, ease: "sine.inOut" }, 4.5);
         tl.to("#veil", { opacity: 0.55, duration: 0.6, ease: "power2.out" }, 4.5);
         tl.fromTo("#line1", { x: -300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 4.6);
         tl.fromTo("#name", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 4.8);

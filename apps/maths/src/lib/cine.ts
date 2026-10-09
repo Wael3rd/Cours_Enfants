@@ -3,6 +3,7 @@ import { playCinematic, preloadCinematic } from '@ce/core';
 import { duckMusic } from './sound.ts';
 import { ZONES } from '../engine/zones.ts';
 import { STRATEGY_CINEMATICS } from '../audio/voice-lines.ts';
+import { softMotion } from './motion.ts';
 
 export type CineId = 'intro-club' | 'match-intro' | 'goal' | 'full-time' | 'trophy' | 'card-pack' | 'medal';
 const src = (id: string) => `${import.meta.env.BASE_URL}cinematics/${id}/index.html`;
@@ -14,7 +15,8 @@ export function preload(...ids: CineId[]): void {
 export async function cine(id: CineId | `strategy-${string}`, data: Record<string, unknown>): Promise<void> {
   duckMusic(true);
   try {
-    await playCinematic({ src: src(id), data: { [id]: data } });
+    // canal "motion" : chaque composition maths reduit ses effets en "Animations douces" (CEArt.setSoft)
+    await playCinematic({ src: src(id), data: { [id]: data, motion: { soft: softMotion() } } });
   } finally {
     duckMusic(false);
   }

@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { gsap } from '@ce/core';
+  import { gsap, prefersReducedMotion } from '@ce/core';
   import { ball } from './core/ceart.js';
   let { width = 90, spin = false }: { width?: number; spin?: boolean } = $props();
   let host: HTMLDivElement | undefined = $state();
   const html = ball({});
   onMount(() => {
     const j = host?.querySelector('.ball-spin .j');
-    if (!j || !spin || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!j || !spin || prefersReducedMotion()) return;
     const t = gsap.to(j, { rotation: 360, svgOrigin: '0 0', duration: 2.4, ease: 'none', repeat: -1 });
     return () => { t.kill(); };
   });

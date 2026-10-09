@@ -16,6 +16,7 @@
   import Ball from '../art/Ball.svelte';
   import ParentEntry from '../parent/ParentEntry.svelte';
   import { hasStrategy, playStrategy } from '../lib/cine.ts';
+  import { softMotion } from '../lib/motion.ts';
 
   const club = $derived(app.state.club);
   const look = $derived(app.state.look);
@@ -48,7 +49,7 @@
       gsap.from('.stagger', { y: 40, opacity: 0, duration: 0.45, ease: 'ceSnap', stagger: 0.07, delay: 0.25 });
       if (matchBtn) {
         gsap.from(matchBtn, { scale: 0.6, opacity: 0, duration: 0.5, ease: 'cePunch', delay: 0.2 });
-        gsap.to(matchBtn, { scale: 1.035, duration: 1.1, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.9 });
+        if (!softMotion()) gsap.to(matchBtn, { scale: 1.035, duration: 1.4, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 0.9 });
       }
     });
     if (starNum) countUp(starNum, rewards.stars - rewards.starsSpent, { duration: 0.8 });

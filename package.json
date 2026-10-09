@@ -17,6 +17,9 @@
     "e2e": "node tools/e2e/run.mjs",
     "cinematics:check": "node scripts/cinematics.mjs check",
     "art": "node scripts/cinematics.mjs art",
+    "art:raster": "node tools/art/stadium-raster.mjs",
+    "a11y:flash": "node tools/a11y/flash-check.mjs",
+    "perf:frames": "node tools/perf/frame-times.mjs",
     "cinematics:sync": "node scripts/cinematics.mjs sync",
     "icons": "node scripts/make-icons.mjs",
     "voices": "node tools/tts/maths-manifest.mjs"

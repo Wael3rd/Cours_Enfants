@@ -6,7 +6,7 @@
 //           les compositions sont reecrites en "../_shared/". Evite de precacher N fois le runtime (500 Ko).
 //  art    : concatene apps/maths/src/art/core/src/*.js (kit graphique CEArt, source unique) en
 //           - src/art/core/ceart.js (ESM pour Svelte) et - public/cinematics/_shared/ceart.js (IIFE window.CEArt pour HyperFrames).
-//           Lance automatiquement par sync/check ; `npm run art` pour le regenerer a la main.
+//           Lance automatiquement par sync/check (seulement l'app visee si elle est nommee) ; `npm run art` pour le regenerer a la main.
 //  check  : sync puis `hyperframes check` sur chaque composition (0 finding exige).
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join, resolve, sep } from 'node:path';
@@ -26,8 +26,8 @@ const ARTS = [
   { app: 'maths', glob: 'CEArt', file: 'ceart.js' },
   { app: 'espagnol', glob: 'QArt', file: 'qart.js' },
 ];
-function art() {
-  for (const a of ARTS) {
+function art(only) {
+  for (const a of ARTS.filter((x) => !only || x.app === only)) {
     const src = join(root, 'apps', a.app, 'src', 'art', 'core', 'src');
     if (!existsSync(src)) continue;
     const NL = String.fromCharCode(10);
@@ -46,7 +46,7 @@ function art() {
 }
 
 function sync(app) {
-  art();
+  art(app);
   const shared = join(cinDir(app), '_shared');
   if (!existsSync(shared)) return;
   for (const id of compos(app)) {
@@ -79,7 +79,7 @@ function stage(app) {
 
 const [cmd, only] = process.argv.slice(2);
 const targets = only ? [only] : apps;
-if (cmd === 'art') art();
+if (cmd === 'art') art(only);
 else if (cmd === 'sync') targets.forEach(sync);
 else if (cmd === 'stage') targets.forEach(stage);
 else if (cmd === 'check') {

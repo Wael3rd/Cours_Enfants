@@ -13,8 +13,16 @@ CustomEase.create('cePunch', '0.34,1.56,0.64,1'); // overshoot franc (pop)
 CustomEase.create('cePress', '0.4,0,0.2,1');
 export const eases = ['ceSnap', 'cePunch', 'cePress'] as const;
 
-export const prefersReducedMotion = () =>
+/** Reglage d'app "Animations douces" (force le mode reduit meme sans prefers-reduced-motion). */
+let softMotion = false;
+export const setSoftMotion = (on: boolean): void => {
+  softMotion = on;
+};
+/** Vrai si le systeme demande moins de mouvement (prefers-reduced-motion). */
+export const systemReducedMotion = () =>
   typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+/** Mode reduit effectif : reglage "Animations douces" OU prefers-reduced-motion. */
+export const prefersReducedMotion = () => softMotion || systemReducedMotion();
 
 type Target = gsap.TweenTarget;
 

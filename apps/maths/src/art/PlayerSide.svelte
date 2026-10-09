@@ -1,7 +1,7 @@
 <script lang="ts">
   // Footballeur de PROFIL en course (regarde a droite). `speed` (0 = a l'arret, 1 = course normale, 2 = sprint) pilote le timeScale.
   import { onMount } from 'svelte';
-  import { gsap } from '@ce/core';
+  import { gsap, prefersReducedMotion } from '@ce/core';
   import { playerSide, setRunSide, runSide } from './core/ceart.js';
 
   type Props = {
@@ -13,7 +13,7 @@
 
   let host: HTMLDivElement | undefined = $state();
   let tl: gsap.core.Timeline | undefined;
-  const reduce = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = prefersReducedMotion();
   const html = $derived(playerSide({ primary, secondary, shorts, socks, shoe, skin, hair, hairColor, number, ghost }));
 
   $effect(() => {
