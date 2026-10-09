@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-sevilla):not(.m-med-salamanca):not(.m-med-madrid) { display: none; }
+      #mapbox .m-med text { display: none; }
+      .star { position: absolute; left: 0; top: 0; z-index: 8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="3.437">
+      <div id="p3" style="position:absolute;inset:0;overflow:hidden"><div id="mapbox" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="3.437" data-media-start="8.898" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":2.237,"v":1},{"t":3.437,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/marina.da99ae1e34.mp3" data-start="0.6" data-duration="1.187" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.8" data-duration="0.465" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1.887" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-pluma-2","cinematica":"u03-pluma","part":2,"parts":2,"total":3.437,"meta":{"cinematica":"u03-pluma","titulo":"Tercera pluma","tipo":"pluma","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":3,"t0":0,"t1":3.187,"vista":"Sur la carte, une trajectoire lumineuse traverse l’océan vers l’ouest : México.","camara":"","rotulo":"","personajes":["marina"],"lines":[{"who":"marina","es":"¡Ahora, a México!","key":"marina.da99ae1e34","t":0.6,"d":1.187,"words":[{"w":"¡Ahora,","t":0.6,"d":0.323},{"w":"a","t":1.143,"d":0.121},{"w":"México!","t":1.264,"d":0.373}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.8,"f":"rpg/spell-cast"},{"t":1.887,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "done", salamanca: "done", sevilla: "done", cdmx: "open", valencia: "open" }, player: "sevilla", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("cdmx"));
+        var sev = Q.mapRegion("sevilla"), mx = Q.mapRegion("cdmx"), mid = { x: (sev.x + mx.x) / 2 - 20, y: (sev.y + mx.y) / 2 };
+        // camera : sur Sevilla, puis recul pour embrasser l'Atlantique, puis accompagne le pion vers l'ouest
+        Q.mapCamSet(gsap, mapbox, { x: sev.x, y: sev.y }, 3.0);
+        Q.mapCamMove(tl, mapbox, mid, 1.1, P.t0 + 0.2, 1.5, "power2.inOut");
+        Q.mapFogDrift(tl, mapbox, 0, T);
+        Q.mapPulse(tl, mapbox, 0, 3, 0.9);
+        var tT = P.t0 + 0.55;
+        Q.mapTravel(tl, mapbox, "sevilla", "cdmx", tT, Math.max(1.4, T - tT - 0.7), gsap);
+        Q.mapCamMove(tl, mapbox, { x: mx.x + 260, y: mx.y - 80 }, 1.5, tT + 1.0, Math.max(1.0, T - tT - 1.4), "power1.inOut");
+        // la plume du Quetzal s'envole avec le pion (etincelles vertes derriere)
+        var fe = mk($("#p3"), "star", Q.featherSvg({ uid: "fe", width: 34, height: 100 })); fe.style.filter = "drop-shadow(0 0 10px rgba(155,255,214,.95))"; fe.firstChild.style.overflow = "visible";
+        gsap.set(fe, { x: 300, y: 560, opacity: 0 });
+        tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, L.t + 0.1);
+        tl.to(fe, { x: 1500, y: 250, rotation: 70, duration: Math.max(1.0, T - L.t - 0.5), ease: "power1.inOut" }, L.t + 0.1);
+        for (var k = 0; k < 10; k++) {
+          var sp = mk($("#p3"), "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>');
+          var f = k / 10, sx = 300 + f * 1200, sy = 560 - f * 310 + Math.sin(k) * 40;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.2, ease: "back.out(3)", immediateRender: false }, L.t + 0.2 + f * (T - L.t - 0.7));
+          tl.to(sp, { y: sy + 70, scale: 0, opacity: 0, duration: 0.5, ease: "power2.in" }, L.t + 0.4 + f * (T - L.t - 0.7));
+        }
+        C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

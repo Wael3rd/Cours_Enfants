@@ -20,4 +20,4 @@ Plan 1 part à gauche (x −2300, skew −16°, `power3.in` .34 s), plan 2 entre
 - Pastille « MADRID, ESPAÑA » (glisse de la gauche, `expo.out`), repart avant la fin.
 - Sons : `rpg/bell` (doux), `ui/star` quand le Quetzal traverse le centre, `ui/pop` sur « aventura ».
 
-Fondu depuis/vers l'encre (0,45 s / 0,28 s), guirlande de papel picado qui se balance, grain de papier, vignette. Sous-titres espagnols mot à mot (mot actif en or).
+Fondu depuis/vers l'encre (0,45 s / 0,28 s), frise d azulejos « madrid » et fanions sobres qui se balancent (papel picado réservé au Mexique), grain de papier, vignette. Sous-titres espagnols mot à mot (mot actif en or).

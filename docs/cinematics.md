@@ -155,6 +155,21 @@ Limites : au rendu MP4 les valeurs sont celles de `DEFAULTS` (pas de `--variable
 | `u01-historia` | `u01-historia-1` … `-4` | 9,9 + 10,0 + 9,2 + 10,1 s | Academia de Viajeros : accueil · plume + Quetzal · Sombra sur la carte · arrivée de Marina |
 | `u01-capsula-hispanos` | `u01-capsula-hispanos-1`, `-2` | 9,0 + 8,7 s | planisphère explainer + compteur 600 M · 3 cartes-pays + plume vers l'ouest |
 | `u01-pluma` | `u01-pluma` | 9,7 s | la Sombra se brise, plume rattrapée, le Quetzal repousse, carte → Salamanca (le brouillard se dissipe) |
+| `u02-intro` | `u02-intro` | 9,9 s | carte d'Espagne (ligne Madrid → Salamanca) → carte-titre « Capítulo 2 · Mi clase, mi cole · Salamanca » → panorama doré, cigognes, cloche muette |
+| `u02-historia` | `u02-historia-1` … `-5` | 8,8 + 8,5 + 5,1 + 9,1 + 7,6 s | patio du colegio (enfants figés, cloche muette) · présentations de Diego · la plume de Marina · salle de classe + Sombra (« Sin palabras, no hay clase ») · la grenouille s'allume |
+| `u02-capsula-cole` | `u02-capsula-cole-1` … `-3` | 9,3 + 8,1 + 5,7 s | el recreo / el bocadillo + boletín 0-10 (tampon « aprobado ») · pas d'uniforme, « profe », « cole » · Universidad (1218) |
+| `u02-pluma` | `u02-pluma` | 10,2 s | la cloche sonne, les enfants reprennent des couleurs, la grenouille s'ouvre et libère la plume, carte → Sevilla |
+| `u03-intro` | `u03-intro` | 10,1 s | carte (ligne → Sevilla) → carte-titre « Capítulo 3 · Mi familia · Sevilla » → Triana à l'heure dorée (Giralda, Torre del Oro, Guadalquivir) |
+| `u03-historia` | `u03-historia-1` … `-5` | 7,8 + 6,7 + 6,5 + 9,5 + 9,1 s | ruelle et porte bleue · patio andalou (Abuela Carmen, Álex) · Lola et son chat · atelier, fresque aux noms effacés + Sombra · le carreau vert, tío Rafa |
+| `u03-capsula-familias` | `u03-capsula-familias-1` … `-3` | 6,7 + 6,0 + 9,2 s | table dominicale (abuelos, tíos, primos) · « Marina Ortega García » (dos apellidos) · patio + mosaïque d'azulejos qui dessine un arbre |
+| `u03-pluma` | `u03-pluma-1`, `-2` | 8,9 + 3,4 s | les noms reviennent, plume libérée, premier vol du Quetzal dans le patio · carte → México |
+
+**Bordure régionale** (`QCine.frame`, `PLAN.meta.region` ← constante `region` de chaque entrée de `CINES`) : **le papel picado est exclusivement mexicain** (unités 4, 9, Día de Muertos : `region: 'mexico'`).
+Espagne = **frise d'azulejos** (cenefa, festons en arcs, fanions sobres qui se balancent) : `QArt.azulejoFrieze` / `QArt.bunting(region, opts)`, palettes `FRIEZE_PAL` (`madrid`, `salamanca`, `sevilla`). Nouvelle région = ajouter une palette (ou un builder) dans `02-pattern.js`.
+**Sous-titres** : mise en valeur du mot par la **couleur seule** (+ 4 px de saut en `transform`) ; mêmes `font`/graisse que le reste, espace réel entre les mots (nœud texte) : aucun reflow.
+**Kit unités 2-3** : `09-props.js` (`prop(campana|bocadillo|gato|guitarra|cazuela|rana|azulejo)`, `storkSvg`, `frozenKid`), `10-salamanca.js` (`fachadaUniversidad` + grenouille, `salamancaSkyline`, `colegioPatio`, `aula`), `11-sevilla.js` (`sevillaSkyline`, `callejonTriana`, `patioAndaluz`, `tallerCeramica`), `08b-characters-extra.js` (Diego, Doña Pilar, Lola, Abuela Carmen, Tío Rafa) ;
+`QStage.set(root, décor)` (calques back/desks/qlayer/actors/front/light/motes, même caméra `S.camSet` / `S.cam`), `S.drift`, `S.fountain`, `S.prop` ; `_shared/qcap.js` (`QCap` : fond à points, bloc titre, pastilles, « pop » papier, étincelles) pour les capsules.
+`es-build.mjs` : `--unit=u02` ne régénère qu'une unité ; une partie peut ne jouer que certaines répliques d'un plan (`plans: [{ n: 2, lines: [1] }]`).
 
 Jouer = enchaîner `playCinematic({ src: '…/cinematics/<part.id>/index.html', data })` pour chaque `part`, avec les **mêmes** `data` ; `result` ≠ `'ended'` ⇒ stop.
 Chaque partie démarre par un fondu depuis l'encre et finit par un fondu vers l'encre (≈ 0,3 s) : l'enchaînement est un fondu-croisé naturel.

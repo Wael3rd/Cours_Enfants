@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-capsula-familias-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #root { background: #0d1038; }
+      #p3 { position: absolute; inset: 0; overflow: hidden; }
+      #p4 { position: absolute; inset: 0; visibility: hidden; }
+      .tile { position: absolute; left: 0; top: 0; width: 104px; height: 104px; border-radius: 10px; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      .tile.bg { background-color: #fffdf4; box-shadow: 0 6px 0 rgba(0,0,0,.35), inset 0 0 0 3px #2f6fd0; }
+      .tile.lf { background: linear-gradient(135deg, #5fb06a, #2f7f5a); box-shadow: 0 6px 0 rgba(0,0,0,.35), inset 0 0 0 4px #1d5a40; }
+      .tile.tr { background: linear-gradient(135deg, #a8693a, #6b4222); box-shadow: 0 6px 0 rgba(0,0,0,.35), inset 0 0 0 4px #4a2a1c; }
+      .tile.ft { background: linear-gradient(135deg, #42e0a0, #0e9f6e); box-shadow: 0 6px 0 rgba(0,0,0,.35), inset 0 0 0 5px #bfffe3; z-index: 4; }
+      .fgl { position: absolute; left: 0; top: 0; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.95), rgba(66,224,160,.4) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; z-index: 3; }
+      .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 6px solid #9bffd6; opacity: 0; z-index: 5; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-capsula-familias-3" data-start="0" data-width="1920" data-height="1200" data-duration="9.208">
+      <div id="p3"><div id="stage"></div></div>
+      <div id="p4" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.208" data-media-start="12.767" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.008,"v":1},{"t":9.208,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.6f22098fa0.mp3" data-start="0.5" data-duration="4.044" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.b11e16282a.mp3" data-start="5.344" data-duration="2.614" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/swoosh-out.mp3" data-start="4.794" data-duration="0.212" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="5.944" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="7.458" data-duration="0.121" data-track-index="6" data-volume="0.5"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/item-get.mp3" data-start="7.658" data-duration="0.526" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-capsula-familias-3","cinematica":"u03-capsula-familias","part":3,"parts":3,"total":9.208,"meta":{"cinematica":"u03-capsula-familias","titulo":"Familias del mundo hispano","tipo":"capsula","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":3,"t0":0,"t1":4.944,"vista":"Patio andalou : plantes, fontaine, carreaux de Triana.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En Sevilla, muchas casas tienen un patio con flores y azulejos.","key":"narrador.6f22098fa0","t":0.5,"d":4.044,"words":[{"w":"En","t":0.5,"d":0.219},{"w":"Sevilla,","t":0.719,"d":0.542},{"w":"muchas","t":1.454,"d":0.398},{"w":"casas","t":1.852,"d":0.345},{"w":"tienen","t":2.197,"d":0.398},{"w":"un","t":2.596,"d":0.183},{"w":"patio","t":2.779,"d":0.345},{"w":"con","t":3.123,"d":0.237},{"w":"flores","t":3.36,"d":0.398},{"w":"y","t":3.759,"d":0.129},{"w":"azulejos.","t":3.888,"d":0.506}]}]},{"n":4,"t0":4.944,"t1":8.958,"vista":"Une mosaïque d’azulejos dessine un arbre ; une plume verte apparaît au centre.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Y en cada azulejo hay una historia de familia.","key":"narrador.b11e16282a","t":5.344,"d":2.614,"words":[{"w":"Y","t":5.344,"d":0.119},{"w":"en","t":5.463,"d":0.169},{"w":"cada","t":5.632,"d":0.268},{"w":"azulejo","t":5.9,"d":0.417},{"w":"hay","t":6.318,"d":0.219},{"w":"una","t":6.536,"d":0.219},{"w":"historia","t":6.755,"d":0.467},{"w":"de","t":7.222,"d":0.169},{"w":"familia.","t":7.391,"d":0.417}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":4.794,"f":"ui/swoosh-out"},{"t":5.944,"f":"ui/tick"},{"t":7.458,"f":"ui/star"},{"t":7.658,"f":"rpg/item-get"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total, PA = C.planOf(PLAN, 3), PB = C.planOf(PLAN, 4), LA = PA.lines[0], LB = PB.lines[0], W = PB.t0;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        // ============ PLAN 3 : el patio andaluz ============
+        var set = Q.patioAndaluz({ uid: "pa" });
+        var room = S.set($("#stage"), set, { below: "#C9A064", motes: 24 });
+        S.drift(tl, room, W + 0.6); S.fountain(tl, room, W + 0.6);
+        S.camSet(room, 1200, 640, 0.98);
+        S.cam(tl, room, 1230, 700, 1.16, 0, W, "sine.inOut");
+        tl.fromTo("#stage", { rotation: -0.8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.6, ease: "power2.out" }, 0);
+        // trois pastilles sur leurs mots : el patio, las flores, los azulejos
+        var tPat = C.wordT(PLAN, 3, 1, 7), tFlo = C.wordT(PLAN, 3, 1, 9), tAzu = C.wordT(PLAN, 3, 1, 11);
+        var chA = Cap.chip(root, "el patio", 140, 250, "gold"), chB = Cap.chip(root, "las flores", 700, 250, "pink"), chC = Cap.chip(root, "los azulejos", 1280, 250, "");
+        [[chA, tPat], [chB, tFlo], [chC, tAzu]].forEach(function (c) { tl.set(c[0], { opacity: 0 }, 0); Cap.pop(tl, c[0], c[1] - 0.05, { from: "down", rot: 2 }); tl.to(c[0], { opacity: 0, y: "-=14", duration: 0.3 }, W - 0.55); });
+        Cap.sparks(tl, root, 330, 290, tPat, 6, "#ffe9a8"); Cap.sparks(tl, root, 920, 290, tFlo, 6, "#ffb0c8"); Cap.sparks(tl, root, 1500, 290, tAzu, 6, "#9ec5ff");
+        // sortie du patio : se retracte vers le haut
+        tl.to("#p3", { y: -80, opacity: 0, duration: 0.4, ease: "power3.in" }, W - 0.4);
+        tl.set("#p3", { visibility: "hidden" }, W + 0.02);
+
+        // ============ PLAN 4 : la mosaique dessine un arbre, la plume au centre ============
+        var p4 = $("#p4");
+        Cap.bg(root);
+        tl.set(p4, { visibility: "visible" }, W - 0.25);
+        var COLS = 12, ROWS = 6, TS = 108, X0 = (1920 - COLS * TS) / 2, Y0 = 275;
+        var map = ["....LLLL....", "..LLLLLLLL..", ".LLLLLLLLLL.", "..LLLLLLLL..", ".....TT.....", ".....TT....."];
+        var tileUri = Q.azulejoDataUri({ a: "#fffdf4", b: "#2f6fd0", c: "#ffc83d", d: "#2f6fd0" }, 104);
+        var leafUri = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="#8fdc9a" opacity=".55"><path d="M50 14C74 34 76 62 56 82Q50 88 44 82C24 64 26 36 50 14Z"/></g><path d="M50 22V80" stroke="#1d5a40" stroke-width="3" opacity=".6"/><g fill="#1d5a40" opacity=".35"><circle cx="20" cy="22" r="5"/><circle cx="80" cy="78" r="5"/></g></svg>');
+        var barkUri = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g stroke="#3a2210" stroke-width="5" fill="none" opacity=".45" stroke-linecap="round"><path d="M25 8V92"/><path d="M52 8V92"/><path d="M78 8V92"/></g></svg>');
+        var rnd = Q.rng(33), order = [], tiles = [];
+        for (var r = 0; r < ROWS; r++) for (var c = 0; c < COLS; c++) order.push([r, c]);
+        order.sort(function () { return rnd() - 0.5; });
+        var tA = C.wordT(PLAN, 4, 1, 4) - 1.2, tH = C.wordT(PLAN, 4, 1, 7), tF = C.wordT(PLAN, 4, 1, 9);
+        var t0 = W + 0.25, span = Math.max(1.2, tH - t0 - 0.3);
+        order.forEach(function (rc, k) {
+          var r = rc[0], c = rc[1], ch = map[r][c], center = (r === 2 && c === 5);
+          var cls = center ? "tile ft" : ch === "L" ? "tile lf" : ch === "T" ? "tile tr" : "tile bg";
+          var d = mk(p4, cls, ""); if (cls === "tile bg") d.style.backgroundImage = "url('" + tileUri + "')"; else if (cls === "tile lf") d.style.backgroundImage = "url('" + leafUri + "')"; else if (cls === "tile tr") d.style.backgroundImage = "url('" + barkUri + "')"; d.style.backgroundSize = "cover";
+          gsap.set(d, { x: X0 + c * TS + 2, y: Y0 + r * TS + 2 });
+          tiles.push({ el: d, r: r, c: c, ch: center ? "F" : ch });
+          tl.set(d, { opacity: 0 }, 0);
+          var tt = t0 + (k / (order.length - 1)) * span;
+          tl.fromTo(d, { opacity: 0, scale: 0.2, rotation: (k % 2 ? 40 : -40) }, { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)", immediateRender: false }, tt);
+        });
+        // l'arbre se revele : les tuiles-fond s'attenuent, l'arbre ressort
+        tiles.forEach(function (t) { if (t.ch === ".") tl.to(t.el, { opacity: 0.55, duration: 0.5, ease: "power2.inOut" }, tH - 0.1); else if (t.ch !== "F") tl.to(t.el, { y: "-=8", duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, tH + (t.c % 6) * 0.05); });
+        // le carreau central s'allume sur « historia » (plume, halo, anneaux)
+        var cx = X0 + 5 * TS + TS / 2, cy = Y0 + 2 * TS + TS / 2, ft = tiles.filter(function (t) { return t.ch === "F"; })[0].el;
+        ft.innerHTML = '<svg width="104" height="104" viewBox="-52 -52 104 104" style="position:absolute;left:0;top:0"><path d="M0 -34C28 -12 32 18 8 38Q0 42 -8 38C-28 22 -26 -10 0 -34Z" fill="#e6fff4"/><path d="M0 -30V38" stroke="#0e9f6e" stroke-width="3"/></svg>';
+        var gl = mk(p4, "fgl"); gsap.set(gl, { x: cx - 260, y: cy - 260 });
+        tl.fromTo(gl, { opacity: 0, scale: 0.4 }, { opacity: 0.9, scale: 1.1, duration: 0.5, ease: "power2.out", immediateRender: false }, tH - 0.05);
+        tl.to(gl, { opacity: 0.45, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 5 }, tH + 0.5);
+        tl.fromTo(ft, { scale: 1 }, { scale: 1.35, duration: 0.4, ease: "back.out(2.2)", yoyo: true, repeat: 1, immediateRender: false }, tH - 0.05);
+        for (var rr = 0; rr < 3; rr++) { var rg = mk(p4, "ring"); gsap.set(rg, { x: cx, y: cy }); tl.fromTo(rg, { scale: 0.3, opacity: 0.9 }, { scale: 6, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, tH + rr * 0.3); }
+        Cap.sparks(tl, p4, cx, cy, tH, 14, "#9bffd6");
+        // titre / etiquette
+        var cl = Cap.chip(p4, "un azulejo = una historia", 560, 200, "gold"); tl.set(cl, { opacity: 0 }, 0);
+        Cap.pop(tl, cl, tA, { from: "down", rot: -2 });
+
+        C.frame(tl, root, PLAN, { seed: 4, fadeOut: 0.6 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-capsula-familias-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

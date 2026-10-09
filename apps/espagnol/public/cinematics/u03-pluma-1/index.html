@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-pluma-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      #p2 { visibility: hidden; }
+      .star { position: absolute; left: 0; top: 0; }
+      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(255,243,176,.7), rgba(255,243,176,0) 62%); mix-blend-mode: screen; z-index: 20; opacity: 0; pointer-events: none; }
+      .streak { position: absolute; left: 0; height: 6px; width: 700px; border-radius: 3px; background: linear-gradient(90deg, rgba(255,243,209,0), #fff3d1); opacity: 0; z-index: 60; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-pluma-1" data-start="0" data-width="1920" data-height="1200" data-duration="8.898">
+      <div id="p1" class="plan" data-layout-allow-overflow><div id="stage1"></div></div>
+      <div id="p2" class="plan" data-layout-allow-overflow><div id="stage2"></div></div>
+      <div class="vflash" id="vflash"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.898" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.598,"v":1},{"t":8.898,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/abuela_carmen.0d50bfe255.mp3" data-start="0.7" data-duration="3.462" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.bd91e1337e.mp3" data-start="4.862" data-duration="3.086" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="0.5" data-duration="0.526" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/level-up-big.mp3" data-start="0.7" data-duration="1.015" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="4.262" data-duration="0.212" data-track-index="6" data-volume="0.5"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/spell-cast.mp3" data-start="4.762" data-duration="0.465" data-track-index="7" data-volume="0.3"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="5.462" data-duration="0.121" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-pluma-1","cinematica":"u03-pluma","part":1,"parts":2,"total":8.898,"meta":{"cinematica":"u03-pluma","titulo":"Tercera pluma","tipo":"pluma","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":1,"t0":0,"t1":4.462,"vista":"La fresque d’azulejos retrouve tous ses noms dans une lumière dorée ; une plume verte se détache du carreau central.","camara":"","rotulo":"","personajes":["abuela_carmen"],"lines":[{"who":"abuela_carmen","es":"¡Los nombres! ¡Gracias, cariño!","key":"abuela_carmen.0d50bfe255","t":0.7,"d":3.462,"words":[{"w":"¡Los","t":0.7,"d":0.322},{"w":"nombres!","t":1.022,"d":0.615},{"w":"¡Gracias,","t":2.72,"d":0.604},{"w":"cariño!","t":3.48,"d":0.532}]}]},{"n":2,"t0":4.462,"t1":8.648,"vista":"Le Quetzal s’envole pour la première fois et fait un tour du patio.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Tres plumas. ¡Puedo volar un poco!","key":"quetzal.bd91e1337e","t":4.862,"d":3.086,"words":[{"w":"Tres","t":4.862,"d":0.372},{"w":"plumas.","t":5.234,"d":0.51},{"w":"¡Puedo","t":6.787,"d":0.3},{"w":"volar","t":7.087,"d":0.3},{"w":"un","t":7.386,"d":0.159},{"w":"poco!","t":7.545,"d":0.253}]}]}],"sfx":[{"t":0.2,"f":"rpg/spell-magic"},{"t":0.5,"f":"rpg/item-get"},{"t":0.7,"f":"rpg/level-up-big"},{"t":4.262,"f":"ui/swoosh-out"},{"t":4.762,"f":"rpg/spell-cast"},{"t":5.462,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        $("#stage1").style.cssText = "position:absolute;inset:0"; $("#stage2").style.cssText = "position:absolute;inset:0";
+
+        // ============ PLAN 1 : l'atelier, les noms reviennent ============
+        var set1 = Q.tallerCeramica({ uid: "tc" });
+        var room1 = S.set($("#stage1"), set1, { below: "#4A1A10", motes: 20 });
+        S.drift(tl, room1, W);
+        var C0 = set1.center;
+        var abu = S.chr(room1.actors, "abuela_carmen", 880, 1070, 400);
+        S.breathe(tl, abu, 0, W, 0.9); Q.charBlink(tl, abu.svg, 2.0);
+        // les taches d'ombre se dissolvent (fumee qui monte), les noms s'allument en or
+        var tNom = Math.max(0.5, L1.t - 0.2);
+        room1.back.querySelectorAll(".fr-stain").forEach(function (s, i) {
+          var px = +s.dataset.px, py = +s.dataset.py;
+          tl.fromTo(s, { opacity: 1, scale: 1, y: 0, svgOrigin: px + " " + py }, { opacity: 0, scale: 1.5, y: -50, svgOrigin: px + " " + py, duration: 0.8, ease: "power2.in", immediateRender: false }, tNom + (i % 7) * 0.09 + 0.1);
+        });
+        room1.back.querySelectorAll(".fr-name").forEach(function (n, i) {
+          var m = n.getAttribute("transform").match(/translate\(([-\d.]+) ([-\d.]+)\)/), px = +m[1], py = +m[2];
+          tl.fromTo(n, { scale: 1, svgOrigin: px + " " + py }, { scale: 1.22, svgOrigin: px + " " + py, duration: 0.25, ease: "back.out(3)", yoyo: true, repeat: 1, immediateRender: false }, tNom + 0.45 + (i % 7) * 0.09);
+          var rc = n.querySelector("rect"); tl.fromTo(rc, { fill: "#FFFDF4" }, { fill: "#FFE9A0", duration: 0.3, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, tNom + 0.45 + (i % 7) * 0.09);
+        });
+        // le carreau vert rayonne, la plume s'en detache
+        var glow = room1.back.querySelector(".fr-glow");
+        var tFe = tNom + 1.0;
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, tFe - 0.2);
+        tl.to(glow, { opacity: 0.4, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 5 }, tFe + 0.3);
+        var fe = S.feather(room1.actors, 70);
+        gsap.set(fe, { x: C0.x - 35, y: C0.y - 30, opacity: 0, scale: 0.5, rotation: -20 });
+        tl.fromTo(fe, { opacity: 0, scale: 0.5, y: C0.y - 20 }, { opacity: 1, scale: 1.1, y: C0.y - 220, duration: 0.9, ease: "power2.out", immediateRender: false }, tFe);
+        tl.fromTo(fe, { rotation: -24 }, { rotation: 24, duration: 0.55, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, tFe);
+        tl.to(fe, { x: C0.x + 500, y: C0.y - 560, scale: 0.8, rotation: 50, duration: 0.7, ease: "power2.in" }, Math.max(tFe + 1.8, W - 1.1));
+        tl.to(fe, { opacity: 0, duration: 0.2 }, W - 0.55);
+        for (var k = 0; k < 14; k++) {
+          var sp = S.mk(room1.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#ffe9a8"/></svg>'); sp.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 14) * 6.283, sx = C0.x + Math.cos(ang) * 50, sy = C0.y + Math.sin(ang) * 50;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 190, y: sy + Math.sin(ang) * 190, scale: 1, duration: 0.5, ease: "back.out(3)", immediateRender: false }, tNom + 0.5 + k * 0.04);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, tNom + 1.0 + k * 0.04);
+        }
+        tl.fromTo("#vflash", { opacity: 0 }, { opacity: 0.55, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, tNom + 0.4);
+        // Abuela : « ¡Los nombres! » (bras en l'air) puis « ¡Gracias, cariño! »
+        C.talkBounce(tl, abu.b, L1, 6); C.talkChar(tl, abu, L1);
+        var aR = abu.svg.querySelector(".c-armR"), aL = abu.svg.querySelector(".c-armL");
+        tl.to(aR, { rotation: -150, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.8)" }, L1.t - 0.05);
+        tl.to(aL, { rotation: 150, svgOrigin: "142 306", duration: 0.35, ease: "back.out(1.8)" }, L1.t - 0.05);
+        tl.to([aR, aL], { rotation: 0, duration: 0.5, ease: "power2.inOut" }, L1.t + 1.7);
+        Q.charEmote(tl, abu.svg, L1.t, "happy", 0.3);
+        S.hop(tl, abu, L1.t + 0.3, 40);
+        // camera : large puis poussee vers la fresque
+        S.camSet(room1, 1200, 500, 0.9);
+        S.cam(tl, room1, 1180, 470, 1.18, 0, W, "sine.inOut");
+
+        // ============ WHIP-PAN ============
+        var streaks = [];
+        for (var q = 0; q < 7; q++) { var sk = mk(root, "streak"); sk.style.top = 260 + q * 130 + (q % 2) * 40 + "px"; streaks.push(sk); }
+        tl.fromTo("#p1", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, W - 0.24);
+        tl.set("#p1", { visibility: "hidden" }, W + 0.2);
+        tl.set("#p2", { visibility: "visible" }, W - 0.2);
+        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, W - 0.16);
+        streaks.forEach(function (sk, i) { tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, W - 0.22 + i * 0.012); });
+
+        // ============ PLAN 2 : le Quetzal vole pour la premiere fois ============
+        var set2 = Q.patioAndaluz({ uid: "pa" });
+        var room2 = S.set($("#stage2"), set2, { below: "#C9A064", motes: 26 });
+        S.drift(tl, room2, T - W + 0.4, W - 0.1); S.fountain(tl, room2, T - W + 0.4, W - 0.1);
+        var QW = 330;
+        var qz = S.quetzal(room2.qlayer, 0, 0, QW, "fly", false, "qf");
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.85, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        // trajectoire : arrivee par la gauche, boucle autour de la fontaine, atterrissage sur la vasque du haut
+        var path = [{ x: 200, y: 700 }, { x: 560, y: 380 }, { x: 980, y: 300 }, { x: 1560, y: 420 }, { x: 1700, y: 700 }, { x: 1300, y: 860 }, { x: 760, y: 800 }, { x: 600, y: 520 }, { x: 960, y: 360 }, { x: 1180, y: 520 }];
+        var tF0 = W + 0.1, tLand = T - 0.9;
+        gsap.set(qz, { x: path[0].x, y: path[0].y, opacity: 0 });
+        tl.fromTo(qz, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, tF0);
+        tl.to(qz, { motionPath: { path: path, curviness: 1.4, autoRotate: false }, duration: tLand - tF0, ease: "sine.inOut" }, tF0);
+        Q.quetzalFlap(tl, qz, tF0, Math.floor((tLand - tF0) / 0.32), 0.32, 0.9);
+        Q.quetzalPoseTo(tl, qz, "talk", tLand - 0.1, 0.5, "power2.out");
+        C.talkQuetzal(tl, qz, L2);
+        Q.quetzalBlink(tl, qz, W + 1.4);
+        // sillage d'etincelles vertes
+        for (var z = 0; z < 16; z++) {
+          var sp2 = S.mk(room2.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>'); sp2.setAttribute("data-layout-allow-overflow", "");
+          var tz = tF0 + 0.2 + z * ((tLand - tF0) / 17), pi = Math.min(path.length - 1, Math.floor((z / 16) * path.length)), pp = path[pi];
+          tl.fromTo(sp2, { x: pp.x, y: pp.y + 60, scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.2, ease: "back.out(3)", immediateRender: false }, tz);
+          tl.to(sp2, { y: pp.y + 150, scale: 0, opacity: 0, duration: 0.55, ease: "power2.in" }, tz + 0.2);
+        }
+        // camera : suit le Quetzal (pan +- 260 px), puis se recale sur la fontaine
+        S.camSet(room2, 760, 640, 1.05);
+        S.cam(tl, room2, 960, 560, 1.05, W, 1.2, "sine.inOut");
+        S.cam(tl, room2, 1300, 600, 1.08, W + 1.2, 1.4, "sine.inOut");
+        S.cam(tl, room2, 1000, 640, 1.1, W + 2.6, 1.0, "sine.inOut");
+        S.cam(tl, room2, 1180, 580, 1.2, tLand - 0.5, T - tLand + 0.5, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.4 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-pluma-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

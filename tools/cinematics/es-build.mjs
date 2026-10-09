@@ -277,16 +277,16 @@ const CINES = {
     parts: [
       { plans: [1], lead: { 1: 0.6 }, tail: { 1: 0.8 }, sfx: [
         { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
-        { f: 'ui/pop', at: 'w1.1.4', off: -0.05, vol: 0.45 },
-        { f: 'ui/pop', at: 'w1.1.7', off: -0.05, vol: 0.45 },
-        { f: 'ui/pop', at: 'w1.1.10', off: -0.05, vol: 0.45 },
-        { f: 'ui/pop', at: 'w1.1.13', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.6', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.8', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.11', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.15', off: -0.05, vol: 0.45 },
         { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
       ] },
       { plans: [2], lead: { 2: 0.6 }, tail: { 2: 0.8 }, sfx: [
         { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
-        { f: 'ui/pop', at: 'w2.1.7', off: -0.05, vol: 0.5 },
-        { f: 'ui/pop', at: 'w2.1.12', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w2.1.10', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w2.1.15', off: -0.05, vol: 0.5 },
         { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
       ] },
       { plans: [3, 4], lead: { 3: 0.5, 4: 0.4 }, tail: { 3: 0.4, 4: 1.0 }, sfx: [
