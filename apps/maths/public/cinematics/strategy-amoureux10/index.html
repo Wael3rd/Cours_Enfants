@@ -50,6 +50,9 @@
       var tl = gsap.timeline({ paused: true });
       // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
       window.__hyperframes.registerRuntimeDataHandler("strategy-amoureux10", function () {});
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      var ready = false;
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
       var S = window.Strat, nid = 0;
       $("#board").innerHTML = S.pitch();
@@ -142,6 +145,7 @@
         tl.time(0);
       }
       build();
+      ready = true;
       window.__timelines["strategy-amoureux10"] = tl;
     </script>
   </body>
