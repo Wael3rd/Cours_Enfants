@@ -62,7 +62,11 @@ function stage(app) {
   rmSync(dest, { recursive: true, force: true });
   cpSync(src, dest, {
     recursive: true,
-    filter: (p) => !/\/cinematics\/[^/]+\/_shared(\/|$)/.test(p.split(sep).join('/')),
+    // Ni les copies de _shared, ni les artefacts de travail HyperFrames (snapshots, storyboards, rendus).
+    filter: (p) =>
+      !/\/cinematics\/[^/]+\/(_shared|snapshots|renders|\.hyperframes)(\/|$)|\/cinematics\/[^/]+\/[^/]*\.md$/.test(
+        p.split(sep).join('/'),
+      ),
   });
   const cd = join(dest, 'cinematics');
   if (existsSync(cd))
