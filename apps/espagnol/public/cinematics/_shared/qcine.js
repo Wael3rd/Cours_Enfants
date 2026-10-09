@@ -59,8 +59,9 @@
     '.sub-line.has-p{padding-left:268px}' +
     '.sub-txt{font:900 56px/1.22 Nunito,sans-serif;color:#F5E6C8;text-align:center;max-width:1500px;text-shadow:0 3px 0 rgba(0,0,0,.35)}' +
     '.sub-line.has-p .sub-txt{text-align:left}' +
-    '.sub-txt .w{display:inline-block;margin-right:.26em;white-space:pre}' +
-    '.sub-txt .w:last-child{margin-right:0}' +
+    '.sub-txt{white-space:normal;word-spacing:0}' +
+    '.sub-txt .w{display:inline-block;white-space:pre;font:inherit;letter-spacing:0}' +
+    '.sub-txt .sp{display:inline;white-space:pre}' +
     '.sub-who{position:absolute;left:262px;bottom:150px;z-index:5;transform-origin:0 100%}' +
     '.sub-who span{display:inline-block;padding:6px 28px 10px;font:400 34px/1 "Alfa Slab One",serif;color:#14173F;border-radius:14px;box-shadow:0 5px 0 rgba(0,0,0,.35),inset 0 0 0 3px rgba(255,255,255,.45)}' +
     '.sub-portrait{position:absolute;left:20px;bottom:-4px;width:228px;height:270px;z-index:6;display:flex;align-items:flex-end;justify-content:center;opacity:0}' +
@@ -77,14 +78,17 @@
     if (opts.vig !== false) el('div', 'q-vig q-frame', '', root);
     el('div', 'q-grain q-frame', '<svg width="1920" height="1200" xmlns="http://www.w3.org/2000/svg"><defs>' + Qa.paperGrainFilter('qg') + '</defs><rect width="1920" height="1200" filter="url(#qg)"/></svg>', root);
     if (opts.garland !== false) {
-      var g = el('div', 'q-garland', Qa.papelPicado({ w: 1920, h: 150, n: 11, seed: opts.seed || 7, sag: 36 }), root);
+      // motif de bordure selon la region : Espagne -> frise d'azulejos + fanions sobres ; Mexique -> papel picado
+      var region = opts.region || (plan.meta && plan.meta.region) || 'madrid', mx = region === 'mexico';
+      var g = el('div', 'q-garland', Qa.bunting(region, mx ? { w: 1920, h: 150, n: 11, seed: opts.seed || 7, sag: 36 } : { w: 1920, n: 16, seed: opts.seed || 7 }), root);
+      if (!mx) g.style.top = '0px';
       var flags = g.querySelectorAll('.m-flag');
-      var T = plan.total, per = 2.6;
+      var T = plan.total, per = mx ? 2.6 : 3.2, amp = mx ? 4 : 2.2;
       flags.forEach(function (f, i) {
         var rep = Math.max(1, Math.floor(T / per) * 2);
-        tl.fromTo(f, { rotation: -4 - (i % 3), svgOrigin: f.dataset.px + ' ' + f.dataset.py }, { rotation: 4 + (i % 3), svgOrigin: f.dataset.px + ' ' + f.dataset.py, duration: per / 2 + (i % 4) * 0.12, ease: 'sine.inOut', yoyo: true, repeat: rep }, 0);
+        tl.fromTo(f, { rotation: -amp - (i % 3) * 0.6, svgOrigin: f.dataset.px + ' ' + f.dataset.py }, { rotation: amp + (i % 3) * 0.6, svgOrigin: f.dataset.px + ' ' + f.dataset.py, duration: per / 2 + (i % 4) * 0.12, ease: 'sine.inOut', yoyo: true, repeat: rep }, 0);
       });
-      if (opts.garlandIn !== false) tl.fromTo(g, { y: -190 }, { y: 0, duration: 0.8, ease: 'back.out(1.3)' }, 0.15);
+      if (opts.garlandIn !== false) tl.fromTo(g, { y: -260 }, { y: 0, duration: 0.8, ease: 'back.out(1.3)' }, 0.15);
     }
     var fade = el('div', 'q-fade', '', root);
     tl.fromTo(fade, { opacity: 1 }, { opacity: 0, duration: opts.fadeIn == null ? 0.45 : opts.fadeIn, ease: 'power2.out' }, 0);
@@ -122,6 +126,7 @@
       var ln = el('div', 'sub-line' + (s ? ' has-p' : ''), '', host);
       var txt = el('div', 'sub-txt', '', ln);
       var words = l.words.map(function (w) {
+        if (txt.childNodes.length) txt.appendChild(document.createTextNode(' '));
         var span = el('span', 'w', '', txt);
         var core = w.w.replace(/^[¿¡"«(]+/, '').replace(/[.,;:!?…"»)]+$/, '');
         if (norm(core) === norm(DEFAULT_NAME)) {
@@ -165,8 +170,9 @@
       L.words.forEach(function (w, i) {
         var wd = d.words[i];
         tl.set(w, { opacity: 0.72 }, 0);
-        tl.to(w, { opacity: 1, color: '#FFC83D', y: -6, scale: 1.07, duration: 0.09, ease: 'power2.out' }, wd.t);
-        tl.to(w, { color: '#F5E6C8', y: 0, scale: 1, duration: 0.2, ease: 'power2.out' }, wd.t + Math.max(0.12, wd.d));
+        // mise en valeur par la couleur seule (+ leger saut en transform) : aucune taille/graisse ne change -> aucun reflow
+        tl.to(w, { opacity: 1, color: '#FFC83D', y: -4, duration: 0.09, ease: 'power2.out' }, wd.t);
+        tl.to(w, { color: '#F5E6C8', y: 0, duration: 0.2, ease: 'power2.out' }, wd.t + Math.max(0.12, wd.d));
       });
     });
     return { lines: lines, groups: groups, host: host, portraits: portraits };

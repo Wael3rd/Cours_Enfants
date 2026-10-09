@@ -1,4 +1,4 @@
-// Generateur des cinematiques de l'app d'espagnol : lit u01.json (repliques, noms, titres) + durees reelles des mp3 de
+// Generateur des cinematiques de l'app d'espagnol : lit u01..u0N.json (repliques, noms, titres) + durees reelles des mp3 de
 // apps/espagnol/public/audio/es/ et (re)ecrit, dans chaque composition apps/espagnol/public/cinematics/<id>/index.html :
 //   - le bloc  /*GEN:plan*/ ... /*/GEN:plan*/   (window.PLAN : plans, repliques, timings, mots)
 //   - le bloc  <!--GEN:audio--> ... <!--/GEN:audio-->  (balises <audio> : voix, SFX, musique)
@@ -8,7 +8,7 @@
 // Quand une replique change (u01.json) ou que l'audio est regenere : `node tools/cinematics/es-build.mjs` -> tout suit.
 // Les animations (index.html) lisent window.PLAN : aucune duree ecrite a la main.
 //
-// Usage : node tools/cinematics/es-build.mjs [--check]      (--check : n'ecrit rien, signale les parties > 12 s ou audio manquant)
+// Usage : node tools/cinematics/es-build.mjs [--check] [--unit=u02]      (--check : n'ecrit rien, signale les parties > 12 s ou audio manquant)
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve, basename } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -29,6 +29,7 @@ const MAX_PART = 12;
 const GAP = 0.3; // silence entre deux repliques d'un meme plan
 const CINES = {
   'u01-intro': {
+    region: 'madrid',
     music: { vol: 0.2, offsetFrom: 0 },
     parts: [{
       plans: [1, 2], lead: { 1: 0.5, 2: 0.6 }, tail: { 1: 0.3, 2: 0.6 }, min: { 1: 4.1 },
@@ -44,6 +45,7 @@ const CINES = {
     }],
   },
   'u01-historia': {
+    region: 'madrid',
     music: { vol: 0.18, offsetFrom: 0 },
     parts: [
       { plans: [1], lead: { 1: 0.9 }, tail: { 1: 0.7 }, sfx: [
@@ -79,6 +81,7 @@ const CINES = {
     ],
   },
   'u01-capsula-hispanos': {
+    region: 'madrid',
     music: { vol: 0.2, offsetFrom: 0 },
     parts: [
       { plans: [1, 2], lead: { 1: 0.6, 2: 0.7 }, tail: { 1: 0.9, 2: 1.1 }, sfx: [
@@ -105,6 +108,7 @@ const CINES = {
     ],
   },
   'u01-pluma': {
+    region: 'madrid',
     music: { vol: 0.2, offsetFrom: 0 },
     parts: [{
       plans: [1, 2], lead: { 1: 3.3, 2: 0.6 }, tail: { 1: 0.35, 2: 0.7 },
@@ -180,9 +184,17 @@ function wordTimes(text, d, sil) {
 }
 
 // ---------------------------------------------------------------------------------------------------------- lecture du contenu
-const unit = JSON.parse(readFileSync(join(app, 'src', 'content', 'units', 'u01.json'), 'utf8'));
-const scenes = {};
-for (const q of unit.quests) for (const s of q.steps) if (s.tipo === 'cinematic_ref') scenes[s.cinematica] = s.escena;
+// une unite par prefixe d'id (u01-..., u02-..., u03-...) : u0X.json
+const UNITS = {};
+const scenes = {}, unitOfCine = {};
+for (const cid of Object.keys(CINES)) {
+  const uid = cid.slice(0, 3);
+  if (!UNITS[uid]) {
+    UNITS[uid] = JSON.parse(readFileSync(join(app, 'src', 'content', 'units', uid + '.json'), 'utf8'));
+    for (const q of UNITS[uid].quests) for (const s of q.steps) if (s.tipo === 'cinematic_ref') { scenes[s.cinematica] = s.escena; unitOfCine[s.cinematica] = uid; }
+  }
+}
+const ONLY = (process.argv.find((a) => a.startsWith('--unit=')) || '').slice(7);
 
 let problems = 0;
 const manifest = {};
@@ -190,6 +202,8 @@ const sfxDurCache = {};
 function sfxDur(f) { return (sfxDurCache[f] ??= dur(join(ASSETS, 'sfx', f + '.mp3'))); }
 
 for (const [cid, cfg] of Object.entries(CINES)) {
+  if (ONLY && !cid.startsWith(ONLY + '-')) continue;
+  const unit = UNITS[cid.slice(0, 3)];
   const esc = scenes[cid];
   if (!esc) { console.error(`!! ${cid} : scene absente de u01.json`); problems++; continue; }
   let musicCursor = 0;
@@ -235,7 +249,7 @@ for (const [cid, cfg] of Object.entries(CINES)) {
     const first = parts[0] === part, last = parts[parts.length - 1] === part;
     const music = { f: 'aventure-douce', off: r3(musicCursor), vol: cfg.music?.vol ?? 0.2, fadeIn: first ? 0.8 : 0, fadeOut: last ? 1.2 : 0 };
     musicCursor += total;
-    const meta = { cinematica: cid, titulo: esc.titulo, tipo: esc.tipo, unidad: unit.titulo, numero: unit.numero, lugar: unit.lugar, pluma: unit.pluma.nombre, plumaNum: unit.pluma.numero, rotulo: esc.planos[0].rotulo || '' };
+    const meta = { cinematica: cid, titulo: esc.titulo, tipo: esc.tipo, unidad: unit.titulo, numero: unit.numero, lugar: unit.lugar, pluma: unit.pluma.nombre, plumaNum: unit.pluma.numero, rotulo: esc.planos[0].rotulo || '', region: cfg.region || 'madrid' };
     const PLAN = { id: part.id, cinematica: cid, part: parts.indexOf(part) + 1, parts: parts.length, total, meta, plans, sfx: sfx.map((s) => ({ t: s.t, f: s.f })) };
     manifest[cid].parts.push({ id: part.id, duration: total });
     manifest[cid].total = r3(manifest[cid].total + total);
@@ -279,5 +293,5 @@ for (const [cid, cfg] of Object.entries(CINES)) {
     console.log(`ok ${part.id.padEnd(30)} ${String(total).padStart(6)} s  (${plans.map((p) => `p${p.n} ${p.t0}-${p.t1}`).join(', ')})  ${tags.length} audio`);
   }
 }
-if (!CHECK) writeFileSync(join(CIN, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+if (!CHECK && !ONLY) writeFileSync(join(CIN, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 if (problems) { console.error(`${problems} probleme(s)`); process.exit(1); }
