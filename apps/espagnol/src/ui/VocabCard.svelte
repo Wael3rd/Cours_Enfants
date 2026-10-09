@@ -4,7 +4,7 @@
   import { rarityOf } from '../engine/rpg';
   import ItemCard from '../art/ItemCard.svelte';
   import Emoji from './Emoji.svelte';
-  import { articleOf, RARITY_UI } from '../steps/common';
+  import { articleOf, cardLabel, RARITY_UI } from '../steps/common';
   import { emojiUrl } from './emoji';
   import { content } from '../engine/data';
   import { regionOf } from './regions';
@@ -32,13 +32,14 @@
     }
     return { kind: 'andino', url: `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><rect width="48" height="48" fill="#17306a"/><path d="M24 4L44 24L24 44L4 24Z" fill="none" stroke="#35b8ff" stroke-width="3"/><path d="M24 14L34 24L24 34L14 24Z" fill="#ffc83d"/></svg>')}` };
   });
-  const words = $derived(v.es.split(' '));
+  const label = $derived(cardLabel(v));
+  const words = $derived(label.split(' '));
   const longest = $derived(Math.max(...words.map((w) => w.length), 1));
   const fs = $derived(Math.max(22, Math.min(size * 0.3, (size * 0.8) / (longest * 0.62))));
   const artic = $derived(articleOf(v));
 </script>
 
-<ItemCard word={v.es} article={showArticle ? articleOf(v) : ''} {rarity} {locked} {size} {ontap}>
+<ItemCard word={label} article={showArticle ? articleOf(v) : ''} {rarity} {locked} {size} {ontap}>
   {#snippet art()}
     {#if hasImg && v.emoji}
       <Emoji e={v.emoji} size={Math.round(size * 0.58)} />

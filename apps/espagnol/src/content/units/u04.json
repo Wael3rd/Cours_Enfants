@@ -112,6 +112,7 @@
       "es": "largo",
       "fr": "long",
       "genero": "m",
+      "clase": "adj",
       "femenino": "larga",
       "emoji": "📏",
       "tags": [
@@ -130,6 +131,7 @@
       "es": "corto",
       "fr": "court",
       "genero": "m",
+      "clase": "adj",
       "femenino": "corta",
       "emoji": "✂️",
       "tags": [
@@ -148,6 +150,7 @@
       "es": "rizado",
       "fr": "bouclé (au Mexique, on dit souvent « chino » : el pelo chino)",
       "genero": "m",
+      "clase": "adj",
       "femenino": "rizada",
       "emoji": "🧑‍🦱",
       "tags": [
@@ -166,6 +169,7 @@
       "es": "alto",
       "fr": "grand (de taille)",
       "genero": "m",
+      "clase": "adj",
       "femenino": "alta",
       "emoji": "🦒",
       "tags": [
@@ -184,6 +188,7 @@
       "es": "bajo",
       "fr": "petit (de taille) ; « bajito » est plus gentil ; au Mexique, en familier : « chaparro »",
       "genero": "m",
+      "clase": "adj",
       "femenino": "baja",
       "ilustracion": "Un garçon petit debout à côté d’une grande porte",
       "tags": [
@@ -202,6 +207,7 @@
       "es": "delgado",
       "fr": "mince",
       "genero": "m",
+      "clase": "adj",
       "femenino": "delgada",
       "ilustracion": "Un garçon très mince, de profil, avec un grand sourire",
       "tags": [
@@ -220,6 +226,7 @@
       "es": "rubio",
       "fr": "blond (au Mexique, on dit souvent « güero / güera »)",
       "genero": "m",
+      "clase": "adj",
       "femenino": "rubia",
       "emoji": "👱",
       "tags": [
@@ -238,6 +245,7 @@
       "es": "castaño",
       "fr": "châtain, brun",
       "genero": "m",
+      "clase": "adj",
       "femenino": "castaña",
       "emoji": "🌰",
       "tags": [
@@ -256,6 +264,7 @@
       "es": "pelirrojo",
       "fr": "roux",
       "genero": "m",
+      "clase": "adj",
       "femenino": "pelirroja",
       "emoji": "🧑‍🦰",
       "tags": [
@@ -292,6 +301,7 @@
       "es": "rojo",
       "fr": "rouge",
       "genero": "m",
+      "clase": "adj",
       "femenino": "roja",
       "emoji": "🔴",
       "tags": [
@@ -311,6 +321,7 @@
       "fr": "bleu",
       "genero": "mf",
       "plural": "azules",
+      "clase": "adj",
       "emoji": "🔵",
       "tags": [
         "colores"
@@ -329,6 +340,7 @@
       "fr": "vert",
       "genero": "mf",
       "plural": "verdes",
+      "clase": "adj",
       "emoji": "🟢",
       "tags": [
         "colores"
@@ -346,6 +358,7 @@
       "es": "amarillo",
       "fr": "jaune",
       "genero": "m",
+      "clase": "adj",
       "femenino": "amarilla",
       "emoji": "🟡",
       "tags": [
@@ -365,6 +378,7 @@
       "fr": "orange",
       "genero": "mf",
       "plural": "naranjas",
+      "clase": "adj",
       "emoji": "🟠",
       "tags": [
         "colores"
@@ -382,6 +396,7 @@
       "es": "rosa",
       "fr": "rose",
       "genero": "mf",
+      "clase": "adj",
       "emoji": "🌸",
       "tags": [
         "colores"
@@ -399,6 +414,7 @@
       "es": "morado",
       "fr": "violet",
       "genero": "m",
+      "clase": "adj",
       "femenino": "morada",
       "emoji": "🟣",
       "tags": [
@@ -417,6 +433,7 @@
       "es": "negro",
       "fr": "noir",
       "genero": "m",
+      "clase": "adj",
       "femenino": "negra",
       "emoji": "⚫",
       "tags": [
@@ -435,6 +452,7 @@
       "es": "blanco",
       "fr": "blanc",
       "genero": "m",
+      "clase": "adj",
       "femenino": "blanca",
       "emoji": "⚪",
       "tags": [
@@ -454,6 +472,7 @@
       "fr": "gris",
       "genero": "mf",
       "plural": "grises",
+      "clase": "adj",
       "emoji": "☁️",
       "tags": [
         "colores"
@@ -472,6 +491,7 @@
       "fr": "marron (au Mexique, pour les yeux : « café » → los ojos cafés)",
       "genero": "mf",
       "plural": "marrones",
+      "clase": "adj",
       "emoji": "🟤",
       "tags": [
         "colores"
@@ -739,6 +759,7 @@
       "es": "simpático",
       "fr": "sympathique",
       "genero": "m",
+      "clase": "adj",
       "femenino": "simpática",
       "emoji": "😊",
       "tags": [
@@ -757,6 +778,7 @@
       "es": "divertido",
       "fr": "drôle, amusant",
       "genero": "m",
+      "clase": "adj",
       "femenino": "divertida",
       "emoji": "🤣",
       "tags": [
@@ -775,6 +797,7 @@
       "es": "tímido",
       "fr": "timide",
       "genero": "m",
+      "clase": "adj",
       "femenino": "tímida",
       "emoji": "😳",
       "tags": [
@@ -793,6 +816,7 @@
       "es": "serio",
       "fr": "sérieux",
       "genero": "m",
+      "clase": "adj",
       "femenino": "seria",
       "emoji": "🧐",
       "tags": [
@@ -812,6 +836,7 @@
       "fr": "courageux",
       "genero": "mf",
       "plural": "valientes",
+      "clase": "adj",
       "emoji": "🦁",
       "tags": [
         "caracter"
@@ -830,6 +855,7 @@
       "fr": "intelligent",
       "genero": "mf",
       "plural": "inteligentes",
+      "clase": "adj",
       "emoji": "🧠",
       "tags": [
         "caracter"
@@ -847,6 +873,7 @@
       "es": "trabajador",
       "fr": "travailleur",
       "genero": "m",
+      "clase": "adj",
       "femenino": "trabajadora",
       "emoji": "💪",
       "tags": [
@@ -881,6 +908,7 @@
       "es": "contento",
       "fr": "content",
       "genero": "m",
+      "clase": "adj",
       "femenino": "contenta",
       "emoji": "😁",
       "tags": [
@@ -900,6 +928,7 @@
       "fr": "triste",
       "genero": "mf",
       "plural": "tristes",
+      "clase": "adj",
       "emoji": "😢",
       "tags": [
         "estados"
@@ -917,6 +946,7 @@
       "es": "cansado",
       "fr": "fatigué",
       "genero": "m",
+      "clase": "adj",
       "femenino": "cansada",
       "emoji": "😴",
       "tags": [
@@ -935,6 +965,7 @@
       "es": "enfadado",
       "fr": "fâché (au Mexique : « enojado »)",
       "genero": "m",
+      "clase": "adj",
       "femenino": "enfadada",
       "emoji": "😠",
       "tags": [

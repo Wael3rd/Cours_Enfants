@@ -216,6 +216,7 @@
       "es": "encantado",
       "fr": "enchanté",
       "genero": "m",
+      "clase": "adj",
       "femenino": "encantada",
       "emoji": "🤝",
       "tags": [
@@ -593,6 +594,7 @@
       "es": "español",
       "fr": "espagnol",
       "genero": "m",
+      "clase": "adj",
       "femenino": "española",
       "emoji": "🥘",
       "tags": [
@@ -611,6 +613,7 @@
       "es": "francés",
       "fr": "français",
       "genero": "m",
+      "clase": "adj",
       "femenino": "francesa",
       "emoji": "🥖",
       "tags": [
@@ -629,6 +632,7 @@
       "es": "mexicano",
       "fr": "mexicain",
       "genero": "m",
+      "clase": "adj",
       "femenino": "mexicana",
       "emoji": "🌮",
       "tags": [
@@ -647,6 +651,7 @@
       "es": "argentino",
       "fr": "argentin",
       "genero": "m",
+      "clase": "adj",
       "femenino": "argentina",
       "emoji": "🧉",
       "tags": [

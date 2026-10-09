@@ -18,7 +18,7 @@ export default function build() {
     W('gracias', 'gracias', 'merci', '💐', 'saludos', 'Gracias, Rosa.', 'Merci, Rosa.'),
     W('de_nada', 'de nada', 'de rien', '👍', 'saludos', '—Gracias. —De nada.', '— Merci. — De rien.'),
     W('perdon', 'perdón', 'pardon, excuse-moi', '🙇', 'saludos', 'Perdón, don Ignacio.', 'Pardon, don Ignacio.'),
-    W('encantado', 'encantado', 'enchanté', '🤝', 'saludos', 'Hola, Marina. Encantado.', 'Salut, Marina. Enchanté.', { genero: 'm', femenino: 'encantada' }),
+    W('encantado', 'encantado', 'enchanté', '🤝', 'saludos', 'Hola, Marina. Encantado.', 'Salut, Marina. Enchanté.', { adj: true, genero: 'm', femenino: 'encantada' }),
     W('bien', 'bien', 'bien', '😄', 'saludos', '—¿Qué tal? —Bien, gracias.', '— Ça va ? — Bien, merci.'),
     W('regular', 'regular', 'comme ci, comme ça', '😐', 'saludos', '—¿Qué tal? —Regular.', '— Ça va ? — Comme ci, comme ça.'),
     W('mal', 'mal', 'mal, pas bien', '😞', 'saludos', '—¿Qué tal? —Mal.', '— Ça va ? — Pas bien.'),
@@ -45,10 +45,10 @@ export default function build() {
     W('mexico', 'México', 'Mexique', '🇲🇽', 'paises', 'El Quetzal es de México.', 'Le Quetzal vient du Mexique.'),
     W('argentina', 'Argentina', 'Argentine', '🇦🇷', 'paises', 'Buenos Aires es la capital de Argentina.', 'Buenos Aires est la capitale de l’Argentine.'),
     // nacionalidades
-    W('espanol', 'español', 'espagnol', '🥘', 'nacionalidades', 'Nacho es español.', 'Nacho est espagnol.', { genero: 'm', femenino: 'española' }),
-    W('frances', 'francés', 'français', '🥖', 'nacionalidades', 'Álex es francés.', 'Álex est français.', { genero: 'm', femenino: 'francesa' }),
-    W('mexicano', 'mexicano', 'mexicain', '🌮', 'nacionalidades', 'Mi amigo es mexicano.', 'Mon ami est mexicain.', { genero: 'm', femenino: 'mexicana' }),
-    W('argentino', 'argentino', 'argentin', '🧉', 'nacionalidades', 'Messi es argentino.', 'Messi est argentin.', { genero: 'm', femenino: 'argentina' }),
+    W('espanol', 'español', 'espagnol', '🥘', 'nacionalidades', 'Nacho es español.', 'Nacho est espagnol.', { adj: true, genero: 'm', femenino: 'española' }),
+    W('frances', 'francés', 'français', '🥖', 'nacionalidades', 'Álex es francés.', 'Álex est français.', { adj: true, genero: 'm', femenino: 'francesa' }),
+    W('mexicano', 'mexicano', 'mexicain', '🌮', 'nacionalidades', 'Mi amigo es mexicano.', 'Mon ami est mexicain.', { adj: true, genero: 'm', femenino: 'mexicana' }),
+    W('argentino', 'argentino', 'argentin', '🧉', 'nacionalidades', 'Messi es argentino.', 'Messi est argentin.', { adj: true, genero: 'm', femenino: 'argentina' }),
     // numeros
     W('cero', 'cero', 'zéro', '0️⃣', 'numeros', 'Cero problemas.', 'Zéro problème.'),
     W('uno', 'uno', 'un', '1️⃣', 'numeros', 'Uno, dos, tres… ¡ya!', 'Un, deux, trois… partez !'),

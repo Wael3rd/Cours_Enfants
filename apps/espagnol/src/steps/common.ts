@@ -24,6 +24,7 @@ export function stableShuffle<T>(arr: T[], seed: string): T[] {
 
 /** Article de genre d'une carte-objet. */
 export function articleOf(v: Vocab): 'el' | 'la' | 'los' | 'las' | '' {
+  if (v.clase === 'adj') return '';
   if (v.soloPlural) return v.genero === 'm' ? 'los' : v.genero === 'f' ? 'las' : '';
   return v.genero === 'm' ? 'el' : v.genero === 'f' ? 'la' : '';
 }
@@ -93,4 +94,9 @@ export function hintText(step: Step): string {
       break;
   }
   return parts.filter(Boolean).join('\n');
+}
+
+/** Libelle d'une carte : les adjectifs montrent leurs deux genres (alto / alta). */
+export function cardLabel(v: Vocab): string {
+  return v.clase === 'adj' && v.femenino ? `${v.es} / ${v.femenino}` : v.es;
 }

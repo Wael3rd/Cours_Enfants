@@ -57,7 +57,7 @@ export default function build() {
     W('trabajar', 'trabajar', 'travailler', '💼', 'verbos', 'Mi madre trabaja en un hospital.', 'Ma mère travaille dans un hôpital.'),
     // adjetivos y otros
     W('mayor', 'mayor', 'âgé, plus âgé, grand (frère/sœur)', '🧓', 'adjetivos', 'Mi abuelo es muy mayor.', 'Mon grand-père est très âgé.', { genero: 'mf' }),
-    W('pequeno', 'pequeño', 'petit', '🐜', 'adjetivos', 'Mi hermano es pequeño.', 'Mon frère est petit.', { genero: 'm', femenino: 'pequeña' }),
+    W('pequeno', 'pequeño', 'petit', '🐜', 'adjetivos', 'Mi hermano es pequeño.', 'Mon frère est petit.', { adj: true, genero: 'm', femenino: 'pequeña' }),
     W('grande', 'grande', 'grand', '🐘', 'adjetivos', 'Mi familia es muy grande.', 'Ma famille est très grande.', { genero: 'mf' }),
     W('cuantos', '¿cuántos?', 'combien ? (masculin pluriel)', '🔢', 'preguntas', '¿Cuántos hermanos tienes?', 'Combien de frères et sœurs as-tu ?', { femenino: '¿cuántas?' }),
     W('tambien', 'también', 'aussi', '➕', 'conectores', 'Marina también tiene un gato.', 'Marina aussi a un chat.'),

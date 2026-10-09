@@ -19,6 +19,7 @@ export function W(id, es, fr, emoji, tag, exEs, exFr, o = {}) {
   if (o.genero) v.genero = o.genero;
   if (o.plural) v.plural = o.plural;
   if (o.soloPlural) v.soloPlural = true;
+  if (o.adj) v.clase = 'adj';
   if (o.femenino) v.femenino = o.femenino;
   if (emoji) v.emoji = emoji;
   if (o.ilustracion) v.ilustracion = o.ilustracion;

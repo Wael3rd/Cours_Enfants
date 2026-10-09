@@ -75,6 +75,8 @@ export interface Vocab {
   plural?: string;
   /** Nom toujours employe au pluriel ("los ojos", "las gafas") : article los/las. */
   soloPlural?: boolean;
+  /** Adjectif (alto/alta, rojo/roja) : jamais d'article, on montre les deux genres. */
+  clase?: 'adj';
   /** Forme feminine des noms/adjectifs de personnes ("española") */
   femenino?: string;
   /** Au moins un des deux : emoji OU ilustracion */
