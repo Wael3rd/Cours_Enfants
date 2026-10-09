@@ -2281,18 +2281,6 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.9d4799a1ea",
-    "text": "ele",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-4%"
-  },
-  {
-    "key": "narrador.ada6eaf77a",
-    "text": "equis",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-4%"
-  },
-  {
     "key": "narrador.c052b4b436",
     "text": "Escucha las letras y escribe el nombre.",
     "voice": "es-ES-ElviraNeural",
@@ -2310,6 +2298,64 @@
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.4a054e57ef",
+    "text": "Escribe tu nombre letra por letra.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "marina.c06e6e1f2b",
+    "text": "Mi nombre es Marina. Se escribe: eme, a, erre, i, ene, a.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.c06e6e1f2b.lento",
+    "text": "Mi nombre es Marina. Se escribe: eme, a, erre, i, ene, a.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-17%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.57651cd533",
+    "text": "Escucha y di con qué letra empieza TU nombre.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.6d1fce7f89",
+    "text": "Mi nombre empieza por la letra a.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.6d1fce7f89.lento",
+    "text": "Mi nombre empieza por la letra a.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.80308c6a2b",
+    "text": "Escucha y di cuántas letras tiene TU nombre.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.da8501e5ba",
+    "text": "Mi nombre tiene cuatro letras.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.da8501e5ba.lento",
+    "text": "Mi nombre tiene cuatro letras.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "marina.f280257340",
@@ -4783,8 +4829,8 @@
     "pitch": "+20Hz"
   },
   {
-    "key": "pilar.d780baa4ca",
-    "text": "La campana no suena.",
+    "key": "pilar.657c8c23cb",
+    "text": "Hoy la campana no suena. No hay ruido.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-6%",
     "pitch": "-6Hz"
@@ -7884,32 +7930,37 @@
     "pitch": "+2Hz"
   },
   {
-    "key": "marina.75b98a3357",
-    "text": "Mi casa es grande. Hay tres dormitorios y un salón.",
+    "key": "marina.0d4afec01f",
+    "text": "Mi casa es grande. En mi casa hay un salón, una cocina y tres dormitorios.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.75b98a3357.lento",
-    "text": "Mi casa es grande. Hay tres dormitorios y un salón.",
+    "key": "marina.0d4afec01f.lento",
+    "text": "Mi casa es grande. En mi casa hay un salón, una cocina y tres dormitorios.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.8a8d24b0b4",
-    "text": "En mi casa hay un salón y una cocina.",
+    "key": "narrador.78f8a68ce9",
+    "text": "Escucha y di una cosa que hay en TU casa.",
     "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "rate": "-4%"
   },
   {
-    "key": "marina.8a8d24b0b4.lento",
-    "text": "En mi casa hay un salón y una cocina.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-17%",
-    "pitch": "+25Hz"
+    "key": "viajero.1045cf41f0",
+    "text": "En mi casa hay un salón.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.1045cf41f0.lento",
+    "text": "En mi casa hay un salón.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "marina.481c0c7452",
@@ -8130,11 +8181,30 @@
     "pitch": "+48Hz"
   },
   {
-    "key": "marina.9b5a9dbab3",
-    "text": "Mi madre y mi padre son mis padres.",
+    "key": "narrador.32860cb07b",
+    "text": "Escucha y di cómo se llama TU madre.",
     "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.60745954fe.lento",
+    "text": "Mi madre se llama Claire.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.fdd02a709a",
+    "text": "Escucha y di cuántos hermanos tienes TÚ.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.21e158cd87.lento",
+    "text": "Tengo un hermano.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "marina.ba3ead227c",
@@ -8171,18 +8241,23 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.a340e729dd",
-    "text": "En mi familia somos cuatro.",
+    "key": "narrador.e3c5f8e28f",
+    "text": "Escucha y di cuántos sois en TU familia.",
     "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "rate": "-4%"
   },
   {
-    "key": "marina.a340e729dd.lento",
+    "key": "viajero.a340e729dd",
     "text": "En mi familia somos cuatro.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-17%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.a340e729dd.lento",
+    "text": "En mi familia somos cuatro.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "abuela_carmen.229c88b1b6",
@@ -8532,5 +8607,4058 @@
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.58a250ea36",
+    "text": "pelo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.58a250ea36.lento",
+    "text": "pelo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.e6fed81bd4",
+    "text": "Marina tiene el pelo largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e6fed81bd4.lento",
+    "text": "Marina tiene el pelo largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.503ed17455",
+    "text": "ojos",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.503ed17455.lento",
+    "text": "ojos",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.516d896480",
+    "text": "Tengo los ojos marrones.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.516d896480.lento",
+    "text": "Tengo los ojos marrones.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.959d918a1c",
+    "text": "gafas",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.959d918a1c.lento",
+    "text": "gafas",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.54b613380d",
+    "text": "Mi profesor lleva gafas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.54b613380d.lento",
+    "text": "Mi profesor lleva gafas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9046bbac44",
+    "text": "trenza",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9046bbac44.lento",
+    "text": "trenza",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.e175051503",
+    "text": "Frida lleva trenzas con flores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e175051503.lento",
+    "text": "Frida lleva trenzas con flores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.5e11eb4ff1",
+    "text": "largo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.5e11eb4ff1.lento",
+    "text": "largo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.63a871ae3b",
+    "text": "Tengo el pelo largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.63a871ae3b.lento",
+    "text": "Tengo el pelo largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.a523e5667a",
+    "text": "corto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a523e5667a.lento",
+    "text": "corto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3753145f69",
+    "text": "Álex tiene el pelo corto.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3753145f69.lento",
+    "text": "Álex tiene el pelo corto.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.24c9aefdbb",
+    "text": "rizado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.24c9aefdbb.lento",
+    "text": "rizado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.677e57db59",
+    "text": "Lola tiene el pelo rizado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.677e57db59.lento",
+    "text": "Lola tiene el pelo rizado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.ee24bfdc23",
+    "text": "alto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ee24bfdc23.lento",
+    "text": "alto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3421883766",
+    "text": "Mateo es muy alto.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3421883766.lento",
+    "text": "Mateo es muy alto.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.98973d5c9a",
+    "text": "bajo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.98973d5c9a.lento",
+    "text": "bajo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.e42d29107b",
+    "text": "Mi tío es bajo, pero muy fuerte.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e42d29107b.lento",
+    "text": "Mi tío es bajo, pero muy fuerte.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.31a9fdfdc6",
+    "text": "delgado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.31a9fdfdc6.lento",
+    "text": "delgado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.37c629a5db",
+    "text": "Mateo es alto y delgado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.37c629a5db.lento",
+    "text": "Mateo es alto y delgado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.8d11cdaad1",
+    "text": "rubio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.8d11cdaad1.lento",
+    "text": "rubio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.2b39578ac2",
+    "text": "Mi prima es rubia.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.2b39578ac2.lento",
+    "text": "Mi prima es rubia.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.ff70ad5670",
+    "text": "castaño",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ff70ad5670.lento",
+    "text": "castaño",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f0b41f55b0",
+    "text": "Diego tiene el pelo castaño.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f0b41f55b0.lento",
+    "text": "Diego tiene el pelo castaño.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.09f3a960e6",
+    "text": "pelirrojo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.09f3a960e6.lento",
+    "text": "pelirrojo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.708b70e7d2",
+    "text": "Mi amigo es pelirrojo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.708b70e7d2.lento",
+    "text": "Mi amigo es pelirrojo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.6dd0fe8001",
+    "text": "color",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.6dd0fe8001.lento",
+    "text": "color",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.473189b5aa",
+    "text": "¿De qué color es tu mochila?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.473189b5aa.lento",
+    "text": "¿De qué color es tu mochila?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.af6c1a0ca2",
+    "text": "rojo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.af6c1a0ca2.lento",
+    "text": "rojo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f999e02580",
+    "text": "Una falda roja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f999e02580.lento",
+    "text": "Una falda roja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.1768d39c5b",
+    "text": "azul",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.1768d39c5b.lento",
+    "text": "azul",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b75205916c",
+    "text": "La Casa Azul es azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b75205916c.lento",
+    "text": "La Casa Azul es azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.2030abee0f",
+    "text": "verde",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.2030abee0f.lento",
+    "text": "verde",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b415ee04ba",
+    "text": "Las plumas del Quetzal son verdes.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b415ee04ba.lento",
+    "text": "Las plumas del Quetzal son verdes.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.56815506e7",
+    "text": "amarillo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.56815506e7.lento",
+    "text": "amarillo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.cadd3ef94a",
+    "text": "El sol es amarillo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.cadd3ef94a.lento",
+    "text": "El sol es amarillo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3cf3494082",
+    "text": "naranja",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3cf3494082.lento",
+    "text": "naranja",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.8ae2674653",
+    "text": "Tengo una camiseta naranja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.8ae2674653.lento",
+    "text": "Tengo una camiseta naranja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.5efc86ca88",
+    "text": "rosa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.5efc86ca88.lento",
+    "text": "rosa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3297dfb686",
+    "text": "Lola lleva una falda rosa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3297dfb686.lento",
+    "text": "Lola lleva una falda rosa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.4c6d6712aa",
+    "text": "morado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4c6d6712aa.lento",
+    "text": "morado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c2d1e954d4",
+    "text": "Las flores moradas son bonitas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c2d1e954d4.lento",
+    "text": "Las flores moradas son bonitas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.867268472c",
+    "text": "negro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.867268472c.lento",
+    "text": "negro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3b8c10ba07",
+    "text": "Tengo un perro negro.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3b8c10ba07.lento",
+    "text": "Tengo un perro negro.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.062c2aa8b2",
+    "text": "blanco",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.062c2aa8b2.lento",
+    "text": "blanco",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3c6f9dbceb",
+    "text": "La camisa es blanca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3c6f9dbceb.lento",
+    "text": "La camisa es blanca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.28c94237bc",
+    "text": "gris",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.28c94237bc.lento",
+    "text": "gris",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.61ed33bdec",
+    "text": "Mi mochila es gris.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.61ed33bdec.lento",
+    "text": "Mi mochila es gris.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.512ade2d63",
+    "text": "marrón",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.512ade2d63.lento",
+    "text": "marrón",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.33668fb367",
+    "text": "Mi gato es marrón.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.33668fb367.lento",
+    "text": "Mi gato es marrón.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9a5226551b",
+    "text": "ropa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9a5226551b.lento",
+    "text": "ropa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.19519cfda2",
+    "text": "En el mercado hay ropa de colores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.19519cfda2.lento",
+    "text": "En el mercado hay ropa de colores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.a269b5db2c",
+    "text": "camiseta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a269b5db2c.lento",
+    "text": "camiseta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.81fb47e4de",
+    "text": "Álex lleva una camiseta verde.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.81fb47e4de.lento",
+    "text": "Álex lleva una camiseta verde.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.156564ef6d",
+    "text": "pantalones",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.156564ef6d.lento",
+    "text": "pantalones",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b857ed0c10",
+    "text": "Mateo lleva pantalones negros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b857ed0c10.lento",
+    "text": "Mateo lleva pantalones negros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3cd22d8483",
+    "text": "falda",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3cd22d8483.lento",
+    "text": "falda",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9a4d287944",
+    "text": "Marina lleva una falda azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9a4d287944.lento",
+    "text": "Marina lleva una falda azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f50e2745e5",
+    "text": "vestido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f50e2745e5.lento",
+    "text": "vestido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.e90e55e966",
+    "text": "Frida lleva un vestido largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e90e55e966.lento",
+    "text": "Frida lleva un vestido largo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.90db2a49ff",
+    "text": "camisa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.90db2a49ff.lento",
+    "text": "camisa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f15a3094d7",
+    "text": "Mi padre lleva una camisa blanca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f15a3094d7.lento",
+    "text": "Mi padre lleva una camisa blanca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c0cc5ed98a",
+    "text": "chaqueta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c0cc5ed98a.lento",
+    "text": "chaqueta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.7cd0b75f34",
+    "text": "Lleva una chaqueta negra.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.7cd0b75f34.lento",
+    "text": "Lleva una chaqueta negra.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.ae45f157a1",
+    "text": "zapatos",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ae45f157a1.lento",
+    "text": "zapatos",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.2868c32c07",
+    "text": "Los zapatos de Rafa son marrones.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.2868c32c07.lento",
+    "text": "Los zapatos de Rafa son marrones.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.4cba31217c",
+    "text": "zapatillas",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4cba31217c.lento",
+    "text": "zapatillas",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.7dfd101d14",
+    "text": "Álex lleva zapatillas blancas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.7dfd101d14.lento",
+    "text": "Álex lleva zapatillas blancas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9e7abfb6c2",
+    "text": "sombrero",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9e7abfb6c2.lento",
+    "text": "sombrero",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c2b2858583",
+    "text": "Don Ignacio lleva un sombrero.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c2b2858583.lento",
+    "text": "Don Ignacio lleva un sombrero.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f3d4f3105a",
+    "text": "gorra",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f3d4f3105a.lento",
+    "text": "gorra",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.ab5746aded",
+    "text": "Mateo lleva una gorra azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ab5746aded.lento",
+    "text": "Mateo lleva una gorra azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.17d8f112ce",
+    "text": "blusa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.17d8f112ce.lento",
+    "text": "blusa",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "lupita.c7525d10f3",
+    "text": "Lupita lleva una blusa con flores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.c7525d10f3.lento",
+    "text": "Lupita lleva una blusa con flores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-35%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.4bb073a971",
+    "text": "rebozo",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.4bb073a971.lento",
+    "text": "rebozo",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-35%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.d6e12bc23a",
+    "text": "El rebozo es una prenda tradicional de México.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.d6e12bc23a.lento",
+    "text": "El rebozo es una prenda tradicional de México.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-35%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "narrador.14fdf15fe4",
+    "text": "llevar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.14fdf15fe4.lento",
+    "text": "llevar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.d19db251e4",
+    "text": "Llevo una camiseta roja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d19db251e4.lento",
+    "text": "Llevo una camiseta roja.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.df11297084",
+    "text": "simpático",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.df11297084.lento",
+    "text": "simpático",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.5a899898e2",
+    "text": "Mateo es muy simpático.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.5a899898e2.lento",
+    "text": "Mateo es muy simpático.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.d8e42de78b",
+    "text": "divertido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d8e42de78b.lento",
+    "text": "divertido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b4dcd02b33",
+    "text": "Mi tío Rafa es muy divertido.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b4dcd02b33.lento",
+    "text": "Mi tío Rafa es muy divertido.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f53a820b63",
+    "text": "tímido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f53a820b63.lento",
+    "text": "tímido",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.19a182d335",
+    "text": "Diego es un poco tímido.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.19a182d335.lento",
+    "text": "Diego es un poco tímido.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.ee6093aff4",
+    "text": "serio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ee6093aff4.lento",
+    "text": "serio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.3f06dd58fa",
+    "text": "Doña Pilar es seria.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3f06dd58fa.lento",
+    "text": "Doña Pilar es seria.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b4755a1a37",
+    "text": "valiente",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b4755a1a37.lento",
+    "text": "valiente",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9e95fea1a3",
+    "text": "El Quetzal es muy valiente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9e95fea1a3.lento",
+    "text": "El Quetzal es muy valiente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.a1d7da7cc0",
+    "text": "inteligente",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a1d7da7cc0.lento",
+    "text": "inteligente",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.4f5521b0e1",
+    "text": "Marina es muy inteligente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4f5521b0e1.lento",
+    "text": "Marina es muy inteligente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.d0f165304d",
+    "text": "trabajador",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d0f165304d.lento",
+    "text": "trabajador",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.1871428274",
+    "text": "Mi madre es muy trabajadora.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.1871428274.lento",
+    "text": "Mi madre es muy trabajadora.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c72ef9660b",
+    "text": "estar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c72ef9660b.lento",
+    "text": "estar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.d35d56fd96",
+    "text": "Hoy estoy en Coyoacán.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d35d56fd96.lento",
+    "text": "Hoy estoy en Coyoacán.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.6b27eba93f",
+    "text": "contento",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.6b27eba93f.lento",
+    "text": "contento",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.0ffff9494e",
+    "text": "Hoy estoy muy contento.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.0ffff9494e.lento",
+    "text": "Hoy estoy muy contento.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f47590ee58",
+    "text": "triste",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f47590ee58.lento",
+    "text": "triste",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.e13eaffb82",
+    "text": "Lola está triste.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e13eaffb82.lento",
+    "text": "Lola está triste.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.bdbacf02bf",
+    "text": "cansado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.bdbacf02bf.lento",
+    "text": "cansado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c1d6994239",
+    "text": "Estoy cansado después del viaje.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c1d6994239.lento",
+    "text": "Estoy cansado después del viaje.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.bb16102f19",
+    "text": "enfadado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.bb16102f19.lento",
+    "text": "enfadado",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.aba7e70566",
+    "text": "Doña Pilar no está enfadada.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.aba7e70566.lento",
+    "text": "Doña Pilar no está enfadada.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.632f6e450e",
+    "text": "autorretrato",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.632f6e450e.lento",
+    "text": "autorretrato",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.94ff0fe156",
+    "text": "Frida pinta muchos autorretratos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.94ff0fe156.lento",
+    "text": "Frida pinta muchos autorretratos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.20e722628d",
+    "text": "cuadro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.20e722628d.lento",
+    "text": "cuadro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.b691f0bcac",
+    "text": "Hay un cuadro en la pared.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.b691f0bcac.lento",
+    "text": "Hay un cuadro en la pared.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.f62af2d0bf",
+    "text": "museo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.f62af2d0bf.lento",
+    "text": "museo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.5c1233ff06",
+    "text": "La Casa Azul es un museo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.5c1233ff06.lento",
+    "text": "La Casa Azul es un museo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.0b2d106d9b",
+    "text": "espejo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.0b2d106d9b.lento",
+    "text": "espejo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c21723735d",
+    "text": "Frida pinta con un espejo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c21723735d.lento",
+    "text": "Frida pinta con un espejo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.4cb270f3d7",
+    "text": "flor",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4cb270f3d7.lento",
+    "text": "flor",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.9dbf7010cc",
+    "text": "Hay flores en el patio.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9dbf7010cc.lento",
+    "text": "Hay flores en el patio.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.af715f9b7e",
+    "text": "loro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.af715f9b7e.lento",
+    "text": "loro",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.faf26dbd4e",
+    "text": "Frida tiene un loro en casa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.faf26dbd4e.lento",
+    "text": "Frida tiene un loro en casa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.6efb2f764e",
+    "text": "pintar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.6efb2f764e.lento",
+    "text": "pintar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.51a9fb36a4",
+    "text": "Frida pinta cuadros y autorretratos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.51a9fb36a4.lento",
+    "text": "Frida pinta cuadros y autorretratos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "lupita.184f5c54da",
+    "text": "El gato es negro y la casa es blanca.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.184f5c54da.lento",
+    "text": "El gato es negro y la casa es blanca.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-35%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "mateo.8249bec269",
+    "text": "Los libros son verdes.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.8249bec269.lento",
+    "text": "Los libros son verdes.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-17%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "lupita.2864c03cdb",
+    "text": "Las flores son amarillas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.2864c03cdb.lento",
+    "text": "Las flores son amarillas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-35%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "valentina.ebf6244974",
+    "text": "Una casa azul y dos libros azules.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.ebf6244974.lento",
+    "text": "Una casa azul y dos libros azules.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "marina.7e6f13857a",
+    "text": "Álex es valiente y Marina es valiente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.7e6f13857a.lento",
+    "text": "Álex es valiente y Marina es valiente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-17%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.08a17e7202",
+    "text": "El adjetivo cambia con el nombre: negro, negra, negros, negras. Azul y valiente no cambian en femenino. En plural, añadimos -s o -es.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.f2716f6949",
+    "text": "Tengo el pelo corto y los ojos marrones.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.f2716f6949.lento",
+    "text": "Tengo el pelo corto y los ojos marrones.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "marina.f1495f9ab9",
+    "text": "Marina tiene el pelo largo y negro.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.f1495f9ab9.lento",
+    "text": "Marina tiene el pelo largo y negro.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-17%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "valentina.ae4699b9b0",
+    "text": "Valentina tiene los ojos verdes.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.ae4699b9b0.lento",
+    "text": "Valentina tiene los ojos verdes.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "mateo.37c629a5db",
+    "text": "Mateo es alto y delgado.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.37c629a5db.lento",
+    "text": "Mateo es alto y delgado.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-17%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "narrador.81a8ddf625",
+    "text": "Para el pelo y los ojos decimos: tengo el pelo… y los ojos… Para la altura y el cuerpo usamos «ser»: soy alto, es delgado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.d19db251e4",
+    "text": "Llevo una camiseta roja.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.d19db251e4.lento",
+    "text": "Llevo una camiseta roja.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "marina.877fc383ce",
+    "text": "¿Qué llevas hoy?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.877fc383ce.lento",
+    "text": "¿Qué llevas hoy?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-17%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "valentina.99fbad0966",
+    "text": "Frida lleva un vestido largo y flores en el pelo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.99fbad0966.lento",
+    "text": "Frida lleva un vestido largo y flores en el pelo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "marina.2d6f08af12",
+    "text": "Mateo lleva gafas y una gorra azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.2d6f08af12.lento",
+    "text": "Mateo lleva gafas y una gorra azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-17%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.27ed7424a6",
+    "text": "Con «llevar» decimos qué ropa tenemos puesta: llevo, llevas, lleva. El color va después de la ropa y cambia: una falda roja, zapatos negros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "valentina.fe253d6633",
+    "text": "Frida es valiente.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.fe253d6633.lento",
+    "text": "Frida es valiente.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.c1702ff7ac",
+    "text": "Hoy estoy cansado.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.c1702ff7ac.lento",
+    "text": "Hoy estoy cansado.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.0834aea792",
+    "text": "Mateo es simpático, pero hoy está cansado.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.0834aea792.lento",
+    "text": "Mateo es simpático, pero hoy está cansado.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.8ee1d87e2c",
+    "text": "La Casa Azul está en Coyoacán.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.8ee1d87e2c.lento",
+    "text": "La Casa Azul está en Coyoacán.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-29%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.cfe0366fe9",
+    "text": "Con «ser» decimos quién es y cómo es una persona: es mexicano, es alto, es simpático. Con «estar» decimos cómo está hoy y dónde está: estoy cansado, está en Coyoacán.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "mateo.c4716d4092",
+    "text": "¡Bienvenidos a Coyoacán! Aquí empieza su aventura en México.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "narrador.e1b613beb7",
+    "text": "Capítulo cuatro: ¿cómo eres?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.55ea4e353c",
+    "text": "Ciudad de México. Coyoacán, el barrio de Frida Kahlo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.3bde1a79de",
+    "text": "Aquí, cada cara cuenta una historia.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4d0604152f",
+    "text": "Coyoacán es un barrio de Ciudad de México.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.1fbcdf4b96",
+    "text": "Ciudad de México está en Europa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "quetzal.cb0d8b84d6",
+    "text": "México… ¡Estoy en casa!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-6%",
+    "pitch": "+22Hz"
+  },
+  {
+    "key": "mateo.3cb03433b9",
+    "text": "¡Qué onda! Me llamo Mateo y soy de Coyoacán. ¿Ustedes son los viajeros?",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.c68a229295",
+    "text": "Soy alto y delgado, y siempre llevo una gorra azul.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "marina.fe537644a1",
+    "text": "Yo soy Marina. Tengo el pelo largo y negro. Y él es Álex.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "valentina.1905623ef1",
+    "text": "Por favor, necesito ayuda. Los autorretratos no tienen cara. ¡Y no hay colores!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "sombra.61066f3e45",
+    "text": "Sin colores, no hay cara… Sin palabras, no hay retrato.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "quetzal.c9bdc53310",
+    "text": "La pluma… está en el último autorretrato.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-6%",
+    "pitch": "+22Hz"
+  },
+  {
+    "key": "valentina.fe087261fa",
+    "text": "Para devolver las caras, tienen que decir cómo son las personas. ¡Vamos!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "mateo.42b1c5588c",
+    "text": "Hola, me llamo Mateo. Tengo doce años y soy de Coyoacán.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "valentina.4e8ec5c7d7",
+    "text": "Los autorretratos de Frida no tienen cara. ¡No hay colores!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.b1d1fbc548",
+    "text": "El Quetzal está en México.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "mateo.95283d0434",
+    "text": "¡Qué onda! Me llamo Mateo. ¿Y tú, cómo te llamas?",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.6b6ab0f792",
+    "text": "¡Mucho gusto, Álex! Bienvenido a Coyoacán.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.55b842db28",
+    "text": "Soy Mateo.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.9ea6e3f466",
+    "text": "¿Tú también eres Mateo? ¡Qué confusión!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.6b4aca2b23",
+    "text": "¿Buenas noches? ¡Pero si es de día!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "valentina.b699aa35d6",
+    "text": "Hola. Soy Valentina, la guía de la Casa Azul. ¿De dónde son ustedes?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.b4c388ffbb",
+    "text": "Yo soy de París y Marina es de Sevilla.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.ee65db1025",
+    "text": "¡Qué bien! Vienen de muy lejos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.f0d054fbb7",
+    "text": "¿Te llamas París? ¡Qué nombre tan bonito!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.6d50b95873",
+    "text": "Sí, pero ¿de dónde son?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.e949fa4df7",
+    "text": "Me llamo Álex y soy francés.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.84d7d692d9",
+    "text": "Mucho gusto, me llamo Álex.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.84d7d692d9.lento",
+    "text": "Mucho gusto, me llamo Álex.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.7a8306ac60",
+    "text": "¡Buenos días, jóvenes! Mi puesto tiene todos los colores de México.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "narrador.eb01c0dbb7",
+    "text": "Es el color amarillo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.1930c74965",
+    "text": "Es el color negro.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "lupita.079d0e1abe",
+    "text": "Mi gato es blanco y mi mochila es negra.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.4142a8951c",
+    "text": "Las mochilas de Marina son amarillas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "mateo.09ec901625",
+    "text": "Tengo dos mochilas azules.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "lupita.32c2ead243",
+    "text": "Mi color favorito es el verde, como las plumas del Quetzal.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.473189b5aa",
+    "text": "¿De qué color es tu mochila?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.974b9df745",
+    "text": "Mi mochila es azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.8f613a5ca7",
+    "text": "¡Qué bonito! Azul como la Casa Azul.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.91cee748ae",
+    "text": "Mi mochila es una casa.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.dfa98af295",
+    "text": "¿Una casa? ¡Qué mochila tan grande!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.dbf8201b42",
+    "text": "Mi mochila tiene doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.f4f3e1b8f1",
+    "text": "Doce años… ¡qué mochila tan vieja!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "narrador.44fad0b73d",
+    "text": "Escucha y di cuál es TU color favorito.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.c6b6ebae99",
+    "text": "Mi color favorito es el azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.c6b6ebae99.lento",
+    "text": "Mi color favorito es el azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.ebbdf971c3",
+    "text": "Escucha y escribe el color.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "mateo.e806fb3e3d",
+    "text": "Yo describo a una persona y tú adivinas. ¿Jugamos?",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.f8a485478f",
+    "text": "Mi amigo es bajo y pelirrojo.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.0b90abc611",
+    "text": "Es una chica alta y delgada, con el pelo muy largo.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "marina.ae4699b9b0",
+    "text": "Valentina tiene los ojos verdes.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "viajero.6cd98e089e",
+    "text": "Tengo el pelo corto.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "marina.0cf05aa53b",
+    "text": "Marina tiene los ojos marrones.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.acfe2f5847",
+    "text": "Valentina tiene el pelo largo y rizado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "mateo.292ff609e4",
+    "text": "Y tú, ¿cómo eres? Descríbete.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.ff744527f4",
+    "text": "Soy alto y tengo el pelo corto.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.b3522b64e2",
+    "text": "¡Perfecto! Ya veo cómo eres.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.6a7e122850",
+    "text": "Tengo los ojos verdes y el pelo castaño.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.296ee72f32",
+    "text": "¡Qué padre! Ya veo cómo eres.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.deec18dd91",
+    "text": "Tengo alto y soy el pelo.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.5e63a179d9",
+    "text": "Mmm… no entiendo. Con la altura usamos «ser».",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "marina.60098ae56d",
+    "text": "Tiene el pelo largo y rizado.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "narrador.42260eb4e1",
+    "text": "Escucha y di cómo es TU pelo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.6cd98e089e.lento",
+    "text": "Tengo el pelo corto.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.88c068b0ce",
+    "text": "¡Pasen, pasen! Tengo playeras, vestidos, rebozos… ¿Qué buscan?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.0badc89d95",
+    "text": "Mateo lleva una gorra.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "marina.fee03ee65e",
+    "text": "Busco una falda roja y una blusa blanca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "lupita.f027ec8235",
+    "text": "En mi puesto hay ropa de muchos colores. Hay una falda roja, una blusa blanca con flores y dos rebozos azules. Las playeras son verdes, amarillas y naranjas. ¡Todo es muy bonito!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "narrador.5b3455337b",
+    "text": "¿De qué color es la falda?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.316e0414aa",
+    "text": "¿Cuántos rebozos azules hay?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.be644f8618",
+    "text": "¿De qué colores son las playeras?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "marina.7dfd101d14",
+    "text": "Álex lleva zapatillas blancas.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.9a4d287944",
+    "text": "Marina lleva una falda azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "lupita.3a2d1c81c0",
+    "text": "Llevo una blusa blanca con flores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "lupita.7a91038d4b",
+    "text": "¡Buenos días, joven! ¿Qué necesitas?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.ca60576cd7",
+    "text": "Una chaqueta negra, por favor.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.b86b33eb78",
+    "text": "Una chamarra negra, ¡claro! Aquí tienes.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.e0f14614cb",
+    "text": "Soy una chaqueta negra.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.f24c755f11",
+    "text": "¿Tú eres una chaqueta? ¡Qué cosa más rara!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "viajero.f6836bb551",
+    "text": "Me llamo chaqueta.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lupita.0e973ff8c3",
+    "text": "Hola, Chaqueta. Yo soy Lupita.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-10%",
+    "pitch": "-12Hz"
+  },
+  {
+    "key": "narrador.f4c37af1b0",
+    "text": "En México, «chamarra» significa «chaqueta».",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e7800ecfb4",
+    "text": "Escucha y di qué llevas TÚ hoy.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.1e7d9a8bff",
+    "text": "Llevo una camiseta azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.1e7d9a8bff.lento",
+    "text": "Llevo una camiseta azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "quetzal.b9ead772b7",
+    "text": "Ser, estar, llevar. Tres verbos. ¡Forja conmigo!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-6%",
+    "pitch": "+22Hz"
+  },
+  {
+    "key": "viajero.a99974a1e2",
+    "text": "yo estoy",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "marina.3a21d3e60b",
+    "text": "tú estás",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "valentina.7d626107f5",
+    "text": "él está",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "mateo.97ca0ae9b6",
+    "text": "nosotros estamos",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.3c395a60f8",
+    "text": "Hoy yo estoy bien, gracias.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.55a3bd5b79",
+    "text": "Mateo es mexicano.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.3c63d95b00",
+    "text": "Nosotros estamos en México.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.def923f07e",
+    "text": "yo llevo",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.1f9fc71063",
+    "text": "ella lleva",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "marina.5d9725b2c1",
+    "text": "nosotros llevamos",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "mateo.9c2fe25427",
+    "text": "él es",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.54384562b8",
+    "text": "Ahora cuéntame cómo eres tú y cómo estás hoy.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "mateo.9d262dd21d",
+    "text": "Hoy estoy muy cansado. ¿Y tú? ¿Cómo estás?",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.4f410ec006",
+    "text": "Estoy bien, gracias.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.17ba11e470",
+    "text": "¡Qué bueno! Eso me alegra.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.5cfcd91dbf",
+    "text": "Soy bien, gracias.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.146ec01dd4",
+    "text": "Con «bien» usamos «estar»: «estoy bien».",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "viajero.93075b3d68",
+    "text": "Me llamo cansado.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.785be12c14",
+    "text": "¿Te llamas Cansado? ¡Qué nombre!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "valentina.b951571d68",
+    "text": "Mateo es muy simpático. Y tú, ¿cómo eres?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.306ad004d0",
+    "text": "Soy divertido y un poco tímido.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.3f36c596a1",
+    "text": "¡Perfecto! Los divertidos y los tímidos son buenos amigos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.b6d728db8c",
+    "text": "Tengo divertido.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.5a795d0ea7",
+    "text": "No: con el carácter usamos «ser», «soy divertido».",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.a525a73b86",
+    "text": "Me llamo simpático.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.17f8fd64e2",
+    "text": "Hola, Simpático. Yo soy Valentina.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "marina.936d564205",
+    "text": "Álex es valiente.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.040ff66136",
+    "text": "Hoy Marina está triste.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.1f3c38ac95",
+    "text": "Mis padres son muy trabajadores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "valentina.5eefb8551a",
+    "text": "Hoy estoy un poco triste.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "mateo.8a6a3cec81",
+    "text": "Soy muy divertido, pero mi hermana es tímida.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "narrador.fca2164f16",
+    "text": "Escucha y di cómo eres TÚ.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.a8045d1abf",
+    "text": "Soy simpático.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.a8045d1abf.lento",
+    "text": "Soy simpático.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.94b671e71b",
+    "text": "Escucha y di cómo estás TÚ hoy.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.3d7e35d665",
+    "text": "Hoy estoy contento.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.3d7e35d665.lento",
+    "text": "Hoy estoy contento.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.1d9482e517",
+    "text": "Escribe cómo eres y cómo estás hoy.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.91542a6509",
+    "text": "Soy simpático y hoy estoy contento.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.91542a6509.lento",
+    "text": "Soy simpático y hoy estoy contento.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "mateo.06ad98aef8",
+    "text": "Valentina es simpática, pero hoy está triste.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "valentina.32294a57df",
+    "text": "Esta es la Casa Azul, la casa de Frida Kahlo. Hoy es un museo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.83490e9024",
+    "text": "Frida Kahlo nace en 1907 en Coyoacán, en la Casa Azul.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.792dc762fa",
+    "text": "Frida pinta más de cincuenta autorretratos, muchas veces con un espejo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.ac56880dde",
+    "text": "Lleva flores en el pelo y vestidos largos de colores. Muchos son vestidos tradicionales de Oaxaca.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.6216d566d2",
+    "text": "En su casa viven monos, loros y perros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.33c742c1ce",
+    "text": "Hoy la Casa Azul es un museo. Está en Coyoacán, en Ciudad de México.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.83f5170124",
+    "text": "La Casa Azul es de color rojo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.7be22c66d0",
+    "text": "En la casa de Frida viven monos, loros y perros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "valentina.9a2157c0cf",
+    "text": "Frida Kahlo es una pintora mexicana. Tiene las cejas negras y gruesas, y lleva flores en el pelo. Lleva vestidos largos de colores. Pinta muchos autorretratos con un espejo. Hoy su casa, la Casa Azul, es un museo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.ae02556e44",
+    "text": "¿Qué lleva Frida en el pelo?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.7960aa79a3",
+    "text": "¿Cómo pinta sus autorretratos?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.43fe9ca30e",
+    "text": "¿Qué es hoy la Casa Azul?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "valentina.80907a9733",
+    "text": "La Casa Azul es azul cobalto. Tiene un patio con muchas flores y plantas. En Coyoacán hay una plaza, un mercado y mucha gente. «Coyoacán» viene de una palabra náhuatl: significa «lugar de coyotes».",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.79ed5ff923",
+    "text": "¿De qué color es la casa?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.556b30df56",
+    "text": "¿Qué significa «Coyoacán»?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "valentina.619e10cfe7",
+    "text": "Frida lleva flores en el pelo y un vestido largo de color rojo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.61e4b83cba",
+    "text": "Mira este autorretrato. ¿Cómo es Frida?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.c7e3b59525",
+    "text": "Frida tiene el pelo negro y lleva flores.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.ab5e2045eb",
+    "text": "¡Exacto! Ya puedes pintar su cara.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.a6b68838cf",
+    "text": "Frida es una casa azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.f6d223cd0d",
+    "text": "La casa es azul, pero Frida es una persona.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "viajero.43b7b304aa",
+    "text": "Frida tiene doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.6f1ad209c6",
+    "text": "No, Frida es una pintora famosa.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.94ff0fe156",
+    "text": "Frida pinta muchos autorretratos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "valentina.c21723735d",
+    "text": "Frida pinta con un espejo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "narrador.a5e4472772",
+    "text": "Escribe tu autorretrato, como Frida.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.2b2b814e97",
+    "text": "Soy alto y simpático. Tengo el pelo corto y los ojos marrones. Llevo una camiseta azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.2b2b814e97.lento",
+    "text": "Soy alto y simpático. Tengo el pelo corto y los ojos marrones. Llevo una camiseta azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "narrador.43ed619793",
+    "text": "Escucha y di el color de TUS ojos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.516d896480",
+    "text": "Tengo los ojos marrones.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.516d896480.lento",
+    "text": "Tengo los ojos marrones.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.304ad05488",
+    "text": "Sin cara, no hay retrato. Sin retrato, no hay nadie. Yo borro las caras.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.62d597748e",
+    "text": "Sin nombre no hay cara. ¿Cómo te llamas y de dónde eres?",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.f65b0a200b",
+    "text": "Me llamo Álex y soy de París.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.f8530712bd",
+    "text": "¡Grr! Ya tengo una cara menos…",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.45cef46488",
+    "text": "Tengo doce años y tres amigos.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.de74fdaf51",
+    "text": "No es lo que pregunto. Responde bien.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.41a052948e",
+    "text": "Adiós, hasta luego.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.84377fc4e1",
+    "text": "¿Cómo eres? Descríbete.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.3e6914f2b5",
+    "text": "¡Aaah! Una cara más que vuelve…",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.5949828b50",
+    "text": "Eso no tiene sentido. ¡Otra vez!",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.22dceb50e9",
+    "text": "Llevo doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.fc1ea78189",
+    "text": "¡No! La edad se dice con «tener»: tengo doce años. Y te pregunto cómo eres.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.252d57262e",
+    "text": "Mi hermano es bajo, rubio y muy serio.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "diego.6b4c8be5d7",
+    "text": "En mi mochila hay un libro y dos cuadernos.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+4%",
+    "pitch": "+20Hz"
+  },
+  {
+    "key": "marina.c585318d40",
+    "text": "Mi madre es médica y mi padre es cocinero.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "viajero.603dde1986",
+    "text": "Hoy yo estoy muy cansado.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "marina.9d92b8559b",
+    "text": "tú llevas",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "marina.344a4d1e4a",
+    "text": "Marina lleva una falda roja y zapatos negros.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
+    "key": "sombra.553c6b4932",
+    "text": "El treinta y uno de octubre.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "mateo.f832bf9ba2",
+    "text": "Hola, soy Mateo. Tengo doce años y vivo en Coyoacán. Mi mamá es médica y mi papá es cocinero. Soy alto y delgado, y llevo una gorra azul. Hoy estoy cansado, pero estoy contento.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+8%",
+    "pitch": "+14Hz"
+  },
+  {
+    "key": "narrador.48c6784b28",
+    "text": "¿En qué trabaja el padre de Mateo?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.2feac7065f",
+    "text": "¿Cómo es Mateo?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.72380702c5",
+    "text": "¿Cómo está Mateo hoy?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.47a1b92193",
+    "text": "Hola, me llamo Álex. Soy de París y tengo doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.47a1b92193.lento",
+    "text": "Hola, me llamo Álex. Soy de París y tengo doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "valentina.589e0b59ec",
+    "text": "¡Los autorretratos tienen cara otra vez! ¡Gracias!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-4%",
+    "pitch": "+6Hz"
+  },
+  {
+    "key": "quetzal.434b409499",
+    "text": "Cuatro plumas. ¡Vuelo más alto!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-6%",
+    "pitch": "+22Hz"
+  },
+  {
+    "key": "ignacio.aa13717da1",
+    "text": "La siguiente pluma está en Valencia. ¡Es hora de volver a España!",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-6%",
+    "pitch": "-10Hz"
+  },
+  {
+    "key": "narrador.311931bb18",
+    "text": "fiesta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.311931bb18.lento",
+    "text": "fiesta",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.567c3f7f21",
+    "text": "El Día de Muertos es una fiesta alegre.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.567c3f7f21.lento",
+    "text": "El Día de Muertos es una fiesta alegre.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.399fcc4223",
+    "text": "celebrar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.399fcc4223.lento",
+    "text": "celebrar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "xochitl.b914a7bc83",
+    "text": "Celebramos el Día de Muertos en familia.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.b914a7bc83.lento",
+    "text": "Celebramos el Día de Muertos en familia.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.9d13002bd6",
+    "text": "muerto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9d13002bd6.lento",
+    "text": "muerto",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.d35b5c8b64",
+    "text": "Recordamos a los muertos con cariño.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.d35b5c8b64.lento",
+    "text": "Recordamos a los muertos con cariño.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.af4d702a02",
+    "text": "recordar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.af4d702a02.lento",
+    "text": "recordar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.fa27ce9db6",
+    "text": "En la fiesta recordamos a los abuelos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.fa27ce9db6.lento",
+    "text": "En la fiesta recordamos a los abuelos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.781060c42e",
+    "text": "recuerdo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.781060c42e.lento",
+    "text": "recuerdo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.4baec25907",
+    "text": "Cada foto es un recuerdo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.4baec25907.lento",
+    "text": "Cada foto es un recuerdo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.a6cda781e0",
+    "text": "ofrenda",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.a6cda781e0.lento",
+    "text": "ofrenda",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.aa3d7457c9",
+    "text": "En la ofrenda hay flores, velas y fotos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.aa3d7457c9.lento",
+    "text": "En la ofrenda hay flores, velas y fotos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.eb1c0d7aaf",
+    "text": "vela",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.eb1c0d7aaf.lento",
+    "text": "vela",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.ca3911f382",
+    "text": "Una vela da luz.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.ca3911f382.lento",
+    "text": "Una vela da luz.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.c307b63565",
+    "text": "luz",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c307b63565.lento",
+    "text": "luz",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.2d7c15543e",
+    "text": "Las velas dan mucha luz.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.2d7c15543e.lento",
+    "text": "Las velas dan mucha luz.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.c1962c232b",
+    "text": "agua",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.c1962c232b.lento",
+    "text": "agua",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.ad5b94f425",
+    "text": "En la ofrenda hay un vaso de agua.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.ad5b94f425.lento",
+    "text": "En la ofrenda hay un vaso de agua.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.9024543383",
+    "text": "comida",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9024543383.lento",
+    "text": "comida",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "remedios.d7f4bb7431",
+    "text": "Ponemos la comida favorita de nuestros muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.d7f4bb7431.lento",
+    "text": "Ponemos la comida favorita de nuestros muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "xochitl.12f1f6c6d1",
+    "text": "cempasúchil",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.12f1f6c6d1.lento",
+    "text": "cempasúchil",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.1aea8b1aee",
+    "text": "El cempasúchil es la flor del Día de Muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.1aea8b1aee.lento",
+    "text": "El cempasúchil es la flor del Día de Muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.a26fc8128c",
+    "text": "pétalo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a26fc8128c.lento",
+    "text": "pétalo",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "xochitl.14da139a88",
+    "text": "Un camino de pétalos naranjas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.14da139a88.lento",
+    "text": "Un camino de pétalos naranjas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.6589dbe111",
+    "text": "pan de muerto",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.6589dbe111.lento",
+    "text": "pan de muerto",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.206b7f1a8e",
+    "text": "El pan de muerto es dulce y redondo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.206b7f1a8e.lento",
+    "text": "El pan de muerto es dulce y redondo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-39%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "xochitl.569f476648",
+    "text": "papel picado",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.569f476648.lento",
+    "text": "papel picado",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.81c0a9067d",
+    "text": "El papel picado tiene muchos colores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.81c0a9067d.lento",
+    "text": "El papel picado tiene muchos colores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.82454e6273",
+    "text": "calavera",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.82454e6273.lento",
+    "text": "calavera",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "xochitl.19d8d42342",
+    "text": "La calavera de azúcar tiene un nombre.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.19d8d42342.lento",
+    "text": "La calavera de azúcar tiene un nombre.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.59c21812e9",
+    "text": "azúcar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.59c21812e9.lento",
+    "text": "azúcar",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "xochitl.5eb2be5a28",
+    "text": "La calavera es de azúcar.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.5eb2be5a28.lento",
+    "text": "La calavera es de azúcar.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.422dac7b34",
+    "text": "Catrina",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.422dac7b34.lento",
+    "text": "Catrina",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.fe79481e96",
+    "text": "La Catrina lleva un sombrero grande.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.fe79481e96.lento",
+    "text": "La Catrina lleva un sombrero grande.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.42a8713467",
+    "text": "cementerio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.42a8713467.lento",
+    "text": "cementerio",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "xochitl.c2cd6d78bf",
+    "text": "Muchas familias van al cementerio.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.c2cd6d78bf.lento",
+    "text": "Muchas familias van al cementerio.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "beto.4817f7e01d",
+    "text": "alebrije",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "beto.4817f7e01d.lento",
+    "text": "alebrije",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-23%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "beto.e12c22391f",
+    "text": "Mis alebrijes son de madera.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "beto.e12c22391f.lento",
+    "text": "Mis alebrijes son de madera.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "-23%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "xochitl.8612540fde",
+    "text": "¡Hola, viajeros! Hoy empieza la fiesta más bonita del año.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.1a6bde454f",
+    "text": "Evento especial: Día de Muertos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.8089752e18",
+    "text": "Oaxaca, México. Una fiesta para recordar con alegría.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "sombra.6f7e607f48",
+    "text": "Sin recuerdos, no hay fiesta… Apago las velas.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "narrador.051828453e",
+    "text": "Oaxaca está en México.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "xochitl.02fd2b3312",
+    "text": "Hoy empieza la fiesta. ¡Celebramos a nuestros muertos con alegría!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.71a43046b5",
+    "text": "¡Hola! Me llamo Xóchitl y tengo once años. ¿Y tú, cómo te llamas?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "viajero.0c1335b1f6",
+    "text": "Me llamo Álex. Tengo doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.c48be1912f",
+    "text": "¡Mucho gusto, Álex! Mi nombre significa «flor» en náhuatl.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "viajero.9af7e77135",
+    "text": "Soy Xóchitl.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.5dd4c6dbea",
+    "text": "¡Pero Xóchitl soy yo! ¿Hay dos Xóchitl?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.29305c7ca9",
+    "text": "¿Adiós? ¡Pero si la fiesta empieza ahora!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.0a855d426d",
+    "text": "¿Cuándo es el Día de Muertos?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "viajero.af17f89a60",
+    "text": "El uno y el dos de noviembre.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.7469eb6dd8",
+    "text": "¡Exacto! Y la fiesta empieza antes, en octubre.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "viajero.7d4809fa2d",
+    "text": "El veinticinco de diciembre.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.efbcf52553",
+    "text": "Ese día es Navidad. ¡Esta fiesta es antes!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "viajero.b4e3f2c9b1",
+    "text": "El domingo.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.df852a5bb8",
+    "text": "El domingo… ¿pero de qué mes?",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.7904ea6ed9",
+    "text": "Hoy celebramos el Día de Muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.7904ea6ed9.lento",
+    "text": "Hoy celebramos el Día de Muertos.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.7e68cb5bf1",
+    "text": "Bienvenidos a mi casa. Hoy preparamos la ofrenda para recordar a los que ya no están.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "remedios.4a6f06fb16",
+    "text": "En la ofrenda hay cuatro velas, una foto de mi abuelo y pan de muerto.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "xochitl.bbaf1d6874",
+    "text": "Las flores de cempasúchil son naranjas. Sus pétalos hacen un camino hasta la ofrenda.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.3fe390e1d3",
+    "text": "Mi ofrenda tiene dos niveles. Arriba hay una foto de mi abuela, cuatro velas y flores de cempasúchil. Abajo hay agua, pan de muerto y su comida favorita: el mole. Todo está lleno de color.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.4d4cf07815",
+    "text": "¿De quién es la foto?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.bde503d817",
+    "text": "¿Cuántas velas hay?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9cfdbd94bb",
+    "text": "¿Qué hay abajo?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "xochitl.635d34360a",
+    "text": "El cempasúchil es una flor naranja y amarilla.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.268a326d7c",
+    "text": "¿Quién está en tu ofrenda? Puede ser alguien de tu familia o una persona famosa.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "viajero.488cf6fa11",
+    "text": "En mi ofrenda está Frida Kahlo.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "remedios.183e7bf3e8",
+    "text": "¡Qué buena idea! Frida es una artista muy querida en México.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "viajero.b5b3592daa",
+    "text": "En mi ofrenda hay una foto de mi bisabuela.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "remedios.75bc678f45",
+    "text": "Qué bonito. Así la recuerdas con cariño.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "viajero.5716208460",
+    "text": "Mi ofrenda se llama doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "remedios.525122f2d9",
+    "text": "Jaja, ¿una ofrenda de doce años? No entiendo.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "narrador.eba3829849",
+    "text": "Escribe tu ofrenda.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "xochitl.e520d0895b",
+    "text": "En mi ofrenda hay una foto de Frida Kahlo. También hay flores naranjas y cuatro velas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "xochitl.e520d0895b.lento",
+    "text": "En mi ofrenda hay una foto de Frida Kahlo. También hay flores naranjas y cuatro velas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-17%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.59fd73988c",
+    "text": "Escucha y di de quién es la foto en TU ofrenda.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.dfb02868df",
+    "text": "En mi ofrenda hay una foto de Frida Kahlo.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.dfb02868df.lento",
+    "text": "En mi ofrenda hay una foto de Frida Kahlo.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "xochitl.ea212763d8",
+    "text": "El Día de Muertos no es Halloween. Es una fiesta para recordar con cariño a la familia.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.903664566e",
+    "text": "En México, el uno de noviembre las familias recuerdan a los niños que ya no están, y el dos, a los adultos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.984a72ef76",
+    "text": "En la ofrenda hay fotos, velas, flores, pan de muerto y la comida favorita de los muertos.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a660d5167b",
+    "text": "Los pétalos de cempasúchil hacen un camino de color naranja. Según la tradición, este camino guía a los muertos hasta su casa.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d3adf249c3",
+    "text": "No es Halloween: es una fiesta alegre, con música, colores y comida.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.d59e75acb7",
+    "text": "Desde 2008, esta tradición es Patrimonio Cultural Inmaterial de la Humanidad.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.a52a626429",
+    "text": "El Día de Muertos es una fiesta que da miedo, como Halloween.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9b0f931b76",
+    "text": "En una ofrenda hay fotos, velas y flores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.20edaad906",
+    "text": "Los alebrijes son animales fantásticos de muchos colores.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "beto.7bca657dab",
+    "text": "Soy Beto y hago alebrijes en Oaxaca. Mis alebrijes son animales fantásticos de madera. Los pinto con muchos colores: rojo, azul, verde, amarillo y morado. ¡No hay dos alebrijes iguales!",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "narrador.6b5c73edbc",
+    "text": "¿Qué hace Beto?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.8642e05285",
+    "text": "¿De qué son los alebrijes de Beto?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.98a55ef7a3",
+    "text": "¿Hay dos alebrijes iguales?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "xochitl.620419f3ba",
+    "text": "La calavera de azúcar tiene un nombre escrito y es para una persona de la familia. No da miedo: es dulce y de colores. La Catrina es una calavera elegante con un sombrero grande.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.2838b9c06e",
+    "text": "¿De qué es la calavera?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.935b2ca10d",
+    "text": "¿Da miedo la calavera?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.eed66d5203",
+    "text": "¿Qué lleva la Catrina?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "xochitl.87a119c8bb",
+    "text": "En Oaxaca, muchas familias van al cementerio con flores y velas, y pasan la noche juntas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "beto.f2289e5ffa",
+    "text": "Mi alebrije es un jaguar azul y amarillo. ¿Cómo es tu animal fantástico?",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "viajero.4341f7b2d0",
+    "text": "Mi animal es grande y azul.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "beto.2c7ffd7269",
+    "text": "¡Qué padre! Un animal grande y azul, como el mar.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "viajero.0d6b06bbf4",
+    "text": "Mi animal lleva gafas y un sombrero.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "beto.61a0663854",
+    "text": "Jaja, ¡un animal elegante! Me gusta.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "viajero.e87938c47b",
+    "text": "Mi animal se llama doce años.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "beto.358b90c36b",
+    "text": "Jaja… eso no es un nombre.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "xochitl.567c3f7f21",
+    "text": "El Día de Muertos es una fiesta alegre.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.54b29c0860",
+    "text": "Escucha y di qué fiesta celebras TÚ con tu familia.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.6271674f5e",
+    "text": "En mi familia celebramos la Navidad.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.6271674f5e.lento",
+    "text": "En mi familia celebramos la Navidad.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.de7dbb5f54",
+    "text": "Sin recuerdos, no hay fiesta. Voy a apagar todas las velas de Oaxaca.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.4bb7d908f6",
+    "text": "¿Qué es una ofrenda?",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.79074a1b94",
+    "text": "Es un altar con fotos, velas y flores para recordar a la familia.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.1f552035e1",
+    "text": "¡Grr! Una vela más se enciende…",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.abd0dee7b7",
+    "text": "Es un animal fantástico de colores.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.7b599d40c4",
+    "text": "Eso es un alebrije, no una ofrenda.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.049f694dae",
+    "text": "Es una calavera de azúcar.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.19aa2076b9",
+    "text": "La calavera está en la ofrenda, pero no es la ofrenda.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "sombra.a79265c98b",
+    "text": "¿Cómo es la flor de la ofrenda?",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.01714e5d15",
+    "text": "Es una flor naranja y amarilla: el cempasúchil.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.866ca19484",
+    "text": "¡Aaah! Otra vela encendida…",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.d0c209a4bf",
+    "text": "Es una flor azul y gris.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.8c49640d06",
+    "text": "No. Es naranja y amarilla, como el sol.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "viajero.c8cb9feedb",
+    "text": "Es una vela negra.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "sombra.6c8d90b753",
+    "text": "Una vela no es una flor.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "xochitl.d782c49c17",
+    "text": "En mi casa hay una ofrenda con diez velas y flores naranjas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.ea741050c5",
+    "text": "Las velas de mi ofrenda son blancas.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "beto.8e5c27b3f5",
+    "text": "Los alebrijes son de muchos colores.",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "xochitl.6385f20be7",
+    "text": "Nosotros celebramos el Día de Muertos en familia.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "beto.57256fc5e7",
+    "text": "nosotros comemos",
+    "voice": "es-MX-JorgeNeural",
+    "rate": "+2%",
+    "pitch": "-4Hz"
+  },
+  {
+    "key": "xochitl.7498ca1604",
+    "text": "Mi familia come pan de muerto en noviembre.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "remedios.debae486cf",
+    "text": "La ofrenda tiene velas y flores.",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "-14%",
+    "pitch": "-18Hz"
+  },
+  {
+    "key": "xochitl.da7e8fe6aa",
+    "text": "Hola, soy Xóchitl. Tengo once años y vivo en Oaxaca. Soy baja y delgada, y tengo el pelo largo y negro. Hoy llevo un vestido blanco con flores. Estoy muy contenta: ¡hoy es la fiesta!",
+    "voice": "es-MX-DaliaNeural",
+    "rate": "+8%",
+    "pitch": "+30Hz"
+  },
+  {
+    "key": "narrador.ce6142926c",
+    "text": "¿Cuántos años tiene Xóchitl?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.65dae0b16c",
+    "text": "¿Cómo tiene el pelo?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.e5adb358ac",
+    "text": "¿Cómo está hoy?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "sombra.4ab95247fe",
+    "text": "El dos de noviembre.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-18%",
+    "pitch": "-45Hz"
+  },
+  {
+    "key": "narrador.7336da9519",
+    "text": "Halloween y el Día de Muertos son la misma fiesta.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "viajero.f5beb8f943",
+    "text": "Hola, me llamo Álex. Hoy celebro el Día de Muertos.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.f5beb8f943.lento",
+    "text": "Hola, me llamo Álex. Hoy celebro el Día de Muertos.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   }
 ]

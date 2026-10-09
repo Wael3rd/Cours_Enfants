@@ -25,11 +25,13 @@ export function loadCharacters() {
   return loadJSON(join(CONTENT_DIR, 'characters.json'));
 }
 
+/** Unites triees par numero ; les unites EVENEMENT (fichiers eNN.json, numero 0) viennent en dernier. */
 export function loadUnits() {
   return readdirSync(UNITS_DIR)
-    .filter((f) => /^u\d\d\.json$/.test(f))
+    .filter((f) => /^[ue]\d\d\.json$/.test(f))
     .sort()
-    .map((f) => ({ file: f, data: loadJSON(join(UNITS_DIR, f)) }));
+    .map((f) => ({ file: f, data: loadJSON(join(UNITS_DIR, f)) }))
+    .sort((a, b) => (a.data.evento ? 1 : 0) - (b.data.evento ? 1 : 0) || a.file.localeCompare(b.file));
 }
 
 /** Normalisation pour comparer des reponses vocales / dictees (casse, ponctuation ; accents conserves). */

@@ -250,7 +250,7 @@ export default function build() {
       flash('mayor', 'pequeno', 'grande'),
       lcV('cocina', ['cocina', 'dormitorio', 'bano']),
       match(['casa', 'salon', 'cocina', 'dormitorio', 'bano', 'jardin']),
-      lcT('En mi casa hay un patio con flores.', 'abuela_carmen', ['Hay un patio en la casa.', 'Hay un jardín en la casa.', 'No hay patio en la casa.'], 0),
+      lcT('En mi casa hay un patio con flores.', 'abuela_carmen', ['La casa de Carmen tiene un patio.', 'La casa de Carmen tiene un jardín.', 'La casa de Carmen no tiene patio.'], 0),
       read('La casa de mi abuela es grande. Hay un salón, una cocina, tres dormitorios y un patio con flores. En el patio comemos todos los domingos. Mi abuela es artista y su taller está en la casa.', 'marina',
         'La maison de ma grand-mère est grande. Il y a un salon, une cuisine, trois chambres et un patio avec des fleurs. Dans le patio, nous mangeons tous les dimanches. Ma grand-mère est artiste et son atelier est dans la maison.', [
           ['¿Cómo es la casa?', 'Comment est la maison ?', ['Grande.', 'Pequeña.', 'Muy mayor.'], 0],
@@ -267,12 +267,11 @@ export default function build() {
         ['Mi casa se llama jardín.', 0, 'Ja, ja… Una casa con nombre de planta.', 'Haha… Une maison avec un nom de plante.', 'Ma maison s’appelle jardin.'],
         ['Tengo una casa de doce años.', 0, 'Una casa de doce años… ¡es nueva!', 'Une maison de douze ans… elle est neuve !', 'J’ai une maison de douze ans.'],
       ]),
-      writeFree('Mi casa es ___. Hay ___ dormitorios y un ___.', [
+      writeFree('Mi casa es ___. En mi casa hay ___.', [
         { id: 'adjetivo', pista: 'Comment est ta maison ? (grande, pequeña…)', tipo: 'texto' },
-        { id: 'dormitorios', pista: 'Le nombre de chambres', tipo: 'numero' },
-        { id: 'lugar', pista: 'Une autre pièce, au masculin car il y a « un » (salón, baño, jardín, patio…)', tipo: 'texto' },
-      ], 'Mi casa es grande. Hay tres dormitorios y un salón.', 'Ma maison est grande. Il y a trois chambres et un salon.'),
-      speak('En mi casa hay un salón y una cocina.', 'marina', { tr: 'Dans ma maison, il y a un salon et une cuisine.', hechizo: ['Hechizo de la casa', 'Las paredes se llenan de muebles dorados'] }),
+        { id: 'hay', pista: 'Ce qu’il y a chez toi, avec l’article ou le nombre : un salón, una cocina, dos dormitorios, un jardín…', tipo: 'texto' },
+      ], 'Mi casa es grande. En mi casa hay un salón, una cocina y tres dormitorios.', 'Ma maison est grande. Chez moi, il y a un salon, une cuisine et trois chambres.'),
+      speak('En mi casa hay un salón.', 'viajero', { libre: 'un salón', es: 'Escucha y di una cosa que hay en TU casa.', fr: 'Écoute et dis une pièce qu’il y a chez TOI (avec un / una : una cocina, un baño…).', tr: 'Chez moi, il y a un salon. (dis ce qu’il y a chez toi)', hechizo: ['Hechizo de la casa', 'Las paredes se llenan de muebles dorados'] }),
     ]));
 
   // 6 — Diálogo
@@ -301,11 +300,11 @@ export default function build() {
         ['Mi familia es un perro.', 0, 'Un perro es un buen amigo, pero no es toda la familia.', 'Un chien est un bon ami, mais pas toute la famille.', 'Ma famille, c’est un chien.'],
         ['Hola, me llamo Marina.', 0, '¡Marina me llamo yo! ¡No me copies!', 'Marina, c’est moi ! Ne me copie pas !', 'Salut, je m’appelle Marina.'],
       ]),
-      lcT('Mi hermano Pablo tiene ocho años y también tiene un gato.', 'marina', ['Pablo tiene ocho años y un gato.', 'Pablo tiene doce años y un perro.', 'Pablo tiene ocho años y un perro.'], 0),
-      lcT('Mi gato se llama Churro y mi prima se llama Marina.', 'lola', ['El gato se llama Marina.', 'El gato se llama Churro.', 'La prima se llama Churro.'], 1),
+      lcT('Mi hermano Pablo tiene ocho años y también tiene un gato.', 'marina', ['El hermano de Marina tiene ocho años y un gato.', 'El hermano de Marina tiene doce años y un perro.', 'El hermano de Marina tiene ocho años y un perro.'], 0),
+      lcT('Mi gato se llama Churro y mi prima se llama Marina.', 'lola', ['El gato de Lola se llama Marina.', 'El gato de Lola se llama Churro.', 'La prima de Lola se llama Churro.'], 1),
       reord('¿Cuántos hermanos tienes?', 'lola', { tr: 'Combien de frères et sœurs as-tu ?' }),
-      reord('Mi familia vive en París.', 'viajero', { tr: 'Ma famille habite à Paris.' }),
-      fill('Mi madre y mi padre son mis ___.', 'padres', 'marina', { opts: ['padres', 'hermanos', 'primos'], tr: 'Ma mère et mon père sont mes parents.' }),
+      speak('Mi madre se llama Claire.', 'viajero', { nombre: 'Claire', es: 'Escucha y di cómo se llama TU madre.', fr: 'Écoute et dis comment s’appelle TA mère.', tr: 'Ma mère s’appelle Claire. (dis le prénom de ta mère)', hechizo: ['Hechizo de la madre', 'Una hoja del árbol se ilumina'] }),
+      speak('Tengo un hermano.', 'viajero', { libre: 'un hermano', acept: ['no tengo hermanos'], es: 'Escucha y di cuántos hermanos tienes TÚ.', fr: 'Écoute et dis combien de frères et sœurs tu as TOI (tengo dos hermanas… ou no tengo hermanos).', tr: 'J’ai un frère. (dis ta vraie situation)', hechizo: ['Hechizo de los hermanos', 'Dos hojas más aparecen en el árbol'] }),
       fill('Yo tengo un gato y Lola ___ tiene un gato.', 'también', 'marina', { opts: ['también', 'cuántos', 'mayor'], tr: 'J’ai un chat et Lola a aussi un chat.' }),
       fill('Mis abuelos ___ en Sevilla.', 'viven', 'marina', { opts: ['vive', 'viven', 'vivimos'], tr: 'Mes grands-parents habitent à Séville.' }),
       dict('Tengo un hermano pequeño.', 'viajero', { acept: ['tengo un hermano pequeño'] }),
@@ -314,7 +313,7 @@ export default function build() {
         { id: 'familiar', pista: 'Une personne de ta famille (madre, padre, hermano, abuela, tío…)', tipo: 'texto' },
         { id: 'profesion', pista: 'Son métier, au féminin si c’est une femme (médica, cocinera, policía…)', tipo: 'texto' },
       ], 'En mi familia somos cuatro. Mi madre es médica.', 'Dans ma famille, nous sommes quatre. Ma mère est médecin.'),
-      speak('En mi familia somos cuatro.', 'marina', { tr: 'Dans ma famille, nous sommes quatre.', acept: ['en mi familia somos 4'], hechizo: ['Hechizo de la familia', 'Los nombres vuelven al árbol, uno a uno'] }),
+      speak('En mi familia somos cuatro.', 'viajero', { libre: 'cuatro', es: 'Escucha y di cuántos sois en TU familia.', fr: 'Écoute et dis combien vous êtes dans TA famille (somos tres, cinco…).', tr: 'Dans ma famille, nous sommes quatre. (dis le nombre chez toi)', acept: ['en mi familia somos 4'], hechizo: ['Hechizo de la familia', 'Los nombres vuelven al árbol, uno a uno'] }),
     ]));
 
   // 7 — Cultura

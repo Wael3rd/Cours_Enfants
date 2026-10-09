@@ -1,5 +1,121 @@
 [
  {
+  "id": "e01",
+  "numero": 0,
+  "titulo": "Día de Muertos",
+  "lugar": "Oaxaca",
+  "emoji": "💀",
+  "ejes": [
+   4,
+   6
+  ],
+  "periodo": "oct-nov",
+  "evento": {
+   "desde": "10-25",
+   "hasta": "11-02"
+  },
+  "pluma": {
+   "numero": 0,
+   "nombre": "Pluma de Cempasúchil",
+   "descripcion": {
+    "es": "Esta pluma es naranja como el cempasúchil. Es un regalo de la fiesta.",
+    "fr": "Cette plume est orange comme le cempasúchil. C’est un cadeau de la fête.",
+    "voz": "quetzal",
+    "audio": "quetzal.bbcdb679f8"
+   }
+  },
+  "nVocab": 19,
+  "quests": [
+   {
+    "id": "e01-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Oaxaca",
+    "emoji": "🕯️",
+    "intro": {
+     "es": "¡Hola, viajeros! Hoy empieza la fiesta más bonita del año.",
+     "fr": "Salut, voyageurs ! Aujourd’hui commence la plus belle fête de l’année.",
+     "voz": "xochitl",
+     "audio": "xochitl.8612540fde"
+    },
+    "pista": "Arrivée à Oaxaca pour le Día de Muertos : tu rencontres Xóchitl et tu découvres que cette fête est joyeuse, pas triste ni effrayante.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 9
+   },
+   {
+    "id": "e01-q02",
+    "tipo": "vocabulario",
+    "titulo": "La ofrenda",
+    "emoji": "🌼",
+    "intro": {
+     "es": "Bienvenidos a mi casa. Hoy preparamos la ofrenda para recordar a los que ya no están.",
+     "fr": "Bienvenue chez moi. Aujourd’hui, nous préparons l’ofrenda pour nous souvenir de ceux qui ne sont plus là.",
+     "voz": "remedios",
+     "audio": "remedios.7e68cb5bf1"
+    },
+    "pista": "L’ofrenda et ses éléments (bougies, cempasúchil, pain de muerto, papel picado) ; tu révises « hay », les couleurs et les nombres, et tu composes TON ofrenda.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "e01-q03",
+    "tipo": "cultura",
+    "titulo": "Una fiesta, no Halloween",
+    "emoji": "💀",
+    "intro": {
+     "es": "El Día de Muertos no es Halloween. Es una fiesta para recordar con cariño a la familia.",
+     "fr": "Le Jour des Morts, ce n’est pas Halloween. C’est une fête pour se souvenir de la famille avec tendresse.",
+     "voz": "xochitl",
+     "audio": "xochitl.ea212763d8"
+    },
+    "pista": "Une fête du souvenir, joyeuse et familiale : calaveras de sucre, Catrina, veillée au cimetière ; et l’artisanat d’Oaxaca, les alebrijes. Une tradition inscrite au patrimoine culturel immatériel de l’UNESCO (2008).",
+    "stats": [
+     "cultura",
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "e01-q04",
+    "tipo": "desafio",
+    "titulo": "La Sombra y el olvido",
+    "emoji": "👤",
+    "intro": {
+     "es": "Sin recuerdos, no hay fiesta. Voy a apagar todas las velas de Oaxaca.",
+     "fr": "Sans souvenirs, pas de fête. Je vais éteindre toutes les bougies d’Oaxaca.",
+     "voz": "sombra",
+     "audio": "sombra.de7dbb5f54"
+    },
+    "pista": "Boss de l’événement : révision du Día de Muertos et des unités 1 à 4. Chaque bonne réponse rallume une bougie.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 8
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
   "id": "u01",
   "numero": 1,
   "titulo": "¡Hola! Me presento",
@@ -560,6 +676,196 @@
      "vidas": 8
     },
     "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u04",
+  "numero": 4,
+  "titulo": "¿Cómo eres?",
+  "lugar": "Ciudad de México",
+  "emoji": "🎨",
+  "ejes": [
+   1,
+   6
+  ],
+  "periodo": "oct-nov",
+  "pluma": {
+   "numero": 4,
+   "nombre": "Pluma del Autorretrato",
+   "descripcion": {
+    "es": "Cuatro plumas. Mis colores vuelven… ¡y vuelo más alto!",
+    "fr": "Quatre plumes. Mes couleurs reviennent… et je vole plus haut !",
+    "voz": "quetzal",
+    "audio": "quetzal.b279297192"
+   }
+  },
+  "nVocab": 58,
+  "quests": [
+   {
+    "id": "u04-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Coyoacán",
+    "emoji": "🌆",
+    "intro": {
+     "es": "¡Bienvenidos a Coyoacán! Aquí empieza su aventura en México.",
+     "fr": "Bienvenue à Coyoacán ! C’est ici que commence votre aventure au Mexique. (Au Mexique, on dit « ustedes » pour « vous », même entre amis ; en Espagne : « vuestra aventura ».)",
+     "voz": "mateo",
+     "audio": "mateo.c4716d4092"
+    },
+    "pista": "Arrivée à Mexico : tu rencontres Mateo et Valentina, et tu découvres le problème des autoportraits sans visage. Les PNJ parlent espagnol du Mexique : leurs mots qui diffèrent de l’Espagne sont signalés en français.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 11
+   },
+   {
+    "id": "u04-q02",
+    "tipo": "vocabulario",
+    "titulo": "Los colores de Coyoacán",
+    "emoji": "🎨",
+    "intro": {
+     "es": "¡Buenos días, jóvenes! Mi puesto tiene todos los colores de México.",
+     "fr": "Bonjour, les jeunes ! Mon étal a toutes les couleurs du Mexique.",
+     "voz": "lupita",
+     "audio": "lupita.7a8306ac60"
+    },
+    "pista": "Les couleurs, avec Doña Lupita au marché de Coyoacán ; découverte de l’accord de l’adjectif (negro, negra, negros, negras).",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u04-q03",
+    "tipo": "escucha",
+    "titulo": "¿Quién es quién?",
+    "emoji": "🕵️",
+    "intro": {
+     "es": "Yo describo a una persona y tú adivinas. ¿Jugamos?",
+     "fr": "Moi, je décris une personne et toi, tu devines. On joue ?",
+     "voz": "mateo",
+     "audio": "mateo.e806fb3e3d"
+    },
+    "pista": "Le portrait physique : cheveux, yeux, taille. Tu comprends des descriptions et tu décris ton propre visage.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u04-q04",
+    "tipo": "lectura",
+    "titulo": "La ropa del mercado",
+    "emoji": "👗",
+    "intro": {
+     "es": "¡Pasen, pasen! Tengo playeras, vestidos, rebozos… ¿Qué buscan?",
+     "fr": "Entrez, entrez ! J’ai des t-shirts (« playeras » au Mexique), des robes, des rebozos… Que cherchez-vous ?",
+     "voz": "lupita",
+     "audio": "lupita.88c068b0ce"
+    },
+    "pista": "Les vêtements et « llevar ». Mots qui changent : camiseta (Mexique : playera), chaqueta (chamarra), zapatillas (tenis), gafas (lentes).",
+    "stats": [
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u04-q05",
+    "tipo": "forja",
+    "titulo": "La Forja: ser, estar y llevar",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Ser, estar, llevar. Tres verbos. ¡Forja conmigo!",
+     "fr": "Ser, estar, llevar. Trois verbes. Forge avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.b9ead772b7"
+    },
+    "pista": "Introduction à ser / estar : ser pour dire qui on est et comment on est (¿cómo es?), estar pour dire comment on va et où l’on est (¿cómo está?, ¿dónde está?). Puis le présent de estar et de llevar.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u04-q06",
+    "tipo": "dialogo",
+    "titulo": "¿Cómo eres tú?",
+    "emoji": "💬",
+    "intro": {
+     "es": "Ahora cuéntame cómo eres tú y cómo estás hoy.",
+     "fr": "Maintenant, raconte-moi comment tu es, et comment tu vas aujourd’hui.",
+     "voz": "mateo",
+     "audio": "mateo.54384562b8"
+    },
+    "pista": "Le caractère (ser) et l’état du moment (estar) : dialogues, puis tu parles et écris sur TOI.",
+    "stats": [
+     "hablar",
+     "escribir",
+     "escuchar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u04-q07",
+    "tipo": "cultura",
+    "titulo": "Frida Kahlo y la Casa Azul",
+    "emoji": "🖼️",
+    "intro": {
+     "es": "Esta es la Casa Azul, la casa de Frida Kahlo. Hoy es un museo.",
+     "fr": "Voici la Casa Azul, la maison de Frida Kahlo. Aujourd’hui, c’est un musée.",
+     "voz": "valentina",
+     "audio": "valentina.32294a57df"
+    },
+    "pista": "Frida Kahlo (1907-1954), ses autoportraits et sa maison de Coyoacán ; puis, comme elle, tu fais TON autoportrait (à l’écrit et à l’oral).",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u04-q08",
+    "tipo": "desafio",
+    "titulo": "El retrato de la Sombra",
+    "emoji": "👤",
+    "intro": {
+     "es": "Sin cara, no hay retrato. Sin retrato, no hay nadie. Yo borro las caras.",
+     "fr": "Sans visage, pas de portrait. Sans portrait, personne. J’efface les visages.",
+     "voz": "sombra",
+     "audio": "sombra.304ad05488"
+    },
+    "pista": "Boss de Mexico : révision mixte des unités 1 à 4 (présentation, école, famille, description, vêtements, ser / estar) pour rendre leur visage aux portraits.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 9
+    },
+    "nSteps": 14
    }
   ]
  }

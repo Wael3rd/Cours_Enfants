@@ -128,5 +128,75 @@
     "emoji": "👶",
     "descripcion": "Tiene seis años y hace mil preguntas por minuto. Su mejor amigo es un gato naranja llamado Churro.",
     "tono": { "rate": "+6%", "pitch": "+48Hz" }
+  },
+  {
+    "id": "valentina",
+    "nombre": "Valentina Ruiz",
+    "rol": "Guía de la Casa Azul (museo de Frida Kahlo)",
+    "region": "Ciudad de México (Coyoacán)",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👩‍🎨",
+    "descripcion": "Joven guía de la Casa Azul. Pinta autorretratos en su tiempo libre y lleva siempre flores en el pelo, como Frida. Habla con calma y mucho cariño.",
+    "tono": { "rate": "-4%", "pitch": "+6Hz" }
+  },
+  {
+    "id": "mateo",
+    "nombre": "Mateo",
+    "rol": "Chico de Coyoacán, guía de la ciudad",
+    "region": "Ciudad de México (Coyoacán)",
+    "voz": "es-MX-JorgeNeural",
+    "emoji": "🧑‍🎤",
+    "descripcion": "Chico de doce años, delgado, alto y muy bromista, con gorra y lentes. Conoce cada calle de Coyoacán y habla con palabras mexicanas.",
+    "tono": { "rate": "+8%", "pitch": "+14Hz" }
+  },
+  {
+    "id": "chucho",
+    "nombre": "Don Chucho",
+    "rol": "Vendedor de esquites en la plaza de Coyoacán",
+    "region": "Ciudad de México (Coyoacán)",
+    "voz": "es-MX-JorgeNeural",
+    "emoji": "👨‍🍳",
+    "descripcion": "Señor mayor, bajito y muy simpático, con un sombrero de paja. Vende esquites en la Plaza Hidalgo desde hace cuarenta años y conoce a todo el barrio.",
+    "tono": { "rate": "-8%", "pitch": "-14Hz" }
+  },
+  {
+    "id": "lupita",
+    "nombre": "Doña Lupita",
+    "rol": "Vendedora de ropa tradicional en el mercado de Coyoacán",
+    "region": "Ciudad de México (Coyoacán)",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👩🏽",
+    "descripcion": "Vende blusas bordadas, rebozos y vestidos de muchos colores. Es muy trabajadora, se ríe mucho y siempre dice qué color le queda bien a cada persona.",
+    "tono": { "rate": "-10%", "pitch": "-12Hz" }
+  },
+  {
+    "id": "remedios",
+    "nombre": "Doña Remedios",
+    "rol": "Abuela de Oaxaca que prepara la ofrenda de su familia",
+    "region": "Oaxaca",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👵🏽",
+    "descripcion": "Prepara la ofrenda de su familia desde que era niña. Habla despacio y siempre sonríe cuando recuerda a los que ya no están.",
+    "tono": { "rate": "-14%", "pitch": "-18Hz" }
+  },
+  {
+    "id": "beto",
+    "nombre": "Beto",
+    "rol": "Artesano de alebrijes",
+    "region": "Oaxaca",
+    "voz": "es-MX-JorgeNeural",
+    "emoji": "🧑🏽‍🎨",
+    "descripcion": "Talla y pinta alebrijes de madera con todos los colores del arcoíris. Es tranquilo, serio al trabajar y muy gracioso cuando termina.",
+    "tono": { "rate": "+2%", "pitch": "-4Hz" }
+  },
+  {
+    "id": "xochitl",
+    "nombre": "Xóchitl",
+    "rol": "Niña de Oaxaca, guía de la fiesta",
+    "region": "Oaxaca",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👧🏽",
+    "descripcion": "Niña de once años, rápida y curiosa. Su nombre significa «flor» en náhuatl. Le encanta la fiesta del Día de Muertos y conoce todas sus tradiciones.",
+    "tono": { "rate": "+8%", "pitch": "+30Hz" }
   }
 ]

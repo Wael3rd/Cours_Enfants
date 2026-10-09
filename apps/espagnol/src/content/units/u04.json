@@ -1,0 +1,5071 @@
+{
+  "id": "u04",
+  "numero": 4,
+  "titulo": "¿Cómo eres?",
+  "lugar": "Ciudad de México",
+  "emoji": "🎨",
+  "ejes": [
+    1,
+    6
+  ],
+  "periodo": "oct-nov",
+  "objetivos": [
+    {
+      "es": "Describir mi aspecto físico y el de otra persona: pelo, ojos, altura.",
+      "fr": "Décrire mon apparence et celle d’une autre personne : cheveux, yeux, taille."
+    },
+    {
+      "es": "Decir qué ropa llevo y de qué color es.",
+      "fr": "Dire quels vêtements je porte et de quelle couleur ils sont."
+    },
+    {
+      "es": "Decir cómo soy (carácter) y cómo estoy hoy, con ser y estar.",
+      "fr": "Dire comment je suis (caractère) et comment je vais aujourd’hui, avec ser et estar."
+    },
+    {
+      "es": "Hacer concordar los adjetivos con el nombre: negro, negra, negros, negras.",
+      "fr": "Accorder les adjectifs avec le nom : negro, negra, negros, negras."
+    },
+    {
+      "es": "Escribir y decir mi autorretrato.",
+      "fr": "Écrire et dire mon autoportrait."
+    },
+    {
+      "es": "Conocer a Frida Kahlo, la Casa Azul y el barrio de Coyoacán.",
+      "fr": "Connaître Frida Kahlo, la Casa Azul et le quartier de Coyoacán."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "pelo",
+      "es": "pelo",
+      "fr": "cheveux (on dit aussi « cabello », surtout au Mexique)",
+      "genero": "m",
+      "emoji": "💇",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Marina tiene el pelo largo.",
+        "fr": "Marina a les cheveux longs.",
+        "voz": "narrador",
+        "audio": "narrador.e6fed81bd4"
+      },
+      "audio": "narrador.58a250ea36"
+    },
+    {
+      "id": "ojos",
+      "es": "ojos",
+      "fr": "yeux",
+      "genero": "m",
+      "emoji": "👀",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Tengo los ojos marrones.",
+        "fr": "J’ai les yeux marron.",
+        "voz": "narrador",
+        "audio": "narrador.516d896480"
+      },
+      "audio": "narrador.503ed17455"
+    },
+    {
+      "id": "gafas",
+      "es": "gafas",
+      "fr": "lunettes (au Mexique : « lentes »)",
+      "genero": "f",
+      "emoji": "👓",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mi profesor lleva gafas.",
+        "fr": "Mon prof porte des lunettes.",
+        "voz": "narrador",
+        "audio": "narrador.54b613380d"
+      },
+      "audio": "narrador.959d918a1c"
+    },
+    {
+      "id": "trenza",
+      "es": "trenza",
+      "fr": "tresse",
+      "genero": "f",
+      "plural": "trenzas",
+      "emoji": "🪢",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Frida lleva trenzas con flores.",
+        "fr": "Frida porte des tresses avec des fleurs.",
+        "voz": "narrador",
+        "audio": "narrador.e175051503"
+      },
+      "audio": "narrador.9046bbac44"
+    },
+    {
+      "id": "largo",
+      "es": "largo",
+      "fr": "long",
+      "genero": "m",
+      "femenino": "larga",
+      "emoji": "📏",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Tengo el pelo largo.",
+        "fr": "J’ai les cheveux longs.",
+        "voz": "narrador",
+        "audio": "narrador.63a871ae3b"
+      },
+      "audio": "narrador.5e11eb4ff1"
+    },
+    {
+      "id": "corto",
+      "es": "corto",
+      "fr": "court",
+      "genero": "m",
+      "femenino": "corta",
+      "emoji": "✂️",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Álex tiene el pelo corto.",
+        "fr": "Álex a les cheveux courts.",
+        "voz": "narrador",
+        "audio": "narrador.3753145f69"
+      },
+      "audio": "narrador.a523e5667a"
+    },
+    {
+      "id": "rizado",
+      "es": "rizado",
+      "fr": "bouclé (au Mexique, on dit souvent « chino » : el pelo chino)",
+      "genero": "m",
+      "femenino": "rizada",
+      "emoji": "🧑‍🦱",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Lola tiene el pelo rizado.",
+        "fr": "Lola a les cheveux bouclés.",
+        "voz": "narrador",
+        "audio": "narrador.677e57db59"
+      },
+      "audio": "narrador.24c9aefdbb"
+    },
+    {
+      "id": "alto",
+      "es": "alto",
+      "fr": "grand (de taille)",
+      "genero": "m",
+      "femenino": "alta",
+      "emoji": "🦒",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mateo es muy alto.",
+        "fr": "Mateo est très grand.",
+        "voz": "narrador",
+        "audio": "narrador.3421883766"
+      },
+      "audio": "narrador.ee24bfdc23"
+    },
+    {
+      "id": "bajo",
+      "es": "bajo",
+      "fr": "petit (de taille) ; « bajito » est plus gentil ; au Mexique, en familier : « chaparro »",
+      "genero": "m",
+      "femenino": "baja",
+      "ilustracion": "Un garçon petit debout à côté d’une grande porte",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mi tío es bajo, pero muy fuerte.",
+        "fr": "Mon oncle est petit, mais très fort.",
+        "voz": "narrador",
+        "audio": "narrador.e42d29107b"
+      },
+      "audio": "narrador.98973d5c9a"
+    },
+    {
+      "id": "delgado",
+      "es": "delgado",
+      "fr": "mince",
+      "genero": "m",
+      "femenino": "delgada",
+      "ilustracion": "Un garçon très mince, de profil, avec un grand sourire",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mateo es alto y delgado.",
+        "fr": "Mateo est grand et mince.",
+        "voz": "narrador",
+        "audio": "narrador.37c629a5db"
+      },
+      "audio": "narrador.31a9fdfdc6"
+    },
+    {
+      "id": "rubio",
+      "es": "rubio",
+      "fr": "blond (au Mexique, on dit souvent « güero / güera »)",
+      "genero": "m",
+      "femenino": "rubia",
+      "emoji": "👱",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mi prima es rubia.",
+        "fr": "Ma cousine est blonde.",
+        "voz": "narrador",
+        "audio": "narrador.2b39578ac2"
+      },
+      "audio": "narrador.8d11cdaad1"
+    },
+    {
+      "id": "castano",
+      "es": "castaño",
+      "fr": "châtain, brun",
+      "genero": "m",
+      "femenino": "castaña",
+      "emoji": "🌰",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Diego tiene el pelo castaño.",
+        "fr": "Diego a les cheveux châtains.",
+        "voz": "narrador",
+        "audio": "narrador.f0b41f55b0"
+      },
+      "audio": "narrador.ff70ad5670"
+    },
+    {
+      "id": "pelirrojo",
+      "es": "pelirrojo",
+      "fr": "roux",
+      "genero": "m",
+      "femenino": "pelirroja",
+      "emoji": "🧑‍🦰",
+      "tags": [
+        "fisico"
+      ],
+      "ejemplo": {
+        "es": "Mi amigo es pelirrojo.",
+        "fr": "Mon ami est roux.",
+        "voz": "narrador",
+        "audio": "narrador.708b70e7d2"
+      },
+      "audio": "narrador.09f3a960e6"
+    },
+    {
+      "id": "color",
+      "es": "color",
+      "fr": "couleur",
+      "genero": "m",
+      "plural": "colores",
+      "emoji": "🎨",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "¿De qué color es tu mochila?",
+        "fr": "De quelle couleur est ton sac à dos ?",
+        "voz": "narrador",
+        "audio": "narrador.473189b5aa"
+      },
+      "audio": "narrador.6dd0fe8001"
+    },
+    {
+      "id": "rojo",
+      "es": "rojo",
+      "fr": "rouge",
+      "genero": "m",
+      "femenino": "roja",
+      "emoji": "🔴",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Una falda roja.",
+        "fr": "Une jupe rouge.",
+        "voz": "narrador",
+        "audio": "narrador.f999e02580"
+      },
+      "audio": "narrador.af6c1a0ca2"
+    },
+    {
+      "id": "azul",
+      "es": "azul",
+      "fr": "bleu",
+      "genero": "mf",
+      "plural": "azules",
+      "emoji": "🔵",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "La Casa Azul es azul.",
+        "fr": "La Casa Azul est bleue.",
+        "voz": "narrador",
+        "audio": "narrador.b75205916c"
+      },
+      "audio": "narrador.1768d39c5b"
+    },
+    {
+      "id": "verde",
+      "es": "verde",
+      "fr": "vert",
+      "genero": "mf",
+      "plural": "verdes",
+      "emoji": "🟢",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Las plumas del Quetzal son verdes.",
+        "fr": "Les plumes du Quetzal sont vertes.",
+        "voz": "narrador",
+        "audio": "narrador.b415ee04ba"
+      },
+      "audio": "narrador.2030abee0f"
+    },
+    {
+      "id": "amarillo",
+      "es": "amarillo",
+      "fr": "jaune",
+      "genero": "m",
+      "femenino": "amarilla",
+      "emoji": "🟡",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "El sol es amarillo.",
+        "fr": "Le soleil est jaune.",
+        "voz": "narrador",
+        "audio": "narrador.cadd3ef94a"
+      },
+      "audio": "narrador.56815506e7"
+    },
+    {
+      "id": "naranja",
+      "es": "naranja",
+      "fr": "orange",
+      "genero": "mf",
+      "plural": "naranjas",
+      "emoji": "🟠",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Tengo una camiseta naranja.",
+        "fr": "J’ai un t-shirt orange.",
+        "voz": "narrador",
+        "audio": "narrador.8ae2674653"
+      },
+      "audio": "narrador.3cf3494082"
+    },
+    {
+      "id": "rosa_c",
+      "es": "rosa",
+      "fr": "rose",
+      "genero": "mf",
+      "emoji": "🌸",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Lola lleva una falda rosa.",
+        "fr": "Lola porte une jupe rose.",
+        "voz": "narrador",
+        "audio": "narrador.3297dfb686"
+      },
+      "audio": "narrador.5efc86ca88"
+    },
+    {
+      "id": "morado",
+      "es": "morado",
+      "fr": "violet",
+      "genero": "m",
+      "femenino": "morada",
+      "emoji": "🟣",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Las flores moradas son bonitas.",
+        "fr": "Les fleurs violettes sont jolies.",
+        "voz": "narrador",
+        "audio": "narrador.c2d1e954d4"
+      },
+      "audio": "narrador.4c6d6712aa"
+    },
+    {
+      "id": "negro",
+      "es": "negro",
+      "fr": "noir",
+      "genero": "m",
+      "femenino": "negra",
+      "emoji": "⚫",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Tengo un perro negro.",
+        "fr": "J’ai un chien noir.",
+        "voz": "narrador",
+        "audio": "narrador.3b8c10ba07"
+      },
+      "audio": "narrador.867268472c"
+    },
+    {
+      "id": "blanco",
+      "es": "blanco",
+      "fr": "blanc",
+      "genero": "m",
+      "femenino": "blanca",
+      "emoji": "⚪",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "La camisa es blanca.",
+        "fr": "La chemise est blanche.",
+        "voz": "narrador",
+        "audio": "narrador.3c6f9dbceb"
+      },
+      "audio": "narrador.062c2aa8b2"
+    },
+    {
+      "id": "gris",
+      "es": "gris",
+      "fr": "gris",
+      "genero": "mf",
+      "plural": "grises",
+      "emoji": "☁️",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Mi mochila es gris.",
+        "fr": "Mon sac à dos est gris.",
+        "voz": "narrador",
+        "audio": "narrador.61ed33bdec"
+      },
+      "audio": "narrador.28c94237bc"
+    },
+    {
+      "id": "marron",
+      "es": "marrón",
+      "fr": "marron (au Mexique, pour les yeux : « café » → los ojos cafés)",
+      "genero": "mf",
+      "plural": "marrones",
+      "emoji": "🟤",
+      "tags": [
+        "colores"
+      ],
+      "ejemplo": {
+        "es": "Mi gato es marrón.",
+        "fr": "Mon chat est marron.",
+        "voz": "narrador",
+        "audio": "narrador.33668fb367"
+      },
+      "audio": "narrador.512ade2d63"
+    },
+    {
+      "id": "ropa",
+      "es": "ropa",
+      "fr": "vêtements",
+      "genero": "f",
+      "emoji": "👚",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "En el mercado hay ropa de colores.",
+        "fr": "Au marché, il y a des vêtements colorés.",
+        "voz": "narrador",
+        "audio": "narrador.19519cfda2"
+      },
+      "audio": "narrador.9a5226551b"
+    },
+    {
+      "id": "camiseta",
+      "es": "camiseta",
+      "fr": "tee-shirt (au Mexique : « playera »)",
+      "genero": "f",
+      "plural": "camisetas",
+      "emoji": "👕",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Álex lleva una camiseta verde.",
+        "fr": "Álex porte un tee-shirt vert.",
+        "voz": "narrador",
+        "audio": "narrador.81fb47e4de"
+      },
+      "audio": "narrador.a269b5db2c"
+    },
+    {
+      "id": "pantalones",
+      "es": "pantalones",
+      "fr": "pantalon (souvent au pluriel : « unos pantalones » = un pantalon ; on dit aussi « un pantalón »)",
+      "genero": "m",
+      "emoji": "👖",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Mateo lleva pantalones negros.",
+        "fr": "Mateo porte un pantalon noir.",
+        "voz": "narrador",
+        "audio": "narrador.b857ed0c10"
+      },
+      "audio": "narrador.156564ef6d"
+    },
+    {
+      "id": "falda",
+      "es": "falda",
+      "fr": "jupe",
+      "genero": "f",
+      "plural": "faldas",
+      "ilustracion": "Une jupe rouge évasée qui tourne",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Marina lleva una falda azul.",
+        "fr": "Marina porte une jupe bleue.",
+        "voz": "narrador",
+        "audio": "narrador.9a4d287944"
+      },
+      "audio": "narrador.3cd22d8483"
+    },
+    {
+      "id": "vestido",
+      "es": "vestido",
+      "fr": "robe",
+      "genero": "m",
+      "plural": "vestidos",
+      "emoji": "👗",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Frida lleva un vestido largo.",
+        "fr": "Frida porte une robe longue.",
+        "voz": "narrador",
+        "audio": "narrador.e90e55e966"
+      },
+      "audio": "narrador.f50e2745e5"
+    },
+    {
+      "id": "camisa",
+      "es": "camisa",
+      "fr": "chemise",
+      "genero": "f",
+      "plural": "camisas",
+      "emoji": "👔",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Mi padre lleva una camisa blanca.",
+        "fr": "Mon père porte une chemise blanche.",
+        "voz": "narrador",
+        "audio": "narrador.f15a3094d7"
+      },
+      "audio": "narrador.90db2a49ff"
+    },
+    {
+      "id": "chaqueta",
+      "es": "chaqueta",
+      "fr": "veste (au Mexique : « chamarra »)",
+      "genero": "f",
+      "plural": "chaquetas",
+      "emoji": "🧥",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Lleva una chaqueta negra.",
+        "fr": "Il porte une veste noire.",
+        "voz": "narrador",
+        "audio": "narrador.7cd0b75f34"
+      },
+      "audio": "narrador.c0cc5ed98a"
+    },
+    {
+      "id": "zapatos",
+      "es": "zapatos",
+      "fr": "chaussures",
+      "genero": "m",
+      "plural": "zapatos",
+      "emoji": "👞",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Los zapatos de Rafa son marrones.",
+        "fr": "Les chaussures de Rafa sont marron.",
+        "voz": "narrador",
+        "audio": "narrador.2868c32c07"
+      },
+      "audio": "narrador.ae45f157a1"
+    },
+    {
+      "id": "zapatillas",
+      "es": "zapatillas",
+      "fr": "baskets (au Mexique : « tenis »)",
+      "genero": "f",
+      "emoji": "👟",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Álex lleva zapatillas blancas.",
+        "fr": "Álex porte des baskets blanches.",
+        "voz": "narrador",
+        "audio": "narrador.7dfd101d14"
+      },
+      "audio": "narrador.4cba31217c"
+    },
+    {
+      "id": "sombrero",
+      "es": "sombrero",
+      "fr": "chapeau",
+      "genero": "m",
+      "plural": "sombreros",
+      "emoji": "👒",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Don Ignacio lleva un sombrero.",
+        "fr": "Don Ignacio porte un chapeau.",
+        "voz": "narrador",
+        "audio": "narrador.c2b2858583"
+      },
+      "audio": "narrador.9e7abfb6c2"
+    },
+    {
+      "id": "gorra",
+      "es": "gorra",
+      "fr": "casquette",
+      "genero": "f",
+      "plural": "gorras",
+      "emoji": "🧢",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Mateo lleva una gorra azul.",
+        "fr": "Mateo porte une casquette bleue.",
+        "voz": "narrador",
+        "audio": "narrador.ab5746aded"
+      },
+      "audio": "narrador.f3d4f3105a"
+    },
+    {
+      "id": "blusa",
+      "es": "blusa",
+      "fr": "chemisier, blouse (au Mexique, souvent brodée de fleurs)",
+      "genero": "f",
+      "plural": "blusas",
+      "ilustracion": "Une blouse blanche brodée de fleurs colorées (style mexicain)",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Lupita lleva una blusa con flores.",
+        "fr": "Lupita porte une blouse avec des fleurs.",
+        "voz": "lupita",
+        "audio": "lupita.c7525d10f3"
+      },
+      "audio": "narrador.17d8f112ce"
+    },
+    {
+      "id": "rebozo",
+      "es": "rebozo",
+      "fr": "rebozo : grand châle mexicain en tissu",
+      "genero": "m",
+      "plural": "rebozos",
+      "ilustracion": "Un rebozo bleu à franges posé sur les épaules d’une femme",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "El rebozo es una prenda tradicional de México.",
+        "fr": "Le rebozo est un vêtement traditionnel du Mexique.",
+        "voz": "lupita",
+        "audio": "lupita.d6e12bc23a"
+      },
+      "audio": "lupita.4bb073a971",
+      "voz": "lupita"
+    },
+    {
+      "id": "llevar",
+      "es": "llevar",
+      "fr": "porter (un vêtement) ; aussi emporter, apporter",
+      "emoji": "🎽",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Llevo una camiseta roja.",
+        "fr": "Je porte un tee-shirt rouge.",
+        "voz": "narrador",
+        "audio": "narrador.d19db251e4"
+      },
+      "audio": "narrador.14fdf15fe4"
+    },
+    {
+      "id": "simpatico",
+      "es": "simpático",
+      "fr": "sympathique",
+      "genero": "m",
+      "femenino": "simpática",
+      "emoji": "😊",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Mateo es muy simpático.",
+        "fr": "Mateo est très sympathique.",
+        "voz": "narrador",
+        "audio": "narrador.5a899898e2"
+      },
+      "audio": "narrador.df11297084"
+    },
+    {
+      "id": "divertido",
+      "es": "divertido",
+      "fr": "drôle, amusant",
+      "genero": "m",
+      "femenino": "divertida",
+      "emoji": "🤣",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Mi tío Rafa es muy divertido.",
+        "fr": "Mon oncle Rafa est très drôle.",
+        "voz": "narrador",
+        "audio": "narrador.b4dcd02b33"
+      },
+      "audio": "narrador.d8e42de78b"
+    },
+    {
+      "id": "timido",
+      "es": "tímido",
+      "fr": "timide",
+      "genero": "m",
+      "femenino": "tímida",
+      "emoji": "😳",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Diego es un poco tímido.",
+        "fr": "Diego est un peu timide.",
+        "voz": "narrador",
+        "audio": "narrador.19a182d335"
+      },
+      "audio": "narrador.f53a820b63"
+    },
+    {
+      "id": "serio",
+      "es": "serio",
+      "fr": "sérieux",
+      "genero": "m",
+      "femenino": "seria",
+      "emoji": "🧐",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Doña Pilar es seria.",
+        "fr": "Doña Pilar est sérieuse.",
+        "voz": "narrador",
+        "audio": "narrador.3f06dd58fa"
+      },
+      "audio": "narrador.ee6093aff4"
+    },
+    {
+      "id": "valiente",
+      "es": "valiente",
+      "fr": "courageux",
+      "genero": "mf",
+      "plural": "valientes",
+      "emoji": "🦁",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "El Quetzal es muy valiente.",
+        "fr": "Le Quetzal est très courageux.",
+        "voz": "narrador",
+        "audio": "narrador.9e95fea1a3"
+      },
+      "audio": "narrador.b4755a1a37"
+    },
+    {
+      "id": "inteligente",
+      "es": "inteligente",
+      "fr": "intelligent",
+      "genero": "mf",
+      "plural": "inteligentes",
+      "emoji": "🧠",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Marina es muy inteligente.",
+        "fr": "Marina est très intelligente.",
+        "voz": "narrador",
+        "audio": "narrador.4f5521b0e1"
+      },
+      "audio": "narrador.a1d7da7cc0"
+    },
+    {
+      "id": "trabajador",
+      "es": "trabajador",
+      "fr": "travailleur",
+      "genero": "m",
+      "femenino": "trabajadora",
+      "emoji": "💪",
+      "tags": [
+        "caracter"
+      ],
+      "ejemplo": {
+        "es": "Mi madre es muy trabajadora.",
+        "fr": "Ma mère est très travailleuse.",
+        "voz": "narrador",
+        "audio": "narrador.1871428274"
+      },
+      "audio": "narrador.d0f165304d"
+    },
+    {
+      "id": "estar",
+      "es": "estar",
+      "fr": "être (comment on va, où l’on se trouve)",
+      "emoji": "📍",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Hoy estoy en Coyoacán.",
+        "fr": "Aujourd’hui, je suis à Coyoacán.",
+        "voz": "narrador",
+        "audio": "narrador.d35d56fd96"
+      },
+      "audio": "narrador.c72ef9660b"
+    },
+    {
+      "id": "contento",
+      "es": "contento",
+      "fr": "content",
+      "genero": "m",
+      "femenino": "contenta",
+      "emoji": "😁",
+      "tags": [
+        "estados"
+      ],
+      "ejemplo": {
+        "es": "Hoy estoy muy contento.",
+        "fr": "Aujourd’hui, je suis très content.",
+        "voz": "narrador",
+        "audio": "narrador.0ffff9494e"
+      },
+      "audio": "narrador.6b27eba93f"
+    },
+    {
+      "id": "triste",
+      "es": "triste",
+      "fr": "triste",
+      "genero": "mf",
+      "plural": "tristes",
+      "emoji": "😢",
+      "tags": [
+        "estados"
+      ],
+      "ejemplo": {
+        "es": "Lola está triste.",
+        "fr": "Lola est triste.",
+        "voz": "narrador",
+        "audio": "narrador.e13eaffb82"
+      },
+      "audio": "narrador.f47590ee58"
+    },
+    {
+      "id": "cansado",
+      "es": "cansado",
+      "fr": "fatigué",
+      "genero": "m",
+      "femenino": "cansada",
+      "emoji": "😴",
+      "tags": [
+        "estados"
+      ],
+      "ejemplo": {
+        "es": "Estoy cansado después del viaje.",
+        "fr": "Je suis fatigué après le voyage.",
+        "voz": "narrador",
+        "audio": "narrador.c1d6994239"
+      },
+      "audio": "narrador.bdbacf02bf"
+    },
+    {
+      "id": "enfadado",
+      "es": "enfadado",
+      "fr": "fâché (au Mexique : « enojado »)",
+      "genero": "m",
+      "femenino": "enfadada",
+      "emoji": "😠",
+      "tags": [
+        "estados"
+      ],
+      "ejemplo": {
+        "es": "Doña Pilar no está enfadada.",
+        "fr": "Doña Pilar n’est pas fâchée.",
+        "voz": "narrador",
+        "audio": "narrador.aba7e70566"
+      },
+      "audio": "narrador.bb16102f19"
+    },
+    {
+      "id": "autorretrato",
+      "es": "autorretrato",
+      "fr": "autoportrait",
+      "genero": "m",
+      "plural": "autorretratos",
+      "ilustracion": "Une femme aux sourcils épais, tresses et fleurs dans les cheveux, qui se peint devant un miroir",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Frida pinta muchos autorretratos.",
+        "fr": "Frida peint beaucoup d’autoportraits.",
+        "voz": "narrador",
+        "audio": "narrador.94ff0fe156"
+      },
+      "audio": "narrador.632f6e450e"
+    },
+    {
+      "id": "cuadro",
+      "es": "cuadro",
+      "fr": "tableau (peinture)",
+      "genero": "m",
+      "plural": "cuadros",
+      "emoji": "🖼️",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Hay un cuadro en la pared.",
+        "fr": "Il y a un tableau sur le mur.",
+        "voz": "narrador",
+        "audio": "narrador.b691f0bcac"
+      },
+      "audio": "narrador.20e722628d"
+    },
+    {
+      "id": "museo",
+      "es": "museo",
+      "fr": "musée",
+      "genero": "m",
+      "plural": "museos",
+      "emoji": "🏛️",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La Casa Azul es un museo.",
+        "fr": "La Casa Azul est un musée.",
+        "voz": "narrador",
+        "audio": "narrador.5c1233ff06"
+      },
+      "audio": "narrador.f62af2d0bf"
+    },
+    {
+      "id": "espejo",
+      "es": "espejo",
+      "fr": "miroir",
+      "genero": "m",
+      "plural": "espejos",
+      "emoji": "🪞",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Frida pinta con un espejo.",
+        "fr": "Frida peint avec un miroir.",
+        "voz": "narrador",
+        "audio": "narrador.c21723735d"
+      },
+      "audio": "narrador.0b2d106d9b"
+    },
+    {
+      "id": "flor",
+      "es": "flor",
+      "fr": "fleur",
+      "genero": "f",
+      "plural": "flores",
+      "emoji": "🌺",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Hay flores en el patio.",
+        "fr": "Il y a des fleurs dans le patio.",
+        "voz": "narrador",
+        "audio": "narrador.9dbf7010cc"
+      },
+      "audio": "narrador.4cb270f3d7"
+    },
+    {
+      "id": "loro",
+      "es": "loro",
+      "fr": "perroquet",
+      "genero": "m",
+      "plural": "loros",
+      "emoji": "🦜",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Frida tiene un loro en casa.",
+        "fr": "Frida a un perroquet chez elle.",
+        "voz": "narrador",
+        "audio": "narrador.faf26dbd4e"
+      },
+      "audio": "narrador.af715f9b7e"
+    },
+    {
+      "id": "pintar",
+      "es": "pintar",
+      "fr": "peindre",
+      "emoji": "🖌️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Frida pinta cuadros y autorretratos.",
+        "fr": "Frida peint des tableaux et des autoportraits.",
+        "voz": "narrador",
+        "audio": "narrador.51a9fb36a4"
+      },
+      "audio": "narrador.6efb2f764e"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_concordancia",
+      "titulo": {
+        "es": "Negro, negra, negros, negras",
+        "fr": "L’accord de l’adjectif"
+      },
+      "ejemplos": [
+        {
+          "es": "El gato es negro y la casa es blanca.",
+          "fr": "Le chat est noir et la maison est blanche.",
+          "voz": "lupita",
+          "audio": "lupita.184f5c54da",
+          "resaltar": [
+            "negro",
+            "blanca"
+          ]
+        },
+        {
+          "es": "Los libros son verdes.",
+          "fr": "Les livres sont verts.",
+          "voz": "mateo",
+          "audio": "mateo.8249bec269",
+          "resaltar": [
+            "verdes"
+          ]
+        },
+        {
+          "es": "Las flores son amarillas.",
+          "fr": "Les fleurs sont jaunes.",
+          "voz": "lupita",
+          "audio": "lupita.2864c03cdb",
+          "resaltar": [
+            "amarillas"
+          ]
+        },
+        {
+          "es": "Una casa azul y dos libros azules.",
+          "fr": "Une maison bleue et deux livres bleus.",
+          "voz": "valentina",
+          "audio": "valentina.ebf6244974",
+          "resaltar": [
+            "azul",
+            "azules"
+          ]
+        },
+        {
+          "es": "Álex es valiente y Marina es valiente.",
+          "fr": "Álex est courageux et Marina est courageuse.",
+          "voz": "marina",
+          "audio": "marina.7e6f13857a",
+          "resaltar": [
+            "valiente"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "El adjetivo cambia con el nombre: negro, negra, negros, negras. Azul y valiente no cambian en femenino. En plural, añadimos -s o -es.",
+        "fr": "L’adjectif change avec le nom : negro, negra, negros, negras. Azul et valiente ne changent pas au féminin. Au pluriel, on ajoute -s ou -es.",
+        "voz": "narrador",
+        "audio": "narrador.08a17e7202"
+      },
+      "pista": "L'adjectif s'accorde en genre ET en nombre avec le nom, et se place le plus souvent APRÈS lui (una casa blanca, ojos verdes). Adjectifs en -o : -o / -a / -os / -as. Adjectifs en -e ou en consonne (verde, valiente, inteligente, azul, gris) : même forme au masculin et au féminin, seulement -s / -es au pluriel (verdes, azules, grises). Deux exceptions à connaître : les adjectifs en -or ajoutent -a (trabajador → trabajadora) et les nationalités aussi (francés → francesa, español → española). « Rosa » et « naranja » ne changent pas au féminin (una falda rosa). Marrón perd son accent au pluriel : marrones.",
+      "tabla": {
+        "encabezado": [
+          "",
+          "masculino",
+          "femenino"
+        ],
+        "filas": [
+          [
+            "-o (singular)",
+            "negro",
+            "negra"
+          ],
+          [
+            "-o (plural)",
+            "negros",
+            "negras"
+          ],
+          [
+            "-e",
+            "verde · verdes",
+            "verde · verdes"
+          ],
+          [
+            "consonante",
+            "azul · azules",
+            "azul · azules"
+          ],
+          [
+            "-or",
+            "trabajador · trabajadores",
+            "trabajadora · trabajadoras"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_tener_pelo",
+      "titulo": {
+        "es": "Tengo el pelo largo",
+        "fr": "Décrire ses cheveux et ses yeux"
+      },
+      "ejemplos": [
+        {
+          "es": "Tengo el pelo corto y los ojos marrones.",
+          "fr": "J’ai les cheveux courts et les yeux marron.",
+          "voz": "viajero",
+          "audio": "viajero.f2716f6949",
+          "resaltar": [
+            "el pelo corto",
+            "los ojos marrones"
+          ]
+        },
+        {
+          "es": "Marina tiene el pelo largo y negro.",
+          "fr": "Marina a les cheveux longs et noirs.",
+          "voz": "marina",
+          "audio": "marina.f1495f9ab9",
+          "resaltar": [
+            "tiene el pelo"
+          ]
+        },
+        {
+          "es": "Valentina tiene los ojos verdes.",
+          "fr": "Valentina a les yeux verts.",
+          "voz": "valentina",
+          "audio": "valentina.ae4699b9b0",
+          "resaltar": [
+            "los ojos verdes"
+          ]
+        },
+        {
+          "es": "Mateo es alto y delgado.",
+          "fr": "Mateo est grand et mince.",
+          "voz": "mateo",
+          "audio": "mateo.37c629a5db",
+          "resaltar": [
+            "es alto"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para el pelo y los ojos decimos: tengo el pelo… y los ojos… Para la altura y el cuerpo usamos «ser»: soy alto, es delgado.",
+        "fr": "Pour les cheveux et les yeux, on dit : tengo el pelo… y los ojos… Pour la taille et la silhouette, on utilise « ser » : soy alto, es delgado.",
+        "voz": "narrador",
+        "audio": "narrador.81a8ddf625"
+      },
+      "pista": "Comme en français (j'ai les cheveux courts), l'espagnol met l'article défini : tengo el pelo corto, tengo los ojos verdes (pas « mi pelo »). L'adjectif suit le nom et s'accorde : el pelo castaño, los ojos verdes (pluriel). On peut aussi dire « soy rubio » avec ser. Au Mexique, rubio se dit souvent « güero / güera », pelo se dit aussi « cabello » et rizado « chino ». Taille et silhouette : ser (soy alto, es bajo, es delgada), jamais tener.",
+      "tabla": {
+        "encabezado": [
+          "Quién",
+          "Se dice"
+        ],
+        "filas": [
+          [
+            "yo",
+            "tengo el pelo corto"
+          ],
+          [
+            "tú",
+            "tienes los ojos verdes"
+          ],
+          [
+            "él / ella",
+            "tiene el pelo largo"
+          ],
+          [
+            "yo",
+            "soy alto · soy delgado"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_llevar",
+      "titulo": {
+        "es": "Llevo una camiseta roja",
+        "fr": "Dire ce qu’on porte : llevar"
+      },
+      "ejemplos": [
+        {
+          "es": "Llevo una camiseta roja.",
+          "fr": "Je porte un tee-shirt rouge.",
+          "voz": "viajero",
+          "audio": "viajero.d19db251e4",
+          "resaltar": [
+            "Llevo"
+          ]
+        },
+        {
+          "es": "¿Qué llevas hoy?",
+          "fr": "Qu’est-ce que tu portes aujourd’hui ?",
+          "voz": "marina",
+          "audio": "marina.877fc383ce",
+          "resaltar": [
+            "llevas"
+          ]
+        },
+        {
+          "es": "Frida lleva un vestido largo y flores en el pelo.",
+          "fr": "Frida porte une robe longue et des fleurs dans les cheveux.",
+          "voz": "valentina",
+          "audio": "valentina.99fbad0966",
+          "resaltar": [
+            "lleva"
+          ]
+        },
+        {
+          "es": "Mateo lleva gafas y una gorra azul.",
+          "fr": "Mateo porte des lunettes et une casquette bleue.",
+          "voz": "marina",
+          "audio": "marina.2d6f08af12",
+          "resaltar": [
+            "lleva"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «llevar» decimos qué ropa tenemos puesta: llevo, llevas, lleva. El color va después de la ropa y cambia: una falda roja, zapatos negros.",
+        "fr": "Avec « llevar », on dit quels vêtements on porte : llevo, llevas, lleva. La couleur vient après le vêtement et s’accorde : una falda roja, zapatos negros.",
+        "voz": "narrador",
+        "audio": "narrador.27ed7424a6"
+      },
+      "pista": "Llevar = porter (un vêtement) ; il veut aussi dire emporter / apporter (llevo mi mochila). Verbe régulier en -ar : llevo, llevas, lleva… Comme en français, on dit en général « llevo una camiseta roja » (je porte un tee-shirt rouge). Couleur après le nom et accordée : una falda roja, unos zapatos negros, camisas blancas. Au Mexique : playera (camiseta), chamarra (chaqueta), tenis (zapatillas), lentes (gafas).",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "llevar"
+        ],
+        "filas": [
+          [
+            "yo",
+            "llevo"
+          ],
+          [
+            "tú",
+            "llevas"
+          ],
+          [
+            "él / ella",
+            "lleva"
+          ],
+          [
+            "nosotros",
+            "llevamos"
+          ],
+          [
+            "vosotros",
+            "lleváis"
+          ],
+          [
+            "ellos / ellas",
+            "llevan"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_ser_estar",
+      "titulo": {
+        "es": "Ser y estar",
+        "fr": "Ser et estar : deux fois « être »"
+      },
+      "ejemplos": [
+        {
+          "es": "Frida es valiente.",
+          "fr": "Frida est courageuse.",
+          "voz": "valentina",
+          "audio": "valentina.fe253d6633",
+          "resaltar": [
+            "es"
+          ]
+        },
+        {
+          "es": "Hoy estoy cansado.",
+          "fr": "Aujourd’hui, je suis fatigué.",
+          "voz": "viajero",
+          "audio": "viajero.c1702ff7ac",
+          "resaltar": [
+            "estoy"
+          ]
+        },
+        {
+          "es": "Mateo es simpático, pero hoy está cansado.",
+          "fr": "Mateo est sympa, mais aujourd’hui il est fatigué.",
+          "voz": "valentina",
+          "audio": "valentina.0834aea792",
+          "resaltar": [
+            "es simpático",
+            "está cansado"
+          ]
+        },
+        {
+          "es": "La Casa Azul está en Coyoacán.",
+          "fr": "La Casa Azul est à Coyoacán.",
+          "voz": "valentina",
+          "audio": "valentina.8ee1d87e2c",
+          "resaltar": [
+            "está"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «ser» decimos quién es y cómo es una persona: es mexicano, es alto, es simpático. Con «estar» decimos cómo está hoy y dónde está: estoy cansado, está en Coyoacán.",
+        "fr": "Avec « ser », on dit qui est une personne et comment elle est : il est mexicain, grand, sympa. Avec « estar », on dit comment elle va aujourd’hui et où elle se trouve : je suis fatigué, il est à Coyoacán.",
+        "voz": "narrador",
+        "audio": "narrador.cfe0366fe9"
+      },
+      "pista": "Le français n'a qu'un verbe « être », l'espagnol en a deux. SER dit QUI est quelqu'un et COMMENT il EST : identité, nationalité, origine (soy francés, es de Coyoacán), métier (es médica), physique et caractère (es alto, es simpático), et aussi la date (hoy es lunes). ESTAR dit COMMENT on VA, l'état dans lequel on se trouve (estoy cansado, está contento, estoy bien), et OÙ se trouve quelqu'un ou quelque chose (está en Coyoacán). Le bon test : « ¿Cómo es? » (il est comment, quel genre de personne ?) → ser ; « ¿Cómo está? » (comment va-t-il ?) et « ¿Dónde está? » (où est-il ?) → estar. Attention : la règle « ser = permanent, estar = temporaire » se trompe souvent (on dit « hoy es lunes », « soy joven ») ; ne l'utilise pas. Erreur classique : « soy bien » est faux, on dit « estoy bien ». Estar : estoy, estás, está, estamos, estáis, están (accents sur estás, está, estáis, están).",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "ser",
+          "estar"
+        ],
+        "filas": [
+          [
+            "yo",
+            "soy",
+            "estoy"
+          ],
+          [
+            "tú",
+            "eres",
+            "estás"
+          ],
+          [
+            "él / ella",
+            "es",
+            "está"
+          ],
+          [
+            "nosotros",
+            "somos",
+            "estamos"
+          ],
+          [
+            "vosotros",
+            "sois",
+            "estáis"
+          ],
+          [
+            "ellos / ellas",
+            "son",
+            "están"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u04-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Coyoacán",
+      "emoji": "🌆",
+      "intro": {
+        "es": "¡Bienvenidos a Coyoacán! Aquí empieza su aventura en México.",
+        "fr": "Bienvenue à Coyoacán ! C’est ici que commence votre aventure au Mexique. (Au Mexique, on dit « ustedes » pour « vous », même entre amis ; en Espagne : « vuestra aventura ».)",
+        "voz": "mateo",
+        "audio": "mateo.c4716d4092"
+      },
+      "pista": "Arrivée à Mexico : tu rencontres Mateo et Valentina, et tu découvres le problème des autoportraits sans visage. Les PNJ parlent espagnol du Mexique : leurs mots qui diffèrent de l’Espagne sont signalés en français.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u04-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u04-intro",
+          "escena": {
+            "id": "u04-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 4 · ¿Cómo eres? · Ciudad de México",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée traverse l’océan jusqu’au Mexique et zoome sur Ciudad de México ; carte-titre « Capítulo 4 · ¿Cómo eres? · Ciudad de México ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 4 · ¿Cómo eres? · Ciudad de México",
+                "lineas": [
+                  {
+                    "es": "Capítulo cuatro: ¿cómo eres?",
+                    "fr": "Chapitre quatre : comment es-tu ?",
+                    "voz": "narrador",
+                    "audio": "narrador.e1b613beb7"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Coyoacán sous le soleil de fin d’après-midi : le Jardín Centenario et sa fontaine aux coyotes, le kiosque de la Plaza Hidalgo, les ruelles pavées et, au bout d’une rue, la Casa Azul d’un bleu cobalt intense, bordure de papel picado.",
+                "camara": "travelling lent dans la rue",
+                "lineas": [
+                  {
+                    "es": "Ciudad de México. Coyoacán, el barrio de Frida Kahlo.",
+                    "fr": "Mexico. Coyoacán, le quartier de Frida Kahlo.",
+                    "voz": "narrador",
+                    "audio": "narrador.55ea4e353c"
+                  },
+                  {
+                    "es": "Aquí, cada cara cuenta una historia.",
+                    "fr": "Ici, chaque visage raconte une histoire.",
+                    "voz": "narrador",
+                    "audio": "narrador.3bde1a79de"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u04-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Coyoacán es un barrio de Ciudad de México.",
+            "fr": "Coyoacán est un quartier de Mexico.",
+            "voz": "narrador",
+            "audio": "narrador.4d0604152f"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u04-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Ciudad de México está en Europa.",
+            "fr": "Mexico est en Europe.",
+            "voz": "narrador",
+            "audio": "narrador.1fbcdf4b96"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u04-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u04-historia",
+          "escena": {
+            "id": "u04-historia",
+            "tipo": "historia",
+            "titulo": "Los autorretratos sin cara",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Plaza Hidalgo de Coyoacán : vendeurs, ballons, pigeons. Le Quetzal sort du sac de Marina, ouvre grand les ailes, ses plumes sont plus vertes. Mateo, 12 ans, grand et mince, casquette bleue, arrive en trottinant.",
+                "camara": "plan large puis plan moyen sur Mateo",
+                "personajes": [
+                  "quetzal",
+                  "mateo",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "México… ¡Estoy en casa!",
+                    "fr": "Le Mexique… Je suis chez moi !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.cb0d8b84d6"
+                  },
+                  {
+                    "es": "¡Qué onda! Me llamo Mateo y soy de Coyoacán. ¿Ustedes son los viajeros?",
+                    "fr": "Salut ! (« ¡Qué onda! » = salut, familier mexicain). Je m’appelle Mateo et je suis de Coyoacán. Vous êtes les voyageurs ? (au Mexique, « ustedes » sert pour tous les « vous » pluriels, même entre amis ; en Espagne, on dirait « ¿Vosotros sois los viajeros? »)",
+                    "voz": "mateo",
+                    "audio": "mateo.3cb03433b9"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Mateo se présente en riant, Marina et Álex répondent : trois enfants dans la plaza, le Quetzal sur l’épaule de Marina.",
+                "camara": "champ / contre-champ",
+                "personajes": [
+                  "mateo",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Soy alto y delgado, y siempre llevo una gorra azul.",
+                    "fr": "Je suis grand et mince, et je porte toujours une casquette bleue.",
+                    "voz": "mateo",
+                    "audio": "mateo.c68a229295"
+                  },
+                  {
+                    "es": "Yo soy Marina. Tengo el pelo largo y negro. Y él es Álex.",
+                    "fr": "Moi, c’est Marina. J’ai les cheveux longs et noirs. Et lui, c’est Álex.",
+                    "voz": "marina",
+                    "audio": "marina.fe537644a1"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "La Casa Azul : murs cobalt, patio plein de plantes. Valentina, la guide, sort en courant, des fleurs dans les cheveux. À l’intérieur, des autoportraits dont les visages sont devenus des taches grises.",
+                "personajes": [
+                  "valentina",
+                  "sombra"
+                ],
+                "lineas": [
+                  {
+                    "es": "Por favor, necesito ayuda. Los autorretratos no tienen cara. ¡Y no hay colores!",
+                    "fr": "S’il vous plaît, j’ai besoin d’aide. Les autoportraits n’ont plus de visage. Et il n’y a plus de couleurs !",
+                    "voz": "valentina",
+                    "audio": "valentina.1905623ef1"
+                  },
+                  {
+                    "es": "Sin colores, no hay cara… Sin palabras, no hay retrato.",
+                    "fr": "Sans couleurs, pas de visage… Sans mots, pas de portrait.",
+                    "voz": "sombra",
+                    "audio": "sombra.61066f3e45"
+                  }
+                ],
+                "musica": "tension douce, guitare et marimba"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Gros plan sur le dernier tableau, vide : un reflet vert brille dans le cadre. Le Quetzal le montre du bec.",
+                "personajes": [
+                  "quetzal",
+                  "valentina"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma… está en el último autorretrato.",
+                    "fr": "La plume… est dans le dernier autoportrait.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.c9bdc53310"
+                  },
+                  {
+                    "es": "Para devolver las caras, tienen que decir cómo son las personas. ¡Vamos!",
+                    "fr": "Pour rendre les visages, il faut dire comment sont les personnes. Allons-y !",
+                    "voz": "valentina",
+                    "audio": "valentina.fe087261fa"
+                  }
+                ],
+                "musica": "thème d’aventure, marimba"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u04-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hola, me llamo Mateo. Tengo doce años y soy de Coyoacán.",
+            "voz": "mateo",
+            "audio": "mateo.42b1c5588c"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Mateo es un chico mexicano de doce años.",
+              "correcta": true
+            },
+            {
+              "texto": "Mateo es un chico español de trece años.",
+              "correcta": false
+            },
+            {
+              "texto": "Mateo es un chico mexicano de catorce años.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q01-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los autorretratos de Frida no tienen cara. ¡No hay colores!",
+            "voz": "valentina",
+            "audio": "valentina.4e8ec5c7d7"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los cuadros tienen muchos colores.",
+              "correcta": false
+            },
+            {
+              "texto": "Hay muchas caras en los cuadros.",
+              "correcta": false
+            },
+            {
+              "texto": "Los cuadros no tienen cara ni colores.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q01-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Quetzal está en México.",
+            "fr": "Le Quetzal est au Mexique.",
+            "voz": "narrador",
+            "audio": "narrador.b1d1fbc548"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u04-q01-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "mateo",
+          "replica": {
+            "es": "¡Qué onda! Me llamo Mateo. ¿Y tú, cómo te llamas?",
+            "fr": "Salut ! (« ¡Qué onda! » = salut, familier mexicain). Je m’appelle Mateo. Et toi, comment tu t’appelles ?",
+            "voz": "mateo",
+            "audio": "mateo.95283d0434"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.02503ba455"
+              },
+              "fr": "Je m’appelle Álex.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Mucho gusto, Álex! Bienvenido a Coyoacán.",
+                "fr": "Enchanté, Álex ! (« mucho gusto » est la formule habituelle au Mexique ; en Espagne, on dit plutôt « encantado »). Bienvenue à Coyoacán.",
+                "voz": "mateo",
+                "audio": "mateo.6b6ab0f792",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy Mateo.",
+                "voz": "viajero",
+                "audio": "viajero.55b842db28"
+              },
+              "fr": "Je suis Mateo.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú también eres Mateo? ¡Qué confusión!",
+                "fr": "Toi aussi tu es Mateo ? Quelle confusion !",
+                "voz": "mateo",
+                "audio": "mateo.9ea6e3f466",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Buenas noches.",
+                "voz": "viajero",
+                "audio": "viajero.69011223f6"
+              },
+              "fr": "Bonne nuit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Buenas noches? ¡Pero si es de día!",
+                "fr": "Bonne nuit ? Mais il fait jour !",
+                "voz": "mateo",
+                "audio": "mateo.6b4aca2b23",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q01-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "valentina",
+          "replica": {
+            "es": "Hola. Soy Valentina, la guía de la Casa Azul. ¿De dónde son ustedes?",
+            "fr": "Salut. Je suis Valentina, la guide de la Casa Azul. D’où venez-vous ?",
+            "voz": "valentina",
+            "audio": "valentina.b699aa35d6"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Yo soy de París y Marina es de Sevilla.",
+                "voz": "viajero",
+                "audio": "viajero.b4c388ffbb"
+              },
+              "fr": "Moi, je suis de Paris et Marina est de Séville.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Vienen de muy lejos.",
+                "fr": "Super ! Vous venez de très loin.",
+                "voz": "valentina",
+                "audio": "valentina.ee65db1025",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo París.",
+                "voz": "viajero",
+                "audio": "viajero.2159d854e0"
+              },
+              "fr": "Je m’appelle Paris.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas París? ¡Qué nombre tan bonito!",
+                "fr": "Tu t’appelles Paris ? Quel joli prénom !",
+                "voz": "valentina",
+                "audio": "valentina.f0d054fbb7",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Sí, pero ¿de dónde son?",
+                "fr": "Oui, mais vous venez d’où ?",
+                "voz": "valentina",
+                "audio": "valentina.6d50b95873",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q01-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Me",
+            "llamo",
+            "Álex",
+            "y",
+            "soy",
+            "francés."
+          ],
+          "habla": {
+            "es": "Me llamo Álex y soy francés.",
+            "voz": "viajero",
+            "audio": "viajero.e949fa4df7"
+          },
+          "fr": "Je m’appelle Álex et je suis français."
+        },
+        {
+          "id": "u04-q01-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Mucho gusto, me llamo Álex.",
+            "fr": "Enchanté, je m’appelle Álex. (dis ton prénom ; « mucho gusto » est très courant au Mexique)",
+            "voz": "viajero",
+            "audio": "viajero.84d7d692d9"
+          },
+          "aceptadas": [
+            "mucho gusto me llamo álex"
+          ],
+          "patrones": [
+            "mucho gusto me llamo {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la bienvenida",
+            "efecto": "Una lluvia de pétalos de colores cae sobre la plaza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u04-q02",
+      "tipo": "vocabulario",
+      "titulo": "Los colores de Coyoacán",
+      "emoji": "🎨",
+      "intro": {
+        "es": "¡Buenos días, jóvenes! Mi puesto tiene todos los colores de México.",
+        "fr": "Bonjour, les jeunes ! Mon étal a toutes les couleurs du Mexique.",
+        "voz": "lupita",
+        "audio": "lupita.7a8306ac60"
+      },
+      "pista": "Les couleurs, avec Doña Lupita au marché de Coyoacán ; découverte de l’accord de l’adjectif (negro, negra, negros, negras).",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u04-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "color",
+            "rojo",
+            "azul",
+            "verde",
+            "amarillo",
+            "naranja"
+          ]
+        },
+        {
+          "id": "u04-q02-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "azul",
+            "voz": "narrador",
+            "audio": "narrador.1768d39c5b"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "verde",
+              "correcta": false
+            },
+            {
+              "vocab": "azul",
+              "correcta": true
+            },
+            {
+              "vocab": "rojo",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q02-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "rosa_c",
+            "morado",
+            "negro",
+            "blanco",
+            "gris",
+            "marron"
+          ]
+        },
+        {
+          "id": "u04-q02-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "rojo"
+            },
+            {
+              "vocab": "azul"
+            },
+            {
+              "vocab": "verde"
+            },
+            {
+              "vocab": "amarillo"
+            },
+            {
+              "vocab": "naranja"
+            },
+            {
+              "vocab": "morado"
+            }
+          ]
+        },
+        {
+          "id": "u04-q02-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "morado",
+            "voz": "narrador",
+            "audio": "narrador.4c6d6712aa"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "rosa_c",
+              "correcta": false
+            },
+            {
+              "vocab": "gris",
+              "correcta": false
+            },
+            {
+              "vocab": "morado",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q02-s06",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es el color amarillo.",
+            "fr": "C’est la couleur jaune (amarillo).",
+            "voz": "narrador",
+            "audio": "narrador.eb01c0dbb7"
+          },
+          "correcta": true,
+          "imagen": "amarillo"
+        },
+        {
+          "id": "u04-q02-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es el color negro.",
+            "fr": "C’est la couleur noire (negro).",
+            "voz": "narrador",
+            "audio": "narrador.1930c74965"
+          },
+          "correcta": false,
+          "imagen": "blanco"
+        },
+        {
+          "id": "u04-q02-s08",
+          "tipo": "grammar_card",
+          "ref": "g_concordancia"
+        },
+        {
+          "id": "u04-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi gato es blanco y mi mochila es ___.",
+          "respuesta": "negra",
+          "opciones": [
+            "negro",
+            "negra",
+            "negras"
+          ],
+          "habla": {
+            "es": "Mi gato es blanco y mi mochila es negra.",
+            "voz": "lupita",
+            "audio": "lupita.079d0e1abe"
+          },
+          "fr": "Mon chat est blanc et mon sac à dos est noir. (la mochila → negra)"
+        },
+        {
+          "id": "u04-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Las mochilas de Marina son ___.",
+          "respuesta": "amarillas",
+          "opciones": [
+            "amarillo",
+            "amarilla",
+            "amarillas"
+          ],
+          "habla": {
+            "es": "Las mochilas de Marina son amarillas.",
+            "voz": "lupita",
+            "audio": "lupita.4142a8951c"
+          },
+          "fr": "Les sacs à dos de Marina sont jaunes."
+        },
+        {
+          "id": "u04-q02-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tengo dos mochilas ___.",
+          "respuesta": "azules",
+          "opciones": [
+            "azul",
+            "azules",
+            "azulas"
+          ],
+          "habla": {
+            "es": "Tengo dos mochilas azules.",
+            "voz": "mateo",
+            "audio": "mateo.09ec901625"
+          },
+          "fr": "J’ai deux sacs à dos bleus. (azul : pas de féminin, pluriel en -es)"
+        },
+        {
+          "id": "u04-q02-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi color favorito es el verde, como las plumas del Quetzal.",
+            "voz": "lupita",
+            "audio": "lupita.32c2ead243"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El color favorito de Lupita es el rojo.",
+              "correcta": false
+            },
+            {
+              "texto": "El color favorito de Lupita es el verde.",
+              "correcta": true
+            },
+            {
+              "texto": "El color favorito de Lupita es el amarillo.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q02-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lupita",
+          "replica": {
+            "es": "¿De qué color es tu mochila?",
+            "fr": "De quelle couleur est ton sac à dos ?",
+            "voz": "lupita",
+            "audio": "lupita.473189b5aa"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi mochila es azul.",
+                "voz": "viajero",
+                "audio": "viajero.974b9df745"
+              },
+              "fr": "Mon sac à dos est bleu.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bonito! Azul como la Casa Azul.",
+                "fr": "Que c’est joli ! Bleu comme la Casa Azul.",
+                "voz": "lupita",
+                "audio": "lupita.8f613a5ca7",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi mochila es una casa.",
+                "voz": "viajero",
+                "audio": "viajero.91cee748ae"
+              },
+              "fr": "Mon sac à dos est une maison.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una casa? ¡Qué mochila tan grande!",
+                "fr": "Une maison ? Quel grand sac à dos !",
+                "voz": "lupita",
+                "audio": "lupita.dfa98af295",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi mochila tiene doce años.",
+                "voz": "viajero",
+                "audio": "viajero.dbf8201b42"
+              },
+              "fr": "Mon sac à dos a douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Doce años… ¡qué mochila tan vieja!",
+                "fr": "Douze ans… quel vieux sac à dos !",
+                "voz": "lupita",
+                "audio": "lupita.f4f3e1b8f1",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q02-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU color favorito.",
+            "fr": "Écoute et dis quelle est TA couleur préférée (el verde, el rojo, el negro…).",
+            "voz": "narrador",
+            "audio": "narrador.44fad0b73d"
+          },
+          "objetivo": {
+            "es": "Mi color favorito es el azul.",
+            "fr": "Ma couleur préférée est le bleu. (dis la tienne)",
+            "voz": "viajero",
+            "audio": "viajero.c6b6ebae99"
+          },
+          "aceptadas": [
+            "mi color favorito es el azul"
+          ],
+          "patrones": [
+            "mi color favorito es el {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del color",
+            "efecto": "Tu color favorito ilumina el puesto"
+          }
+        },
+        {
+          "id": "u04-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe el color.",
+            "fr": "Écoute et écris la couleur.",
+            "voz": "narrador",
+            "audio": "narrador.ebbdf971c3"
+          },
+          "habla": {
+            "es": "amarillo",
+            "voz": "narrador",
+            "audio": "narrador.56815506e7"
+          },
+          "respuesta": "amarillo"
+        }
+      ]
+    },
+    {
+      "id": "u04-q03",
+      "tipo": "escucha",
+      "titulo": "¿Quién es quién?",
+      "emoji": "🕵️",
+      "intro": {
+        "es": "Yo describo a una persona y tú adivinas. ¿Jugamos?",
+        "fr": "Moi, je décris une personne et toi, tu devines. On joue ?",
+        "voz": "mateo",
+        "audio": "mateo.e806fb3e3d"
+      },
+      "pista": "Le portrait physique : cheveux, yeux, taille. Tu comprends des descriptions et tu décris ton propre visage.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u04-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "pelo",
+            "ojos",
+            "gafas",
+            "trenza",
+            "largo",
+            "corto",
+            "rizado"
+          ]
+        },
+        {
+          "id": "u04-q03-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "rizado",
+            "voz": "narrador",
+            "audio": "narrador.24c9aefdbb"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "largo",
+              "correcta": false
+            },
+            {
+              "vocab": "rizado",
+              "correcta": true
+            },
+            {
+              "vocab": "corto",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "alto",
+            "bajo",
+            "delgado",
+            "rubio",
+            "castano",
+            "pelirrojo"
+          ]
+        },
+        {
+          "id": "u04-q03-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "alto"
+            },
+            {
+              "vocab": "bajo"
+            },
+            {
+              "vocab": "delgado"
+            },
+            {
+              "vocab": "rubio"
+            },
+            {
+              "vocab": "castano"
+            },
+            {
+              "vocab": "pelirrojo"
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s05",
+          "tipo": "grammar_card",
+          "ref": "g_tener_pelo"
+        },
+        {
+          "id": "u04-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Mi amigo es bajo y pelirrojo.",
+            "voz": "mateo",
+            "audio": "mateo.f8a485478f"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "rubio",
+              "correcta": false
+            },
+            {
+              "vocab": "castano",
+              "correcta": false
+            },
+            {
+              "vocab": "pelirrojo",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Es una chica alta y delgada, con el pelo muy largo.",
+            "voz": "mateo",
+            "audio": "mateo.0b90abc611"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Es un chico bajo con el pelo corto.",
+              "correcta": false
+            },
+            {
+              "texto": "Es una chica con el pelo corto y rizado.",
+              "correcta": false
+            },
+            {
+              "texto": "Es una chica que no es baja y tiene el pelo largo.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Valentina tiene los ojos verdes.",
+            "voz": "marina",
+            "audio": "marina.ae4699b9b0"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los ojos de Valentina son azules.",
+              "correcta": false
+            },
+            {
+              "texto": "El pelo de Valentina es verde.",
+              "correcta": false
+            },
+            {
+              "texto": "Los ojos de Valentina son verdes.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tengo ___ pelo corto.",
+          "respuesta": "el",
+          "opciones": [
+            "el",
+            "la",
+            "mi"
+          ],
+          "habla": {
+            "es": "Tengo el pelo corto.",
+            "voz": "viajero",
+            "audio": "viajero.6cd98e089e"
+          },
+          "fr": "J’ai les cheveux courts."
+        },
+        {
+          "id": "u04-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina tiene los ojos ___.",
+          "respuesta": "marrones",
+          "opciones": [
+            "marrón",
+            "marrones",
+            "marrona"
+          ],
+          "habla": {
+            "es": "Marina tiene los ojos marrones.",
+            "voz": "marina",
+            "audio": "marina.0cf05aa53b"
+          },
+          "fr": "Marina a les yeux marron."
+        },
+        {
+          "id": "u04-q03-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mateo es alto y ___.",
+          "respuesta": "delgado",
+          "opciones": [
+            "delgados",
+            "delgada",
+            "delgado"
+          ],
+          "habla": {
+            "es": "Mateo es alto y delgado.",
+            "voz": "mateo",
+            "audio": "mateo.37c629a5db"
+          },
+          "fr": "Mateo est grand et mince."
+        },
+        {
+          "id": "u04-q03-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Valentina",
+            "tiene",
+            "el",
+            "pelo",
+            "largo",
+            "y",
+            "rizado."
+          ],
+          "habla": {
+            "es": "Valentina tiene el pelo largo y rizado.",
+            "voz": "marina",
+            "audio": "marina.acfe2f5847"
+          },
+          "fr": "Valentina a les cheveux longs et bouclés."
+        },
+        {
+          "id": "u04-q03-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "mateo",
+          "replica": {
+            "es": "Y tú, ¿cómo eres? Descríbete.",
+            "fr": "Et toi, comment es-tu ? Décris-toi.",
+            "voz": "mateo",
+            "audio": "mateo.292ff609e4"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy alto y tengo el pelo corto.",
+                "voz": "viajero",
+                "audio": "viajero.ff744527f4"
+              },
+              "fr": "Je suis grand et j’ai les cheveux courts.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Ya veo cómo eres.",
+                "fr": "Parfait ! Je vois comment tu es.",
+                "voz": "mateo",
+                "audio": "mateo.b3522b64e2",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo los ojos verdes y el pelo castaño.",
+                "voz": "viajero",
+                "audio": "viajero.6a7e122850"
+              },
+              "fr": "J’ai les yeux verts et les cheveux châtains.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué padre! Ya veo cómo eres.",
+                "fr": "Trop bien ! (« padre » = génial, familier mexicain). Je vois comment tu es.",
+                "voz": "mateo",
+                "audio": "mateo.296ee72f32",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo alto y soy el pelo.",
+                "voz": "viajero",
+                "audio": "viajero.deec18dd91"
+              },
+              "fr": "J’ai grand et je suis les cheveux.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no entiendo. Con la altura usamos «ser».",
+                "fr": "Mmm… je ne comprends pas. Pour la taille, on utilise « ser ».",
+                "voz": "mateo",
+                "audio": "mateo.5e63a179d9",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q03-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Tiene el pelo largo y rizado.",
+            "voz": "marina",
+            "audio": "marina.60098ae56d"
+          },
+          "respuesta": "Tiene el pelo largo y rizado.",
+          "aceptadas": [
+            "tiene el pelo largo y rizado"
+          ]
+        },
+        {
+          "id": "u04-q03-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cómo es TU pelo.",
+            "fr": "Écoute et dis comment sont TES cheveux (largo, corto, rizado, castaño, rubio…). Tu peux en dire deux : « castaño y rizado ».",
+            "voz": "narrador",
+            "audio": "narrador.42260eb4e1"
+          },
+          "objetivo": {
+            "es": "Tengo el pelo corto.",
+            "fr": "J’ai les cheveux courts. (dis les tiens)",
+            "voz": "viajero",
+            "audio": "viajero.6cd98e089e"
+          },
+          "aceptadas": [
+            "tengo el pelo corto"
+          ],
+          "patrones": [
+            "tengo el pelo {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del retrato",
+            "efecto": "Tu cara aparece dibujada en el aire"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u04-q04",
+      "tipo": "lectura",
+      "titulo": "La ropa del mercado",
+      "emoji": "👗",
+      "intro": {
+        "es": "¡Pasen, pasen! Tengo playeras, vestidos, rebozos… ¿Qué buscan?",
+        "fr": "Entrez, entrez ! J’ai des t-shirts (« playeras » au Mexique), des robes, des rebozos… Que cherchez-vous ?",
+        "voz": "lupita",
+        "audio": "lupita.88c068b0ce"
+      },
+      "pista": "Les vêtements et « llevar ». Mots qui changent : camiseta (Mexique : playera), chaqueta (chamarra), zapatillas (tenis), gafas (lentes).",
+      "stats": [
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u04-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "ropa",
+            "camiseta",
+            "pantalones",
+            "falda",
+            "vestido",
+            "camisa",
+            "chaqueta"
+          ]
+        },
+        {
+          "id": "u04-q04-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "vestido",
+            "voz": "narrador",
+            "audio": "narrador.f50e2745e5"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "falda",
+              "correcta": false
+            },
+            {
+              "vocab": "vestido",
+              "correcta": true
+            },
+            {
+              "vocab": "camisa",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "camiseta"
+            },
+            {
+              "vocab": "pantalones"
+            },
+            {
+              "vocab": "falda"
+            },
+            {
+              "vocab": "vestido"
+            },
+            {
+              "vocab": "camisa"
+            },
+            {
+              "vocab": "chaqueta"
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s04",
+          "tipo": "flashcard",
+          "vocab": [
+            "zapatos",
+            "zapatillas",
+            "sombrero",
+            "gorra",
+            "blusa",
+            "rebozo",
+            "llevar"
+          ]
+        },
+        {
+          "id": "u04-q04-s05",
+          "tipo": "grammar_card",
+          "ref": "g_llevar"
+        },
+        {
+          "id": "u04-q04-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Mateo lleva una gorra.",
+            "voz": "lupita",
+            "audio": "lupita.0badc89d95"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "sombrero",
+              "correcta": false
+            },
+            {
+              "vocab": "zapatos",
+              "correcta": false
+            },
+            {
+              "vocab": "gorra",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Busco una falda roja y una blusa blanca.",
+            "voz": "marina",
+            "audio": "marina.fee03ee65e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "La chica busca zapatos negros.",
+              "correcta": false
+            },
+            {
+              "texto": "La chica busca un vestido azul.",
+              "correcta": false
+            },
+            {
+              "texto": "La chica busca ropa roja y blanca.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s08",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En mi puesto hay ropa de muchos colores. Hay una falda roja, una blusa blanca con flores y dos rebozos azules. Las playeras son verdes, amarillas y naranjas. ¡Todo es muy bonito!",
+            "fr": "Dans mon étal, il y a des vêtements de toutes les couleurs. Il y a une jupe rouge, une blouse blanche avec des fleurs et deux rebozos bleus. Les tee-shirts (« playeras » au Mexique) sont verts, jaunes et orange. Tout est très joli !",
+            "voz": "lupita",
+            "audio": "lupita.f027ec8235"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De qué color es la falda?",
+                "fr": "De quelle couleur est la jupe ?",
+                "voz": "narrador",
+                "audio": "narrador.5b3455337b"
+              },
+              "opciones": [
+                {
+                  "texto": "Roja.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Blanca.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Azul.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántos rebozos azules hay?",
+                "fr": "Combien de rebozos bleus y a-t-il ?",
+                "voz": "narrador",
+                "audio": "narrador.316e0414aa"
+              },
+              "opciones": [
+                {
+                  "texto": "Uno.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Dos.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Tres.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿De qué colores son las playeras?",
+                "fr": "De quelles couleurs sont les t-shirts ?",
+                "voz": "narrador",
+                "audio": "narrador.be644f8618"
+              },
+              "opciones": [
+                {
+                  "texto": "Rojas y negras.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Verdes, amarillas y naranjas.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Blancas y azules.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Llevo una camiseta ___.",
+          "respuesta": "roja",
+          "opciones": [
+            "rojo",
+            "roja",
+            "rojas"
+          ],
+          "habla": {
+            "es": "Llevo una camiseta roja.",
+            "voz": "viajero",
+            "audio": "viajero.d19db251e4"
+          },
+          "fr": "Je porte un tee-shirt rouge."
+        },
+        {
+          "id": "u04-q04-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Álex lleva zapatillas ___.",
+          "respuesta": "blancas",
+          "opciones": [
+            "blanco",
+            "blanca",
+            "blancas"
+          ],
+          "habla": {
+            "es": "Álex lleva zapatillas blancas.",
+            "voz": "marina",
+            "audio": "marina.7dfd101d14"
+          },
+          "fr": "Álex porte des baskets blanches."
+        },
+        {
+          "id": "u04-q04-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina ___ una falda azul.",
+          "respuesta": "lleva",
+          "opciones": [
+            "llevo",
+            "llevas",
+            "lleva"
+          ],
+          "habla": {
+            "es": "Marina lleva una falda azul.",
+            "voz": "marina",
+            "audio": "marina.9a4d287944"
+          },
+          "fr": "Marina porte une jupe bleue."
+        },
+        {
+          "id": "u04-q04-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Llevo",
+            "una",
+            "blusa",
+            "blanca",
+            "con",
+            "flores."
+          ],
+          "habla": {
+            "es": "Llevo una blusa blanca con flores.",
+            "voz": "lupita",
+            "audio": "lupita.3a2d1c81c0"
+          },
+          "fr": "Je porte une blouse blanche avec des fleurs."
+        },
+        {
+          "id": "u04-q04-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lupita",
+          "replica": {
+            "es": "¡Buenos días, joven! ¿Qué necesitas?",
+            "fr": "Bonjour, jeune homme ! De quoi as-tu besoin ?",
+            "voz": "lupita",
+            "audio": "lupita.7a91038d4b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Una chaqueta negra, por favor.",
+                "voz": "viajero",
+                "audio": "viajero.ca60576cd7"
+              },
+              "fr": "Une veste noire, s’il vous plaît.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Una chamarra negra, ¡claro! Aquí tienes.",
+                "fr": "Une veste noire, bien sûr ! Voilà. (Au Mexique, on dit « chamarra » pour « chaqueta »).",
+                "voz": "lupita",
+                "audio": "lupita.b86b33eb78",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy una chaqueta negra.",
+                "voz": "viajero",
+                "audio": "viajero.e0f14614cb"
+              },
+              "fr": "Je suis une veste noire.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú eres una chaqueta? ¡Qué cosa más rara!",
+                "fr": "Toi, tu es une veste ? Quelle drôle de chose !",
+                "voz": "lupita",
+                "audio": "lupita.f24c755f11",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo chaqueta.",
+                "voz": "viajero",
+                "audio": "viajero.f6836bb551"
+              },
+              "fr": "Je m’appelle veste.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Hola, Chaqueta. Yo soy Lupita.",
+                "fr": "Salut, Veste. Moi, c’est Lupita.",
+                "voz": "lupita",
+                "audio": "lupita.0e973ff8c3",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q04-s14",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En México, «chamarra» significa «chaqueta».",
+            "fr": "Au Mexique, « chamarra » veut dire « chaqueta » (veste).",
+            "voz": "narrador",
+            "audio": "narrador.f4c37af1b0"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u04-q04-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué llevas TÚ hoy.",
+            "fr": "Écoute et dis ce que TU portes aujourd’hui (llevo pantalones negros, llevo una camisa blanca…).",
+            "voz": "narrador",
+            "audio": "narrador.e7800ecfb4"
+          },
+          "objetivo": {
+            "es": "Llevo una camiseta azul.",
+            "fr": "Je porte un tee-shirt bleu. (dis ce que tu portes)",
+            "voz": "viajero",
+            "audio": "viajero.1e7d9a8bff"
+          },
+          "aceptadas": [
+            "llevo una camiseta azul"
+          ],
+          "patrones": [
+            "llevo {nombre}"
+          ],
+          "foco": "Le ll de « llevo » se prononce presque comme un « y » : YÉ-vo. Le z de « azul » : en Espagne, comme le « th » anglais (a-THOUL) ; au Mexique, comme un « s » (a-SOUL). Les deux sont corrects.",
+          "hechizo": {
+            "nombre": "Hechizo de la ropa",
+            "efecto": "Tu ropa cambia de colores como un arcoíris"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u04-q05",
+      "tipo": "forja",
+      "titulo": "La Forja: ser, estar y llevar",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Ser, estar, llevar. Tres verbos. ¡Forja conmigo!",
+        "fr": "Ser, estar, llevar. Trois verbes. Forge avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.b9ead772b7"
+      },
+      "pista": "Introduction à ser / estar : ser pour dire qui on est et comment on est (¿cómo es?), estar pour dire comment on va et où l’on est (¿cómo está?, ¿dónde está?). Puis le présent de estar et de llevar.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u04-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "estar"
+          ]
+        },
+        {
+          "id": "u04-q05-s02",
+          "tipo": "grammar_card",
+          "ref": "g_ser_estar"
+        },
+        {
+          "id": "u04-q05-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "yo",
+          "radical": "est",
+          "terminacion": "oy",
+          "terminaciones": [
+            "oy",
+            "ás",
+            "á"
+          ],
+          "forma": "estoy",
+          "habla": {
+            "es": "yo estoy",
+            "voz": "viajero",
+            "audio": "viajero.a99974a1e2"
+          },
+          "fr": "Moi, je suis (à un moment donné)…"
+        },
+        {
+          "id": "u04-q05-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "tú",
+          "radical": "est",
+          "terminacion": "ás",
+          "terminaciones": [
+            "oy",
+            "ás",
+            "á"
+          ],
+          "forma": "estás",
+          "habla": {
+            "es": "tú estás",
+            "voz": "marina",
+            "audio": "marina.3a21d3e60b"
+          },
+          "fr": "Toi, tu es…"
+        },
+        {
+          "id": "u04-q05-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "él",
+          "radical": "est",
+          "terminacion": "á",
+          "terminaciones": [
+            "oy",
+            "ás",
+            "á"
+          ],
+          "forma": "está",
+          "habla": {
+            "es": "él está",
+            "voz": "valentina",
+            "audio": "valentina.7d626107f5"
+          },
+          "fr": "Lui, il est…"
+        },
+        {
+          "id": "u04-q05-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "nosotros",
+          "radical": "est",
+          "terminacion": "amos",
+          "terminaciones": [
+            "amos",
+            "áis",
+            "án"
+          ],
+          "forma": "estamos",
+          "habla": {
+            "es": "nosotros estamos",
+            "voz": "mateo",
+            "audio": "mateo.97ca0ae9b6"
+          },
+          "fr": "Nous, nous sommes…"
+        },
+        {
+          "id": "u04-q05-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy yo ___ bien, gracias.",
+          "respuesta": "estoy",
+          "opciones": [
+            "soy",
+            "estoy",
+            "tengo"
+          ],
+          "habla": {
+            "es": "Hoy yo estoy bien, gracias.",
+            "voz": "viajero",
+            "audio": "viajero.3c395a60f8"
+          },
+          "fr": "Aujourd’hui, je vais bien, merci."
+        },
+        {
+          "id": "u04-q05-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mateo ___ mexicano.",
+          "respuesta": "es",
+          "opciones": [
+            "es",
+            "está",
+            "soy"
+          ],
+          "habla": {
+            "es": "Mateo es mexicano.",
+            "voz": "mateo",
+            "audio": "mateo.55a3bd5b79"
+          },
+          "fr": "Mateo est mexicain. (nationalité → ser)"
+        },
+        {
+          "id": "u04-q05-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La Casa Azul ___ en Coyoacán.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "soy"
+          ],
+          "habla": {
+            "es": "La Casa Azul está en Coyoacán.",
+            "voz": "valentina",
+            "audio": "valentina.8ee1d87e2c"
+          },
+          "fr": "La Casa Azul est à Coyoacán."
+        },
+        {
+          "id": "u04-q05-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Nosotros ___ en México.",
+          "respuesta": "estamos",
+          "opciones": [
+            "somos",
+            "estamos",
+            "estáis"
+          ],
+          "habla": {
+            "es": "Nosotros estamos en México.",
+            "voz": "mateo",
+            "audio": "mateo.3c63d95b00"
+          },
+          "fr": "Nous sommes au Mexique."
+        },
+        {
+          "id": "u04-q05-s11",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llevar",
+          "sujeto": "yo",
+          "radical": "llev",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "llevo",
+          "habla": {
+            "es": "yo llevo",
+            "voz": "viajero",
+            "audio": "viajero.def923f07e"
+          },
+          "fr": "Moi, je porte…"
+        },
+        {
+          "id": "u04-q05-s12",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llevar",
+          "sujeto": "ella",
+          "radical": "llev",
+          "terminacion": "a",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "lleva",
+          "habla": {
+            "es": "ella lleva",
+            "voz": "valentina",
+            "audio": "valentina.1f9fc71063"
+          },
+          "fr": "Elle porte…"
+        },
+        {
+          "id": "u04-q05-s13",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llevar",
+          "sujeto": "nosotros",
+          "radical": "llev",
+          "terminacion": "amos",
+          "terminaciones": [
+            "amos",
+            "an",
+            "a"
+          ],
+          "forma": "llevamos",
+          "habla": {
+            "es": "nosotros llevamos",
+            "voz": "marina",
+            "audio": "marina.5d9725b2c1"
+          },
+          "fr": "Nous, nous portons…"
+        },
+        {
+          "id": "u04-q05-s14",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ser",
+          "sujeto": "él",
+          "radical": "",
+          "terminacion": "es",
+          "terminaciones": [
+            "soy",
+            "eres",
+            "es"
+          ],
+          "forma": "es",
+          "habla": {
+            "es": "él es",
+            "voz": "mateo",
+            "audio": "mateo.9c2fe25427"
+          },
+          "fr": "Lui, il est (caractère)…"
+        },
+        {
+          "id": "u04-q05-s15",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "La",
+            "Casa",
+            "Azul",
+            "está",
+            "en",
+            "Coyoacán."
+          ],
+          "habla": {
+            "es": "La Casa Azul está en Coyoacán.",
+            "voz": "valentina",
+            "audio": "valentina.8ee1d87e2c"
+          },
+          "fr": "La Casa Azul est à Coyoacán."
+        }
+      ]
+    },
+    {
+      "id": "u04-q06",
+      "tipo": "dialogo",
+      "titulo": "¿Cómo eres tú?",
+      "emoji": "💬",
+      "intro": {
+        "es": "Ahora cuéntame cómo eres tú y cómo estás hoy.",
+        "fr": "Maintenant, raconte-moi comment tu es, et comment tu vas aujourd’hui.",
+        "voz": "mateo",
+        "audio": "mateo.54384562b8"
+      },
+      "pista": "Le caractère (ser) et l’état du moment (estar) : dialogues, puis tu parles et écris sur TOI.",
+      "stats": [
+        "hablar",
+        "escribir",
+        "escuchar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u04-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "simpatico",
+            "divertido",
+            "timido",
+            "serio",
+            "valiente",
+            "inteligente",
+            "trabajador"
+          ]
+        },
+        {
+          "id": "u04-q06-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "contento",
+            "triste",
+            "cansado",
+            "enfadado"
+          ]
+        },
+        {
+          "id": "u04-q06-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "simpatico"
+            },
+            {
+              "vocab": "timido"
+            },
+            {
+              "vocab": "valiente"
+            },
+            {
+              "vocab": "inteligente"
+            },
+            {
+              "vocab": "contento"
+            },
+            {
+              "vocab": "triste"
+            }
+          ]
+        },
+        {
+          "id": "u04-q06-s04",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "mateo",
+          "replica": {
+            "es": "Hoy estoy muy cansado. ¿Y tú? ¿Cómo estás?",
+            "fr": "Aujourd’hui, je suis très fatigué. Et toi ? Comment vas-tu ?",
+            "voz": "mateo",
+            "audio": "mateo.9d262dd21d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Estoy bien, gracias.",
+                "voz": "viajero",
+                "audio": "viajero.4f410ec006"
+              },
+              "fr": "Je vais bien, merci.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bueno! Eso me alegra.",
+                "fr": "Tant mieux ! Ça me fait plaisir.",
+                "voz": "mateo",
+                "audio": "mateo.17ba11e470",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy bien, gracias.",
+                "voz": "viajero",
+                "audio": "viajero.5cfcd91dbf"
+              },
+              "fr": "Je suis bien, merci.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «bien» usamos «estar»: «estoy bien».",
+                "fr": "Avec « bien », on utilise « estar » : « estoy bien ».",
+                "voz": "mateo",
+                "audio": "mateo.146ec01dd4",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo cansado.",
+                "voz": "viajero",
+                "audio": "viajero.93075b3d68"
+              },
+              "fr": "Je m’appelle fatigué.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas Cansado? ¡Qué nombre!",
+                "fr": "Tu t’appelles Fatigué ? Quel nom !",
+                "voz": "mateo",
+                "audio": "mateo.785be12c14",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q06-s05",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "valentina",
+          "replica": {
+            "es": "Mateo es muy simpático. Y tú, ¿cómo eres?",
+            "fr": "Mateo est très sympa. Et toi, comment es-tu ?",
+            "voz": "valentina",
+            "audio": "valentina.b951571d68"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy divertido y un poco tímido.",
+                "voz": "viajero",
+                "audio": "viajero.306ad004d0"
+              },
+              "fr": "Je suis drôle et un peu timide.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Los divertidos y los tímidos son buenos amigos.",
+                "fr": "Parfait ! Les drôles et les timides font de bons amis.",
+                "voz": "valentina",
+                "audio": "valentina.3f36c596a1",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo divertido.",
+                "voz": "viajero",
+                "audio": "viajero.b6d728db8c"
+              },
+              "fr": "J’ai drôle.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No: con el carácter usamos «ser», «soy divertido».",
+                "fr": "Non : pour le caractère, on utilise « ser » : « soy divertido ».",
+                "voz": "valentina",
+                "audio": "valentina.5a795d0ea7",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo simpático.",
+                "voz": "viajero",
+                "audio": "viajero.a525a73b86"
+              },
+              "fr": "Je m’appelle sympathique.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Hola, Simpático. Yo soy Valentina.",
+                "fr": "Salut, Sympathique. Moi, c’est Valentina.",
+                "voz": "valentina",
+                "audio": "valentina.17f8fd64e2",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q06-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Álex ___ valiente.",
+          "respuesta": "es",
+          "opciones": [
+            "es",
+            "está",
+            "soy"
+          ],
+          "habla": {
+            "es": "Álex es valiente.",
+            "voz": "marina",
+            "audio": "marina.936d564205"
+          },
+          "fr": "Álex est courageux."
+        },
+        {
+          "id": "u04-q06-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy Marina ___ triste.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "están"
+          ],
+          "habla": {
+            "es": "Hoy Marina está triste.",
+            "voz": "marina",
+            "audio": "marina.040ff66136"
+          },
+          "fr": "Aujourd’hui, Marina est triste."
+        },
+        {
+          "id": "u04-q06-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis padres ___ muy trabajadores.",
+          "respuesta": "son",
+          "opciones": [
+            "son",
+            "están",
+            "es"
+          ],
+          "habla": {
+            "es": "Mis padres son muy trabajadores.",
+            "voz": "marina",
+            "audio": "marina.1f3c38ac95"
+          },
+          "fr": "Mes parents sont très travailleurs."
+        },
+        {
+          "id": "u04-q06-s09",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hoy estoy un poco triste.",
+            "voz": "valentina",
+            "audio": "valentina.5eefb8551a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Valentina está cansada.",
+              "correcta": false
+            },
+            {
+              "texto": "Valentina no está contenta.",
+              "correcta": true
+            },
+            {
+              "texto": "Valentina está muy contenta.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q06-s10",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Soy muy divertido, pero mi hermana es tímida.",
+            "voz": "mateo",
+            "audio": "mateo.8a6a3cec81"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Mateo es tímido.",
+              "correcta": false
+            },
+            {
+              "texto": "La hermana de Mateo es muy divertida.",
+              "correcta": false
+            },
+            {
+              "texto": "La hermana de Mateo es tímida.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u04-q06-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cómo eres TÚ.",
+            "fr": "Écoute et dis comment TU es (soy tímido, soy divertido y serio…). Au féminin : simpática, tímida…",
+            "voz": "narrador",
+            "audio": "narrador.fca2164f16"
+          },
+          "objetivo": {
+            "es": "Soy simpático.",
+            "fr": "Je suis sympathique. (dis comment tu es)",
+            "voz": "viajero",
+            "audio": "viajero.a8045d1abf"
+          },
+          "aceptadas": [
+            "soy simpático"
+          ],
+          "patrones": [
+            "soy {nombre}"
+          ],
+          "foco": "L’accent écrit montre la syllabe qu’on appuie : sim-PÁ-ti-co, TÍ-mi-do. Sans accent écrit, un mot qui finit par une voyelle s’appuie sur l’avant-dernière syllabe : di-ver-TI-do, SE-rio.",
+          "hechizo": {
+            "nombre": "Hechizo del carácter",
+            "efecto": "Tu retrato empieza a sonreír"
+          }
+        },
+        {
+          "id": "u04-q06-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cómo estás TÚ hoy.",
+            "fr": "Écoute et dis comment TU vas aujourd’hui (estoy cansado, estoy bien…).",
+            "voz": "narrador",
+            "audio": "narrador.94b671e71b"
+          },
+          "objetivo": {
+            "es": "Hoy estoy contento.",
+            "fr": "Aujourd’hui, je suis content. (dis comment tu vas)",
+            "voz": "viajero",
+            "audio": "viajero.3d7e35d665"
+          },
+          "aceptadas": [
+            "hoy estoy contento"
+          ],
+          "patrones": [
+            "hoy estoy {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del humor",
+            "efecto": "Una nube de colores rodea tu cabeza"
+          }
+        },
+        {
+          "id": "u04-q06-s13",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe cómo eres y cómo estás hoy.",
+            "fr": "Écris comment tu es et comment tu vas aujourd’hui.",
+            "voz": "narrador",
+            "audio": "narrador.1d9482e517"
+          },
+          "plantilla": "Soy ___ y hoy estoy ___.",
+          "campos": [
+            {
+              "id": "caracter",
+              "pista": "Comment es-tu ? (simpático, tímido, divertido, serio… ; au féminin : simpática…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "estado",
+              "pista": "Comment vas-tu aujourd’hui ? (contento, cansado, triste, bien…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Soy simpático y hoy estoy contento.",
+            "fr": "Je suis sympathique et aujourd’hui je suis content.",
+            "voz": "viajero",
+            "audio": "viajero.91542a6509"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u04-q06-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Valentina es simpática, pero hoy está triste.",
+            "voz": "mateo",
+            "audio": "mateo.06ad98aef8"
+          },
+          "respuesta": "Valentina es simpática, pero hoy está triste.",
+          "aceptadas": [
+            "valentina es simpática pero hoy está triste"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u04-q07",
+      "tipo": "cultura",
+      "titulo": "Frida Kahlo y la Casa Azul",
+      "emoji": "🖼️",
+      "intro": {
+        "es": "Esta es la Casa Azul, la casa de Frida Kahlo. Hoy es un museo.",
+        "fr": "Voici la Casa Azul, la maison de Frida Kahlo. Aujourd’hui, c’est un musée.",
+        "voz": "valentina",
+        "audio": "valentina.32294a57df"
+      },
+      "pista": "Frida Kahlo (1907-1954), ses autoportraits et sa maison de Coyoacán ; puis, comme elle, tu fais TON autoportrait (à l’écrit et à l’oral).",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u04-q07-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "autorretrato",
+            "cuadro",
+            "museo",
+            "espejo",
+            "flor",
+            "loro",
+            "pintar"
+          ]
+        },
+        {
+          "id": "u04-q07-s02",
+          "tipo": "cinematic_ref",
+          "cinematica": "u04-capsula-frida",
+          "escena": {
+            "id": "u04-capsula-frida",
+            "tipo": "capsula",
+            "titulo": "Frida Kahlo y la Casa Azul",
+            "duracion": 23,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : le nom « Frida Kahlo » s’écrit sur fond bleu cobalt ; la façade de la Casa Azul apparaît avec l’année « 1907 ».",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Frida Kahlo nace en 1907 en Coyoacán, en la Casa Azul.",
+                    "fr": "Frida Kahlo naît en 1907 à Coyoacán, dans la Casa Azul.",
+                    "voz": "narrador",
+                    "audio": "narrador.83490e9024"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Mur de cadres : des autoportraits se multiplient, un compteur monte jusqu’à « +50 » ; une main tient un petit miroir.",
+                "lineas": [
+                  {
+                    "es": "Frida pinta más de cincuenta autorretratos, muchas veces con un espejo.",
+                    "fr": "Frida peint plus de cinquante autoportraits, souvent avec un miroir. (Après un grave accident de bus à 18 ans, elle peint allongée dans son lit, avec un miroir au-dessus d’elle.)",
+                    "voz": "narrador",
+                    "audio": "narrador.792dc762fa"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Détails d’un portrait : sourcils épais, tresses avec des fleurs, longue robe brodée de tehuana ; une carte de l’État d’Oaxaca s’allume brièvement pour les robes traditionnelles.",
+                "lineas": [
+                  {
+                    "es": "Lleva flores en el pelo y vestidos largos de colores. Muchos son vestidos tradicionales de Oaxaca.",
+                    "fr": "Elle porte des fleurs dans les cheveux et des robes longues colorées. Beaucoup sont des robes traditionnelles de l’État d’Oaxaca (robes de « tehuana », de l’isthme de Tehuantepec).",
+                    "voz": "narrador",
+                    "audio": "narrador.ac56880dde"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Le patio de la Casa Azul : singes, perroquets, chiens sans poils (xoloitzcuintles) entre les plantes, en papier découpé.",
+                "lineas": [
+                  {
+                    "es": "En su casa viven monos, loros y perros.",
+                    "fr": "Dans sa maison vivent des singes, des perroquets et des chiens. (présent de narration : à l’époque de Frida)",
+                    "voz": "narrador",
+                    "audio": "narrador.6216d566d2"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 4,
+                "vista": "Plan large de la Casa Azul, des visiteurs entrent, panneau « Museo Frida Kahlo » ; la carte revient sur Ciudad de México.",
+                "lineas": [
+                  {
+                    "es": "Hoy la Casa Azul es un museo. Está en Coyoacán, en Ciudad de México.",
+                    "fr": "Aujourd’hui, la Casa Azul est un musée. Elle est à Coyoacán, à Mexico.",
+                    "voz": "narrador",
+                    "audio": "narrador.33c742c1ce"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u04-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La Casa Azul es de color rojo.",
+            "fr": "La Casa Azul est de couleur rouge.",
+            "voz": "narrador",
+            "audio": "narrador.83f5170124"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u04-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Frida pinta muchos autorretratos.",
+            "fr": "Frida peint beaucoup d’autoportraits.",
+            "voz": "narrador",
+            "audio": "narrador.94ff0fe156"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u04-q07-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En la casa de Frida viven monos, loros y perros.",
+            "fr": "Dans la maison de Frida vivent des singes, des perroquets et des chiens (à l’époque de Frida).",
+            "voz": "narrador",
+            "audio": "narrador.7be22c66d0"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u04-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Frida Kahlo es una pintora mexicana. Tiene las cejas negras y gruesas, y lleva flores en el pelo. Lleva vestidos largos de colores. Pinta muchos autorretratos con un espejo. Hoy su casa, la Casa Azul, es un museo.",
+            "fr": "Frida Kahlo est une peintre mexicaine. Elle a les sourcils noirs et épais, et elle porte des fleurs dans les cheveux. Elle porte des robes longues colorées. Elle peint beaucoup d’autoportraits avec un miroir. Aujourd’hui, sa maison, la Casa Azul, est un musée.",
+            "voz": "valentina",
+            "audio": "valentina.9a2157c0cf"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué lleva Frida en el pelo?",
+                "fr": "Que porte Frida dans les cheveux ?",
+                "voz": "narrador",
+                "audio": "narrador.ae02556e44"
+              },
+              "opciones": [
+                {
+                  "texto": "Flores.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Una gorra.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Gafas.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo pinta sus autorretratos?",
+                "fr": "Comment peint-elle ses autoportraits ?",
+                "voz": "narrador",
+                "audio": "narrador.7960aa79a3"
+              },
+              "opciones": [
+                {
+                  "texto": "Con un loro.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Con un espejo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Con un museo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es hoy la Casa Azul?",
+                "fr": "Qu’est-ce que la Casa Azul aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.43fe9ca30e"
+              },
+              "opciones": [
+                {
+                  "texto": "Un mercado.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un colegio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un museo.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u04-q07-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La Casa Azul es azul cobalto. Tiene un patio con muchas flores y plantas. En Coyoacán hay una plaza, un mercado y mucha gente. «Coyoacán» viene de una palabra náhuatl: significa «lugar de coyotes».",
+            "fr": "La Casa Azul est bleu cobalt. Elle a un patio avec beaucoup de fleurs et de plantes. À Coyoacán, il y a une place, un marché et beaucoup de monde. « Coyoacán » vient d’un mot nahuatl (la langue des Aztèques, encore parlée aujourd’hui par plus d’un million de Mexicains) : il signifie « lieu des coyotes ».",
+            "voz": "valentina",
+            "audio": "valentina.80907a9733"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De qué color es la casa?",
+                "fr": "De quelle couleur est la maison ?",
+                "voz": "narrador",
+                "audio": "narrador.79ed5ff923"
+              },
+              "opciones": [
+                {
+                  "texto": "Azul.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Roja.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Verde.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué significa «Coyoacán»?",
+                "fr": "Que signifie « Coyoacán » ?",
+                "voz": "narrador",
+                "audio": "narrador.556b30df56"
+              },
+              "opciones": [
+                {
+                  "texto": "Lugar de coyotes.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Casa de flores.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Plaza azul.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u04-q07-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Frida lleva flores en el pelo y un vestido largo de color rojo.",
+            "voz": "valentina",
+            "audio": "valentina.619e10cfe7"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Frida tiene flores en el pelo y su vestido es rojo.",
+              "correcta": true
+            },
+            {
+              "texto": "Frida lleva una gorra y pantalones cortos.",
+              "correcta": false
+            },
+            {
+              "texto": "Frida tiene el pelo corto y lleva gafas.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "valentina",
+          "replica": {
+            "es": "Mira este autorretrato. ¿Cómo es Frida?",
+            "fr": "Regarde cet autoportrait. Comment est Frida ?",
+            "voz": "valentina",
+            "audio": "valentina.61e4b83cba"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Frida tiene el pelo negro y lleva flores.",
+                "voz": "viajero",
+                "audio": "viajero.c7e3b59525"
+              },
+              "fr": "Frida a les cheveux noirs et porte des fleurs.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Ya puedes pintar su cara.",
+                "fr": "Exact ! Tu peux déjà peindre son visage.",
+                "voz": "valentina",
+                "audio": "valentina.ab5e2045eb",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Frida es una casa azul.",
+                "voz": "viajero",
+                "audio": "viajero.a6b68838cf"
+              },
+              "fr": "Frida est une maison bleue.",
+              "correcta": false,
+              "reaccion": {
+                "es": "La casa es azul, pero Frida es una persona.",
+                "fr": "La maison est bleue, mais Frida est une personne.",
+                "voz": "valentina",
+                "audio": "valentina.f6d223cd0d",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Frida tiene doce años.",
+                "voz": "viajero",
+                "audio": "viajero.43b7b304aa"
+              },
+              "fr": "Frida a douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, Frida es una pintora famosa.",
+                "fr": "Non, Frida est une peintre célèbre.",
+                "voz": "valentina",
+                "audio": "valentina.6f1ad209c6",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q07-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Frida pinta muchos ___.",
+          "respuesta": "autorretratos",
+          "opciones": [
+            "autorretratos",
+            "museos",
+            "loros"
+          ],
+          "habla": {
+            "es": "Frida pinta muchos autorretratos.",
+            "voz": "valentina",
+            "audio": "valentina.94ff0fe156"
+          },
+          "fr": "Frida peint beaucoup d’autoportraits."
+        },
+        {
+          "id": "u04-q07-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Frida",
+            "pinta",
+            "con",
+            "un",
+            "espejo."
+          ],
+          "habla": {
+            "es": "Frida pinta con un espejo.",
+            "voz": "valentina",
+            "audio": "valentina.c21723735d"
+          },
+          "fr": "Frida peint avec un miroir."
+        },
+        {
+          "id": "u04-q07-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu autorretrato, como Frida.",
+            "fr": "Écris ton autoportrait, comme Frida.",
+            "voz": "narrador",
+            "audio": "narrador.a5e4472772"
+          },
+          "plantilla": "Soy ___. Tengo el pelo ___ y los ojos ___. Llevo ___.",
+          "campos": [
+            {
+              "id": "soy",
+              "pista": "Comment es-tu ? (alto, bajo, delgado, simpático, tímido…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "pelo",
+              "pista": "Tes cheveux (corto, largo, rizado, castaño, rubio…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "ojos",
+              "pista": "La couleur de tes yeux (marrones, verdes, azules…, au pluriel)",
+              "tipo": "texto"
+            },
+            {
+              "id": "ropa",
+              "pista": "Ce que tu portes (una camiseta azul, pantalones negros…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Soy alto y simpático. Tengo el pelo corto y los ojos marrones. Llevo una camiseta azul.",
+            "fr": "Je suis grand et sympathique. J’ai les cheveux courts et les yeux marron. Je porte un tee-shirt bleu.",
+            "voz": "viajero",
+            "audio": "viajero.2b2b814e97"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u04-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di el color de TUS ojos.",
+            "fr": "Écoute et dis la couleur de TES yeux (marrones, verdes, azules, grises…).",
+            "voz": "narrador",
+            "audio": "narrador.43ed619793"
+          },
+          "objetivo": {
+            "es": "Tengo los ojos marrones.",
+            "fr": "J’ai les yeux marron. (dis la couleur des tiens)",
+            "voz": "viajero",
+            "audio": "viajero.516d896480"
+          },
+          "aceptadas": [
+            "tengo los ojos marrones"
+          ],
+          "patrones": [
+            "tengo los ojos {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del autorretrato",
+            "efecto": "Tu autorretrato aparece en la pared de la Casa Azul"
+          }
+        },
+        {
+          "id": "u04-q07-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "La Casa Azul está en Coyoacán.",
+            "voz": "valentina",
+            "audio": "valentina.8ee1d87e2c"
+          },
+          "respuesta": "La Casa Azul está en Coyoacán.",
+          "aceptadas": [
+            "la casa azul está en coyoacán"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u04-q08",
+      "tipo": "desafio",
+      "titulo": "El retrato de la Sombra",
+      "emoji": "👤",
+      "intro": {
+        "es": "Sin cara, no hay retrato. Sin retrato, no hay nadie. Yo borro las caras.",
+        "fr": "Sans visage, pas de portrait. Sans portrait, personne. J’efface les visages.",
+        "voz": "sombra",
+        "audio": "sombra.304ad05488"
+      },
+      "pista": "Boss de Mexico : révision mixte des unités 1 à 4 (présentation, école, famille, description, vêtements, ser / estar) pour rendre leur visage aux portraits.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 9
+      },
+      "steps": [
+        {
+          "id": "u04-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Sin nombre no hay cara. ¿Cómo te llamas y de dónde eres?",
+            "fr": "Sans prénom, pas de visage. Comment tu t’appelles et d’où viens-tu ?",
+            "voz": "sombra",
+            "audio": "sombra.62d597748e"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex y soy de París.",
+                "voz": "viajero",
+                "audio": "viajero.f65b0a200b"
+              },
+              "fr": "Je m’appelle Álex et je suis de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Ya tengo una cara menos…",
+                "fr": "Grr ! Voilà un visage de moins…",
+                "voz": "sombra",
+                "audio": "sombra.f8530712bd",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años y tres amigos.",
+                "voz": "viajero",
+                "audio": "viajero.45cef46488"
+              },
+              "fr": "J’ai douze ans et trois amis.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No es lo que pregunto. Responde bien.",
+                "fr": "Ce n’est pas ce que je demande. Réponds correctement.",
+                "voz": "sombra",
+                "audio": "sombra.de74fdaf51",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós, hasta luego.",
+                "voz": "viajero",
+                "audio": "viajero.41a052948e"
+              },
+              "fr": "Au revoir, à tout à l’heure.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te vas sin responder.",
+                "fr": "Tu ne pars pas sans répondre.",
+                "voz": "sombra",
+                "audio": "sombra.0c306a1a68",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Cómo eres? Descríbete.",
+            "fr": "Comment es-tu ? Décris-toi.",
+            "voz": "sombra",
+            "audio": "sombra.84377fc4e1"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy alto y tengo el pelo corto.",
+                "voz": "viajero",
+                "audio": "viajero.ff744527f4"
+              },
+              "fr": "Je suis grand et j’ai les cheveux courts.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Una cara más que vuelve…",
+                "fr": "Aaah ! Encore un visage qui revient…",
+                "voz": "sombra",
+                "audio": "sombra.3e6914f2b5",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo alto y soy el pelo.",
+                "voz": "viajero",
+                "audio": "viajero.deec18dd91"
+              },
+              "fr": "J’ai grand et je suis les cheveux.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Llevo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.22dceb50e9"
+              },
+              "fr": "Je porte douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡No! La edad se dice con «tener»: tengo doce años. Y te pregunto cómo eres.",
+                "fr": "Non ! L’âge se dit avec « tener » : tengo doce años. Et je te demande comment tu es.",
+                "voz": "sombra",
+                "audio": "sombra.fc1ea78189",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "gris",
+            "voz": "narrador",
+            "audio": "narrador.28c94237bc"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "negro",
+              "correcta": false
+            },
+            {
+              "vocab": "gris",
+              "correcta": true
+            },
+            {
+              "vocab": "blanco",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi hermano es bajo, rubio y muy serio.",
+            "voz": "sombra",
+            "audio": "sombra.252d57262e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El hermano es alto y pelirrojo.",
+              "correcta": false
+            },
+            {
+              "texto": "El hermano es un chico rubio que no es alto.",
+              "correcta": true
+            },
+            {
+              "texto": "El hermano es bajo y tiene el pelo castaño.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "camiseta"
+            },
+            {
+              "vocab": "falda"
+            },
+            {
+              "vocab": "chaqueta"
+            },
+            {
+              "vocab": "sombrero"
+            },
+            {
+              "vocab": "zapatos"
+            },
+            {
+              "vocab": "vestido"
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En mi mochila hay un libro y dos ___.",
+          "respuesta": "cuadernos",
+          "opciones": [
+            "cuaderno",
+            "cuadernos",
+            "cuadernas"
+          ],
+          "habla": {
+            "es": "En mi mochila hay un libro y dos cuadernos.",
+            "voz": "diego",
+            "audio": "diego.6b4c8be5d7"
+          },
+          "fr": "Dans mon sac à dos, il y a un livre et deux cahiers."
+        },
+        {
+          "id": "u04-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi madre es médica y mi padre es ___.",
+          "respuesta": "cocinero",
+          "opciones": [
+            "cocinero",
+            "cocinera",
+            "cocineros"
+          ],
+          "habla": {
+            "es": "Mi madre es médica y mi padre es cocinero.",
+            "voz": "marina",
+            "audio": "marina.c585318d40"
+          },
+          "fr": "Ma mère est médecin et mon père est cuisinier."
+        },
+        {
+          "id": "u04-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy yo ___ muy cansado.",
+          "respuesta": "estoy",
+          "opciones": [
+            "soy",
+            "estoy",
+            "estás"
+          ],
+          "habla": {
+            "es": "Hoy yo estoy muy cansado.",
+            "voz": "viajero",
+            "audio": "viajero.603dde1986"
+          },
+          "fr": "Aujourd’hui, je suis très fatigué."
+        },
+        {
+          "id": "u04-q08-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llevar",
+          "sujeto": "tú",
+          "radical": "llev",
+          "terminacion": "as",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "llevas",
+          "habla": {
+            "es": "tú llevas",
+            "voz": "marina",
+            "audio": "marina.9d92b8559b"
+          },
+          "fr": "Toi, tu portes…"
+        },
+        {
+          "id": "u04-q08-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Marina",
+            "lleva",
+            "una",
+            "falda",
+            "roja",
+            "y",
+            "zapatos",
+            "negros."
+          ],
+          "habla": {
+            "es": "Marina lleva una falda roja y zapatos negros.",
+            "voz": "marina",
+            "audio": "marina.344a4d1e4a"
+          },
+          "fr": "Marina porte une jupe rouge et des chaussures noires."
+        },
+        {
+          "id": "u04-q08-s11",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El treinta y uno de octubre.",
+            "voz": "sombra",
+            "audio": "sombra.553c6b4932"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "13 de octubre",
+              "correcta": false
+            },
+            {
+              "texto": "31 de octubre",
+              "correcta": true
+            },
+            {
+              "texto": "30 de octubre",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s12",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Mateo. Tengo doce años y vivo en Coyoacán. Mi mamá es médica y mi papá es cocinero. Soy alto y delgado, y llevo una gorra azul. Hoy estoy cansado, pero estoy contento.",
+            "fr": "Salut, c’est Mateo. J’ai douze ans et j’habite à Coyoacán. Ma mère est médecin et mon père est cuisinier (au Mexique, on dit plus souvent « mi mamá, mi papá » que « mi madre, mi padre »). Je suis grand et mince, et je porte une casquette bleue. Aujourd’hui, je suis fatigué, mais je suis content.",
+            "voz": "mateo",
+            "audio": "mateo.f832bf9ba2"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿En qué trabaja el padre de Mateo?",
+                "fr": "Quel est le métier du père de Mateo ?",
+                "voz": "narrador",
+                "audio": "narrador.48c6784b28"
+              },
+              "opciones": [
+                {
+                  "texto": "Es médico.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Es cocinero.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Es policía.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo es Mateo?",
+                "fr": "Comment est Mateo ?",
+                "voz": "narrador",
+                "audio": "narrador.2feac7065f"
+              },
+              "opciones": [
+                {
+                  "texto": "Bajo y rubio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Alto y delgado.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Bajo y delgado.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo está Mateo hoy?",
+                "fr": "Comment va Mateo aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.72380702c5"
+              },
+              "opciones": [
+                {
+                  "texto": "Triste y enfadado.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cansado, pero contento.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Nervioso y serio.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u04-q08-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Soy de París y tengo doce años.",
+            "fr": "Salut, je m’appelle Álex. Je suis de Paris et j’ai douze ans. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.47a1b92193"
+          },
+          "aceptadas": [
+            "hola me llamo álex soy de parís y tengo doce años",
+            "hola me llamo álex soy de parís y tengo 12 años"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} soy de parís y tengo doce años",
+            "hola me llamo {nombre} soy de parís y tengo 12 años"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Los autorretratos recuperan la cara y todos sus colores!"
+          }
+        },
+        {
+          "id": "u04-q08-s14",
+          "tipo": "cinematic_ref",
+          "cinematica": "u04-pluma",
+          "escena": {
+            "id": "u04-pluma",
+            "tipo": "pluma",
+            "titulo": "Cuarta pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Le dernier autoportrait retrouve son visage et toutes ses couleurs ; une plume verte se détache du cadre et tombe dans la main d’Álex.",
+                "personajes": [
+                  "valentina"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Los autorretratos tienen cara otra vez! ¡Gracias!",
+                    "fr": "Les autoportraits ont de nouveau un visage ! Merci !",
+                    "voz": "valentina",
+                    "audio": "valentina.589e0b59ec"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal tourne au-dessus du patio, ses plumes brillent de toutes les couleurs.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Cuatro plumas. ¡Vuelo más alto!",
+                    "fr": "Quatre plumes. Je vole plus haut !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.434b409499"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio apparaît en hologramme au-dessus de la carte ; une empreinte lumineuse traverse l’océan jusqu’à Valencia.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La siguiente pluma está en Valencia. ¡Es hora de volver a España!",
+                    "fr": "La prochaine plume est à Valence. Il est temps de retourner en Espagne !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.aa13717da1"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 4,
+    "nombre": "Pluma del Autorretrato",
+    "descripcion": {
+      "es": "Cuatro plumas. Mis colores vuelven… ¡y vuelo más alto!",
+      "fr": "Quatre plumes. Mes couleurs reviennent… et je vole plus haut !",
+      "voz": "quetzal",
+      "audio": "quetzal.b279297192"
+    }
+  }
+}

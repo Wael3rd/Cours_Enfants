@@ -1,0 +1,2285 @@
+{
+  "id": "e01",
+  "numero": 0,
+  "titulo": "Día de Muertos",
+  "lugar": "Oaxaca",
+  "emoji": "💀",
+  "ejes": [
+    4,
+    6
+  ],
+  "periodo": "oct-nov",
+  "evento": {
+    "desde": "10-25",
+    "hasta": "11-02"
+  },
+  "objetivos": [
+    {
+      "es": "Entender qué es el Día de Muertos: una fiesta alegre para recordar a la familia.",
+      "fr": "Comprendre ce qu’est le Jour des Morts : une fête joyeuse pour se souvenir de la famille."
+    },
+    {
+      "es": "Nombrar los elementos de la ofrenda: velas, cempasúchil, pan de muerto, papel picado.",
+      "fr": "Nommer les éléments de l’ofrenda : bougies, cempasúchil, pain des morts, papel picado."
+    },
+    {
+      "es": "Descubrir las calaveras, la Catrina y los alebrijes de Oaxaca.",
+      "fr": "Découvrir les calaveras, la Catrina et les alebrijes d’Oaxaca."
+    },
+    {
+      "es": "Repasar lo aprendido: presentarme, describir, hay, colores y fechas.",
+      "fr": "Réviser ce qui a été appris : me présenter, décrire, hay, couleurs et dates."
+    },
+    {
+      "es": "Decir quién está en mi ofrenda y qué fiesta celebro con mi familia.",
+      "fr": "Dire qui est sur mon ofrenda et quelle fête je célèbre en famille."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "fiesta",
+      "es": "fiesta",
+      "fr": "fête",
+      "genero": "f",
+      "plural": "fiestas",
+      "emoji": "🎊",
+      "tags": [
+        "fiesta"
+      ],
+      "ejemplo": {
+        "es": "El Día de Muertos es una fiesta alegre.",
+        "fr": "Le Jour des Morts est une fête joyeuse.",
+        "voz": "narrador",
+        "audio": "narrador.567c3f7f21"
+      },
+      "audio": "narrador.311931bb18"
+    },
+    {
+      "id": "celebrar",
+      "es": "celebrar",
+      "fr": "célébrer, fêter",
+      "emoji": "🎉",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Celebramos el Día de Muertos en familia.",
+        "fr": "Nous fêtons le Jour des Morts en famille.",
+        "voz": "xochitl",
+        "audio": "xochitl.b914a7bc83"
+      },
+      "audio": "narrador.399fcc4223"
+    },
+    {
+      "id": "muerto",
+      "es": "muerto",
+      "fr": "mort (Día de Muertos = Jour des Morts)",
+      "genero": "m",
+      "femenino": "muerta",
+      "emoji": "🕊️",
+      "tags": [
+        "fiesta"
+      ],
+      "ejemplo": {
+        "es": "Recordamos a los muertos con cariño.",
+        "fr": "Nous nous souvenons des morts avec tendresse.",
+        "voz": "remedios",
+        "audio": "remedios.d35b5c8b64"
+      },
+      "audio": "narrador.9d13002bd6"
+    },
+    {
+      "id": "recordar",
+      "es": "recordar",
+      "fr": "se souvenir de (quelqu’un, quelque chose)",
+      "emoji": "💭",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "En la fiesta recordamos a los abuelos.",
+        "fr": "Pendant la fête, nous nous souvenons de nos grands-parents disparus.",
+        "voz": "remedios",
+        "audio": "remedios.fa27ce9db6"
+      },
+      "audio": "narrador.af4d702a02"
+    },
+    {
+      "id": "recuerdo",
+      "es": "recuerdo",
+      "fr": "souvenir",
+      "genero": "m",
+      "plural": "recuerdos",
+      "emoji": "🎞️",
+      "tags": [
+        "fiesta"
+      ],
+      "ejemplo": {
+        "es": "Cada foto es un recuerdo.",
+        "fr": "Chaque photo est un souvenir.",
+        "voz": "remedios",
+        "audio": "remedios.4baec25907"
+      },
+      "audio": "narrador.781060c42e"
+    },
+    {
+      "id": "ofrenda",
+      "es": "ofrenda",
+      "fr": "offrande : l’autel de la fête, avec photos, bougies, fleurs et nourriture",
+      "genero": "f",
+      "plural": "ofrendas",
+      "ilustracion": "Un autel mexicain à étages avec des photos, des bougies, des fleurs orange et du pain",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "En la ofrenda hay flores, velas y fotos.",
+        "fr": "Sur l’autel, il y a des fleurs, des bougies et des photos.",
+        "voz": "remedios",
+        "audio": "remedios.aa3d7457c9"
+      },
+      "audio": "remedios.a6cda781e0",
+      "voz": "remedios"
+    },
+    {
+      "id": "vela",
+      "es": "vela",
+      "fr": "bougie",
+      "genero": "f",
+      "plural": "velas",
+      "emoji": "🕯️",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "Una vela da luz.",
+        "fr": "Une bougie donne de la lumière.",
+        "voz": "remedios",
+        "audio": "remedios.ca3911f382"
+      },
+      "audio": "narrador.eb1c0d7aaf"
+    },
+    {
+      "id": "luz",
+      "es": "luz",
+      "fr": "lumière",
+      "genero": "f",
+      "plural": "luces",
+      "emoji": "💡",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "Las velas dan mucha luz.",
+        "fr": "Les bougies donnent beaucoup de lumière.",
+        "voz": "narrador",
+        "audio": "narrador.2d7c15543e"
+      },
+      "audio": "narrador.c307b63565"
+    },
+    {
+      "id": "agua",
+      "es": "agua",
+      "fr": "eau",
+      "genero": "f",
+      "emoji": "💧",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "En la ofrenda hay un vaso de agua.",
+        "fr": "Sur l’autel, il y a un verre d’eau.",
+        "voz": "remedios",
+        "audio": "remedios.ad5b94f425"
+      },
+      "audio": "narrador.c1962c232b"
+    },
+    {
+      "id": "comida",
+      "es": "comida",
+      "fr": "nourriture, repas",
+      "genero": "f",
+      "emoji": "🍲",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "Ponemos la comida favorita de nuestros muertos.",
+        "fr": "Nous mettons le plat préféré de nos défunts.",
+        "voz": "remedios",
+        "audio": "remedios.d7f4bb7431"
+      },
+      "audio": "narrador.9024543383"
+    },
+    {
+      "id": "cempasuchil",
+      "es": "cempasúchil",
+      "fr": "cempasúchil : grande fleur orange (une rose d’Inde, cousine de l’œillet d’Inde), la fleur du Día de Muertos ; son nom vient du nahuatl",
+      "genero": "m",
+      "ilustracion": "Des fleurs de cempasúchil orange vif en grosses boules",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "El cempasúchil es la flor del Día de Muertos.",
+        "fr": "Le cempasúchil est la fleur du Jour des Morts.",
+        "voz": "xochitl",
+        "audio": "xochitl.1aea8b1aee"
+      },
+      "audio": "xochitl.12f1f6c6d1",
+      "voz": "xochitl"
+    },
+    {
+      "id": "petalo",
+      "es": "pétalo",
+      "fr": "pétale",
+      "genero": "m",
+      "plural": "pétalos",
+      "emoji": "🌼",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "Un camino de pétalos naranjas.",
+        "fr": "Un chemin de pétales orange.",
+        "voz": "xochitl",
+        "audio": "xochitl.14da139a88"
+      },
+      "audio": "narrador.a26fc8128c"
+    },
+    {
+      "id": "pan_de_muerto",
+      "es": "pan de muerto",
+      "fr": "pain des morts : brioche ronde et sucrée, souvent décorée de petits os en pâte (à Oaxaca, plutôt d’un petit visage en pâte)",
+      "genero": "m",
+      "emoji": "🍞",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "El pan de muerto es dulce y redondo.",
+        "fr": "Le pain des morts est sucré et rond.",
+        "voz": "remedios",
+        "audio": "remedios.206b7f1a8e"
+      },
+      "audio": "remedios.6589dbe111",
+      "voz": "remedios"
+    },
+    {
+      "id": "papel_picado",
+      "es": "papel picado",
+      "fr": "papel picado : papier de soie découpé en motifs (fleurs, calaveras…) et suspendu en guirlandes",
+      "genero": "m",
+      "ilustracion": "Une guirlande de papel picado : papier de soie coloré découpé en motifs",
+      "tags": [
+        "ofrenda"
+      ],
+      "ejemplo": {
+        "es": "El papel picado tiene muchos colores.",
+        "fr": "Le papel picado a beaucoup de couleurs.",
+        "voz": "xochitl",
+        "audio": "xochitl.81c0a9067d"
+      },
+      "audio": "xochitl.569f476648",
+      "voz": "xochitl"
+    },
+    {
+      "id": "calavera",
+      "es": "calavera",
+      "fr": "crâne, tête de mort (au Día de Muertos, les calaveras sont colorées et souriantes)",
+      "genero": "f",
+      "plural": "calaveras",
+      "emoji": "💀",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La calavera de azúcar tiene un nombre.",
+        "fr": "Le crâne en sucre porte un prénom.",
+        "voz": "xochitl",
+        "audio": "xochitl.19d8d42342"
+      },
+      "audio": "narrador.82454e6273"
+    },
+    {
+      "id": "azucar",
+      "es": "azúcar",
+      "fr": "sucre",
+      "genero": "m",
+      "emoji": "🍬",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La calavera es de azúcar.",
+        "fr": "Le crâne est en sucre.",
+        "voz": "xochitl",
+        "audio": "xochitl.5eb2be5a28"
+      },
+      "audio": "narrador.59c21812e9"
+    },
+    {
+      "id": "catrina",
+      "es": "Catrina",
+      "fr": "la Catrina : élégante dame squelette au grand chapeau, imaginée par le graveur José Guadalupe Posada au début du XXe siècle et baptisée « Catrina » par Diego Rivera, le mari de Frida Kahlo",
+      "genero": "f",
+      "ilustracion": "La Catrina : un squelette élégant en robe longue avec un grand chapeau à plumes et à fleurs",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La Catrina lleva un sombrero grande.",
+        "fr": "La Catrina porte un grand chapeau.",
+        "voz": "xochitl",
+        "audio": "xochitl.fe79481e96"
+      },
+      "audio": "xochitl.422dac7b34",
+      "voz": "xochitl"
+    },
+    {
+      "id": "cementerio",
+      "es": "cementerio",
+      "fr": "cimetière (au Mexique, on dit souvent « panteón »)",
+      "genero": "m",
+      "emoji": "🪦",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Muchas familias van al cementerio.",
+        "fr": "Beaucoup de familles vont au cimetière.",
+        "voz": "xochitl",
+        "audio": "xochitl.c2cd6d78bf"
+      },
+      "audio": "narrador.42a8713467"
+    },
+    {
+      "id": "alebrije",
+      "es": "alebrije",
+      "fr": "alebrije : animal fantastique aux mille couleurs. À Oaxaca, il est sculpté dans le bois ; les premiers, inventés à Mexico par Pedro Linares dans les années 1930, étaient en papier mâché",
+      "genero": "m",
+      "plural": "alebrijes",
+      "ilustracion": "Un alebrije : animal fantastique en bois peint, mélange de jaguar et de poisson, couvert de motifs colorés",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Mis alebrijes son de madera.",
+        "fr": "Mes alebrijes sont en bois.",
+        "voz": "beto",
+        "audio": "beto.e12c22391f"
+      },
+      "audio": "beto.4817f7e01d",
+      "voz": "beto"
+    }
+  ],
+  "gramatica": [],
+  "quests": [
+    {
+      "id": "e01-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Oaxaca",
+      "emoji": "🕯️",
+      "intro": {
+        "es": "¡Hola, viajeros! Hoy empieza la fiesta más bonita del año.",
+        "fr": "Salut, voyageurs ! Aujourd’hui commence la plus belle fête de l’année.",
+        "voz": "xochitl",
+        "audio": "xochitl.8612540fde"
+      },
+      "pista": "Arrivée à Oaxaca pour le Día de Muertos : tu rencontres Xóchitl et tu découvres que cette fête est joyeuse, pas triste ni effrayante.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "e01-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "e01-intro",
+          "escena": {
+            "id": "e01-intro",
+            "tipo": "intro",
+            "titulo": "Evento · Día de Muertos · Oaxaca",
+            "duracion": 11,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du Mexique : un point orange pulse sur Oaxaca ; carte-titre « Evento · Día de Muertos · Oaxaca » sur un fond de papel picado magenta et turquoise.",
+                "camara": "zoom avant progressif",
+                "rotulo": "Evento · Día de Muertos · Oaxaca",
+                "lineas": [
+                  {
+                    "es": "Evento especial: Día de Muertos.",
+                    "fr": "Événement spécial : le Jour des Morts.",
+                    "voz": "narrador",
+                    "audio": "narrador.1a6bde454f"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Rues d’Oaxaca au crépuscule : guirlandes de papel picado, pétales de cempasúchil sur les pavés, vitrines pleines de pan de muerto, calaveras de sucre ; des enfants rient.",
+                "camara": "travelling latéral lent, lumière chaude",
+                "lineas": [
+                  {
+                    "es": "Oaxaca, México. Una fiesta para recordar con alegría.",
+                    "fr": "Oaxaca, Mexique. Une fête pour se souvenir dans la joie.",
+                    "voz": "narrador",
+                    "audio": "narrador.8089752e18"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 3,
+                "vista": "Une bougie s’éteint ; l’ombre de la Sombra glisse sur un mur. Xóchitl serre une photo contre elle.",
+                "personajes": [
+                  "sombra",
+                  "xochitl"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin recuerdos, no hay fiesta… Apago las velas.",
+                    "fr": "Sans souvenirs, pas de fête… J’éteins les bougies.",
+                    "voz": "sombra",
+                    "audio": "sombra.6f7e607f48"
+                  }
+                ],
+                "musica": "tension douce, marimba"
+              }
+            ]
+          }
+        },
+        {
+          "id": "e01-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Oaxaca está en México.",
+            "fr": "Oaxaca est au Mexique.",
+            "voz": "narrador",
+            "audio": "narrador.051828453e"
+          },
+          "correcta": true
+        },
+        {
+          "id": "e01-q01-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "fiesta",
+            "celebrar",
+            "muerto",
+            "recordar",
+            "recuerdo",
+            "ofrenda"
+          ]
+        },
+        {
+          "id": "e01-q01-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "ofrenda",
+            "voz": "remedios",
+            "audio": "remedios.a6cda781e0"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "cuadro",
+              "correcta": false
+            },
+            {
+              "vocab": "flor",
+              "correcta": false
+            },
+            {
+              "vocab": "ofrenda",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "e01-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hoy empieza la fiesta. ¡Celebramos a nuestros muertos con alegría!",
+            "voz": "xochitl",
+            "audio": "xochitl.02fd2b3312"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Es una fiesta triste, sin música.",
+              "correcta": false
+            },
+            {
+              "texto": "Es una fiesta que da miedo.",
+              "correcta": false
+            },
+            {
+              "texto": "Es una fiesta alegre para recordar a la familia.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "e01-q01-s06",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "xochitl",
+          "replica": {
+            "es": "¡Hola! Me llamo Xóchitl y tengo once años. ¿Y tú, cómo te llamas?",
+            "fr": "Salut ! Je m’appelle Xóchitl et j’ai onze ans. Et toi, comment tu t’appelles ?",
+            "voz": "xochitl",
+            "audio": "xochitl.71a43046b5"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex. Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.0c1335b1f6"
+              },
+              "fr": "Je m’appelle Álex. J’ai douze ans.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Mucho gusto, Álex! Mi nombre significa «flor» en náhuatl.",
+                "fr": "Enchantée, Álex ! Mon prénom veut dire « fleur » en náhuatl (la langue des Aztèques).",
+                "voz": "xochitl",
+                "audio": "xochitl.c48be1912f",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy Xóchitl.",
+                "voz": "viajero",
+                "audio": "viajero.9af7e77135"
+              },
+              "fr": "Je suis Xóchitl.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Pero Xóchitl soy yo! ¿Hay dos Xóchitl?",
+                "fr": "Mais Xóchitl, c’est moi ! Il y a deux Xóchitl ?",
+                "voz": "xochitl",
+                "audio": "xochitl.5dd4c6dbea",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós, buenas noches.",
+                "voz": "viajero",
+                "audio": "viajero.52509b9186"
+              },
+              "fr": "Au revoir, bonne nuit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Adiós? ¡Pero si la fiesta empieza ahora!",
+                "fr": "Au revoir ? Mais la fête commence maintenant !",
+                "voz": "xochitl",
+                "audio": "xochitl.29305c7ca9",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q01-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "xochitl",
+          "replica": {
+            "es": "¿Cuándo es el Día de Muertos?",
+            "fr": "Quand est le Jour des Morts ?",
+            "voz": "xochitl",
+            "audio": "xochitl.0a855d426d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "El uno y el dos de noviembre.",
+                "voz": "viajero",
+                "audio": "viajero.af17f89a60"
+              },
+              "fr": "Le 1er et le 2 novembre.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Y la fiesta empieza antes, en octubre.",
+                "fr": "Exact ! Et la fête commence avant, en octobre.",
+                "voz": "xochitl",
+                "audio": "xochitl.7469eb6dd8",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "El veinticinco de diciembre.",
+                "voz": "viajero",
+                "audio": "viajero.7d4809fa2d"
+              },
+              "fr": "Le 25 décembre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ese día es Navidad. ¡Esta fiesta es antes!",
+                "fr": "Ce jour-là, c’est Noël. Cette fête est avant !",
+                "voz": "xochitl",
+                "audio": "xochitl.efbcf52553",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "El domingo.",
+                "voz": "viajero",
+                "audio": "viajero.b4e3f2c9b1"
+              },
+              "fr": "Le dimanche.",
+              "correcta": false,
+              "reaccion": {
+                "es": "El domingo… ¿pero de qué mes?",
+                "fr": "Le dimanche… mais de quel mois ?",
+                "voz": "xochitl",
+                "audio": "xochitl.df852a5bb8",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q01-s08",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Hoy",
+            "celebramos",
+            "el",
+            "Día",
+            "de",
+            "Muertos."
+          ],
+          "habla": {
+            "es": "Hoy celebramos el Día de Muertos.",
+            "voz": "xochitl",
+            "audio": "xochitl.7904ea6ed9"
+          },
+          "fr": "Aujourd’hui, nous fêtons le Jour des Morts."
+        },
+        {
+          "id": "e01-q01-s09",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Hoy celebramos el Día de Muertos.",
+            "fr": "Aujourd’hui, nous fêtons le Jour des Morts.",
+            "voz": "xochitl",
+            "audio": "xochitl.7904ea6ed9"
+          },
+          "aceptadas": [
+            "hoy celebramos el día de muertos"
+          ],
+          "foco": "Le c devant e ou i : au Mexique, comme un « s » (se-le-BRA-mos) ; en Espagne, comme le « th » anglais (the-le-BRA-mos). Les deux sont corrects. Dans « Día », on appuie sur le í : DÍ-a.",
+          "hechizo": {
+            "nombre": "Hechizo de la fiesta",
+            "efecto": "Pétalos naranjas caen sobre la calle"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e01-q02",
+      "tipo": "vocabulario",
+      "titulo": "La ofrenda",
+      "emoji": "🌼",
+      "intro": {
+        "es": "Bienvenidos a mi casa. Hoy preparamos la ofrenda para recordar a los que ya no están.",
+        "fr": "Bienvenue chez moi. Aujourd’hui, nous préparons l’ofrenda pour nous souvenir de ceux qui ne sont plus là.",
+        "voz": "remedios",
+        "audio": "remedios.7e68cb5bf1"
+      },
+      "pista": "L’ofrenda et ses éléments (bougies, cempasúchil, pain de muerto, papel picado) ; tu révises « hay », les couleurs et les nombres, et tu composes TON ofrenda.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "e01-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "vela",
+            "luz",
+            "foto",
+            "agua",
+            "comida",
+            "cempasuchil",
+            "petalo"
+          ]
+        },
+        {
+          "id": "e01-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "pan_de_muerto",
+            "papel_picado"
+          ]
+        },
+        {
+          "id": "e01-q02-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "vela"
+            },
+            {
+              "vocab": "cempasuchil"
+            },
+            {
+              "vocab": "pan_de_muerto"
+            },
+            {
+              "vocab": "papel_picado"
+            },
+            {
+              "vocab": "foto"
+            },
+            {
+              "vocab": "agua"
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "vela",
+            "voz": "narrador",
+            "audio": "narrador.eb1c0d7aaf"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "luz",
+              "correcta": false
+            },
+            {
+              "vocab": "agua",
+              "correcta": false
+            },
+            {
+              "vocab": "vela",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En la ofrenda hay flores, velas y ___.",
+          "respuesta": "fotos",
+          "opciones": [
+            "fotos",
+            "fotas",
+            "fotoes"
+          ],
+          "habla": {
+            "es": "En la ofrenda hay flores, velas y fotos.",
+            "voz": "remedios",
+            "audio": "remedios.aa3d7457c9"
+          },
+          "fr": "Sur l’autel, il y a des fleurs, des bougies et des photos. (« foto » est féminin malgré son -o, car c’est le début de « la fotografía » : la foto → las fotos)"
+        },
+        {
+          "id": "e01-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En la ofrenda hay cuatro velas, una foto de mi abuelo y pan de muerto.",
+            "voz": "remedios",
+            "audio": "remedios.4a6f06fb16"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hay dos velas, un retrato de su abuela y pan.",
+              "correcta": false
+            },
+            {
+              "texto": "Hay cuatro velas, un retrato de su abuelo y pan.",
+              "correcta": true
+            },
+            {
+              "texto": "Hay cuatro flores, un retrato de su abuelo y agua.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Las flores de cempasúchil son naranjas. Sus pétalos hacen un camino hasta la ofrenda.",
+            "voz": "xochitl",
+            "audio": "xochitl.bbaf1d6874"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los pétalos azules forman una casa.",
+              "correcta": false
+            },
+            {
+              "texto": "Los pétalos naranjas forman un camino.",
+              "correcta": true
+            },
+            {
+              "texto": "Los pétalos naranjas forman un cuadro.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s08",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Mi ofrenda tiene dos niveles. Arriba hay una foto de mi abuela, cuatro velas y flores de cempasúchil. Abajo hay agua, pan de muerto y su comida favorita: el mole. Todo está lleno de color.",
+            "fr": "Mon ofrenda a deux niveaux. En haut, il y a une photo de ma grand-mère, quatre bougies et des fleurs de cempasúchil. En bas, il y a de l’eau, du pain des morts et son plat préféré : le mole (une sauce épaisse aux piments et aux épices, souvent avec du chocolat ; Oaxaca est célèbre pour ses moles). Tout est plein de couleur.",
+            "voz": "remedios",
+            "audio": "remedios.3fe390e1d3"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De quién es la foto?",
+                "fr": "De qui est la photo ?",
+                "voz": "narrador",
+                "audio": "narrador.4d4cf07815"
+              },
+              "opciones": [
+                {
+                  "texto": "De su abuela.",
+                  "correcta": true
+                },
+                {
+                  "texto": "De su madre.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De su hermana.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántas velas hay?",
+                "fr": "Combien y a-t-il de bougies ?",
+                "voz": "narrador",
+                "audio": "narrador.bde503d817"
+              },
+              "opciones": [
+                {
+                  "texto": "Dos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cuatro.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Seis.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hay abajo?",
+                "fr": "Qu’y a-t-il en bas ?",
+                "voz": "narrador",
+                "audio": "narrador.9cfdbd94bb"
+              },
+              "opciones": [
+                {
+                  "texto": "Fotos y velas.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Agua, pan de muerto y comida.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo flores.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El cempasúchil es una flor ___ y amarilla.",
+          "respuesta": "naranja",
+          "opciones": [
+            "naranja",
+            "naranjo",
+            "naranjas"
+          ],
+          "habla": {
+            "es": "El cempasúchil es una flor naranja y amarilla.",
+            "voz": "xochitl",
+            "audio": "xochitl.635d34360a"
+          },
+          "fr": "Le cempasúchil est une fleur orange et jaune."
+        },
+        {
+          "id": "e01-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Una vela da ___.",
+          "respuesta": "luz",
+          "opciones": [
+            "luz",
+            "agua",
+            "pan"
+          ],
+          "habla": {
+            "es": "Una vela da luz.",
+            "voz": "remedios",
+            "audio": "remedios.ca3911f382"
+          },
+          "fr": "Une bougie donne de la lumière."
+        },
+        {
+          "id": "e01-q02-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "El",
+            "papel",
+            "picado",
+            "tiene",
+            "muchos",
+            "colores."
+          ],
+          "habla": {
+            "es": "El papel picado tiene muchos colores.",
+            "voz": "xochitl",
+            "audio": "xochitl.81c0a9067d"
+          },
+          "fr": "Le papel picado a beaucoup de couleurs."
+        },
+        {
+          "id": "e01-q02-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "remedios",
+          "replica": {
+            "es": "¿Quién está en tu ofrenda? Puede ser alguien de tu familia o una persona famosa.",
+            "fr": "Qui est sur ton ofrenda ? Ça peut être quelqu’un de ta famille ou une personne célèbre. (Sur une ofrenda, on ne met que des personnes décédées.)",
+            "voz": "remedios",
+            "audio": "remedios.268a326d7c"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "En mi ofrenda está Frida Kahlo.",
+                "voz": "viajero",
+                "audio": "viajero.488cf6fa11"
+              },
+              "fr": "Sur mon ofrenda, il y a Frida Kahlo.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué buena idea! Frida es una artista muy querida en México.",
+                "fr": "Quelle bonne idée ! Frida est une artiste très aimée au Mexique.",
+                "voz": "remedios",
+                "audio": "remedios.183e7bf3e8",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "En mi ofrenda hay una foto de mi bisabuela.",
+                "voz": "viajero",
+                "audio": "viajero.b5b3592daa"
+              },
+              "fr": "Sur mon ofrenda, il y a une photo de mon arrière-grand-mère.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Qué bonito. Así la recuerdas con cariño.",
+                "fr": "Que c’est beau. Comme ça, tu te souviens d’elle avec tendresse.",
+                "voz": "remedios",
+                "audio": "remedios.75bc678f45",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi ofrenda se llama doce años.",
+                "voz": "viajero",
+                "audio": "viajero.5716208460"
+              },
+              "fr": "Mon ofrenda s’appelle douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Jaja, ¿una ofrenda de doce años? No entiendo.",
+                "fr": "Haha, une ofrenda de douze ans ? Je ne comprends pas.",
+                "voz": "remedios",
+                "audio": "remedios.525122f2d9",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q02-s13",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu ofrenda.",
+            "fr": "Écris ton ofrenda.",
+            "voz": "narrador",
+            "audio": "narrador.eba3829849"
+          },
+          "plantilla": "En mi ofrenda hay una foto de ___. También hay ___.",
+          "campos": [
+            {
+              "id": "persona",
+              "pista": "Une personne disparue que tu admires ou de ta famille (Frida Kahlo, un artista, mi bisabuelo…). Sur une ofrenda, on ne met que des personnes décédées.",
+              "tipo": "texto"
+            },
+            {
+              "id": "cosa",
+              "pista": "Ce que tu ajoutes : des fleurs, des bougies, pan de muerto, sa comida favorita… (ex. flores naranjas y cuatro velas)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "En mi ofrenda hay una foto de Frida Kahlo. También hay flores naranjas y cuatro velas.",
+            "fr": "Sur mon ofrenda, il y a une photo de Frida Kahlo. Il y a aussi des fleurs orange et quatre bougies.",
+            "voz": "xochitl",
+            "audio": "xochitl.e520d0895b"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "e01-q02-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di de quién es la foto en TU ofrenda.",
+            "fr": "Écoute et dis de qui est la photo sur TON ofrenda : une personne disparue que tu admires ou quelqu’un de ta famille qui n’est plus là (de Frida Kahlo, de mi bisabuelo…).",
+            "voz": "narrador",
+            "audio": "narrador.59fd73988c"
+          },
+          "objetivo": {
+            "es": "En mi ofrenda hay una foto de Frida Kahlo.",
+            "fr": "Sur mon ofrenda, il y a une photo de Frida Kahlo. (dis la tienne)",
+            "voz": "viajero",
+            "audio": "viajero.dfb02868df"
+          },
+          "aceptadas": [
+            "en mi ofrenda hay una foto de frida kahlo"
+          ],
+          "patrones": [
+            "en mi ofrenda hay una foto de {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del recuerdo",
+            "efecto": "Una vela se enciende en tu ofrenda"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e01-q03",
+      "tipo": "cultura",
+      "titulo": "Una fiesta, no Halloween",
+      "emoji": "💀",
+      "intro": {
+        "es": "El Día de Muertos no es Halloween. Es una fiesta para recordar con cariño a la familia.",
+        "fr": "Le Jour des Morts, ce n’est pas Halloween. C’est une fête pour se souvenir de la famille avec tendresse.",
+        "voz": "xochitl",
+        "audio": "xochitl.ea212763d8"
+      },
+      "pista": "Une fête du souvenir, joyeuse et familiale : calaveras de sucre, Catrina, veillée au cimetière ; et l’artisanat d’Oaxaca, les alebrijes. Une tradition inscrite au patrimoine culturel immatériel de l’UNESCO (2008).",
+      "stats": [
+        "cultura",
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "e01-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "calavera",
+            "azucar",
+            "catrina",
+            "cementerio",
+            "alebrije"
+          ]
+        },
+        {
+          "id": "e01-q03-s02",
+          "tipo": "cinematic_ref",
+          "cinematica": "e01-capsula-muertos",
+          "escena": {
+            "id": "e01-capsula-muertos",
+            "tipo": "capsula",
+            "titulo": "Día de Muertos: una fiesta, no Halloween",
+            "duracion": 23,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 5,
+                "vista": "Style explainer, papier découpé : un calendrier s’ouvre sur le « 1 » et le « 2 » de noviembre ; des icônes d’enfants puis d’adultes apparaissent.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "En México, el uno de noviembre las familias recuerdan a los niños que ya no están, y el dos, a los adultos.",
+                    "fr": "Au Mexique, le 1er novembre, les familles se souviennent des enfants disparus, et le 2, des adultes.",
+                    "voz": "narrador",
+                    "audio": "narrador.903664566e"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Un autel à étages se construit élément par élément : photos, bougies, fleurs de cempasúchil, pain de muerto, verre d’eau, plat favori, papel picado qui flotte en haut.",
+                "lineas": [
+                  {
+                    "es": "En la ofrenda hay fotos, velas, flores, pan de muerto y la comida favorita de los muertos.",
+                    "fr": "Sur l’autel, il y a des photos, des bougies, des fleurs, du pain des morts et le plat préféré des défunts.",
+                    "voz": "narrador",
+                    "audio": "narrador.984a72ef76"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Un chemin de pétales orange part de la rue et mène jusqu’à la porte d’une maison, éclairé par des bougies.",
+                "lineas": [
+                  {
+                    "es": "Los pétalos de cempasúchil hacen un camino de color naranja. Según la tradición, este camino guía a los muertos hasta su casa.",
+                    "fr": "Les pétales de cempasúchil font un chemin orange. Selon la tradition, ce chemin guide les défunts jusqu’à leur maison.",
+                    "voz": "narrador",
+                    "audio": "narrador.a660d5167b"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 4,
+                "vista": "Montage joyeux : calaveras de sucre colorées, la Catrina, papel picado, musiciens et familles ; un signe « ≠ » entre « Halloween » et « Día de Muertos », sans moquerie.",
+                "lineas": [
+                  {
+                    "es": "No es Halloween: es una fiesta alegre, con música, colores y comida.",
+                    "fr": "Ce n’est pas Halloween : c’est une fête joyeuse, avec de la musique, des couleurs et de la nourriture.",
+                    "voz": "narrador",
+                    "audio": "narrador.d3adf249c3"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 4,
+                "vista": "Logo de la UNESCO et carte du Mexique qui s’illumine ; texte « Patrimonio Cultural Inmaterial de la Humanidad · 2008 ».",
+                "lineas": [
+                  {
+                    "es": "Desde 2008, esta tradición es Patrimonio Cultural Inmaterial de la Humanidad.",
+                    "fr": "Depuis 2008, cette tradition est inscrite au patrimoine culturel immatériel de l’humanité (UNESCO).",
+                    "voz": "narrador",
+                    "audio": "narrador.d59e75acb7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "e01-q03-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Día de Muertos es una fiesta alegre.",
+            "fr": "Le Jour des Morts est une fête joyeuse.",
+            "voz": "narrador",
+            "audio": "narrador.567c3f7f21"
+          },
+          "correcta": true
+        },
+        {
+          "id": "e01-q03-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Día de Muertos es una fiesta que da miedo, como Halloween.",
+            "fr": "Le Jour des Morts est une fête qui fait peur, comme Halloween.",
+            "voz": "narrador",
+            "audio": "narrador.a52a626429"
+          },
+          "correcta": false
+        },
+        {
+          "id": "e01-q03-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En una ofrenda hay fotos, velas y flores.",
+            "fr": "Sur une ofrenda, il y a des photos, des bougies et des fleurs.",
+            "voz": "narrador",
+            "audio": "narrador.9b0f931b76"
+          },
+          "correcta": true
+        },
+        {
+          "id": "e01-q03-s06",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los alebrijes son animales fantásticos de muchos colores.",
+            "fr": "Les alebrijes sont des animaux fantastiques de toutes les couleurs.",
+            "voz": "narrador",
+            "audio": "narrador.20edaad906"
+          },
+          "correcta": true,
+          "imagen": "alebrije"
+        },
+        {
+          "id": "e01-q03-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Soy Beto y hago alebrijes en Oaxaca. Mis alebrijes son animales fantásticos de madera. Los pinto con muchos colores: rojo, azul, verde, amarillo y morado. ¡No hay dos alebrijes iguales!",
+            "fr": "Je suis Beto et je fabrique des alebrijes à Oaxaca. Mes alebrijes sont des animaux fantastiques en bois. Je les peins avec beaucoup de couleurs : rouge, bleu, vert, jaune et violet. Il n’y a pas deux alebrijes identiques ! (Les alebrijes ne sont pas une tradition du Día de Muertos : c’est un artisanat d’Oaxaca et de Mexico, très présent dans les fêtes.)",
+            "voz": "beto",
+            "audio": "beto.7bca657dab"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué hace Beto?",
+                "fr": "Que fait Beto ?",
+                "voz": "narrador",
+                "audio": "narrador.6b5c73edbc"
+              },
+              "opciones": [
+                {
+                  "texto": "Alebrijes.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pan de muerto.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cuadros.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿De qué son los alebrijes de Beto?",
+                "fr": "En quoi sont les alebrijes de Beto ?",
+                "voz": "narrador",
+                "audio": "narrador.8642e05285"
+              },
+              "opciones": [
+                {
+                  "texto": "De azúcar.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De madera.",
+                  "correcta": true
+                },
+                {
+                  "texto": "De pan.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Hay dos alebrijes iguales?",
+                "fr": "Y a-t-il deux alebrijes identiques ?",
+                "voz": "narrador",
+                "audio": "narrador.98a55ef7a3"
+              },
+              "opciones": [
+                {
+                  "texto": "Sí.",
+                  "correcta": false
+                },
+                {
+                  "texto": "No.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e01-q03-s08",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La calavera de azúcar tiene un nombre escrito y es para una persona de la familia. No da miedo: es dulce y de colores. La Catrina es una calavera elegante con un sombrero grande.",
+            "fr": "Le crâne en sucre a un prénom écrit dessus et il est pour une personne de la famille. Il ne fait pas peur : il est sucré et coloré. La Catrina est un squelette élégant avec un grand chapeau.",
+            "voz": "xochitl",
+            "audio": "xochitl.620419f3ba"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De qué es la calavera?",
+                "fr": "En quoi est le crâne ?",
+                "voz": "narrador",
+                "audio": "narrador.2838b9c06e"
+              },
+              "opciones": [
+                {
+                  "texto": "De azúcar.",
+                  "correcta": true
+                },
+                {
+                  "texto": "De madera.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De agua.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Da miedo la calavera?",
+                "fr": "Le crâne fait-il peur ?",
+                "voz": "narrador",
+                "audio": "narrador.935b2ca10d"
+              },
+              "opciones": [
+                {
+                  "texto": "Sí, mucho.",
+                  "correcta": false
+                },
+                {
+                  "texto": "No, es dulce y de colores.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué lleva la Catrina?",
+                "fr": "Que porte la Catrina ?",
+                "voz": "narrador",
+                "audio": "narrador.eed66d5203"
+              },
+              "opciones": [
+                {
+                  "texto": "Una gorra.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un sombrero grande.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Gafas.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e01-q03-s09",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En Oaxaca, muchas familias van al cementerio con flores y velas, y pasan la noche juntas.",
+            "voz": "xochitl",
+            "audio": "xochitl.87a119c8bb"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Las familias tienen miedo del cementerio.",
+              "correcta": false
+            },
+            {
+              "texto": "Las familias visitan a sus muertos con flores y velas.",
+              "correcta": true
+            },
+            {
+              "texto": "Las familias viven en el cementerio.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "e01-q03-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "beto",
+          "replica": {
+            "es": "Mi alebrije es un jaguar azul y amarillo. ¿Cómo es tu animal fantástico?",
+            "fr": "Mon alebrije est un jaguar bleu et jaune. Comment est ton animal fantastique ?",
+            "voz": "beto",
+            "audio": "beto.f2289e5ffa"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi animal es grande y azul.",
+                "voz": "viajero",
+                "audio": "viajero.4341f7b2d0"
+              },
+              "fr": "Mon animal est grand et bleu.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué padre! Un animal grande y azul, como el mar.",
+                "fr": "Trop bien ! (« padre » = génial, familier mexicain). Un grand animal bleu, comme la mer.",
+                "voz": "beto",
+                "audio": "beto.2c7ffd7269",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi animal lleva gafas y un sombrero.",
+                "voz": "viajero",
+                "audio": "viajero.0d6b06bbf4"
+              },
+              "fr": "Mon animal porte des lunettes et un chapeau.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Jaja, ¡un animal elegante! Me gusta.",
+                "fr": "Haha, un animal élégant ! Il me plaît.",
+                "voz": "beto",
+                "audio": "beto.61a0663854",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi animal se llama doce años.",
+                "voz": "viajero",
+                "audio": "viajero.e87938c47b"
+              },
+              "fr": "Mon animal s’appelle douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Jaja… eso no es un nombre.",
+                "fr": "Haha… ce n’est pas un prénom.",
+                "voz": "beto",
+                "audio": "beto.358b90c36b",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q03-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El Día de Muertos es una ___ alegre.",
+          "respuesta": "fiesta",
+          "opciones": [
+            "vela",
+            "fiesta",
+            "ofrenda"
+          ],
+          "habla": {
+            "es": "El Día de Muertos es una fiesta alegre.",
+            "voz": "xochitl",
+            "audio": "xochitl.567c3f7f21"
+          },
+          "fr": "Le Jour des Morts est une fête joyeuse."
+        },
+        {
+          "id": "e01-q03-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La calavera es de ___.",
+          "respuesta": "azúcar",
+          "opciones": [
+            "agua",
+            "luz",
+            "azúcar"
+          ],
+          "habla": {
+            "es": "La calavera es de azúcar.",
+            "voz": "xochitl",
+            "audio": "xochitl.5eb2be5a28"
+          },
+          "fr": "Le crâne est en sucre."
+        },
+        {
+          "id": "e01-q03-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "La",
+            "Catrina",
+            "lleva",
+            "un",
+            "sombrero",
+            "grande."
+          ],
+          "habla": {
+            "es": "La Catrina lleva un sombrero grande.",
+            "voz": "xochitl",
+            "audio": "xochitl.fe79481e96"
+          },
+          "fr": "La Catrina porte un grand chapeau."
+        },
+        {
+          "id": "e01-q03-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué fiesta celebras TÚ con tu familia.",
+            "fr": "Écoute et dis quelle fête TU fêtes avec ta famille (el cumpleaños, el Año Nuevo, la Navidad…).",
+            "voz": "narrador",
+            "audio": "narrador.54b29c0860"
+          },
+          "objetivo": {
+            "es": "En mi familia celebramos la Navidad.",
+            "fr": "Dans ma famille, nous fêtons Noël. (dis ta fête)",
+            "voz": "viajero",
+            "audio": "viajero.6271674f5e"
+          },
+          "aceptadas": [
+            "en mi familia celebramos la navidad"
+          ],
+          "patrones": [
+            "en mi familia celebramos {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la fiesta",
+            "efecto": "Luces de colores rodean tu mesa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e01-q04",
+      "tipo": "desafio",
+      "titulo": "La Sombra y el olvido",
+      "emoji": "👤",
+      "intro": {
+        "es": "Sin recuerdos, no hay fiesta. Voy a apagar todas las velas de Oaxaca.",
+        "fr": "Sans souvenirs, pas de fête. Je vais éteindre toutes les bougies d’Oaxaca.",
+        "voz": "sombra",
+        "audio": "sombra.de7dbb5f54"
+      },
+      "pista": "Boss de l’événement : révision du Día de Muertos et des unités 1 à 4. Chaque bonne réponse rallume une bougie.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 8
+      },
+      "steps": [
+        {
+          "id": "e01-q04-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Qué es una ofrenda?",
+            "fr": "Qu’est-ce qu’une ofrenda ?",
+            "voz": "sombra",
+            "audio": "sombra.4bb7d908f6"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Es un altar con fotos, velas y flores para recordar a la familia.",
+                "voz": "viajero",
+                "audio": "viajero.79074a1b94"
+              },
+              "fr": "C’est un autel avec des photos, des bougies et des fleurs pour se souvenir de la famille.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Una vela más se enciende…",
+                "fr": "Grr ! Une bougie de plus s’allume…",
+                "voz": "sombra",
+                "audio": "sombra.1f552035e1",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es un animal fantástico de colores.",
+                "voz": "viajero",
+                "audio": "viajero.abd0dee7b7"
+              },
+              "fr": "C’est un animal fantastique en bois.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso es un alebrije, no una ofrenda.",
+                "fr": "Ça, c’est un alebrije, pas une ofrenda.",
+                "voz": "sombra",
+                "audio": "sombra.7b599d40c4",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es una calavera de azúcar.",
+                "voz": "viajero",
+                "audio": "viajero.049f694dae"
+              },
+              "fr": "C’est un crâne en sucre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "La calavera está en la ofrenda, pero no es la ofrenda.",
+                "fr": "Le crâne est sur l’ofrenda, mais ce n’est pas l’ofrenda.",
+                "voz": "sombra",
+                "audio": "sombra.19aa2076b9",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Cómo es la flor de la ofrenda?",
+            "fr": "Comment est la fleur de l’ofrenda ?",
+            "voz": "sombra",
+            "audio": "sombra.a79265c98b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Es una flor naranja y amarilla: el cempasúchil.",
+                "voz": "viajero",
+                "audio": "viajero.01714e5d15"
+              },
+              "fr": "C’est une fleur orange et jaune : le cempasúchil.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Otra vela encendida…",
+                "fr": "Aaah ! Une autre bougie allumée…",
+                "voz": "sombra",
+                "audio": "sombra.866ca19484",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es una flor azul y gris.",
+                "voz": "viajero",
+                "audio": "viajero.d0c209a4bf"
+              },
+              "fr": "C’est une fleur bleue et grise.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No. Es naranja y amarilla, como el sol.",
+                "fr": "Non. Elle est orange et jaune, comme le soleil.",
+                "voz": "sombra",
+                "audio": "sombra.8c49640d06",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es una vela negra.",
+                "voz": "viajero",
+                "audio": "viajero.c8cb9feedb"
+              },
+              "fr": "C’est une bougie noire.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Una vela no es una flor.",
+                "fr": "Une bougie n’est pas une fleur.",
+                "voz": "sombra",
+                "audio": "sombra.6c8d90b753",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "calavera",
+            "voz": "narrador",
+            "audio": "narrador.82454e6273"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "vela",
+              "correcta": false
+            },
+            {
+              "vocab": "calavera",
+              "correcta": true
+            },
+            {
+              "vocab": "cuadro",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "vela"
+            },
+            {
+              "vocab": "pan_de_muerto"
+            },
+            {
+              "vocab": "calavera"
+            },
+            {
+              "vocab": "papel_picado"
+            },
+            {
+              "vocab": "alebrije"
+            },
+            {
+              "vocab": "cempasuchil"
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En mi casa hay una ofrenda con diez velas y flores naranjas.",
+            "voz": "xochitl",
+            "audio": "xochitl.d782c49c17"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "La ofrenda de Xóchitl tiene diez velas y flores de color naranja.",
+              "correcta": true
+            },
+            {
+              "texto": "La ofrenda de Xóchitl tiene seis velas y flores azules.",
+              "correcta": false
+            },
+            {
+              "texto": "La casa de Xóchitl no tiene ofrenda.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Las velas de mi ofrenda son ___.",
+          "respuesta": "blancas",
+          "opciones": [
+            "blancos",
+            "blancas",
+            "blanca"
+          ],
+          "habla": {
+            "es": "Las velas de mi ofrenda son blancas.",
+            "voz": "remedios",
+            "audio": "remedios.ea741050c5"
+          },
+          "fr": "Les bougies de mon ofrenda sont blanches."
+        },
+        {
+          "id": "e01-q04-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Los alebrijes son de muchos ___.",
+          "respuesta": "colores",
+          "opciones": [
+            "color",
+            "colores",
+            "colora"
+          ],
+          "habla": {
+            "es": "Los alebrijes son de muchos colores.",
+            "voz": "beto",
+            "audio": "beto.8e5c27b3f5"
+          },
+          "fr": "Les alebrijes sont de beaucoup de couleurs."
+        },
+        {
+          "id": "e01-q04-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Nosotros ___ el Día de Muertos en familia.",
+          "respuesta": "celebramos",
+          "opciones": [
+            "celebro",
+            "celebramos",
+            "celebran"
+          ],
+          "habla": {
+            "es": "Nosotros celebramos el Día de Muertos en familia.",
+            "voz": "xochitl",
+            "audio": "xochitl.6385f20be7"
+          },
+          "fr": "Nous fêtons le Jour des Morts en famille."
+        },
+        {
+          "id": "e01-q04-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "nosotros",
+          "radical": "com",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "comemos",
+          "habla": {
+            "es": "nosotros comemos",
+            "voz": "beto",
+            "audio": "beto.57256fc5e7"
+          },
+          "fr": "Nous, nous mangeons…"
+        },
+        {
+          "id": "e01-q04-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "familia",
+            "come",
+            "pan",
+            "de",
+            "muerto",
+            "en",
+            "noviembre."
+          ],
+          "habla": {
+            "es": "Mi familia come pan de muerto en noviembre.",
+            "voz": "xochitl",
+            "audio": "xochitl.7498ca1604"
+          },
+          "fr": "Ma famille mange du pain des morts en novembre."
+        },
+        {
+          "id": "e01-q04-s11",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "La ofrenda tiene velas y flores.",
+            "voz": "remedios",
+            "audio": "remedios.debae486cf"
+          },
+          "respuesta": "La ofrenda tiene velas y flores.",
+          "aceptadas": [
+            "la ofrenda tiene velas y flores"
+          ]
+        },
+        {
+          "id": "e01-q04-s12",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Xóchitl. Tengo once años y vivo en Oaxaca. Soy baja y delgada, y tengo el pelo largo y negro. Hoy llevo un vestido blanco con flores. Estoy muy contenta: ¡hoy es la fiesta!",
+            "fr": "Salut, c’est Xóchitl. J’ai onze ans et j’habite à Oaxaca. Je suis petite et mince, et j’ai les cheveux longs et noirs. Aujourd’hui, je porte une robe blanche avec des fleurs. Je suis très contente : aujourd’hui, c’est la fête !",
+            "voz": "xochitl",
+            "audio": "xochitl.da7e8fe6aa"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántos años tiene Xóchitl?",
+                "fr": "Quel âge a Xóchitl ?",
+                "voz": "narrador",
+                "audio": "narrador.ce6142926c"
+              },
+              "opciones": [
+                {
+                  "texto": "Diez.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Once.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Doce.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo tiene el pelo?",
+                "fr": "Comment a-t-elle les cheveux ?",
+                "voz": "narrador",
+                "audio": "narrador.65dae0b16c"
+              },
+              "opciones": [
+                {
+                  "texto": "Largo y negro.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Corto y rubio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Rizado y castaño.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo está hoy?",
+                "fr": "Comment va-t-elle aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.e5adb358ac"
+              },
+              "opciones": [
+                {
+                  "texto": "Cansada.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Triste.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Contenta.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s13",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El dos de noviembre.",
+            "voz": "sombra",
+            "audio": "sombra.4ab95247fe"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "12 de noviembre",
+              "correcta": false
+            },
+            {
+              "texto": "2 de octubre",
+              "correcta": false
+            },
+            {
+              "texto": "2 de noviembre",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "e01-q04-s14",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Halloween y el Día de Muertos son la misma fiesta.",
+            "fr": "Halloween et le Jour des Morts sont la même fête.",
+            "voz": "narrador",
+            "audio": "narrador.7336da9519"
+          },
+          "correcta": false
+        },
+        {
+          "id": "e01-q04-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Hoy celebro el Día de Muertos.",
+            "fr": "Salut, je m’appelle Álex. Aujourd’hui, je fête le Jour des Morts. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.f5beb8f943"
+          },
+          "aceptadas": [
+            "hola me llamo álex hoy celebro el día de muertos"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} hoy celebro el día de muertos"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del recuerdo",
+            "efecto": "¡Todas las velas de Oaxaca se encienden y la Sombra se aleja!"
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 0,
+    "nombre": "Pluma de Cempasúchil",
+    "descripcion": {
+      "es": "Esta pluma es naranja como el cempasúchil. Es un regalo de la fiesta.",
+      "fr": "Cette plume est orange comme le cempasúchil. C’est un cadeau de la fête.",
+      "voz": "quetzal",
+      "audio": "quetzal.bbcdb679f8"
+    }
+  }
+}

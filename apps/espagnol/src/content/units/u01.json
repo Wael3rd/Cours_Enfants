@@ -2618,66 +2618,6 @@
         },
         {
           "id": "u01-q03-s04",
-          "tipo": "listen_choose",
-          "consigna": {
-            "es": "Escucha la letra y elige.",
-            "fr": "Écoute la lettre et choisis.",
-            "voz": "narrador",
-            "audio": "narrador.8ac4b09487"
-          },
-          "habla": {
-            "es": "ele",
-            "voz": "narrador",
-            "audio": "narrador.9d4799a1ea"
-          },
-          "modo": "texto",
-          "opciones": [
-            {
-              "texto": "N",
-              "correcta": false
-            },
-            {
-              "texto": "M",
-              "correcta": false
-            },
-            {
-              "texto": "L",
-              "correcta": true
-            }
-          ]
-        },
-        {
-          "id": "u01-q03-s05",
-          "tipo": "listen_choose",
-          "consigna": {
-            "es": "Escucha la letra y elige.",
-            "fr": "Écoute la lettre et choisis.",
-            "voz": "narrador",
-            "audio": "narrador.8ac4b09487"
-          },
-          "habla": {
-            "es": "equis",
-            "voz": "narrador",
-            "audio": "narrador.ada6eaf77a"
-          },
-          "modo": "texto",
-          "opciones": [
-            {
-              "texto": "X",
-              "correcta": true
-            },
-            {
-              "texto": "S",
-              "correcta": false
-            },
-            {
-              "texto": "Z",
-              "correcta": false
-            }
-          ]
-        },
-        {
-          "id": "u01-q03-s06",
           "tipo": "dictado",
           "consigna": {
             "es": "Escucha las letras y escribe el nombre.",
@@ -2696,7 +2636,7 @@
           ]
         },
         {
-          "id": "u01-q03-s07",
+          "id": "u01-q03-s05",
           "tipo": "dictado",
           "consigna": {
             "es": "Escucha las letras y escribe el nombre.",
@@ -2715,12 +2655,95 @@
           ]
         },
         {
+          "id": "u01-q03-s06",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu nombre letra por letra.",
+            "fr": "Écris ton prénom lettre par lettre.",
+            "voz": "narrador",
+            "audio": "narrador.4a054e57ef"
+          },
+          "plantilla": "Mi nombre es ___. Se escribe: ___.",
+          "campos": [
+            {
+              "id": "nombre",
+              "pista": "Ton prénom",
+              "tipo": "texto"
+            },
+            {
+              "id": "letras",
+              "pista": "Ton prénom lettre par lettre, séparées par des virgules (ex. M, A, R, I, N, A)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi nombre es Marina. Se escribe: eme, a, erre, i, ene, a.",
+            "fr": "Mon prénom est Marina. Il s’écrit : M, A, R, I, N, A.",
+            "voz": "marina",
+            "audio": "marina.c06e6e1f2b"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u01-q03-s07",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di con qué letra empieza TU nombre.",
+            "fr": "Écoute et dis avec quelle lettre commence TON prénom (le nom de la lettre : eme, ene, pe…).",
+            "voz": "narrador",
+            "audio": "narrador.57651cd533"
+          },
+          "objetivo": {
+            "es": "Mi nombre empieza por la letra a.",
+            "fr": "Mon prénom commence par la lettre A. (dis la tienne)",
+            "voz": "viajero",
+            "audio": "viajero.6d1fce7f89"
+          },
+          "aceptadas": [
+            "mi nombre empieza por la letra a"
+          ],
+          "patrones": [
+            "mi nombre empieza por la letra {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la inicial",
+            "efecto": "La primera letra de tu nombre brilla en el aire"
+          }
+        },
+        {
           "id": "u01-q03-s08",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuántas letras tiene TU nombre.",
+            "fr": "Écoute et dis combien de lettres a TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.80308c6a2b"
+          },
+          "objetivo": {
+            "es": "Mi nombre tiene cuatro letras.",
+            "fr": "Mon prénom a quatre lettres. (dis le nombre du tien)",
+            "voz": "viajero",
+            "audio": "viajero.da8501e5ba"
+          },
+          "aceptadas": [
+            "mi nombre tiene cuatro letras",
+            "mi nombre tiene 4 letras"
+          ],
+          "patrones": [
+            "mi nombre tiene {nombre} letras"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de las letras",
+            "efecto": "Las letras de tu nombre bailan a tu alrededor"
+          }
+        },
+        {
+          "id": "u01-q03-s09",
           "tipo": "grammar_card",
           "ref": "g_pronunciacion"
         },
         {
-          "id": "u01-q03-s09",
+          "id": "u01-q03-s10",
           "tipo": "speak",
           "consigna": {
             "es": "Escucha y repite el hechizo.",
@@ -2745,7 +2768,7 @@
           }
         },
         {
-          "id": "u01-q03-s10",
+          "id": "u01-q03-s11",
           "tipo": "speak",
           "consigna": {
             "es": "Escucha y repite el hechizo.",
@@ -2769,7 +2792,7 @@
           }
         },
         {
-          "id": "u01-q03-s11",
+          "id": "u01-q03-s12",
           "tipo": "speak",
           "consigna": {
             "es": "Escucha y repite el hechizo.",
@@ -2793,7 +2816,7 @@
           }
         },
         {
-          "id": "u01-q03-s12",
+          "id": "u01-q03-s13",
           "tipo": "speak",
           "consigna": {
             "es": "Escucha y repite el hechizo.",
@@ -2815,29 +2838,6 @@
             "nombre": "Hechizo de la elle",
             "efecto": "Tu nombre brilla en el aire"
           }
-        },
-        {
-          "id": "u01-q03-s13",
-          "tipo": "fill_blank",
-          "consigna": {
-            "es": "Completa la frase.",
-            "fr": "Complète la phrase.",
-            "voz": "narrador",
-            "audio": "narrador.c8dfcbb8f1"
-          },
-          "frase": "¿Cómo se ___ tu nombre?",
-          "respuesta": "escribe",
-          "opciones": [
-            "escribe",
-            "llama",
-            "tiene"
-          ],
-          "habla": {
-            "es": "¿Cómo se escribe tu nombre?",
-            "voz": "nacho",
-            "audio": "nacho.935f83bdf1"
-          },
-          "fr": "Comment s’écrit ton prénom ?"
         },
         {
           "id": "u01-q03-s14",

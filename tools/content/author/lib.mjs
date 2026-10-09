@@ -48,6 +48,7 @@ export const K = {
   lee: C('Lee y contesta.', 'Lis et réponds.'),
   di: C('Escucha y repite el hechizo.', 'Écoute et répète le sort.'),
   diNombre: C('Escucha y repite el hechizo con tu nombre.', 'Écoute et répète le sort en disant TON prénom.'),
+  diMio: C('Escucha y repite. Cambia la palabra por la tuya.', 'Écoute et répète. Remplace le mot par le tien (ta vraie réponse).'),
   vf: C('¿Verdadero o falso?', 'Vrai ou faux ?'),
   ficha: C('Escribe tu ficha de viajero.', 'Écris ta fiche de voyageur.'),
 };
@@ -115,18 +116,25 @@ export const read = (texto, voz, tFr, qs, o = {}) => ({
     pregunta: L(NARR, q, qfr), opciones: opts.map((texto, i) => ({ texto, correcta: i === ok })),
   })),
 });
-/** o.nombre : prenom du modele ("Álex") que l'eleve peut remplacer par le sien -> patrones + consigne adaptee */
+/**
+ * o.nombre : prenom du modele ("Álex") que l'eleve peut remplacer par le sien -> patrones + consigne adaptee.
+ * o.libre  : MOT du modele (ex. "castaño", "cuatro", "azul") que l'eleve remplace par sa propre reponse (1 a 3 mots) :
+ *            il parle de LUI (description, vetements, famille). Meme mecanisme (patrones) ; consigne K.diMio.
+ */
 export const speak = (es, voz, o = {}) => {
   const aceptadas = [normSpeech(es), ...(o.acept ?? [])];
   let patrones;
-  if (o.nombre) {
-    const n = normSpeech(o.nombre), n2 = n.normalize('NFD').replace(/\p{M}/gu, '').normalize('NFC');
-    patrones = [...new Set(aceptadas.map((a) => a.split(' ').map((w) => (w === n || w === n2 ? NOMBRE_LIBRE : w)).join(' ')))]
+  const libre = o.nombre ?? o.libre;
+  if (libre) {
+    const n = normSpeech(libre), n2 = n.normalize('NFD').replace(/\p{M}/gu, '').normalize('NFC');
+    const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`(^| )(?:${esc(n)}|${esc(n2)})(?= |$)`, 'g'); // mot ou groupe de mots remplace par le jeton
+    patrones = [...new Set(aceptadas.map((a) => a.replace(re, `$1${NOMBRE_LIBRE}`)))]
       .filter((p) => p.includes(NOMBRE_LIBRE));
-    if (!patrones.length) throw new Error(`speak: prenom ${o.nombre} absent de "${es}"`);
+    if (!patrones.length) throw new Error(`speak: mot libre ${libre} absent de "${es}"`);
   }
   return {
-    tipo: 'speak', consigna: o.nombre && !o.es ? K.diNombre : cons(K.di, o.es, o.fr), objetivo: L(voz, es, o.tr ?? ''),
+    tipo: 'speak', consigna: o.nombre && !o.es ? K.diNombre : o.libre && !o.es ? K.diMio : cons(K.di, o.es, o.fr), objetivo: L(voz, es, o.tr ?? ''),
     aceptadas, ...(patrones ? { patrones } : {}),
     ...(o.foco ? { foco: o.foco } : {}), ...(o.hechizo ? { hechizo: { nombre: o.hechizo[0], efecto: o.hechizo[1] } } : {}),
   };
@@ -136,8 +144,8 @@ export const tf = (es, ok, voz, o = {}) => ({
   ...(o.img ? { imagen: o.img } : {}), ...(o.expl ? { explicacion: L(NARR, o.expl[0], o.expl[1]) } : {}),
 });
 export const gram = (ref) => ({ tipo: 'grammar_card', ref });
-export const writeFree = (plantilla, campos, mEs, mFr, voz = 'marina') => ({
-  tipo: 'write_free', consigna: K.ficha, plantilla, campos, modelo: L(voz, mEs, mFr), guardarEn: 'perfil',
+export const writeFree = (plantilla, campos, mEs, mFr, voz = 'marina', consigna = K.ficha) => ({
+  tipo: 'write_free', consigna, plantilla, campos, modelo: L(voz, mEs, mFr), guardarEn: 'perfil',
 });
 
 // ── cinematiques ──

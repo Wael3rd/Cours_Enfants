@@ -9,7 +9,7 @@ import { dirname } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 mkdirSync(UNITS_DIR, { recursive: true });
-for (const n of ['u01', 'u02', 'u03']) {
+for (const n of ['u01', 'u02', 'u03', 'u04', 'e01']) {
   const f = join(here, `${n}.mjs`);
   if (!existsSync(f)) continue;
   const unit = (await import(pathToFileURL(f).href)).default();

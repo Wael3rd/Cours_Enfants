@@ -411,7 +411,11 @@ export interface Unit {
   quests: Quest[];
   /** Plume du Quetzal recuperee a la fin de l'unite */
   pluma: Pluma;
-  /** Unite EVENEMENT : ouverte seulement entre ces dates annuelles ("MM-DD"). Seule source de verite (pas de deduction par mots-cles). */
+  /**
+   * Unite EVENEMENT : ouverte seulement entre ces dates annuelles ("MM-DD", la fenetre peut enjamber le 31/12). Seule source de verite
+   * (pas de deduction par mots-cles). Convention : fichier units/eNN.json, id "eNN", numero 0 (hors sequence des unites ordinaires),
+   * format allege (12-30 mots, 3-4 quetes, 1-2 cinematiques, pas de plume obligatoire) ; ex. e01 Dia de Muertos { desde: "10-25", hasta: "11-02" }.
+   */
   evento?: { desde: string; hasta: string };
 }
 

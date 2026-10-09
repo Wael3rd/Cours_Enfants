@@ -1569,22 +1569,22 @@
             "audio": "narrador.fd721521ac"
           },
           "habla": {
-            "es": "La campana no suena.",
+            "es": "Hoy la campana no suena. No hay ruido.",
             "voz": "pilar",
-            "audio": "pilar.d780baa4ca"
+            "audio": "pilar.657c8c23cb"
           },
           "modo": "texto",
           "opciones": [
             {
-              "texto": "La campana suena.",
+              "texto": "Los alumnos cantan.",
               "correcta": false
             },
             {
-              "texto": "La campana no suena.",
+              "texto": "El cole está en silencio.",
               "correcta": true
             },
             {
-              "texto": "No hay colegio.",
+              "texto": "La clase termina.",
               "correcta": false
             }
           ]
@@ -2282,15 +2282,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "El lunes: matemáticas.",
+              "texto": "Diego estudia matemáticas el lunes.",
               "correcta": true
             },
             {
-              "texto": "El martes: matemáticas.",
+              "texto": "Diego estudia matemáticas el martes.",
               "correcta": false
             },
             {
-              "texto": "El lunes: música.",
+              "texto": "Diego estudia música el lunes.",
               "correcta": false
             }
           ]
@@ -2312,15 +2312,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "El jueves: inglés.",
+              "texto": "Diego estudia inglés el jueves.",
               "correcta": false
             },
             {
-              "texto": "El miércoles: inglés.",
+              "texto": "Diego estudia inglés el miércoles.",
               "correcta": true
             },
             {
-              "texto": "El miércoles: historia.",
+              "texto": "Diego estudia historia el miércoles.",
               "correcta": false
             }
           ]
@@ -2922,15 +2922,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "Los alumnos hablan.",
+              "texto": "Los chicos hablan con la profesora.",
               "correcta": false
             },
             {
-              "texto": "Los alumnos escuchan.",
+              "texto": "Los chicos escuchan a la profesora.",
               "correcta": true
             },
             {
-              "texto": "La profesora escucha.",
+              "texto": "La profesora escucha a los chicos.",
               "correcta": false
             }
           ]
@@ -4566,15 +4566,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "El jueves: música.",
+              "texto": "Hay clase de música el jueves.",
               "correcta": true
             },
             {
-              "texto": "El jueves: historia.",
+              "texto": "Hay clase de historia el jueves.",
               "correcta": false
             },
             {
-              "texto": "El viernes: música.",
+              "texto": "Hay clase de música el viernes.",
               "correcta": false
             }
           ]

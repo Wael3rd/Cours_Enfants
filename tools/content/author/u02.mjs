@@ -166,7 +166,7 @@ export default function build() {
       tf('La campana del colegio suena.', false, N, { tr: 'La cloche de l’école sonne.' }),
       flash('clase', 'cole', 'profesor', 'companero'),
       lcT('Hola, me llamo Diego. Tengo doce años.', 'diego', ['Diego tiene doce años.', 'Diego tiene trece años.', 'Diego es profesor.'], 0),
-      lcT('La campana no suena.', 'pilar', ['La campana suena.', 'La campana no suena.', 'No hay colegio.'], 1),
+      lcT('Hoy la campana no suena. No hay ruido.', 'pilar', ['Los alumnos cantan.', 'El cole está en silencio.', 'La clase termina.'], 1),
       dlg('pilar', 'Buenos días. Soy doña Pilar, la profesora. ¿Cómo te llamas?', 'Bonjour. Je suis doña Pilar, la professeure. Comment tu t’appelles ?', [
         ['Buenos días, doña Pilar. Me llamo Álex.', 1, 'Muy bien, Álex. Bienvenido al cole.', 'Très bien, Álex. Bienvenue à l’école.', 'Bonjour, doña Pilar. Je m’appelle Álex.'],
         ['Buenas noches, profesora.', 0, '¿Buenas noches? ¡Son las nueve de la mañana!', 'Bonne nuit ? Il est neuf heures du matin !', 'Bonne nuit, professeure.'],
@@ -216,8 +216,8 @@ export default function build() {
       match(['matematicas', 'lengua', 'ingles', 'historia', 'geografia', 'ciencias']),
       flash('lunes', 'martes', 'miercoles', 'jueves', 'viernes'),
       flash('sabado', 'domingo', 'hoy'),
-      lcT('El lunes tengo matemáticas.', 'diego', ['El lunes: matemáticas.', 'El martes: matemáticas.', 'El lunes: música.'], 0),
-      lcT('El miércoles tengo inglés.', 'diego', ['El jueves: inglés.', 'El miércoles: inglés.', 'El miércoles: historia.'], 1),
+      lcT('El lunes tengo matemáticas.', 'diego', ['Diego estudia matemáticas el lunes.', 'Diego estudia matemáticas el martes.', 'Diego estudia música el lunes.'], 0),
+      lcT('El miércoles tengo inglés.', 'diego', ['Diego estudia inglés el jueves.', 'Diego estudia inglés el miércoles.', 'Diego estudia historia el miércoles.'], 1),
       read('Mi horario. El lunes tengo matemáticas y lengua. El martes tengo inglés. El miércoles tengo historia y geografía. El jueves tengo música y ciencias. El viernes tengo educación física. El sábado y el domingo no hay cole.', 'diego',
         'Mon emploi du temps. Le lundi, j’ai maths et cours de langue (espagnol). Le mardi, j’ai anglais. Le mercredi, j’ai histoire et géographie. Le jeudi, j’ai musique et sciences. Le vendredi, j’ai EPS. Le samedi et le dimanche, il n’y a pas école.', [
           ['¿Qué día tiene inglés?', 'Quel jour a-t-il anglais ?', ['El lunes.', 'El martes.', 'El jueves.'], 1],
@@ -253,7 +253,7 @@ export default function build() {
       fill('Nosotros ___ la lección.', 'escuchamos', 'pilar', { opts: ['escuchamos', 'escuchan', 'escucho'], tr: 'Nous écoutons la leçon.' }),
       fill('Yo ___ inglés los martes.', 'estudio', 'diego', { opts: ['estudio', 'estudias', 'estudia'], tr: 'J’étudie l’anglais le mardi.' }),
       reord('Nosotros hablamos español en clase.', 'pilar', { tr: 'Nous parlons espagnol en classe.' }),
-      lcT('Los alumnos escuchan y la profesora habla.', 'pilar', ['Los alumnos hablan.', 'Los alumnos escuchan.', 'La profesora escucha.'], 1),
+      lcT('Los alumnos escuchan y la profesora habla.', 'pilar', ['Los chicos hablan con la profesora.', 'Los chicos escuchan a la profesora.', 'La profesora escucha a los chicos.'], 1),
       speak('Yo hablo español en clase.', 'diego', { tr: 'Je parle espagnol en classe.', hechizo: ['Hechizo del verbo', 'Las letras -ar brillan en el aire'] }),
     ]));
 
@@ -367,7 +367,7 @@ export default function build() {
         ['Me llamo mochila.', 0, 'Qué gracioso. No.', 'Très drôle. Non.', 'Je m’appelle sac à dos.'],
       ]),
       lcV('regla', ['regla', 'lapiz', 'goma']),
-      lcT('El jueves tengo música.', 'sombra', ['El jueves: música.', 'El jueves: historia.', 'El viernes: música.'], 0),
+      lcT('El jueves tengo música.', 'sombra', ['Hay clase de música el jueves.', 'Hay clase de historia el jueves.', 'Hay clase de música el viernes.'], 0),
       match(['libro', 'mochila', 'ordenador', 'silla', 'estuche', 'regla']),
       fill('Tengo ___ estuche y una regla.', 'un', 'diego', { opts: ['un', 'una', 'la'], tr: 'J’ai une trousse et une règle.' }),
       fill('Tengo dos ___ en el estuche.', 'bolígrafos', 'diego', { opts: ['bolígrafo', 'bolígrafos', 'bolígrafas'], tr: 'J’ai deux stylos dans la trousse.' }),

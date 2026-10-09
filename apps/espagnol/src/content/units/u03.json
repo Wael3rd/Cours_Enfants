@@ -2922,15 +2922,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "Hay un patio en la casa.",
+              "texto": "La casa de Carmen tiene un patio.",
               "correcta": true
             },
             {
-              "texto": "Hay un jardín en la casa.",
+              "texto": "La casa de Carmen tiene un jardín.",
               "correcta": false
             },
             {
-              "texto": "No hay patio en la casa.",
+              "texto": "La casa de Carmen no tiene patio.",
               "correcta": false
             }
           ]
@@ -3202,7 +3202,7 @@
             "voz": "narrador",
             "audio": "narrador.6187f7d3a5"
           },
-          "plantilla": "Mi casa es ___. Hay ___ dormitorios y un ___.",
+          "plantilla": "Mi casa es ___. En mi casa hay ___.",
           "campos": [
             {
               "id": "adjetivo",
@@ -3210,21 +3210,16 @@
               "tipo": "texto"
             },
             {
-              "id": "dormitorios",
-              "pista": "Le nombre de chambres",
-              "tipo": "numero"
-            },
-            {
-              "id": "lugar",
-              "pista": "Une autre pièce, au masculin car il y a « un » (salón, baño, jardín, patio…)",
+              "id": "hay",
+              "pista": "Ce qu’il y a chez toi, avec l’article ou le nombre : un salón, una cocina, dos dormitorios, un jardín…",
               "tipo": "texto"
             }
           ],
           "modelo": {
-            "es": "Mi casa es grande. Hay tres dormitorios y un salón.",
-            "fr": "Ma maison est grande. Il y a trois chambres et un salon.",
+            "es": "Mi casa es grande. En mi casa hay un salón, una cocina y tres dormitorios.",
+            "fr": "Ma maison est grande. Chez moi, il y a un salon, une cuisine et trois chambres.",
             "voz": "marina",
-            "audio": "marina.75b98a3357"
+            "audio": "marina.0d4afec01f"
           },
           "guardarEn": "perfil"
         },
@@ -3232,19 +3227,22 @@
           "id": "u03-q05-s14",
           "tipo": "speak",
           "consigna": {
-            "es": "Escucha y repite el hechizo.",
-            "fr": "Écoute et répète le sort.",
+            "es": "Escucha y di una cosa que hay en TU casa.",
+            "fr": "Écoute et dis une pièce qu’il y a chez TOI (avec un / una : una cocina, un baño…).",
             "voz": "narrador",
-            "audio": "narrador.d1cd7484b4"
+            "audio": "narrador.78f8a68ce9"
           },
           "objetivo": {
-            "es": "En mi casa hay un salón y una cocina.",
-            "fr": "Dans ma maison, il y a un salon et une cuisine.",
-            "voz": "marina",
-            "audio": "marina.8a8d24b0b4"
+            "es": "En mi casa hay un salón.",
+            "fr": "Chez moi, il y a un salon. (dis ce qu’il y a chez toi)",
+            "voz": "viajero",
+            "audio": "viajero.1045cf41f0"
           },
           "aceptadas": [
-            "en mi casa hay un salón y una cocina"
+            "en mi casa hay un salón"
+          ],
+          "patrones": [
+            "en mi casa hay {nombre}"
           ],
           "hechizo": {
             "nombre": "Hechizo de la casa",
@@ -3581,15 +3579,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "Pablo tiene ocho años y un gato.",
+              "texto": "El hermano de Marina tiene ocho años y un gato.",
               "correcta": true
             },
             {
-              "texto": "Pablo tiene doce años y un perro.",
+              "texto": "El hermano de Marina tiene doce años y un perro.",
               "correcta": false
             },
             {
-              "texto": "Pablo tiene ocho años y un perro.",
+              "texto": "El hermano de Marina tiene ocho años y un perro.",
               "correcta": false
             }
           ]
@@ -3611,15 +3609,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "El gato se llama Marina.",
+              "texto": "El gato de Lola se llama Marina.",
               "correcta": false
             },
             {
-              "texto": "El gato se llama Churro.",
+              "texto": "El gato de Lola se llama Churro.",
               "correcta": true
             },
             {
-              "texto": "La prima se llama Churro.",
+              "texto": "La prima de Lola se llama Churro.",
               "correcta": false
             }
           ]
@@ -3647,49 +3645,56 @@
         },
         {
           "id": "u03-q06-s09",
-          "tipo": "reorder_words",
+          "tipo": "speak",
           "consigna": {
-            "es": "Ordena las palabras.",
-            "fr": "Remets les mots dans l’ordre.",
+            "es": "Escucha y di cómo se llama TU madre.",
+            "fr": "Écoute et dis comment s’appelle TA mère.",
             "voz": "narrador",
-            "audio": "narrador.e7f9fa50cc"
+            "audio": "narrador.32860cb07b"
           },
-          "palabras": [
-            "Mi",
-            "familia",
-            "vive",
-            "en",
-            "París."
-          ],
-          "habla": {
-            "es": "Mi familia vive en París.",
+          "objetivo": {
+            "es": "Mi madre se llama Claire.",
+            "fr": "Ma mère s’appelle Claire. (dis le prénom de ta mère)",
             "voz": "viajero",
-            "audio": "viajero.f4ef2995cf"
+            "audio": "viajero.60745954fe"
           },
-          "fr": "Ma famille habite à Paris."
+          "aceptadas": [
+            "mi madre se llama claire"
+          ],
+          "patrones": [
+            "mi madre se llama {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la madre",
+            "efecto": "Una hoja del árbol se ilumina"
+          }
         },
         {
           "id": "u03-q06-s10",
-          "tipo": "fill_blank",
+          "tipo": "speak",
           "consigna": {
-            "es": "Completa la frase.",
-            "fr": "Complète la phrase.",
+            "es": "Escucha y di cuántos hermanos tienes TÚ.",
+            "fr": "Écoute et dis combien de frères et sœurs tu as TOI (tengo dos hermanas… ou no tengo hermanos).",
             "voz": "narrador",
-            "audio": "narrador.c8dfcbb8f1"
+            "audio": "narrador.fdd02a709a"
           },
-          "frase": "Mi madre y mi padre son mis ___.",
-          "respuesta": "padres",
-          "opciones": [
-            "padres",
-            "hermanos",
-            "primos"
+          "objetivo": {
+            "es": "Tengo un hermano.",
+            "fr": "J’ai un frère. (dis ta vraie situation)",
+            "voz": "viajero",
+            "audio": "viajero.21e158cd87"
+          },
+          "aceptadas": [
+            "tengo un hermano",
+            "no tengo hermanos"
           ],
-          "habla": {
-            "es": "Mi madre y mi padre son mis padres.",
-            "voz": "marina",
-            "audio": "marina.9b5a9dbab3"
-          },
-          "fr": "Ma mère et mon père sont mes parents."
+          "patrones": [
+            "tengo {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de los hermanos",
+            "efecto": "Dos hojas más aparecen en el árbol"
+          }
         },
         {
           "id": "u03-q06-s11",
@@ -3795,20 +3800,23 @@
           "id": "u03-q06-s15",
           "tipo": "speak",
           "consigna": {
-            "es": "Escucha y repite el hechizo.",
-            "fr": "Écoute et répète le sort.",
+            "es": "Escucha y di cuántos sois en TU familia.",
+            "fr": "Écoute et dis combien vous êtes dans TA famille (somos tres, cinco…).",
             "voz": "narrador",
-            "audio": "narrador.d1cd7484b4"
+            "audio": "narrador.e3c5f8e28f"
           },
           "objetivo": {
             "es": "En mi familia somos cuatro.",
-            "fr": "Dans ma famille, nous sommes quatre.",
-            "voz": "marina",
-            "audio": "marina.a340e729dd"
+            "fr": "Dans ma famille, nous sommes quatre. (dis le nombre chez toi)",
+            "voz": "viajero",
+            "audio": "viajero.a340e729dd"
           },
           "aceptadas": [
             "en mi familia somos cuatro",
             "en mi familia somos 4"
+          ],
+          "patrones": [
+            "en mi familia somos {nombre}"
           ],
           "hechizo": {
             "nombre": "Hechizo de la familia",

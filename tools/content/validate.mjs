@@ -71,8 +71,13 @@ function checkHabla(h, where, { needFr = false, defaultVoz = null } = {}) {
 units.forEach(({ file, data: u }, ui) => {
   const W = u.id ?? file;
   if (file !== `${u.id}.json`) err(W, `nom de fichier ${file} != id ${u.id}`);
-  if (!/^u\d\d$/.test(u.id ?? '')) err(W, 'id attendu uNN');
-  if (u.numero !== ui + 1) err(W, `numero ${u.numero} attendu ${ui + 1}`);
+  // Unite EVENEMENT (champ explicite `evento`) : fichier eNN.json, numero 0 (hors sequence), format allege.
+  const EV = !!u.evento;
+  if (!(EV ? /^e\d\d$/ : /^u\d\d$/).test(u.id ?? '')) err(W, EV ? 'unite evenement : id attendu eNN' : 'id attendu uNN');
+  if (EV) {
+    if (u.numero !== 0) err(W, 'unite evenement : numero 0 attendu (hors sequence)');
+    if (!/^\d\d-\d\d$/.test(u.evento.desde ?? '') || !/^\d\d-\d\d$/.test(u.evento.hasta ?? '')) err(W, 'evento: {desde, hasta} au format "MM-DD"');
+  } else if (u.numero !== Number((u.id ?? '').slice(1))) err(W, `numero ${u.numero} != id ${u.id}`);
   for (const f of ['titulo', 'lugar', 'emoji', 'periodo']) if (!nonEmpty(u[f])) err(W, `champ requis : ${f}`);
   if (!Array.isArray(u.ejes) || !u.ejes.length || u.ejes.some((e) => !(e >= 1 && e <= 6))) err(W, 'ejes: nombres 1-6');
   if (!Array.isArray(u.objetivos) || u.objetivos.length < 4) err(W, 'objetivos: au moins 4');
@@ -82,7 +87,8 @@ units.forEach(({ file, data: u }, ui) => {
 
   // vocab
   const vocab = u.vocab ?? [];
-  if (vocab.length < 40 || vocab.length > 60) err(W, `vocabulaire : ${vocab.length} mots (attendu 40-60)`);
+  const [vMin, vMax] = EV ? [12, 30] : [40, 60];
+  if (vocab.length < vMin || vocab.length > vMax) err(W, `vocabulaire : ${vocab.length} mots (attendu ${vMin}-${vMax})`);
   vocab.forEach((v, i) => {
     const w = `${W}.vocab[${i}:${v.id}]`;
     if (!SLUG.test(v.id ?? '')) err(w, 'id doit etre un slug');
@@ -119,7 +125,8 @@ units.forEach(({ file, data: u }, ui) => {
 
   // quetes
   const quests = u.quests ?? [];
-  if (quests.length < 7 || quests.length > 8) err(W, `${quests.length} quetes (attendu 7-8)`);
+  const [qMin, qMax] = EV ? [3, 4] : [7, 8];
+  if (quests.length < qMin || quests.length > qMax) err(W, `${quests.length} quetes (attendu ${qMin}-${qMax})`);
   if (quests[0]?.tipo !== 'cinematica') err(W, 'la 1re quete doit etre de type cinematica');
   if (!quests.some((q) => q.tipo === 'cultura')) err(W, 'une quete cultura est requise');
   if (quests.at(-1)?.tipo !== 'desafio') err(W, 'la derniere quete doit etre un desafio');
@@ -184,6 +191,15 @@ units.forEach(({ file, data: u }, ui) => {
           const keys = ops.map((o) => (s.modo === 'imagen' ? o.vocab : o.texto));
           if (keys.some((k) => !nonEmpty(k))) err(sw, `options ${s.modo} incompletes`);
           if (new Set(keys).size !== keys.length) err(sw, 'options dupliquees');
+          if (s.modo === 'texto') {
+            // ecoute = comprehension : l'option juste ne doit pas recopier l'audio mot pour mot (reformuler)
+            const A = normSpeech(s.habla?.es ?? '').split(' ');
+            const ok = ops.find((o) => o.correcta);
+            const O = normSpeech(ok?.texto ?? '').split(' ');
+            const inA = O.filter((w) => A.includes(w)).length;
+            const verbatim = O.length >= 2 && (inA === O.length || A.every((w) => O.includes(w)) || (O.length >= 4 && inA / O.length >= 0.8));
+            if (ok && verbatim) err(sw, `ecoute : l'option juste "${ok.texto}" reprend l'audio "${s.habla.es}" (reformuler pour tester la comprehension)`);
+          }
           if (s.modo === 'imagen') ops.forEach((o) => { const v = vref(o.vocab, sw); if (v && !hasImage(v)) err(sw, `${o.vocab} sans image`); });
           break;
         }
@@ -299,15 +315,17 @@ units.forEach(({ file, data: u }, ui) => {
 
     if (qi === 0 && q.tipo === 'cinematica') {
       const types = steps.filter((s) => s.tipo === 'cinematic_ref').map((s) => s.escena?.tipo);
-      if (!types.includes('intro') || !types.includes('historia')) err(qw, 'la quete cinematica doit contenir une scene intro et une scene historia');
+      if (EV) { if (!types.includes('intro')) err(qw, 'evenement : la quete cinematica doit contenir une scene intro'); }
+      else if (!types.includes('intro') || !types.includes('historia')) err(qw, 'la quete cinematica doit contenir une scene intro et une scene historia');
     }
-    if (q.tipo === 'desafio' && !steps.some((s) => s.tipo === 'cinematic_ref' && s.escena?.tipo === 'pluma')) err(qw, 'le desafio doit finir sur une cinematique pluma');
+    // evenement : 1-2 cinematiques au total, pas de scene pluma obligatoire (la recompense est l'element d'avatar)
+    if (!EV && q.tipo === 'desafio' && !steps.some((s) => s.tipo === 'cinematic_ref' && s.escena?.tipo === 'pluma')) err(qw, 'le desafio doit finir sur une cinematique pluma');
     if (q.tipo === 'cultura' && !q.stats.includes('cultura')) err(qw, 'quete cultura: stat cultura requise');
   });
 
   for (const v of vocab) if (!shown.has(v.id)) err(`${W}.vocab[${v.id}]`, 'mot jamais presente dans une flashcard');
   for (const g of gramIds) if (!usedGram.has(g)) err(W, `carte de grammaire non utilisee : ${g}`);
-  if (gramIds.size < 3) err(W, 'au moins 3 cartes de grammaire');
+  if (!EV && gramIds.size < 3) err(W, 'au moins 3 cartes de grammaire');
 
   const spoken = collectSpoken(u);
   const keys = new Map();
@@ -317,6 +335,8 @@ units.forEach(({ file, data: u }, ui) => {
     keys.set(sp.key, sp.text);
   }
   const cines = quests.flatMap((q) => q.steps.filter((s) => s.tipo === 'cinematic_ref'));
+  if (EV && (cines.length < 1 || cines.length > 2)) err(W, `evenement : 1 a 2 cinematiques attendues (${cines.length})`);
+  if (!EV && cines.length !== 4) warn(W, `${cines.length} cinematiques (4 attendues : intro, historia, capsula, pluma)`);
   stats.push({ unit: u.id, mots: vocab.length, gramatica: gramIds.size, quetes: quests.length, etapes: nSteps, cines: cines.length, audios: keys.size });
 });
 
