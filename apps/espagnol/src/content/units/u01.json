@@ -1,0 +1,5098 @@
+{
+  "id": "u01",
+  "numero": 1,
+  "titulo": "¡Hola! Me presento",
+  "lugar": "Madrid",
+  "emoji": "🏛️",
+  "ejes": [
+    1
+  ],
+  "periodo": "sept",
+  "objetivos": [
+    {
+      "es": "Saludar y despedirse con educación.",
+      "fr": "Saluer et prendre congé poliment."
+    },
+    {
+      "es": "Presentarme: nombre, edad, nacionalidad y lugar donde vivo.",
+      "fr": "Me présenter : prénom, âge, nationalité, lieu de vie."
+    },
+    {
+      "es": "Deletrear mi nombre con el abecedario.",
+      "fr": "Épeler mon prénom avec l’alphabet."
+    },
+    {
+      "es": "Contar de 0 a 100.",
+      "fr": "Compter de 0 à 100."
+    },
+    {
+      "es": "Hacer y contestar preguntas sencillas: ¿cómo te llamas?, ¿de dónde eres?, ¿cuántos años tienes?",
+      "fr": "Poser et répondre à des questions simples."
+    },
+    {
+      "es": "Reconocer los países y las nacionalidades hispanas.",
+      "fr": "Reconnaître pays et nationalités hispaniques."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "hola",
+      "es": "hola",
+      "fr": "salut, bonjour",
+      "emoji": "👋",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "¡Hola, Marina!",
+        "fr": "Salut, Marina !",
+        "voz": "narrador",
+        "audio": "narrador.d80e5a2ec3"
+      },
+      "audio": "narrador.99800b85d3"
+    },
+    {
+      "id": "adios",
+      "es": "adiós",
+      "fr": "au revoir",
+      "emoji": "🚪",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Adiós, Don Ignacio.",
+        "fr": "Au revoir, Don Ignacio.",
+        "voz": "narrador",
+        "audio": "narrador.1fcbbe91e8"
+      },
+      "audio": "narrador.01674e46d2"
+    },
+    {
+      "id": "buenos_dias",
+      "es": "buenos días",
+      "fr": "bonjour (le matin)",
+      "emoji": "🌅",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "¡Buenos días, Rosa!",
+        "fr": "Bonjour, Rosa !",
+        "voz": "narrador",
+        "audio": "narrador.c97d296be3"
+      },
+      "audio": "narrador.a25b998dff"
+    },
+    {
+      "id": "buenas_tardes",
+      "es": "buenas tardes",
+      "fr": "bon après-midi, bonsoir",
+      "emoji": "🌇",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Buenas tardes, Nacho.",
+        "fr": "Bon après-midi, Nacho.",
+        "voz": "narrador",
+        "audio": "narrador.e27ba1125e"
+      },
+      "audio": "narrador.033678943e"
+    },
+    {
+      "id": "buenas_noches",
+      "es": "buenas noches",
+      "fr": "bonne nuit, bonsoir (tard)",
+      "emoji": "🌙",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Buenas noches, Quetzal.",
+        "fr": "Bonne nuit, Quetzal.",
+        "voz": "narrador",
+        "audio": "narrador.c850e9badf"
+      },
+      "audio": "narrador.ce6a70e6d9"
+    },
+    {
+      "id": "que_tal",
+      "es": "¿qué tal?",
+      "fr": "comment ça va ?",
+      "emoji": "🤙",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Hola, Álex, ¿qué tal?",
+        "fr": "Salut Álex, ça va ?",
+        "voz": "narrador",
+        "audio": "narrador.46626f3dea"
+      },
+      "audio": "narrador.01d2045653"
+    },
+    {
+      "id": "hasta_luego",
+      "es": "hasta luego",
+      "fr": "à tout à l'heure, à bientôt",
+      "emoji": "🔜",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Adiós, hasta luego.",
+        "fr": "Au revoir, à tout à l'heure.",
+        "voz": "narrador",
+        "audio": "narrador.41a052948e"
+      },
+      "audio": "narrador.15fee4809b"
+    },
+    {
+      "id": "por_favor",
+      "es": "por favor",
+      "fr": "s'il te plaît",
+      "emoji": "🙏",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Un churro, por favor.",
+        "fr": "Un churro, s'il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.105dbcd355"
+      },
+      "audio": "narrador.e392209eb2"
+    },
+    {
+      "id": "gracias",
+      "es": "gracias",
+      "fr": "merci",
+      "emoji": "💐",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Gracias, Rosa.",
+        "fr": "Merci, Rosa.",
+        "voz": "narrador",
+        "audio": "narrador.28f03ecc6b"
+      },
+      "audio": "narrador.a30b3970f3"
+    },
+    {
+      "id": "de_nada",
+      "es": "de nada",
+      "fr": "de rien",
+      "emoji": "👍",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "—Gracias. —De nada.",
+        "fr": "— Merci. — De rien.",
+        "voz": "narrador",
+        "audio": "narrador.dd922cd855"
+      },
+      "audio": "narrador.671cfd4fde"
+    },
+    {
+      "id": "perdon",
+      "es": "perdón",
+      "fr": "pardon, excuse-moi",
+      "emoji": "🙇",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Perdón, Don Ignacio.",
+        "fr": "Pardon, Don Ignacio.",
+        "voz": "narrador",
+        "audio": "narrador.27f7cf1dab"
+      },
+      "audio": "narrador.e2b4cc30bb"
+    },
+    {
+      "id": "encantado",
+      "es": "encantado",
+      "fr": "enchanté",
+      "genero": "m",
+      "femenino": "encantada",
+      "emoji": "🤝",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "Hola, Marina. Encantado.",
+        "fr": "Salut, Marina. Enchanté.",
+        "voz": "narrador",
+        "audio": "narrador.ca2b8ecead"
+      },
+      "audio": "narrador.78f29cc2c7"
+    },
+    {
+      "id": "bien",
+      "es": "bien",
+      "fr": "bien",
+      "emoji": "😄",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "—¿Qué tal? —Bien, gracias.",
+        "fr": "— Ça va ? — Bien, merci.",
+        "voz": "narrador",
+        "audio": "narrador.8f4987888d"
+      },
+      "audio": "narrador.d4e2f60841"
+    },
+    {
+      "id": "regular",
+      "es": "regular",
+      "fr": "comme ci, comme ça",
+      "emoji": "😐",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "—¿Qué tal? —Regular.",
+        "fr": "— Ça va ? — Comme ci, comme ça.",
+        "voz": "narrador",
+        "audio": "narrador.c4c43ed791"
+      },
+      "audio": "narrador.5f51efbecd"
+    },
+    {
+      "id": "mal",
+      "es": "mal",
+      "fr": "mal, pas bien",
+      "emoji": "😞",
+      "tags": [
+        "saludos"
+      ],
+      "ejemplo": {
+        "es": "—¿Qué tal? —Mal.",
+        "fr": "— Ça va ? — Pas bien.",
+        "voz": "narrador",
+        "audio": "narrador.c413a99dcf"
+      },
+      "audio": "narrador.1185b728e9"
+    },
+    {
+      "id": "me_llamo",
+      "es": "me llamo",
+      "fr": "je m'appelle",
+      "emoji": "🏷️",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Me llamo Álex.",
+        "fr": "Je m'appelle Álex.",
+        "voz": "narrador",
+        "audio": "narrador.02503ba455"
+      },
+      "audio": "narrador.594023f56c"
+    },
+    {
+      "id": "como_te_llamas",
+      "es": "¿cómo te llamas?",
+      "fr": "comment tu t'appelles ?",
+      "emoji": "🗣️",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Hola, ¿cómo te llamas?",
+        "fr": "Salut, comment tu t'appelles ?",
+        "voz": "narrador",
+        "audio": "narrador.9d0db4d6fe"
+      },
+      "audio": "narrador.8416671ec4"
+    },
+    {
+      "id": "soy",
+      "es": "soy",
+      "fr": "je suis",
+      "emoji": "🙋",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Soy Marina.",
+        "fr": "Je suis Marina.",
+        "voz": "narrador",
+        "audio": "narrador.eb019fd0e9"
+      },
+      "audio": "narrador.55e30b3769"
+    },
+    {
+      "id": "de_donde_eres",
+      "es": "¿de dónde eres?",
+      "fr": "tu viens d'où ?",
+      "emoji": "🧭",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "¿De dónde eres, Nacho?",
+        "fr": "Tu viens d'où, Nacho ?",
+        "voz": "narrador",
+        "audio": "narrador.1e3d7ab0de"
+      },
+      "audio": "narrador.8a3898b190"
+    },
+    {
+      "id": "vivo_en",
+      "es": "vivo en",
+      "fr": "j'habite à / en",
+      "emoji": "🏠",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Vivo en Madrid.",
+        "fr": "J'habite à Madrid.",
+        "voz": "narrador",
+        "audio": "narrador.a9053b7345"
+      },
+      "audio": "narrador.1c0ed49e5c"
+    },
+    {
+      "id": "tengo",
+      "es": "tengo",
+      "fr": "j'ai",
+      "emoji": "✋",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Tengo una mochila.",
+        "fr": "J'ai un sac à dos.",
+        "voz": "narrador",
+        "audio": "narrador.5071f4e858"
+      },
+      "audio": "narrador.fd3d44f63d"
+    },
+    {
+      "id": "anos",
+      "es": "años",
+      "fr": "ans",
+      "genero": "m",
+      "emoji": "🎂",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "¿Cuántos años tienes?",
+        "fr": "Quel âge as-tu ?",
+        "voz": "narrador",
+        "audio": "narrador.ca8c6a9981"
+      },
+      "audio": "narrador.36b6586725"
+    },
+    {
+      "id": "nombre",
+      "es": "nombre",
+      "fr": "prénom, nom",
+      "genero": "m",
+      "emoji": "📛",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Mi nombre es Marina.",
+        "fr": "Mon prénom est Marina.",
+        "voz": "narrador",
+        "audio": "narrador.f40b79394b"
+      },
+      "audio": "narrador.4832ec78c9"
+    },
+    {
+      "id": "amigo",
+      "es": "amigo",
+      "fr": "ami",
+      "genero": "m",
+      "femenino": "amiga",
+      "emoji": "🧑‍🤝‍🧑",
+      "tags": [
+        "presentacion"
+      ],
+      "ejemplo": {
+        "es": "Nacho es mi amigo.",
+        "fr": "Nacho est mon ami.",
+        "voz": "narrador",
+        "audio": "narrador.53d016283c"
+      },
+      "audio": "narrador.01f07beb85"
+    },
+    {
+      "id": "chico",
+      "es": "chico",
+      "fr": "garçon",
+      "genero": "m",
+      "emoji": "👦",
+      "tags": [
+        "personas"
+      ],
+      "ejemplo": {
+        "es": "Nacho es un chico de Madrid.",
+        "fr": "Nacho est un garçon de Madrid.",
+        "voz": "narrador",
+        "audio": "narrador.e18c6e35f2"
+      },
+      "audio": "narrador.763c189e10"
+    },
+    {
+      "id": "chica",
+      "es": "chica",
+      "fr": "fille",
+      "genero": "f",
+      "emoji": "👧",
+      "tags": [
+        "personas"
+      ],
+      "ejemplo": {
+        "es": "Marina es una chica de Sevilla.",
+        "fr": "Marina est une fille de Séville.",
+        "voz": "narrador",
+        "audio": "narrador.bd8b3557a5"
+      },
+      "audio": "narrador.c3de758aa2"
+    },
+    {
+      "id": "yo",
+      "es": "yo",
+      "fr": "je, moi",
+      "emoji": "☝️",
+      "tags": [
+        "pronombres"
+      ],
+      "ejemplo": {
+        "es": "Yo soy Álex.",
+        "fr": "Moi, je suis Álex.",
+        "voz": "narrador",
+        "audio": "narrador.4232156d83"
+      },
+      "audio": "narrador.c41975d1da"
+    },
+    {
+      "id": "tu",
+      "es": "tú",
+      "fr": "tu, toi",
+      "emoji": "👉",
+      "tags": [
+        "pronombres"
+      ],
+      "ejemplo": {
+        "es": "Tú eres de París.",
+        "fr": "Toi, tu es de Paris.",
+        "voz": "narrador",
+        "audio": "narrador.d8d9b5ecc0"
+      },
+      "audio": "narrador.044e993fbe"
+    },
+    {
+      "id": "el_pron",
+      "es": "él",
+      "fr": "il, lui",
+      "emoji": "👨",
+      "tags": [
+        "pronombres"
+      ],
+      "ejemplo": {
+        "es": "Él es Nacho.",
+        "fr": "Lui, c’est Nacho.",
+        "voz": "narrador",
+        "audio": "narrador.0a44044c15"
+      },
+      "audio": "narrador.b2277c5f35"
+    },
+    {
+      "id": "ella",
+      "es": "ella",
+      "fr": "elle",
+      "emoji": "👩",
+      "tags": [
+        "pronombres"
+      ],
+      "ejemplo": {
+        "es": "Ella es Marina.",
+        "fr": "Elle, c’est Marina.",
+        "voz": "narrador",
+        "audio": "narrador.c9df873cdc"
+      },
+      "audio": "narrador.5edf31da3f"
+    },
+    {
+      "id": "espana",
+      "es": "España",
+      "fr": "Espagne",
+      "emoji": "🇪🇸",
+      "tags": [
+        "paises"
+      ],
+      "ejemplo": {
+        "es": "Madrid es la capital de España.",
+        "fr": "Madrid est la capitale de l’Espagne.",
+        "voz": "narrador",
+        "audio": "narrador.6916d74dbd"
+      },
+      "audio": "narrador.1ea132ffbd"
+    },
+    {
+      "id": "francia",
+      "es": "Francia",
+      "fr": "France",
+      "emoji": "🇫🇷",
+      "tags": [
+        "paises"
+      ],
+      "ejemplo": {
+        "es": "París es la capital de Francia.",
+        "fr": "Paris est la capitale de la France.",
+        "voz": "narrador",
+        "audio": "narrador.afcb9d338a"
+      },
+      "audio": "narrador.5b6a8411d2"
+    },
+    {
+      "id": "mexico",
+      "es": "México",
+      "fr": "Mexique",
+      "emoji": "🇲🇽",
+      "tags": [
+        "paises"
+      ],
+      "ejemplo": {
+        "es": "México es el país del Quetzal.",
+        "fr": "Le Mexique est le pays du Quetzal.",
+        "voz": "narrador",
+        "audio": "narrador.00b9b867cb"
+      },
+      "audio": "narrador.e9d4eca609"
+    },
+    {
+      "id": "argentina",
+      "es": "Argentina",
+      "fr": "Argentine",
+      "emoji": "🇦🇷",
+      "tags": [
+        "paises"
+      ],
+      "ejemplo": {
+        "es": "Buenos Aires es la capital de Argentina.",
+        "fr": "Buenos Aires est la capitale de l’Argentine.",
+        "voz": "narrador",
+        "audio": "narrador.7b08834ad6"
+      },
+      "audio": "narrador.354bf98925"
+    },
+    {
+      "id": "espanol",
+      "es": "español",
+      "fr": "espagnol",
+      "genero": "m",
+      "femenino": "española",
+      "emoji": "🐂",
+      "tags": [
+        "nacionalidades"
+      ],
+      "ejemplo": {
+        "es": "Nacho es español.",
+        "fr": "Nacho est espagnol.",
+        "voz": "narrador",
+        "audio": "narrador.a2c8fb75e5"
+      },
+      "audio": "narrador.d2a8463fba"
+    },
+    {
+      "id": "frances",
+      "es": "francés",
+      "fr": "français",
+      "genero": "m",
+      "femenino": "francesa",
+      "emoji": "🥖",
+      "tags": [
+        "nacionalidades"
+      ],
+      "ejemplo": {
+        "es": "Álex es francés.",
+        "fr": "Álex est français.",
+        "voz": "narrador",
+        "audio": "narrador.ba87e96318"
+      },
+      "audio": "narrador.51222bc004"
+    },
+    {
+      "id": "mexicano",
+      "es": "mexicano",
+      "fr": "mexicain",
+      "genero": "m",
+      "femenino": "mexicana",
+      "emoji": "🌮",
+      "tags": [
+        "nacionalidades"
+      ],
+      "ejemplo": {
+        "es": "Mi amigo es mexicano.",
+        "fr": "Mon ami est mexicain.",
+        "voz": "narrador",
+        "audio": "narrador.6ba46c69f6"
+      },
+      "audio": "narrador.d69b850ef3"
+    },
+    {
+      "id": "argentino",
+      "es": "argentino",
+      "fr": "argentin",
+      "genero": "m",
+      "femenino": "argentina",
+      "emoji": "🧉",
+      "tags": [
+        "nacionalidades"
+      ],
+      "ejemplo": {
+        "es": "Messi es argentino.",
+        "fr": "Messi est argentin.",
+        "voz": "narrador",
+        "audio": "narrador.8d22dd1305"
+      },
+      "audio": "narrador.f902a56228"
+    },
+    {
+      "id": "cero",
+      "es": "cero",
+      "fr": "zéro",
+      "emoji": "0️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Cero problemas.",
+        "fr": "Zéro problème.",
+        "voz": "narrador",
+        "audio": "narrador.a09b0fa9e9"
+      },
+      "audio": "narrador.74cbf12e07"
+    },
+    {
+      "id": "uno",
+      "es": "uno",
+      "fr": "un",
+      "emoji": "1️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Uno, dos, tres… ¡ya!",
+        "fr": "Un, deux, trois… partez !",
+        "voz": "narrador",
+        "audio": "narrador.6c67fcf349"
+      },
+      "audio": "narrador.81b6f50734"
+    },
+    {
+      "id": "dos",
+      "es": "dos",
+      "fr": "deux",
+      "emoji": "2️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Tengo dos amigos.",
+        "fr": "J'ai deux amis.",
+        "voz": "narrador",
+        "audio": "narrador.13097fa520"
+      },
+      "audio": "narrador.e67f16d28a"
+    },
+    {
+      "id": "tres",
+      "es": "tres",
+      "fr": "trois",
+      "emoji": "3️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Tres churros, por favor.",
+        "fr": "Trois churros, s'il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.45995cf32a"
+      },
+      "audio": "narrador.0c95987338"
+    },
+    {
+      "id": "cuatro",
+      "es": "cuatro",
+      "fr": "quatre",
+      "emoji": "4️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Cuatro más cuatro son ocho.",
+        "fr": "Quatre plus quatre font huit.",
+        "voz": "narrador",
+        "audio": "narrador.eca1e9f88a"
+      },
+      "audio": "narrador.a37e3bea6f"
+    },
+    {
+      "id": "cinco",
+      "es": "cinco",
+      "fr": "cinq",
+      "emoji": "5️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Cinco churros, por favor.",
+        "fr": "Cinq churros, s'il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.5f509389d0"
+      },
+      "audio": "narrador.a097b33b77"
+    },
+    {
+      "id": "seis",
+      "es": "seis",
+      "fr": "six",
+      "emoji": "6️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Seis y cuatro son diez.",
+        "fr": "Six et quatre font dix.",
+        "voz": "narrador",
+        "audio": "narrador.759ef3a513"
+      },
+      "audio": "narrador.ba15793485"
+    },
+    {
+      "id": "siete",
+      "es": "siete",
+      "fr": "sept",
+      "emoji": "7️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Tengo siete amigos.",
+        "fr": "J'ai sept amis.",
+        "voz": "narrador",
+        "audio": "narrador.9066706e90"
+      },
+      "audio": "narrador.c0bdfc8b52"
+    },
+    {
+      "id": "ocho",
+      "es": "ocho",
+      "fr": "huit",
+      "emoji": "8️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Ocho más dos son diez.",
+        "fr": "Huit plus deux font dix.",
+        "voz": "narrador",
+        "audio": "narrador.76f4050062"
+      },
+      "audio": "narrador.311047fbb0"
+    },
+    {
+      "id": "nueve",
+      "es": "nueve",
+      "fr": "neuf",
+      "emoji": "9️⃣",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Nueve menos cuatro son cinco.",
+        "fr": "Neuf moins quatre font cinq.",
+        "voz": "narrador",
+        "audio": "narrador.9e7fb33575"
+      },
+      "audio": "narrador.0a1307a029"
+    },
+    {
+      "id": "diez",
+      "es": "diez",
+      "fr": "dix",
+      "emoji": "🔟",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Diez churros para Nacho.",
+        "fr": "Dix churros pour Nacho.",
+        "voz": "narrador",
+        "audio": "narrador.d9c093fdea"
+      },
+      "audio": "narrador.8c95def646"
+    },
+    {
+      "id": "once",
+      "es": "once",
+      "fr": "onze",
+      "ilustracion": "Le nombre 11 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Tengo once años.",
+        "fr": "J'ai onze ans.",
+        "voz": "narrador",
+        "audio": "narrador.ca6c655f61"
+      },
+      "audio": "narrador.1863835675"
+    },
+    {
+      "id": "doce",
+      "es": "doce",
+      "fr": "douze",
+      "ilustracion": "Le nombre 12 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Marina tiene doce años.",
+        "fr": "Marina a douze ans.",
+        "voz": "narrador",
+        "audio": "narrador.e40a8481cb"
+      },
+      "audio": "narrador.c24b8eb0d0"
+    },
+    {
+      "id": "trece",
+      "es": "trece",
+      "fr": "treize",
+      "ilustracion": "Le nombre 13 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Nacho tiene trece años.",
+        "fr": "Nacho a treize ans.",
+        "voz": "narrador",
+        "audio": "narrador.2c00ee7dc1"
+      },
+      "audio": "narrador.0f72d7d73e"
+    },
+    {
+      "id": "catorce",
+      "es": "catorce",
+      "fr": "quatorze",
+      "ilustracion": "Le nombre 14 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Mi amigo tiene catorce años.",
+        "fr": "Mon ami a quatorze ans.",
+        "voz": "narrador",
+        "audio": "narrador.141f11259b"
+      },
+      "audio": "narrador.94087dc244"
+    },
+    {
+      "id": "quince",
+      "es": "quince",
+      "fr": "quinze",
+      "ilustracion": "Le nombre 15 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Mi amiga tiene quince años.",
+        "fr": "Mon amie a quinze ans.",
+        "voz": "narrador",
+        "audio": "narrador.eebb1dbc5f"
+      },
+      "audio": "narrador.3841f10e3a"
+    },
+    {
+      "id": "veinte",
+      "es": "veinte",
+      "fr": "vingt",
+      "ilustracion": "Le nombre 20 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Veinte churros, por favor.",
+        "fr": "Vingt churros, s'il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.079bfcbdf4"
+      },
+      "audio": "narrador.3b1b17811d"
+    },
+    {
+      "id": "treinta",
+      "es": "treinta",
+      "fr": "trente",
+      "ilustracion": "Le nombre 30 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Treinta personas en la plaza.",
+        "fr": "Trente personnes sur la place.",
+        "voz": "narrador",
+        "audio": "narrador.86f924791e"
+      },
+      "audio": "narrador.0f02d36805"
+    },
+    {
+      "id": "cuarenta",
+      "es": "cuarenta",
+      "fr": "quarante",
+      "ilustracion": "Le nombre 40 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Cuarenta y dos minutos.",
+        "fr": "Quarante-deux minutes.",
+        "voz": "narrador",
+        "audio": "narrador.c45e01d950"
+      },
+      "audio": "narrador.e115b86bf7"
+    },
+    {
+      "id": "cincuenta",
+      "es": "cincuenta",
+      "fr": "cinquante",
+      "ilustracion": "Le nombre 50 en gros chiffres colorés",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Rosa tiene cincuenta años.",
+        "fr": "Rosa a cinquante ans.",
+        "voz": "narrador",
+        "audio": "narrador.1ac6f50d39"
+      },
+      "audio": "narrador.ae338e4e0c"
+    },
+    {
+      "id": "cien",
+      "es": "cien",
+      "fr": "cent",
+      "emoji": "💯",
+      "tags": [
+        "numeros"
+      ],
+      "ejemplo": {
+        "es": "Cien años de historia.",
+        "fr": "Cent ans d’histoire.",
+        "voz": "narrador",
+        "audio": "narrador.c2ae5f0235"
+      },
+      "audio": "narrador.2786f4877b"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_abecedario",
+      "titulo": {
+        "es": "El abecedario",
+        "fr": "L'alphabet"
+      },
+      "ejemplos": [
+        {
+          "es": "a, be, ce, de, e, efe, ge, hache, i, jota",
+          "fr": "a, b, c, d, e, f, g, h, i, j (les noms des lettres)",
+          "voz": "narrador",
+          "audio": "narrador.ce82989eed"
+        },
+        {
+          "es": "eme, a, ere, i, ene, a",
+          "fr": "M, A, R, I, N, A : Marina épelée",
+          "voz": "narrador",
+          "audio": "narrador.a17425f770"
+        },
+        {
+          "es": "¿Cómo se escribe «Álex»?",
+          "fr": "Comment s’écrit « Álex » ?",
+          "voz": "nacho",
+          "audio": "nacho.dec43722a8"
+        }
+      ],
+      "regla": {
+        "es": "El abecedario tiene veintisiete letras. La hache no suena. La eñe es una letra especial.",
+        "fr": "L'alphabet a vingt-sept lettres. Le h ne se prononce pas. Le ñ est une lettre spéciale.",
+        "voz": "narrador",
+        "audio": "narrador.9ebf051b64"
+      },
+      "pista": "27 lettres : le ñ (« eñe ») s'ajoute à notre alphabet. Le h est muet. K et W n'existent presque que dans des mots étrangers. Pour épeler, on dit le nom des lettres : Marina = eme, a, ere, i, ene, a.",
+      "tabla": {
+        "encabezado": [
+          "Letra",
+          "Nombre"
+        ],
+        "filas": [
+          [
+            "A",
+            "a"
+          ],
+          [
+            "B",
+            "be"
+          ],
+          [
+            "C",
+            "ce"
+          ],
+          [
+            "D",
+            "de"
+          ],
+          [
+            "E",
+            "e"
+          ],
+          [
+            "F",
+            "efe"
+          ],
+          [
+            "G",
+            "ge"
+          ],
+          [
+            "H",
+            "hache"
+          ],
+          [
+            "I",
+            "i"
+          ],
+          [
+            "J",
+            "jota"
+          ],
+          [
+            "K",
+            "ka"
+          ],
+          [
+            "L",
+            "ele"
+          ],
+          [
+            "M",
+            "eme"
+          ],
+          [
+            "N",
+            "ene"
+          ],
+          [
+            "Ñ",
+            "eñe"
+          ],
+          [
+            "O",
+            "o"
+          ],
+          [
+            "P",
+            "pe"
+          ],
+          [
+            "Q",
+            "cu"
+          ],
+          [
+            "R",
+            "ere"
+          ],
+          [
+            "S",
+            "ese"
+          ],
+          [
+            "T",
+            "te"
+          ],
+          [
+            "U",
+            "u"
+          ],
+          [
+            "V",
+            "uve"
+          ],
+          [
+            "W",
+            "uve doble"
+          ],
+          [
+            "X",
+            "equis"
+          ],
+          [
+            "Y",
+            "ye"
+          ],
+          [
+            "Z",
+            "zeta"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_pronunciacion",
+      "titulo": {
+        "es": "Suena así",
+        "fr": "Ça se prononce comme ça"
+      },
+      "ejemplos": [
+        {
+          "es": "La jota: José, jamón, jirafa.",
+          "fr": "Le J : José, jambon, girafe.",
+          "voz": "marina",
+          "audio": "marina.bc3ee1449b",
+          "resaltar": [
+            "j"
+          ]
+        },
+        {
+          "es": "La hache no suena: hola, hotel.",
+          "fr": "Le H est muet : hola, hotel.",
+          "voz": "marina",
+          "audio": "marina.06c081bbf7",
+          "resaltar": [
+            "h"
+          ]
+        },
+        {
+          "es": "La eñe: España, mañana, niño.",
+          "fr": "Le Ñ : España, mañana, niño.",
+          "voz": "marina",
+          "audio": "marina.36f8e4c598",
+          "resaltar": [
+            "ñ"
+          ]
+        },
+        {
+          "es": "La erre doble: perro, carro.",
+          "fr": "Le RR roulé : perro, carro.",
+          "voz": "marina",
+          "audio": "marina.d9c246943f",
+          "resaltar": [
+            "rr"
+          ]
+        },
+        {
+          "es": "La elle: me llamo, calle.",
+          "fr": "Le LL : me llamo, calle.",
+          "voz": "marina",
+          "audio": "marina.4e91c5e3c2",
+          "resaltar": [
+            "ll"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "La jota suena fuerte. La hache no suena. La eñe suena «ni». La erre doble vibra. La elle suena casi como la ye.",
+        "fr": "Le J est dur, au fond de la gorge. Le H est muet. Le Ñ sonne « gn ». Le RR roule. Le LL ressemble à « y ».",
+        "voz": "narrador",
+        "audio": "narrador.503bdea294"
+      },
+      "pista": "Piège des francophones : J ≠ « j » français (c'est un h expiré rude), H muet, et l'accent tonique : on insiste sur l'avant-dernière syllabe (Ma-RI-na, es-pa-ÑOL, Ma-DRID)."
+    },
+    {
+      "id": "g_numeros",
+      "titulo": {
+        "es": "Los números",
+        "fr": "Les nombres"
+      },
+      "ejemplos": [
+        {
+          "es": "dieciséis, diecisiete, dieciocho, diecinueve",
+          "fr": "16, 17, 18, 19",
+          "voz": "narrador",
+          "audio": "narrador.ef40c3e436",
+          "resaltar": [
+            "dieci"
+          ]
+        },
+        {
+          "es": "veintiuno, veintidós, veintitrés, veinticuatro",
+          "fr": "21, 22, 23, 24",
+          "voz": "narrador",
+          "audio": "narrador.f6ab96989e",
+          "resaltar": [
+            "veinti"
+          ]
+        },
+        {
+          "es": "treinta y cinco",
+          "fr": "35",
+          "voz": "narrador",
+          "audio": "narrador.00ae8491bb",
+          "resaltar": [
+            "y"
+          ]
+        },
+        {
+          "es": "cuarenta y ocho",
+          "fr": "48",
+          "voz": "narrador",
+          "audio": "narrador.01c9d42192",
+          "resaltar": [
+            "y"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Del dieciséis al diecinueve: dieci más el número. Del veintiuno al veintinueve: veinti más el número. Desde treinta: la decena, y, el número.",
+        "fr": "De 16 à 19 : dieci + le nombre. De 21 à 29 : veinti + le nombre. À partir de 30 : dizaine + y + unité.",
+        "voz": "narrador",
+        "audio": "narrador.adb96280ce"
+      },
+      "pista": "Les accents : dieciséis, veintidós, veintitrés, veintiséis. Entre 16 et 29, un seul mot ; à partir de 31, trois mots avec « y » (treinta y cinco).",
+      "tabla": {
+        "encabezado": [
+          "Cifra",
+          "Se forma",
+          "Se dice"
+        ],
+        "filas": [
+          [
+            "16",
+            "dieci + seis",
+            "dieciséis"
+          ],
+          [
+            "21",
+            "veinti + uno",
+            "veintiuno"
+          ],
+          [
+            "35",
+            "treinta + y + cinco",
+            "treinta y cinco"
+          ],
+          [
+            "48",
+            "cuarenta + y + ocho",
+            "cuarenta y ocho"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_nacionalidad",
+      "titulo": {
+        "es": "¿Eres español o española?",
+        "fr": "Espagnol ou espagnole ?"
+      },
+      "ejemplos": [
+        {
+          "es": "Álex es francés.",
+          "fr": "Álex est français.",
+          "voz": "marina",
+          "audio": "marina.ba87e96318",
+          "resaltar": [
+            "francés"
+          ]
+        },
+        {
+          "es": "Marina es española.",
+          "fr": "Marina est espagnole.",
+          "voz": "marina",
+          "audio": "marina.6184a5d3da",
+          "resaltar": [
+            "española"
+          ]
+        },
+        {
+          "es": "Soy mexicano.",
+          "fr": "Je suis mexicain.",
+          "voz": "marina",
+          "audio": "marina.d613c921b8",
+          "resaltar": [
+            "mexicano"
+          ]
+        },
+        {
+          "es": "Ella es argentina.",
+          "fr": "Elle est argentine.",
+          "voz": "marina",
+          "audio": "marina.d4e30be302",
+          "resaltar": [
+            "argentina"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para un chico: español, francés, mexicano. Para una chica: española, francesa, mexicana. En español, la nacionalidad lleva minúscula.",
+        "fr": "Pour un garçon : español, francés, mexicano. Pour une fille : española, francesa, mexicana. Pas de majuscule pour les nationalités.",
+        "voz": "narrador",
+        "audio": "narrador.46b655a2d2"
+      },
+      "pista": "L'adjectif s'accorde : -o devient -a, et les mots en consonne ajoutent -a (francés → francesa : l'accent écrit disparaît). Pas de majuscule pour les nationalités ni les langues.",
+      "tabla": {
+        "encabezado": [
+          "",
+          "español",
+          "francés",
+          "mexicano",
+          "argentino"
+        ],
+        "filas": [
+          [
+            "él",
+            "español",
+            "francés",
+            "mexicano",
+            "argentino"
+          ],
+          [
+            "ella",
+            "española",
+            "francesa",
+            "mexicana",
+            "argentina"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_pronombres_ser",
+      "titulo": {
+        "es": "Yo soy, tú eres",
+        "fr": "Je suis, tu es"
+      },
+      "ejemplos": [
+        {
+          "es": "Yo soy Álex.",
+          "fr": "Moi, je suis Álex.",
+          "voz": "viajero",
+          "audio": "viajero.4232156d83",
+          "resaltar": [
+            "soy"
+          ]
+        },
+        {
+          "es": "Tú eres de Francia.",
+          "fr": "Toi, tu es de France.",
+          "voz": "marina",
+          "audio": "marina.123ce098e9",
+          "resaltar": [
+            "eres"
+          ]
+        },
+        {
+          "es": "Él es Nacho.",
+          "fr": "Lui, c’est Nacho.",
+          "voz": "marina",
+          "audio": "marina.0a44044c15",
+          "resaltar": [
+            "es"
+          ]
+        },
+        {
+          "es": "Ella es Marina.",
+          "fr": "Elle, c’est Marina.",
+          "voz": "marina",
+          "audio": "marina.c9df873cdc",
+          "resaltar": [
+            "es"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «ser» decimos quiénes somos y de dónde somos: yo soy, tú eres, él es, ella es.",
+        "fr": "Avec « ser », on dit qui on est et d’où on vient : yo soy, tú eres, él es, ella es.",
+        "voz": "narrador",
+        "audio": "narrador.a0a6036c5d"
+      },
+      "pista": "Ser = être (identité, origine, nationalité). On omet souvent le pronom : « Soy Álex » suffit. Tú (avec accent) = tu ; tu (sans accent) = ton/ta.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "ser"
+        ],
+        "filas": [
+          [
+            "yo",
+            "soy"
+          ],
+          [
+            "tú",
+            "eres"
+          ],
+          [
+            "él / ella",
+            "es"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_llamarse",
+      "titulo": {
+        "es": "Me llamo…",
+        "fr": "Je m'appelle…"
+      },
+      "ejemplos": [
+        {
+          "es": "Me llamo Álex.",
+          "fr": "Je m'appelle Álex.",
+          "voz": "viajero",
+          "audio": "viajero.02503ba455",
+          "resaltar": [
+            "llamo"
+          ]
+        },
+        {
+          "es": "¿Cómo te llamas?",
+          "fr": "Comment tu t'appelles ?",
+          "voz": "marina",
+          "audio": "marina.f9d4d5f290",
+          "resaltar": [
+            "llamas"
+          ]
+        },
+        {
+          "es": "Se llama Nacho.",
+          "fr": "Il s'appelle Nacho.",
+          "voz": "marina",
+          "audio": "marina.6a180cfd9c",
+          "resaltar": [
+            "llama"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para decir tu nombre: «me llamo» y tu nombre. Para preguntar: «¿cómo te llamas?».",
+        "fr": "Pour dire ton prénom : « me llamo » + ton prénom. Pour demander : « ¿cómo te llamas? ».",
+        "voz": "narrador",
+        "audio": "narrador.d49022775b"
+      },
+      "pista": "Llamarse = s'appeler. Me / te / se accompagnent toujours le verbe. Radical llam- + terminaison -o, -as, -a. Cómo prend un accent dans une question.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "llamarse"
+        ],
+        "filas": [
+          [
+            "yo",
+            "me llamo"
+          ],
+          [
+            "tú",
+            "te llamas"
+          ],
+          [
+            "él / ella",
+            "se llama"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_tener_edad",
+      "titulo": {
+        "es": "Tengo doce años",
+        "fr": "J'ai douze ans"
+      },
+      "ejemplos": [
+        {
+          "es": "Tengo doce años.",
+          "fr": "J'ai douze ans.",
+          "voz": "viajero",
+          "audio": "viajero.ab00c4f584",
+          "resaltar": [
+            "tengo"
+          ]
+        },
+        {
+          "es": "¿Cuántos años tienes?",
+          "fr": "Quel âge as-tu ?",
+          "voz": "marina",
+          "audio": "marina.ca8c6a9981",
+          "resaltar": [
+            "tienes"
+          ]
+        },
+        {
+          "es": "Marina tiene doce años.",
+          "fr": "Marina a douze ans.",
+          "voz": "marina",
+          "audio": "marina.e40a8481cb",
+          "resaltar": [
+            "tiene"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para la edad usamos «tener», no «ser»: tengo doce años.",
+        "fr": "Pour l'âge, on utilise « tener », pas « ser » : tengo doce años.",
+        "voz": "narrador",
+        "audio": "narrador.6d87f5efb8"
+      },
+      "pista": "Comme en français, on « a » un âge : jamais « soy doce años ». Tener est irrégulier à la 1re personne : tengo (et non « teno »). Ensuite : tienes, tiene.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "tener"
+        ],
+        "filas": [
+          [
+            "yo",
+            "tengo"
+          ],
+          [
+            "tú",
+            "tienes"
+          ],
+          [
+            "él / ella",
+            "tiene"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_preguntas",
+      "titulo": {
+        "es": "Las preguntas",
+        "fr": "Les questions"
+      },
+      "ejemplos": [
+        {
+          "es": "¿Cómo te llamas?",
+          "fr": "Comment tu t'appelles ?",
+          "voz": "marina",
+          "audio": "marina.f9d4d5f290",
+          "resaltar": [
+            "¿Cómo"
+          ]
+        },
+        {
+          "es": "¿De dónde eres?",
+          "fr": "D'où viens-tu ?",
+          "voz": "marina",
+          "audio": "marina.449b0a0e51",
+          "resaltar": [
+            "¿De dónde"
+          ]
+        },
+        {
+          "es": "¿Cuántos años tienes?",
+          "fr": "Quel âge as-tu ?",
+          "voz": "marina",
+          "audio": "marina.ca8c6a9981",
+          "resaltar": [
+            "¿Cuántos"
+          ]
+        },
+        {
+          "es": "¿Qué tal?",
+          "fr": "Comment ça va ?",
+          "voz": "marina",
+          "audio": "marina.a8506c246b",
+          "resaltar": [
+            "¿Qué"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "En español, la pregunta empieza con ¿ y termina con ?. Las palabras cómo, dónde, cuántos y qué llevan acento.",
+        "fr": "En espagnol, la question commence par ¿ et se termine par ?. Les mots cómo, dónde, cuántos et qué portent un accent.",
+        "voz": "narrador",
+        "audio": "narrador.add7407aea"
+      },
+      "pista": "Le point d'interrogation s'ouvre à l'envers (¿) au début de la question — et de même ¡ ... ! pour l'exclamation. Les mots interrogatifs ont toujours un accent écrit."
+    }
+  ],
+  "quests": [
+    {
+      "id": "u01-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Madrid",
+      "emoji": "🏛️",
+      "intro": {
+        "es": "¡Bienvenido a Madrid, viajero! Tu aventura empieza aquí.",
+        "fr": "Bienvenue à Madrid, voyageur ! Ton aventure commence ici.",
+        "voz": "ignacio",
+        "audio": "ignacio.228e66b636"
+      },
+      "pista": "Découverte de Madrid et de l'Académie ; tu comprends l'histoire sans tout traduire.",
+      "stats": [
+        "escuchar",
+        "cultura"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u01-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u01-intro",
+          "escena": {
+            "id": "u01-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 1 · ¡Hola! · Madrid",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Carte du monde en papel picado qui zoome sur l'Espagne puis sur Madrid ; un point doré pulse. Carte-titre « Capítulo 1 · ¡Hola! · Madrid ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 1 · ¡Hola! · Madrid",
+                "lineas": [
+                  {
+                    "es": "Capítulo uno: ¡Hola!",
+                    "fr": "Chapitre un : salut !",
+                    "voz": "narrador",
+                    "audio": "narrador.0fc0acbceb"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Silhouettes dorées de la Puerta de Alcalá, du Palacio Real et de la Plaza Mayor qui défilent sur un coucher de soleil, bordure de papel picado.",
+                "camara": "travelling latéral lent",
+                "lineas": [
+                  {
+                    "es": "Madrid, la capital de España.",
+                    "fr": "Madrid, la capitale de l'Espagne.",
+                    "voz": "narrador",
+                    "audio": "narrador.17cbaa74b3"
+                  },
+                  {
+                    "es": "Aquí empieza tu aventura.",
+                    "fr": "Ici commence ton aventure.",
+                    "voz": "narrador",
+                    "audio": "narrador.e3ef4edcdc"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u01-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Madrid es una ciudad de España.",
+            "fr": "Madrid est une ville d’Espagne.",
+            "voz": "narrador",
+            "audio": "narrador.663b987bcb"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u01-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Madrid es la capital de Francia.",
+            "fr": "Madrid est la capitale de la France.",
+            "voz": "narrador",
+            "audio": "narrador.9e7dea544c"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u01-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u01-historia",
+          "escena": {
+            "id": "u01-historia",
+            "tipo": "historia",
+            "titulo": "La Academia de Viajeros",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Intérieur de l'Academia de Viajeros : bibliothèque, globes, lumière dorée. Don Ignacio (moustache, chapeau) accueille Álex vu de dos, sac à dos sur l'épaule.",
+                "camara": "plan moyen, légère contre-plongée",
+                "personajes": [
+                  "ignacio",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Bienvenido a la Academia de Viajeros! Me llamo Ignacio.",
+                    "fr": "Bienvenue à l'Académie des Voyageurs ! Je m'appelle Ignacio.",
+                    "voz": "ignacio",
+                    "audio": "ignacio.29234dcc48"
+                  },
+                  {
+                    "es": "Y tú, ¿cómo te llamas?",
+                    "fr": "Et toi, comment tu t’appelles ?",
+                    "voz": "ignacio",
+                    "audio": "ignacio.a49859644c"
+                  },
+                  {
+                    "es": "Me llamo Álex.",
+                    "fr": "Je m'appelle Álex.",
+                    "voz": "viajero",
+                    "audio": "viajero.02503ba455"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Une plume verte tombe du plafond. Le Quetzal, presque sans plumes, entre en titubant et se pose sur le bureau.",
+                "camara": "gros plan sur le Quetzal",
+                "personajes": [
+                  "ignacio",
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Mira, es el Quetzal. Está muy cansado.",
+                    "fr": "Regarde, c’est le Quetzal. Il est très fatigué.",
+                    "voz": "ignacio",
+                    "audio": "ignacio.81ef280a77"
+                  },
+                  {
+                    "es": "Hola… Sin plumas… no puedo volar.",
+                    "fr": "Salut… Sans plumes… je ne peux pas voler.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.4f370da724"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Gros plan sur Ignacio ; derrière lui, la carte du monde avec des points lumineux (les plumes) et une ombre qui passe dessus.",
+                "personajes": [
+                  "ignacio",
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "La Sombra del Silencio tiene las plumas del Quetzal. Quiere un mundo sin palabras.",
+                    "fr": "La Sombra del Silencio a les plumes du Quetzal. Elle veut un monde sans mots.",
+                    "voz": "ignacio",
+                    "audio": "ignacio.4fdd5d6698"
+                  },
+                  {
+                    "es": "¡Ayúdame, por favor!",
+                    "fr": "Aide-moi, s’il te plaît !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.4311b250d5"
+                  }
+                ],
+                "musica": "tension douce, cordes"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Marina entre en courant, sac à dos, grand sourire. Plan à quatre personnages.",
+                "personajes": [
+                  "marina",
+                  "ignacio",
+                  "viajero",
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Hola! Me llamo Marina. Soy de Sevilla, pero vivo en Madrid.",
+                    "fr": "Salut ! Je m’appelle Marina. Je suis de Séville, mais j’habite à Madrid.",
+                    "voz": "marina",
+                    "audio": "marina.aef98e9132"
+                  },
+                  {
+                    "es": "La primera pluma está en Madrid. ¡Vamos!",
+                    "fr": "La première plume est à Madrid. En route !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.2a6f7adb29"
+                  }
+                ],
+                "musica": "thème d’aventure"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u01-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Soy de Sevilla, pero vivo en Madrid.",
+            "voz": "marina",
+            "audio": "marina.5fa75a5805"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Marina vive en Sevilla.",
+              "correcta": false
+            },
+            {
+              "texto": "Marina es de Sevilla y vive en Madrid.",
+              "correcta": true
+            },
+            {
+              "texto": "Marina es de Madrid.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q01-s06",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Quetzal puede volar.",
+            "fr": "Le Quetzal peut voler.",
+            "voz": "narrador",
+            "audio": "narrador.fd1ea46fc3"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u01-q01-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "ignacio",
+          "replica": {
+            "es": "¡Bienvenido! Me llamo Ignacio. Y tú, ¿cómo te llamas?",
+            "fr": "Bienvenue ! Je m’appelle Ignacio. Et toi, comment tu t’appelles ?",
+            "voz": "ignacio",
+            "audio": "ignacio.bca7e5f9d6"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.02503ba455"
+              },
+              "fr": "Je m’appelle Álex.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Encantado, Álex! Tienes nombre de héroe.",
+                "fr": "Enchanté, Álex ! Tu as un nom de héros.",
+                "voz": "ignacio",
+                "audio": "ignacio.d6b7fa96df",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós.",
+                "voz": "viajero",
+                "audio": "viajero.9961cceabf"
+              },
+              "fr": "Au revoir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Adiós? ¡Si acabas de llegar!",
+                "fr": "Au revoir ? Mais tu viens d’arriver !",
+                "voz": "ignacio",
+                "audio": "ignacio.6e3a43edea",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Buenas noches.",
+                "voz": "viajero",
+                "audio": "viajero.69011223f6"
+              },
+              "fr": "Bonne nuit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Buenas noches? ¡Todavía es de día!",
+                "fr": "Bonne nuit ? Il fait encore jour !",
+                "voz": "ignacio",
+                "audio": "ignacio.99eb96d873",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q01-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "marina",
+          "replica": {
+            "es": "Hola, ¿qué tal?",
+            "fr": "Salut, ça va ?",
+            "voz": "marina",
+            "audio": "marina.9e18b99aaf"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Bien, gracias.",
+                "voz": "viajero",
+                "audio": "viajero.e4d9c05802"
+              },
+              "fr": "Bien, merci.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Muy bien! Vamos.",
+                "fr": "Très bien ! On y va.",
+                "voz": "marina",
+                "audio": "marina.614e2c572b",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo bien.",
+                "voz": "viajero",
+                "audio": "viajero.d6b15e4b3f"
+              },
+              "fr": "Je m’appelle bien.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas «bien»? ¡Qué nombre más raro!",
+                "fr": "Tu t’appelles « bien » ? Quel nom bizarre !",
+                "voz": "marina",
+                "audio": "marina.393d682111",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Perdón.",
+                "voz": "viajero",
+                "audio": "viajero.a0c4da078d"
+              },
+              "fr": "Pardon.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Perdón? No pasa nada, tranquilo.",
+                "fr": "Pardon ? Ce n’est pas grave, détends-toi.",
+                "voz": "marina",
+                "audio": "marina.f6d683ee0e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q01-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Me",
+            "llamo",
+            "Álex."
+          ],
+          "habla": {
+            "es": "Me llamo Álex.",
+            "voz": "viajero",
+            "audio": "viajero.02503ba455"
+          },
+          "fr": "Je m’appelle Álex."
+        },
+        {
+          "id": "u01-q01-s10",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex.",
+            "fr": "Salut, je m’appelle Álex.",
+            "voz": "marina",
+            "audio": "marina.cbc0e807dd"
+          },
+          "aceptadas": [
+            "hola me llamo álex"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del saludo",
+            "efecto": "Una luz dorada abre la puerta de la Academia"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u01-q02",
+      "tipo": "vocabulario",
+      "titulo": "Hola, ¿qué tal?",
+      "emoji": "👋",
+      "intro": {
+        "es": "¡Buenos días! Soy Rosa. Aquí primero se saluda. ¡Después se comen churros!",
+        "fr": "Bonjour ! Je suis Rosa. Ici, on salue d’abord. Les churros, ensuite !",
+        "voz": "rosa",
+        "audio": "rosa.18bcbecf75"
+      },
+      "pista": "Les salutations et les formules de politesse, avec Rosa la churrera.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 12,
+      "steps": [
+        {
+          "id": "u01-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "hola",
+            "adios",
+            "buenos_dias",
+            "buenas_tardes",
+            "buenas_noches"
+          ]
+        },
+        {
+          "id": "u01-q02-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "buenos días",
+            "voz": "narrador",
+            "audio": "narrador.a25b998dff"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "buenas_noches",
+              "correcta": false
+            },
+            {
+              "vocab": "buenos_dias",
+              "correcta": true
+            },
+            {
+              "vocab": "hola",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "hola"
+            },
+            {
+              "vocab": "adios"
+            },
+            {
+              "vocab": "buenos_dias"
+            },
+            {
+              "vocab": "buenas_tardes"
+            },
+            {
+              "vocab": "buenas_noches"
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Esta imagen es «buenas noches».",
+            "fr": "Cette image, c’est « buenas noches ».",
+            "voz": "narrador",
+            "audio": "narrador.16ae498b6f"
+          },
+          "correcta": true,
+          "imagen": "buenas_noches"
+        },
+        {
+          "id": "u01-q02-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Esta imagen es «adiós».",
+            "fr": "Cette image, c’est « adiós ».",
+            "voz": "narrador",
+            "audio": "narrador.c827423c72"
+          },
+          "correcta": false,
+          "imagen": "buenos_dias"
+        },
+        {
+          "id": "u01-q02-s06",
+          "tipo": "flashcard",
+          "vocab": [
+            "por_favor",
+            "gracias",
+            "de_nada",
+            "perdon",
+            "que_tal",
+            "hasta_luego",
+            "encantado"
+          ]
+        },
+        {
+          "id": "u01-q02-s07",
+          "tipo": "flashcard",
+          "vocab": [
+            "bien",
+            "regular",
+            "mal"
+          ]
+        },
+        {
+          "id": "u01-q02-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la respuesta.",
+            "fr": "Écoute et choisis la réponse.",
+            "voz": "narrador",
+            "audio": "narrador.84b29b857c"
+          },
+          "habla": {
+            "es": "Gracias.",
+            "voz": "narrador",
+            "audio": "narrador.3eec18fc97"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "De nada.",
+              "correcta": true
+            },
+            {
+              "texto": "Hasta luego.",
+              "correcta": false
+            },
+            {
+              "texto": "Buenos días.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s09",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la respuesta.",
+            "fr": "Écoute et choisis la réponse.",
+            "voz": "narrador",
+            "audio": "narrador.84b29b857c"
+          },
+          "habla": {
+            "es": "¿Qué tal?",
+            "voz": "marina",
+            "audio": "marina.a8506c246b"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "De nada.",
+              "correcta": false
+            },
+            {
+              "texto": "Bien, gracias.",
+              "correcta": true
+            },
+            {
+              "texto": "Adiós.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "¡Buenos días! ¿Qué tal?",
+            "fr": "Bonjour ! Ça va ?",
+            "voz": "rosa",
+            "audio": "rosa.b597a16e5a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Bien, gracias.",
+                "voz": "viajero",
+                "audio": "viajero.e4d9c05802"
+              },
+              "fr": "Bien, merci.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Estupendo! Hoy hay churros calentitos.",
+                "fr": "Super ! Aujourd’hui il y a des churros bien chauds.",
+                "voz": "rosa",
+                "audio": "rosa.29fa98234b",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós.",
+                "voz": "viajero",
+                "audio": "viajero.9961cceabf"
+              },
+              "fr": "Au revoir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Adiós? Pero si todavía no has comprado nada.",
+                "fr": "Au revoir ? Mais tu n’as encore rien acheté.",
+                "voz": "rosa",
+                "audio": "rosa.2ce7aee991",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "De nada.",
+                "voz": "viajero",
+                "audio": "viajero.c310b65511"
+              },
+              "fr": "De rien.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿De nada? Yo no te he dicho «gracias».",
+                "fr": "De rien ? Je ne t’ai pas dit « merci ».",
+                "voz": "rosa",
+                "audio": "rosa.97eb2f7ec8",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "Aquí tienes: tres churros.",
+            "fr": "Voilà : trois churros.",
+            "voz": "rosa",
+            "audio": "rosa.929e69f8e0"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Gracias.",
+                "voz": "viajero",
+                "audio": "viajero.3eec18fc97"
+              },
+              "fr": "Merci.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡De nada! Hasta luego.",
+                "fr": "De rien ! À tout à l’heure.",
+                "voz": "rosa",
+                "audio": "rosa.d8296d8b37",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Perdón.",
+                "voz": "viajero",
+                "audio": "viajero.a0c4da078d"
+              },
+              "fr": "Pardon.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Perdón? ¿Por qué? ¡Los churros no muerden!",
+                "fr": "Pardon ? Pourquoi ? Les churros ne mordent pas !",
+                "voz": "rosa",
+                "audio": "rosa.22ad557db7",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Buenas noches.",
+                "voz": "viajero",
+                "audio": "viajero.69011223f6"
+              },
+              "fr": "Bonne nuit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Son las once de la mañana, cariño.",
+                "fr": "Il est onze heures du matin, mon petit.",
+                "voz": "rosa",
+                "audio": "rosa.028d2bb011",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q02-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ días, Rosa.",
+          "respuesta": "Buenos",
+          "opciones": [
+            "Buenos",
+            "Buenas",
+            "Bueno"
+          ],
+          "habla": {
+            "es": "Buenos días, Rosa.",
+            "voz": "narrador",
+            "audio": "narrador.22d2547655"
+          },
+          "fr": "Bonjour, Rosa."
+        },
+        {
+          "id": "u01-q02-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Hola,",
+            "¿qué",
+            "tal?"
+          ],
+          "habla": {
+            "es": "Hola, ¿qué tal?",
+            "voz": "marina",
+            "audio": "marina.9e18b99aaf"
+          },
+          "fr": "Salut, ça va ?"
+        },
+        {
+          "id": "u01-q02-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Buenas noches",
+            "voz": "narrador",
+            "audio": "narrador.83ce486b82"
+          },
+          "respuesta": "Buenas noches",
+          "aceptadas": [
+            "buenas noches"
+          ]
+        },
+        {
+          "id": "u01-q02-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Buenos días, ¿qué tal?",
+            "fr": "Bonjour, ça va ?",
+            "voz": "rosa",
+            "audio": "rosa.9c3bbebefb"
+          },
+          "aceptadas": [
+            "buenos días qué tal"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del churro",
+            "efecto": "Un churro dorado aparece en tu inventario"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u01-q03",
+      "tipo": "hechizo",
+      "titulo": "El hechizo del abecedario",
+      "emoji": "🔤",
+      "intro": {
+        "es": "Para viajar necesitas el abecedario. ¡Es tu primer hechizo!",
+        "fr": "Pour voyager, il te faut l’alphabet. C’est ton premier sort !",
+        "voz": "marina",
+        "audio": "marina.d26cf711af"
+      },
+      "pista": "L'alphabet espagnol, l'épellation de ton prénom et les sons difficiles (j, h, ñ, rr, ll).",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u01-q03-s01",
+          "tipo": "grammar_card",
+          "ref": "g_abecedario"
+        },
+        {
+          "id": "u01-q03-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha la letra y elige.",
+            "fr": "Écoute la lettre et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.8ac4b09487"
+          },
+          "habla": {
+            "es": "jota",
+            "voz": "narrador",
+            "audio": "narrador.9a02f63cf7"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "J",
+              "correcta": true
+            },
+            {
+              "texto": "G",
+              "correcta": false
+            },
+            {
+              "texto": "H",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q03-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha la letra y elige.",
+            "fr": "Écoute la lettre et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.8ac4b09487"
+          },
+          "habla": {
+            "es": "hache",
+            "voz": "narrador",
+            "audio": "narrador.ed01695c41"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "J",
+              "correcta": false
+            },
+            {
+              "texto": "H",
+              "correcta": true
+            },
+            {
+              "texto": "A",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q03-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha la letra y elige.",
+            "fr": "Écoute la lettre et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.8ac4b09487"
+          },
+          "habla": {
+            "es": "ele",
+            "voz": "narrador",
+            "audio": "narrador.9d4799a1ea"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "N",
+              "correcta": false
+            },
+            {
+              "texto": "M",
+              "correcta": false
+            },
+            {
+              "texto": "L",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u01-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha la letra y elige.",
+            "fr": "Écoute la lettre et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.8ac4b09487"
+          },
+          "habla": {
+            "es": "equis",
+            "voz": "narrador",
+            "audio": "narrador.ada6eaf77a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "X",
+              "correcta": true
+            },
+            {
+              "texto": "S",
+              "correcta": false
+            },
+            {
+              "texto": "Z",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q03-s06",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha las letras y escribe el nombre.",
+            "fr": "Écoute les lettres et écris le prénom.",
+            "voz": "narrador",
+            "audio": "narrador.c052b4b436"
+          },
+          "habla": {
+            "es": "a, ele, e, equis",
+            "voz": "viajero",
+            "audio": "viajero.2f79025b90"
+          },
+          "respuesta": "Álex",
+          "aceptadas": [
+            "alex"
+          ]
+        },
+        {
+          "id": "u01-q03-s07",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha las letras y escribe el nombre.",
+            "fr": "Écoute les lettres et écris le prénom.",
+            "voz": "narrador",
+            "audio": "narrador.c052b4b436"
+          },
+          "habla": {
+            "es": "eme, a, ere, i, ene, a",
+            "voz": "marina",
+            "audio": "marina.a17425f770"
+          },
+          "respuesta": "Marina",
+          "aceptadas": [
+            "marina"
+          ]
+        },
+        {
+          "id": "u01-q03-s08",
+          "tipo": "grammar_card",
+          "ref": "g_pronunciacion"
+        },
+        {
+          "id": "u01-q03-s09",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Mi amigo José",
+            "fr": "Mon ami José",
+            "voz": "marina",
+            "audio": "marina.f280257340"
+          },
+          "aceptadas": [
+            "mi amigo josé"
+          ],
+          "foco": "La j espagnole est rude : un « h » soufflé du fond de la gorge, bien plus fort qu’en anglais.",
+          "hechizo": {
+            "nombre": "Hechizo de la jota",
+            "efecto": "Un viento fuerte sopla sobre la plaza"
+          }
+        },
+        {
+          "id": "u01-q03-s10",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "El perro de Rosa",
+            "fr": "Le chien de Rosa",
+            "voz": "marina",
+            "audio": "marina.c83d374c3e"
+          },
+          "aceptadas": [
+            "el perro de rosa"
+          ],
+          "foco": "Le rr (perro) est roulé avec la pointe de la langue : r-r-r. Le r simple (Rosa, au début d’un mot) se roule aussi.",
+          "hechizo": {
+            "nombre": "Hechizo de la erre",
+            "efecto": "El suelo vibra bajo tus pies"
+          }
+        },
+        {
+          "id": "u01-q03-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Mañana en España",
+            "fr": "Demain en Espagne",
+            "voz": "marina",
+            "audio": "marina.22e4244f77"
+          },
+          "aceptadas": [
+            "mañana en españa"
+          ],
+          "foco": "Le ñ se prononce « gn » comme dans « montagne » : ma-GNA-na, es-PA-gna.",
+          "hechizo": {
+            "nombre": "Hechizo de la eñe",
+            "efecto": "Una ola de luz recorre la calle"
+          }
+        },
+        {
+          "id": "u01-q03-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Me llamo Guillermo",
+            "fr": "Je m’appelle Guillermo",
+            "voz": "marina",
+            "audio": "marina.53114163d4"
+          },
+          "aceptadas": [
+            "me llamo guillermo"
+          ],
+          "foco": "Le ll se prononce presque comme un « y » : me YA-mo. Dans « Guillermo », le u est muet : gi-YER-mo.",
+          "hechizo": {
+            "nombre": "Hechizo de la elle",
+            "efecto": "Tu nombre brilla en el aire"
+          }
+        },
+        {
+          "id": "u01-q03-s13",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Cómo se ___ tu nombre?",
+          "respuesta": "escribe",
+          "opciones": [
+            "escribe",
+            "llama",
+            "tiene"
+          ],
+          "habla": {
+            "es": "¿Cómo se escribe tu nombre?",
+            "voz": "nacho",
+            "audio": "nacho.935f83bdf1"
+          },
+          "fr": "Comment s’écrit ton prénom ?"
+        },
+        {
+          "id": "u01-q03-s14",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "¿Cómo",
+            "se",
+            "escribe",
+            "tu",
+            "nombre?"
+          ],
+          "habla": {
+            "es": "¿Cómo se escribe tu nombre?",
+            "voz": "nacho",
+            "audio": "nacho.935f83bdf1"
+          },
+          "fr": "Comment s’écrit ton prénom ?"
+        },
+        {
+          "id": "u01-q03-s15",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "nacho",
+          "replica": {
+            "es": "Hola, me llamo Nacho. ¿Cómo se escribe tu nombre?",
+            "fr": "Salut, je m’appelle Nacho. Comment s’écrit ton prénom ?",
+            "voz": "nacho",
+            "audio": "nacho.97af9c18fa"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "A, ele, e, equis.",
+                "voz": "viajero",
+                "audio": "viajero.40d8274dce"
+              },
+              "fr": "A, L, E, X.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Álex, con tilde. ¡Qué elegante!",
+                "fr": "Parfait ! Álex, avec l’accent. Quelle élégance !",
+                "voz": "nacho",
+                "audio": "nacho.77a6ba3faa",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Se escribe pizza.",
+                "voz": "viajero",
+                "audio": "viajero.8b259d416e"
+              },
+              "fr": "Ça s’écrit pizza.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Pizza? ¡Me has dado hambre!",
+                "fr": "Pizza ? Tu m’as donné faim !",
+                "voz": "nacho",
+                "audio": "nacho.e77a142d5d",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo Nacho.",
+                "voz": "viajero",
+                "audio": "viajero.a8d6500947"
+              },
+              "fr": "Je m’appelle Nacho.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso ya lo sé: Nacho soy yo.",
+                "fr": "Ça, je le sais déjà : Nacho, c’est moi.",
+                "voz": "nacho",
+                "audio": "nacho.f26a6f68fd",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u01-q04",
+      "tipo": "escucha",
+      "titulo": "Los números mágicos",
+      "emoji": "🔢",
+      "intro": {
+        "es": "Los números están por toda la ciudad. ¿Los contamos juntos?",
+        "fr": "Les nombres sont partout dans la ville. On les compte ensemble ?",
+        "voz": "nacho",
+        "audio": "nacho.1949985f17"
+      },
+      "pista": "Les nombres de 0 à 100, à l’oreille d’abord, puis à l’écrit.",
+      "stats": [
+        "escuchar",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u01-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "cero",
+            "uno",
+            "dos",
+            "tres",
+            "cuatro",
+            "cinco"
+          ]
+        },
+        {
+          "id": "u01-q04-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "seis",
+            "siete",
+            "ocho",
+            "nueve",
+            "diez"
+          ]
+        },
+        {
+          "id": "u01-q04-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "siete",
+            "voz": "narrador",
+            "audio": "narrador.c0bdfc8b52"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "cinco",
+              "correcta": false
+            },
+            {
+              "vocab": "siete",
+              "correcta": true
+            },
+            {
+              "vocab": "nueve",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "tres"
+            },
+            {
+              "vocab": "cuatro"
+            },
+            {
+              "vocab": "cinco"
+            },
+            {
+              "vocab": "seis"
+            },
+            {
+              "vocab": "siete"
+            },
+            {
+              "vocab": "ocho"
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s05",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "ocho",
+            "voz": "narrador",
+            "audio": "narrador.311047fbb0"
+          },
+          "respuesta": "ocho",
+          "aceptadas": [
+            "8"
+          ]
+        },
+        {
+          "id": "u01-q04-s06",
+          "tipo": "flashcard",
+          "vocab": [
+            "once",
+            "doce",
+            "trece",
+            "catorce",
+            "quince",
+            "veinte"
+          ]
+        },
+        {
+          "id": "u01-q04-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "doce",
+            "voz": "nacho",
+            "audio": "nacho.c24b8eb0d0"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "2",
+              "correcta": false
+            },
+            {
+              "texto": "12",
+              "correcta": true
+            },
+            {
+              "texto": "20",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "quince",
+            "voz": "nacho",
+            "audio": "nacho.3841f10e3a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "5",
+              "correcta": false
+            },
+            {
+              "texto": "15",
+              "correcta": true
+            },
+            {
+              "texto": "50",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s09",
+          "tipo": "grammar_card",
+          "ref": "g_numeros"
+        },
+        {
+          "id": "u01-q04-s10",
+          "tipo": "flashcard",
+          "vocab": [
+            "treinta",
+            "cuarenta",
+            "cincuenta",
+            "cien"
+          ]
+        },
+        {
+          "id": "u01-q04-s11",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Treinta y cinco.",
+            "voz": "rosa",
+            "audio": "rosa.5cb476f641"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "25",
+              "correcta": false
+            },
+            {
+              "texto": "35",
+              "correcta": true
+            },
+            {
+              "texto": "45",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Veinte, treinta, ___, cincuenta.",
+          "respuesta": "cuarenta",
+          "opciones": [
+            "cuarenta",
+            "cien",
+            "diez"
+          ],
+          "habla": {
+            "es": "Veinte, treinta, cuarenta, cincuenta.",
+            "voz": "narrador",
+            "audio": "narrador.42d357762c"
+          },
+          "fr": "20, 30, 40, 50."
+        },
+        {
+          "id": "u01-q04-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "dieciséis",
+            "voz": "narrador",
+            "audio": "narrador.a7be45493f"
+          },
+          "respuesta": "dieciséis",
+          "aceptadas": [
+            "dieciseis",
+            "16"
+          ]
+        },
+        {
+          "id": "u01-q04-s14",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi número de la suerte es el veintisiete.",
+            "voz": "marina",
+            "audio": "marina.213c47c907"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "17",
+              "correcta": false
+            },
+            {
+              "texto": "27",
+              "correcta": true
+            },
+            {
+              "texto": "37",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q04-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Tres, dos, uno… ¡cero!",
+            "fr": "Trois, deux, un… zéro !",
+            "voz": "nacho",
+            "audio": "nacho.b7e33a91b1"
+          },
+          "aceptadas": [
+            "tres dos uno… cero",
+            "3 2 1 0",
+            "tres dos uno cero"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la cuenta atrás",
+            "efecto": "Un cohete de papel sale volando"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u01-q05",
+      "tipo": "cultura",
+      "titulo": "El mundo en español",
+      "emoji": "🌎",
+      "intro": {
+        "es": "El español es la lengua de muchos países. Vamos a conocerlos.",
+        "fr": "L’espagnol est la langue de nombreux pays. Allons les découvrir.",
+        "voz": "ignacio",
+        "audio": "ignacio.6ba04c1c00"
+      },
+      "pista": "Le monde hispanophone : pays et nationalités.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escuchar"
+      ],
+      "minutos": 12,
+      "steps": [
+        {
+          "id": "u01-q05-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u01-capsula-hispanos",
+          "escena": {
+            "id": "u01-capsula-hispanos",
+            "tipo": "capsula",
+            "titulo": "El español en el mundo",
+            "duracion": 18,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Planisphère animé (style explainer Vox) : l'Espagne, l'Amérique latine et la Guinée équatoriale s'illuminent en turquoise.",
+                "camara": "plan fixe sur la carte",
+                "lineas": [
+                  {
+                    "es": "El español se habla en muchos países.",
+                    "fr": "On parle espagnol dans beaucoup de pays.",
+                    "voz": "narrador",
+                    "audio": "narrador.f1f6303030"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Compteur animé qui monte jusqu'à « 500 000 000 », call-out « personas ».",
+                "lineas": [
+                  {
+                    "es": "Casi quinientos millones de personas hablan español.",
+                    "fr": "Presque cinq cents millions de personnes parlent espagnol.",
+                    "voz": "narrador",
+                    "audio": "narrador.4d7808bf77"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Zoom sur l'Espagne, le Mexique et l'Argentine : drapeaux et silhouettes (Sagrada Familia, pyramide, obélisque).",
+                "lineas": [
+                  {
+                    "es": "España, México, Argentina… ¡y muchos más!",
+                    "fr": "Espagne, Mexique, Argentine… et bien d’autres !",
+                    "voz": "narrador",
+                    "audio": "narrador.a57ad46a12"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 4,
+                "vista": "Retour sur la carte : la plume du Quetzal s'envole vers l'ouest.",
+                "lineas": [
+                  {
+                    "es": "El viaje del Quetzal empieza en España.",
+                    "fr": "Le voyage du Quetzal commence en Espagne.",
+                    "voz": "narrador",
+                    "audio": "narrador.04eb23de43"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u01-q05-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El español se habla en un solo país.",
+            "fr": "On parle espagnol dans un seul pays.",
+            "voz": "narrador",
+            "audio": "narrador.f2f2f15498"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u01-q05-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En México se habla español.",
+            "fr": "Au Mexique, on parle espagnol.",
+            "voz": "narrador",
+            "audio": "narrador.5912e1d202"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u01-q05-s04",
+          "tipo": "flashcard",
+          "vocab": [
+            "espana",
+            "francia",
+            "mexico",
+            "argentina"
+          ]
+        },
+        {
+          "id": "u01-q05-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "espana"
+            },
+            {
+              "vocab": "francia"
+            },
+            {
+              "vocab": "mexico"
+            },
+            {
+              "vocab": "argentina"
+            }
+          ]
+        },
+        {
+          "id": "u01-q05-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "México",
+            "voz": "narrador",
+            "audio": "narrador.e9d4eca609"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "espana",
+              "correcta": false
+            },
+            {
+              "vocab": "mexico",
+              "correcta": true
+            },
+            {
+              "vocab": "argentina",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q05-s07",
+          "tipo": "flashcard",
+          "vocab": [
+            "espanol",
+            "frances",
+            "mexicano",
+            "argentino"
+          ]
+        },
+        {
+          "id": "u01-q05-s08",
+          "tipo": "grammar_card",
+          "ref": "g_nacionalidad"
+        },
+        {
+          "id": "u01-q05-s09",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "espanol"
+            },
+            {
+              "vocab": "frances"
+            },
+            {
+              "vocab": "mexicano"
+            },
+            {
+              "vocab": "argentino"
+            }
+          ]
+        },
+        {
+          "id": "u01-q05-s10",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hola, soy Camila. Soy de Argentina.",
+            "voz": "narrador",
+            "audio": "narrador.0025ba8096"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Camila es mexicana.",
+              "correcta": false
+            },
+            {
+              "texto": "Camila es argentina.",
+              "correcta": true
+            },
+            {
+              "texto": "Camila es española.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q05-s11",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, me llamo Sofía. Soy argentina, de Buenos Aires. Tengo doce años. Mi amigo Leo es mexicano y vive en Oaxaca.",
+            "fr": "Salut, je m’appelle Sofía. Je suis argentine, de Buenos Aires. J’ai douze ans. Mon ami Leo est mexicain et habite à Oaxaca.",
+            "voz": "narrador",
+            "audio": "narrador.b5cff6fb0e"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De dónde es Sofía?",
+                "fr": "D’où vient Sofía ?",
+                "voz": "narrador",
+                "audio": "narrador.d27690f4e4"
+              },
+              "opciones": [
+                {
+                  "texto": "De México.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De Argentina.",
+                  "correcta": true
+                },
+                {
+                  "texto": "De España.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántos años tiene Sofía?",
+                "fr": "Quel âge a Sofía ?",
+                "voz": "narrador",
+                "audio": "narrador.312a36c45e"
+              },
+              "opciones": [
+                {
+                  "texto": "Doce.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Trece.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Quince.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Leo es argentino?",
+                "fr": "Leo est-il argentin ?",
+                "voz": "narrador",
+                "audio": "narrador.d7f0fc172f"
+              },
+              "opciones": [
+                {
+                  "texto": "Sí, es argentino.",
+                  "correcta": false
+                },
+                {
+                  "texto": "No, es mexicano.",
+                  "correcta": true
+                },
+                {
+                  "texto": "No, es español.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u01-q05-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina es de Sevilla. Es ___.",
+          "respuesta": "española",
+          "opciones": [
+            "español",
+            "española",
+            "francesa"
+          ],
+          "habla": {
+            "es": "Marina es de Sevilla. Es española.",
+            "voz": "marina",
+            "audio": "marina.78bb1180e3"
+          },
+          "fr": "Marina est de Séville. Elle est espagnole."
+        },
+        {
+          "id": "u01-q05-s13",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Álex es de París. Es ___.",
+          "respuesta": "francés",
+          "opciones": [
+            "francés",
+            "francesa",
+            "mexicano"
+          ],
+          "habla": {
+            "es": "Álex es de París. Es francés.",
+            "voz": "marina",
+            "audio": "marina.7baf15a30a"
+          },
+          "fr": "Álex est de Paris. Il est français."
+        },
+        {
+          "id": "u01-q05-s14",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Nacho",
+            "es",
+            "español",
+            "y",
+            "yo",
+            "soy",
+            "francés."
+          ],
+          "habla": {
+            "es": "Nacho es español y yo soy francés.",
+            "voz": "viajero",
+            "audio": "viajero.b3da469bf6"
+          },
+          "fr": "Nacho est espagnol et moi je suis français."
+        }
+      ]
+    },
+    {
+      "id": "u01-q06",
+      "tipo": "forja",
+      "titulo": "La Forja: soy, me llamo, tengo",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Palabras… poder. Forja conmigo: soy, me llamo, tengo.",
+        "fr": "Les mots… ont du pouvoir. Forge avec moi : soy, me llamo, tengo.",
+        "voz": "quetzal",
+        "audio": "quetzal.6ca9aa7c1a"
+      },
+      "pista": "Les verbes ser, llamarse et tener au présent : découverte puis forge.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u01-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "yo",
+            "tu",
+            "el_pron",
+            "ella"
+          ]
+        },
+        {
+          "id": "u01-q06-s02",
+          "tipo": "grammar_card",
+          "ref": "g_pronombres_ser"
+        },
+        {
+          "id": "u01-q06-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ser",
+          "sujeto": "yo",
+          "radical": "",
+          "terminacion": "soy",
+          "terminaciones": [
+            "soy",
+            "eres",
+            "es"
+          ],
+          "forma": "soy",
+          "habla": {
+            "es": "yo soy",
+            "voz": "viajero",
+            "audio": "viajero.d4a1fe5278"
+          },
+          "fr": "Moi, je suis…"
+        },
+        {
+          "id": "u01-q06-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ser",
+          "sujeto": "tú",
+          "radical": "",
+          "terminacion": "eres",
+          "terminaciones": [
+            "soy",
+            "eres",
+            "es"
+          ],
+          "forma": "eres",
+          "habla": {
+            "es": "tú eres",
+            "voz": "marina",
+            "audio": "marina.cd5d5964cc"
+          },
+          "fr": "Toi, tu es…"
+        },
+        {
+          "id": "u01-q06-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ser",
+          "sujeto": "él",
+          "radical": "",
+          "terminacion": "es",
+          "terminaciones": [
+            "soy",
+            "eres",
+            "es"
+          ],
+          "forma": "es",
+          "habla": {
+            "es": "él es",
+            "voz": "marina",
+            "audio": "marina.9c2fe25427"
+          },
+          "fr": "Lui, il est…"
+        },
+        {
+          "id": "u01-q06-s06",
+          "tipo": "grammar_card",
+          "ref": "g_llamarse"
+        },
+        {
+          "id": "u01-q06-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llamarse",
+          "sujeto": "yo",
+          "radical": "me llam",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "me llamo",
+          "habla": {
+            "es": "yo me llamo",
+            "voz": "viajero",
+            "audio": "viajero.56319b36ab"
+          },
+          "fr": "Moi, je m’appelle…"
+        },
+        {
+          "id": "u01-q06-s08",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llamarse",
+          "sujeto": "tú",
+          "radical": "te llam",
+          "terminacion": "as",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "te llamas",
+          "habla": {
+            "es": "tú te llamas",
+            "voz": "marina",
+            "audio": "marina.bb09799bf0"
+          },
+          "fr": "Toi, tu t’appelles…"
+        },
+        {
+          "id": "u01-q06-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "llamarse",
+          "sujeto": "ella",
+          "radical": "se llam",
+          "terminacion": "a",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "se llama",
+          "habla": {
+            "es": "ella se llama",
+            "voz": "marina",
+            "audio": "marina.0e87eb7b2c"
+          },
+          "fr": "Elle s’appelle…"
+        },
+        {
+          "id": "u01-q06-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Cómo te ___?",
+          "respuesta": "llamas",
+          "opciones": [
+            "llamas",
+            "llamo",
+            "llama"
+          ],
+          "habla": {
+            "es": "¿Cómo te llamas?",
+            "voz": "marina",
+            "audio": "marina.f9d4d5f290"
+          },
+          "fr": "Comment tu t’appelles ?"
+        },
+        {
+          "id": "u01-q06-s11",
+          "tipo": "grammar_card",
+          "ref": "g_tener_edad"
+        },
+        {
+          "id": "u01-q06-s12",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "yo",
+          "radical": "teng",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tengo",
+          "habla": {
+            "es": "yo tengo",
+            "voz": "viajero",
+            "audio": "viajero.710c1fb87a"
+          },
+          "fr": "Moi, j’ai…"
+        },
+        {
+          "id": "u01-q06-s13",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "tú",
+          "radical": "tien",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tienes",
+          "habla": {
+            "es": "tú tienes",
+            "voz": "marina",
+            "audio": "marina.49d1b8416a"
+          },
+          "fr": "Toi, tu as…"
+        },
+        {
+          "id": "u01-q06-s14",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "él",
+          "radical": "tien",
+          "terminacion": "e",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tiene",
+          "habla": {
+            "es": "él tiene",
+            "voz": "nacho",
+            "audio": "nacho.1d3a8f00ef"
+          },
+          "fr": "Lui, il a…"
+        },
+        {
+          "id": "u01-q06-s15",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina ___ doce años.",
+          "respuesta": "tiene",
+          "opciones": [
+            "tengo",
+            "tienes",
+            "tiene"
+          ],
+          "habla": {
+            "es": "Marina tiene doce años.",
+            "voz": "marina",
+            "audio": "marina.e40a8481cb"
+          },
+          "fr": "Marina a douze ans."
+        }
+      ]
+    },
+    {
+      "id": "u01-q07",
+      "tipo": "dialogo",
+      "titulo": "Me presento",
+      "emoji": "💬",
+      "intro": {
+        "es": "Es hora de presentarte. ¡Yo te ayudo!",
+        "fr": "C’est l’heure de te présenter. Je t’aide !",
+        "voz": "marina",
+        "audio": "marina.81eaaba18f"
+      },
+      "pista": "Te présenter : prénom, âge, origine, lieu de vie. Dialogues à choix puis écriture et prise de parole.",
+      "stats": [
+        "hablar",
+        "escribir",
+        "escuchar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u01-q07-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "me_llamo",
+            "como_te_llamas",
+            "soy",
+            "de_donde_eres",
+            "vivo_en",
+            "tengo",
+            "anos"
+          ]
+        },
+        {
+          "id": "u01-q07-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "nombre",
+            "amigo",
+            "chico",
+            "chica"
+          ]
+        },
+        {
+          "id": "u01-q07-s03",
+          "tipo": "grammar_card",
+          "ref": "g_preguntas"
+        },
+        {
+          "id": "u01-q07-s04",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "nacho",
+          "replica": {
+            "es": "¡Hola! Me llamo Nacho. ¿Cómo te llamas?",
+            "fr": "Salut ! Je m’appelle Nacho. Et toi, comment tu t’appelles ?",
+            "voz": "nacho",
+            "audio": "nacho.21113c7147"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.02503ba455"
+              },
+              "fr": "Je m’appelle Álex.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Encantado, Álex!",
+                "fr": "Enchanté, Álex !",
+                "voz": "nacho",
+                "audio": "nacho.77b969e6f1",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy Nacho.",
+                "voz": "viajero",
+                "audio": "viajero.ec5a03f642"
+              },
+              "fr": "Je suis Nacho.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Pero ese soy yo! Tú eres otro Nacho… ¡qué lío!",
+                "fr": "Mais ça, c’est moi ! Tu es un autre Nacho… quel bazar !",
+                "voz": "nacho",
+                "audio": "nacho.32e7bb6a7a",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Bien, gracias.",
+                "voz": "viajero",
+                "audio": "viajero.e4d9c05802"
+              },
+              "fr": "Bien, merci.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Me alegra, pero yo te pregunto el nombre.",
+                "fr": "Tant mieux, mais moi je te demande ton prénom.",
+                "voz": "nacho",
+                "audio": "nacho.5ede437bfb",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s05",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "nacho",
+          "replica": {
+            "es": "¿De dónde eres?",
+            "fr": "D’où viens-tu ?",
+            "voz": "nacho",
+            "audio": "nacho.449b0a0e51"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy de París.",
+                "voz": "viajero",
+                "audio": "viajero.9e30d48775"
+              },
+              "fr": "Je suis de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡París! Muy bonito. Yo soy de Madrid.",
+                "fr": "Paris ! Très joli. Moi, je suis de Madrid.",
+                "voz": "nacho",
+                "audio": "nacho.4c0772c084",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Vale, pero yo pregunto de dónde eres.",
+                "fr": "D’accord, mais je demande d’où tu viens.",
+                "voz": "nacho",
+                "audio": "nacho.bda87bd094",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Gracias.",
+                "voz": "viajero",
+                "audio": "viajero.3eec18fc97"
+              },
+              "fr": "Merci.",
+              "correcta": false,
+              "reaccion": {
+                "es": "De nada… ¿pero de dónde eres?",
+                "fr": "De rien… mais d’où viens-tu ?",
+                "voz": "nacho",
+                "audio": "nacho.17eadafec1",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s06",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "nacho",
+          "replica": {
+            "es": "¿Cuántos años tienes?",
+            "fr": "Quel âge as-tu ?",
+            "voz": "nacho",
+            "audio": "nacho.ca8c6a9981"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Como Marina! Yo tengo trece.",
+                "fr": "Comme Marina ! Moi j’ai treize ans.",
+                "voz": "nacho",
+                "audio": "nacho.640d53142e",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy doce años.",
+                "voz": "viajero",
+                "audio": "viajero.97892b3d53"
+              },
+              "fr": "Je suis douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Eres doce años? ¡Con «ser» no! Con «tener».",
+                "fr": "Tu es douze ans ? Pas avec « ser » ! Avec « tener ».",
+                "voz": "nacho",
+                "audio": "nacho.7635f4054f",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo doce.",
+                "voz": "viajero",
+                "audio": "viajero.4916cf5dd3"
+              },
+              "fr": "Je m’appelle douze.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas Doce? ¡Qué original!",
+                "fr": "Tu t’appelles Douze ? Quelle originalité !",
+                "voz": "nacho",
+                "audio": "nacho.2da127c601",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "marina",
+          "replica": {
+            "es": "Yo soy de Sevilla, pero vivo en Madrid. ¿Y tú? ¿Dónde vives?",
+            "fr": "Moi, je suis de Séville, mais j’habite à Madrid. Et toi ? Où habites-tu ?",
+            "voz": "marina",
+            "audio": "marina.a4a4ce0f46"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Vivo en París.",
+                "voz": "viajero",
+                "audio": "viajero.800dbd1f68"
+              },
+              "fr": "J’habite à Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! París y Madrid, dos capitales.",
+                "fr": "Super ! Paris et Madrid, deux capitales.",
+                "voz": "marina",
+                "audio": "marina.1e16eca10d",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo París.",
+                "voz": "viajero",
+                "audio": "viajero.2159d854e0"
+              },
+              "fr": "Je m’appelle Paris.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas París? Hola, París.",
+                "fr": "Tu t’appelles Paris ? Salut, Paris.",
+                "voz": "marina",
+                "audio": "marina.d3f96ac021",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo París.",
+                "voz": "viajero",
+                "audio": "viajero.87816f1898"
+              },
+              "fr": "J’ai Paris.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tienes París? ¡Qué suerte!",
+                "fr": "Tu as Paris ? Quelle chance !",
+                "voz": "marina",
+                "audio": "marina.418a3f6be8",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "Yo soy Rosa. Soy de Madrid. ¿Eres español?",
+            "fr": "Moi, c’est Rosa. Je suis de Madrid. Tu es espagnol ?",
+            "voz": "rosa",
+            "audio": "rosa.80af995ea6"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "No, soy francés. Vivo en París.",
+                "voz": "viajero",
+                "audio": "viajero.a8b64fe332"
+              },
+              "fr": "Non, je suis français. J’habite à Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Francés! Entonces los churros te van a encantar.",
+                "fr": "Français ! Alors les churros vont te plaire.",
+                "voz": "rosa",
+                "audio": "rosa.fec619f118",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, soy francesa.",
+                "voz": "viajero",
+                "audio": "viajero.7e9268c8ac"
+              },
+              "fr": "Oui, je suis française.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Francesa? Tú eres un chico: francés.",
+                "fr": "Française ? Tu es un garçon : « francés ».",
+                "voz": "rosa",
+                "audio": "rosa.2607e4eba3",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, me llamo español.",
+                "voz": "viajero",
+                "audio": "viajero.d8e576335a"
+              },
+              "fr": "Oui, je m’appelle espagnol.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas Español? ¡Qué nombre!",
+                "fr": "Tu t’appelles Español ? Quel nom !",
+                "voz": "rosa",
+                "audio": "rosa.083c6ffa3c",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s09",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Me llamo Nacho, tengo trece años y vivo en Madrid.",
+            "voz": "nacho",
+            "audio": "nacho.4585506889"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Nacho tiene doce años.",
+              "correcta": false
+            },
+            {
+              "texto": "Nacho tiene trece años.",
+              "correcta": true
+            },
+            {
+              "texto": "Nacho vive en París.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q07-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Me",
+            "llamo",
+            "Álex",
+            "y",
+            "tengo",
+            "doce",
+            "años."
+          ],
+          "habla": {
+            "es": "Me llamo Álex y tengo doce años.",
+            "voz": "viajero",
+            "audio": "viajero.9d021d4f4d"
+          },
+          "fr": "Je m’appelle Álex et j’ai douze ans."
+        },
+        {
+          "id": "u01-q07-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Soy",
+            "francés",
+            "y",
+            "vivo",
+            "en",
+            "París."
+          ],
+          "habla": {
+            "es": "Soy francés y vivo en París.",
+            "voz": "viajero",
+            "audio": "viajero.860b872217"
+          },
+          "fr": "Je suis français et j’habite à Paris."
+        },
+        {
+          "id": "u01-q07-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Vivo ___ Madrid.",
+          "respuesta": "en",
+          "opciones": [
+            "en",
+            "de",
+            "tengo"
+          ],
+          "habla": {
+            "es": "Vivo en Madrid.",
+            "voz": "marina",
+            "audio": "marina.a9053b7345"
+          },
+          "fr": "J’habite à Madrid."
+        },
+        {
+          "id": "u01-q07-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Tengo doce años.",
+            "voz": "marina",
+            "audio": "marina.ab00c4f584"
+          },
+          "respuesta": "Tengo doce años.",
+          "aceptadas": [
+            "tengo 12 años"
+          ]
+        },
+        {
+          "id": "u01-q07-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu ficha de viajero.",
+            "fr": "Écris ta fiche de voyageur.",
+            "voz": "narrador",
+            "audio": "narrador.6187f7d3a5"
+          },
+          "plantilla": "Me llamo ___. Tengo ___ años. Soy de ___. Vivo en ___.",
+          "campos": [
+            {
+              "id": "nombre",
+              "pista": "Ton prénom",
+              "tipo": "texto"
+            },
+            {
+              "id": "edad",
+              "pista": "Ton âge (un nombre)",
+              "tipo": "numero"
+            },
+            {
+              "id": "origen",
+              "pista": "Ta ville ou ton pays d’origine",
+              "tipo": "texto"
+            },
+            {
+              "id": "residencia",
+              "pista": "La ville où tu habites",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Me llamo Marina. Tengo doce años. Soy de Sevilla. Vivo en Madrid.",
+            "fr": "Je m’appelle Marina. J’ai douze ans. Je suis de Séville. J’habite à Madrid.",
+            "voz": "marina",
+            "audio": "marina.c1b466305d"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u01-q07-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Tengo doce años. Vivo en París.",
+            "fr": "Salut, je m’appelle Álex. J’ai douze ans. J’habite à Paris.",
+            "voz": "marina",
+            "audio": "marina.039d8192e2"
+          },
+          "aceptadas": [
+            "hola me llamo álex tengo doce años vivo en parís",
+            "hola me llamo alex tengo 12 años vivo en parís"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la presentación",
+            "efecto": "La Sombra retrocede un paso"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u01-q08",
+      "tipo": "desafio",
+      "titulo": "La Sombra del Silencio",
+      "emoji": "👤",
+      "intro": {
+        "es": "Silencio. Nadie habla aquí. Solo yo.",
+        "fr": "Silence. Personne ne parle ici. Seulement moi.",
+        "voz": "sombra",
+        "audio": "sombra.6af9dc2d82"
+      },
+      "pista": "Boss de la région : révision mixte de l’unité 1. Chaque bonne réponse est une attaque.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 6
+      },
+      "steps": [
+        {
+          "id": "u01-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Soy la Sombra. ¿Cómo te llamas?",
+            "fr": "Je suis l’Ombre. Comment tu t’appelles ?",
+            "voz": "sombra",
+            "audio": "sombra.f8a84d5251"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.02503ba455"
+              },
+              "fr": "Je m’appelle Álex.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Tu voz me molesta…",
+                "fr": "Grr ! Ta voix me dérange…",
+                "voz": "sombra",
+                "audio": "sombra.f51493a78f",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós.",
+                "voz": "viajero",
+                "audio": "viajero.9961cceabf"
+              },
+              "fr": "Au revoir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No puedes irte. Responde.",
+                "fr": "Tu ne peux pas partir. Réponds.",
+                "voz": "sombra",
+                "audio": "sombra.4898e534f7",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo cinco.",
+                "voz": "viajero",
+                "audio": "viajero.70e211f6d4"
+              },
+              "fr": "J’ai cinq.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Cinco qué? Responde bien.",
+                "fr": "Cinq quoi ? Réponds correctement.",
+                "voz": "sombra",
+                "audio": "sombra.cd4141f6c8",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿De dónde eres?",
+            "fr": "D’où viens-tu ?",
+            "voz": "sombra",
+            "audio": "sombra.449b0a0e51"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy francés, de París.",
+                "voz": "viajero",
+                "audio": "viajero.f366aadb4a"
+              },
+              "fr": "Je suis français, de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Más palabras no, por favor…",
+                "fr": "Aaah ! Plus de mots, s’il vous plaît…",
+                "voz": "sombra",
+                "audio": "sombra.3c08de1f3c",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Buenas tardes.",
+                "voz": "viajero",
+                "audio": "viajero.bb059af29f"
+              },
+              "fr": "Bon après-midi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Las tardes no son un país.",
+                "fr": "L’après-midi n’est pas un pays.",
+                "voz": "sombra",
+                "audio": "sombra.6700b52a62",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy español, de Argentina.",
+                "voz": "viajero",
+                "audio": "viajero.5a24571bb7"
+              },
+              "fr": "Je suis espagnol, d’Argentine.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Español de Argentina? Eso no suena bien.",
+                "fr": "Espagnol d’Argentine ? Ça ne sonne pas juste.",
+                "voz": "sombra",
+                "audio": "sombra.2a2d84aacf",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "veinte",
+            "voz": "narrador",
+            "audio": "narrador.3b1b17811d"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "quince",
+              "correcta": false
+            },
+            {
+              "vocab": "veinte",
+              "correcta": true
+            },
+            {
+              "vocab": "cuarenta",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Treinta y siete.",
+            "voz": "sombra",
+            "audio": "sombra.56da15301d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "27",
+              "correcta": false
+            },
+            {
+              "texto": "37",
+              "correcta": true
+            },
+            {
+              "texto": "47",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "hola"
+            },
+            {
+              "vocab": "gracias"
+            },
+            {
+              "vocab": "adios"
+            },
+            {
+              "vocab": "perdon"
+            },
+            {
+              "vocab": "buenas_noches"
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿De ___ eres?",
+          "respuesta": "dónde",
+          "opciones": [
+            "dónde",
+            "cómo",
+            "qué"
+          ],
+          "habla": {
+            "es": "¿De dónde eres?",
+            "voz": "marina",
+            "audio": "marina.449b0a0e51"
+          },
+          "fr": "D’où viens-tu ?"
+        },
+        {
+          "id": "u01-q08-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "tú",
+          "radical": "tien",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tienes",
+          "habla": {
+            "es": "tú tienes",
+            "voz": "marina",
+            "audio": "marina.49d1b8416a"
+          },
+          "fr": "Toi, tu as…"
+        },
+        {
+          "id": "u01-q08-s08",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Nacho",
+            "es",
+            "español",
+            "y",
+            "tiene",
+            "trece",
+            "años."
+          ],
+          "habla": {
+            "es": "Nacho es español y tiene trece años.",
+            "voz": "nacho",
+            "audio": "nacho.7cc9220303"
+          },
+          "fr": "Nacho est espagnol et a treize ans."
+        },
+        {
+          "id": "u01-q08-s09",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Hasta luego, buenas noches.",
+            "voz": "narrador",
+            "audio": "narrador.a8257d02e7"
+          },
+          "respuesta": "Hasta luego, buenas noches.",
+          "aceptadas": [
+            "hasta luego buenas noches"
+          ]
+        },
+        {
+          "id": "u01-q08-s10",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "México es un país de Europa.",
+            "fr": "Le Mexique est un pays d’Europe.",
+            "voz": "narrador",
+            "audio": "narrador.2b801bf0fc"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u01-q08-s11",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Nacho. Tengo trece años. Soy español y vivo en Madrid. Mi amiga se llama Marina.",
+            "fr": "Salut, c’est Nacho. J’ai treize ans. Je suis espagnol et j’habite à Madrid. Mon amie s’appelle Marina.",
+            "voz": "nacho",
+            "audio": "nacho.441fc2d375"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántos años tiene Nacho?",
+                "fr": "Quel âge a Nacho ?",
+                "voz": "narrador",
+                "audio": "narrador.94307f917c"
+              },
+              "opciones": [
+                {
+                  "texto": "Doce.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Trece.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Catorce.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo se llama su amiga?",
+                "fr": "Comment s’appelle son amie ?",
+                "voz": "narrador",
+                "audio": "narrador.9ab88d3ad7"
+              },
+              "opciones": [
+                {
+                  "texto": "Rosa.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Marina.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pilar.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Última pregunta: ¿cómo se escribe tu nombre?",
+            "fr": "Dernière question : comment s’écrit ton prénom ?",
+            "voz": "sombra",
+            "audio": "sombra.3d4a0e2733"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "A, ele, e, equis.",
+                "voz": "viajero",
+                "audio": "viajero.40d8274dce"
+              },
+              "fr": "A, L, E, X.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡NOOO! ¡Ya no puedo con tantas letras!",
+                "fr": "NOOON ! Je ne tiens plus devant toutes ces lettres !",
+                "voz": "sombra",
+                "audio": "sombra.9b54ba35ee",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Se escribe con tinta.",
+                "voz": "viajero",
+                "audio": "viajero.24d4f86743"
+              },
+              "fr": "Ça s’écrit à l’encre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Qué gracioso… pero no.",
+                "fr": "Très drôle… mais non.",
+                "voz": "sombra",
+                "audio": "sombra.fb79a11b58",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no es una letra.",
+                "fr": "Ce n’est pas une lettre.",
+                "voz": "sombra",
+                "audio": "sombra.557363deaf",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u01-q08-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Soy francés y tengo doce años.",
+            "fr": "Salut, je m’appelle Álex. Je suis français et j’ai douze ans.",
+            "voz": "marina",
+            "audio": "marina.fc66a5d97b"
+          },
+          "aceptadas": [
+            "hola me llamo álex soy francés y tengo doce años",
+            "hola me llamo alex soy francés y tengo 12 años"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡La Sombra se rompe en mil trozos de luz!"
+          }
+        },
+        {
+          "id": "u01-q08-s14",
+          "tipo": "cinematic_ref",
+          "cinematica": "u01-pluma",
+          "escena": {
+            "id": "u01-pluma",
+            "tipo": "pluma",
+            "titulo": "Primera pluma",
+            "duracion": 5,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La Sombra se dissout en poussière dorée ; une plume verte brillante tombe lentement et Álex la rattrape. Flash de lumière.",
+                "personajes": [
+                  "quetzal",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Gracias, amigo! ¡Hola!",
+                    "fr": "Merci, ami ! Salut !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.ae8070b510"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 2,
+                "vista": "La carte du monde : une empreinte lumineuse indique Salamanca.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "Ahora, a Salamanca.",
+                    "fr": "Maintenant, direction Salamanque.",
+                    "voz": "ignacio",
+                    "audio": "ignacio.e9366070ca"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 1,
+    "nombre": "Pluma de la Voz",
+    "descripcion": {
+      "es": "Esta pluma es mi voz. ¡Ahora puedo decir hola!",
+      "fr": "Cette plume est ma voix. Maintenant je peux dire salut !",
+      "voz": "quetzal",
+      "audio": "quetzal.39487a46a2"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "narrador",
+    "nombre": "El Narrador",
+    "rol": "Voz en off de las cinemáticas y de las consignas; voz por defecto del vocabulario",
+    "region": "Academia de Viajeros",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "🎙️",
+    "descripcion": "Voz clara y tranquila de castellano estándar. Lee las consignas y las palabras nuevas.",
+    "tono": { "rate": "-4%" }
+  },
+  {
+    "id": "viajero",
+    "nombre": "Álex",
+    "rol": "El viajero (el jugador)",
+    "region": "París",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🧑‍🎒",
+    "descripcion": "Aprendiz de la Academia de Viajeros, doce años, francés, curioso. Su voz dice las frases del jugador para que pueda imitarlas.",
+    "tono": { "pitch": "+28Hz" }
+  },
+  {
+    "id": "ignacio",
+    "nombre": "Don Ignacio Vega",
+    "rol": "Mentor, director de la Academia de Viajeros",
+    "region": "Madrid",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🧙‍♂️",
+    "descripcion": "Viajero veterano con bigote y sombrero. Habla despacio, tiene humor seco y siempre pierde sus gafas.",
+    "tono": { "rate": "-6%", "pitch": "-10Hz" }
+  },
+  {
+    "id": "marina",
+    "nombre": "Marina Ortega",
+    "rol": "Compañera de aventura (doce años)",
+    "region": "Madrid (nacida en Sevilla)",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👧",
+    "descripcion": "Alumna de la Academia, como Álex. Es de Sevilla pero vive en Madrid. Rápida, graciosa, un poco competitiva. Su abuela vive en Triana.",
+    "tono": { "rate": "+8%", "pitch": "+25Hz" }
+  },
+  {
+    "id": "quetzal",
+    "nombre": "Quetzal",
+    "rol": "Guía mágico de la leyenda",
+    "region": "México (selva)",
+    "voz": "es-MX-JorgeNeural",
+    "emoji": "🦜",
+    "descripcion": "Pájaro sagrado de plumas verdes. Sin sus plumas no puede volar ni cantar. Habla con frases muy cortas y sencillas, y recupera más palabras con cada pluma.",
+    "tono": { "rate": "-6%", "pitch": "+22Hz" }
+  },
+  {
+    "id": "sombra",
+    "nombre": "La Sombra del Silencio",
+    "rol": "Antagonista: roba las voces y las plumas",
+    "region": "Desconocida",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "👤",
+    "descripcion": "Una sombra que odia el ruido y las conversaciones. Roba las palabras de la gente. En el fondo, está muy sola.",
+    "tono": { "rate": "-18%", "pitch": "-45Hz" }
+  },
+  {
+    "id": "rosa",
+    "nombre": "Rosa",
+    "rol": "Churrera de la Plaza Mayor",
+    "region": "Madrid",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👩‍🍳",
+    "descripcion": "Vende los mejores churros de Madrid desde hace treinta años. Simpática y bromista, conoce a todo el mundo.",
+    "tono": { "rate": "-5%", "pitch": "-12Hz" }
+  },
+  {
+    "id": "nacho",
+    "nombre": "Nacho",
+    "rol": "Mensajero en patinete",
+    "region": "Madrid",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🛴",
+    "descripcion": "Chico de trece años que reparte mensajes por todo Madrid en patinete. Habla rápido y se ríe de todo.",
+    "tono": { "rate": "+10%", "pitch": "+32Hz" }
+  },
+  {
+    "id": "pilar",
+    "nombre": "Doña Pilar",
+    "rol": "Profesora del Colegio de San Fray Luis",
+    "region": "Salamanca",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👩‍🏫",
+    "descripcion": "Profesora estricta pero justa, con una campana en la mano. Su campana ya no suena: la Sombra le ha robado el sonido.",
+    "tono": { "rate": "-6%", "pitch": "-6Hz" }
+  },
+  {
+    "id": "diego",
+    "nombre": "Diego",
+    "rol": "Alumno de Salamanca, guía del colegio",
+    "region": "Salamanca",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🧒",
+    "descripcion": "Chico de doce años, muy aficionado a la historia y a los bocadillos. Siempre llega tarde, pero conoce todos los secretos del colegio.",
+    "tono": { "rate": "+4%", "pitch": "+20Hz" }
+  },
+  {
+    "id": "abuela_carmen",
+    "nombre": "La abuela Carmen",
+    "rol": "Abuela de Marina, ceramista de Triana",
+    "region": "Sevilla",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👵",
+    "descripcion": "Pinta azulejos desde que era niña. Habla despacio y con cariño, y llama «cariño» a todo el mundo.",
+    "tono": { "rate": "-14%", "pitch": "-20Hz" }
+  },
+  {
+    "id": "rafa",
+    "nombre": "Tío Rafa",
+    "rol": "Tío de Marina, guitarrista y cocinero",
+    "region": "Sevilla",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🧔",
+    "descripcion": "Cocinero de día y guitarrista de noche. Hace chistes malos con mucha seriedad.",
+    "tono": { "rate": "+4%", "pitch": "+2Hz" }
+  },
+  {
+    "id": "lola",
+    "nombre": "Lola",
+    "rol": "Prima pequeña de Marina (seis años)",
+    "region": "Sevilla",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👶",
+    "descripcion": "Tiene seis años y hace mil preguntas por minuto. Su mejor amigo es un gato naranja llamado Churro.",
+    "tono": { "rate": "+6%", "pitch": "+48Hz" }
+  }
+]

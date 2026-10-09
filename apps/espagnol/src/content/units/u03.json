@@ -1,0 +1,4852 @@
+{
+  "id": "u03",
+  "numero": 3,
+  "titulo": "Mi familia",
+  "lugar": "Sevilla",
+  "emoji": "👪",
+  "ejes": [
+    1
+  ],
+  "periodo": "oct",
+  "objetivos": [
+    {
+      "es": "Presentar a los miembros de mi familia.",
+      "fr": "Présenter les membres de ma famille."
+    },
+    {
+      "es": "Decir cuántos hermanos tengo y cómo se llaman mis padres.",
+      "fr": "Dire combien de frères et sœurs j’ai et comment s’appellent mes parents."
+    },
+    {
+      "es": "Decir la profesión de una persona.",
+      "fr": "Dire le métier d’une personne."
+    },
+    {
+      "es": "Describir brevemente mi casa.",
+      "fr": "Décrire brièvement ma maison."
+    },
+    {
+      "es": "Usar mi, tu, su y los verbos en -er / -ir en frases sencillas.",
+      "fr": "Utiliser mi, tu, su et les verbes en -er / -ir dans des phrases simples."
+    },
+    {
+      "es": "Descubrir cómo son las familias en el mundo hispano.",
+      "fr": "Découvrir à quoi ressemblent les familles dans le monde hispanique."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "familia",
+      "es": "familia",
+      "fr": "famille",
+      "genero": "f",
+      "emoji": "👪",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "La familia de Marina es grande.",
+        "fr": "La famille de Marina est grande.",
+        "voz": "narrador",
+        "audio": "narrador.ce7dd4f32a"
+      },
+      "audio": "narrador.3b660a83d5"
+    },
+    {
+      "id": "padres",
+      "es": "padres",
+      "fr": "parents",
+      "genero": "m",
+      "emoji": "👨‍👩‍👧",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mis padres se llaman Ana y Javier.",
+        "fr": "Mes parents s’appellent Ana et Javier.",
+        "voz": "narrador",
+        "audio": "narrador.4d6cd7ec99"
+      },
+      "audio": "narrador.188ccfabf3"
+    },
+    {
+      "id": "madre",
+      "es": "madre",
+      "fr": "mère",
+      "genero": "f",
+      "emoji": "👩‍👧",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi madre es médica.",
+        "fr": "Ma mère est médecin.",
+        "voz": "narrador",
+        "audio": "narrador.177a798446"
+      },
+      "audio": "narrador.10c4070b4a"
+    },
+    {
+      "id": "padre",
+      "es": "padre",
+      "fr": "père",
+      "genero": "m",
+      "emoji": "👨‍👦",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi padre se llama Javier.",
+        "fr": "Mon père s’appelle Javier.",
+        "voz": "narrador",
+        "audio": "narrador.c189fe04c8"
+      },
+      "audio": "narrador.05d4ac9a16"
+    },
+    {
+      "id": "hermano",
+      "es": "hermano",
+      "fr": "frère",
+      "genero": "m",
+      "femenino": "hermana",
+      "ilustracion": "Un garçon qui sourit, avec le même t-shirt que sa sœur",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Marina tiene un hermano pequeño.",
+        "fr": "Marina a un petit frère.",
+        "voz": "narrador",
+        "audio": "narrador.c83dc9cb08"
+      },
+      "audio": "narrador.9587a8303a"
+    },
+    {
+      "id": "hermana",
+      "es": "hermana",
+      "fr": "sœur",
+      "genero": "f",
+      "ilustracion": "Une fille qui sourit, avec le même t-shirt que son frère",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "¿Tienes hermanos o hermanas?",
+        "fr": "As-tu des frères ou des sœurs ?",
+        "voz": "narrador",
+        "audio": "narrador.1bb6d647ad"
+      },
+      "audio": "narrador.3bb240ea3a"
+    },
+    {
+      "id": "abuelo",
+      "es": "abuelo",
+      "fr": "grand-père",
+      "genero": "m",
+      "emoji": "👴",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi abuelo vive en Sevilla.",
+        "fr": "Mon grand-père habite à Séville.",
+        "voz": "narrador",
+        "audio": "narrador.8efa0fe3da"
+      },
+      "audio": "narrador.8f76c681cf"
+    },
+    {
+      "id": "abuela",
+      "es": "abuela",
+      "fr": "grand-mère",
+      "genero": "f",
+      "emoji": "👵",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi abuela Carmen pinta azulejos.",
+        "fr": "Ma grand-mère Carmen peint des azulejos.",
+        "voz": "narrador",
+        "audio": "narrador.7697d40666"
+      },
+      "audio": "narrador.898cea3ec0"
+    },
+    {
+      "id": "tio",
+      "es": "tío",
+      "fr": "oncle",
+      "genero": "m",
+      "ilustracion": "Un homme adulte souriant avec une guitare dans le dos (l’oncle)",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi tío Rafa es cocinero.",
+        "fr": "Mon oncle Rafa est cuisinier.",
+        "voz": "narrador",
+        "audio": "narrador.d2e6265838"
+      },
+      "audio": "narrador.272f06f671"
+    },
+    {
+      "id": "tia",
+      "es": "tía",
+      "fr": "tante",
+      "genero": "f",
+      "ilustracion": "Une femme adulte souriante, bras ouverts (la tante)",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi tía Elena es policía.",
+        "fr": "Ma tante Elena est policière.",
+        "voz": "narrador",
+        "audio": "narrador.56ec25cbec"
+      },
+      "audio": "narrador.e66dc9ae8f"
+    },
+    {
+      "id": "primo",
+      "es": "primo",
+      "fr": "cousin",
+      "genero": "m",
+      "femenino": "prima",
+      "ilustracion": "Un garçon qui joue au ballon avec un cousin dans un patio",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi primo tiene ocho años.",
+        "fr": "Mon cousin a huit ans.",
+        "voz": "narrador",
+        "audio": "narrador.b79713b96f"
+      },
+      "audio": "narrador.9d46660b7a"
+    },
+    {
+      "id": "prima",
+      "es": "prima",
+      "fr": "cousine",
+      "genero": "f",
+      "ilustracion": "Une petite fille avec un chat orange dans les bras",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi prima Lola tiene seis años.",
+        "fr": "Ma cousine Lola a six ans.",
+        "voz": "narrador",
+        "audio": "narrador.896ebd42af"
+      },
+      "audio": "narrador.cf4e9ab949"
+    },
+    {
+      "id": "foto",
+      "es": "foto",
+      "fr": "photo",
+      "genero": "f",
+      "emoji": "📷",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Hay una foto de mi familia.",
+        "fr": "Il y a une photo de ma famille.",
+        "voz": "narrador",
+        "audio": "narrador.51868d13f1"
+      },
+      "audio": "narrador.0eb57679c4"
+    },
+    {
+      "id": "arbol",
+      "es": "árbol genealógico",
+      "fr": "arbre généalogique",
+      "genero": "m",
+      "emoji": "🌳",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Este es el árbol genealógico de mi familia.",
+        "fr": "Voici l’arbre généalogique de ma famille.",
+        "voz": "narrador",
+        "audio": "narrador.503f53ff25"
+      },
+      "audio": "narrador.67cf3ddf58"
+    },
+    {
+      "id": "apellido",
+      "es": "apellido",
+      "fr": "nom de famille",
+      "genero": "m",
+      "emoji": "🪪",
+      "tags": [
+        "familia"
+      ],
+      "ejemplo": {
+        "es": "Mi apellido es Ortega.",
+        "fr": "Mon nom de famille est Ortega.",
+        "voz": "narrador",
+        "audio": "narrador.2b1f7faa3a"
+      },
+      "audio": "narrador.e7445d58e7"
+    },
+    {
+      "id": "perro",
+      "es": "perro",
+      "fr": "chien",
+      "genero": "m",
+      "emoji": "🐶",
+      "tags": [
+        "mascotas"
+      ],
+      "ejemplo": {
+        "es": "Mi perro se llama Toby.",
+        "fr": "Mon chien s’appelle Toby.",
+        "voz": "narrador",
+        "audio": "narrador.6241db061f"
+      },
+      "audio": "narrador.6139bdc23a"
+    },
+    {
+      "id": "gato",
+      "es": "gato",
+      "fr": "chat",
+      "genero": "m",
+      "emoji": "🐱",
+      "tags": [
+        "mascotas"
+      ],
+      "ejemplo": {
+        "es": "El gato de Lola se llama Churro.",
+        "fr": "Le chat de Lola s’appelle Churro.",
+        "voz": "narrador",
+        "audio": "narrador.5d191ec0c0"
+      },
+      "audio": "narrador.8f39c63d50"
+    },
+    {
+      "id": "medico",
+      "es": "médico",
+      "fr": "médecin",
+      "genero": "m",
+      "femenino": "médica",
+      "emoji": "🧑‍⚕️",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "El médico trabaja en un hospital.",
+        "fr": "Le médecin travaille dans un hôpital.",
+        "voz": "narrador",
+        "audio": "narrador.5f2fa56ab4"
+      },
+      "audio": "narrador.08bbc36500"
+    },
+    {
+      "id": "ingeniero",
+      "es": "ingeniero",
+      "fr": "ingénieur",
+      "genero": "m",
+      "femenino": "ingeniera",
+      "emoji": "📐",
+      "ilustracion": "Une ingénieure avec un casque jaune et des plans enroulés",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "Mi padre es ingeniero.",
+        "fr": "Mon père est ingénieur.",
+        "voz": "narrador",
+        "audio": "narrador.95c8ccc7b9"
+      },
+      "audio": "narrador.61ae148f0b"
+    },
+    {
+      "id": "cocinero",
+      "es": "cocinero",
+      "fr": "cuisinier",
+      "genero": "m",
+      "femenino": "cocinera",
+      "emoji": "🧑‍🍳",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "Rafa es cocinero.",
+        "fr": "Rafa est cuisinier.",
+        "voz": "narrador",
+        "audio": "narrador.e260c14379"
+      },
+      "audio": "narrador.8830c20d30"
+    },
+    {
+      "id": "policia",
+      "es": "policía",
+      "fr": "policier, policière",
+      "genero": "mf",
+      "emoji": "👮",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "Mi tía es policía.",
+        "fr": "Ma tante est policière.",
+        "voz": "narrador",
+        "audio": "narrador.6ee880c48a"
+      },
+      "audio": "narrador.c8a8563279"
+    },
+    {
+      "id": "bombero",
+      "es": "bombero",
+      "fr": "pompier",
+      "genero": "m",
+      "femenino": "bombera",
+      "emoji": "🧑‍🚒",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "Mi tío es bombero.",
+        "fr": "Mon oncle est pompier.",
+        "voz": "narrador",
+        "audio": "narrador.0ea932717d"
+      },
+      "audio": "narrador.54b974bfb8"
+    },
+    {
+      "id": "artista",
+      "es": "artista",
+      "fr": "artiste",
+      "genero": "mf",
+      "emoji": "🧑‍🎨",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "Mi abuela es artista.",
+        "fr": "Ma grand-mère est artiste.",
+        "voz": "narrador",
+        "audio": "narrador.1ccf247610"
+      },
+      "audio": "narrador.0bc2569d36"
+    },
+    {
+      "id": "conductor",
+      "es": "conductor",
+      "fr": "conducteur",
+      "genero": "m",
+      "femenino": "conductora",
+      "emoji": "🚍",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "El conductor del autobús es simpático.",
+        "fr": "Le conducteur du bus est sympa.",
+        "voz": "narrador",
+        "audio": "narrador.ff4b0e2715"
+      },
+      "audio": "narrador.433f12ffb3"
+    },
+    {
+      "id": "panadero",
+      "es": "panadero",
+      "fr": "boulanger",
+      "genero": "m",
+      "femenino": "panadera",
+      "emoji": "🥐",
+      "tags": [
+        "profesiones"
+      ],
+      "ejemplo": {
+        "es": "El panadero trabaja por la mañana.",
+        "fr": "Le boulanger travaille le matin.",
+        "voz": "narrador",
+        "audio": "narrador.9752100a1a"
+      },
+      "audio": "narrador.81a0de1827"
+    },
+    {
+      "id": "casa",
+      "es": "casa",
+      "fr": "maison",
+      "genero": "f",
+      "emoji": "🏡",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "La casa de la abuela tiene un patio.",
+        "fr": "La maison de la grand-mère a un patio.",
+        "voz": "narrador",
+        "audio": "narrador.e93b298b8e"
+      },
+      "audio": "narrador.81bce1f3bf"
+    },
+    {
+      "id": "salon",
+      "es": "salón",
+      "fr": "salon",
+      "genero": "m",
+      "emoji": "🛋️",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "En el salón hay un sofá.",
+        "fr": "Dans le salon, il y a un canapé.",
+        "voz": "narrador",
+        "audio": "narrador.15bc0bb852"
+      },
+      "audio": "narrador.9e7db28a11"
+    },
+    {
+      "id": "cocina",
+      "es": "cocina",
+      "fr": "cuisine",
+      "genero": "f",
+      "emoji": "🍳",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "En la cocina hay una mesa.",
+        "fr": "Dans la cuisine, il y a une table.",
+        "voz": "narrador",
+        "audio": "narrador.97ffa21293"
+      },
+      "audio": "narrador.6c6e13daad"
+    },
+    {
+      "id": "dormitorio",
+      "es": "dormitorio",
+      "fr": "chambre",
+      "genero": "m",
+      "emoji": "🛏️",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Mi dormitorio es pequeño.",
+        "fr": "Ma chambre est petite.",
+        "voz": "narrador",
+        "audio": "narrador.5ff7467a2b"
+      },
+      "audio": "narrador.b928e4f513"
+    },
+    {
+      "id": "bano",
+      "es": "baño",
+      "fr": "salle de bains",
+      "genero": "m",
+      "emoji": "🛁",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "En el baño hay un espejo.",
+        "fr": "Dans la salle de bains, il y a un miroir.",
+        "voz": "narrador",
+        "audio": "narrador.208d86e132"
+      },
+      "audio": "narrador.1d7f53dfb1"
+    },
+    {
+      "id": "jardin",
+      "es": "jardín",
+      "fr": "jardin",
+      "genero": "m",
+      "emoji": "🌷",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Hay un jardín con flores.",
+        "fr": "Il y a un jardin avec des fleurs.",
+        "voz": "narrador",
+        "audio": "narrador.428163d732"
+      },
+      "audio": "narrador.152b0c982f"
+    },
+    {
+      "id": "patio",
+      "es": "patio",
+      "fr": "patio, cour intérieure",
+      "genero": "m",
+      "emoji": "⛲",
+      "ilustracion": "Un patio andalou avec fontaine, pots de géraniums et sol en mosaïque",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "El patio de la abuela tiene flores.",
+        "fr": "Le patio de la grand-mère a des fleurs.",
+        "voz": "narrador",
+        "audio": "narrador.538913f920"
+      },
+      "audio": "narrador.e19bdda4b9"
+    },
+    {
+      "id": "mi",
+      "es": "mi",
+      "fr": "mon, ma, mes",
+      "ilustracion": "Une main qui pointe vers soi, avec le mot « mi »",
+      "tags": [
+        "posesivos"
+      ],
+      "ejemplo": {
+        "es": "Mi madre se llama Ana.",
+        "fr": "Ma mère s’appelle Ana.",
+        "voz": "narrador",
+        "audio": "narrador.6443ad8130"
+      },
+      "audio": "narrador.9c51ad8660"
+    },
+    {
+      "id": "tu_pos",
+      "es": "tu",
+      "fr": "ton, ta, tes",
+      "ilustracion": "Une main qui pointe vers l’autre personne, avec le mot « tu »",
+      "tags": [
+        "posesivos"
+      ],
+      "ejemplo": {
+        "es": "¿Cómo se llama tu padre?",
+        "fr": "Comment s’appelle ton père ?",
+        "voz": "narrador",
+        "audio": "narrador.32f6033f76"
+      },
+      "audio": "narrador.a3da4c6307"
+    },
+    {
+      "id": "su",
+      "es": "su",
+      "fr": "son, sa, ses, leur",
+      "ilustracion": "Une flèche qui part d’une personne vers un objet lointain, avec le mot « su »",
+      "tags": [
+        "posesivos"
+      ],
+      "ejemplo": {
+        "es": "Su abuela vive en Sevilla.",
+        "fr": "Sa grand-mère habite à Séville.",
+        "voz": "narrador",
+        "audio": "narrador.f9ba499eaa"
+      },
+      "audio": "narrador.363eb224f6"
+    },
+    {
+      "id": "nuestro",
+      "es": "nuestro",
+      "fr": "notre, nos",
+      "femenino": "nuestra",
+      "ilustracion": "Deux personnes qui tiennent ensemble un même objet, avec le mot « nuestro »",
+      "tags": [
+        "posesivos"
+      ],
+      "ejemplo": {
+        "es": "Nuestra casa está en Sevilla.",
+        "fr": "Notre maison est à Séville.",
+        "voz": "narrador",
+        "audio": "narrador.c31224f8cd"
+      },
+      "audio": "narrador.31198e0250"
+    },
+    {
+      "id": "comer",
+      "es": "comer",
+      "fr": "manger",
+      "emoji": "🍽️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Comemos en el patio.",
+        "fr": "Nous mangeons dans le patio.",
+        "voz": "narrador",
+        "audio": "narrador.d553c89ab5"
+      },
+      "audio": "narrador.5fb14f826f"
+    },
+    {
+      "id": "beber",
+      "es": "beber",
+      "fr": "boire",
+      "emoji": "🥤",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Lola bebe leche.",
+        "fr": "Lola boit du lait.",
+        "voz": "narrador",
+        "audio": "narrador.7210ccfdf2"
+      },
+      "audio": "narrador.5c7c319bec"
+    },
+    {
+      "id": "vivir",
+      "es": "vivir",
+      "fr": "habiter, vivre",
+      "emoji": "🏘️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Mis abuelos viven en Sevilla.",
+        "fr": "Mes grands-parents habitent à Séville.",
+        "voz": "narrador",
+        "audio": "narrador.f54bf0b5ea"
+      },
+      "audio": "narrador.a8c28ff883"
+    },
+    {
+      "id": "leer",
+      "es": "leer",
+      "fr": "lire",
+      "emoji": "📚",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Mi padre lee un libro.",
+        "fr": "Mon père lit un livre.",
+        "voz": "narrador",
+        "audio": "narrador.75eae2a064"
+      },
+      "audio": "narrador.40a26dbccc"
+    },
+    {
+      "id": "escribir",
+      "es": "escribir",
+      "fr": "écrire",
+      "emoji": "📝",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Escribo una carta a mi abuela.",
+        "fr": "J’écris une lettre à ma grand-mère.",
+        "voz": "narrador",
+        "audio": "narrador.fdfd89dd6f"
+      },
+      "audio": "narrador.6aaf02f17d"
+    },
+    {
+      "id": "compartir",
+      "es": "compartir",
+      "fr": "partager",
+      "emoji": "🍕",
+      "ilustracion": "Deux enfants se partagent une pizza",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Compartimos la comida.",
+        "fr": "Nous partageons le repas.",
+        "voz": "narrador",
+        "audio": "narrador.cfc8490044"
+      },
+      "audio": "narrador.e2b2561f16"
+    },
+    {
+      "id": "trabajar",
+      "es": "trabajar",
+      "fr": "travailler",
+      "emoji": "💼",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Mi madre trabaja en un hospital.",
+        "fr": "Ma mère travaille dans un hôpital.",
+        "voz": "narrador",
+        "audio": "narrador.06077e208c"
+      },
+      "audio": "narrador.a4adaa626d"
+    },
+    {
+      "id": "mayor",
+      "es": "mayor",
+      "fr": "âgé, plus âgé, grand (frère/sœur)",
+      "genero": "mf",
+      "emoji": "🧓",
+      "tags": [
+        "adjetivos"
+      ],
+      "ejemplo": {
+        "es": "Mi abuelo es muy mayor.",
+        "fr": "Mon grand-père est très âgé.",
+        "voz": "narrador",
+        "audio": "narrador.7637012b6f"
+      },
+      "audio": "narrador.e6a04b67d2"
+    },
+    {
+      "id": "pequeno",
+      "es": "pequeño",
+      "fr": "petit",
+      "genero": "m",
+      "femenino": "pequeña",
+      "emoji": "🐜",
+      "tags": [
+        "adjetivos"
+      ],
+      "ejemplo": {
+        "es": "Mi hermano es pequeño.",
+        "fr": "Mon frère est petit.",
+        "voz": "narrador",
+        "audio": "narrador.5ab57a1679"
+      },
+      "audio": "narrador.f5a425f86a"
+    },
+    {
+      "id": "grande",
+      "es": "grande",
+      "fr": "grand",
+      "genero": "mf",
+      "emoji": "🐘",
+      "tags": [
+        "adjetivos"
+      ],
+      "ejemplo": {
+        "es": "Mi familia es muy grande.",
+        "fr": "Ma famille est très grande.",
+        "voz": "narrador",
+        "audio": "narrador.73020bde66"
+      },
+      "audio": "narrador.35272bf81d"
+    },
+    {
+      "id": "cuantos",
+      "es": "¿cuántos?",
+      "fr": "combien ? (masculin pluriel)",
+      "femenino": "¿cuántas?",
+      "emoji": "🔢",
+      "tags": [
+        "preguntas"
+      ],
+      "ejemplo": {
+        "es": "¿Cuántos hermanos tienes?",
+        "fr": "Combien de frères as-tu ?",
+        "voz": "narrador",
+        "audio": "narrador.554ba33b3a"
+      },
+      "audio": "narrador.5e496d8791"
+    },
+    {
+      "id": "tambien",
+      "es": "también",
+      "fr": "aussi",
+      "emoji": "➕",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Marina también tiene un gato.",
+        "fr": "Marina aussi a un chat.",
+        "voz": "narrador",
+        "audio": "narrador.40f0008f40"
+      },
+      "audio": "narrador.db38e4d37a"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_posesivos",
+      "titulo": {
+        "es": "Mi, tu, su",
+        "fr": "Mon, ton, son"
+      },
+      "ejemplos": [
+        {
+          "es": "Mi madre se llama Ana.",
+          "fr": "Ma mère s’appelle Ana.",
+          "voz": "marina",
+          "audio": "marina.6443ad8130",
+          "resaltar": [
+            "Mi"
+          ]
+        },
+        {
+          "es": "¿Cómo se llama tu padre?",
+          "fr": "Comment s’appelle ton père ?",
+          "voz": "lola",
+          "audio": "lola.32f6033f76",
+          "resaltar": [
+            "tu"
+          ]
+        },
+        {
+          "es": "Su abuela es artista.",
+          "fr": "Sa grand-mère est artiste.",
+          "voz": "marina",
+          "audio": "marina.26e55947b7",
+          "resaltar": [
+            "Su"
+          ]
+        },
+        {
+          "es": "Mis padres viven en Madrid.",
+          "fr": "Mes parents habitent à Madrid.",
+          "voz": "marina",
+          "audio": "marina.212db61014",
+          "resaltar": [
+            "Mis"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Mi, tu y su van antes del nombre. Con un nombre plural: mis, tus y sus. Para «nosotros»: nuestro y nuestra.",
+        "fr": "Mi, tu et su se placent avant le nom. Avec un nom pluriel : mis, tus, sus. Pour « nous » : nuestro, nuestra.",
+        "voz": "narrador",
+        "audio": "narrador.0e5bb4c02e"
+      },
+      "pista": "Pas d'accent sur ces possessifs (≠ mí, tú pronoms). Ils s'accordent avec la chose possédée, pas avec le possesseur : su = son, sa, ses, leur. Mi madre (ma mère), mis padres (mes parents).",
+      "tabla": {
+        "encabezado": [
+          "",
+          "singular",
+          "plural"
+        ],
+        "filas": [
+          [
+            "yo",
+            "mi",
+            "mis"
+          ],
+          [
+            "tú",
+            "tu",
+            "tus"
+          ],
+          [
+            "él / ella",
+            "su",
+            "sus"
+          ],
+          [
+            "nosotros",
+            "nuestro / nuestra",
+            "nuestros / nuestras"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_profesion",
+      "titulo": {
+        "es": "Mi madre es médica",
+        "fr": "Les métiers"
+      },
+      "ejemplos": [
+        {
+          "es": "Mi padre es médico.",
+          "fr": "Mon père est médecin.",
+          "voz": "marina",
+          "audio": "marina.234e970468",
+          "resaltar": [
+            "médico"
+          ]
+        },
+        {
+          "es": "Mi madre es médica.",
+          "fr": "Ma mère est médecin.",
+          "voz": "marina",
+          "audio": "marina.177a798446",
+          "resaltar": [
+            "médica"
+          ]
+        },
+        {
+          "es": "Mi tía es policía.",
+          "fr": "Ma tante est policière.",
+          "voz": "marina",
+          "audio": "marina.6ee880c48a",
+          "resaltar": [
+            "policía"
+          ]
+        },
+        {
+          "es": "Mi abuela es artista.",
+          "fr": "Ma grand-mère est artiste.",
+          "voz": "marina",
+          "audio": "marina.1ccf247610",
+          "resaltar": [
+            "artista"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para las profesiones usamos «ser». Chico: -o. Chica: -a. Policía y artista no cambian. No usamos «un» ni «una» después de «ser».",
+        "fr": "Pour les métiers, on utilise « ser ». Garçon : -o. Fille : -a. Policía et artista ne changent pas. On n’emploie pas « un » ni « una » après « ser ».",
+        "voz": "narrador",
+        "audio": "narrador.e6a44e4339"
+      },
+      "pista": "Métier avec ser et sans article : « Mi padre es médico » (pas « un médico »). Féminin : -o → -a (cocinero → cocinera). Les mots en -a ou -ista (policía, artista) sont identiques au masculin et au féminin.",
+      "tabla": {
+        "encabezado": [
+          "él",
+          "ella"
+        ],
+        "filas": [
+          [
+            "médico",
+            "médica"
+          ],
+          [
+            "cocinero",
+            "cocinera"
+          ],
+          [
+            "bombero",
+            "bombera"
+          ],
+          [
+            "policía",
+            "policía"
+          ],
+          [
+            "artista",
+            "artista"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_er_ir",
+      "titulo": {
+        "es": "Comer y vivir",
+        "fr": "Les verbes en -er et -ir"
+      },
+      "ejemplos": [
+        {
+          "es": "Yo como en el patio.",
+          "fr": "Je mange dans le patio.",
+          "voz": "rafa",
+          "audio": "rafa.eccbd77dc1",
+          "resaltar": [
+            "como"
+          ]
+        },
+        {
+          "es": "Tú vives en Madrid.",
+          "fr": "Tu habites à Madrid.",
+          "voz": "marina",
+          "audio": "marina.1428de4f73",
+          "resaltar": [
+            "vives"
+          ]
+        },
+        {
+          "es": "Mi abuelo bebe café.",
+          "fr": "Mon grand-père boit du café.",
+          "voz": "marina",
+          "audio": "marina.66aced39c2",
+          "resaltar": [
+            "bebe"
+          ]
+        },
+        {
+          "es": "Nosotros compartimos la casa.",
+          "fr": "Nous partageons la maison.",
+          "voz": "marina",
+          "audio": "marina.5d5099cfff",
+          "resaltar": [
+            "compartimos"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Los verbos en -er: como, comes, come, comemos, coméis, comen. Los verbos en -ir: vivo, vives, vive, vivimos, vivís, viven. Solo cambian nosotros y vosotros.",
+        "fr": "Verbes en -er : como, comes, come, comemos, coméis, comen. Verbes en -ir : vivo, vives, vive, vivimos, vivís, viven. Seuls nosotros et vosotros changent.",
+        "voz": "narrador",
+        "audio": "narrador.0e7eab7dc9"
+      },
+      "pista": "-er et -ir ont les mêmes terminaisons sauf à nosotros (-emos / -imos) et vosotros (-éis / -ís). Même logique qu'avec -ar : on retire l'infinitif et on ajoute la terminaison.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "comer",
+          "vivir"
+        ],
+        "filas": [
+          [
+            "yo",
+            "como",
+            "vivo"
+          ],
+          [
+            "tú",
+            "comes",
+            "vives"
+          ],
+          [
+            "él / ella",
+            "come",
+            "vive"
+          ],
+          [
+            "nosotros",
+            "comemos",
+            "vivimos"
+          ],
+          [
+            "vosotros",
+            "coméis",
+            "vivís"
+          ],
+          [
+            "ellos / ellas",
+            "comen",
+            "viven"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_tener_ser",
+      "titulo": {
+        "es": "Tener y ser",
+        "fr": "Avoir et être"
+      },
+      "ejemplos": [
+        {
+          "es": "Tengo dos hermanos.",
+          "fr": "J’ai deux frères et sœurs.",
+          "voz": "marina",
+          "audio": "marina.de070712af",
+          "resaltar": [
+            "Tengo"
+          ]
+        },
+        {
+          "es": "Mi madre es médica.",
+          "fr": "Ma mère est médecin.",
+          "voz": "marina",
+          "audio": "marina.177a798446",
+          "resaltar": [
+            "es"
+          ]
+        },
+        {
+          "es": "Mi tío Rafa tiene un gato.",
+          "fr": "Mon oncle Rafa a un chat.",
+          "voz": "lola",
+          "audio": "lola.a5c52a4559",
+          "resaltar": [
+            "tiene"
+          ]
+        },
+        {
+          "es": "Somos una familia grande.",
+          "fr": "Nous sommes une grande famille.",
+          "voz": "rafa",
+          "audio": "rafa.b3f1af61aa",
+          "resaltar": [
+            "Somos"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «tener» decimos lo que tenemos: hermanos, un gato, una casa. Con «ser» decimos quién es una persona.",
+        "fr": "Avec « tener », on dit ce qu’on a : des frères et sœurs, un chat, une maison. Avec « ser », on dit qui est une personne.",
+        "voz": "narrador",
+        "audio": "narrador.9371a98634"
+      },
+      "pista": "Tener : tengo (irrégulier), tienes, tiene, tenemos, tenéis, tienen (e → ie, sauf nosotros et vosotros). Ser est irrégulier partout : soy, eres, es, somos, sois, son.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "tener",
+          "ser"
+        ],
+        "filas": [
+          [
+            "yo",
+            "tengo",
+            "soy"
+          ],
+          [
+            "tú",
+            "tienes",
+            "eres"
+          ],
+          [
+            "él / ella",
+            "tiene",
+            "es"
+          ],
+          [
+            "nosotros",
+            "tenemos",
+            "somos"
+          ],
+          [
+            "vosotros",
+            "tenéis",
+            "sois"
+          ],
+          [
+            "ellos / ellas",
+            "tienen",
+            "son"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u03-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Sevilla",
+      "emoji": "🌇",
+      "intro": {
+        "es": "¡Mi ciudad! Vamos a casa de mi abuela.",
+        "fr": "Ma ville ! Allons chez ma grand-mère.",
+        "voz": "marina",
+        "audio": "marina.76ac02cf63"
+      },
+      "pista": "Arrivée à Séville dans la famille de Marina ; l’histoire du Quetzal avance.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u03-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u03-intro",
+          "escena": {
+            "id": "u03-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 3 · Mi familia · Sevilla",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Carte d’Espagne : la ligne dorée descend de Madrid vers Sevilla ; carte-titre « Capítulo 3 · Mi familia · Sevilla ».",
+                "camara": "zoom avant sur la carte",
+                "rotulo": "Capítulo 3 · Mi familia · Sevilla",
+                "lineas": [
+                  {
+                    "es": "Capítulo tres: mi familia.",
+                    "fr": "Chapitre trois : ma famille.",
+                    "voz": "narrador",
+                    "audio": "narrador.40781f3c93"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Triana à l’heure dorée : façades blanches, azulejos, orangers, la Giralda en silhouette au loin, le Guadalquivir.",
+                "camara": "travelling au-dessus du fleuve",
+                "lineas": [
+                  {
+                    "es": "Sevilla, la ciudad de los azulejos.",
+                    "fr": "Séville, la ville des azulejos.",
+                    "voz": "narrador",
+                    "audio": "narrador.a9a92a78f1"
+                  },
+                  {
+                    "es": "Aquí vive la familia de Marina.",
+                    "fr": "Ici vit la famille de Marina.",
+                    "voz": "narrador",
+                    "audio": "narrador.984984c996"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u03-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Marina es de Sevilla.",
+            "fr": "Marina est de Séville.",
+            "voz": "narrador",
+            "audio": "narrador.8fff02349f"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u03-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La abuela de Marina vive en Madrid.",
+            "fr": "La grand-mère de Marina habite à Madrid.",
+            "voz": "narrador",
+            "audio": "narrador.b1841be510"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u03-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u03-historia",
+          "escena": {
+            "id": "u03-historia",
+            "tipo": "historia",
+            "titulo": "El árbol sin nombres",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Ruelle étroite de Triana, façades blanches, azulejos colorés, pots de fleurs. Marina court vers une porte bleue ; Álex la suit.",
+                "camara": "suivi à hauteur d’enfant",
+                "personajes": [
+                  "marina",
+                  "abuela_carmen",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Abuela! ¡Estoy en casa!",
+                    "fr": "Grand-mère ! Je suis à la maison !",
+                    "voz": "marina",
+                    "audio": "marina.976898fdfb"
+                  },
+                  {
+                    "es": "¡Marina, cariño! ¡Qué alegría!",
+                    "fr": "Marina, mon chou ! Quelle joie !",
+                    "voz": "abuela_carmen",
+                    "audio": "abuela_carmen.8775d15522"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Patio andalou : fontaine, géraniums, sol en mosaïque. Abuela Carmen serre Marina dans ses bras. Lola arrive en courant avec un chat orange.",
+                "personajes": [
+                  "abuela_carmen",
+                  "marina",
+                  "lola",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Y este chico, ¿quién es?",
+                    "fr": "Et ce garçon, qui est-ce ?",
+                    "voz": "abuela_carmen",
+                    "audio": "abuela_carmen.afd4326586"
+                  },
+                  {
+                    "es": "Hola, me llamo Álex. Encantado.",
+                    "fr": "Salut, je m’appelle Álex. Enchanté.",
+                    "voz": "viajero",
+                    "audio": "viajero.5253e494c7"
+                  },
+                  {
+                    "es": "¿Cómo te llamas? ¿De dónde eres? ¿Cuántos años tienes?",
+                    "fr": "Comment tu t’appelles ? D’où viens-tu ? Quel âge as-tu ?",
+                    "voz": "lola",
+                    "audio": "lola.cb45d57f88"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Atelier de céramique : au fond, une grande fresque d’azulejos « El árbol de la familia ». Les noms sont effacés par des taches d’ombre noire.",
+                "personajes": [
+                  "abuela_carmen",
+                  "sombra"
+                ],
+                "lineas": [
+                  {
+                    "es": "Mira, es nuestro árbol de la familia. Pero los nombres no están.",
+                    "fr": "Regarde, c’est notre arbre de famille. Mais les noms ne sont plus là.",
+                    "voz": "abuela_carmen",
+                    "audio": "abuela_carmen.b046112e34"
+                  },
+                  {
+                    "es": "Sin nombres, no hay familia…",
+                    "fr": "Sans noms, pas de famille…",
+                    "voz": "sombra",
+                    "audio": "sombra.12bdbfcb0b"
+                  }
+                ],
+                "musica": "tension douce, guitare espagnole"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Gros plan sur le Quetzal : un carreau vert brille au centre de la fresque. Tío Rafa entre avec une guitare et une casserole.",
+                "personajes": [
+                  "quetzal",
+                  "rafa"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma… aquí. En el árbol.",
+                    "fr": "La plume… ici. Dans l’arbre.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.06baa1f0ec"
+                  },
+                  {
+                    "es": "Soy el tío Rafa. ¡Soy cocinero y hay comida para todos!",
+                    "fr": "Je suis l’oncle Rafa. Je suis cuisinier et il y a à manger pour tout le monde !",
+                    "voz": "rafa",
+                    "audio": "rafa.0dd2675372"
+                  }
+                ],
+                "musica": "thème d’aventure, guitare"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u03-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Tengo seis años y un gato.",
+            "voz": "lola",
+            "audio": "lola.1c731b6cc5"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Lola tiene seis años.",
+              "correcta": true
+            },
+            {
+              "texto": "Lola tiene dieciséis años.",
+              "correcta": false
+            },
+            {
+              "texto": "Lola tiene un perro.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q01-s06",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "abuela_carmen",
+          "replica": {
+            "es": "¡Hola, cariño! ¿Cómo te llamas?",
+            "fr": "Salut, mon chou ! Comment tu t’appelles ?",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.2374bc4e12"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex. Encantado.",
+                "voz": "viajero",
+                "audio": "viajero.f598afedea"
+              },
+              "fr": "Je m’appelle Álex. Enchanté.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Encantada, Álex! Estás en tu casa.",
+                "fr": "Enchantée, Álex ! Tu es chez toi.",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.4579a3dfb5",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy Marina.",
+                "voz": "viajero",
+                "audio": "viajero.eb019fd0e9"
+              },
+              "fr": "Je suis Marina.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Marina es mi nieta. ¿Y tú?",
+                "fr": "Marina est ma petite-fille. Et toi ?",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.b553c46e3e",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós.",
+                "voz": "viajero",
+                "audio": "viajero.9961cceabf"
+              },
+              "fr": "Au revoir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Adiós? ¡Pero si acabas de llegar!",
+                "fr": "Au revoir ? Mais tu viens d’arriver !",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.c37ecaba50",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q01-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lola",
+          "replica": {
+            "es": "Hola. ¿De dónde eres?",
+            "fr": "Salut. D’où viens-tu ?",
+            "voz": "lola",
+            "audio": "lola.b0df8526d2"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy de París. Soy francés.",
+                "voz": "viajero",
+                "audio": "viajero.abbb1d690d"
+              },
+              "fr": "Je suis de Paris. Je suis français.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡París! ¿Hay gatos en París?",
+                "fr": "Paris ! Il y a des chats à Paris ?",
+                "voz": "lola",
+                "audio": "lola.651e004996",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo seis años.",
+                "voz": "viajero",
+                "audio": "viajero.819999eea7"
+              },
+              "fr": "J’ai six ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Yo también tengo seis años! Pero ¿de dónde eres?",
+                "fr": "Moi aussi, j’ai six ans ! Mais d’où viens-tu ?",
+                "voz": "lola",
+                "audio": "lola.0b51f5166b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo gato.",
+                "voz": "viajero",
+                "audio": "viajero.a244a91727"
+              },
+              "fr": "Je m’appelle chat.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, mi gato se llama Churro.",
+                "fr": "Non, mon chat s’appelle Churro.",
+                "voz": "lola",
+                "audio": "lola.139d59cac7",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q01-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Rafa es cocinero.",
+            "fr": "Rafa est cuisinier.",
+            "voz": "narrador",
+            "audio": "narrador.e260c14379"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u03-q01-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El árbol de la familia tiene todos los nombres.",
+            "fr": "L’arbre de la famille a tous les noms.",
+            "voz": "narrador",
+            "audio": "narrador.eef69d2d64"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u03-q01-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Esta",
+            "es",
+            "mi",
+            "casa."
+          ],
+          "habla": {
+            "es": "Esta es mi casa.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.44a5fbc87c"
+          },
+          "fr": "Ceci est ma maison."
+        },
+        {
+          "id": "u03-q01-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Encantado, me llamo Álex.",
+            "fr": "Enchanté, je m’appelle Álex.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.d651610f61"
+          },
+          "aceptadas": [
+            "encantado me llamo álex"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la bienvenida",
+            "efecto": "Los azulejos del patio brillan de colores"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q02",
+      "tipo": "vocabulario",
+      "titulo": "El árbol genealógico",
+      "emoji": "👪",
+      "intro": {
+        "es": "Cariño, aquí está el árbol de nuestra familia. ¿Conoces a todos?",
+        "fr": "Mon chou, voici l’arbre de notre famille. Tu connais tout le monde ?",
+        "voz": "abuela_carmen",
+        "audio": "abuela_carmen.6f3becb7b3"
+      },
+      "pista": "La famille et les possessifs (mi, tu, su) pour nommer les membres de sa famille.",
+      "stats": [
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u03-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "familia",
+            "padres",
+            "madre",
+            "padre",
+            "abuelo",
+            "abuela"
+          ]
+        },
+        {
+          "id": "u03-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "hermano",
+            "hermana",
+            "tio",
+            "tia",
+            "primo",
+            "prima"
+          ]
+        },
+        {
+          "id": "u03-q02-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "madre",
+            "voz": "narrador",
+            "audio": "narrador.10c4070b4a"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "madre",
+              "correcta": true
+            },
+            {
+              "vocab": "abuela",
+              "correcta": false
+            },
+            {
+              "vocab": "padre",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q02-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "padre"
+            },
+            {
+              "vocab": "madre"
+            },
+            {
+              "vocab": "abuelo"
+            },
+            {
+              "vocab": "abuela"
+            },
+            {
+              "vocab": "padres"
+            },
+            {
+              "vocab": "familia"
+            }
+          ]
+        },
+        {
+          "id": "u03-q02-s05",
+          "tipo": "flashcard",
+          "vocab": [
+            "foto",
+            "arbol",
+            "apellido"
+          ]
+        },
+        {
+          "id": "u03-q02-s06",
+          "tipo": "flashcard",
+          "vocab": [
+            "mi",
+            "tu_pos",
+            "su",
+            "nuestro"
+          ]
+        },
+        {
+          "id": "u03-q02-s07",
+          "tipo": "grammar_card",
+          "ref": "g_posesivos"
+        },
+        {
+          "id": "u03-q02-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ madre se llama Ana.",
+          "respuesta": "Mi",
+          "opciones": [
+            "Mi",
+            "Mis",
+            "Tu"
+          ],
+          "habla": {
+            "es": "Mi madre se llama Ana.",
+            "voz": "marina",
+            "audio": "marina.6443ad8130"
+          },
+          "fr": "Ma mère s’appelle Ana."
+        },
+        {
+          "id": "u03-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Cómo se llama ___ padre?",
+          "respuesta": "tu",
+          "opciones": [
+            "tu",
+            "tus",
+            "su"
+          ],
+          "habla": {
+            "es": "¿Cómo se llama tu padre?",
+            "voz": "lola",
+            "audio": "lola.32f6033f76"
+          },
+          "fr": "Comment s’appelle ton père ?"
+        },
+        {
+          "id": "u03-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis ___ viven en Madrid.",
+          "respuesta": "padres",
+          "opciones": [
+            "padre",
+            "padres",
+            "madres"
+          ],
+          "habla": {
+            "es": "Mis padres viven en Madrid.",
+            "voz": "marina",
+            "audio": "marina.212db61014"
+          },
+          "fr": "Mes parents habitent à Madrid."
+        },
+        {
+          "id": "u03-q02-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "abuela",
+            "se",
+            "llama",
+            "Carmen."
+          ],
+          "habla": {
+            "es": "Mi abuela se llama Carmen.",
+            "voz": "marina",
+            "audio": "marina.212952646f"
+          },
+          "fr": "Ma grand-mère s’appelle Carmen."
+        },
+        {
+          "id": "u03-q02-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lola",
+          "replica": {
+            "es": "¿Cómo se llama tu madre?",
+            "fr": "Comment s’appelle ta mère ?",
+            "voz": "lola",
+            "audio": "lola.b3e77467ef"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi madre se llama Claire.",
+                "voz": "viajero",
+                "audio": "viajero.60745954fe"
+              },
+              "fr": "Ma mère s’appelle Claire.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué nombre más bonito!",
+                "fr": "Quel joli prénom !",
+                "voz": "lola",
+                "audio": "lola.7b1dcf8373",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi madre tiene doce años.",
+                "voz": "viajero",
+                "audio": "viajero.331f0bc769"
+              },
+              "fr": "Ma mère a douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Doce años? ¡Tu madre es muy joven!",
+                "fr": "Douze ans ? Ta mère est très jeune !",
+                "voz": "lola",
+                "audio": "lola.e7f15ffb20",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy madre.",
+                "voz": "viajero",
+                "audio": "viajero.ddd1e8962d"
+              },
+              "fr": "Je suis mère.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Tú no eres madre: eres un chico.",
+                "fr": "Tu n’es pas une mère : tu es un garçon.",
+                "voz": "lola",
+                "audio": "lola.d43e167e10",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q02-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "mi abuelo",
+            "voz": "marina",
+            "audio": "marina.388f537d47"
+          },
+          "respuesta": "mi abuelo",
+          "aceptadas": [
+            "mi abuelo"
+          ]
+        },
+        {
+          "id": "u03-q02-s14",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La madre de mi madre es mi abuela.",
+            "fr": "La mère de ma mère est ma grand-mère.",
+            "voz": "marina",
+            "audio": "marina.15b1baed5b"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u03-q02-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Mi madre se llama Ana y mi padre se llama Javier.",
+            "fr": "Ma mère s’appelle Ana et mon père s’appelle Javier.",
+            "voz": "marina",
+            "audio": "marina.5a7fb298e1"
+          },
+          "aceptadas": [
+            "mi madre se llama ana y mi padre se llama javier"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del árbol",
+            "efecto": "Los nombres brillan en las hojas del árbol"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q03",
+      "tipo": "escucha",
+      "titulo": "Fotos de familia",
+      "emoji": "📷",
+      "intro": {
+        "es": "¡Mira, mira! ¡Tengo fotos! ¿Quieres ver mi familia?",
+        "fr": "Regarde, regarde ! J’ai des photos ! Tu veux voir ma famille ?",
+        "voz": "lola",
+        "audio": "lola.f9b7fec3e2"
+      },
+      "pista": "Les animaux et les métiers de la famille ; tu comprends des descriptions de photos.",
+      "stats": [
+        "escuchar",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u03-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "perro",
+            "gato"
+          ]
+        },
+        {
+          "id": "u03-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "medico",
+            "ingeniero",
+            "cocinero",
+            "policia"
+          ]
+        },
+        {
+          "id": "u03-q03-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "bombero",
+            "artista",
+            "conductor",
+            "panadero"
+          ]
+        },
+        {
+          "id": "u03-q03-s04",
+          "tipo": "grammar_card",
+          "ref": "g_profesion"
+        },
+        {
+          "id": "u03-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "médico",
+            "voz": "narrador",
+            "audio": "narrador.08bbc36500"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "medico",
+              "correcta": true
+            },
+            {
+              "vocab": "cocinero",
+              "correcta": false
+            },
+            {
+              "vocab": "policia",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s06",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "medico"
+            },
+            {
+              "vocab": "cocinero"
+            },
+            {
+              "vocab": "policia"
+            },
+            {
+              "vocab": "bombero"
+            },
+            {
+              "vocab": "artista"
+            },
+            {
+              "vocab": "panadero"
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi madre es médica y trabaja en un hospital.",
+            "voz": "marina",
+            "audio": "marina.92297095ba"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "La madre de Marina es médica.",
+              "correcta": true
+            },
+            {
+              "texto": "La madre de Marina es cocinera.",
+              "correcta": false
+            },
+            {
+              "texto": "La madre de Marina es policía.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi padre es ingeniero.",
+            "voz": "marina",
+            "audio": "marina.95c8ccc7b9"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El padre de Marina es médico.",
+              "correcta": false
+            },
+            {
+              "texto": "El padre de Marina es ingeniero.",
+              "correcta": true
+            },
+            {
+              "texto": "El padre de Marina es bombero.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s09",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Soy artista. Pinto azulejos.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.7aad20a57a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Carmen es artista.",
+              "correcta": true
+            },
+            {
+              "texto": "Carmen es conductora.",
+              "correcta": false
+            },
+            {
+              "texto": "Carmen es médica.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s10",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Esta es mi familia. Mi padre se llama Javier y es ingeniero. Mi madre se llama Ana y es médica. Mi tío Rafa es cocinero. Mi tía Elena es policía. Mi abuela Carmen es artista.",
+            "fr": "Voici ma famille. Mon père s’appelle Javier et il est ingénieur. Ma mère s’appelle Ana et elle est médecin. Mon oncle Rafa est cuisinier. Ma tante Elena est policière. Ma grand-mère Carmen est artiste.",
+            "voz": "marina",
+            "audio": "marina.ae70ed624c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo se llama el padre de Marina?",
+                "fr": "Comment s’appelle le père de Marina ?",
+                "voz": "narrador",
+                "audio": "narrador.06c9ad7438"
+              },
+              "opciones": [
+                {
+                  "texto": "Javier.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Rafa.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Pablo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es Ana?",
+                "fr": "Quel est le métier d’Ana ?",
+                "voz": "narrador",
+                "audio": "narrador.11c0e1ca96"
+              },
+              "opciones": [
+                {
+                  "texto": "Médica.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Policía.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cocinera.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quién es cocinero?",
+                "fr": "Qui est cuisinier ?",
+                "voz": "narrador",
+                "audio": "narrador.254332555a"
+              },
+              "opciones": [
+                {
+                  "texto": "Rafa.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Javier.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Carmen.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi madre es ___.",
+          "respuesta": "médica",
+          "opciones": [
+            "médico",
+            "médica",
+            "médicas"
+          ],
+          "habla": {
+            "es": "Mi madre es médica.",
+            "voz": "marina",
+            "audio": "marina.177a798446"
+          },
+          "fr": "Ma mère est médecin."
+        },
+        {
+          "id": "u03-q03-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi tío Rafa es ___.",
+          "respuesta": "cocinero",
+          "opciones": [
+            "cocinero",
+            "cocinera",
+            "cocineros"
+          ],
+          "habla": {
+            "es": "Mi tío Rafa es cocinero.",
+            "voz": "marina",
+            "audio": "marina.d2e6265838"
+          },
+          "fr": "Mon oncle Rafa est cuisinier."
+        },
+        {
+          "id": "u03-q03-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "padre",
+            "es",
+            "ingeniero."
+          ],
+          "habla": {
+            "es": "Mi padre es ingeniero.",
+            "voz": "marina",
+            "audio": "marina.95c8ccc7b9"
+          },
+          "fr": "Mon père est ingénieur."
+        },
+        {
+          "id": "u03-q03-s14",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lola",
+          "replica": {
+            "es": "¿Tienes un perro o un gato?",
+            "fr": "Tu as un chien ou un chat ?",
+            "voz": "lola",
+            "audio": "lola.3a4e3de3f4"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Tengo un gato.",
+                "voz": "viajero",
+                "audio": "viajero.4eb10fb4ca"
+              },
+              "fr": "J’ai un chat.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Mi gato se llama Churro.",
+                "fr": "Super ! Mon chat s’appelle Churro.",
+                "voz": "lola",
+                "audio": "lola.531a33a723",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy un perro.",
+                "voz": "viajero",
+                "audio": "viajero.f9b0a0353f"
+              },
+              "fr": "Je suis un chien.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Guau, guau! ¿De verdad?",
+                "fr": "Ouaf, ouaf ! Vraiment ?",
+                "voz": "lola",
+                "audio": "lola.5c51e0efc6",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Hola, buenas tardes.",
+                "voz": "viajero",
+                "audio": "viajero.49e304728f"
+              },
+              "fr": "Salut, bon après-midi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Hola… pero ¿perro o gato?",
+                "fr": "Salut… mais chien ou chat ?",
+                "voz": "lola",
+                "audio": "lola.f57825eba7",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q03-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Mi madre es médica y mi padre es ingeniero.",
+            "fr": "Ma mère est médecin et mon père est ingénieur.",
+            "voz": "marina",
+            "audio": "marina.507fce861f"
+          },
+          "aceptadas": [
+            "mi madre es médica y mi padre es ingeniero"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la profesión",
+            "efecto": "Una bata blanca y un casco aparecen en el aire"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q04",
+      "tipo": "forja",
+      "titulo": "La Forja: comer, vivir, tener",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Comer, vivir… verbos fuertes. ¡Forja, amigo!",
+        "fr": "Manger, vivre… des verbes puissants. Forge, mon ami !",
+        "voz": "quetzal",
+        "audio": "quetzal.c4ab70ddbb"
+      },
+      "pista": "Le présent des verbes en -er / -ir, puis tener et ser.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u03-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "comer",
+            "beber",
+            "vivir",
+            "leer",
+            "escribir",
+            "compartir",
+            "trabajar"
+          ]
+        },
+        {
+          "id": "u03-q04-s02",
+          "tipo": "grammar_card",
+          "ref": "g_er_ir"
+        },
+        {
+          "id": "u03-q04-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "yo",
+          "radical": "com",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "como",
+          "habla": {
+            "es": "yo como",
+            "voz": "rafa",
+            "audio": "rafa.573adfe8b3"
+          },
+          "fr": "Moi, je mange…"
+        },
+        {
+          "id": "u03-q04-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "tú",
+          "radical": "com",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "comes",
+          "habla": {
+            "es": "tú comes",
+            "voz": "rafa",
+            "audio": "rafa.a4800999c4"
+          },
+          "fr": "Toi, tu manges…"
+        },
+        {
+          "id": "u03-q04-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "ella",
+          "radical": "com",
+          "terminacion": "e",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "come",
+          "habla": {
+            "es": "ella come",
+            "voz": "marina",
+            "audio": "marina.1efe9de1b1"
+          },
+          "fr": "Elle mange…"
+        },
+        {
+          "id": "u03-q04-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "nosotros",
+          "radical": "com",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "comemos",
+          "habla": {
+            "es": "nosotros comemos",
+            "voz": "rafa",
+            "audio": "rafa.57256fc5e7"
+          },
+          "fr": "Nous, nous mangeons…"
+        },
+        {
+          "id": "u03-q04-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "yo",
+          "radical": "viv",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "vivo",
+          "habla": {
+            "es": "yo vivo",
+            "voz": "marina",
+            "audio": "marina.36294bb6de"
+          },
+          "fr": "Moi, j’habite…"
+        },
+        {
+          "id": "u03-q04-s08",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "nosotros",
+          "radical": "viv",
+          "terminacion": "imos",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "vivimos",
+          "habla": {
+            "es": "nosotros vivimos",
+            "voz": "marina",
+            "audio": "marina.a42d461845"
+          },
+          "fr": "Nous, nous habitons…"
+        },
+        {
+          "id": "u03-q04-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "ellos",
+          "radical": "viv",
+          "terminacion": "en",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "viven",
+          "habla": {
+            "es": "ellos viven",
+            "voz": "marina",
+            "audio": "marina.d6dce4cf0f"
+          },
+          "fr": "Eux, ils habitent…"
+        },
+        {
+          "id": "u03-q04-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi madre ___ en un hospital.",
+          "respuesta": "trabaja",
+          "opciones": [
+            "trabajo",
+            "trabajas",
+            "trabaja"
+          ],
+          "habla": {
+            "es": "Mi madre trabaja en un hospital.",
+            "voz": "marina",
+            "audio": "marina.06077e208c"
+          },
+          "fr": "Ma mère travaille dans un hôpital."
+        },
+        {
+          "id": "u03-q04-s11",
+          "tipo": "grammar_card",
+          "ref": "g_tener_ser"
+        },
+        {
+          "id": "u03-q04-s12",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "nosotros",
+          "radical": "ten",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "tenemos",
+          "habla": {
+            "es": "nosotros tenemos",
+            "voz": "lola",
+            "audio": "lola.3d1ef1589c"
+          },
+          "fr": "Nous, nous avons…"
+        },
+        {
+          "id": "u03-q04-s13",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ser",
+          "sujeto": "nosotros",
+          "radical": "",
+          "terminacion": "somos",
+          "terminaciones": [
+            "somos",
+            "sois",
+            "son"
+          ],
+          "forma": "somos",
+          "habla": {
+            "es": "nosotros somos",
+            "voz": "rafa",
+            "audio": "rafa.f5c8246ca1"
+          },
+          "fr": "Nous, nous sommes…"
+        },
+        {
+          "id": "u03-q04-s14",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi abuelo ___ en Sevilla.",
+          "respuesta": "vive",
+          "opciones": [
+            "vivo",
+            "vives",
+            "vive"
+          ],
+          "habla": {
+            "es": "Mi abuelo vive en Sevilla.",
+            "voz": "marina",
+            "audio": "marina.8efa0fe3da"
+          },
+          "fr": "Mon grand-père habite à Séville."
+        },
+        {
+          "id": "u03-q04-s15",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis padres ___ en Madrid.",
+          "respuesta": "viven",
+          "opciones": [
+            "viven",
+            "vive",
+            "vivimos"
+          ],
+          "habla": {
+            "es": "Mis padres viven en Madrid.",
+            "voz": "marina",
+            "audio": "marina.212db61014"
+          },
+          "fr": "Mes parents habitent à Madrid."
+        }
+      ]
+    },
+    {
+      "id": "u03-q05",
+      "tipo": "lectura",
+      "titulo": "La casa de la abuela",
+      "emoji": "🏡",
+      "intro": {
+        "es": "Bienvenido a la casa de mi madre. ¡Aquí se come muy bien!",
+        "fr": "Bienvenue chez ma mère. Ici, on mange très bien !",
+        "voz": "rafa",
+        "audio": "rafa.31de7e6d85"
+      },
+      "pista": "Les pièces de la maison et quelques adjectifs ; lecture et écriture guidée.",
+      "stats": [
+        "leer",
+        "escribir",
+        "escuchar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u03-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "casa",
+            "salon",
+            "cocina",
+            "dormitorio",
+            "bano",
+            "jardin",
+            "patio"
+          ]
+        },
+        {
+          "id": "u03-q05-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "mayor",
+            "pequeno",
+            "grande"
+          ]
+        },
+        {
+          "id": "u03-q05-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "cocina",
+            "voz": "narrador",
+            "audio": "narrador.6c6e13daad"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "cocina",
+              "correcta": true
+            },
+            {
+              "vocab": "dormitorio",
+              "correcta": false
+            },
+            {
+              "vocab": "bano",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q05-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "casa"
+            },
+            {
+              "vocab": "salon"
+            },
+            {
+              "vocab": "cocina"
+            },
+            {
+              "vocab": "dormitorio"
+            },
+            {
+              "vocab": "bano"
+            },
+            {
+              "vocab": "jardin"
+            }
+          ]
+        },
+        {
+          "id": "u03-q05-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En mi casa hay un patio con flores.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.c097469d3e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hay un patio en la casa.",
+              "correcta": true
+            },
+            {
+              "texto": "Hay un jardín en la casa.",
+              "correcta": false
+            },
+            {
+              "texto": "No hay patio en la casa.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q05-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La casa de mi abuela es grande. Hay un salón, una cocina, tres dormitorios y un patio con flores. En el patio comemos todos los domingos. Mi abuela es artista y su taller está en la casa.",
+            "fr": "La maison de ma grand-mère est grande. Il y a un salon, une cuisine, trois chambres et un patio avec des fleurs. Dans le patio, nous mangeons tous les dimanches. Ma grand-mère est artiste et son atelier est dans la maison.",
+            "voz": "marina",
+            "audio": "marina.9a1ed9e3c8"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo es la casa?",
+                "fr": "Comment est la maison ?",
+                "voz": "narrador",
+                "audio": "narrador.f38c994baa"
+              },
+              "opciones": [
+                {
+                  "texto": "Grande.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pequeña.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Muy mayor.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántos dormitorios hay?",
+                "fr": "Combien de chambres y a-t-il ?",
+                "voz": "narrador",
+                "audio": "narrador.cc0b5aaeaf"
+              },
+              "opciones": [
+                {
+                  "texto": "Dos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Tres.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Cuatro.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde comen los domingos?",
+                "fr": "Où mangent-ils les dimanches ?",
+                "voz": "narrador",
+                "audio": "narrador.41f59e94d6"
+              },
+              "opciones": [
+                {
+                  "texto": "En el salón.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En el patio.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En la cocina.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u03-q05-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El tío Rafa cocina en la ___.",
+          "respuesta": "cocina",
+          "opciones": [
+            "cocina",
+            "dormitorio",
+            "patio"
+          ],
+          "habla": {
+            "es": "El tío Rafa cocina en la cocina.",
+            "voz": "marina",
+            "audio": "marina.0fc7392482"
+          },
+          "fr": "L’oncle Rafa cuisine dans la cuisine."
+        },
+        {
+          "id": "u03-q05-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi abuelo tiene cien años. ¡Es muy ___!",
+          "respuesta": "mayor",
+          "opciones": [
+            "mayor",
+            "pequeño",
+            "grande"
+          ],
+          "habla": {
+            "es": "Mi abuelo tiene cien años. ¡Es muy mayor!",
+            "voz": "marina",
+            "audio": "marina.76586e7b53"
+          },
+          "fr": "Mon grand-père a cent ans. Il est très âgé !"
+        },
+        {
+          "id": "u03-q05-s09",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "En el patio hay flores.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.60ea4c067a"
+          },
+          "respuesta": "En el patio hay flores.",
+          "aceptadas": [
+            "en el patio hay flores"
+          ]
+        },
+        {
+          "id": "u03-q05-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "casa",
+            "tiene",
+            "un",
+            "jardín",
+            "grande."
+          ],
+          "habla": {
+            "es": "Mi casa tiene un jardín grande.",
+            "voz": "marina",
+            "audio": "marina.b8757776e1"
+          },
+          "fr": "Ma maison a un grand jardin."
+        },
+        {
+          "id": "u03-q05-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En la casa de la abuela hay un patio.",
+            "fr": "Dans la maison de la grand-mère, il y a un patio.",
+            "voz": "narrador",
+            "audio": "narrador.05d0ed70b4"
+          },
+          "correcta": true,
+          "imagen": "patio"
+        },
+        {
+          "id": "u03-q05-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rafa",
+          "replica": {
+            "es": "¿Cómo es tu casa?",
+            "fr": "Comment est ta maison ?",
+            "voz": "rafa",
+            "audio": "rafa.c4823de80f"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi casa es grande. Hay un jardín.",
+                "voz": "viajero",
+                "audio": "viajero.2c85f11f1b"
+              },
+              "fr": "Ma maison est grande. Il y a un jardin.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Una casa con jardín es un tesoro.",
+                "fr": "Super ! Une maison avec jardin, c’est un trésor.",
+                "voz": "rafa",
+                "audio": "rafa.053d423e87",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi casa se llama jardín.",
+                "voz": "viajero",
+                "audio": "viajero.2e4be360fa"
+              },
+              "fr": "Ma maison s’appelle jardin.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja… Una casa con nombre de planta.",
+                "fr": "Haha… Une maison avec un nom de plante.",
+                "voz": "rafa",
+                "audio": "rafa.d77ebe4bf6",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo una casa de doce años.",
+                "voz": "viajero",
+                "audio": "viajero.9c1e775c3a"
+              },
+              "fr": "J’ai une maison de douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Una casa de doce años… ¡es nueva!",
+                "fr": "Une maison de douze ans… elle est neuve !",
+                "voz": "rafa",
+                "audio": "rafa.b44aac65e3",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q05-s13",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu ficha de viajero.",
+            "fr": "Écris ta fiche de voyageur.",
+            "voz": "narrador",
+            "audio": "narrador.6187f7d3a5"
+          },
+          "plantilla": "Mi casa es ___. Hay ___ dormitorios y un ___.",
+          "campos": [
+            {
+              "id": "adjetivo",
+              "pista": "Comment est ta maison ? (grande, pequeña…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "dormitorios",
+              "pista": "Le nombre de chambres",
+              "tipo": "numero"
+            },
+            {
+              "id": "lugar",
+              "pista": "Une pièce ou un lieu (salón, jardín, patio…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi casa es grande. Hay tres dormitorios y un salón.",
+            "fr": "Ma maison est grande. Il y a trois chambres et un salon.",
+            "voz": "marina",
+            "audio": "marina.75b98a3357"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u03-q05-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "En mi casa hay un salón y una cocina.",
+            "fr": "Dans ma maison, il y a un salon et une cuisine.",
+            "voz": "marina",
+            "audio": "marina.8a8d24b0b4"
+          },
+          "aceptadas": [
+            "en mi casa hay un salón y una cocina"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la casa",
+            "efecto": "Las paredes se llenan de muebles dorados"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q06",
+      "tipo": "dialogo",
+      "titulo": "Presento a mi familia",
+      "emoji": "💬",
+      "intro": {
+        "es": "Ahora tú presentas a tu familia. ¡Yo te ayudo!",
+        "fr": "Maintenant, c’est toi qui présentes ta famille. Je t’aide !",
+        "voz": "marina",
+        "audio": "marina.481c0c7452"
+      },
+      "pista": "Parler de sa famille : combien de frères et sœurs, métiers, où l’on habite.",
+      "stats": [
+        "hablar",
+        "escribir",
+        "escuchar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u03-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "cuantos",
+            "tambien"
+          ]
+        },
+        {
+          "id": "u03-q06-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "lola",
+          "replica": {
+            "es": "¿Cuántos hermanos tienes?",
+            "fr": "Combien de frères et sœurs as-tu ?",
+            "voz": "lola",
+            "audio": "lola.554ba33b3a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Tengo un hermano.",
+                "voz": "viajero",
+                "audio": "viajero.21e158cd87"
+              },
+              "fr": "J’ai un frère.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Un hermano! Yo no tengo hermanos.",
+                "fr": "Un frère ! Moi, je n’ai pas de frères et sœurs.",
+                "voz": "lola",
+                "audio": "lola.cf9c8d089d",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo dos hermanas.",
+                "voz": "viajero",
+                "audio": "viajero.8dbc919572"
+              },
+              "fr": "J’ai deux sœurs.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Dos hermanas! ¡Qué suerte!",
+                "fr": "Deux sœurs ! Quelle chance !",
+                "voz": "lola",
+                "audio": "lola.35e1560232",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy de Francia.",
+                "voz": "viajero",
+                "audio": "viajero.ada2734d62"
+              },
+              "fr": "Je suis de France.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso ya lo sé. ¿Cuántos hermanos?",
+                "fr": "Ça, je le sais déjà. Combien de frères et sœurs ?",
+                "voz": "lola",
+                "audio": "lola.36bb4660f8",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s03",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rafa",
+          "replica": {
+            "es": "¿Cómo se llama tu padre? ¿Qué es?",
+            "fr": "Comment s’appelle ton père ? Quel est son métier ?",
+            "voz": "rafa",
+            "audio": "rafa.67916baa2b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi padre se llama Paul y es ingeniero.",
+                "voz": "viajero",
+                "audio": "viajero.3d23463c0e"
+              },
+              "fr": "Mon père s’appelle Paul et il est ingénieur.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Ingeniero! Entonces sabe hacer cosas.",
+                "fr": "Ingénieur ! Alors il sait construire des choses.",
+                "voz": "rafa",
+                "audio": "rafa.eb90974550",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi padre soy yo.",
+                "voz": "viajero",
+                "audio": "viajero.6bc53bc356"
+              },
+              "fr": "Mon père, c’est moi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja… No, tu padre es otra persona.",
+                "fr": "Haha… Non, ton père est quelqu’un d’autre.",
+                "voz": "rafa",
+                "audio": "rafa.4987a8d972",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi padre tiene un gato y una casa.",
+                "voz": "viajero",
+                "audio": "viajero.b7baa41c2c"
+              },
+              "fr": "Mon père a un chat et une maison.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Está bien, pero ¿cómo se llama?",
+                "fr": "D’accord, mais comment s’appelle-t-il ?",
+                "voz": "rafa",
+                "audio": "rafa.1840d6205d",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s04",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "abuela_carmen",
+          "replica": {
+            "es": "¿Dónde vive tu familia, cariño?",
+            "fr": "Où habite ta famille, mon chou ?",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.75df36ad1d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi familia vive en París.",
+                "voz": "viajero",
+                "audio": "viajero.f4ef2995cf"
+              },
+              "fr": "Ma famille habite à Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡París! Algún día voy a verla.",
+                "fr": "Paris ! Un jour, j’irai la voir.",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.ef5df5b287",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi familia se llama París.",
+                "voz": "viajero",
+                "audio": "viajero.692657dab7"
+              },
+              "fr": "Ma famille s’appelle Paris.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tu familia se llama París? ¡Qué apellido tan raro!",
+                "fr": "Ta famille s’appelle Paris ? Quel drôle de nom !",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.a16b4cc7ea",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Vivo en mi familia.",
+                "voz": "viajero",
+                "audio": "viajero.d80ae53d32"
+              },
+              "fr": "J’habite dans ma famille.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, cariño: vives en una casa.",
+                "fr": "Non, mon chou : tu habites dans une maison.",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.588edb9c4d",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s05",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "marina",
+          "replica": {
+            "es": "Esta es mi familia: mis padres, mi hermano Pablo y yo. ¿Y tu familia?",
+            "fr": "Voici ma famille : mes parents, mon frère Pablo et moi. Et ta famille ?",
+            "voz": "marina",
+            "audio": "marina.a9880aa56c"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "En mi familia somos cuatro: mis padres, mi hermana y yo.",
+                "voz": "viajero",
+                "audio": "viajero.d6a9504656"
+              },
+              "fr": "Dans ma famille, nous sommes quatre : mes parents, ma sœur et moi.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Como mi familia! También somos cuatro.",
+                "fr": "Comme ma famille ! Nous sommes quatre aussi.",
+                "voz": "marina",
+                "audio": "marina.ad4d54bad3",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi familia es un perro.",
+                "voz": "viajero",
+                "audio": "viajero.837a56d52c"
+              },
+              "fr": "Ma famille, c’est un chien.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Un perro es un buen amigo, pero no es toda la familia.",
+                "fr": "Un chien est un bon ami, mais pas toute la famille.",
+                "voz": "marina",
+                "audio": "marina.df3128dc1e",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Hola, me llamo Marina.",
+                "voz": "viajero",
+                "audio": "viajero.6195e04398"
+              },
+              "fr": "Salut, je m’appelle Marina.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ya me llamo Marina. ¡No me copies!",
+                "fr": "Je m’appelle déjà Marina. Ne me copie pas !",
+                "voz": "marina",
+                "audio": "marina.56880af154",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi hermano Pablo tiene ocho años y también tiene un gato.",
+            "voz": "marina",
+            "audio": "marina.0b3a0517b2"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Pablo tiene ocho años y un gato.",
+              "correcta": true
+            },
+            {
+              "texto": "Pablo tiene doce años y un perro.",
+              "correcta": false
+            },
+            {
+              "texto": "Pablo tiene ocho años y un perro.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi gato se llama Churro y mi prima se llama Marina.",
+            "voz": "lola",
+            "audio": "lola.1f03e1adaa"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El gato se llama Marina.",
+              "correcta": false
+            },
+            {
+              "texto": "El gato se llama Churro.",
+              "correcta": true
+            },
+            {
+              "texto": "La prima se llama Churro.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q06-s08",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "¿Cuántos",
+            "hermanos",
+            "tienes?"
+          ],
+          "habla": {
+            "es": "¿Cuántos hermanos tienes?",
+            "voz": "lola",
+            "audio": "lola.554ba33b3a"
+          },
+          "fr": "Combien de frères et sœurs as-tu ?"
+        },
+        {
+          "id": "u03-q06-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "familia",
+            "vive",
+            "en",
+            "París."
+          ],
+          "habla": {
+            "es": "Mi familia vive en París.",
+            "voz": "viajero",
+            "audio": "viajero.f4ef2995cf"
+          },
+          "fr": "Ma famille habite à Paris."
+        },
+        {
+          "id": "u03-q06-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi madre y mi padre son mis ___.",
+          "respuesta": "padres",
+          "opciones": [
+            "padres",
+            "hermanos",
+            "primos"
+          ],
+          "habla": {
+            "es": "Mi madre y mi padre son mis padres.",
+            "voz": "marina",
+            "audio": "marina.9b5a9dbab3"
+          },
+          "fr": "Ma mère et mon père sont mes parents."
+        },
+        {
+          "id": "u03-q06-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Yo tengo un gato y Lola ___ tiene un gato.",
+          "respuesta": "también",
+          "opciones": [
+            "también",
+            "cuántos",
+            "mayor"
+          ],
+          "habla": {
+            "es": "Yo tengo un gato y Lola también tiene un gato.",
+            "voz": "marina",
+            "audio": "marina.ba3ead227c"
+          },
+          "fr": "J’ai un chat et Lola a aussi un chat."
+        },
+        {
+          "id": "u03-q06-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis abuelos ___ en Sevilla.",
+          "respuesta": "viven",
+          "opciones": [
+            "vive",
+            "viven",
+            "vivimos"
+          ],
+          "habla": {
+            "es": "Mis abuelos viven en Sevilla.",
+            "voz": "marina",
+            "audio": "marina.f54bf0b5ea"
+          },
+          "fr": "Mes grands-parents habitent à Séville."
+        },
+        {
+          "id": "u03-q06-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Tengo un hermano pequeño.",
+            "voz": "viajero",
+            "audio": "viajero.7f3e3c5e39"
+          },
+          "respuesta": "Tengo un hermano pequeño.",
+          "aceptadas": [
+            "tengo un hermano pequeño"
+          ]
+        },
+        {
+          "id": "u03-q06-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu ficha de viajero.",
+            "fr": "Écris ta fiche de voyageur.",
+            "voz": "narrador",
+            "audio": "narrador.6187f7d3a5"
+          },
+          "plantilla": "Tengo ___ hermanos. Mi padre es ___ y mi madre es ___.",
+          "campos": [
+            {
+              "id": "hermanos",
+              "pista": "Le nombre de frères et sœurs",
+              "tipo": "numero"
+            },
+            {
+              "id": "padre",
+              "pista": "Le métier de ton père (masculin)",
+              "tipo": "texto"
+            },
+            {
+              "id": "madre",
+              "pista": "Le métier de ta mère (féminin)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Tengo un hermano. Mi padre es ingeniero y mi madre es médica.",
+            "fr": "J’ai un frère. Mon père est ingénieur et ma mère est médecin.",
+            "voz": "marina",
+            "audio": "marina.0c40df888d"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u03-q06-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "En mi familia somos cuatro.",
+            "fr": "Dans ma famille, nous sommes quatre.",
+            "voz": "marina",
+            "audio": "marina.a340e729dd"
+          },
+          "aceptadas": [
+            "en mi familia somos cuatro"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la familia",
+            "efecto": "Los nombres vuelven al árbol, uno a uno"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q07",
+      "tipo": "cultura",
+      "titulo": "Familias del mundo hispano",
+      "emoji": "🌍",
+      "intro": {
+        "es": "En mi casa tenemos dos apellidos y un patio. ¡Son tradiciones de familia!",
+        "fr": "Chez moi, nous avons deux noms de famille et un patio. Ce sont des traditions de famille !",
+        "voz": "abuela_carmen",
+        "audio": "abuela_carmen.7e57aa7bd7"
+      },
+      "pista": "Portraits de familles : deux noms de famille, repas du dimanche, patios et azulejos de Séville.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escuchar"
+      ],
+      "minutos": 12,
+      "steps": [
+        {
+          "id": "u03-q07-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u03-capsula-familias",
+          "escena": {
+            "id": "u03-capsula-familias",
+            "tipo": "capsula",
+            "titulo": "Familias del mundo hispano",
+            "duracion": 19,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 5,
+                "vista": "Table de famille nombreuse : grands-parents, parents, enfants, oncles, cousins qui mangent ensemble (style explainer, papier découpé).",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "En muchas familias hispanas, los abuelos, los tíos y los primos comen juntos el domingo.",
+                    "fr": "Dans beaucoup de familles hispaniques, les grands-parents, oncles et cousins mangent ensemble le dimanche.",
+                    "voz": "narrador",
+                    "audio": "narrador.efc426cea6"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Un nom s’affiche : « Marina Ortega García » ; deux flèches colorées pointent « apellido del padre » et « apellido de la madre ».",
+                "lineas": [
+                  {
+                    "es": "En España, las personas tienen dos apellidos: el del padre y el de la madre.",
+                    "fr": "En Espagne, les gens ont deux noms de famille : celui du père et celui de la mère.",
+                    "voz": "narrador",
+                    "audio": "narrador.f1422a204b"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Patio andalou : plantes, fontaine, carreaux de Triana.",
+                "lineas": [
+                  {
+                    "es": "En Sevilla, muchas casas tienen un patio con flores y azulejos.",
+                    "fr": "À Séville, beaucoup de maisons ont un patio avec des fleurs et des azulejos.",
+                    "voz": "narrador",
+                    "audio": "narrador.6f22098fa0"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 4,
+                "vista": "Une mosaïque d’azulejos dessine un arbre ; une plume verte apparaît au centre.",
+                "lineas": [
+                  {
+                    "es": "Y en cada azulejo hay una historia de familia.",
+                    "fr": "Et sur chaque azulejo, il y a une histoire de famille.",
+                    "voz": "narrador",
+                    "audio": "narrador.b11e16282a"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u03-q07-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En España las personas tienen dos apellidos.",
+            "fr": "En Espagne, les gens ont deux noms de famille.",
+            "voz": "narrador",
+            "audio": "narrador.bb9226cece"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u03-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los dos apellidos son los dos del padre.",
+            "fr": "Les deux noms de famille sont les deux du père.",
+            "voz": "narrador",
+            "audio": "narrador.10d5a5738a"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u03-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En muchas casas de Sevilla hay un patio.",
+            "fr": "Dans beaucoup de maisons de Séville, il y a un patio.",
+            "voz": "narrador",
+            "audio": "narrador.2f7fd5f121"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u03-q07-s05",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Me llamo Marina Ortega García. Ortega es el apellido de mi padre. García es el apellido de mi madre. Los domingos comemos juntos: mis abuelos, mis tíos, mis primos y yo.",
+            "fr": "Je m’appelle Marina Ortega García. Ortega est le nom de famille de mon père. García est le nom de famille de ma mère. Le dimanche, nous mangeons ensemble : mes grands-parents, mes oncles, mes cousins et moi.",
+            "voz": "marina",
+            "audio": "marina.929b741a17"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuál es el apellido del padre de Marina?",
+                "fr": "Quel est le nom de famille du père de Marina ?",
+                "voz": "narrador",
+                "audio": "narrador.2e56088808"
+              },
+              "opciones": [
+                {
+                  "texto": "Ortega.",
+                  "correcta": true
+                },
+                {
+                  "texto": "García.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo comen todos juntos?",
+                "fr": "Quand mangent-ils tous ensemble ?",
+                "voz": "narrador",
+                "audio": "narrador.494d7dc777"
+              },
+              "opciones": [
+                {
+                  "texto": "El domingo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El lunes.",
+                  "correcta": false
+                },
+                {
+                  "texto": "El viernes.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quién come con Marina?",
+                "fr": "Qui mange avec Marina ?",
+                "voz": "narrador",
+                "audio": "narrador.a60b2f405e"
+              },
+              "opciones": [
+                {
+                  "texto": "Su familia.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Sus profesores.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Sus compañeros.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u03-q07-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Me llamo Lucía Ruiz Pérez.",
+            "voz": "narrador",
+            "audio": "narrador.92cf797a76"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Su primer apellido es Ruiz.",
+              "correcta": true
+            },
+            {
+              "texto": "Su primer apellido es Pérez.",
+              "correcta": false
+            },
+            {
+              "texto": "Su nombre es Pérez.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q07-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina Ortega García tiene ___ apellidos.",
+          "respuesta": "dos",
+          "opciones": [
+            "uno",
+            "dos",
+            "tres"
+          ],
+          "habla": {
+            "es": "Marina Ortega García tiene dos apellidos.",
+            "voz": "narrador",
+            "audio": "narrador.f2307a8756"
+          },
+          "fr": "Marina Ortega García a deux noms de famille."
+        },
+        {
+          "id": "u03-q07-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "abuela_carmen",
+          "replica": {
+            "es": "En mi casa, la familia come junta el domingo. ¿Y en tu casa?",
+            "fr": "Chez moi, la famille mange ensemble le dimanche. Et chez toi ?",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.d2799ae859"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, comemos juntos el domingo.",
+                "voz": "viajero",
+                "audio": "viajero.116f451c1a"
+              },
+              "fr": "Oui, nous mangeons ensemble le dimanche.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien, cariño! La familia es lo primero.",
+                "fr": "Super, mon chou ! La famille, c’est le plus important.",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.a7454d5467",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, comemos en la cocina.",
+                "voz": "viajero",
+                "audio": "viajero.5fbdd70e69"
+              },
+              "fr": "Non, nous mangeons dans la cuisine.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Muy bien. ¡En la cocina también se come muy bien!",
+                "fr": "Très bien. Dans la cuisine aussi, on mange très bien !",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.129234bbf2",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi casa come el domingo.",
+                "voz": "viajero",
+                "audio": "viajero.2f41d7a167"
+              },
+              "fr": "Ma maison mange le dimanche.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tu casa come? ¡Qué casa más rara!",
+                "fr": "Ta maison mange ? Quelle drôle de maison !",
+                "voz": "abuela_carmen",
+                "audio": "abuela_carmen.99f3a63134",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q07-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Tengo",
+            "dos",
+            "apellidos."
+          ],
+          "habla": {
+            "es": "Tengo dos apellidos.",
+            "voz": "marina",
+            "audio": "marina.5f65bd00f3"
+          },
+          "fr": "J’ai deux noms de famille."
+        },
+        {
+          "id": "u03-q07-s10",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "mis abuelos, mis tíos y mis primos",
+            "voz": "marina",
+            "audio": "marina.9817c5607a"
+          },
+          "respuesta": "mis abuelos, mis tíos y mis primos",
+          "aceptadas": [
+            "mis abuelos mis tíos y mis primos"
+          ]
+        },
+        {
+          "id": "u03-q07-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El domingo ___ en familia.",
+          "respuesta": "comemos",
+          "opciones": [
+            "como",
+            "comemos",
+            "comen"
+          ],
+          "habla": {
+            "es": "El domingo comemos en familia.",
+            "voz": "marina",
+            "audio": "marina.223665739c"
+          },
+          "fr": "Le dimanche, nous mangeons en famille."
+        },
+        {
+          "id": "u03-q07-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "abuela",
+            "voz": "narrador",
+            "audio": "narrador.898cea3ec0"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "abuelo",
+              "correcta": false
+            },
+            {
+              "vocab": "abuela",
+              "correcta": true
+            },
+            {
+              "vocab": "madre",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Los domingos comemos con mi familia.",
+            "fr": "Le dimanche, nous mangeons avec ma famille.",
+            "voz": "marina",
+            "audio": "marina.cd9e29806b"
+          },
+          "aceptadas": [
+            "los domingos comemos con mi familia"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del domingo",
+            "efecto": "Una mesa enorme aparece en el patio"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u03-q08",
+      "tipo": "desafio",
+      "titulo": "El árbol sin nombres",
+      "emoji": "🌳",
+      "intro": {
+        "es": "Sin nombres no hay familia. Sin familia no hay palabras.",
+        "fr": "Sans noms, pas de famille. Sans famille, pas de mots.",
+        "voz": "sombra",
+        "audio": "sombra.ddb68ac4ba"
+      },
+      "pista": "Boss de Séville : révision mixte des unités 1 à 3 pour rendre ses noms à l’arbre.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 8
+      },
+      "steps": [
+        {
+          "id": "u03-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Sin nombres no hay familia. ¿Cómo se llama tu madre?",
+            "fr": "Sans noms, pas de famille. Comment s’appelle ta mère ?",
+            "voz": "sombra",
+            "audio": "sombra.ccbd31fc2f"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi madre se llama Claire.",
+                "voz": "viajero",
+                "audio": "viajero.60745954fe"
+              },
+              "fr": "Ma mère s’appelle Claire.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Un nombre más para el árbol…",
+                "fr": "Grr ! Un nom de plus pour l’arbre…",
+                "voz": "sombra",
+                "audio": "sombra.e87d3ff915",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi madre soy yo.",
+                "voz": "viajero",
+                "audio": "viajero.b98bcc50ed"
+              },
+              "fr": "Ma mère, c’est moi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No. Tú eres su hijo.",
+                "fr": "Non. Tu es son fils.",
+                "voz": "sombra",
+                "audio": "sombra.12fe48f20b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te pregunto la edad.",
+                "fr": "Je ne te demande pas ton âge.",
+                "voz": "sombra",
+                "audio": "sombra.c9923730e6",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Tienes hermanos?",
+            "fr": "As-tu des frères et sœurs ?",
+            "voz": "sombra",
+            "audio": "sombra.4d702045af"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, tengo un hermano.",
+                "voz": "viajero",
+                "audio": "viajero.c7478f468b"
+              },
+              "fr": "Oui, j’ai un frère.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Otro nombre… ¡Basta!",
+                "fr": "Un autre nom… Ça suffit !",
+                "voz": "sombra",
+                "audio": "sombra.7bb3589265",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi hermano es un jardín.",
+                "voz": "viajero",
+                "audio": "viajero.ecf304b0a8"
+              },
+              "fr": "Mon frère est un jardin.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Un jardín? Qué tontería.",
+                "fr": "Un jardin ? Quelle bêtise.",
+                "voz": "sombra",
+                "audio": "sombra.3f4088012b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós, buenas noches.",
+                "voz": "viajero",
+                "audio": "viajero.52509b9186"
+              },
+              "fr": "Au revoir, bonne nuit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te vas hasta responder.",
+                "fr": "Tu ne pars pas avant d’avoir répondu.",
+                "voz": "sombra",
+                "audio": "sombra.e7893595bd",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "abuelo",
+            "voz": "narrador",
+            "audio": "narrador.8f76c681cf"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "abuelo",
+              "correcta": true
+            },
+            {
+              "vocab": "abuela",
+              "correcta": false
+            },
+            {
+              "vocab": "padre",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi tío es bombero y mi tía es policía.",
+            "voz": "sombra",
+            "audio": "sombra.dc11d1aadf"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Su tío es bombero y su tía es policía.",
+              "correcta": true
+            },
+            {
+              "texto": "Su tío es policía y su tía es bombera.",
+              "correcta": false
+            },
+            {
+              "texto": "Su tío es cocinero.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "madre"
+            },
+            {
+              "vocab": "padre"
+            },
+            {
+              "vocab": "perro"
+            },
+            {
+              "vocab": "gato"
+            },
+            {
+              "vocab": "casa"
+            },
+            {
+              "vocab": "jardin"
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis ___ viven en Sevilla.",
+          "respuesta": "abuelos",
+          "opciones": [
+            "abuelo",
+            "abuelos",
+            "abuela"
+          ],
+          "habla": {
+            "es": "Mis abuelos viven en Sevilla.",
+            "voz": "marina",
+            "audio": "marina.f54bf0b5ea"
+          },
+          "fr": "Mes grands-parents habitent à Séville."
+        },
+        {
+          "id": "u03-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi madre es ___ y mi padre es cocinero.",
+          "respuesta": "ingeniera",
+          "opciones": [
+            "ingeniero",
+            "ingeniera",
+            "ingenieras"
+          ],
+          "habla": {
+            "es": "Mi madre es ingeniera y mi padre es cocinero.",
+            "voz": "marina",
+            "audio": "marina.c3d0043236"
+          },
+          "fr": "Ma mère est ingénieure et mon père est cuisinier."
+        },
+        {
+          "id": "u03-q08-s08",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "tú",
+          "radical": "viv",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "vives",
+          "habla": {
+            "es": "tú vives",
+            "voz": "rafa",
+            "audio": "rafa.494fd33712"
+          },
+          "fr": "Toi, tu habites…"
+        },
+        {
+          "id": "u03-q08-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "nosotros",
+          "radical": "com",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "imos",
+            "en"
+          ],
+          "forma": "comemos",
+          "habla": {
+            "es": "nosotros comemos",
+            "voz": "rafa",
+            "audio": "rafa.57256fc5e7"
+          },
+          "fr": "Nous, nous mangeons…"
+        },
+        {
+          "id": "u03-q08-s10",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "ellos",
+          "radical": "tien",
+          "terminacion": "en",
+          "terminaciones": [
+            "emos",
+            "en",
+            "e"
+          ],
+          "forma": "tienen",
+          "habla": {
+            "es": "ellos tienen",
+            "voz": "rafa",
+            "audio": "rafa.401c210efd"
+          },
+          "fr": "Eux, ils ont…"
+        },
+        {
+          "id": "u03-q08-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mis",
+            "abuelos",
+            "viven",
+            "en",
+            "una",
+            "casa",
+            "con",
+            "patio."
+          ],
+          "habla": {
+            "es": "Mis abuelos viven en una casa con patio.",
+            "voz": "abuela_carmen",
+            "audio": "abuela_carmen.6ed4a4d5cc"
+          },
+          "fr": "Mes grands-parents habitent dans une maison avec un patio."
+        },
+        {
+          "id": "u03-q08-s12",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Mi familia es grande.",
+            "voz": "marina",
+            "audio": "marina.2ddbb5af80"
+          },
+          "respuesta": "Mi familia es grande.",
+          "aceptadas": [
+            "mi familia es grande"
+          ]
+        },
+        {
+          "id": "u03-q08-s13",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Lola. Tengo seis años. Mi padre es el tío Rafa y es cocinero. Mi madre es policía. Tengo un gato. Se llama Churro.",
+            "fr": "Salut, c’est Lola. J’ai six ans. Mon père est l’oncle Rafa et il est cuisinier. Ma mère est policière. J’ai un chat. Il s’appelle Churro.",
+            "voz": "lola",
+            "audio": "lola.0f4abf9b3a"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántos años tiene Lola?",
+                "fr": "Quel âge a Lola ?",
+                "voz": "narrador",
+                "audio": "narrador.7024270901"
+              },
+              "opciones": [
+                {
+                  "texto": "Cinco.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Seis.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Ocho.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es la madre de Lola?",
+                "fr": "Quel est le métier de la mère de Lola ?",
+                "voz": "narrador",
+                "audio": "narrador.2afa285643"
+              },
+              "opciones": [
+                {
+                  "texto": "Policía.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Panadera.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Médica.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo se llama su gato?",
+                "fr": "Comment s’appelle son chat ?",
+                "voz": "narrador",
+                "audio": "narrador.f2c151b8cc"
+              },
+              "opciones": [
+                {
+                  "texto": "Churro.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pablo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Toby.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u03-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Mi familia es grande y mi casa tiene un patio.",
+            "fr": "Ma famille est grande et ma maison a un patio.",
+            "voz": "marina",
+            "audio": "marina.8088d267f0"
+          },
+          "aceptadas": [
+            "mi familia es grande y mi casa tiene un patio"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Los nombres vuelven al árbol y la Sombra se rompe!"
+          }
+        },
+        {
+          "id": "u03-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u03-pluma",
+          "escena": {
+            "id": "u03-pluma",
+            "tipo": "pluma",
+            "titulo": "Tercera pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La fresque d’azulejos retrouve tous ses noms dans une lumière dorée ; une plume verte se détache du carreau central.",
+                "personajes": [
+                  "abuela_carmen"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Los nombres! ¡Gracias, cariño!",
+                    "fr": "Les noms ! Merci, mon chou !",
+                    "voz": "abuela_carmen",
+                    "audio": "abuela_carmen.0d50bfe255"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal s’envole pour la première fois et fait un tour du patio.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Tres plumas. ¡Puedo volar un poco!",
+                    "fr": "Trois plumes. Je peux voler un peu !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.bd91e1337e"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Sur la carte, une trajectoire lumineuse traverse l’océan vers l’ouest : México.",
+                "personajes": [
+                  "marina"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Ahora, a México!",
+                    "fr": "Maintenant, direction le Mexique !",
+                    "voz": "marina",
+                    "audio": "marina.da99ae1e34"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 3,
+    "nombre": "Pluma de la Familia",
+    "descripcion": {
+      "es": "Esta pluma es la familia. Tres plumas… ¡y vuelo!",
+      "fr": "Cette plume, c’est la famille. Trois plumes… et je vole !",
+      "voz": "quetzal",
+      "audio": "quetzal.3bab983218"
+    }
+  }
+}
