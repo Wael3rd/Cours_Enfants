@@ -5,9 +5,15 @@ export const CHAR_PIVOT = { head: '200 288', armL: '142 306', armR: '258 306', l
 export const CHARS = {
   alex: { name: 'Álex', skin: '#E3AE86', hair: '#3A2216', top: '#19B7AA', pants: '#2B318A', shoes: '#F5E6C8', accent: '#D93472', mouthY: 0 },
   marina: { name: 'Marina', skin: '#D79A74', hair: '#2A160E', top: '#D93472', pants: '#0E7F82', shoes: '#FFC83D', accent: '#FFC83D', mouthY: 0 },
+  diego: { name: 'Diego', skin: '#C8895F', hair: '#2A1A12', top: '#2F6FD0', pants: '#3D4468', shoes: '#F5E6C8', accent: '#FFC83D', mouthY: 0 },
+  pilar: { name: 'Doña Pilar', skin: '#E2B592', hair: '#8A7A74', top: '#B4503A', pants: '#2B318A', shoes: '#3B2216', accent: '#E0A058', mouthY: 0 },
+  lola: { name: 'Lola', skin: '#D79A74', hair: '#1E120C', top: '#FFC83D', pants: '#F5E6C8', shoes: '#D93472', accent: '#D93472', mouthY: 0 },
+  abuela_carmen: { name: 'Abuela Carmen', skin: '#D9A47C', hair: '#E8E4DE', top: '#19B7AA', pants: '#6B3E7A', shoes: '#3B2216', accent: '#E0A058', mouthY: 0 },
+  rafa: { name: 'Tío Rafa', skin: '#C98A5E', hair: '#1E120C', top: '#2B318A', pants: '#3D4468', shoes: '#6B3E26', accent: '#D81E3A', mouthY: 14 },
   ignacio: { name: 'Don Ignacio', skin: '#D9A47C', hair: '#C9C5C0', top: '#E0A058', pants: '#2F5D50', shoes: '#6B3E26', accent: '#C9573B', mouthY: 14 },
 };
 function chTorso(k, c, g) {
+  if (CHX[k]) return CHX[k].torso(c);
   const shade2 = shade(c.top, -0.22);
   const base = `<path class="c-torso" d="M138 292Q200 272 262 292L276 442Q200 466 124 442Z" fill="${c.top}"/><path d="M262 292L276 442Q240 454 214 458L222 300Z" fill="${shade2}" opacity=".5"/>`;
   if (k === 'alex') return base + `<path d="M162 286Q200 330 238 286L238 306Q200 346 162 306Z" fill="${shade(c.top, -0.18)}"/><path d="M200 330V452" stroke="${PAL.sol}" stroke-width="5" stroke-linecap="round"/><path d="M152 404h96q8 30 -4 44h-88q-12 -14 -4 -44Z" fill="${shade(c.top, -0.12)}"/><path d="M168 292Q200 306 232 292" stroke="#fff" stroke-width="5" fill="none" opacity=".35" stroke-linecap="round"/>`;
@@ -24,11 +30,13 @@ function chLeg(c, side) {
   return `<g class="c-leg c-leg${side}"><path d="M${m(146)} 430H${m(206)}L${m(204)} 586H${m(150)}Z" fill="${c.pants}"/><path d="M${m(190)} 432H${m(206)}L${m(204)} 586H${m(188)}Z" fill="${dark}" opacity=".5"/><path d="M${m(142)} 586H${m(208)}V618Q${m(208)} 634 ${m(190)} 634H${m(128)}Q${m(122)} 634 ${m(124)} 624Q${m(128)} 598 ${m(142)} 586Z" fill="${shoe}"/><path d="M${m(124)} 624H${m(208)}V634H${m(128)}Q${m(122)} 634 ${m(124)} 624Z" fill="${shade(shoe, -0.35)}"/><path d="M${m(146)} 600Q${m(172)} 592 ${m(200)} 600" stroke="${c.accent}" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/></g>`;
 }
 function chHairBack(k, c) {
+  if (CHX[k]) return CHX[k].back ? CHX[k].back(c) : '';
   if (k === 'marina') return `<path d="M98 196Q84 84 200 78Q316 84 302 196Q320 290 292 346Q250 330 252 262L148 262Q150 330 108 346Q80 290 98 196Z" fill="${c.hair}"/>`;
   if (k === 'ignacio') return `<path d="M104 190Q96 224 112 250Q108 214 120 190Z M296 190Q304 224 288 250Q292 214 280 190Z" fill="${c.hair}"/>`;
   return '';
 }
 function chHairFront(k, c, g) {
+  if (CHX[k]) return CHX[k].front(c);
   if (k === 'alex') return `<path d="M100 184Q92 84 200 80Q308 84 300 184Q296 144 268 134Q254 164 224 142Q200 176 176 142Q148 164 136 134Q106 146 100 184Z" fill="${c.hair}"/><path d="M186 88Q196 48 230 66Q212 76 216 94Z" fill="${c.hair}"/><path d="M130 112Q156 92 186 96" stroke="${shade(c.hair, 0.25)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/>`;
   if (k === 'marina') return `<g class="c-tail" data-px="236" data-py="104"><path d="M236 98Q330 62 348 144Q356 210 322 262Q304 208 292 156Q272 122 236 122Z" fill="${c.hair}"/><path d="M300 120Q336 140 330 196" stroke="${shade(c.hair, 0.3)}" stroke-width="6" fill="none" stroke-linecap="round" opacity=".5"/></g><path d="M102 188Q96 94 200 88Q304 94 298 188Q272 132 234 142Q216 114 190 144Q150 124 102 188Z" fill="${c.hair}"/><path d="M106 152Q200 66 294 152L288 170Q200 92 112 170Z" fill="${PAL.sol}"/><circle cx="250" cy="104" r="14" fill="${PAL.sol}"/><path d="M244 104l6 -6 6 6 -6 6Z" fill="${PAL.magenta2}"/>`;
   return `<ellipse cx="200" cy="130" rx="160" ry="34" fill="#6B3E26"/><path d="M118 128Q120 36 200 32Q280 36 282 128Z" fill="#8A5230"/><path d="M118 128H282V104H118Z" fill="${c.accent}"/><path d="M118 112H282" stroke="#fff" stroke-width="3" opacity=".25"/><path d="M262 108Q300 70 332 78Q312 92 290 118Z" fill="${PAL.quetzal}"/><path d="M270 106Q306 86 326 82" stroke="${PAL.quetzalClaro}" stroke-width="3" fill="none"/><ellipse cx="200" cy="132" rx="160" ry="34" fill="none" stroke="${shade('#6B3E26', 0.2)}" stroke-width="4" opacity=".6"/><g fill="none" stroke="#E0A058" stroke-width="5"><circle cx="156" cy="82" r="15"/><circle cx="196" cy="82" r="15"/><path d="M171 82h10"/></g><path d="M120 128Q200 150 280 128" fill="#000" opacity=".16"/>`;
@@ -46,7 +54,7 @@ ${k === 'ignacio' ? '<path d="M120 214q-10 6 -12 16M280 214q10 6 12 16" stroke="
 <path d="M200 208q-9 15 0 21q9 4 14 -3" stroke="${shade(c.skin, -0.28)}" stroke-width="5" fill="none" stroke-linecap="round"/>
 <g class="c-mouth" transform="translate(0 ${my})"><path class="c-m-c" d="M168 246Q200 276 232 246" stroke="#7A2E2E" stroke-width="8" fill="none" stroke-linecap="round"/><g class="c-m-o" opacity="0"><ellipse cx="200" cy="256" rx="26" ry="22" fill="#6B1E24"/><path d="M178 244Q200 252 222 244L222 240H178Z" fill="#fff"/><ellipse cx="200" cy="270" rx="15" ry="8" fill="#E0606A"/></g></g>${stache}`;
 }
-/** Personnage : key 'alex'|'marina'|'ignacio'. opts : width, view ('full' | 'bust' | viewBox), uid, pack (sac a dos, defaut true). */
+/** Personnage : key 'alex'|'marina'|'ignacio'|'diego'|'pilar'|'lola'|'abuela_carmen'|'rafa'. opts : width, view ('full' | 'bust' | viewBox), uid, pack (sac a dos, defaut true). */
 export function character(key, opts) {
   opts = opts || {};
   const c = CHARS[key] || CHARS.alex, id = opts.uid || uid('ch');
@@ -59,7 +67,7 @@ export function character(key, opts) {
 ${bust ? '' : pack}${bust ? '' : chLeg(c, 'L') + chLeg(c, 'R')}
 <g class="c-body">${chTorso(key, c)}${strap}${bust ? '' : chArm(key, c, 'L') + chArm(key, c, 'R')}
 <rect x="184" y="268" width="32" height="30" fill="${shade(c.skin, -0.12)}"/>
-<g class="c-head">${chHairBack(key, c)}${chFace(key, c, id)}${chHairFront(key, c)}</g></g></g></svg>`;
+<g class="c-head">${chHairBack(key, c)}${chFace(key, c, id)}${chHairFront(key, c)}${CHX[key] && CHX[key].acc ? CHX[key].acc(c) : ''}</g></g></g></svg>`;
 }
 
 function cEl(root) { return typeof root === 'string' ? document.querySelector(root) : root; }

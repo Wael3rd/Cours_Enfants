@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.507">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.507" data-media-start="8.811" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.207,"v":1},{"t":8.507,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/diego.8f7ec8fe0d.mp3" data-start="1" data-duration="6.757" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-grass-000.mp3" data-start="0.3" data-duration="0.775" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-grass-000.mp3" data-start="0.65" data-duration="0.775" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="7.557" data-duration="0.1" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="8.207" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-historia-2","cinematica":"u02-historia","part":2,"parts":5,"total":8.507,"meta":{"cinematica":"u02-historia","titulo":"La campana muda","tipo":"historia","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":2,"t0":0,"t1":8.257,"vista":"Marina et Álex entrent dans la cour, Diego se présente en finissant son bocadillo.","camara":"","rotulo":"","personajes":["diego","marina","viajero"],"lines":[{"who":"diego","es":"Hola, me llamo Diego. Tengo doce años. ¿Eres Álex? ¿Y tú eres Marina?","key":"diego.8f7ec8fe0d","t":1,"d":6.757,"words":[{"w":"Hola,","t":1,"d":0.348},{"w":"me","t":1.487,"d":0.275},{"w":"llamo","t":1.762,"d":0.518},{"w":"Diego.","t":2.28,"d":0.518},{"w":"Tengo","t":3.15,"d":0.518},{"w":"doce","t":3.668,"d":0.437},{"w":"años.","t":4.105,"d":0.437},{"w":"¿Eres","t":4.894,"d":0.437},{"w":"Álex?","t":5.331,"d":0.437},{"w":"¿Y","t":6.786,"d":0.106},{"w":"tú","t":6.892,"d":0.15},{"w":"eres","t":7.042,"d":0.238},{"w":"Marina?","t":7.28,"d":0.327}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/step-grass-000"},{"t":0.65,"f":"rpg/step-grass-000"},{"t":7.557,"f":"ui/pop"},{"t":8.207,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.colegioPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#7A5530", motes: 22 });
+        S.drift(tl, room, T);
+
+        // ---------- Diego (bocadillo), Pilar (cloche muette) ; Alex et Marina entrent par la droite ----------
+        var die = S.chr(room.actors, "diego", 700, 1030, 310);
+        var boc = S.prop(room.actors, "bocadillo", 700 + 0.12 * 310, 1030 - 0.62 * 310, 150, { uid: "bo" });
+        gsap.set(boc, { rotation: -10 });
+        var pil = S.chr(room.actors, "pilar", 1150, 1020, 340);
+        var hx = 1150 - 0.205 * 340, hy = 1020 - 0.49 * 340;
+        S.prop(room.actors, "campana", hx, hy - 10, 170, { tone: "muda", uid: "bm" });
+        var AX0 = 2300, AX1 = 1560, MX0 = 2500, MX1 = 1850;
+        var ale = S.chr(room.actors, "viajero", AX0, 1040, 330);
+        var mar = S.chr(room.actors, "marina", MX0, 1020, 320);
+        S.breathe(tl, pil, 0, T, 0.8); S.breathe(tl, die, 0, T, 0.8);
+        Q.charBlink(tl, pil.svg, 2.4); Q.charBlink(tl, die.svg, 5.2); Q.charBlink(tl, pil.svg, 7.0);
+
+        // Diego mache son bocadillo (le sandwich monte a la bouche, mastication), avale, puis se presente
+        gsap.set(boc, { y: -150, rotation: -52, x: -30 });
+        for (var k = 0; k < 3; k++) { tl.to(die.b, { y: 8, scaleY: 0.985, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0.1 + k * 0.3); Q.charTalk(tl, die.svg, 0.1 + k * 0.3, 0.26, 1); }
+        tl.to(boc, { y: -4, rotation: -10, x: 0, duration: 0.4, ease: "power2.inOut" }, L1.t - 0.35);
+        tl.to(die.b, { y: -8, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 }, L1.t - 0.5);
+        C.talkBounce(tl, die.b, L1, 5); C.talkChar(tl, die, L1);
+        Q.charEmote(tl, die.svg, L1.t, "happy", 0.3);
+
+        // Alex et Marina arrivent
+        S.walk(tl, ale, AX0, AX1, 0.2, 2.0, 0.36, "power1.out");
+        S.walk(tl, mar, MX0, MX1, 0.6, 2.0, 0.36, "power1.out");
+        S.breathe(tl, ale, 2.3, T - 2.3, 0.8); S.breathe(tl, mar, 2.7, T - 2.7, 0.8);
+
+        // Diego montre Alex (« ¿Eres Alex? ») puis Marina (« ¿Y tu eres Marina? »)
+        var wAlex = C.wordT(PLAN, 2, 1, 9), wMar = C.wordT(PLAN, 2, 1, 13), wTu = C.wordT(PLAN, 2, 1, 10), wEnd = L1.t + L1.d;
+        var armR = die.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -78, svgOrigin: "258 306", duration: 0.3, ease: "back.out(1.6)" }, wAlex - 0.35);
+        tl.to(armR, { rotation: -62, svgOrigin: "258 306", duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: 2 }, wAlex - 0.05);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.4, ease: "power2.inOut" }, wEnd + 0.15);
+        Q.charNod(tl, ale.svg, wAlex + 0.15, 4, 0.16); Q.charNod(tl, ale.svg, wAlex + 0.4, -3, 0.16);
+        C.talkChar(tl, ale, { words: [{ t: wAlex + 0.1, d: 0.2 }] }, false);
+        Q.charWave(tl, mar.svg, wMar + 0.05, 1.1, "R");
+        Q.charEmote(tl, mar.svg, wMar, "happy", 0.3);
+
+        // Pilar observe, la cloche pend, muette
+        var bellG = $(".pr-bell");
+        tl.fromTo(bellG, { rotation: -2, svgOrigin: "150 34" }, { rotation: 2, svgOrigin: "150 34", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 1.1)) }, 0);
+        Q.charEmote(tl, pil.svg, wAlex, "happy", 0.3);
+
+        // ---------- camera : serree sur Diego / Pilar, pan droite quand les voyageurs entrent, cadre final sur le groupe ----------
+        S.camSet(room, 1000, 650, 1.2);
+        S.cam(tl, room, 1000, 650, 1.22, 0, 0.9, "sine.inOut");
+        S.cam(tl, room, 1400, 650, 1.1, 0.9, 1.7, "power2.inOut");
+        S.cam(tl, room, 1250, 652, 1.16, L1.t + 3.2, T - L1.t - 3.2, "sine.inOut");
+        tl.fromTo("#stage", { rotation: -0.8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 2.0, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 8, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

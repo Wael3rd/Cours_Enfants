@@ -22,7 +22,7 @@ const CHECK = process.argv.includes('--check');
 const MAX_PART = 12;
 
 // ---------------------------------------------------------------------------------------------------------- configuration
-// parts : groupes de plans (numeros u01.json) -> une composition par groupe (<= 12 s, jouees a la suite par l'app).
+// parts : groupes de plans (numeros uXX.json, ou { n, lines:[1] } pour ne jouer que certaines repliques) -> une composition par groupe (<= 12 s, jouees a la suite par l'app).
 // lead / tail / min : respiration (s) avant la 1re replique du plan / apres la derniere / duree minimale du plan.
 // sfx : { f: 'ui/swoosh-in', at: ancre, off: decalage s, vol, max: duree max s }.  Ancres : pN (debut du plan N), pN.end,
 //       lN.M (debut de la replique M du plan N), lN.M.end, wN.M.K (K-eme mot), end (fin de la partie).
@@ -124,6 +124,198 @@ const CINES = {
       ],
     }],
   },
+  // ------------------------------------------------------------------------------------------------------------ unite 2 : Salamanca
+  'u02-intro': {
+    region: 'salamanca', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [{
+      plans: [1, 2], lead: { 1: 0.5, 2: 0.5 }, tail: { 1: 0.3, 2: 0.5 }, min: { 1: 4.1 },
+      sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0.05, vol: 0.5 },
+        { f: 'jingles/steel00', at: 'w1.1.3', off: 0, vol: 0.5 },
+        { f: 'rpg/spell-cast', at: 'w1.1.3', off: 0.02, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.55 },
+        { f: 'rpg/bell', at: 'p2', off: 1.7, vol: 0.18 },
+        { f: 'ui/star', at: 'l2.1.end', off: 0.2, vol: 0.35 },
+        { f: 'ui/pop', at: 'l2.2', off: 0.6, vol: 0.3 },
+      ],
+    }],
+  },
+  'u02-historia': {
+    region: 'salamanca', music: { vol: 0.18, offsetFrom: 0 },
+    parts: [
+      { plans: [1], lead: { 1: 0.8 }, tail: { 1: 0.7 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'rpg/step-02', at: 'l1.1', off: -0.45, vol: 0.35 },
+        { f: 'rpg/step-03', at: 'l1.1', off: -0.25, vol: 0.35 },
+        { f: 'ui/pop', at: 'l1.1', off: 0, vol: 0.3 },
+        { f: 'rpg/bell', at: 'w1.2.5', off: 0, vol: 0.12 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 2, lines: [1] }], lead: { 2: 1.0 }, tail: { 2: 0.5 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'rpg/step-grass-000', at: 'p2', off: 0.3, vol: 0.25 },
+        { f: 'rpg/step-grass-000', at: 'p2', off: 0.65, vol: 0.25 },
+        { f: 'ui/pop', at: 'l2.1.end', off: -0.2, vol: 0.3 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 2, lines: [2] }], lead: { 2: 0.5 }, tail: { 2: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'ui/open', at: 'l2.1', off: 0.2, vol: 0.25 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [3], lead: { 3: 0.8 }, tail: { 3: 0.7 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'rpg/spell-hit', at: 'l3.2', off: -0.3, vol: 0.35 },
+        { f: 'rpg/spell-magic', at: 'l3.2', off: 0.1, vol: 0.28 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [4], lead: { 4: 0.6 }, tail: { 4: 0.6 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: 0, vol: 0.45 },
+        { f: 'rpg/spell-magic', at: 'p4', off: 0.2, vol: 0.3 },
+        { f: 'ui/star', at: 'l4.1', off: 0.1, vol: 0.4 },
+        { f: 'ui/pop', at: 'l4.2', off: 0.0, vol: 0.35 },
+        { f: 'rpg/level-up', at: 'l4.2.end', off: -0.35, vol: 0.4 },
+      ] },
+    ],
+  },
+  'u02-capsula-cole': {
+    region: 'salamanca', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1, 2], lead: { 1: 0.5, 2: 0.4 }, tail: { 1: 0.4, 2: 0.5 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w1.1.5', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w1.1.7', off: -0.05, vol: 0.5 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.1, vol: 0.45 },
+        { f: 'ui/tick', at: 'w2.1.1', off: 0, vol: 0.3 },
+        { f: 'ui/star', at: 'w2.1.9', off: -0.05, vol: 0.5 },
+        { f: 'ui/correct', at: 'w2.1.11', off: 0.0, vol: 0.4 },
+      ] },
+      { plans: [3], lead: { 3: 0.6 }, tail: { 3: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w3.1.12', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w3.1.14', off: -0.05, vol: 0.5 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [4], lead: { 4: 0.6 }, tail: { 4: 1.2 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: 0, vol: 0.4 },
+        { f: 'ui/tick', at: 'l4.1', off: 0.3, vol: 0.3 },
+        { f: 'rpg/level-up', at: 'l4.1.end', off: -0.7, vol: 0.4 },
+      ] },
+    ],
+  },
+  'u02-pluma': {
+    region: 'salamanca', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [{
+      plans: [1, 2], lead: { 1: 1.1, 2: 0.4 }, tail: { 1: 0.3, 2: 0.6 },
+      sfx: [
+        { f: 'rpg/bell', at: 'p1', off: 0.05, vol: 0.6 },
+        { f: 'rpg/bell', at: 'p1', off: 0.45, vol: 0.5 },
+        { f: 'rpg/bell', at: 'p1', off: 0.85, vol: 0.45 },
+        { f: 'rpg/spell-magic', at: 'p1', off: 0.4, vol: 0.4 },
+        { f: 'rpg/item-get', at: 'p1', off: 0.9, vol: 0.45 },
+        { f: 'rpg/level-up-big', at: 'l1.1', off: 0.0, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.5 },
+        { f: 'ui/star', at: 'p2', off: 1.3, vol: 0.4 },
+        { f: 'rpg/spell-cast', at: 'l2.1', off: 0.8, vol: 0.3 },
+      ],
+    }],
+  },
+  // ------------------------------------------------------------------------------------------------------------ unite 3 : Sevilla
+  'u03-intro': {
+    region: 'sevilla', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [{
+      plans: [1, 2], lead: { 1: 0.5, 2: 0.5 }, tail: { 1: 0.3, 2: 0.5 }, min: { 1: 4.0 },
+      sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0.05, vol: 0.5 },
+        { f: 'jingles/steel00', at: 'w1.1.3', off: 0, vol: 0.5 },
+        { f: 'rpg/spell-cast', at: 'w1.1.3', off: 0.02, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.55 },
+        { f: 'ui/star', at: 'l2.1.end', off: 0.1, vol: 0.35 },
+        { f: 'ui/pop', at: 'l2.2', off: 0.9, vol: 0.3 },
+      ],
+    }],
+  },
+  'u03-historia': {
+    region: 'sevilla', music: { vol: 0.18, offsetFrom: 0 },
+    parts: [
+      { plans: [1], lead: { 1: 0.7 }, tail: { 1: 0.6 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'rpg/step-00', at: 'p1', off: 0.1, vol: 0.3 }, { f: 'rpg/step-01', at: 'p1', off: 0.3, vol: 0.3 }, { f: 'rpg/step-02', at: 'p1', off: 0.5, vol: 0.3 }, { f: 'rpg/step-03', at: 'p1', off: 0.7, vol: 0.3 },
+        { f: 'rpg/door-open', at: 'l1.1.end', off: -0.1, vol: 0.4 },
+        { f: 'ui/pop', at: 'l1.2', off: 0, vol: 0.3 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 2, lines: [1, 2] }], lead: { 2: 0.8 }, tail: { 2: 0.4 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'l2.1', off: -0.05, vol: 0.3 },
+        { f: 'ui/pop', at: 'l2.2', off: -0.05, vol: 0.3 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [{ n: 2, lines: [3] }], lead: { 2: 0.5 }, tail: { 2: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'rpg/step-grass-000', at: 'p2', off: 0.1, vol: 0.2 },
+        { f: 'ui/pop', at: 'l2.1', off: 0, vol: 0.3 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [3], lead: { 3: 0.7 }, tail: { 3: 0.7 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'rpg/spell-hit', at: 'l3.2', off: -0.3, vol: 0.35 },
+        { f: 'rpg/spell-magic', at: 'l3.2', off: 0.1, vol: 0.28 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [4], lead: { 4: 0.6 }, tail: { 4: 0.7 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p4', off: 0, vol: 0.45 },
+        { f: 'rpg/spell-magic', at: 'p4', off: 0.2, vol: 0.3 },
+        { f: 'ui/star', at: 'l4.1', off: 0.2, vol: 0.4 },
+        { f: 'ui/pop', at: 'l4.2', off: 0.0, vol: 0.35 },
+        { f: 'rpg/level-up', at: 'l4.2.end', off: -0.35, vol: 0.4 },
+      ] },
+    ],
+  },
+  'u03-capsula-familias': {
+    region: 'sevilla', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1], lead: { 1: 0.6 }, tail: { 1: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p1', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w1.1.4', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.7', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.10', off: -0.05, vol: 0.45 },
+        { f: 'ui/pop', at: 'w1.1.13', off: -0.05, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [2], lead: { 2: 0.6 }, tail: { 2: 0.8 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p2', off: 0, vol: 0.4 },
+        { f: 'ui/pop', at: 'w2.1.7', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w2.1.12', off: -0.05, vol: 0.5 },
+        { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
+      ] },
+      { plans: [3, 4], lead: { 3: 0.5, 4: 0.4 }, tail: { 3: 0.4, 4: 1.0 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
+        { f: 'ui/swoosh-out', at: 'p4', off: -0.15, vol: 0.45 },
+        { f: 'ui/tick', at: 'p4', off: 1.0, vol: 0.3 },
+        { f: 'ui/star', at: 'l4.1.end', off: -0.5, vol: 0.5 },
+        { f: 'rpg/item-get', at: 'l4.1.end', off: -0.3, vol: 0.4 },
+      ] },
+    ],
+  },
+  'u03-pluma': {
+    region: 'sevilla', music: { vol: 0.2, offsetFrom: 0 },
+    parts: [
+      { plans: [1, 2], lead: { 1: 0.7, 2: 0.4 }, tail: { 1: 0.3, 2: 0.7 }, sfx: [
+        { f: 'rpg/spell-magic', at: 'p1', off: 0.2, vol: 0.4 },
+        { f: 'rpg/item-get', at: 'p1', off: 0.5, vol: 0.5 },
+        { f: 'rpg/level-up-big', at: 'l1.1', off: 0.0, vol: 0.45 },
+        { f: 'ui/swoosh-out', at: 'p2', off: -0.2, vol: 0.5 },
+        { f: 'rpg/spell-cast', at: 'p2', off: 0.3, vol: 0.3 },
+        { f: 'ui/star', at: 'l2.1', off: 0.6, vol: 0.4 },
+      ] },
+      { plans: [3], lead: { 3: 0.6 }, tail: { 3: 1.4 }, sfx: [
+        { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.45 },
+        { f: 'rpg/spell-cast', at: 'l3.1', off: 0.2, vol: 0.4 },
+        { f: 'ui/star', at: 'l3.1.end', off: 0.1, vol: 0.4 },
+      ] },
+    ],
+  },
 };
 
 // ---------------------------------------------------------------------------------------------------------- utilitaires
@@ -214,12 +406,13 @@ for (const [cid, cfg] of Object.entries(CINES)) {
     const pc = part.cfg;
     let t = 0;
     const plans = [];
-    pc.plans.forEach((n, idx) => {
+    pc.plans.forEach((pn, idx) => {
+      const n = typeof pn === 'number' ? pn : pn.n, only = typeof pn === 'number' ? null : pn.lines; // { n, lines:[1] } : une partie ne joue que certaines repliques du plan
       const src = plansByN[n];
       if (!src) throw new Error(`${cid} : plan ${n} introuvable`);
       const lead = pc.lead?.[n] ?? (idx === 0 ? 0.55 : 0.4), tail = pc.tail?.[n] ?? 0.4, p0 = t;
       let c = p0 + lead;
-      const lines = src.lineas.map((l) => {
+      const lines = src.lineas.filter((_, li) => !only || only.includes(li + 1)).map((l) => {
         const f = join(AUDIO, l.audio + '.mp3');
         if (!existsSync(f)) { console.error(`!! audio manquant : ${l.audio} (${l.es})`); problems++; return null; }
         const full = dur(f), wt = wordTimes(l.es, full, silences(f, full)), d = Math.min(full, wt.end + 0.15);

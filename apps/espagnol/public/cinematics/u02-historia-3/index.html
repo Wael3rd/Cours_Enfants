@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .fglow { position: absolute; left: 0; top: 0; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.95), rgba(66,224,160,.35) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="5.111">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.111" data-media-start="17.318" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":4.811,"v":1},{"t":5.111,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/marina.f9b86bdeab.mp3" data-start="0.5" data-duration="3.561" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/open.mp3" data-start="0.7" data-duration="0.148" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="4.811" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-historia-3","cinematica":"u02-historia","part":3,"parts":5,"total":5.111,"meta":{"cinematica":"u02-historia","titulo":"La campana muda","tipo":"historia","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":2,"t0":0,"t1":4.861,"vista":"Marina et Álex entrent dans la cour, Diego se présente en finissant son bocadillo.","camara":"","rotulo":"","personajes":["diego","marina","viajero"],"lines":[{"who":"marina","es":"Sí, somos viajeros. Buscamos una pluma.","key":"marina.f9b86bdeab","t":0.5,"d":3.561,"words":[{"w":"Sí,","t":0.5,"d":0.215},{"w":"somos","t":0.908,"d":0.405},{"w":"viajeros.","t":1.313,"d":0.595},{"w":"Buscamos","t":2.76,"d":0.535},{"w":"una","t":3.296,"d":0.251},{"w":"pluma.","t":3.546,"d":0.365}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.7,"f":"ui/open"},{"t":4.811,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.colegioPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#7A5530", motes: 22 });
+        S.drift(tl, room, T);
+
+        var die = S.chr(room.actors, "diego", 700, 1030, 310);
+        var boc = S.prop(room.actors, "bocadillo", 700 + 0.12 * 310, 1030 - 0.62 * 310, 150, { uid: "bo" });
+        gsap.set(boc, { rotation: -10 });
+        var pil = S.chr(room.actors, "pilar", 1150, 1020, 340);
+        var hx = 1150 - 0.205 * 340, hy = 1020 - 0.49 * 340;
+        S.prop(room.actors, "campana", hx, hy - 10, 170, { tone: "muda", uid: "bm" });
+        var ale = S.chr(room.actors, "viajero", 1560, 1040, 330);
+        var MX = 1850, mar = S.chr(room.actors, "marina", MX, 1020, 320);
+        [die, pil, ale, mar].forEach(function (c, i) { S.breathe(tl, c, 0, T, 0.8); Q.charBlink(tl, c.svg, 1.3 + i * 1.1); });
+        var bellG = $(".pr-bell");
+        tl.fromTo(bellG, { rotation: -2, svgOrigin: "150 34" }, { rotation: 2, svgOrigin: "150 34", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 1.1)) }, 0);
+
+        // Marina : un pas en avant, elle repond (« Si, somos viajeros. »), puis sort la plume (« una pluma »)
+        tl.to(mar.el, { x: -40, duration: 0.5, ease: "power2.out" }, L1.t - 0.1);
+        C.talkBounce(tl, mar.b, L1, 5); C.talkChar(tl, mar, L1);
+        Q.charNod(tl, ale.svg, L1.t + 0.2, 3, 0.16);
+        var wV = C.wordT(PLAN, 2, 1, 4), wP = C.wordT(PLAN, 2, 1, 5);
+        var armR = mar.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -125, svgOrigin: "258 306", duration: 0.4, ease: "back.out(1.7)" }, wP - 0.25);
+        tl.to(armR, { rotation: -118, svgOrigin: "258 306", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 2 }, wP + 0.2);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.45, ease: "power2.inOut" }, L1.t + L1.d + 0.15);
+        // la plume lumineuse dans sa main
+        var fx = MX - 40 + 134, fy = 1020 - 326 - 168;
+        var fe = S.feather(room.actors, 56);
+        gsap.set(fe, { x: fx - 28, y: fy, rotation: 12, opacity: 0, scale: 0.3 });
+        var gl = S.mk(room.actors, "fglow"); gl.setAttribute("data-layout-allow-overflow", ""); gsap.set(gl, { x: fx - 160, y: fy - 40, scale: 0.4 });
+        tl.fromTo(fe, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.2)", immediateRender: false }, wP - 0.05);
+        tl.fromTo(gl, { opacity: 0, scale: 0.4 }, { opacity: 0.9, scale: 1.05, duration: 0.5, ease: "power2.out", immediateRender: false }, wP - 0.05);
+        tl.to(fe, { rotation: 20, y: fy - 10, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, wP + 0.3);
+        tl.to(gl, { opacity: 0.55, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, wP + 0.55);
+        tl.to([fe, gl], { opacity: 0, duration: 0.3, ease: "power2.in" }, T - 0.55);
+        // Pilar et Diego ouvrent grand les yeux
+        Q.charEmote(tl, pil.svg, wP, "happy", 0.25); Q.charEmote(tl, die.svg, wP, "happy", 0.25);
+        tl.to(pil.b, { y: -10, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, wP + 0.05);
+        tl.to(die.b, { y: -14, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, wP + 0.1);
+        for (var k = 0; k < 8; k++) {
+          var sp = S.mk(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>'); sp.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 8) * 6.283, sx = fx + Math.cos(ang) * 20, sy = fy + 60 + Math.sin(ang) * 20;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 90, y: sy + Math.sin(ang) * 90, scale: 0.9, duration: 0.4, ease: "back.out(3)", immediateRender: false }, wP + 0.05 + k * 0.03);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, wP + 0.5 + k * 0.03);
+        }
+
+        // ---------- camera : push-in lent sur Marina ----------
+        S.camSet(room, 1450, 720, 1.1);
+        S.cam(tl, room, 1690, 700, 1.34, 0, T, "sine.inOut");
+        tl.fromTo("#stage", { rotation: 0.8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.8, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 3, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

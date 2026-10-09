@@ -32,6 +32,38 @@
     gsap.set(cam, { transformOrigin: '0 0' });
     return { cam: cam, back: back, mid: mid, desk: desk, qlayer: qlayer, actors: actors, front: front, light: light, motes: motes, W: R.W, H: R.H };
   };
+  /** Decor generique (patio, aula, ruelle, atelier...) : set = { back, [desks], front, light, W, H } produit par le kit. Calques : back, desks, qlayer, actors, front, light, motes.
+   *  opts : motes (nb), below (couleur sous le monde), moteColors. Meme camera que la salle (S.camSet / S.cam). */
+  S.set = function (root, set, opts) {
+    opts = opts || {};
+    S.css();
+    var W = set.W, H = set.H;
+    var cam = mk(root, 'st-cam'); cam.style.width = W + 'px'; cam.style.height = H + 'px'; cam.setAttribute('data-layout-allow-overflow', '');
+    var fx = mk(cam, 'st-fx'); fx.style.background = opts.below || '#3B1F12'; fx.style.top = (H - 4) + 'px'; fx.style.left = '-1200px'; fx.style.width = (W + 2400) + 'px'; fx.setAttribute('data-layout-allow-overflow', '');
+    var L = function (cls, html) { var d = mk(cam, 'st-l ' + cls, html); d.style.width = W + 'px'; d.style.height = H + 'px'; d.setAttribute('data-layout-allow-overflow', ''); return d; };
+    var back = L('st-back', set.back), desks = set.desks ? L('st-desks', set.desks) : null, qlayer = L('st-q', ''), actors = L('st-actors', ''), front = L('st-front', set.front || ''), light = L('st-light', set.light || '');
+    var motes = L('st-motes', Q.moteField({ n: opts.motes == null ? 30 : opts.motes, w: W, h: H, seed: opts.seed || 5, rmin: 2, rmax: 5, colors: opts.moteColors || ['#FFF3B0', '#FFE9A8', '#FFFFFF'] }));
+    gsap.set(cam, { transformOrigin: '0 0' });
+    return { cam: cam, back: back, desks: desks, qlayer: qlayer, actors: actors, front: front, light: light, motes: motes, W: W, H: H };
+  };
+  /** Ambiance generique : faisceaux qui respirent + poussiere doree qui monte (cycles finis). */
+  S.drift = function (tl, ref, span, at) {
+    at = at || 0;
+    ref.light.querySelectorAll('.ac-beams path').forEach(function (b, i) {
+      tl.fromTo(b, { opacity: 0.45 + i * 0.1 }, { opacity: 0.95, duration: 2.4 + i * 0.6, ease: 'sine.inOut', yoyo: true, repeat: Math.max(1, Math.floor(span / (2.4 + i * 0.6))) }, at);
+    });
+    ref.motes.querySelectorAll('.k-mote').forEach(function (m, i) {
+      var x = +m.dataset.x, y = +m.dataset.y;
+      tl.fromTo(m, { x: x, y: y, opacity: 0 }, { x: x + 30 - (i % 5) * 14, y: y - 120 - (i % 6) * 25, opacity: 0.85, duration: span * 0.5, ease: 'sine.out' }, at + (i % 7) * 0.12);
+      tl.to(m, { opacity: 0, duration: span * 0.5, ease: 'sine.in' }, at + span * 0.5 + (i % 7) * 0.12);
+    });
+  };
+  /** Accessoire du kit (QArt.prop) pose dans `layer`, centre en cx, bord haut en top, largeur w. */
+  S.prop = function (layer, key, cx, top, w, opts) {
+    var d = mk(layer, 'st-prop', Q.prop(key, Object.assign({ width: w }, opts || {}))); d.style.cssText = 'position:absolute;left:' + (cx - w / 2) + 'px;top:' + top + 'px;width:' + w + 'px';
+    d.setAttribute('data-layout-allow-overflow', ''); var sv = d.querySelector('svg'); if (sv) sv.style.overflow = 'visible';
+    return d;
+  };
   /** Camera : place (px,py) au centre de l'ecran, zoom s (immediat). */
   S.camSet = function (ref, px, py, s) { gsap.set(ref.cam, { x: 960 - px * s, y: 600 - py * s, scale: s, transformOrigin: '0 0' }); };
   /** Camera : mouvement anime. */

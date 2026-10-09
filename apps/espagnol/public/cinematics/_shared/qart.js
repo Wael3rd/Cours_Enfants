@@ -1005,9 +1005,15 @@ const CHAR_PIVOT = { head: '200 288', armL: '142 306', armR: '258 306', legL: '1
 const CHARS = {
   alex: { name: 'Álex', skin: '#E3AE86', hair: '#3A2216', top: '#19B7AA', pants: '#2B318A', shoes: '#F5E6C8', accent: '#D93472', mouthY: 0 },
   marina: { name: 'Marina', skin: '#D79A74', hair: '#2A160E', top: '#D93472', pants: '#0E7F82', shoes: '#FFC83D', accent: '#FFC83D', mouthY: 0 },
+  diego: { name: 'Diego', skin: '#C8895F', hair: '#2A1A12', top: '#2F6FD0', pants: '#3D4468', shoes: '#F5E6C8', accent: '#FFC83D', mouthY: 0 },
+  pilar: { name: 'Doña Pilar', skin: '#E2B592', hair: '#8A7A74', top: '#B4503A', pants: '#2B318A', shoes: '#3B2216', accent: '#E0A058', mouthY: 0 },
+  lola: { name: 'Lola', skin: '#D79A74', hair: '#1E120C', top: '#FFC83D', pants: '#F5E6C8', shoes: '#D93472', accent: '#D93472', mouthY: 0 },
+  abuela_carmen: { name: 'Abuela Carmen', skin: '#D9A47C', hair: '#E8E4DE', top: '#19B7AA', pants: '#6B3E7A', shoes: '#3B2216', accent: '#E0A058', mouthY: 0 },
+  rafa: { name: 'Tío Rafa', skin: '#C98A5E', hair: '#1E120C', top: '#2B318A', pants: '#3D4468', shoes: '#6B3E26', accent: '#D81E3A', mouthY: 14 },
   ignacio: { name: 'Don Ignacio', skin: '#D9A47C', hair: '#C9C5C0', top: '#E0A058', pants: '#2F5D50', shoes: '#6B3E26', accent: '#C9573B', mouthY: 14 },
 };
 function chTorso(k, c, g) {
+  if (CHX[k]) return CHX[k].torso(c);
   const shade2 = shade(c.top, -0.22);
   const base = `<path class="c-torso" d="M138 292Q200 272 262 292L276 442Q200 466 124 442Z" fill="${c.top}"/><path d="M262 292L276 442Q240 454 214 458L222 300Z" fill="${shade2}" opacity=".5"/>`;
   if (k === 'alex') return base + `<path d="M162 286Q200 330 238 286L238 306Q200 346 162 306Z" fill="${shade(c.top, -0.18)}"/><path d="M200 330V452" stroke="${PAL.sol}" stroke-width="5" stroke-linecap="round"/><path d="M152 404h96q8 30 -4 44h-88q-12 -14 -4 -44Z" fill="${shade(c.top, -0.12)}"/><path d="M168 292Q200 306 232 292" stroke="#fff" stroke-width="5" fill="none" opacity=".35" stroke-linecap="round"/>`;
@@ -1024,11 +1030,13 @@ function chLeg(c, side) {
   return `<g class="c-leg c-leg${side}"><path d="M${m(146)} 430H${m(206)}L${m(204)} 586H${m(150)}Z" fill="${c.pants}"/><path d="M${m(190)} 432H${m(206)}L${m(204)} 586H${m(188)}Z" fill="${dark}" opacity=".5"/><path d="M${m(142)} 586H${m(208)}V618Q${m(208)} 634 ${m(190)} 634H${m(128)}Q${m(122)} 634 ${m(124)} 624Q${m(128)} 598 ${m(142)} 586Z" fill="${shoe}"/><path d="M${m(124)} 624H${m(208)}V634H${m(128)}Q${m(122)} 634 ${m(124)} 624Z" fill="${shade(shoe, -0.35)}"/><path d="M${m(146)} 600Q${m(172)} 592 ${m(200)} 600" stroke="${c.accent}" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/></g>`;
 }
 function chHairBack(k, c) {
+  if (CHX[k]) return CHX[k].back ? CHX[k].back(c) : '';
   if (k === 'marina') return `<path d="M98 196Q84 84 200 78Q316 84 302 196Q320 290 292 346Q250 330 252 262L148 262Q150 330 108 346Q80 290 98 196Z" fill="${c.hair}"/>`;
   if (k === 'ignacio') return `<path d="M104 190Q96 224 112 250Q108 214 120 190Z M296 190Q304 224 288 250Q292 214 280 190Z" fill="${c.hair}"/>`;
   return '';
 }
 function chHairFront(k, c, g) {
+  if (CHX[k]) return CHX[k].front(c);
   if (k === 'alex') return `<path d="M100 184Q92 84 200 80Q308 84 300 184Q296 144 268 134Q254 164 224 142Q200 176 176 142Q148 164 136 134Q106 146 100 184Z" fill="${c.hair}"/><path d="M186 88Q196 48 230 66Q212 76 216 94Z" fill="${c.hair}"/><path d="M130 112Q156 92 186 96" stroke="${shade(c.hair, 0.25)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/>`;
   if (k === 'marina') return `<g class="c-tail" data-px="236" data-py="104"><path d="M236 98Q330 62 348 144Q356 210 322 262Q304 208 292 156Q272 122 236 122Z" fill="${c.hair}"/><path d="M300 120Q336 140 330 196" stroke="${shade(c.hair, 0.3)}" stroke-width="6" fill="none" stroke-linecap="round" opacity=".5"/></g><path d="M102 188Q96 94 200 88Q304 94 298 188Q272 132 234 142Q216 114 190 144Q150 124 102 188Z" fill="${c.hair}"/><path d="M106 152Q200 66 294 152L288 170Q200 92 112 170Z" fill="${PAL.sol}"/><circle cx="250" cy="104" r="14" fill="${PAL.sol}"/><path d="M244 104l6 -6 6 6 -6 6Z" fill="${PAL.magenta2}"/>`;
   return `<ellipse cx="200" cy="130" rx="160" ry="34" fill="#6B3E26"/><path d="M118 128Q120 36 200 32Q280 36 282 128Z" fill="#8A5230"/><path d="M118 128H282V104H118Z" fill="${c.accent}"/><path d="M118 112H282" stroke="#fff" stroke-width="3" opacity=".25"/><path d="M262 108Q300 70 332 78Q312 92 290 118Z" fill="${PAL.quetzal}"/><path d="M270 106Q306 86 326 82" stroke="${PAL.quetzalClaro}" stroke-width="3" fill="none"/><ellipse cx="200" cy="132" rx="160" ry="34" fill="none" stroke="${shade('#6B3E26', 0.2)}" stroke-width="4" opacity=".6"/><g fill="none" stroke="#E0A058" stroke-width="5"><circle cx="156" cy="82" r="15"/><circle cx="196" cy="82" r="15"/><path d="M171 82h10"/></g><path d="M120 128Q200 150 280 128" fill="#000" opacity=".16"/>`;
@@ -1046,7 +1054,7 @@ ${k === 'ignacio' ? '<path d="M120 214q-10 6 -12 16M280 214q10 6 12 16" stroke="
 <path d="M200 208q-9 15 0 21q9 4 14 -3" stroke="${shade(c.skin, -0.28)}" stroke-width="5" fill="none" stroke-linecap="round"/>
 <g class="c-mouth" transform="translate(0 ${my})"><path class="c-m-c" d="M168 246Q200 276 232 246" stroke="#7A2E2E" stroke-width="8" fill="none" stroke-linecap="round"/><g class="c-m-o" opacity="0"><ellipse cx="200" cy="256" rx="26" ry="22" fill="#6B1E24"/><path d="M178 244Q200 252 222 244L222 240H178Z" fill="#fff"/><ellipse cx="200" cy="270" rx="15" ry="8" fill="#E0606A"/></g></g>${stache}`;
 }
-/** Personnage : key 'alex'|'marina'|'ignacio'. opts : width, view ('full' | 'bust' | viewBox), uid, pack (sac a dos, defaut true). */
+/** Personnage : key 'alex'|'marina'|'ignacio'|'diego'|'pilar'|'lola'|'abuela_carmen'|'rafa'. opts : width, view ('full' | 'bust' | viewBox), uid, pack (sac a dos, defaut true). */
 function character(key, opts) {
   opts = opts || {};
   const c = CHARS[key] || CHARS.alex, id = opts.uid || uid('ch');
@@ -1059,7 +1067,7 @@ function character(key, opts) {
 ${bust ? '' : pack}${bust ? '' : chLeg(c, 'L') + chLeg(c, 'R')}
 <g class="c-body">${chTorso(key, c)}${strap}${bust ? '' : chArm(key, c, 'L') + chArm(key, c, 'R')}
 <rect x="184" y="268" width="32" height="30" fill="${shade(c.skin, -0.12)}"/>
-<g class="c-head">${chHairBack(key, c)}${chFace(key, c, id)}${chHairFront(key, c)}</g></g></g></svg>`;
+<g class="c-head">${chHairBack(key, c)}${chFace(key, c, id)}${chHairFront(key, c)}${CHX[key] && CHX[key].acc ? CHX[key].acc(c) : ''}</g></g></g></svg>`;
 }
 
 function cEl(root) { return typeof root === 'string' ? document.querySelector(root) : root; }
@@ -1125,5 +1133,516 @@ function charNod(tl, root, at, angle, dur) {
   tl.to(h, { rotation: 0, svgOrigin: CHAR_PIVOT.head, duration: d * 1.6, ease: 'power2.inOut' }, at + d);
 }
 
-window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod};
+// ---------------------------------------------------------------- personnages des unites 2 et 3 (meme chibi, 400x660) : Diego, Dona Pilar, Lola, Abuela Carmen, Tio Rafa
+// Chaque entree fournit torse (+ jupe/tablier), cheveux arriere/avant et accessoires de tete ; le reste (visage, bras, jambes, rig) vient de 08-characters.js.
+const CHX = {
+  diego: {
+    torso: (c) => `<path class="c-torso" d="M138 292Q200 272 262 292L276 442Q200 466 124 442Z" fill="${c.top}"/><path d="M262 292L276 442Q240 454 214 458L222 300Z" fill="${shade(c.top, -0.22)}" opacity=".5"/><path d="M162 286Q200 322 238 286L238 304Q200 340 162 304Z" fill="#F5E6C8"/><path d="M132 392L268 404L270 424L130 412Z" fill="${c.accent}"/><circle cx="236" cy="366" r="14" fill="${c.accent}"/><path d="M236 358l3 6h6l-5 4 2 7-6 -4 -6 4 2 -7 -5 -4h6Z" fill="${c.top}"/>`,
+    front: (c) => `<path d="M100 186Q88 88 200 80Q312 88 300 186Q292 150 266 144L254 112L228 150L204 104L180 150L152 114L136 144Q108 152 100 186Z" fill="${c.hair}"/><path d="M130 116Q160 94 190 100" stroke="${shade(c.hair, 0.3)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/>`,
+  },
+  pilar: {
+    torso: (c) => `<path d="M132 436L268 436L296 592Q200 612 104 592Z" fill="${c.pants}"/><path d="M200 440L206 600Q250 600 296 592L268 436Z" fill="#000" opacity=".16"/><path d="M130 296Q200 272 270 296L280 446Q200 470 120 446Z" fill="${c.top}"/><path d="M270 296L280 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.22)}" opacity=".5"/><path d="M162 288Q200 330 238 288L238 310Q200 352 162 310Z" fill="#F5E6C8"/><path d="M200 330V456" stroke="${shade(c.top, -0.35)}" stroke-width="5"/><circle cx="200" cy="372" r="5" fill="${c.accent}"/><circle cx="200" cy="414" r="5" fill="${c.accent}"/><path d="M168 300Q200 360 232 300" fill="none" stroke="${c.accent}" stroke-width="4" opacity=".9"/><circle cx="200" cy="352" r="9" fill="${c.accent}"/>`,
+    back: (c) => `<circle cx="200" cy="72" r="46" fill="${c.hair}"/><path d="M170 52Q200 30 232 52" stroke="${shade(c.hair, 0.35)}" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/><path d="M98 196Q86 90 200 78Q314 90 302 196Q312 250 286 262Q290 210 272 188L128 188Q110 210 114 262Q88 250 98 196Z" fill="${c.hair}"/>`,
+    front: (c) => `<path d="M102 190Q100 96 200 90Q300 96 298 190Q284 142 244 138Q210 118 168 140Q122 142 102 190Z" fill="${c.hair}"/><path d="M118 150Q160 112 214 122" stroke="${shade(c.hair, 0.4)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/>`,
+    acc: (c) => `<g fill="none" stroke="#3B2216" stroke-width="5"><rect x="124" y="176" width="64" height="50" rx="20" fill="#CFE9F5" fill-opacity=".18"/><rect x="212" y="176" width="64" height="50" rx="20" fill="#CFE9F5" fill-opacity=".18"/><path d="M188 196Q200 188 212 196"/><path d="M124 190L108 184M276 190L292 184"/></g>`,
+  },
+  lola: {
+    torso: (c) => `<path d="M134 436L266 436L306 540Q200 560 94 540Z" fill="${c.top}"/><path d="M206 440L220 552Q268 548 306 540L266 436Z" fill="#000" opacity=".12"/><path d="M96 520Q200 540 306 520L306 540Q200 562 94 540Z" fill="${c.accent}"/><path class="c-torso" d="M142 292Q200 276 258 292L270 446Q200 466 130 446Z" fill="${c.top}"/><path d="M258 292L270 446Q238 454 214 458L222 300Z" fill="${shade(c.top, -0.2)}" opacity=".5"/><path d="M150 292Q200 330 250 292L250 310Q200 350 150 310Z" fill="#F5E6C8"/><path d="M130 438Q200 462 270 438L270 456Q200 480 130 456Z" fill="${c.accent}"/><circle cx="200" cy="344" r="9" fill="${c.accent}"/>`,
+    back: (c) => `<path d="M104 186Q36 196 40 290Q58 326 96 288Q118 240 110 196Z" fill="${c.hair}"/><path d="M296 186Q364 196 360 290Q342 326 304 288Q282 240 290 196Z" fill="${c.hair}"/>`,
+    front: (c) => `<path d="M100 186Q98 92 200 86Q302 92 300 186Q282 138 244 150Q222 124 196 152Q150 130 100 186Z" fill="${c.hair}"/><path d="M122 134Q160 100 200 106" stroke="${shade(c.hair, 0.4)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/><g fill="${c.accent}"><path d="M92 222l-30 -22q-8 22 8 44Z"/><path d="M92 222l-6 -34q24 6 28 28Z"/><circle cx="92" cy="224" r="9"/><path d="M308 222l30 -22q8 22 -8 44Z"/><path d="M308 222l6 -34q-24 6 -28 28Z"/><circle cx="308" cy="224" r="9"/></g>`,
+  },
+  abuela_carmen: {
+    torso: (c) => `<path d="M130 436L270 436L298 596Q200 614 102 596Z" fill="${c.pants}"/><path d="M204 440L208 604Q252 602 298 596L270 436Z" fill="#000" opacity=".16"/><path d="M134 294Q200 272 266 294L278 446Q200 470 122 446Z" fill="${c.top}"/><path d="M266 294L278 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.22)}" opacity=".5"/><path d="M158 288Q200 322 242 288L242 308Q200 342 158 308Z" fill="#F5E6C8"/><path d="M152 336H248L262 470Q200 486 138 470Z" fill="#F5E6C8"/><path d="M152 336Q200 352 248 336" fill="none" stroke="${c.accent}" stroke-width="4"/><g fill="#D93472"><circle cx="176" cy="392" r="9"/><circle cx="224" cy="414" r="9"/><circle cx="196" cy="444" r="9"/></g><g fill="#FFC83D"><circle cx="176" cy="392" r="3.5"/><circle cx="224" cy="414" r="3.5"/><circle cx="196" cy="444" r="3.5"/></g><path d="M170 392q-14 -6 -10 -18M224 414q14 -6 10 -18" stroke="#0E9F6E" stroke-width="3" fill="none"/>`,
+    back: (c) => `<circle cx="200" cy="70" r="44" fill="${c.hair}"/><circle cx="200" cy="70" r="44" fill="none" stroke="#B8B3AD" stroke-width="4" opacity=".6"/><path d="M96 196Q86 90 200 78Q314 90 304 196Q310 240 290 252Q292 206 276 190L124 190Q108 206 110 252Q90 240 96 196Z" fill="${c.hair}"/>`,
+    front: (c) => `<path d="M104 190Q100 100 200 92Q300 100 296 190Q280 142 236 136Q208 112 170 138Q124 144 104 190Z" fill="${c.hair}"/><path d="M122 148Q164 112 214 122" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".7"/><g fill="#D93472"><circle cx="248" cy="84" r="10"/><circle cx="268" cy="96" r="8"/></g><path d="M240 80q-12 -14 6 -22" stroke="#0E9F6E" stroke-width="5" fill="none"/>`,
+    acc: (c) => `<g fill="#CFE9F5" fill-opacity=".16" stroke="${c.accent}" stroke-width="5"><circle cx="155" cy="200" r="30"/><circle cx="245" cy="200" r="30"/></g><path d="M185 198Q200 190 215 198M125 196L108 190M275 196L292 190" stroke="${c.accent}" stroke-width="5" fill="none"/>`,
+  },
+  rafa: {
+    torso: (c) => `<path class="c-torso" d="M136 292Q200 272 264 292L280 446Q200 470 120 446Z" fill="${c.top}"/><path d="M264 292L280 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.25)}" opacity=".5"/><path d="M156 336H244L258 476Q200 490 142 476Z" fill="#F5E6C8"/><path d="M156 336Q200 348 244 336" fill="none" stroke="#C9C0AB" stroke-width="4"/><path d="M162 290Q200 332 238 290L238 314Q200 356 162 314Z" fill="#F5E6C8"/><path d="M170 292V332M230 292V332" stroke="#C9C0AB" stroke-width="5"/><rect x="176" y="380" width="48" height="36" rx="8" fill="none" stroke="#C9C0AB" stroke-width="4"/>`,
+    front: (c) => `<path d="M100 182Q94 90 200 84Q306 90 300 182Q292 150 268 144Q238 134 200 144Q162 134 132 144Q108 150 100 182Z" fill="${c.hair}"/><path d="M98 138Q200 100 302 138L298 168Q200 132 102 168Z" fill="${c.accent}"/><path d="M98 138Q200 100 302 138" fill="none" stroke="#fff" stroke-width="3" opacity=".3"/><path d="M300 150Q340 150 350 176Q320 170 298 166Z" fill="${c.accent}"/><circle cx="160" cy="130" r="5" fill="#fff" opacity=".5"/><circle cx="214" cy="116" r="5" fill="#fff" opacity=".5"/><circle cx="262" cy="134" r="5" fill="#fff" opacity=".5"/>`,
+    acc: () => `<path d="M146 236Q174 214 200 232Q226 214 254 236Q248 258 200 246Q152 258 146 236Z" fill="#1E120C"/><path d="M164 238Q182 230 200 238Q218 230 236 238" stroke="#4A3A30" stroke-width="3" fill="none" opacity=".6"/>`,
+  },
+};
+
+// ---------------------------------------------------------------- accessoires d'histoire (unites 2 et 3) : cloche, bocadillo, chat, guitare, cazuela, grenouille, cigogne, enfant fige
+// Chaque prop = chaine SVG (viewBox fixe). Parties animables : .pr-bell (cloche, pivot haut), .pr-clap (battant), .pr-frog, .st-wing*.
+
+/** Stone sandstone palette (Salamanca) */
+const STN = { l: '#F8D993', m: '#EBB968', d: '#C98F45', dd: '#8E5A2C', roof: '#B4503A', roof2: '#8E3A2B' };
+
+/**
+ * Props. key : 'campana' (cloche de bronze 300x340, pivot haut 150 30) | 'bocadillo' (200x90) | 'gato' (chat orange assis 220x240) |
+ * 'guitarra' (160x420) | 'cazuela' (casserole 260x150) | 'rana' (grenouille de pierre 160x140, + crane) | 'azulejo' (carreau 120x120).
+ * opts : width, uid, tone (campana : 'bronce'|'muda' = gris terne).
+ */
+function prop(key, opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('pr'), g = (n) => `${id}-${n}`;
+  const mk = (vb, w, h, inner, cls) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" width="${w}" height="${h}" class="pr-svg ${cls || ''}" aria-hidden="true" style="overflow:visible">${inner}</svg>`;
+  if (key === 'campana') {
+    const mute = opts.tone === 'muda', b1 = mute ? '#8C8A93' : '#E3A53C', b2 = mute ? '#6C6A75' : '#B97A1E', b3 = mute ? '#B5B3BC' : '#FFE08A';
+    const W = opts.width || 300;
+    return mk('0 0 300 340', W, Math.round(W * 340 / 300), `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${b2}"/><stop offset=".35" stop-color="${b1}"/><stop offset=".6" stop-color="${b3}"/><stop offset="1" stop-color="${b2}"/></linearGradient></defs>
+<g class="pr-bell" data-px="150" data-py="34"><rect x="96" y="14" width="108" height="26" rx="10" fill="#6B3E26"/><rect x="96" y="14" width="108" height="8" rx="4" fill="#9A6038"/>
+<path d="M130 40h40v26h-40Z" fill="${b2}"/><path d="M150 52C84 56 66 138 50 234Q36 270 24 296H276Q264 270 250 234C234 138 216 56 150 52Z" fill="url(#${g('b')})"/>
+<path d="M24 296H276V312Q150 332 24 312Z" fill="${b2}"/><path d="M60 214Q150 236 240 214" stroke="${b2}" stroke-width="7" fill="none" opacity=".8"/><path d="M52 246Q150 268 248 246" stroke="${b3}" stroke-width="4" fill="none" opacity=".6"/>
+<path d="M112 90Q96 150 84 226" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" opacity=".35"/>
+<g class="pr-clap" data-px="150" data-py="280"><path d="M150 280V316" stroke="#4A2A1C" stroke-width="7"/><circle cx="150" cy="324" r="15" fill="#4A2A1C"/></g></g>`, 'pr-campana');
+  }
+  if (key === 'bocadillo') {
+    const W = opts.width || 200;
+    return mk('0 0 200 90', W, Math.round(W * 0.45), `<path d="M10 52Q4 22 40 20L170 18Q198 22 190 52Q194 78 160 80L40 82Q8 80 10 52Z" fill="#E8B15C"/><path d="M26 28Q100 10 176 28" stroke="#F8D993" stroke-width="7" fill="none" stroke-linecap="round" opacity=".8"/><g stroke="#B27A2E" stroke-width="5" stroke-linecap="round" opacity=".6"><path d="M52 26l-8 14M90 22l-8 14M128 22l-8 14M162 28l-8 12"/></g><path d="M16 56Q30 44 52 54Q80 44 104 54Q130 44 156 54Q176 46 188 56L186 68Q100 78 14 68Z" fill="#D8433F"/><path d="M18 62Q100 74 184 62" stroke="#F5E6C8" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M20 70Q100 84 182 70L176 78Q100 90 24 78Z" fill="#E8B15C"/>`, 'pr-bocadillo');
+  }
+  if (key === 'gato') {
+    const W = opts.width || 220;
+    return mk('0 0 220 240', W, Math.round(W * 240 / 220), `<g class="pr-cat"><path class="pr-tail" d="M170 206Q236 196 226 130Q220 104 200 112Q214 140 196 164Q176 178 150 186Z" fill="#E98A2E"/><path d="M62 228Q36 120 110 112Q184 120 162 228Z" fill="#F0A04B"/><path d="M96 228Q92 168 110 150Q132 168 128 228Z" fill="#FFE2B8"/>
+<g class="pr-cat-head"><path d="M50 78L58 30L88 56Q110 50 132 56L162 30L170 78Q176 138 110 142Q44 138 50 78Z" fill="#F0A04B"/><path d="M62 44L66 66L82 58ZM158 44L154 66L138 58Z" fill="#F7B6A0"/><path d="M96 66Q110 54 124 66" stroke="#C86A1C" stroke-width="5" fill="none"/><path d="M80 74q-2 14 4 24M140 74q2 14 -4 24" stroke="#C86A1C" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="84" cy="102" rx="12" ry="14" fill="#9BE08B"/><ellipse cx="136" cy="102" rx="12" ry="14" fill="#9BE08B"/><ellipse cx="84" cy="104" rx="4" ry="11" fill="#1E2A14"/><ellipse cx="136" cy="104" rx="4" ry="11" fill="#1E2A14"/><circle cx="88" cy="96" r="3.4" fill="#fff"/><circle cx="140" cy="96" r="3.4" fill="#fff"/>
+<path d="M104 118h12l-6 8Z" fill="#E8708A"/><path d="M110 126q-10 12 -20 6M110 126q10 12 20 6" stroke="#8A4A1C" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M60 116L22 108M60 126L24 132M160 116L198 108M160 126L196 132" stroke="#FFF1DC" stroke-width="3" stroke-linecap="round" opacity=".9"/></g>
+<path d="M70 222Q74 236 92 238L104 238Q108 226 98 220ZM150 222Q146 236 128 238L116 238Q112 226 122 220Z" fill="#FFE2B8"/></g>`, 'pr-gato');
+  }
+  if (key === 'guitarra') {
+    const W = opts.width || 160;
+    return mk('0 0 160 420', W, Math.round(W * 420 / 160), `<rect x="68" y="0" width="26" height="40" rx="6" fill="#4A2A1C"/><g fill="#E0C07A"><circle cx="64" cy="10" r="5"/><circle cx="64" cy="26" r="5"/><circle cx="98" cy="10" r="5"/><circle cx="98" cy="26" r="5"/></g><rect x="70" y="38" width="22" height="168" fill="#3B2216"/><path d="M81 40V300" stroke="#E8DDC4" stroke-width="2.5"/><g stroke="#C9B890" stroke-width="2" opacity=".8"><path d="M70 70h22M70 100h22M70 132h22M70 164h22"/></g>
+<path d="M81 196C26 196 8 232 22 262C-4 290 6 372 60 394Q81 402 102 394C156 372 166 290 140 262C154 232 136 196 81 196Z" fill="#C46B2E"/><path d="M81 206C38 206 24 236 36 258C16 284 24 360 66 380Q81 386 96 380C138 360 146 284 126 258C138 236 124 206 81 206Z" fill="#E0873A"/><circle cx="81" cy="290" r="26" fill="#2A160E"/><circle cx="81" cy="290" r="26" fill="none" stroke="#F8D993" stroke-width="6"/><rect x="58" y="344" width="46" height="12" rx="4" fill="#4A2A1C"/><path d="M40 244Q60 232 74 236" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".4"/>`, 'pr-guitarra');
+  }
+  if (key === 'cazuela') {
+    const W = opts.width || 260;
+    return mk('0 0 260 150', W, Math.round(W * 150 / 260), `<ellipse cx="130" cy="140" rx="110" ry="9" fill="#000" opacity=".25"/><path d="M26 62H234L222 120Q214 138 190 138H70Q46 138 38 120Z" fill="#C9573B"/><path d="M26 62H234L230 76H30Z" fill="#E8795A"/><path d="M232 78H256Q262 78 262 88Q262 98 254 98H228Z" fill="#8E3A2B"/><path d="M28 78H4Q-2 78 -2 88Q-2 98 6 98H32Z" fill="#8E3A2B"/><ellipse cx="130" cy="62" rx="104" ry="14" fill="#7A2E1E"/><ellipse cx="130" cy="62" rx="92" ry="10" fill="#E8A53C"/><g fill="#D8433F"><circle cx="96" cy="62" r="6"/><circle cx="130" cy="58" r="6"/><circle cx="164" cy="63" r="6"/></g><g fill="#3AA66A"><circle cx="112" cy="64" r="4"/><circle cx="148" cy="60" r="4"/></g><path d="M60 100Q130 112 200 100" stroke="#fff" stroke-width="5" fill="none" opacity=".25" stroke-linecap="round"/>`, 'pr-cazuela');
+  }
+  if (key === 'rana') {
+    const W = opts.width || 160, glow = opts.glow === false ? '' : `<ellipse class="fz-glow" cx="80" cy="60" rx="120" ry="100" fill="url(#${g('gl')})" opacity="0"/>`;
+    return mk('0 0 160 150', W, Math.round(W * 150 / 160), `<defs><radialGradient id="${g('gl')}"><stop offset="0" stop-color="#9bffd6" stop-opacity=".95"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".45"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs>${glow}
+<path d="M30 148V104Q30 70 80 70Q130 70 130 104V148Z" fill="${STN.d}"/><ellipse cx="80" cy="104" rx="46" ry="38" fill="#F2E6C8"/><ellipse cx="62" cy="104" rx="11" ry="13" fill="#4A2A1C"/><ellipse cx="98" cy="104" rx="11" ry="13" fill="#4A2A1C"/><path d="M76 120l4 -10 4 10Z" fill="#4A2A1C"/><path d="M58 138h44" stroke="#4A2A1C" stroke-width="5"/><path d="M68 138v-10M80 138v-10M92 138v-10" stroke="#4A2A1C" stroke-width="4"/>
+<g class="pr-frog"><path d="M34 70Q30 40 58 34Q80 28 102 34Q130 40 126 70Q118 82 80 82Q42 82 34 70Z" fill="${STN.m}"/><path d="M34 70Q30 40 58 34Q80 28 102 34Q130 40 126 70" fill="none" stroke="${STN.l}" stroke-width="4" opacity=".8"/><circle cx="52" cy="32" r="16" fill="${STN.m}"/><circle cx="108" cy="32" r="16" fill="${STN.m}"/><circle cx="52" cy="32" r="8" fill="#fff" opacity=".95"/><circle cx="108" cy="32" r="8" fill="#fff" opacity=".95"/><circle class="pr-eye" cx="52" cy="33" r="4.4" fill="#0E7F52"/><circle class="pr-eye" cx="108" cy="33" r="4.4" fill="#0E7F52"/><path d="M52 62Q80 78 108 62" stroke="${STN.dd}" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M40 78Q30 92 44 98M120 78Q130 92 116 98" stroke="${STN.d}" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M74 48q6 4 12 0" stroke="${STN.dd}" stroke-width="3" fill="none"/></g>`, 'pr-rana');
+  }
+  if (key === 'azulejo') {
+    const W = opts.width || 120, c = opts.c || '#2F6FD0';
+    return mk('0 0 100 100', W, W, `${azulejoPattern(g('t'), { a: opts.a || '#F5E6C8', b: c, c: opts.cc || PAL.sol, d: opts.d || '#F5E6C8' })}<rect width="100" height="100" rx="6" fill="url(#${g('t')})"/><rect x="2" y="2" width="96" height="96" rx="6" fill="none" stroke="#fff" stroke-width="3" opacity=".55"/>`, 'pr-azulejo');
+  }
+  return '';
+}
+
+/** Cigogne (cigueña) en vol (160x100) : ailes .st-wing (pivot epaule) a battre par rotation ; en 'rest' : posee sur un nid (120x150). */
+function storkSvg(opts) {
+  opts = opts || {};
+  const W = opts.width || 160;
+  if (opts.rest) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" width="${W}" height="${Math.round(W * 150 / 120)}" class="st-svg" aria-hidden="true" style="overflow:visible"><path d="M30 140Q60 150 90 140L100 120H20Z" fill="#8A5A30"/><path d="M14 124l24 -8M96 116l16 -6M30 138l-12 6M88 140l16 4M44 120l-6 -12M76 118l8 -12" stroke="#6B3E26" stroke-width="5" stroke-linecap="round"/>
+<path d="M44 118L40 80M76 118L80 80" stroke="#D8433F" stroke-width="5" stroke-linecap="round"/><path d="M34 82Q34 50 64 48Q96 52 92 86Q80 110 54 108Q36 104 34 82Z" fill="#fff"/><path d="M40 92Q64 112 92 82L90 96Q70 118 44 108Z" fill="#1E1A2B"/><g class="st-neck"><path d="M76 56Q92 40 86 22Q84 12 94 10L94 24Q108 34 90 62Z" fill="#fff"/><circle cx="92" cy="14" r="9" fill="#fff"/><path d="M98 12L132 20L98 22Z" fill="#D8433F"/><circle cx="94" cy="12" r="2.4" fill="#1E1A2B"/></g></svg>`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="${W}" height="${Math.round(W * 100 / 160)}" class="st-svg" aria-hidden="true" style="overflow:visible"><path d="M40 70L8 78" stroke="#D8433F" stroke-width="4" stroke-linecap="round"/><path d="M46 74L14 90" stroke="#D8433F" stroke-width="4" stroke-linecap="round"/>
+<g class="st-wing st-wingB" data-px="80" data-py="50"><path d="M80 50Q60 6 14 8Q40 30 54 54Z" fill="#fff"/><path d="M14 8Q40 30 54 54L46 54Q36 30 14 8Z" fill="#1E1A2B"/></g><path d="M126 46Q150 38 156 50L126 56Z" fill="#D8433F"/><path d="M40 60Q40 40 76 40Q112 40 120 54Q112 70 76 72Q46 74 40 60Z" fill="#fff"/><path d="M110 50Q124 42 128 50Q122 58 112 58Z" fill="#fff"/><circle cx="120" cy="46" r="2.4" fill="#1E1A2B"/>
+<g class="st-wing st-wingF" data-px="82" data-py="50"><path d="M82 50Q104 4 150 6Q124 30 108 56Z" fill="#fff"/><path d="M150 6Q124 30 108 56L116 56Q126 30 150 6Z" fill="#1E1A2B"/></g></svg>`;
+}
+
+/** Enfant "fige" (silence de la Sombra) : silhouette de papier decoupe grise-bleutee, bouche fermee, pose figee. pose : 'stand'|'ball'|'rope'|'run'|'sit'. 200x340. */
+function frozenKid(opts) {
+  opts = opts || {};
+  const W = opts.width || 120, pose = opts.pose || 'stand', c = opts.color || '#7A85B8', h = opts.hair || '#3A3F73', sk = opts.skin || '#B5BCD9', sh = shade(c, -0.25);
+  const arms = pose === 'ball' ? `<path d="M64 130L28 70" stroke="${c}" stroke-width="22" stroke-linecap="round"/><path d="M136 130L172 70" stroke="${c}" stroke-width="22" stroke-linecap="round"/><circle cx="100" cy="36" r="26" fill="#C9CCE3"/><path d="M80 24Q100 40 120 24M80 48Q100 32 120 48" stroke="${sh}" stroke-width="4" fill="none"/>`
+    : pose === 'rope' ? `<path d="M64 130L30 170" stroke="${c}" stroke-width="22" stroke-linecap="round"/><path d="M136 130L170 170" stroke="${c}" stroke-width="22" stroke-linecap="round"/><path d="M30 172Q100 330 170 172" stroke="#9AA2CF" stroke-width="5" fill="none"/>`
+    : `<path d="M64 130L50 220" stroke="${c}" stroke-width="22" stroke-linecap="round"/><path d="M136 130L150 220" stroke="${c}" stroke-width="22" stroke-linecap="round"/>`;
+  const legs = pose === 'run' ? `<path d="M84 224L52 322" stroke="${sh}" stroke-width="24" stroke-linecap="round"/><path d="M116 224L150 300" stroke="${sh}" stroke-width="24" stroke-linecap="round"/>` : `<path d="M84 226V320" stroke="${sh}" stroke-width="26" stroke-linecap="round"/><path d="M116 226V320" stroke="${sh}" stroke-width="26" stroke-linecap="round"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 340" width="${W}" height="${Math.round(W * 340 / 200)}" class="fk-svg" aria-hidden="true" style="overflow:visible">${arms}${legs}<path d="M58 124Q100 106 142 124L148 236H52Z" fill="${c}"/><circle cx="100" cy="90" r="42" fill="${sk}"/><path d="M58 88Q56 40 100 40Q146 40 142 88Q130 60 100 66Q70 60 58 88Z" fill="${h}"/><path d="M84 104h32" stroke="${sh}" stroke-width="5" stroke-linecap="round"/><circle cx="84" cy="88" r="4.5" fill="${sh}"/><circle cx="116" cy="88" r="4.5" fill="${sh}"/></svg>`;
+}
+
+// ---------------------------------------------------------------- decors de Salamanca (unite 2) : facade plateresque de l'Universite (+ la grenouille), panorama dore, patio du colegio, salle de classe
+// Pierre dorée de Villamayor : meme langage graphique que Madrid / Academia (aplats + ombrages, calques separes pour la parallaxe).
+// Aucun texte, aucune marque : monuments publics simplifies.
+
+/** Position de la grenouille sur la facade (repere 1000x820) : coin haut-gauche + largeur ; centre = (x + w/2, y + w*0.47). */
+const FROG = { x: 290, y: 316, w: 120 };
+function archOpen(x, yb, w, h) { const r = w / 2; return `M${r1(x)} ${r1(yb)}V${r1(yb - h + r)}A${r1(r)} ${r1(r)} 0 0 1 ${r1(x + w)} ${r1(yb - h + r)}V${r1(yb)}Z`; }
+/** Appareil de pierre : joints horizontaux + joints verticaux decales. */
+function stoneBlocks(x, y, w, h, rowH, seed, c, op) {
+  const rnd = rng(seed); let s = '';
+  for (let r = 0; r * rowH < h; r++) {
+    const yy = y + r * rowH;
+    s += `<path d="M${r1(x)} ${r1(yy)}H${r1(x + w)}" stroke="${c}" stroke-width="2" opacity="${op || 0.3}"/>`;
+    for (let xx = x + (r % 2) * rowH * 1.1 + rowH * (1.4 + rnd()); xx < x + w; xx += rowH * (2.1 + rnd() * 1.4)) s += `<path d="M${r1(xx)} ${r1(yy)}v${rowH}" stroke="${c}" stroke-width="2" opacity="${(op || 0.3) * 0.85}"/>`;
+  }
+  return s;
+}
+/** Frise sculptee : motifs repetes (circ | dia | scal | star) dans une bande x,y,w,h. */
+function carvedBand(x, y, w, h, kind, c, bg) {
+  const n = Math.max(1, Math.floor(w / (h * 0.95))), st = w / n; let s = bg ? scRect(x, y, w, h, bg) : '';
+  for (let i = 0; i < n; i++) {
+    const cx = x + st * (i + 0.5), cy = y + h / 2;
+    if (kind === 'circ') s += `<circle cx="${r1(cx)}" cy="${r1(cy)}" r="${r1(h * 0.3)}" fill="${c}"/>`;
+    else if (kind === 'dia') s += `<path d="${diamondPath(r1(cx), r1(cy), r1(h * 0.28), r1(h * 0.4))}" fill="${c}"/>`;
+    else if (kind === 'star') s += `<path d="${starPath(cx, cy, h * 0.42, h * 0.2, 6, 0)}" fill="${c}"/>`;
+    else s += `<path d="M${r1(cx - st / 2 + 1)} ${r1(y + h)}A${r1(st / 2 - 1)} ${r1(h * 0.9)} 0 0 1 ${r1(cx + st / 2 - 1)} ${r1(y + h)}Z" fill="${c}"/>`;
+  }
+  return s;
+}
+function wallWindow(x, y, w, h, S) { // fenetre en arc avec grille
+  const r = w / 2;
+  return `<path d="${archOpen(x - 8, y + h + 8, w + 16, h + 16)}" fill="${S.l}"/><path d="${archOpen(x, y + h, w, h)}" fill="#3B2216"/><path d="M${x + r} ${y + h - h + 4}V${y + h}M${x + 6} ${y + h * 0.55}H${x + w - 6}" stroke="${S.m}" stroke-width="4" opacity=".7"/><path d="M${x} ${y + h}H${x + w}" stroke="${S.dd}" stroke-width="6"/>`;
+}
+
+/**
+ * Facade plateresque de l'Universite de Salamanca (1000 x 820) : retablo sculpte (medaillon, niches, portail), ailes a fenetres, et la
+ * petite grenouille de pierre sur son crane (.fz-frog = groupe, .fz-glow = halo vert, a animer). opts : width, uid, frog (defaut true).
+ */
+function fachadaUniversidad(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('fu'), W = opts.width || 1000, H = Math.round(W * 0.82), S = STN, g = (n) => `${id}-${n}`;
+  let s = `<defs><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${S.l}"/><stop offset=".35" stop-color="${S.m}"/><stop offset="1" stop-color="${S.d}"/></linearGradient><linearGradient id="${g('p')}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${S.d}"/><stop offset=".3" stop-color="${S.l}"/><stop offset=".7" stop-color="${S.l}"/><stop offset="1" stop-color="${S.d}"/></linearGradient></defs>`;
+  s += scRect(0, 96, 1000, 724, `url(#${g('w')})`) + stoneBlocks(0, 96, 1000, 724, 46, 3, S.dd, 0.32);
+  // couronnement : corniche + balustrade + pinacles
+  s += scRect(0, 70, 1000, 26, S.l) + scRect(0, 90, 1000, 8, S.dd, 'opacity=".4"') + carvedBand(0, 74, 1000, 14, 'dia', S.d);
+  for (let i = 0; i < 40; i++) s += scRect(12 + i * 25, 38, 9, 32, S.m) + scRect(8 + i * 25, 34, 17, 7, S.l);
+  [60, 940].forEach((x) => { s += `<path d="M${x - 16} 34L${x} -6L${x + 16} 34Z" fill="${S.m}"/><rect x="${x - 16}" y="34" width="32" height="40" fill="${S.l}"/>`; });
+  // ailes : fenetres en arc + bandeaux
+  [[40, 210], [140, 210], [40, 470], [140, 470], [756, 210], [856, 210], [756, 470], [856, 470]].forEach((p) => { s += wallWindow(p[0] + 10, p[1], 52, 104, S); });
+  s += scRect(0, 380, 290, 14, S.l) + scRect(710, 380, 290, 14, S.l) + scRect(0, 394, 290, 6, S.dd, 'opacity=".3"') + scRect(710, 394, 290, 6, S.dd, 'opacity=".3"');
+  s += scRect(0, 640, 290, 16, S.l) + scRect(710, 640, 290, 16, S.l);
+  // retablo : cadre, colonnes-candelabres, etages
+  s += scRect(276, 20, 448, 704, S.dd, 'rx="6" opacity=".45"') + scRect(284, 28, 432, 696, `url(#${g('p')})`, 'rx="4"') + scRect(284, 28, 432, 696, 'none', `stroke="${S.dd}" stroke-width="5" rx="4" opacity=".6"`);
+  s += carvedBand(284, 28, 432, 20, 'scal', S.m, S.l);
+  [296, 660].forEach((x) => {
+    s += scRect(x, 60, 44, 650, S.l, 'opacity=".55"');
+    for (let i = 0; i < 11; i++) { const y = 70 + i * 58; s += `<path d="M${x + 22} ${y}q-16 6 -14 22q-8 8 -6 18h40q2 -10 -6 -18q2 -16 -14 -22Z" fill="${S.m}"/><circle cx="${x + 22}" cy="${y + 4}" r="5" fill="${S.d}"/><path d="${diamondPath(x + 22, y + 46, 9, 9)}" fill="${S.d}"/>`; }
+  });
+  // etage 1 : fronton + medaillon
+  s += `<path d="M360 150Q360 56 500 50Q640 56 640 150Z" fill="${S.m}"/><path d="M372 150Q372 70 500 64Q628 70 628 150Z" fill="${S.l}"/>`;
+  s += `<circle cx="500" cy="106" r="42" fill="${S.dd}"/><circle cx="500" cy="106" r="34" fill="${S.m}"/><path d="M488 112q0 -22 12 -22q12 0 12 22Z" fill="${S.l}"/><circle cx="500" cy="92" r="9" fill="${S.l}"/>`;
+  s += carvedBand(360, 150, 280, 14, 'circ', S.d, S.l);
+  // etage 2 : ecu + grand medaillon des Rois Catholiques
+  s += `<path d="M470 176h60v30Q530 232 500 240Q470 232 470 206Z" fill="${S.dd}"/><path d="M478 182h44v24Q522 224 500 230Q478 224 478 206Z" fill="${S.m}"/><path d="M500 184v44M478 204h44" stroke="${S.d}" stroke-width="4"/>`;
+  s += `<circle cx="500" cy="318" r="74" fill="${S.dd}"/><circle cx="500" cy="318" r="64" fill="${S.l}"/><circle cx="500" cy="318" r="52" fill="${S.m}"/>`;
+  for (let i = 0; i < 20; i++) { const a = (i / 20) * Math.PI * 2; s += `<circle cx="${r1(500 + Math.cos(a) * 70)}" cy="${r1(318 + Math.sin(a) * 70)}" r="4.4" fill="${S.m}"/>`; }
+  s += `<circle cx="476" cy="306" r="17" fill="${S.l}"/><circle cx="524" cy="306" r="17" fill="${S.l}"/><path d="M458 350Q466 326 490 332Q494 346 490 352ZM542 350Q534 326 510 332Q506 346 510 352Z" fill="${S.l}"/><path d="M486 284l7 -14 7 14 7 -14 7 14Z" fill="${S.d}"/><path d="M468 304q8 -10 14 0M518 304q8 -10 14 0" stroke="${S.dd}" stroke-width="3" fill="none"/>`;
+  s += carvedBand(360, 398, 280, 16, 'star', S.d, S.l);
+  // etage 3 : trois niches avec statues
+  [366, 458, 550].forEach((x, i) => {
+    s += `<path d="${archOpen(x - 6, 540, 92, 134)}" fill="${S.dd}"/><path d="${archOpen(x, 540, 80, 124)}" fill="#6B4222"/>`;
+    s += `<circle cx="${x + 40}" cy="486" r="12" fill="${S.l}"/><path d="M${x + 22} 540Q${x + 24} 504 ${x + 40} 502Q${x + 56} 504 ${x + 58} 540Z" fill="${S.l}"/><path d="M${x + 22} 540h36" stroke="${S.d}" stroke-width="4"/>`;
+  });
+  s += carvedBand(360, 550, 280, 16, 'dia', S.d, S.l);
+  // etage 4 : portail a deux vantaux
+  s += `<path d="${archOpen(398, 724, 204, 164)}" fill="${S.dd}"/><path d="${archOpen(408, 724, 184, 154)}" fill="#4A2A1C"/><path d="M500 574V724" stroke="#2A160E" stroke-width="6"/><g stroke="#6B4222" stroke-width="4" fill="none"><path d="${archOpen(418, 724, 76, 130)}"/><path d="${archOpen(506, 724, 76, 130)}"/></g><circle cx="486" cy="660" r="5" fill="${S.l}"/><circle cx="514" cy="660" r="5" fill="${S.l}"/>`;
+  [0, 1, 2].forEach((k) => { s += scRect(372 - k * 12, 724 + k * 18 - 18, 256 + k * 24, 18, k % 2 ? S.d : S.l); });
+  // sol : parvis dore
+  s += scRect(0, 764, 1000, 56, S.d, 'opacity=".55"') + `<path d="M0 764H1000" stroke="${S.dd}" stroke-width="3" opacity=".5"/>`;
+  for (let i = 0; i < 16; i++) s += `<path d="M${r1(500 + (i - 8) * 22)} 764L${r1(500 + (i - 8) * 120)} 820" stroke="${S.dd}" stroke-width="2" opacity=".25"/>`;
+  // la grenouille sur le crane (pilastre de gauche, 3e niveau) : prop 'rana' emboite
+  if (opts.frog !== false) s += prop('rana', { uid: g('fr'), width: FROG.w }).replace('<svg ', `<svg x="${FROG.x}" y="${FROG.y}" `);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" width="${W}" height="${H}" class="fz-svg" aria-hidden="true" style="overflow:visible">${s}</svg>`;
+}
+
+// ---------------------------------------------------------------- panorama de Salamanca, fin d'apres-midi (3200 x 1200)
+function catedralFar(x, base, col) {
+  return `<g fill="${col}">${scRect(x, base - 170, 420, 170)}${scRect(x + 130, base - 250, 160, 80)}<path d="M${x + 120} ${base - 250}Q${x + 210} ${base - 400} ${x + 300} ${base - 250}Z"/>${scRect(x + 200, base - 440, 20, 40)}<path d="M${x + 210} ${base - 470}v-26M${x + 196} ${base - 458}h28" stroke="${col}" stroke-width="5"/>
+${scRect(x - 20, base - 330, 104, 330)}<path d="M${x - 28} ${base - 330}L${x + 32} ${base - 440}L${x + 92} ${base - 330}Z"/>${scRect(x + 336, base - 300, 104, 300)}<path d="M${x + 328} ${base - 300}L${x + 388} ${base - 410}L${x + 448} ${base - 300}Z"/></g><g fill="#fff" opacity=".18">${scRect(x + 6, base - 290, 12, 40)}${scRect(x + 356, base - 270, 12, 40)}</g>`;
+}
+function plazaMayorSal(x, base, wTot) { // facade doree a arcades, medaillons, balcons, pavillon a horloge
+  const S = STN; let s = `<g class="sk-plazaSal">`;
+  const h1 = 150, h2 = 120, h3 = 100;
+  s += scRect(x, base - h1 - h2 - h3, wTot, h1 + h2 + h3, S.m) + scRect(x, base - h1 - h2 - h3, wTot, 14, S.l);
+  s += stoneBlocks(x, base - h1 - h2 - h3, wTot, h1 + h2 + h3, 40, 5, S.dd, 0.22);
+  const n = Math.floor(wTot / 96), st = wTot / n;
+  for (let i = 0; i < n; i++) {
+    const ax = x + i * st + st * 0.14, aw = st * 0.72;
+    s += `<path d="${archOpen(ax, base, aw, h1 - 12)}" fill="#4B2A66"/><path d="${archOpen(ax + 6, base, aw - 12, h1 - 22)}" fill="#7A3E5E" opacity=".5"/><circle cx="${r1(ax + aw / 2)}" cy="${r1(base - h1 - 8)}" r="${r1(st * 0.13)}" fill="${S.l}" stroke="${S.d}" stroke-width="3"/>`;
+    s += scRect(ax + aw * 0.2, base - h1 - h2 + 18, aw * 0.6, h2 - 38, '#4B2A66', 'rx="4"') + scRect(ax + aw * 0.1, base - h1 - h2 + 12, aw * 0.8, 8, S.l) + scRect(ax + aw * 0.08, base - h1 - 22, aw * 0.84, 10, S.dd, 'opacity=".5"');
+    s += `<path d="M${r1(ax + aw * 0.1)} ${r1(base - h1 - 22)}v-14M${r1(ax + aw * 0.3)} ${r1(base - h1 - 22)}v-14M${r1(ax + aw * 0.5)} ${r1(base - h1 - 22)}v-14M${r1(ax + aw * 0.7)} ${r1(base - h1 - 22)}v-14M${r1(ax + aw * 0.9)} ${r1(base - h1 - 22)}v-14" stroke="${S.l}" stroke-width="4"/>`;
+    s += scRect(ax + aw * 0.28, base - h1 - h2 - h3 + 26, aw * 0.44, h3 - 46, '#4B2A66', 'rx="3"');
+    if (i % 2 === 0) s += `<path d="M${r1(ax + aw / 2)} ${r1(base - h1 - h2 - h3 - 2)}l8 -22 8 22Z" fill="${S.l}"/>`;
+  }
+  s += scRect(x - 6, base - 10, wTot + 12, 10, S.dd, 'opacity=".5"');
+  return s + '</g>';
+}
+function relojPavilion(x, base) {
+  const S = STN, w = 260, h = 330;
+  return `<g class="sk-reloj">${scRect(x, base - h, w, h, S.m)}${scRect(x - 10, base - h, w + 20, 18, S.l)}${scRect(x + 20, base - h - 120, w - 40, 120, S.m)}<path d="M${x + 6} ${base - h - 120}L${x + w / 2} ${base - h - 220}L${x + w - 6} ${base - h - 120}Z" fill="${S.roof}"/>
+<circle cx="${x + w / 2}" cy="${base - h - 64}" r="44" fill="#FFF4D8" stroke="${S.dd}" stroke-width="7"/><path d="M${x + w / 2} ${base - h - 64}v-28M${x + w / 2} ${base - h - 64}l20 10" stroke="#3B2216" stroke-width="5" stroke-linecap="round"/>
+<path d="M${x + w / 2} ${base - h - 220}v-36" stroke="${S.dd}" stroke-width="5"/><path d="M${x + w / 2} ${base - h - 256}l34 10 -34 10Z" fill="#D8433F"/>
+${scRect(x + 30, base - 200, 60, 200, '#4B2A66', 'rx="4"')}${scRect(x + 170, base - 200, 60, 200, '#4B2A66', 'rx="4"')}<path d="${archOpen(x + 100, base, 60, 150)}" fill="#4B2A66"/>${windowsGrid(x + 24, base - h + 40, w - 48, 120, 4, 2, 0.45, 21, '#FFE9A8', '#4B2A66')}</g>`;
+}
+/** Retourne { sky, sun, far, mid, near, W, H, sunX, sunY } : 5 SVG de 3200x1200 pour la parallaxe (comme madridSkyline). */
+function salamancaSkyline(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('ss'), g = (n) => `${id}-${n}`, W = SKY.W, H = SKY.H, hz = SKY.horizon, S = STN, rnd = rng(opts.seed || 17);
+  let clouds = ''; [[300, 250, 520, 90], [980, 160, 620, 100], [1700, 330, 560, 92], [2350, 190, 640, 104], [2880, 380, 460, 80], [620, 430, 420, 72]].forEach((c, i) => { clouds += cloudSvg(c[0], c[1], c[2], c[3], 70 + i * 3, 'front'); });
+  const sky = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F9BDD"/><stop offset=".3" stop-color="#8CC8EC"/><stop offset=".55" stop-color="#F5E5B8"/><stop offset=".75" stop-color="#FFCF88"/><stop offset="1" stop-color="#FF9F5A"/></linearGradient></defs>${scRect(0, 0, W, H, `url(#${g('s')})`)}${clouds}`, 'sk-sky');
+  const sx = opts.sunX || 2050, sy = opts.sunY || hz - 360;
+  let rays = ''; for (let i = 0; i < 12; i++) { const a = (i / 12) * Math.PI * 2, a2 = a + Math.PI / 38; rays += `<path d="M${sx} ${sy}L${r1(sx + Math.cos(a) * 1500)} ${r1(sy + Math.sin(a) * 1500)}L${r1(sx + Math.cos(a2) * 1500)} ${r1(sy + Math.sin(a2) * 1500)}Z"/>`; }
+  const sun = scSvg(W, H, `<defs><radialGradient id="${g('h')}"><stop offset="0" stop-color="#FFF7C8" stop-opacity=".95"/><stop offset=".35" stop-color="#FFD76A" stop-opacity=".5"/><stop offset="1" stop-color="#FFB05A" stop-opacity="0"/></radialGradient></defs><g class="sk-rays" fill="#FFF3B0" opacity=".12" data-px="${sx}" data-py="${sy}">${rays}</g><circle cx="${sx}" cy="${sy}" r="520" fill="url(#${g('h')})"/><circle class="sk-disc" cx="${sx}" cy="${sy}" r="150" fill="#FFF3C0"/><circle cx="${sx}" cy="${sy}" r="150" fill="none" stroke="#FFFFFF" stroke-width="8" opacity=".5"/>`, 'sk-sun');
+  let hills = `M0 ${hz}`; for (let x = 0; x <= W; x += 80) hills += `L${x} ${r1(hz - 70 - 50 * Math.sin(x / 400) - 28 * Math.sin(x / 150 + 1))}`; hills += `L${W} ${hz}Z`;
+  let blocks = ''; for (let x = -20; x < W; x += 60) { const h = 30 + rnd() * 90; blocks += scRect(x, hz - h, 54, h + 4, '#D9A77C'); }
+  const far = scSvg(W, H, `<path d="${hills}" fill="#E7B98A" opacity=".75"/><g opacity=".8">${blocks}</g><g opacity=".85" transform="translate(240 ${hz - 6})">${catedralFar(0, 0, '#D6A67A')}</g><g opacity=".7" transform="translate(2050 ${hz - 6}) scale(.8)">${catedralFar(0, 0, '#D6A67A')}</g>${scRect(0, hz - 2, W, H - hz + 2, '#D9A77C')}`, 'sk-far');
+  const uni = fachadaUniversidad({ uid: g('u'), width: 900 }).replace('<svg ', `<svg x="${1500}" y="${hz - 22 - 738}" `);
+  const mid = scSvg(W, H, `${scRect(0, hz - 36, W, H - hz + 36, '#B88556')}<g>${plazaMayorSal(40, hz - 22, 1280)}${relojPavilion(560, hz - 22)}</g>${uni}${plazaMayorSal(2420, hz - 22, 780)}${scRect(0, hz - 22, W, 22, '#9A6A40')}`, 'sk-mid');
+  // premier plan : toits en tuiles, espadana avec sa cloche muette, nids de cigognes, lampadaires
+  let roofs = ''; let x = -40;
+  while (x < W) {
+    const w = 170 + rnd() * 170, top = hz + 70 + (rnd() - 0.5) * 24;
+    roofs += `<path d="M${r1(x)} ${H}V${r1(top + 40)}L${r1(x + 16)} ${r1(top)}H${r1(x + w - 16)}L${r1(x + w)} ${r1(top + 40)}V${H}Z" fill="${S.roof2}"/><path d="M${r1(x + 16)} ${r1(top)}H${r1(x + w - 16)}L${r1(x + w - 8)} ${r1(top + 24)}H${r1(x + 8)}Z" fill="${S.roof}"/>`;
+    for (let k = 0; k < Math.floor(w / 24); k++) roofs += `<path d="M${r1(x + 10 + k * 24)} ${r1(top + 26)}v44" stroke="${S.roof2}" stroke-width="3" opacity=".6"/>`;
+    roofs += windowsGrid(x + 18, top + 90, w - 36, 120, Math.max(2, Math.round(w / 70)), 2, 0.4, Math.round(x) + 5, '#FFD98A', '#4B2A3A');
+    if (rnd() < 0.3) roofs += scRect(x + w * 0.6, top - 40, 22, 44, S.roof2);
+    x += w - 6;
+  }
+  const bellGable = (gx, nest) => `<g class="sk-espadana" transform="translate(${gx} ${hz + 40})">${scRect(0, -300, 260, 340, S.m)}${stoneBlocks(0, -300, 260, 340, 34, 9, S.dd, 0.3)}${scRect(-14, -312, 288, 18, S.l)}<path d="M20 -312L130 -400L240 -312Z" fill="${S.m}"/><path d="M122 -400V-428M110 -418h24" stroke="${S.dd}" stroke-width="5"/>
+<path d="${archOpen(30, -120, 80, 150)}" fill="#3B2216"/><path d="${archOpen(150, -120, 80, 150)}" fill="#3B2216"/><g class="sk-bell" data-px="70" data-py="-262"><path d="M70 -266v16" stroke="#3B2216" stroke-width="5"/><path d="M70 -252C42 -250 36 -214 28 -170Q22 -158 14 -150H126Q118 -158 112 -170C104 -214 98 -250 70 -252Z" fill="#8C8A93"/><path d="M14 -150H126V-142Q70 -132 14 -142Z" fill="#6C6A75"/><circle cx="70" cy="-136" r="8" fill="#4A4A55"/></g>
+<g transform="translate(150 -266)"><path d="M0 0v110" stroke="#3B2216" stroke-width="5"/></g>${nest ? `<g transform="translate(24 -396)">${storkSvg({ rest: true, width: 120 })}</g>` : ''}</g>`;
+  let lamps = ''; [200, 1180, 1900, 2640].forEach((lx) => { lamps += `<path d="M${lx} ${H}V${hz + 130}" stroke="#2A160E" stroke-width="9"/><path d="M${lx - 22} ${hz + 130}h44l-10 -34h-24Z" fill="#2A160E"/><path d="M${lx - 12} ${hz + 126}h24l-6 -24h-12Z" fill="#FFE9A8"/>`; });
+  const near = scSvg(W, H, `${bellGable(380, false)}${bellGable(1880, true)}${roofs}${lamps}${scRect(0, H - 80, W, 80, '#3B1F12')}`, 'sk-near');
+  return { sky, sun, far, mid, near, W, H, sunX: sx, sunY: sy };
+}
+
+// ---------------------------------------------------------------- patio du Colegio Fray Luis de Leon (2400 x 1200)
+const PATIO = { W: 2400, H: 1200, floor: 840 };
+/** Retourne { back, front, light, W, H, bellTower: {x,y} } : patio de pierre doree, claustre a arcades, campanile (cadre de cloche VIDE), arbre, marelle, enfants figes. */
+function colegioPatio(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('cp'), g = (n) => `${id}-${n}`, W = PATIO.W, H = PATIO.H, fl = PATIO.floor, S = STN, rnd = rng(opts.seed || 8);
+  const kids = [[300, 930, 170, 'ball', '#7A85B8'], [520, 900, 150, 'stand', '#8D8FBF'], [760, 960, 180, 'rope', '#6F7BAE'], [1000, 905, 150, 'run', '#8D8FBF'], [1230, 960, 170, 'stand', '#7A85B8'], [1620, 920, 160, 'ball', '#6F7BAE'], [1880, 990, 190, 'stand', '#8D8FBF'], [2150, 930, 160, 'run', '#7A85B8']];
+  const kidSvg = kids.map((k, i) => `<g transform="translate(${k[0] - k[2] / 2} ${k[1] - Math.round(k[2] * 1.7)})" ${opts.noKids ? 'display="none"' : ''}>${frozenKid({ width: k[2], pose: k[3], color: k[4], hair: i % 2 ? '#2F3566' : '#4A3F6E' })}</g>`).join('');
+  let stones = ''; for (let i = 0; i < 12; i++) { const y = fl + Math.pow(i / 12, 1.5) * (H - fl); stones += `<path d="M0 ${r1(y)}H${W}" stroke="#8A5A30" stroke-width="${r1(2 + i * 0.5)}" opacity=".35"/>`; }
+  for (let i = 0; i < 36; i++) { const x = (i / 36) * W; stones += `<path d="M${r1(x)} ${fl}L${r1(x + (x - W / 2) * 0.5)} ${H}" stroke="#8A5A30" stroke-width="2" opacity=".22"/>`; }
+  // marelle (rayuela) peinte au sol
+  let hop = ''; [[1060, 1010, 110], [1060, 1068, 118], [1054, 1128, 126]].forEach((r, i) => { hop += `<path d="M${r[0] - r[2] / 2} ${r[1]}h${r[2]}l${r1(r[2] * 0.06)} 54h-${r1(r[2] * 1.12)}Z" fill="none" stroke="#F5E6C8" stroke-width="5" opacity=".7"/>`; });
+  const tower = `<g class="cp-tower">${scRect(1640, 70, 210, 790, S.m)}${stoneBlocks(1640, 70, 210, 790, 46, 4, S.dd, 0.3)}${scRect(1628, 60, 234, 22, S.l)}${scRect(1628, 360, 234, 16, S.l)}<path d="M1636 60L1745 -70L1854 60Z" fill="${S.roof}"/><path d="M1745 -70v-34M1730 -92h30" stroke="${S.dd}" stroke-width="6"/>
+<path d="${archOpen(1690, 360, 110, 200)}" fill="#3B2216"/><path d="M1745 176v34" stroke="#6B3E26" stroke-width="7"/><path d="M1706 176H1784" stroke="#6B3E26" stroke-width="10" stroke-linecap="round"/><circle cx="1745" cy="224" r="7" fill="#6B3E26"/><path d="M1745 216v20" stroke="#6B3E26" stroke-width="5"/>${windowsGrid(1670, 420, 150, 160, 2, 3, 0.5, 7, '#FFE9A8', '#4B2A3A')}</g>`;
+  const arcN = 6, aw = 230, ast = 270, ax0 = 60;
+  let arcade = scRect(0, 330, 1640, 530, S.m) + stoneBlocks(0, 330, 1640, 530, 46, 6, S.dd, 0.28) + scRect(0, 330, 1640, 20, S.l) + scRect(0, 292, 1640, 40, S.roof) + scRect(0, 322, 1640, 12, S.roof2);
+  for (let k = 0; k < 82; k++) arcade += `<path d="M${k * 20 + 6} 292v32" stroke="${S.roof2}" stroke-width="3" opacity=".5"/>`;
+  for (let i = 0; i < arcN; i++) {
+    const x = ax0 + i * ast;
+    arcade += `<path d="${archOpen(x - 10, 860, aw + 20, 330)}" fill="${S.l}"/><path d="${archOpen(x, 860, aw, 320)}" fill="#4B2A3A"/><path d="${archOpen(x + 16, 860, aw - 32, 290)}" fill="#6B3E4A" opacity=".55"/><circle cx="${x + aw / 2}" cy="${860 - 340}" r="16" fill="${S.l}" stroke="${S.d}" stroke-width="4"/>`;
+    arcade += scRect(x + 40, 380, aw - 80, 120, '#4B2A3A', 'rx="6"') + scRect(x + 30, 372, aw - 60, 10, S.l) + scRect(x + 30, 500, aw - 60, 12, S.d);
+    arcade += `<path d="M${x + 40} 380h${aw - 80}" stroke="#2F7F5A" stroke-width="0"/><g fill="#2F7F5A"><rect x="${x + 32}" y="382" width="22" height="116"/><rect x="${x + aw - 54}" y="382" width="22" height="116"/></g>`;
+  }
+  const tree = `<g class="cp-tree"><ellipse cx="2080" cy="930" rx="230" ry="34" fill="#000" opacity=".2"/><path d="M2050 940Q2040 780 2060 640Q2090 600 2110 640Q2122 780 2112 940Z" fill="#6B4A32"/><path d="M2070 700Q2000 640 1960 560M2096 690Q2160 620 2210 540" stroke="#6B4A32" stroke-width="22" fill="none" stroke-linecap="round"/>${[[2080, 470, 200], [1960, 560, 150], [2220, 540, 160], [2080, 600, 190], [1880, 650, 110], [2300, 640, 110]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${['#4F9A5C', '#5FB06A', '#3F8A52', '#6BBE74', '#4F9A5C', '#3F8A52'][i]}"/>`).join('')}<g fill="#8DD58E" opacity=".6">${[[2020, 420, 70], [2150, 480, 60], [1940, 540, 46]].map((b) => `<ellipse cx="${b[0]}" cy="${b[1]}" rx="${b[2]}" ry="${b[2] * 0.5}"/>`).join('')}</g></g>`;
+  const bench = `<g transform="translate(200 ${fl + 120})"><rect x="0" y="-60" width="300" height="14" rx="5" fill="#8A5230"/><rect x="0" y="-100" width="300" height="12" rx="5" fill="#8A5230"/><rect x="14" y="-46" width="14" height="50" fill="#3B2216"/><rect x="272" y="-46" width="14" height="50" fill="#3B2216"/></g>`;
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BA7E0"/><stop offset=".6" stop-color="#BFE3F2"/><stop offset="1" stop-color="#FFE7B8"/></linearGradient><linearGradient id="${g('f')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9AE75"/><stop offset="1" stop-color="#9E7342"/></linearGradient></defs>
+${scRect(0, 0, W, H, `url(#${g('s')})`)}${cloudSvg(500, 140, 520, 90, 31, 'front')}${cloudSvg(1200, 70, 420, 76, 33, 'front')}${cloudSvg(2200, 190, 480, 84, 35, 'front')}
+${arcade}${tower}${scRect(0, fl - 8, W, H - fl + 8, `url(#${g('f')})`)}${stones}${hop}${scRect(0, fl - 8, W, 14, '#6B4A2A', 'opacity=".5"')}${tree}${bench}${kidSvg}`, 'cp-back');
+  const front = scSvg(W, H, `<path d="M0 1130Q300 1100 640 1136V1200H0Z" fill="#6B4A32"/><g transform="translate(60 1100)">${[0, 1, 2, 3, 4].map((i) => `<path d="M${i * 54} 20Q${i * 54 - 18} -60 ${i * 54 + 12} -110Q${i * 54 + 30} -50 ${i * 54 + 34} 20Z" fill="${['#3F8A52', '#4F9A5C', '#2F7F5A'][i % 3]}"/>`).join('')}</g><g fill="#D93472">${[[90, 1040], [150, 1020], [220, 1052], [270, 1030]].map((p) => `<circle cx="${p[0]}" cy="${p[1]}" r="10"/>`).join('')}</g>`, 'cp-front');
+  const light = scSvg(W, H, `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".55"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></linearGradient></defs><g class="ac-beams" fill="url(#${g('b')})"><path d="M0 0L520 0L1320 1200L0 1200Z" opacity=".4"/><path d="M600 0L760 0L1500 1200L1180 1200Z" opacity=".3"/></g>`, 'cp-light');
+  return { back, front, light, W, H, bellTower: { x: 1745, y: 176 } };
+}
+
+// ---------------------------------------------------------------- salle de classe (2400 x 1200) : tableau vert, fenetre sur la facade de l'Universite
+const AULA = { W: 2400, H: 1200, floor: 900, board: { x: 560, y: 190, w: 980, h: 390 }, win: { x: 1760, y: 170, w: 420, h: 520 } };
+function desk(x, y, k, c) { // pupitre double + chaises + cartables
+  const w = 300 * k, h = 20 * k;
+  return `<g class="au-desk" transform="translate(${x} ${y})"><rect x="0" y="0" width="${w}" height="${h}" rx="${6 * k}" fill="#C98A55"/><rect x="0" y="0" width="${w}" height="${6 * k}" rx="${3 * k}" fill="#E8B27A"/><rect x="${14 * k}" y="${h}" width="${8 * k}" height="${96 * k}" fill="#3B2216"/><rect x="${w - 22 * k}" y="${h}" width="${8 * k}" height="${96 * k}" fill="#3B2216"/><rect x="${14 * k}" y="${h + 40 * k}" width="${w - 28 * k}" height="${8 * k}" fill="#3B2216" opacity=".7"/>
+<g transform="translate(${44 * k} ${-66 * k})"><rect width="${70 * k}" height="${70 * k}" rx="${14 * k}" fill="${c}"/><rect x="${10 * k}" y="${34 * k}" width="${50 * k}" height="${28 * k}" rx="${8 * k}" fill="${shade(c, -0.25)}"/><path d="M${14 * k} 0v-${14 * k}h${42 * k}v${14 * k}" fill="none" stroke="#3B2216" stroke-width="${5 * k}"/></g><g transform="translate(${186 * k} ${-60 * k})"><rect width="${64 * k}" height="${64 * k}" rx="${14 * k}" fill="${shade(c, 0.1)}"/><rect x="${9 * k}" y="${30 * k}" width="${46 * k}" height="${26 * k}" rx="${8 * k}" fill="${shade(c, -0.3)}"/></g></g>`;
+}
+/** Retourne { back, desks, front, light, W, H, board, win, frog : { x, y } (grenouille vue par la fenetre, repere salle) }. */
+function aula(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('au'), g = (n) => `${id}-${n}`, W = AULA.W, H = AULA.H, fl = AULA.floor, S = STN, B = AULA.board, Wn = AULA.win;
+  let planks = ''; for (let i = 0; i < 9; i++) { const y = fl + Math.pow(i / 9, 1.4) * (H - fl); planks += `<path d="M0 ${r1(y)}H${W}" stroke="#2A1208" stroke-width="${r1(2 + i * 0.5)}" opacity=".45"/>`; }
+  for (let i = 0; i < 40; i++) { const x = (i / 40) * W; planks += `<path d="M${r1(x)} ${fl}L${r1(x + (x - W / 2) * 0.35)} ${H}" stroke="#2A1208" stroke-width="2" opacity=".25"/>`; }
+  const fk = (Wn.w / 1000) * 2.0, fx0 = Wn.x + Wn.w / 2 - 500 * fk, fy0 = Wn.y + Wn.h * 0.52 - (FROG.y + FROG.w * 0.47) * fk;
+  const fachada = fachadaUniversidad({ uid: g('fu'), width: 1000 * fk }).replace('<svg ', `<svg x="${r1(fx0)}" y="${r1(fy0)}" `);
+  const frog = { x: r1(fx0 + (FROG.x + FROG.w / 2) * fk), y: r1(fy0 + (FROG.y + FROG.w * 0.47) * fk) };
+  let alphabet = ''; for (let i = 0; i < 22; i++) alphabet += `<rect x="${60 + i * 24}" y="130" width="18" height="26" rx="3" fill="${['#D93472', '#19B7AA', '#FFC83D', '#C9573B'][i % 4]}"/>`;
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6E3BB"/><stop offset="1" stop-color="#E7C98D"/></linearGradient><linearGradient id="${g('fl')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9703F"/><stop offset="1" stop-color="#5B3220"/></linearGradient><linearGradient id="${g('sk')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5BA7E0"/><stop offset="1" stop-color="#FFE7B8"/></linearGradient><clipPath id="${g('wc')}"><path d="${archOpen(Wn.x, Wn.y + Wn.h, Wn.w, Wn.h)}"/></clipPath></defs>
+${scRect(0, 0, W, fl + 10, `url(#${g('w')})`)}${scRect(0, 0, W, 90, '#B07A44')}${scRect(0, 84, W, 12, '#E8B27A')}
+${scRect(0, 640, W, fl - 640 + 10, '#4F8F78')}${scRect(0, 632, W, 14, '#F5E6C8')}${scRect(0, 646, W, 6, '#000', 'opacity=".2"')}
+<g class="au-win"><path d="${archOpen(Wn.x - 22, Wn.y + Wn.h + 22, Wn.w + 44, Wn.h + 22)}" fill="#8A5230"/><g clip-path="url(#${g('wc')})">${scRect(Wn.x, Wn.y, Wn.w, Wn.h, `url(#${g('sk')})`)}${cloudSvg(Wn.x + 120, Wn.y + 100, 220, 50, 91, 'front')}${scRect(Wn.x, Wn.y + Wn.h - 90, Wn.w, 100, '#C98F45')}${fachada}</g><path d="M${Wn.x + Wn.w / 2} ${Wn.y}V${Wn.y + Wn.h}M${Wn.x} ${Wn.y + Wn.h * 0.45}H${Wn.x + Wn.w}" stroke="#8A5230" stroke-width="12"/><rect x="${Wn.x - 30}" y="${Wn.y + Wn.h}" width="${Wn.w + 60}" height="22" rx="6" fill="#C98A55"/></g>
+<g class="au-board"><rect x="${B.x - 26}" y="${B.y - 26}" width="${B.w + 52}" height="${B.h + 52}" rx="12" fill="#6B3E26"/><rect x="${B.x - 14}" y="${B.y - 14}" width="${B.w + 28}" height="${B.h + 28}" rx="8" fill="#8A5230"/><rect class="au-slate" x="${B.x}" y="${B.y}" width="${B.w}" height="${B.h}" rx="4" fill="#2F5D50"/><path d="M${B.x + 30} ${B.y + 60}h${B.w - 60}M${B.x + 30} ${B.y + 190}h${B.w - 60}M${B.x + 30} ${B.y + 320}h${B.w - 60}" stroke="#fff" stroke-width="2" opacity=".07"/><rect x="${B.x - 30}" y="${B.y + B.h + 14}" width="${B.w + 60}" height="16" rx="5" fill="#8A5230"/><rect x="${B.x + 90}" y="${B.y + B.h + 4}" width="46" height="10" rx="3" fill="#F5E6C8"/><rect x="${B.x + 150}" y="${B.y + B.h + 6}" width="32" height="8" rx="3" fill="#FFC83D"/></g>
+<g class="au-clock"><circle cx="1650" cy="110" r="46" fill="#F5E6C8" stroke="#8A5230" stroke-width="8"/><path d="M1650 110v-26M1650 110l18 12" stroke="#3B2216" stroke-width="5" stroke-linecap="round"/></g>${alphabet}
+<g class="au-mapposter"><rect x="150" y="260" width="300" height="230" rx="8" fill="#F5E6C8" stroke="#8A5230" stroke-width="8"/><path d="${(() => { const pts = [[190, 330], [260, 300], [340, 306], [410, 330], [396, 390], [340, 440], [260, 450], [210, 410]]; return smooth(pts, true); })()}" fill="#E8B15C" stroke="#B27A2E" stroke-width="4"/><circle cx="296" cy="368" r="9" fill="#D8433F"/></g>
+${scRect(0, fl, W, H - fl, `url(#${g('fl')})`)}${planks}${scRect(0, fl - 2, W, 8, '#2A1208', 'opacity=".5"')}`, 'au-back');
+  const desks = scSvg(W, H, `${desk(240, 905, 0.9, '#C9573B')}${desk(640, 905, 0.9, '#19B7AA')}${desk(1040, 905, 0.9, '#D93472')}${desk(1440, 905, 0.9, '#FFC83D')}${desk(1840, 905, 0.9, '#2B318A')}`, 'au-desks');
+  const front = scSvg(W, H, `${desk(120, 1040, 1.25, '#19B7AA')}${desk(1700, 1050, 1.25, '#C9573B')}`, 'au-front');
+  const light = scSvg(W, H, `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".5"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></linearGradient></defs><g class="ac-beams" fill="url(#${g('b')})"><path d="M1760 200L2180 200L1500 1100L900 1100Z" opacity=".5"/></g>`, 'au-light');
+  return { back, desks, front, light, W, H, board: B, win: Wn, frog };
+}
+
+// ---------------------------------------------------------------- decors de Sevilla (unite 3) : panorama de Triana (Giralda, Torre del Oro, fleuve, balustrade d'azulejos type Plaza de Espana),
+// ruelle de Triana a la porte bleue, patio andalou (fontaine, geraniums), atelier de ceramique et sa fresque "El arbol de la familia".
+// Memes conventions que 10-salamanca.js (calques separes, aucun texte, monuments publics simplifies).
+
+const SEV = { alb: '#F2C260', alm: '#B4503A', cal: '#FFF6E4', cal2: '#EBD9B8', azul: '#2F6FD0', azul2: '#1D2160', brick: '#D98A45', brick2: '#B8672F', stone: '#F6D08A', leaf: '#3F8A52', leaf2: '#5FB06A', shut: '#2B6C8F' };
+
+/** Giralda (centre x, pied base, echelle k) : fut de brique a panneaux losanges, corps des cloches, lanterne, dome, Giraldillo. */
+function giralda(x, base, k, col) {
+  const c = col || SEV.brick, c2 = col ? shade(col, -0.15) : SEV.brick2, st = col ? shade(col, 0.15) : SEV.stone, h = 520 * k;
+  let s = `<g class="sv-giralda">${scRect(x - 62 * k, base - h, 124 * k, h, c)}${scRect(x - 62 * k, base - h, 18 * k, h, c2, 'opacity=".5"')}`;
+  for (let i = 0; i < 9; i++) { const y = base - h + 40 * k + i * 44 * k; s += `<path d="${diamondPath(x - 20 * k, y + 18 * k, 12 * k, 18 * k)}" fill="${st}" opacity=".55"/><path d="${diamondPath(x + 24 * k, y + 18 * k, 12 * k, 18 * k)}" fill="${st}" opacity=".55"/>`; }
+  for (let i = 0; i < 6; i++) { const y = base - h + 70 * k + i * 76 * k; s += `<path d="${archOpen(x - 5 * k, y + 40 * k, 10 * k, 40 * k)}" fill="#3B2216"/>`; }
+  s += scRect(x - 70 * k, base - 90 * k, 140 * k, 90 * k, st, 'opacity=".4"');
+  const bt = base - h - 120 * k;
+  s += scRect(x - 56 * k, bt, 112 * k, 120 * k, st) + scRect(x - 62 * k, bt - 8 * k, 124 * k, 14 * k, c2) + scRect(x - 62 * k, bt + 112 * k, 124 * k, 12 * k, c2);
+  [-34, 0, 34].forEach((dx) => { s += `<path d="${archOpen(x + (dx - 11) * k, bt + 108 * k, 22 * k, 84 * k)}" fill="#3B2216"/><circle cx="${r1(x + dx * k)}" cy="${r1(bt + 66 * k)}" r="${r1(5 * k)}" fill="#E3A53C"/>`; });
+  s += scRect(x - 40 * k, bt - 56 * k, 80 * k, 50 * k, c) + scRect(x - 46 * k, bt - 62 * k, 92 * k, 10 * k, c2) + `<path d="${archOpen(x - 8 * k, bt - 8 * k, 16 * k, 34 * k)}" fill="#3B2216"/>`;
+  s += `<path d="M${x - 30 * k} ${bt - 62 * k}Q${x} ${bt - 118 * k} ${x + 30 * k} ${bt - 62 * k}Z" fill="${st}"/><circle cx="${x}" cy="${bt - 122 * k}" r="${7 * k}" fill="#E3A53C"/><path d="M${x} ${bt - 128 * k}v-${22 * k}l${16 * k} ${6 * k}l-${16 * k} ${6 * k}" fill="#E3A53C" stroke="#E3A53C" stroke-width="${3 * k}"/>`;
+  return s + '</g>';
+}
+function torreDelOro(x, base, k) {
+  const g1 = '#E8C078', g2 = '#C99A4E';
+  return `<g class="sv-torre">${scRect(x - 50 * k, base - 90 * k, 100 * k, 90 * k, g1)}${scRect(x - 50 * k, base - 90 * k, 16 * k, 90 * k, g2, 'opacity=".5"')}${scRect(x - 40 * k, base - 140 * k, 80 * k, 52 * k, g1)}${scRect(x - 30 * k, base - 200 * k, 60 * k, 62 * k, g1)}<path d="M${x - 34 * k} ${base - 200 * k}Q${x} ${base - 262 * k} ${x + 34 * k} ${base - 200 * k}Z" fill="#E3A53C"/><path d="M${x} ${base - 258 * k}v-${22 * k}" stroke="#E3A53C" stroke-width="${4 * k}"/>
+<g fill="#6B4222">${[-30, -10, 12, 30].map((dx) => `<path d="${archOpen(x + (dx - 5) * k, base - 66 * k, 10 * k, 24 * k)}"/>`).join('')}<path d="${archOpen(x - 6 * k, base - 160 * k, 12 * k, 22 * k)}"/><path d="${archOpen(x - 6 * k, base - 218 * k, 12 * k, 22 * k)}"/></g>${scRect(x - 56 * k, base - 94 * k, 112 * k, 8 * k, g2)}${scRect(x - 46 * k, base - 142 * k, 92 * k, 6 * k, g2)}</g>`;
+}
+/** Maison blanche de Triana (facade chaux, soubassement d'azulejos, toit de tuiles, fenetres a volets bleus, balcon de fer). */
+function trianaHouse(x, base, w, h, tone, seed, roof) {
+  const rnd = rng(seed), c = tone || SEV.cal; let s = `<g class="sv-house">${scRect(x, base - h, w, h, c)}${scRect(x + w - 14, base - h, 14, h, '#000', 'opacity=".07"')}`;
+  s += scRect(x, base - 36, w, 36, SEV.azul, 'opacity=".9"') + `<path d="M${x} ${base - 36}h${w}" stroke="${SEV.stone}" stroke-width="4"/>`;
+  s += roof === 'flat' ? scRect(x - 6, base - h - 12, w + 12, 14, shade(c, -0.15)) : `<path d="M${x - 10} ${base - h}L${x + w * 0.5} ${base - h - 44}L${x + w + 10} ${base - h}Z" fill="${SEV.alm}"/><path d="M${x - 10} ${base - h}L${x + w * 0.5} ${base - h - 44}L${x + w + 10} ${base - h}Z" fill="none" stroke="#7E2F1E" stroke-width="3" opacity=".5"/>`;
+  const n = Math.max(2, Math.floor(w / 62));
+  for (let i = 0; i < n; i++) {
+    const wx = x + (w / n) * (i + 0.5) - 14;
+    s += scRect(wx, base - h + 28, 28, 46, '#3B2A4A', 'rx="4"') + scRect(wx - 8, base - h + 28, 8, 46, SEV.shut) + scRect(wx + 28, base - h + 28, 8, 46, SEV.shut) + scRect(wx - 4, base - h + 76, 36, 8, '#2A2A3A') + (rnd() < 0.5 ? `<circle cx="${wx + 6}" cy="${base - h + 70}" r="6" fill="#D93472"/><circle cx="${wx + 20}" cy="${base - h + 72}" r="6" fill="#D81E3A"/>` : '');
+    if (h > 190) s += scRect(wx, base - h + 120, 28, 50, '#FFD98A', 'rx="4"') + scRect(wx - 6, base - h + 170, 40, 6, '#2A2A3A');
+  }
+  return s + '</g>';
+}
+function orangeTree(x, base, k) {
+  let s = `<g class="sv-orange"><path d="M${x - 6 * k} ${base}L${x - 4 * k} ${base - 70 * k}H${x + 4 * k}L${x + 6 * k} ${base}Z" fill="#6B4A32"/>`;
+  [[0, -120, 60], [-44, -96, 44], [44, -100, 46], [-18, -150, 40], [26, -146, 38]].forEach((b, i) => { s += `<circle cx="${r1(x + b[0] * k)}" cy="${r1(base + b[1] * k)}" r="${r1(b[2] * k)}" fill="${i % 2 ? SEV.leaf2 : SEV.leaf}"/>`; });
+  [[-26, -110], [20, -128], [-4, -152], [34, -94], [-48, -92], [8, -100]].forEach((o) => { s += `<circle cx="${r1(x + o[0] * k)}" cy="${r1(base + o[1] * k)}" r="${r1(7 * k)}" fill="#FF9F1C"/>`; });
+  return s + '</g>';
+}
+/** Panneau d'azulejos (bleu/jaune sur blanc) avec cadre. */
+function azulejoPanel(x, y, w, h, pid, framec) {
+  return `<g class="sv-panel">${scRect(x - 8, y - 8, w + 16, h + 16, framec || SEV.azul2, 'rx="6"')}${scRect(x, y, w, h, `url(#${pid})`, 'rx="3"')}${scRect(x, y, w, h, 'none', 'stroke="#fff" stroke-width="3" rx="3" opacity=".6"')}</g>`;
+}
+const SEV_TILE = (id, a) => azulejoPattern(id, { a: a || '#FFFDF4', b: '#2F6FD0', c: '#FFC83D', d: '#2F6FD0' });
+
+// ---------------------------------------------------------------- panorama de Triana a l'heure doree (3200 x 1200)
+/** Retourne { sky, sun, far, mid, near, W, H, sunX, sunY, river : {y0, y1} } (parallaxe : far .25, mid .6, near 1). */
+function sevillaSkyline(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('sv'), g = (n) => `${id}-${n}`, W = SKY.W, H = SKY.H, rnd = rng(opts.seed || 23), bank = 700, riverBottom = 1010;
+  let clouds = ''; [[300, 300, 560, 80], [1000, 190, 640, 92], [1800, 360, 520, 74], [2500, 240, 640, 90], [2950, 440, 420, 66], [640, 470, 440, 66]].forEach((c, i) => { clouds += cloudSvg(c[0], c[1], c[2], c[3], 50 + i * 4, 'dusk'); });
+  const sky = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E7FBF"/><stop offset=".25" stop-color="#6FC2D6"/><stop offset=".42" stop-color="#F7D9A0"/><stop offset=".56" stop-color="#FFB86B"/><stop offset=".66" stop-color="#FF8A47"/></linearGradient></defs>${scRect(0, 0, W, H, `url(#${g('s')})`)}${clouds}`, 'sv-sky');
+  const sx = opts.sunX || 1300, sy = opts.sunY || 470;
+  let rays = ''; for (let i = 0; i < 14; i++) { const a = (i / 14) * Math.PI * 2, a2 = a + Math.PI / 40; rays += `<path d="M${sx} ${sy}L${r1(sx + Math.cos(a) * 1500)} ${r1(sy + Math.sin(a) * 1500)}L${r1(sx + Math.cos(a2) * 1500)} ${r1(sy + Math.sin(a2) * 1500)}Z"/>`; }
+  const sun = scSvg(W, H, `<defs><radialGradient id="${g('h')}"><stop offset="0" stop-color="#FFF3B0" stop-opacity=".95"/><stop offset=".35" stop-color="#FFC24A" stop-opacity=".5"/><stop offset="1" stop-color="#FF8A47" stop-opacity="0"/></radialGradient></defs><g class="sk-rays" fill="#FFE9A8" opacity=".1" data-px="${sx}" data-py="${sy}">${rays}</g><circle cx="${sx}" cy="${sy}" r="560" fill="url(#${g('h')})"/><circle class="sk-disc" cx="${sx}" cy="${sy}" r="180" fill="#FFF1B0"/>`, 'sv-sun');
+  let hills = `M0 ${bank}`; for (let x = 0; x <= W; x += 80) hills += `L${x} ${r1(bank - 90 - 50 * Math.sin(x / 330) - 24 * Math.sin(x / 120 + 1))}`; hills += `L${W} ${bank}Z`;
+  const cath = (x) => `<g fill="#C9786A"><rect x="${x}" y="${bank - 190}" width="640" height="190"/><rect x="${x + 80}" y="${bank - 260}" width="480" height="80"/>${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<path d="M${x + 24 + i * 78} ${bank - 190}l12 -64 12 64Z"/>`).join('')}<path d="M${x + 250} ${bank - 260}Q${x + 320} ${bank - 380} ${x + 390} ${bank - 260}Z"/></g>`;
+  const far = scSvg(W, H, `<path d="${hills}" fill="#E39A82" opacity=".6"/>${cath(900)}${giralda(1840, bank, 0.95, '#C9786A')}<g opacity=".8">${cath(2300).replace('<g fill', '<g transform="scale(1)" fill')}</g>${scRect(0, bank - 2, W, 14, '#C9786A')}`, 'sv-far');
+  // milieu : berge de Triana (maisons, orangers, Torre del Oro) + fleuve et reflets
+  let houses = '', x = -30; const tones = [SEV.cal, SEV.alb, SEV.cal, SEV.cal2, SEV.cal, '#F4C9B0'];
+  while (x < W) { const w = 150 + rnd() * 120, h = 130 + rnd() * 120; houses += trianaHouse(x, bank, w, h, tones[Math.floor(rnd() * tones.length)], Math.round(x) + 3, rnd() < 0.3 ? 'flat' : 'gable'); if (rnd() < 0.45) houses += orangeTree(x + w + 4, bank, 0.9 + rnd() * 0.5); x += w + 18; }
+  let refl = ''; for (let i = 0; i < 26; i++) { const rx = rnd() * W, ry = bank + 40 + rnd() * (riverBottom - bank - 70), rw = 90 + rnd() * 220; refl += `<path class="sv-shim" data-i="${i}" d="M${r1(rx)} ${r1(ry)}h${r1(rw)}" stroke="${i % 3 ? '#FFE9A8' : '#FFFFFF'}" stroke-width="${r1(3 + rnd() * 5)}" stroke-linecap="round" opacity="${r1(0.25 + rnd() * 0.4)}"/>`; }
+  const mid = scSvg(W, H, `<defs><linearGradient id="${g('r')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0A25A"/><stop offset=".5" stop-color="#2E8DB5"/><stop offset="1" stop-color="#13547A"/></linearGradient></defs>${scRect(0, bank, W, riverBottom - bank, `url(#${g('r')})`)}${scRect(0, bank, W, 22, '#B8672F')}<g transform="translate(0 0)">${houses}</g>${torreDelOro(640, bank, 1.5)}${scRect(0, bank - 2, W, 24, '#B8672F')}<g opacity=".38" transform="translate(0 ${2 * bank + 36}) scale(1 -1)">${houses}</g>${refl}`, 'sv-mid');
+  // premier plan : terrasse a balustrade et panneaux d'azulejos (type Plaza de Espana), branche d'oranger en surplomb
+  let balus = ''; for (let i = 0; i < 60; i++) balus += `<path d="M${r1(20 + i * 54)} 1028v-10q-14 6 -12 20q4 18 -2 34q-8 14 4 30q-2 14 12 18q14 -4 12 -18q12 -16 4 -30q-6 -16 -2 -34q2 -14 -12 -20Z" fill="#F5E6C8"/>`;
+  const near = scSvg(W, H, `<defs>${SEV_TILE(g('t'))}${SEV_TILE(g('t2'), '#FFF3C0')}</defs>${scRect(0, 1010, W, 190, '#E8C078')}${balus}${scRect(0, 984, W, 36, '#F5E6C8')}${scRect(0, 984, W, 8, '#fff', 'opacity=".6"')}${scRect(0, 1130, W, 70, '#B8672F')}
+${[0, 1, 2, 3, 4, 5, 6].map((i) => azulejoPanel(60 + i * 470, 1096, 380, 74, i % 2 ? g('t2') : g('t'))).join('')}${scRect(0, 1180, W, 20, '#8E4A22')}
+<g transform="translate(-60 -20)"><path d="M0 60Q220 40 420 150" stroke="#6B4A32" stroke-width="26" fill="none" stroke-linecap="round"/>${[[120, 80, 74], [250, 110, 66], [340, 160, 56], [60, 130, 60], [200, 168, 54]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${i % 2 ? SEV.leaf2 : SEV.leaf}"/>`).join('')}${[[110, 120], [210, 80], [300, 130], [170, 190], [330, 200], [80, 70]].map((o) => `<circle cx="${o[0]}" cy="${o[1]}" r="17" fill="#FF9F1C"/><circle cx="${o[0] - 5}" cy="${o[1] - 5}" r="5" fill="#FFD27A"/>`).join('')}</g>
+<g transform="translate(2700 -30)"><path d="M500 40Q300 30 100 160" stroke="#6B4A32" stroke-width="26" fill="none" stroke-linecap="round"/>${[[380, 90, 70], [260, 130, 62], [160, 170, 56], [440, 130, 54]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${i % 2 ? SEV.leaf2 : SEV.leaf}"/>`).join('')}${[[350, 130], [260, 90], [170, 200], [430, 80]].map((o) => `<circle cx="${o[0]}" cy="${o[1]}" r="17" fill="#FF9F1C"/>`).join('')}</g>`, 'sv-near');
+  return { sky, sun, far, mid, near, W, H, sunX: sx, sunY: sy, river: { y0: bank, y1: riverBottom } };
+}
+
+// ---------------------------------------------------------------- ruelle de Triana (3200 x 1200) : facades chaulees, azulejos, balcons fleuris, porte bleue au fond
+const CALLEJON = { W: 3200, H: 1200, floor: 900, door: { x: 2720, y: 520, w: 190, h: 380 } };
+function balcony(x, y, w, c) { // balcon en fer forge + pots de geraniums
+  let s = scRect(x, y, w, 10, '#2A2A3A') + scRect(x - 8, y - 4, w + 16, 8, '#3A3A4A');
+  for (let i = 0; i <= Math.floor(w / 18); i++) s += `<path d="M${r1(x + 4 + i * 18)} ${y}v-46" stroke="#2A2A3A" stroke-width="4"/>`;
+  s += scRect(x, y - 50, w, 6, '#2A2A3A');
+  for (let i = 0; i < Math.floor(w / 56); i++) { const px = x + 14 + i * 56; s += `<path d="M${px} ${y - 50}h34l-5 26h-24Z" fill="${SEV.shut}"/><circle cx="${px + 8}" cy="${y - 62}" r="9" fill="#D81E3A"/><circle cx="${px + 24}" cy="${y - 66}" r="9" fill="#D93472"/><circle cx="${px + 16}" cy="${y - 74}" r="8" fill="#FF6B7A"/><path d="M${px + 4} ${y - 52}q4 -10 12 -8M${px + 28} ${y - 52}q-4 -10 -10 -8" stroke="${SEV.leaf}" stroke-width="4" fill="none"/>`; }
+  return s;
+}
+/** Retourne { back, front, light, W, H, door : { x, y, w, h } (porte bleue, repere ruelle) }. */
+function callejonTriana(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('ct'), g = (n) => `${id}-${n}`, W = CALLEJON.W, H = CALLEJON.H, fl = CALLEJON.floor, D = CALLEJON.door, rnd = rng(opts.seed || 12);
+  const bays = [[0, 520, SEV.cal], [520, 440, SEV.alb], [960, 480, SEV.cal], [1440, 420, '#F4C9B0'], [1860, 500, SEV.cal], [2360, 360, SEV.alb], [2720, 480, SEV.cal]];
+  let wall = ''; bays.forEach((b, i) => {
+    const [bx, bw, c] = b, top = 150 + (i % 3) * 14;
+    wall += scRect(bx, top, bw, fl - top, c) + scRect(bx + bw - 18, top, 18, fl - top, '#000', 'opacity=".08"') + scRect(bx, top - 14, bw, 16, shade(c, -0.12)) + scRect(bx, top + 4, bw, 8, SEV.alm, 'opacity=".8"');
+    wall += scRect(bx, fl - 200, bw, 200, `url(#${g('zoc')})`) + scRect(bx, fl - 206, bw, 8, SEV.azul2) + scRect(bx, fl - 198, bw, 4, SEV.stone);
+    // fenetres d'etage + balcon
+    const n = Math.max(2, Math.round(bw / 170));
+    for (let k = 0; k < n; k++) {
+      const wx = bx + (bw / n) * (k + 0.5) - 34, wy = top + 80;
+      wall += scRect(wx - 12, wy - 12, 92, 214, shade(c, -0.1), 'rx="6"') + scRect(wx, wy, 68, 190, '#3B2A4A', 'rx="6"') + scRect(wx - 16, wy, 16, 190, SEV.shut) + scRect(wx + 68, wy, 16, 190, SEV.shut) + `<path d="M${wx + 34} ${wy}V${wy + 190}" stroke="#2A2A3A" stroke-width="3"/>`;
+      wall += balcony(wx - 20, wy + 190, 108, c);
+    }
+    // grilles (rejas) au rez-de-chaussee
+    if (bx !== 2720) for (let k = 0; k < Math.max(1, Math.round(bw / 260)); k++) { const wx = bx + 60 + k * 240; wall += scRect(wx, fl - 520, 90, 190, '#3B2A4A', 'rx="6"') + scRect(wx - 8, fl - 530, 106, 14, shade(c, -0.18)) + `<g stroke="#2A2A3A" stroke-width="4">${[0, 1, 2, 3, 4].map((j) => `<path d="M${wx + 10 + j * 18} ${fl - 520}v190"/>`).join('')}</g>` + scRect(wx - 6, fl - 336, 102, 8, '#2A2A3A'); }
+  });
+  // porte bleue (bien visible) + arc + carreau + lanterne
+  wall += `<g class="ct-door"><path d="${archOpen(D.x - 26, fl, D.w + 52, D.h + 70)}" fill="${SEV.stone}"/><path d="${archOpen(D.x - 10, fl, D.w + 20, D.h + 56)}" fill="#14173F"/><path d="${archOpen(D.x, fl, D.w, D.h + 40)}" fill="#2F6FD0"/><path d="${archOpen(D.x + 14, fl - 14, D.w - 28, D.h - 12)}" fill="none" stroke="#1D4FA0" stroke-width="6"/><path d="M${D.x + D.w / 2} ${fl - D.h - 30}V${fl}" stroke="#1D4FA0" stroke-width="6"/><circle cx="${D.x + D.w / 2 - 22}" cy="${fl - 170}" r="9" fill="#E3A53C"/><circle cx="${D.x + D.w / 2 + 22}" cy="${fl - 170}" r="9" fill="#E3A53C"/><path d="M${D.x + D.w / 2 + 40} ${fl - 140}q14 -2 14 14q0 12 -14 12" fill="none" stroke="#E3A53C" stroke-width="6"/><g transform="translate(${D.x + D.w + 44} ${fl - 330})">${prop('azulejo', { uid: g('az'), width: 66, a: '#FFFDF4', c: '#2F6FD0' }).replace('<svg ', '<svg x="0" y="0" ')}</g><g transform="translate(${D.x + D.w / 2} ${fl - D.h - 110})"><path d="M0 -10v30M-16 20h32l-6 40h-20Z" fill="#2A2A3A"/><path d="M-12 24h24l-4 30h-16Z" fill="#FFE9A8"/><circle cx="0" cy="40" r="46" fill="#FFE9A8" opacity=".25"/></g></g>`;
+  let cob = ''; for (let i = 0; i < 14; i++) { const y = fl + Math.pow(i / 14, 1.5) * (H - fl); cob += `<path d="M0 ${r1(y)}H${W}" stroke="#7A5A3A" stroke-width="${r1(2 + i * 0.4)}" opacity=".4"/>`; }
+  for (let i = 0; i < 70; i++) { const x = (i / 70) * W; cob += `<path d="M${r1(x)} ${fl}L${r1(x + (x - W / 2) * 0.4)} ${H}" stroke="#7A5A3A" stroke-width="2" opacity=".3"/>`; }
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FA8D8"/><stop offset="1" stop-color="#FFD9A0"/></linearGradient><linearGradient id="${g('f')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A064"/><stop offset="1" stop-color="#8A6638"/></linearGradient>${SEV_TILE(g('zoc'))}</defs>
+${scRect(0, 0, W, 260, `url(#${g('s')})`)}${cloudSvg(600, 80, 460, 70, 41, 'front')}${cloudSvg(1900, 60, 520, 76, 43, 'front')}${cloudSvg(2900, 110, 380, 64, 45, 'front')}
+${wall}${scRect(0, fl, W, H - fl, `url(#${g('f')})`)}${cob}${scRect(0, fl - 4, W, 14, '#6B4A2A', 'opacity=".5"')}`, 'ct-back');
+  // avant-plan : pots fleuris, plantes, chat sur le muret
+  const pots = [180, 760, 1300, 1780, 2500].map((x, i) => `<g transform="translate(${x} 1150)"><path d="M-44 0h88l-12 -90h-64Z" fill="${i % 2 ? '#C9573B' : SEV.shut}"/><rect x="-50" y="-100" width="100" height="16" rx="6" fill="${i % 2 ? '#E8795A' : '#4F9AB8'}"/>${[-34, -12, 10, 32].map((dx, j) => `<path d="M${dx} -100Q${dx - 20} -170 ${dx + 6} -214" stroke="${SEV.leaf}" stroke-width="12" fill="none" stroke-linecap="round"/><circle cx="${dx + 6}" cy="${-218 - (j % 2) * 20}" r="22" fill="${['#D81E3A', '#D93472', '#FF6B7A', '#E8402A'][j]}"/>`).join('')}</g>`).join('');
+  const front = scSvg(W, H, pots, 'ct-front');
+  const light = scSvg(W, H, `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".6"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></linearGradient></defs><g class="ac-beams" fill="url(#${g('b')})"><path d="M300 0L760 0L1500 1200L700 1200Z" opacity=".35"/><path d="M1700 0L2060 0L2800 1200L2200 1200Z" opacity=".3"/></g>`, 'ct-light');
+  return { back, front, light, W, H, door: D };
+}
+
+// ---------------------------------------------------------------- patio andalou (2400 x 1200) : arcades, fontaine, geraniums, sol de mosaique
+const PATIOA = { W: 2400, H: 1200, floor: 860, fountain: { x: 1200, y: 930 } };
+/** Retourne { back, front, light, W, H, fountain : { x, y } }. Eau : groupe .pa-water (traits .pa-jet) a animer. */
+function patioAndaluz(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('pa'), g = (n) => `${id}-${n}`, W = PATIOA.W, H = PATIOA.H, fl = PATIOA.floor, F = PATIOA.fountain, rnd = rng(opts.seed || 14);
+  let arcs = ''; const n = 7, st = 320, x0 = 80;
+  for (let i = 0; i < n; i++) {
+    const x = x0 + i * st;
+    arcs += `<path d="${archOpen(x, fl, st - 60, 420)}" fill="#3B2A4A" opacity=".85"/><path d="${archOpen(x + 14, fl, st - 88, 390)}" fill="#6B4A6A" opacity=".5"/>`;
+    arcs += `<rect x="${x + st - 60}" y="${fl - 420 + 10}" width="60" height="${420 - 10}" fill="#F5E6C8"/><rect x="${x + st - 66}" y="${fl - 440}" width="72" height="26" rx="6" fill="#E6CE9F"/><rect x="${x + st - 68}" y="${fl - 24}" width="76" height="24" rx="6" fill="#E6CE9F"/><path d="M${x + st - 44} ${fl - 410}v400" stroke="#C9B890" stroke-width="3" opacity=".7"/>`;
+  }
+  let gallery = scRect(0, 290, W, 12, '#E6CE9F') + scRect(0, 300, W, 10, '#000', 'opacity=".12"');
+  for (let i = 0; i < n; i++) { const x = x0 + i * st; gallery += scRect(x + 40, 150, 160, 130, '#3B2A4A', 'rx="6"') + scRect(x + 30, 140, 180, 12, '#E6CE9F') + scRect(x + 24, 150, 18, 130, SEV.shut) + scRect(x + 198, 150, 18, 130, SEV.shut) + balcony(x + 24, 298, 190, SEV.cal).replace(/y="298"/g, 'y="298"'); }
+  let pots = ''; for (let i = 0; i < 14; i++) { const px = 150 + i * 160 + (i % 2) * 20, py = 410 + (i % 3) * 8; pots += `<g transform="translate(${px} ${py})"><path d="M-22 0h44l-6 40h-32Z" fill="${i % 2 ? '#2F6FD0' : '#FFFDF4'}" stroke="#2F6FD0" stroke-width="3"/><path d="M-14 0Q-34 28 -24 60M0 0Q-4 36 6 70M14 0Q34 24 26 56" stroke="${SEV.leaf}" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-8" r="11" fill="#D81E3A"/><circle cx="8" cy="-12" r="11" fill="#D93472"/><circle cx="22" cy="-4" r="9" fill="#FF6B7A"/></g>`; }
+  // fontaine a trois vasques
+  const fountain = `<g class="pa-fountain"><ellipse cx="${F.x}" cy="${F.y + 70}" rx="330" ry="70" fill="#2F6FD0"/><ellipse cx="${F.x}" cy="${F.y + 60}" rx="316" ry="58" fill="#6FC2D6"/><ellipse cx="${F.x}" cy="${F.y + 60}" rx="316" ry="58" fill="none" stroke="#FFFDF4" stroke-width="12"/><ellipse cx="${F.x}" cy="${F.y + 66}" rx="260" ry="40" fill="#fff" opacity=".18"/>
+<path d="M${F.x - 40} ${F.y + 50}L${F.x - 28} ${F.y - 150}H${F.x + 28}L${F.x + 40} ${F.y + 50}Z" fill="#F5E6C8"/><ellipse cx="${F.x}" cy="${F.y - 30}" rx="130" ry="30" fill="#FFFDF4"/><ellipse cx="${F.x}" cy="${F.y - 36}" rx="112" ry="22" fill="#6FC2D6"/><path d="M${F.x - 16} ${F.y - 150}h32l-6 -120h-20Z" fill="#F5E6C8"/><ellipse cx="${F.x}" cy="${F.y - 170}" rx="74" ry="18" fill="#FFFDF4"/><ellipse cx="${F.x}" cy="${F.y - 174}" rx="62" ry="12" fill="#6FC2D6"/><path d="M${F.x - 8} ${F.y - 270}h16l-3 -64h-10Z" fill="#F5E6C8"/><circle cx="${F.x}" cy="${F.y - 346}" r="16" fill="#E3A53C"/>
+<g class="pa-water" stroke="#CFF3FF" stroke-width="6" stroke-linecap="round" fill="none">${[[-30, -150], [-10, -170], [10, -170], [30, -150]].map((j, i) => `<path class="pa-jet" data-i="${i}" d="M${F.x} ${F.y - 340}Q${F.x + j[0] * 2} ${F.y - 380 + j[1] / 4} ${F.x + j[0] * 3.2} ${F.y - 180}" opacity=".85"/>`).join('')}${[-90, -60, 60, 90].map((dx, i) => `<path class="pa-jet" data-i="${i + 4}" d="M${F.x + dx} ${F.y - 40}v34" opacity=".7"/>`).join('')}</g></g>`;
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6E4"/><stop offset="1" stop-color="#F0DDB8"/></linearGradient>${SEV_TILE(g('t'))}${azulejoPattern(g('fl'), { a: '#F5E6C8', b: '#2F6FD0', c: '#C9573B', d: '#FFC83D' })}<linearGradient id="${g('sk')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FA8D8"/><stop offset="1" stop-color="#BFE3F2"/></linearGradient><clipPath id="${g('o')}"><rect x="760" y="-10" width="880" height="140"/></clipPath></defs>
+${scRect(0, 0, W, fl + 6, `url(#${g('w')})`)}${scRect(0, 0, W, 130, `url(#${g('sk')})`)}${cloudSvg(1000, 70, 380, 56, 61, 'front')}${scRect(0, 120, W, 24, '#C9573B')}${scRect(0, 138, W, 10, '#7E2F1E', 'opacity=".4"')}
+${gallery}${scRect(0, fl - 200, W, 200, `url(#${g('t')})`)}${scRect(0, fl - 210, W, 12, SEV.azul2)}${arcs}${pots}${orangeTree(2160, 480, 1.1).replace('class="sv-orange"', 'class="sv-orange pa-tree"')}
+<path d="M0 ${fl}H${W}L${W + 400} ${H}H-400Z" fill="url(#${g('fl')})"/><path d="M0 ${fl}H${W}L${W + 400} ${H}H-400Z" fill="#000" opacity=".1"/>
+${(() => { let l = ''; for (let i = 0; i < 12; i++) { const y = fl + Math.pow(i / 12, 1.4) * (H - fl); l += `<path d="M-400 ${r1(y)}H${W + 400}" stroke="#8A5A30" stroke-width="2" opacity=".25"/>`; } return l; })()}${fountain}`, 'pa-back');
+  const leaf = (a, c, k) => `<path d="M0 0Q${52 * k} -90 0 -190Q${-52 * k} -90 0 0Z" fill="${c}" transform="rotate(${a})"/><path d="M0 -10V-170" stroke="#fff" stroke-width="3" opacity=".3" transform="rotate(${a})"/>`;
+  const front = scSvg(W, H, [[120, 1100, 1.3, '#2F6FD0'], [2280, 1090, 1.4, '#C9573B']].map((p) => `<g transform="translate(${p[0]} ${p[1]}) scale(${p[2]})"><path d="M-70 0h140l-18 -150h-104Z" fill="${p[3]}"/><rect x="-78" y="-164" width="156" height="22" rx="8" fill="${shade(p[3], 0.2)}"/><g transform="translate(0 -160)">${[-62, -34, -8, 18, 44, 66].map((a, j) => leaf(a, [SEV.leaf, SEV.leaf2, '#2F7F5A'][j % 3], 0.9 + (j % 2) * 0.2)).join('')}</g></g>`).join(''), 'pa-front');
+  const light = scSvg(W, H, `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".6"/><stop offset="1" stop-color="#FFE9A8" stop-opacity=".02"/></linearGradient></defs><g class="ac-beams" fill="url(#${g('b')})"><path d="M760 130L1640 130L1900 1100L500 1100Z" opacity=".45"/></g>`, 'pa-light');
+  return { back, front, light, W, H, fountain: F };
+}
+
+// ---------------------------------------------------------------- atelier de ceramique (2400 x 1200) : fresque d'azulejos "El arbol de la familia"
+const TALLER = { W: 2400, H: 1200, floor: 900, fresco: { x: 560, y: 80, w: 1280, h: 740 } };
+/** Retourne { back, front, light, W, H, fresco, names : [{x,y}] (cartouches), center : {x,y} (carreau vert) }.
+ *  Classes : .fr-stain (taches d'ombre sur les noms, data-i), .fr-name (cartouche), .fr-glow / .fr-feather (carreau central). */
+function tallerCeramica(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('tc'), g = (n) => `${id}-${n}`, W = TALLER.W, H = TALLER.H, fl = TALLER.floor, Fr = TALLER.fresco, rnd = rng(opts.seed || 33);
+  const cx = Fr.x + Fr.w / 2, trunkTop = Fr.y + 330;
+  // arbre : tronc, branches, feuillage
+  const branches = [[-300, -210], [-180, -290], [-60, -330], [60, -330], [180, -290], [300, -210], [-390, -80], [390, -80]];
+  let tree = `<path d="M${cx - 46} ${Fr.y + Fr.h - 40}Q${cx - 30} ${Fr.y + 520} ${cx - 22} ${trunkTop}H${cx + 22}Q${cx + 30} ${Fr.y + 520} ${cx + 46} ${Fr.y + Fr.h - 40}Z" fill="#8A5230" stroke="#4A2A1C" stroke-width="6"/><path d="M${cx - 10} ${Fr.y + Fr.h - 60}Q${cx - 6} ${Fr.y + 520} ${cx - 4} ${trunkTop + 20}" stroke="#C98A55" stroke-width="8" fill="none" opacity=".7"/>`;
+  branches.forEach((b) => { tree += `<path d="M${cx} ${trunkTop + 50}Q${cx + b[0] * 0.35} ${trunkTop + b[1] * 0.2 - 30} ${cx + b[0]} ${trunkTop + b[1] + 120}" stroke="#4A2A1C" stroke-width="30" fill="none" stroke-linecap="round"/><path d="M${cx} ${trunkTop + 50}Q${cx + b[0] * 0.35} ${trunkTop + b[1] * 0.2 - 30} ${cx + b[0]} ${trunkTop + b[1] + 120}" stroke="#8A5230" stroke-width="20" fill="none" stroke-linecap="round"/>`; });
+  const names = []; let leaves = '';
+  const spots = [[-330, -160], [-190, -250], [-40, -290], [100, -290], [250, -250], [380, -160], [-440, -30], [-300, 20], [300, 20], [440, -30], [-160, -120], [180, -130], [0, -190]];
+  spots.forEach((p, i) => {
+    const x = cx + p[0], y = trunkTop + p[1] + 90;
+    for (let k = 0; k < 7; k++) { const a = rnd() * Math.PI * 2, d = 20 + rnd() * 60; leaves += `<ellipse cx="${r1(x + Math.cos(a) * d)}" cy="${r1(y + Math.sin(a) * d * 0.7)}" rx="30" ry="15" transform="rotate(${r1(a * 57 % 180)} ${r1(x + Math.cos(a) * d)} ${r1(y + Math.sin(a) * d * 0.7)})" fill="${['#3F8A52', '#5FB06A', '#2F7F5A', '#6BBE74'][k % 4]}"/>`; }
+    names.push({ x: r1(x), y: r1(y) });
+  });
+  let cart = ''; names.forEach((p, i) => { const sc = [[0, 7], [1, 11], [2, 9]][i % 3]; cart += `<g class="fr-name" data-i="${i}" transform="translate(${p.x} ${p.y})"><rect x="-62" y="-24" width="124" height="48" rx="10" fill="#FFFDF4" stroke="#C9573B" stroke-width="5"/><rect x="-54" y="-17" width="108" height="34" rx="6" fill="none" stroke="#FFC83D" stroke-width="2.5"/><path d="M-40 4q8 -14 14 0q6 14 12 0q8 -14 14 0q6 14 12 0q8 -14 14 0q5 10 10 0" stroke="#2B318A" stroke-width="4" fill="none" stroke-linecap="round" transform="scale(${[1, 0.8, 0.92][i % 3]} 1)"/></g>`; });
+  let stains = ''; names.forEach((p, i) => { const r = rng(i * 7 + 3); const pts = []; for (let k = 0; k < 9; k++) { const a = (k / 9) * Math.PI * 2, rr = 44 + r() * 12; pts.push([p.x + Math.cos(a) * rr * 1.4, p.y + Math.sin(a) * rr * 0.78]); } stains += `<g class="fr-stain" data-i="${i}" data-px="${p.x}" data-py="${p.y}"><path d="${smooth(pts, true)}" fill="#14122A"/><path d="${smooth(pts.map((q) => [q[0] * 0.94 + p.x * 0.06 + 6, q[1] * 0.94 + p.y * 0.06 + 8]), true)}" fill="#2A2640" opacity=".7"/></g>`; });
+  const center = { x: r1(cx), y: r1(trunkTop - 6) };
+  const centerTile = `<g class="fr-feather" transform="translate(${center.x} ${center.y})"><ellipse class="fr-glow" cx="0" cy="0" rx="150" ry="150" fill="url(#${g('gl')})" opacity="0"/><rect x="-46" y="-46" width="92" height="92" rx="8" fill="#0E9F6E" stroke="#BFFFE3" stroke-width="5"/><rect x="-38" y="-38" width="76" height="76" rx="5" fill="none" stroke="#42E0A0" stroke-width="3"/><path d="M0 -30C26 -10 30 18 8 34Q0 38 -8 34C-26 20 -24 -10 0 -30Z" fill="#9bffd6"/><path d="M0 -26V34" stroke="#0E9F6E" stroke-width="3"/></g>`;
+  // etageres de poterie, four, table
+  const shelf = (x, y, w) => `<g>${scRect(x, y, w, 14, '#6B3E26')}${[0, 1, 2, 3].map((i) => { const px = x + 30 + i * (w - 60) / 3.2; return i % 2 ? `<path d="M${px} ${y}v-12q-26 -6 -22 -40q-4 -30 22 -30t22 30q4 34 -22 40v12Z" fill="${['#2F6FD0', '#C9573B', '#19B7AA'][i % 3]}" transform="translate(${r1(-0)} 0)"/>` : `<ellipse cx="${px}" cy="${y - 38}" rx="38" ry="38" fill="#FFFDF4" stroke="#2F6FD0" stroke-width="5"/><ellipse cx="${px}" cy="${y - 38}" rx="22" ry="22" fill="none" stroke="#C9573B" stroke-width="4"/>`; }).join('')}</g>`;
+  const kiln = `<g class="tc-kiln"><path d="M1980 ${fl}V560Q1980 400 2140 400Q2300 400 2300 560V${fl}Z" fill="#B4503A"/><path d="M1980 ${fl}V560Q1980 400 2140 400Q2300 400 2300 560V${fl}Z" fill="none" stroke="#7E2F1E" stroke-width="6"/>${stoneBlocks(1990, 420, 300, 460, 40, 7, '#7E2F1E', 0.45)}<path d="${archOpen(2070, fl - 40, 140, 190)}" fill="#14100A"/><path d="${archOpen(2084, fl - 40, 112, 150)}" fill="#FF8A2F" opacity=".9"/><path d="${archOpen(2104, fl - 40, 72, 110)}" fill="#FFD76A" opacity=".9"/><rect x="2120" y="340" width="40" height="80" fill="#8E3A2B"/></g>`;
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EFD9B0"/><stop offset="1" stop-color="#DDBE8C"/></linearGradient><linearGradient id="${g('fl')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B4503A"/><stop offset="1" stop-color="#6E2A1E"/></linearGradient><radialGradient id="${g('gl')}"><stop offset="0" stop-color="#9bffd6" stop-opacity=".95"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".4"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient>${SEV_TILE(g('t'))}${SEV_TILE(g('t2'), '#FFF1CC')}</defs>
+${scRect(0, 0, W, fl + 8, `url(#${g('w')})`)}${stoneBlocks(0, 0, W, fl, 70, 2, '#8A5A30', 0.1)}${scRect(0, 0, W, 60, '#6B3E26')}${scRect(0, 54, W, 10, '#C98A55')}
+${[0, 1, 2, 3].map((i) => scRect(i * 640 + 180, 0, 40, 64, '#4A2A1C')).join('')}
+${shelf(60, 330, 400)}${shelf(60, 560, 400)}${shelf(60, 790, 400)}
+<g class="fr-fresco">${scRect(Fr.x - 26, Fr.y - 26, Fr.w + 52, Fr.h + 52, '#8A5230', 'rx="14"')}${scRect(Fr.x - 12, Fr.y - 12, Fr.w + 24, Fr.h + 24, '#2B318A', 'rx="8"')}${scRect(Fr.x, Fr.y, Fr.w, Fr.h, `url(#${g('t')})`)}${scRect(Fr.x, Fr.y, Fr.w, Fr.h, '#FFFDF4', 'opacity=".55"')}${scRect(Fr.x + 20, Fr.y + 20, Fr.w - 40, Fr.h - 40, 'none', 'stroke="#FFC83D" stroke-width="5" rx="6"')}
+<g class="fr-tree">${tree}${leaves}</g>${cart}${stains}${centerTile}</g>
+${kiln}${scRect(0, fl, W, H - fl, `url(#${g('fl')})`)}${(() => { let l = ''; for (let i = 0; i < 9; i++) { const y = fl + Math.pow(i / 9, 1.4) * (H - fl); l += `<path d="M0 ${r1(y)}H${W}" stroke="#4A1A10" stroke-width="2" opacity=".4"/>`; } for (let i = 0; i < 28; i++) { const x = (i / 28) * W; l += `<path d="M${r1(x)} ${fl}L${r1(x + (x - W / 2) * 0.4)} ${H}" stroke="#4A1A10" stroke-width="2" opacity=".3"/>`; } return l; })()}${scRect(0, fl - 2, W, 8, '#3B1F12', 'opacity=".5"')}`, 'tc-back');
+  const front = scSvg(W, H, `<g transform="translate(420 1010)">${scRect(0, 0, 640, 26, '#8A5230', 'rx="8"')}${scRect(30, 26, 22, 160, '#4A2A1C')}${scRect(588, 26, 22, 160, '#4A2A1C')}${[0, 1, 2, 3].map((i) => `<rect x="${40 + i * 140}" y="-22" width="120" height="22" rx="4" fill="${['#FFFDF4', '#FFC83D', '#2F6FD0', '#C9573B'][i]}" stroke="#2B318A" stroke-width="3"/>`).join('')}<path d="M520 -18l70 -30" stroke="#4A2A1C" stroke-width="7" stroke-linecap="round"/><circle cx="598" cy="-52" r="9" fill="#C9573B"/></g>${[[1800, 1100], [2260, 1120]].map((p) => `<g transform="translate(${p[0]} ${p[1]})"><path d="M-50 0h100l-12 -120h-76Z" fill="#C9573B"/><rect x="-56" y="-132" width="112" height="18" rx="8" fill="#E8795A"/></g>`).join('')}`, 'tc-front');
+  const light = scSvg(W, H, `<defs><radialGradient id="${g('lg')}"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".5"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient></defs><ellipse cx="2140" cy="760" rx="520" ry="420" fill="url(#${g('lg')})" opacity=".7"/><g class="ac-beams"><path d="M1000 0L1400 0L1500 900L700 900Z" fill="#FFE9A8" opacity=".12"/></g>`, 'tc-light');
+  return { back, front, light, W, H, fresco: Fr, names, center };
+}
+
+window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica};
 })();

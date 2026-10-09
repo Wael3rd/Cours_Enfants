@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .mute { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="8.811">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.811" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.511,"v":1},{"t":8.811,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/diego.d147398869.mp3" data-start="0.8" data-duration="2.86" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-1-2" src="./assets/voz/pilar.805226f9ff.mp3" data-start="3.96" data-duration="3.901" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-02.mp3" data-start="0.35" data-duration="0.242" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-03.mp3" data-start="0.55" data-duration="0.257" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="0.8" data-duration="0.1" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/bell.mp3" data-start="6.554" data-duration="1.741" data-track-index="7" data-volume="0.12"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="8.511" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-historia-1","cinematica":"u02-historia","part":1,"parts":5,"total":8.811,"meta":{"cinematica":"u02-historia","titulo":"La campana muda","tipo":"historia","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":1,"t0":0,"t1":8.561,"vista":"Cour du Colegio Fray Luis de León : élèves immobiles, silence total. Doña Pilar tient une grande cloche de bronze muette. Diego arrive en courant avec un bocadillo.","camara":"plan large puis travelling vers Pilar","rotulo":"","personajes":["pilar","diego"],"lines":[{"who":"diego","es":"¡Perdón, perdón! ¡Llego tarde!","key":"diego.d147398869","t":0.8,"d":2.86,"words":[{"w":"¡Perdón,","t":0.8,"d":0.376},{"w":"perdón!","t":1.492,"d":0.363},{"w":"¡Llego","t":2.847,"d":0.332},{"w":"tarde!","t":3.179,"d":0.332}]},{"who":"pilar","es":"Buenos días, Diego. La campana no suena.","key":"pilar.805226f9ff","t":3.96,"d":3.901,"words":[{"w":"Buenos","t":3.96,"d":0.458},{"w":"días,","t":4.418,"d":0.334},{"w":"Diego.","t":4.927,"d":0.396},{"w":"La","t":6.337,"d":0.216},{"w":"campana","t":6.554,"d":0.534},{"w":"no","t":7.088,"d":0.216},{"w":"suena.","t":7.304,"d":0.407}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.35,"f":"rpg/step-02"},{"t":0.55,"f":"rpg/step-03"},{"t":0.8,"f":"ui/pop"},{"t":6.554,"f":"rpg/bell"},{"t":8.511,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.colegioPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#7A5530", motes: 22 });
+        S.drift(tl, room, T);
+
+        // ---------- Doña Pilar et la cloche muette ; Diego arrive en courant avec son bocadillo ----------
+        var PX = 1420, PF = 1020, PW = 340;
+        var pil = S.chr(room.actors, "pilar", PX, PF, PW);
+        var hx = PX - 0.205 * PW, hy = PF - 0.49 * PW;
+        var bell = S.prop(room.actors, "campana", hx, hy - 10, 170, { tone: "muda", uid: "bm" });
+        var DX0 = -300, DX1 = 780, DF = 1030, DW = 300;
+        var die = S.chr(room.actors, "diego", DX0, DF, DW);
+        var boc = S.prop(room.actors, "bocadillo", DX0 + 0.2 * DW, DF - 0.55 * DW, 150, { uid: "bo" });
+        gsap.set(boc, { rotation: -18 });
+        S.breathe(tl, pil, 0, T, 0.8);
+        Q.charBlink(tl, pil.svg, 2.1); Q.charBlink(tl, die.svg, 4.6); Q.charBlink(tl, pil.svg, 6.9);
+
+        // Diego : course, freinage (squash), il parle
+        var runEnd = L1.t - 0.05;
+        S.walk(tl, die, DX0, DX1, 0, runEnd, 0.26, "power2.out");
+        tl.fromTo(boc, { x: 0 }, { x: DX1 - DX0, duration: runEnd, ease: "power2.out" }, 0);
+        tl.fromTo(boc, { y: 0 }, { y: -16, duration: 0.13, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(runEnd / 0.13)) - 1 }, 0);
+        tl.to(die.b, { scaleX: 1.08, scaleY: 0.93, rotation: -4, duration: 0.12, ease: "power2.in", transformOrigin: "50% 100%" }, runEnd - 0.1);
+        tl.to(die.b, { scaleX: 1, scaleY: 1, rotation: 0, duration: 0.35, ease: "elastic.out(1,0.45)" }, runEnd + 0.03);
+        tl.to(boc, { rotation: -6, y: -6, duration: 0.3, ease: "power2.out" }, runEnd);
+        C.talkBounce(tl, die.b, L1, 6); C.talkChar(tl, die, L1);
+        Q.charEmote(tl, die.svg, L1.t, "worry", 0.25);
+        tl.to(die.svg.querySelector(".c-armL"), { rotation: -28, svgOrigin: "142 306", duration: 0.3, ease: "back.out(1.6)" }, L1.t + 0.4);
+        tl.to(die.svg.querySelector(".c-armL"), { rotation: 0, svgOrigin: "142 306", duration: 0.4, ease: "power2.inOut" }, L1.t + L1.d);
+        Q.charEmote(tl, die.svg, L2.t - 0.1, "neutral", 0.3);
+
+        // Pilar : repond ; la cloche oscille 3 fois SANS un son, une note barree monte et s'eteint
+        C.talkBounce(tl, pil.b, L2, 4); C.talkChar(tl, pil, L2);
+        var tB = C.wordT(PLAN, 1, 2, 7), bpx = 150, bpy = 34;
+        var bellG = bell.querySelector(".pr-bell");
+        tl.fromTo(bellG, { rotation: 0, svgOrigin: bpx + " " + bpy }, { rotation: 14, svgOrigin: bpx + " " + bpy, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 5 }, tB - 0.05);
+        tl.fromTo(bellG, { rotation: 14 }, { rotation: 0, svgOrigin: bpx + " " + bpy, duration: 0.25, ease: "sine.out", immediateRender: false }, tB + 1.9);
+        var nt = S.mk(room.actors, "mute", '<svg width="130" height="150" viewBox="-60 -70 120 140"><g fill="none" stroke="#8c8a93" stroke-width="9" stroke-linecap="round"><path d="M-14 30V-34L26 -46V18"/></g><ellipse cx="-24" cy="32" rx="19" ry="14" fill="#8c8a93"/><ellipse cx="16" cy="20" rx="19" ry="14" fill="#8c8a93"/><path d="M-50 50L50 -54" stroke="#d8433f" stroke-width="9" stroke-linecap="round"/></svg>');
+        nt.setAttribute("data-layout-allow-overflow", "");
+        gsap.set(nt, { x: hx - 70, y: hy - 260, opacity: 0 });
+        tl.fromTo(nt, { opacity: 0, scale: 0.4, y: hy - 230 }, { opacity: 1, scale: 1, y: hy - 300, duration: 0.5, ease: "back.out(2)", immediateRender: false }, tB + 0.1);
+        tl.to(nt, { opacity: 0, y: hy - 360, duration: 0.7, ease: "power2.in" }, tB + 1.3);
+        Q.charEmote(tl, pil.svg, L2.t, "worry", 0.3);
+
+        // ---------- camera : plan large sur le patio fige, puis travelling vers Pilar ----------
+        S.camSet(room, 1300, 640, 0.84);
+        S.cam(tl, room, 1250, 640, 0.9, 0, L2.t - 0.3, "sine.inOut");
+        S.cam(tl, room, 1390, 660, 1.2, L2.t - 0.3, 1.5, "power2.inOut");
+        S.cam(tl, room, 1400, 664, 1.26, L2.t + 1.2, T - L2.t - 1.2, "sine.inOut");
+        tl.fromTo("#stage", { rotation: 1.0, transformOrigin: "50% 50%" }, { rotation: 0, duration: 2.2, ease: "power2.out" }, 0);
+
+        // ---------- cadre + sous-titres ----------
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

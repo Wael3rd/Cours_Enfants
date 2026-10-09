@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .fglow { position: absolute; left: 0; top: 0; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.95), rgba(66,224,160,.4) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; }
+      .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 6px solid #9bffd6; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="7.596">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.596" data-media-start="31.487" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.396,"v":1},{"t":7.596,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.a624352c55.mp3" data-start="0.6" data-duration="3.08" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/diego.2817e7ffe8.mp3" data-start="3.98" data-duration="2.766" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="0.7" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.98" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="6.396" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-historia-5","cinematica":"u02-historia","part":5,"parts":5,"total":7.596,"meta":{"cinematica":"u02-historia","titulo":"La campana muda","tipo":"historia","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":4,"t0":0,"t1":7.346,"vista":"Par la fenêtre : au loin, sur la façade de l’université, une petite grenouille de pierre brille d’un éclat vert. Le Quetzal sort du sac de Marina.","camara":"","rotulo":"","personajes":["quetzal","diego"],"lines":[{"who":"quetzal","es":"Una pluma… cerca. ¡Aquí!","key":"quetzal.a624352c55","t":0.6,"d":3.08,"words":[{"w":"Una","t":0.6,"d":0.301},{"w":"pluma…","t":0.901,"d":0.437},{"w":"cerca.","t":1.618,"d":0.789},{"w":"¡Aquí!","t":2.865,"d":0.666}]},{"who":"diego","es":"La rana de la Universidad. ¡Vamos!","key":"diego.2817e7ffe8","t":3.98,"d":2.766,"words":[{"w":"La","t":3.98,"d":0.224},{"w":"rana","t":4.204,"d":0.356},{"w":"de","t":4.56,"d":0.224},{"w":"la","t":4.784,"d":0.224},{"w":"Universidad.","t":5.008,"d":0.817},{"w":"¡Vamos!","t":6.174,"d":0.422}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/spell-magic"},{"t":0.7,"f":"ui/star"},{"t":3.98,"f":"ui/pop"},{"t":6.396,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.aula({ uid: "au" });
+        var room = S.set($("#stage"), set, { below: "#3B2216", motes: 18 });
+        S.drift(tl, room, T);
+        var F = set.frog;
+
+        // ---------- les trois voyageurs devant la fenetre ; le Quetzal sort du cartable pose sur le pupitre ----------
+        var die = S.chr(room.actors, "diego", 1040, 1040, 340);
+        var mar = S.chr(room.actors, "marina", 1330, 1020, 330);
+        var ale = S.chr(room.actors, "viajero", 1580, 1040, 340);
+        [die, mar, ale].forEach(function (c, i) { S.breathe(tl, c, 0, L2.t + 1, 0.9); Q.charBlink(tl, c.svg, 1.0 + i * 1.3); });
+        var QX = 1800, QF = 1010, QW = 330;
+        var qz = S.quetzal(room.qlayer, QX, QF, QW, "perched", true, "q5");
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.42, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        var qsvg = qz.querySelector("svg");
+        // sortie du cartable : il monte par a-coups puis s'envole vers la vitre
+        gsap.set(qz, { y: 150, opacity: 0 });
+        tl.fromTo(qz, { y: 150, opacity: 0 }, { y: 20, opacity: 1, duration: 0.5, ease: "back.out(1.7)", immediateRender: false }, 0.1);
+        Q.quetzalPoseTo(tl, qz, "talk", 0.35, 0.4, "power2.out");
+        C.talkQuetzal(tl, qz, L1);
+        Q.quetzalBlink(tl, qz, 2.2);
+        // vol vers la fenetre sur « ¡Aqui! » (au-dessus des pupitres)
+        var wAqui = C.wordT(PLAN, 4, 1, 4);
+        Q.quetzalPoseTo(tl, qz, "fly", wAqui - 0.4, 0.4, "power2.inOut");
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: 20 }, { x: 40, y: -140 }, { x: 110, y: -330 }, { x: 150, y: -450 }], curviness: 1.2 }, duration: 0.95, ease: "power2.inOut" }, wAqui - 0.35);
+        Q.quetzalFlap(tl, qz, wAqui - 0.35, 3, 0.32, 0.9);
+        tl.fromTo(qz, { scale: 1 }, { scale: 0.8, duration: 0.9, ease: "sine.inOut", transformOrigin: "50% 50%", immediateRender: false }, wAqui - 0.3);
+
+        // ---------- la grenouille s'allume (halo + anneaux), etincelles ----------
+        var glow = room.back.querySelector(".fz-glow");
+        var gl = S.mk(room.actors, "fglow"); gl.setAttribute("data-layout-allow-overflow", ""); gsap.set(gl, { x: F.x - 180, y: F.y - 190, scale: 0.4 });
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, wAqui - 0.05);
+        tl.to(glow, { opacity: 0.45, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 5 }, wAqui + 0.3);
+        tl.fromTo(gl, { opacity: 0, scale: 0.4 }, { opacity: 0.85, scale: 1.1, duration: 0.5, ease: "power2.out", immediateRender: false }, wAqui - 0.05);
+        tl.to(gl, { opacity: 0.4, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 5 }, wAqui + 0.45);
+        for (var r = 0; r < 3; r++) {
+          var rg = S.mk(room.actors, "ring"); rg.setAttribute("data-layout-allow-overflow", ""); gsap.set(rg, { x: F.x, y: F.y });
+          tl.fromTo(rg, { scale: 0.3, opacity: 0.9 }, { scale: 3.4, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, wAqui + r * 0.3);
+        }
+        for (var k = 0; k < 10; k++) {
+          var sp = S.mk(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>'); sp.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 10) * 6.283, sx = F.x + Math.cos(ang) * 30, sy = F.y + Math.sin(ang) * 30;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 110, y: sy + Math.sin(ang) * 110, scale: 0.9, duration: 0.45, ease: "back.out(3)", immediateRender: false }, wAqui + 0.1 + k * 0.03);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, wAqui + 0.55 + k * 0.03);
+        }
+
+        // ---------- Diego montre la fenetre (« La rana de la Universidad »), puis tous partent en courant (« ¡Vamos! ») ----------
+        C.talkBounce(tl, die.b, L2, 5); C.talkChar(tl, die, L2);
+        var wRana = C.wordT(PLAN, 4, 2, 2), wVamos = C.wordT(PLAN, 4, 2, 6);
+        var armR = die.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -100, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.6)" }, wRana - 0.3);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.35, ease: "power2.inOut" }, wVamos - 0.2);
+        Q.charEmote(tl, mar.svg, L1.t + 1.2, "happy", 0.3); Q.charEmote(tl, ale.svg, L1.t + 1.2, "happy", 0.3);
+        tl.to(mar.b, { y: -10, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 }, wAqui);
+        tl.to(ale.b, { y: -12, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1 }, wAqui + 0.08);
+        S.walk(tl, die, 1040, -500, wVamos + 0.05, T - wVamos - 0.2, 0.26, "power2.in");
+        S.walk(tl, mar, 1330, -300, wVamos + 0.15, T - wVamos - 0.3, 0.26, "power2.in");
+        S.walk(tl, ale, 1580, -200, wVamos + 0.25, T - wVamos - 0.4, 0.26, "power2.in");
+
+        // ---------- camera : large cote fenetre -> pousse sur la grenouille -> recule sur les trois amis ----------
+        S.camSet(room, 1440, 600, 1.0);
+        S.cam(tl, room, 1440, 610, 1.04, 0, L1.t + 0.4, "sine.inOut");
+        S.cam(tl, room, Math.min(F.x - 10, 2030), F.y + 30, 2.6, L1.t + 0.4, wAqui - L1.t + 0.4, "power3.inOut");
+        S.cam(tl, room, 1300, 700, 1.1, L2.t - 0.5, 1.3, "power2.inOut");
+        tl.fromTo("#stage", { rotation: -1.2, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.4, ease: "power2.out" }, L2.t - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.35 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>
