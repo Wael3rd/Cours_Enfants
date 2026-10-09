@@ -29,7 +29,7 @@ export default function build() {
     W('de_donde_eres', '¿de dónde eres?', "tu viens d'où ?", '🧭', 'presentacion', '¿De dónde eres, Nacho?', "Tu viens d'où, Nacho ?"),
     W('vivo_en', 'vivo en', "j'habite à / en", '🏠', 'presentacion', 'Vivo en Madrid.', "J'habite à Madrid."),
     W('tengo', 'tengo', "j'ai", '✋', 'presentacion', 'Tengo una mochila.', "J'ai un sac à dos."),
-    W('anos', 'años', 'ans', '🎂', 'presentacion', '¿Cuántos años tienes?', 'Quel âge as-tu ?', { genero: 'm' }),
+    W('anos', 'años', 'ans', '🎂', 'presentacion', '¿Cuántos años tienes?', 'Quel âge as-tu ?', { genero: 'm', soloPlural: true }),
     W('nombre', 'nombre', 'prénom, nom', '📛', 'presentacion', 'Mi nombre es Marina.', "Mon prénom est Marina.", { genero: 'm' }),
     W('amigo', 'amigo', 'ami', '🧑‍🤝‍🧑', 'presentacion', 'Nacho es mi amigo.', 'Nacho est mon ami.', { genero: 'm', femenino: 'amiga' }),
     W('chico', 'chico', 'garçon', '👦', 'personas', 'Nacho es un chico de Madrid.', 'Nacho est un garçon de Madrid.', { genero: 'm' }),

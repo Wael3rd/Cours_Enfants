@@ -73,6 +73,8 @@ export interface Vocab {
   genero?: 'm' | 'f' | 'mf';
   /** Forme plurielle si utile ("libros") */
   plural?: string;
+  /** Nom toujours employe au pluriel ("los ojos", "las gafas") : article los/las. */
+  soloPlural?: boolean;
   /** Forme feminine des noms/adjectifs de personnes ("española") */
   femenino?: string;
   /** Au moins un des deux : emoji OU ilustracion */

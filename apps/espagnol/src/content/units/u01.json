@@ -378,6 +378,7 @@
       "es": "años",
       "fr": "ans",
       "genero": "m",
+      "soloPlural": true,
       "emoji": "🎂",
       "tags": [
         "presentacion"

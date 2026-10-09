@@ -23,7 +23,8 @@ export function stableShuffle<T>(arr: T[], seed: string): T[] {
 }
 
 /** Article de genre d'une carte-objet. */
-export function articleOf(v: Vocab): 'el' | 'la' | '' {
+export function articleOf(v: Vocab): 'el' | 'la' | 'los' | 'las' | '' {
+  if (v.soloPlural) return v.genero === 'm' ? 'los' : v.genero === 'f' ? 'las' : '';
   return v.genero === 'm' ? 'el' : v.genero === 'f' ? 'la' : '';
 }
 

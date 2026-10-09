@@ -57,6 +57,7 @@
       "es": "padres",
       "fr": "parents (le père et la mère)",
       "genero": "m",
+      "soloPlural": true,
       "emoji": "👫",
       "tags": [
         "familia"

@@ -256,6 +256,7 @@
       "es": "matemáticas",
       "fr": "mathématiques",
       "genero": "f",
+      "soloPlural": true,
       "emoji": "➗",
       "tags": [
         "asignaturas"
@@ -341,6 +342,7 @@
       "es": "ciencias",
       "fr": "sciences",
       "genero": "f",
+      "soloPlural": true,
       "emoji": "🔬",
       "tags": [
         "asignaturas"

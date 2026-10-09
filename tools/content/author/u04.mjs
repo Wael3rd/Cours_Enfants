@@ -11,8 +11,8 @@ export default function build() {
   const vocab = [
     // físico
     W('pelo', 'pelo', 'cheveux (on dit aussi « cabello », surtout au Mexique)', '💇', 'fisico', 'Marina tiene el pelo largo.', 'Marina a les cheveux longs.', { genero: 'm' }),
-    W('ojos', 'ojos', 'yeux', '👀', 'fisico', 'Tengo los ojos marrones.', 'J’ai les yeux marron.', { genero: 'm' }),
-    W('gafas', 'gafas', 'lunettes (au Mexique : « lentes »)', '👓', 'fisico', 'Mi profesor lleva gafas.', 'Mon prof porte des lunettes.', { genero: 'f' }),
+    W('ojos', 'ojos', 'yeux', '👀', 'fisico', 'Tengo los ojos marrones.', 'J’ai les yeux marron.', { genero: 'm', soloPlural: true }),
+    W('gafas', 'gafas', 'lunettes (au Mexique : « lentes »)', '👓', 'fisico', 'Mi profesor lleva gafas.', 'Mon prof porte des lunettes.', { genero: 'f', soloPlural: true }),
     W('trenza', 'trenza', 'tresse', '🪢', 'fisico', 'Frida lleva trenzas con flores.', 'Frida porte des tresses avec des fleurs.', { genero: 'f', plural: 'trenzas' }),
     W('largo', 'largo', 'long', '📏', 'fisico', 'Tengo el pelo largo.', 'J’ai les cheveux longs.', { genero: 'm', femenino: 'larga' }),
     W('corto', 'corto', 'court', '✂️', 'fisico', 'Álex tiene el pelo corto.', 'Álex a les cheveux courts.', { genero: 'm', femenino: 'corta' }),
@@ -39,13 +39,13 @@ export default function build() {
     // ropa
     W('ropa', 'ropa', 'vêtements', '👚', 'ropa', 'En el mercado hay ropa de colores.', 'Au marché, il y a des vêtements colorés.', { genero: 'f' }),
     W('camiseta', 'camiseta', 'tee-shirt (au Mexique : « playera »)', '👕', 'ropa', 'Álex lleva una camiseta verde.', 'Álex porte un tee-shirt vert.', { genero: 'f', plural: 'camisetas' }),
-    W('pantalones', 'pantalones', 'pantalon (souvent au pluriel : « unos pantalones » = un pantalon ; on dit aussi « un pantalón »)', '👖', 'ropa', 'Mateo lleva pantalones negros.', 'Mateo porte un pantalon noir.', { genero: 'm' }),
+    W('pantalones', 'pantalones', 'pantalon (souvent au pluriel : « unos pantalones » = un pantalon ; on dit aussi « un pantalón »)', '👖', 'ropa', 'Mateo lleva pantalones negros.', 'Mateo porte un pantalon noir.', { genero: 'm', soloPlural: true }),
     W('falda', 'falda', 'jupe', null, 'ropa', 'Marina lleva una falda azul.', 'Marina porte une jupe bleue.', { genero: 'f', plural: 'faldas', ...ilu('Une jupe rouge évasée qui tourne') }),
     W('vestido', 'vestido', 'robe', '👗', 'ropa', 'Frida lleva un vestido largo.', 'Frida porte une robe longue.', { genero: 'm', plural: 'vestidos' }),
     W('camisa', 'camisa', 'chemise', '👔', 'ropa', 'Mi padre lleva una camisa blanca.', 'Mon père porte une chemise blanche.', { genero: 'f', plural: 'camisas' }),
     W('chaqueta', 'chaqueta', 'veste (au Mexique : « chamarra »)', '🧥', 'ropa', 'Lleva una chaqueta negra.', 'Il porte une veste noire.', { genero: 'f', plural: 'chaquetas' }),
-    W('zapatos', 'zapatos', 'chaussures', '👞', 'ropa', 'Los zapatos de Rafa son marrones.', 'Les chaussures de Rafa sont marron.', { genero: 'm', plural: 'zapatos' }),
-    W('zapatillas', 'zapatillas', 'baskets (au Mexique : « tenis »)', '👟', 'ropa', 'Álex lleva zapatillas blancas.', 'Álex porte des baskets blanches.', { genero: 'f' }),
+    W('zapatos', 'zapatos', 'chaussures', '👞', 'ropa', 'Los zapatos de Rafa son marrones.', 'Les chaussures de Rafa sont marron.', { genero: 'm', soloPlural: true }),
+    W('zapatillas', 'zapatillas', 'baskets (au Mexique : « tenis »)', '👟', 'ropa', 'Álex lleva zapatillas blancas.', 'Álex porte des baskets blanches.', { genero: 'f', soloPlural: true }),
     W('sombrero', 'sombrero', 'chapeau', '👒', 'ropa', 'Don Ignacio lleva un sombrero.', 'Don Ignacio porte un chapeau.', { genero: 'm', plural: 'sombreros' }),
     W('gorra', 'gorra', 'casquette', '🧢', 'ropa', 'Mateo lleva una gorra azul.', 'Mateo porte une casquette bleue.', { genero: 'f', plural: 'gorras' }),
     W('blusa', 'blusa', 'chemisier, blouse (au Mexique, souvent brodée de fleurs)', null, 'ropa', 'Lupita lleva una blusa con flores.', 'Lupita porte une blouse avec des fleurs.', { genero: 'f', plural: 'blusas', ilustracion: 'Une blouse blanche brodée de fleurs colorées (style mexicain)', exVoz: 'lupita' }),

@@ -58,6 +58,7 @@
       "es": "ojos",
       "fr": "yeux",
       "genero": "m",
+      "soloPlural": true,
       "emoji": "👀",
       "tags": [
         "fisico"
@@ -75,6 +76,7 @@
       "es": "gafas",
       "fr": "lunettes (au Mexique : « lentes »)",
       "genero": "f",
+      "soloPlural": true,
       "emoji": "👓",
       "tags": [
         "fisico"
@@ -522,6 +524,7 @@
       "es": "pantalones",
       "fr": "pantalon (souvent au pluriel : « unos pantalones » = un pantalon ; on dit aussi « un pantalón »)",
       "genero": "m",
+      "soloPlural": true,
       "emoji": "👖",
       "tags": [
         "ropa"
@@ -611,7 +614,7 @@
       "es": "zapatos",
       "fr": "chaussures",
       "genero": "m",
-      "plural": "zapatos",
+      "soloPlural": true,
       "emoji": "👞",
       "tags": [
         "ropa"
@@ -629,6 +632,7 @@
       "es": "zapatillas",
       "fr": "baskets (au Mexique : « tenis »)",
       "genero": "f",
+      "soloPlural": true,
       "emoji": "👟",
       "tags": [
         "ropa"

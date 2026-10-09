@@ -47,7 +47,7 @@
     {:else}
       <span class="typo {motif.kind}" style:background-image="url({motif.url})" style:background-size={motif.kind === 'azulejo' ? `${Math.round(size * 0.2)}px` : motif.kind === 'picado' ? `${Math.round(size * 0.4)}px auto` : `${Math.round(size * 0.16)}px`}>
         <span class="plate">
-          {#if artic && showArticle}<em class="ar" class:masc={artic === 'el'} class:fem={artic === 'la'} style:font-size="{Math.round(size * 0.12)}px">{artic}</em>{/if}
+          {#if artic && showArticle}<em class="ar" class:masc={artic === 'el' || artic === 'los'} class:fem={artic === 'la' || artic === 'las'} style:font-size="{Math.round(size * 0.12)}px">{artic}</em>{/if}
           <b class="w" style:font-size="{Math.round(fs)}px">{#each words as w}<span>{w}</span>{/each}</b>
         </span>
       </span>

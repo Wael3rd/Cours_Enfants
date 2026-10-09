@@ -9,7 +9,7 @@ export default function build() {
   const vocab = [
     // familia
     W('familia', 'familia', 'famille', '👪', 'familia', 'La familia de Marina es grande.', 'La famille de Marina est grande.', { genero: 'f' }),
-    W('padres', 'padres', 'parents (le père et la mère)', '👫', 'familia', 'Mis padres se llaman Ana y Javier.', 'Mes parents s’appellent Ana et Javier.', { genero: 'm' }),
+    W('padres', 'padres', 'parents (le père et la mère)', '👫', 'familia', 'Mis padres se llaman Ana y Javier.', 'Mes parents s’appellent Ana et Javier.', { genero: 'm', soloPlural: true }),
     W('madre', 'madre', 'mère', '👩‍👧', 'familia', 'Mi madre es médica.', 'Ma mère est médecin.', { genero: 'f' }),
     W('padre', 'padre', 'père', '👨‍👦', 'familia', 'Mi padre se llama Javier.', 'Mon père s’appelle Javier.', { genero: 'm' }),
     W('hermano', 'hermano', 'frère', null, 'familia', 'Marina tiene un hermano pequeño.', 'Marina a un petit frère.', { genero: 'm', femenino: 'hermana', ...ilu('Un garçon qui sourit, avec le même t-shirt que sa sœur') }),

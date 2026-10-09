@@ -20,12 +20,12 @@ export default function build() {
     W('mesa', 'mesa', 'table, bureau', null, 'material', 'El cuaderno está en la mesa.', 'Le cahier est sur la table.', { genero: 'f', plural: 'mesas', ilustracion: 'Une table d’école en bois avec un cahier ouvert' }),
     W('ordenador', 'ordenador', 'ordinateur', '💻', 'material', 'Hay un ordenador en la clase.', 'Il y a un ordinateur dans la classe.', { genero: 'm', plural: 'ordenadores' }),
     // asignaturas
-    W('matematicas', 'matemáticas', 'mathématiques', '➗', 'asignaturas', 'El lunes tengo matemáticas.', 'Le lundi, j’ai maths.', { genero: 'f' }),
+    W('matematicas', 'matemáticas', 'mathématiques', '➗', 'asignaturas', 'El lunes tengo matemáticas.', 'Le lundi, j’ai maths.', { genero: 'f', soloPlural: true }),
     W('lengua', 'lengua', 'langue (le cours d’espagnol des élèves espagnols, comme notre cours de français)', '🔤', 'asignaturas', 'El martes tengo lengua.', 'Le mardi, j’ai cours de langue (espagnol).', { genero: 'f' }),
     W('ingles', 'inglés', 'anglais', '🇬🇧', 'asignaturas', 'Mi profesor de inglés es muy simpático.', 'Mon prof d’anglais est très sympa.', { genero: 'm' }),
     W('historia', 'historia', 'histoire', '🏰', 'asignaturas', 'La historia de España es larga.', 'L’histoire de l’Espagne est longue.', { genero: 'f' }),
     W('geografia', 'geografía', 'géographie', '🗺️', 'asignaturas', 'En geografía miramos mapas.', 'En géographie, on regarde des cartes.', { genero: 'f' }),
-    W('ciencias', 'ciencias', 'sciences', '🔬', 'asignaturas', 'En ciencias hay experimentos.', 'En sciences, il y a des expériences.', { genero: 'f' }),
+    W('ciencias', 'ciencias', 'sciences', '🔬', 'asignaturas', 'En ciencias hay experimentos.', 'En sciences, il y a des expériences.', { genero: 'f', soloPlural: true }),
     W('educacion_fisica', 'educación física', 'éducation physique (EPS)', '🏃', 'asignaturas', 'El viernes tengo educación física.', 'Le vendredi, j’ai EPS.', { genero: 'f' }),
     W('musica', 'música', 'musique', '🎵', 'asignaturas', 'En música cantamos.', 'En musique, on chante.', { genero: 'f' }),
     // consignas
