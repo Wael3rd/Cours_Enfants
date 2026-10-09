@@ -75,7 +75,7 @@
       </div>
       <div class="who">
         <h2 class="h-rpg">{playerName(s)}</h2>
-        <XpBar value={lvl.into} max={lvl.span} level={lvl.level} label="XP" width={420} />
+        <XpBar value={lvl.into} max={lvl.span} level={lvl.level} label="XP" width={400} />
         <ul class="nums">
           <li><b>{totalXp(s.xp)}</b><span>XP total</span></li>
           <li><b>{words}</b><span>cartas</span></li>
@@ -146,22 +146,23 @@
 
 <style>
   .pf { z-index: 2; }
-  .body { flex: 1; min-height: 0; display: grid; grid-template-columns: auto 1fr; gap: 22px 28px; padding: 6px 28px 30px; align-content: start; align-items: start; }
-  .hero { grid-column: 1 / -1; display: flex; align-items: center; gap: 36px; padding-left: 20px; }
-  .stage { position: relative; width: 250px; height: 300px; flex: none; display: grid; place-items: center; }
+  .body { flex: 1; min-height: 0; display: grid; grid-template-columns: 430px 1fr; gap: 22px 28px; padding: 6px 28px 30px; align-content: start; align-items: start; }
+  .hero { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .stage { position: relative; width: 250px; height: 280px; flex: none; display: grid; place-items: center; }
   .halo { position: absolute; inset: 20px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 200, 61, 0.55), transparent); }
   .av { position: relative; width: 240px; height: 240px; object-fit: contain; filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.25)); }
   .gear { position: absolute; filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.4)); }
   .gear.top { right: -4px; top: 0; }
   .gear.bot { left: -10px; bottom: 36px; }
   .chg { position: absolute; bottom: 0; display: flex; align-items: center; gap: 8px; height: 60px; padding: 0 22px; border: 0; border-radius: 999px; cursor: pointer; font: 900 24px var(--q-font-body); color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel2)); box-shadow: 0 5px 0 #7d5a1c; touch-action: manipulation; }
-  .who { display: grid; gap: 14px; }
+  .who { display: grid; gap: 12px; justify-items: center; width: 100%; }
   .who h2 { font-size: 54px; line-height: 1; }
-  .nums { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+  .nums { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; width: 100%; }
   .nums li { display: grid; padding: 6px 16px 8px; border-radius: 16px; background: rgba(11, 13, 42, 0.6); box-shadow: inset 0 0 0 3px rgba(255, 200, 61, 0.4); }
   .nums b { font: 400 34px/1 var(--q-font-title); color: var(--q-sol); }
   .nums span { font: 800 18px var(--q-font-body); color: var(--q-papel2); }
-  .plrow { display: flex; align-items: center; gap: 20px; }
+  .pl { grid-column: 1 / -1; }
+  .plrow { display: flex; align-items: center; gap: 28px; }
   .pls { flex: 1; display: grid; gap: 6px; }
   .pls h3 { font-size: 36px; }
   .cnt { margin: 0; font: 900 26px var(--q-font-body); color: var(--q-papel); }

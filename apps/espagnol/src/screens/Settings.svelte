@@ -71,7 +71,7 @@
       <h2 class="h-rpg">Voces sin conexión</h2>
       <Toggle icon="download" label="Descarga automática" sub="La región actual y la siguiente, con Wi-Fi" checked={st.autoDownload} onchange={(v) => set('autoDownload', v)} />
       <ul class="units">
-        {#each content.units as u}
+        {#each [...content.main, ...content.events] as u}
           {@const o = game.state.offline[u.id]}
           {@const dl = game.downloads[u.id]}
           <li>

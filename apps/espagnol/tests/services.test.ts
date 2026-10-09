@@ -10,7 +10,7 @@ import { hardItems, objectiveCoverage, overview, unitRows } from '../src/parent/
 import { normalizeState } from '../src/state/normalize';
 
 const dir = join(import.meta.dirname, '../src/content');
-const units: Unit[] = readdirSync(join(dir, 'units')).filter((f) => f.endsWith('.json')).map((f) => JSON.parse(readFileSync(join(dir, 'units', f), 'utf8')));
+const units: Unit[] = readdirSync(join(dir, 'units')).filter((f) => /^u\d+\.json$/.test(f)).map((f) => JSON.parse(readFileSync(join(dir, 'units', f), 'utf8')));
 const chars = JSON.parse(readFileSync(join(dir, 'characters.json'), 'utf8'));
 const manifest: { key: string }[] = JSON.parse(readFileSync(join(dir, 'audio-manifest.json'), 'utf8'));
 const lento = new Set(manifest.map((m) => m.key).filter((k) => k.endsWith('.lento')));

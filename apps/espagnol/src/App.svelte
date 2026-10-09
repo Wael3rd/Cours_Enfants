@@ -9,6 +9,7 @@
   import { ui } from './ui/ui.svelte';
   import MapScreen from './screens/MapScreen.svelte';
   import { content, loadUnit, loadAllUnits } from './engine/data';
+  import { azulejoDataUri } from './art/core/qart.js';
 
   let { updater }: { updater: Updater } = $props();
   // Demo temporaire du kit graphique (src/art) : /espagnol/#art
@@ -31,6 +32,7 @@
 
   onMount(async () => {
     await game.init();
+    document.documentElement.style.setProperty('--q-tile', `url('${azulejoDataUri({}, 120)}')`);
     // Acces de test (e2e / dev) : ?debug dans l'URL
     if (import.meta.env.DEV || location.search.includes('debug')) (window as unknown as Record<string, unknown>).__q = { game, nav, content, loadUnit, loadAllUnits };
     ui.lento = game.state.settings.lentoDefault;

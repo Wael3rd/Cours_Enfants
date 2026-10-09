@@ -38,7 +38,7 @@ import {
 
 const dir = join(import.meta.dirname, '../src/content');
 const units: Unit[] = readdirSync(join(dir, 'units'))
-  .filter((f) => f.endsWith('.json'))
+  .filter((f) => /^u\d+\.json$/.test(f))
   .map((f) => JSON.parse(readFileSync(join(dir, 'units', f), 'utf8')));
 const chars = JSON.parse(readFileSync(join(dir, 'characters.json'), 'utf8'));
 const c: Content = buildContent(units, chars);

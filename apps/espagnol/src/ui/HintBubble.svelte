@@ -34,6 +34,6 @@
   .card { max-width: 760px; padding: 26px 34px 20px; border-radius: 28px; color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel)); box-shadow: 0 0 0 6px #19b7aa, 0 8px 0 6px #07474f, 0 30px 50px rgba(0, 0, 0, 0.5); will-change: transform, opacity; }
   .head { display: flex; align-items: center; gap: 12px; font: 400 32px/1 var(--q-font-title); color: var(--q-turquesa2); }
   .bulb { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--q-turquesa); color: #fff; }
-  p { margin: 14px 0 10px; font: 800 32px/1.4 var(--q-font-body); }
+  p { margin: 14px 0 10px; font: 800 32px/1.4 var(--q-font-body); white-space: pre-line; }
   small { display: block; text-align: right; font: 800 18px var(--q-font-body); opacity: 0.55; }
 </style>

@@ -26,7 +26,10 @@ describe('contenu a la demande', () => {
   });
 
   it('aucune unite n est evenement sans champ explicite (u06 Navidad = unite normale)', () => {
-    expect(content.events.length).toBe(0);
+    // seules les unites portant un champ explicite `evento` sont des evenements
+    expect(content.events.every((u) => !!u.evento)).toBe(true);
+    expect(content.main.every((u) => !u.evento)).toBe(true);
+    expect(content.unitById.get('u06')?.evento).toBeUndefined();
     const navidad = { id: 'u06', numero: 6, titulo: '¡Feliz Navidad!', lugar: 'Madrid de noche' } as Unit;
     expect(eventWindow(navidad)).toBeNull();
     expect(eventWindow({ ...navidad, evento: { desde: '12-01', hasta: '01-06' } })).toEqual({ from: '12-01', to: '01-06' });

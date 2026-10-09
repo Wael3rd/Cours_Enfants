@@ -56,7 +56,7 @@
     haptic('good');
     if (!prefersReducedMotion()) {
       gsap.fromTo(sEl, { x: 0 }, { x: 16, duration: 0.05, repeat: 7, yoyo: true, ease: 'sine.inOut', clearProps: 'x' });
-      gsap.fromTo(sEl, { filter: 'brightness(3)' }, { filter: 'brightness(1)', duration: 0.5 });
+      gsap.fromTo(sEl, { opacity: 0.25 }, { opacity: 1, duration: 0.5, ease: 'power2.out' });
     }
     sombra?.narrow();
   }
@@ -72,7 +72,7 @@
     quetzal?.setPose('sad', 0.2);
     if (!prefersReducedMotion()) {
       gsap.fromTo(scene, { x: -10 }, { x: 0, duration: 0.5, ease: 'elastic.out(1,0.25)' });
-      gsap.fromTo(qEl, { filter: 'brightness(0.4)' }, { filter: 'brightness(1)', duration: 0.6 });
+      gsap.fromTo(qEl, { opacity: 0.3 }, { opacity: 1, duration: 0.6 });
     }
     setTimeout(() => quetzal?.setPose('perched', 0.5), 900);
   }
@@ -112,11 +112,11 @@
   .hearts { position: absolute; left: 20px; top: 10px; display: flex; gap: 4px; z-index: 2; }
   .h { color: #ff4f7b; filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.5)); transition: transform 0.3s cubic-bezier(0.2, 1.6, 0.4, 1), color 0.3s; }
   .h.lost { color: #4a3f6a; transform: scale(0.8); }
-  .hp { position: absolute; right: 24px; top: 10px; z-index: 2; width: 420px; display: grid; gap: 6px; text-align: right; }
-  .hp b { font: 400 26px/1 var(--q-font-title); color: #d6c8ff; text-shadow: 0 3px 0 #000a; }
+  .hp { position: absolute; left: 50%; margin-left: -190px; top: 10px; z-index: 2; width: 380px; display: grid; gap: 6px; text-align: center; }
+  .hp b { font: 400 24px/1 var(--q-font-title); color: #d6c8ff; text-shadow: 0 3px 0 #000a; }
   .bar { display: block; height: 22px; border-radius: 14px; overflow: hidden; background: #0b0d2a; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6), 0 0 0 3px #a99bff; }
   .bar i { display: block; height: 100%; width: 100%; transform-origin: 100% 50%; background: linear-gradient(180deg, #c8b8ff, #7b4cf0 55%, #4a2a9a); transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.1, 1); }
   .q { position: absolute; left: 90px; bottom: 6px; }
-  .s { position: absolute; right: 80px; bottom: 0; }
+  .s { position: absolute; right: 90px; bottom: -4px; }
   .s.gone { visibility: hidden; }
 </style>

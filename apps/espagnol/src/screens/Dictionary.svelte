@@ -4,7 +4,7 @@
   import { gsap, haptic, prefersReducedMotion, shake } from '@ce/core';
   import { game } from '../state/game.svelte';
   import { content, loadAllUnits } from '../engine/data';
-  import { inventory, MASTERY_LABEL, rarityOf, RARITY_LABEL } from '../engine';
+  import { currentUnit, inventory, MASTERY_LABEL, rarityOf, RARITY_LABEL } from '../engine';
   import type { Vocab } from '../content/schema';
   import { nav } from '../ui/nav.svelte';
   import { say } from '../ui/ui.svelte';
@@ -26,7 +26,8 @@
   onMount(async () => {
     music.setMode('menu');
     await loadAllUnits();
-    unitId = content.units.find((u) => u.vocab.length)?.id ?? '';
+    const withCards = content.units.filter((u) => u.vocab.some((v) => game.state.discovered[v.id]));
+    unitId = (withCards.find((u) => u.id === currentUnit(content, game.state)?.id) ?? withCards[0] ?? [...content.main, ...content.events].find((u) => u.vocab.length))?.id ?? '';
     ready = true;
   });
 
@@ -72,7 +73,7 @@
     <div class="empty"><p>Abriendo el libro…</p></div>
   {:else}
     <nav class="units" aria-label="Regiones">
-      {#each content.units.filter((u) => u.vocab.length) as u}
+      {#each [...content.main, ...content.events].filter((u) => u.vocab.length) as u}
         <button type="button" class="u" class:on={u.id === unitId} onclick={() => pickUnit(u.id)}>
           <Emoji e={u.emoji} size={44} /><span><b>{u.lugar}</b><small>{unitFound(u.id)}/{u.vocab.length}</small></span>
         </button>

@@ -116,7 +116,6 @@
   .hd { padding: 16px 24px 0; }
   .x { width: 72px; height: 72px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--q-nuit); background: linear-gradient(180deg, #fff3d1, var(--q-papel2)); box-shadow: 0 6px 0 #7d5a1c; }
   .mid { flex: 1; display: flex; align-items: center; justify-content: center; gap: 40px; padding: 10px 60px 40px; font: 800 30px var(--q-font-body); color: var(--q-papel2); }
-  .mid:has(> svg) { flex-direction: column; }
   .card, .endcard { display: grid; gap: 16px; justify-items: center; min-width: 560px; }
   h1 { font-size: 56px; line-height: 1; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; }

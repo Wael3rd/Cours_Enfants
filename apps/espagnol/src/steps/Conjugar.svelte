@@ -110,25 +110,25 @@
   @keyframes rise { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 0.9; } 100% { transform: translateY(-420px) scale(0.3); opacity: 0; } }
   .verb { position: absolute; left: 26px; top: 16px; }
   .chip { display: inline-block; padding: 6px 22px 8px; border-radius: 999px; font: 900 28px var(--q-font-body); color: var(--q-nuit); background: var(--q-sol); }
-  .work { position: relative; z-index: 3; display: flex; align-items: center; gap: 12px; margin-bottom: -36px; }
-  .suj { font: 400 54px/1 var(--q-font-title); color: var(--q-turquesa); margin-right: 12px; text-shadow: 0 4px 0 #07474f; }
-  .ingot { display: inline-grid; place-items: center; min-width: 96px; height: 96px; padding: 0 26px; border-radius: 18px; font: 400 58px/1 var(--q-font-title); }
+  .work { position: relative; z-index: 3; display: flex; align-items: center; gap: 12px; margin-bottom: -28px; }
+  .suj { font: 400 46px/1 var(--q-font-title); color: var(--q-turquesa); margin-right: 12px; text-shadow: 0 4px 0 #07474f; }
+  .ingot { display: inline-grid; place-items: center; min-width: 84px; height: 80px; padding: 0 22px; border-radius: 16px; font: 400 48px/1 var(--q-font-title); }
   .rad { color: #fff; background: linear-gradient(180deg, #b6bde8, #7d86b8 55%, #4a5190); box-shadow: 0 8px 0 #2b2f55, inset 0 0 0 3px rgba(255, 255, 255, 0.35); text-shadow: 0 3px 0 rgba(0, 0, 0, 0.4); }
   .ter { color: #fff; text-shadow: 0 3px 0 rgba(120, 30, 0, 0.7); }
   .hot { background: linear-gradient(180deg, #ffd34d, #ff8a1c 55%, #e0480f); box-shadow: 0 8px 0 #8a2a05, 0 0 22px rgba(255, 138, 28, 0.8), inset 0 0 0 3px rgba(255, 255, 255, 0.45); }
   .ter.cooled { background: linear-gradient(180deg, #b6bde8, #6a719f 55%, #3a4070); box-shadow: 0 8px 0 #2b2f55; text-shadow: none; }
   .ter.glow { background: linear-gradient(180deg, #fff3a0, #ffc83d 55%, #ff8a1c); box-shadow: 0 8px 0 #8a4a05, 0 0 40px rgba(255, 200, 61, 0.95), inset 0 0 0 3px rgba(255, 255, 255, 0.6); }
-  .slot { min-width: 120px; height: 100px; display: grid; place-items: center; border-radius: 20px; border: 4px dashed rgba(255, 200, 61, 0.8); animation: pulse 1.4s ease-in-out infinite; }
+  .slot { min-width: 104px; height: 86px; display: grid; place-items: center; border-radius: 20px; border: 4px dashed rgba(255, 200, 61, 0.8); animation: pulse 1.4s ease-in-out infinite; }
   .slot.filled { border-style: solid; border-color: transparent; animation: none; }
-  .hole { font: 400 56px var(--q-font-title); color: rgba(255, 200, 61, 0.7); }
+  .hole { font: 400 46px var(--q-font-title); color: rgba(255, 200, 61, 0.7); }
   @keyframes pulse { 50% { background: rgba(255, 200, 61, 0.18); } }
-  .anvilwrap { position: relative; z-index: 2; width: 520px; }
+  .anvilwrap { position: relative; z-index: 2; width: 400px; }
   .anvil { display: block; width: 100%; }
-  .hammer { position: absolute; right: -70px; top: -120px; width: 180px; height: 180px; transform-origin: 104px 186px; opacity: 0; }
-  .bank { position: relative; z-index: 4; display: flex; gap: 20px; justify-content: center; min-height: 112px; margin-top: 14px; }
+  .hammer { position: absolute; right: -60px; top: -110px; width: 160px; height: 160px; transform-origin: 104px 186px; opacity: 0; }
+  .bank { position: relative; z-index: 4; display: flex; gap: 18px; justify-content: center; min-height: 92px; margin-top: 8px; }
   .bank.gone { opacity: 0.4; }
   .piece { border: 0; cursor: grab; touch-action: none; user-select: none; }
   .piece:global(.dragging) { cursor: grabbing; box-shadow: 0 24px 26px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 138, 28, 1), inset 0 0 0 3px rgba(255, 255, 255, 0.5); }
-  .forged { position: absolute; left: 0; right: 0; top: 24px; margin: 0; text-align: center; font: 400 56px/1 var(--q-font-title); color: var(--q-sol); text-shadow: 0 5px 0 #8a4a05; z-index: 6; }
+  .forged { position: absolute; right: 26px; top: 14px; margin: 0; text-align: right; font: 400 44px/1 var(--q-font-title); color: var(--q-sol); text-shadow: 0 4px 0 #8a4a05; z-index: 6; }
   .forged :global(.sp) { text-decoration: none; }
 </style>

@@ -126,7 +126,7 @@
       <div class="bar">
         <RoundBtn icon="back" label="Volver al mapa" variant="papel" onclick={() => nav.back()} />
         <div class="ttl">
-          <p class="cap">Capítulo {unit.numero} · {unit.lugar}</p>
+          <p class="cap">{unit.numero ? `Capítulo ${unit.numero}` : 'Evento'} · {unit.lugar}</p>
           <h1 class="h-rpg">{unit.titulo}</h1>
         </div>
         <div class="stats">

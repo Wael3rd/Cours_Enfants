@@ -31,7 +31,7 @@
   import { collectAudioKeysOf } from '../engine/audioKeys';
   import { nav } from '../ui/nav.svelte';
   import { ui } from '../ui/ui.svelte';
-  import { hintText } from '../steps/common';
+  import { hintText, vocabById } from '../steps/common';
   import { sfx } from '../services/sfx';
   import { preloadHablas } from '../services/audio';
   import { music } from '../services/music';
@@ -163,6 +163,20 @@
     return 'Casi… ¡a la próxima!';
   }
 
+  /** Bonne reponse a montrer apres une erreur (texte attendu, ou deduite de l'etape). */
+  function answerLine(step: Step, r: StepResult): string {
+    if (r.outcome === 'correct') return '';
+    if (r.expected && r.speech !== 'autoevaluacion') return r.expected;
+    if (step.tipo === 'true_false') return step.correcta ? 'Verdadero' : 'Falso';
+    if (step.tipo === 'listen_choose') {
+      const o = step.opciones.find((x) => x.correcta);
+      return o?.texto ?? vocabById(o?.vocab)?.es ?? '';
+    }
+    if (step.tipo === 'dialogue_choice') return step.opciones.find((x) => x.correcta)?.habla.es ?? '';
+    return '';
+  }
+  let ansLine = $state('');
+
   function onanswer(a: Answer) {
     if (result || !cur) return;
     const rs = cur;
@@ -184,6 +198,7 @@
     const ok = r.outcome !== 'wrong';
     if (!ok) sum.wrong += 1;
     msg = describe(r);
+    ansLine = answerLine(step, r);
     mood = ok ? 'happy' : 'sad';
 
     if (!graded) {
@@ -321,8 +336,8 @@
       <div class="txt">
         <h3>{msg}</h3>
         {#each result.warnings as w}<p class="warn">{w === ACCENT_WARNING ? ACCENT_WARNING : w}</p>{/each}
-        {#if result.outcome !== 'correct' && result.expected && result.speech !== 'autoevaluacion'}
-          <p class="exp">{result.outcome === 'wrong' ? 'La respuesta:' : 'Mejor:'} <b>{result.expected}</b></p>
+        {#if ansLine}
+          <p class="exp">{result.outcome === 'wrong' ? 'La respuesta:' : 'Mejor:'} <b>{ansLine}</b></p>
         {/if}
       </div>
       <div class="xp" bind:this={xpPill}>
@@ -347,7 +362,7 @@
     <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
     <div class="veil" onclick={() => (confirmExit = false)}>
       <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
-      <div class="dlg" onclick={(e) => e.stopPropagation()} role="alertdialog" aria-label="Salir">
+      <div class="dlg" onclick={(e) => e.stopPropagation()} role="alertdialog" aria-label="Salir" tabindex="-1">
         <h3>¿Salir de la misión?</h3>
         <p>Perderás lo que has hecho en esta partida.</p>
         <div class="row">

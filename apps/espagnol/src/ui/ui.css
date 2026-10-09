@@ -8,6 +8,8 @@ button { font-family: var(--q-font-body); }
 /* Ecran plein cadre */
 .scr { position: absolute; inset: 0; display: flex; flex-direction: column; overflow: hidden; color: var(--q-papel); }
 .scr-bg { background: radial-gradient(ellipse at 50% -10%, #3a41a8 0%, #1d2160 38%, #14173f 70%, #0b0d2a 100%); }
+/* filigrane d'azulejos (pose par App.svelte : --q-tile) */
+.scr-bg::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: var(--q-tile, none); background-size: 120px 120px; opacity: 0.06; -webkit-mask: linear-gradient(180deg, #000, transparent 85%); mask: linear-gradient(180deg, #000, transparent 85%); }
 
 /* Defilement tactile propre */
 .scroll { overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; scrollbar-width: none; }

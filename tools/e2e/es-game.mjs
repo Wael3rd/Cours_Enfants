@@ -237,13 +237,21 @@ async function solve(step, { wrong = false, shots = {}, used = new Set() } = {})
 }
 
 /** Joue toute une partie (quete, desafio, mision) : `wrongAt` = indices a rater volontairement. */
-async function playAll({ wrongAt = [], shots = {}, max = 40 } = {}) {
+async function playAll({ wrongAt = [], hintAt = [], shots = {}, max = 40 } = {}) {
   const used = new Set();
   for (let n = 0; n < max; n++) {
     if (!(await page.locator('.run').count())) break;
     const step = await qstep();
     if (!step) break;
     const idx = await qidx();
+    if (hintAt.includes(idx)) {
+      await page.locator('.run header button[aria-label="Pista"]').click();
+      await page.waitForSelector('[role=dialog][aria-label=Pista]');
+      await wait(700);
+      if (shots.pista && !used.has('pista')) { used.add('pista'); await shot(shots.pista); }
+      await page.mouse.click(8, 8);
+      await wait(400);
+    }
     await solve(step, { wrong: wrongAt.includes(idx), shots, used });
     if (await page.locator('.end, .ms .endcard').count()) break;
   }
@@ -345,11 +353,14 @@ try {
   await page.evaluate(() => window.__q.game.mutate((s) => (s.xp = { escuchar: 0, hablar: 0, leer: 185, escribir: 0, cultura: 0 })));
   await playAll({
     wrongAt: [4, 9, 12],
-    shots: { flashcard: '11-flashcard', listen_choose: '12-escucha', match_image: '13-asociar', true_false: '14-verdadero-falso', dialogue_choice: '15-dialogo', fill_blank: '16-completar', reorder_words: '17-ordenar', dictado: '18-dictado', speak: '19-hechizo', 'fb:wrong': '20-feedback-incorrecto', 'fb:partial': '21-feedback-acento', 'fb:correct': '22-feedback-correcto' },
+    hintAt: [5],
+    shots: { pista: '12b-pista', flashcard: '11-flashcard', listen_choose: '12-escucha', match_image: '13-asociar', true_false: '14-verdadero-falso', dialogue_choice: '15-dialogo', fill_blank: '16-completar', reorder_words: '17-ordenar', dictado: '18-dictado', speak: '19-hechizo', 'fb:wrong': '20-feedback-incorrecto', 'fb:partial': '21-feedback-acento', 'fb:correct': '22-feedback-correcto' },
   });
   await page.waitForSelector('.end', { timeout: 30000 });
   await wait(4800);
   await shot('23-fin-mision-2');
+  const hintsUsed = await page.evaluate(() => window.__q.game.state.hints.used);
+  check('Pista (français) comptabilisée', hintsUsed >= 1, `(${hintsUsed})`);
   const stars = await page.evaluate(() => window.__q.game.state.quests['u01-q02']?.stars);
   check('quête 2 terminée avec étoiles', stars >= 1, `(${stars} étoiles)`);
   await page.click('.end button:has-text("Continuar")');
@@ -381,6 +392,21 @@ try {
   await page.click('.dlg button:has-text("Salir")');
   await page.waitForSelector('.reg .node', { timeout: 10000 });
   check('quitter une quête demande confirmation', true);
+
+  // ---- 5b. avertissement d'accent : dictee avec accent, reponse sans accent -> "¡Ojo con el acento!"
+  await page.evaluate(async () => {
+    const { game, nav, loadAllUnits, content } = window.__q;
+    await loadAllUnits();
+    const steps = content.unitById.get('u01').quests.find((q) => q.id === 'u01-q03').steps;
+    const i = steps.findIndex((st) => st.tipo === 'dictado' && /[áéíóúñ]/i.test(st.respuesta));
+    history.replaceState(null, '', `?debug&from=${Math.max(0, i)}`);
+    nav.go({ name: 'quest', quest: 'u01-q03' }, { root: true });
+  });
+  await page.waitForSelector('.run .stepwrap', { timeout: 20000 });
+  await wait(900);
+  await solve(await qstep(), { shots: { 'fb:partial': '21-feedback-acento' }, used: new Set() });
+  check('dictée sans accent : accepté avec "¡Ojo con el acento!"', existsSync(join(out, 'es-21-feedback-acento.png')));
+  await page.evaluate(() => { history.replaceState(null, '', '?debug'); window.__q.nav.go({ name: 'map' }, { root: true }); });
 
   // ---- 6. Diccionario, Perfil
   await page.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
@@ -510,6 +536,20 @@ try {
     await p2.waitForSelector('.run .stepwrap', { timeout: 20000 });
     await p2.waitForTimeout(1500);
     await p2.screenshot({ path: join(out, 'es-44-sin-conexion.png') });
+    // hechizo hors-ligne : pas de reconnaissance vocale -> auto-evaluation
+    await p2.goto(APP + '?debug&from=14');
+    await p2.waitForFunction(() => window.__q);
+    await p2.evaluate(async () => {
+      const { loadUnit, nav } = window.__q;
+      await loadUnit('u01');
+      nav.go({ name: 'quest', quest: 'u01-q02' }, { root: true });
+    });
+    await p2.waitForSelector('.sp', { timeout: 20000 });
+    await p2.waitForTimeout(800);
+    check('hechizo hors-ligne : repli auto-évaluation', (await p2.locator('.sp .self').count()) === 1);
+    await p2.screenshot({ path: join(out, 'es-45-autoevaluacion.png') });
+    await p2.click('.sp .ev.good');
+    await p2.waitForSelector('.run .fbk', { timeout: 6000 });
     check('hors-ligne : une quête se joue sans réseau', errs2.length === 0, errs2.join(' | ').slice(0, 200));
     await ctx2.close();
   }

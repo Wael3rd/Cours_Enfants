@@ -36,7 +36,7 @@ const ORIGIN = `http://localhost:${PORT}`;
 
 // ---------- sauvegarde simulee
 const unitsDir = join(root, 'apps/espagnol/src/content/units');
-const units = readdirSync(unitsDir).filter((f) => f.endsWith('.json')).sort().map((f) => JSON.parse(readFileSync(join(unitsDir, f), 'utf8')));
+const units = readdirSync(unitsDir).filter((f) => /^u\d+\.json$/.test(f)).sort().map((f) => JSON.parse(readFileSync(join(unitsDir, f), 'utf8')));
 const pad = (n) => String(n).padStart(2, '0');
 const ymd = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 const daysAgo = (n) => { const d = new Date(); d.setDate(d.getDate() - n); return ymd(d); };
