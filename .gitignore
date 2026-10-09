@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dev-dist/
+.vite/
+*.log
+.DS_Store
+renders/
+.hyperframes/
+assets/_downloads/
+tools/tts/.venv/
+apps/*/public/cinematics/*/_shared/
+apps/*/.public-build/
+snapshots/
+tools/e2e/out/

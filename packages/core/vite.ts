@@ -1,0 +1,76 @@
+import { defineConfig, type UserConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { VitePWA } from 'vite-plugin-pwa';
+import { resolve } from 'node:path';
+
+export interface AppOptions {
+  /** Dossier de l'app (import.meta.dirname du vite.config). */
+  dir: string;
+  /** '/', '/maths/', '/espagnol/' */
+  base: string;
+  name: string;
+  shortName: string;
+  description: string;
+  themeColor: string;
+  backgroundColor: string;
+  /** Sous-chemins du site a ne jamais capter par ce service worker (ex. les autres apps pour le hub). */
+  foreignScopes?: string[];
+}
+
+/**
+ * Config Vite commune : Svelte 5, PWA (generateSW, prompt, precache de tout), manifest propre a l'app.
+ * Variables d'env (positionnees par scripts/build-all.mjs) :
+ *  CE_OUT_DIR    dossier de sortie (defaut dist/<app>)
+ *  CE_PUBLIC_DIR dossier public de build (copie sans les _shared dupliques, voir scripts/cinematics.mjs)
+ */
+export function appConfig(o: AppOptions): UserConfig {
+  const isHub = o.base === '/';
+  return defineConfig({
+    base: o.base,
+    publicDir: process.env.CE_PUBLIC_DIR ?? resolve(o.dir, 'public'),
+    plugins: [
+      svelte(),
+      VitePWA({
+        strategies: 'generateSW',
+        registerType: 'prompt',
+        injectRegister: false, // enregistrement via virtual:pwa-register (setupUpdater)
+        manifest: {
+          id: o.base,
+          name: o.name,
+          short_name: o.shortName,
+          description: o.description,
+          lang: 'fr',
+          start_url: o.base,
+          scope: o.base,
+          display: 'fullscreen',
+          display_override: ['fullscreen', 'standalone'],
+          orientation: 'any',
+          theme_color: o.themeColor,
+          background_color: o.backgroundColor,
+          icons: [
+            { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+            { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+            { src: 'icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          ],
+        },
+        workbox: {
+          // TOUT en precache : app, polices, images, audio, cinematiques (html/js/woff2...).
+          globPatterns: ['**/*.{js,css,html,json,svg,png,jpg,jpeg,webp,gif,ico,woff,woff2,ttf,mp3,ogg,wav,m4a,mp4,webm,webmanifest}'],
+          globIgnores: isHub ? ['maths/**', 'espagnol/**'] : [],
+          maximumFileSizeToCacheInBytes: 30 * 1024 * 1024, // defaut workbox = 2 Mo : le runtime HyperFrames fait 500 Ko, une voix/musique plus
+          navigateFallback: `${o.base}index.html`,
+          navigateFallbackDenylist: (o.foreignScopes ?? []).map((s) => new RegExp(`^${s}`)),
+          cleanupOutdatedCaches: true,
+          clientsClaim: false, // mise a jour sur demande de l'utilisateur (toast)
+          skipWaiting: false,
+        },
+      }),
+    ],
+    build: {
+      outDir: process.env.CE_OUT_DIR ?? resolve(o.dir, 'dist'),
+      emptyOutDir: !process.env.CE_KEEP_OUT,
+      target: 'es2022',
+    },
+    server: { host: true },
+  });
+}

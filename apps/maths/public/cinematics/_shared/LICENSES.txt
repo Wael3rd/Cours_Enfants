@@ -1,0 +1,4 @@
+Ressources partagees des cinematiques (copiees localement, aucune dependance reseau)
+- gsap.min.js (GSAP 3.15, npm "gsap") : licence GreenSock "Standard No Charge" (gratuit, tous plugins inclus depuis 3.13). https://gsap.com/standard-license
+- hyperframe.runtime.iife.js (@hyperframes/core 0.8.143) : licence Apache-2.0 (voir node_modules/@hyperframes/core/LICENSE).
+- BebasNeue-latin.woff2 (Bebas Neue, Ryoichi Tsunekawa / Dharma Type) : SIL Open Font License 1.1, via Google Fonts.

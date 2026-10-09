@@ -1,0 +1,20 @@
+{
+  "name": "@ce/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "svelte": "./src/index.ts",
+  "exports": {
+    ".": { "svelte": "./src/index.ts", "default": "./src/index.ts" },
+    "./styles/base.css": "./src/styles/base.css"
+  },
+  "dependencies": {
+    "@hyperframes/player": "^0.8.143",
+    "gsap": "^3.15.0",
+    "howler": "^2.2.4",
+    "idb-keyval": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12"
+  }
+}

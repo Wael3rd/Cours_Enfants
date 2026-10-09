@@ -1,0 +1,26 @@
+/* CSS de base enfant / tablette */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overscroll-behavior: none;           /* pas de pull-to-refresh */
+  touch-action: manipulation;          /* pas de double-tap zoom */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;                   /* pas de selection de texte */
+  -webkit-touch-callout: none;         /* pas de menu appui long */
+  overflow: hidden;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #0b1b3a;
+  color: #fff;
+}
+
+#app { height: 100%; }
+
+img, svg, canvas { -webkit-user-drag: none; user-select: none; }
+button { font-family: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

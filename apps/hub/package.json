@@ -1,0 +1,13 @@
+{
+  "name": "@ce/hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../scripts/cinematics.mjs sync hub && vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@ce/core": "*"
+  }
+}

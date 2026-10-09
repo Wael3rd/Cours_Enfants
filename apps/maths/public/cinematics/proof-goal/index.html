@@ -1,0 +1,203 @@
+<!doctype html>
+<html
+  lang="fr"
+  data-composition-variables='[
+    {"id":"name","type":"string","label":"Prénom","default":"Léo","maxLength":16},
+    {"id":"calc","type":"string","label":"Calcul","default":"7 + 5 = 12","maxLength":18}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Proof - BUT !</title>
+    <!-- Runtime HyperFrames servi en local : sans lui le player l'injecte depuis un CDN (interdit hors-ligne). -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Bebas Neue";
+        src: url("./_shared/BebasNeue-latin.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+      html,
+      body {
+        margin: 0;
+        background: #06210f;
+        font-family: "Bebas Neue", sans-serif;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: radial-gradient(ellipse at 50% 60%, #12a34a 0%, #0a6b30 45%, #06210f 100%);
+      }
+      .rays {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2600px;
+        height: 2600px;
+        margin: -1300px 0 0 -1300px;
+        background: repeating-conic-gradient(from 0deg, rgba(255, 255, 255, 0.1) 0deg 8deg, rgba(255, 255, 255, 0) 8deg 24deg);
+        border-radius: 50%;
+        opacity: 0;
+      }
+      .stripes {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 160px, rgba(0, 0, 0, 0) 160px 320px);
+      }
+      .stage {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #goal-word {
+        display: block;
+        font-size: 560px;
+        line-height: 1;
+        letter-spacing: 8px;
+        color: #fff;
+        text-shadow: 0 10px 0 #c8102e, 0 22px 0 #7a0a1c, 0 40px 60px rgba(0, 0, 0, 0.55);
+        -webkit-text-stroke: 6px #0b1b3a;
+        paint-order: stroke fill;
+        opacity: 0;
+        white-space: nowrap;
+      }
+      .ball {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+      }
+      .tail {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 700px;
+        height: 90px;
+        border-radius: 45px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 244, 180, 0.75) 100%);
+        opacity: 0;
+      }
+      .flash {
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        opacity: 0;
+      }
+      .lower {
+        position: absolute;
+        left: 96px;
+        bottom: 96px;
+        width: 880px;
+        height: 190px;
+        display: flex;
+        opacity: 0;
+      }
+      .lower .tag {
+        width: 24px;
+        background: #ffd400;
+      }
+      .lower .body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 36px;
+        background: rgba(11, 27, 58, 0.94);
+      }
+      .lower .who {
+        font-size: 84px;
+        line-height: 104px;
+        color: #fff;
+        white-space: nowrap;
+      }
+      .lower .what {
+        font-size: 50px;
+        line-height: 62px;
+        color: #ffd400;
+        letter-spacing: 3px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="proof-goal"
+      data-start="0"
+      data-width="1920"
+      data-height="1080"
+      data-duration="3"
+    >
+        <div class="stripes"></div>
+        <div id="pg-rays" class="rays"></div>
+        <div class="stage"><span id="goal-word">BUT !</span></div>
+        <div id="pg-tail" class="tail"></div>
+        <svg id="pg-ball" class="ball" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="48" fill="#fff" stroke="#0b1b3a" stroke-width="3" />
+          <polygon points="50,30 66,42 60,61 40,61 34,42" fill="#0b1b3a" />
+          <path d="M50 30 L50 4 M66 42 L90 34 M60 61 L76 82 M40 61 L24 82 M34 42 L10 34" stroke="#0b1b3a" stroke-width="3" fill="none" />
+        </svg>
+        <div id="pg-flash" class="flash"></div>
+        <div id="pg-lower" class="lower" data-layout-allow-overflow>
+          <div class="tag"></div>
+          <div class="body">
+            <div id="pg-who" class="who" data-var-text="name">Léo</div>
+            <div id="pg-what" class="what" data-var-text="calc">7 + 5 = 12</div>
+          </div>
+        </div>
+    </div>
+    <script>
+      // Donnees dynamiques : l'app appelle player.setRuntimeData("goal", { name, calc }).
+      // Le runtime rejoue la derniere valeur des que ce handler est enregistre.
+      window.__hyperframes.registerRuntimeDataHandler("goal", function (data) {
+        if (!data) return;
+        if (typeof data.name === "string") document.getElementById("pg-who").textContent = data.name;
+        if (typeof data.calc === "string") document.getElementById("pg-what").textContent = data.calc;
+      });
+
+      const tl = gsap.timeline({ paused: true });
+
+      // Rayons de fond
+      tl.fromTo("#pg-rays", { opacity: 0, rotation: 0 }, { opacity: 1, rotation: 24, duration: 3, ease: "none" }, 0);
+
+      // Ballon : arrive de la gauche en cloche, trainee derriere lui
+      tl.fromTo("#pg-ball", { x: -260, opacity: 1, scale: 0.8 }, { x: 905, scale: 1.4, duration: 0.5, ease: "power2.in" }, 0);
+      tl.fromTo("#pg-ball", { y: 760 }, { y: 400, duration: 0.5, ease: "power1.out", immediateRender: false }, 0);
+      tl.fromTo("#pg-ball", { rotation: 0 }, { rotation: 720, duration: 0.5, ease: "none", immediateRender: false }, 0);
+      tl.fromTo("#pg-tail", { x: -900, y: 790, opacity: 0, rotation: -35, transformOrigin: "100% 50%" }, { x: 330, y: 560, opacity: 1, duration: 0.5, ease: "power2.in" }, 0);
+      tl.to("#pg-ball", { opacity: 0, duration: 0.14, ease: "power2.out" }, 0.5);
+      tl.to("#pg-tail", { opacity: 0, duration: 0.14, ease: "power1.out" }, 0.5);
+
+      // Flash a l'impact
+      tl.fromTo("#pg-flash", { opacity: 0 }, { opacity: 0.95, duration: 0.06, ease: "power1.out" }, 0.48);
+      tl.to("#pg-flash", { opacity: 0, duration: 0.45, ease: "power2.out" }, 0.54);
+
+      // BUT ! claque : overshoot + leger shake
+      tl.fromTo("#goal-word", { opacity: 0, scale: 0.15, rotation: -6 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.5, ease: "back.out(3)" }, 0.5);
+      tl.to("#goal-word", { x: 14, y: -8, duration: 0.05, ease: "power1.inOut" }, 0.62);
+      tl.to("#goal-word", { x: -12, y: 6, duration: 0.05, ease: "power1.inOut" }, 0.68);
+      tl.to("#goal-word", { x: 8, y: -4, duration: 0.05, ease: "power1.inOut" }, 0.74);
+      tl.to("#goal-word", { x: 0, y: 0, duration: 0.08, ease: "power2.out" }, 0.8);
+      tl.to("#goal-word", { y: -90, duration: 0.5, ease: "power3.inOut" }, 1.1);
+
+      // Lower-third : prenom + calcul
+      tl.fromTo("#pg-lower", { x: -1000, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "expo.out" }, 1.1);
+      tl.fromTo("#pg-what", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 1.4);
+
+      // Sortie douce sur la fin
+      tl.to("#pg-lower", { opacity: 0, duration: 0.25, ease: "power1.in" }, 2.7);
+      tl.to("#goal-word", { opacity: 0, duration: 0.25, ease: "power1.in" }, 2.7);
+
+      window.__timelines["proof-goal"] = tl;
+    </script>
+  </body>
+</html>
