@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-historia-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-historia-4" data-start="0" data-width="1920" data-height="1200" data-duration="9.515">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.515" data-media-start="20.933" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.215,"v":1},{"t":9.515,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/abuela_carmen.6f3ae7def7.mp3" data-start="0.7" data-duration="5.461" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-3-2" src="./assets/voz/sombra.12bdbfcb0b.mp3" data-start="6.461" data-duration="2.104" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-hit.mp3" data-start="6.161" data-duration="1.159" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="6.561" data-duration="1.104" data-track-index="5" data-volume="0.28"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="9.215" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-historia-4","cinematica":"u03-historia","part":4,"parts":5,"total":9.515,"meta":{"cinematica":"u03-historia","titulo":"El árbol sin nombres","tipo":"historia","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":3,"t0":0,"t1":9.265,"vista":"Atelier de céramique : au fond, une grande fresque d’azulejos « El árbol de la familia ». Les noms sont effacés par des taches d’ombre noire.","camara":"","rotulo":"","personajes":["abuela_carmen","sombra"],"lines":[{"who":"abuela_carmen","es":"Mira, es el árbol de nuestra familia. ¡Pero los nombres no están!","key":"abuela_carmen.6f3ae7def7","t":0.7,"d":5.461,"words":[{"w":"Mira,","t":0.7,"d":0.551},{"w":"es","t":1.501,"d":0.182},{"w":"el","t":1.684,"d":0.182},{"w":"árbol","t":1.866,"d":0.343},{"w":"de","t":2.21,"d":0.182},{"w":"nuestra","t":2.392,"d":0.451},{"w":"familia.","t":2.843,"d":0.451},{"w":"¡Pero","t":4.402,"d":0.31},{"w":"los","t":4.712,"d":0.253},{"w":"nombres","t":4.965,"d":0.483},{"w":"no","t":5.448,"d":0.195},{"w":"están!","t":5.643,"d":0.368}]},{"who":"sombra","es":"Sin nombres, no hay familia…","key":"sombra.12bdbfcb0b","t":6.461,"d":2.104,"words":[{"w":"Sin","t":6.461,"d":0.282},{"w":"nombres,","t":6.743,"d":0.538},{"w":"no","t":7.489,"d":0.194},{"w":"hay","t":7.684,"d":0.251},{"w":"familia…","t":7.935,"d":0.48}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":6.161,"f":"rpg/spell-hit"},{"t":6.561,"f":"rpg/spell-magic"},{"t":9.215,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.tallerCeramica({ uid: "tc" });
+        var room = S.set($("#stage"), set, { below: "#4A1A10", motes: 20 });
+        S.drift(tl, room, T);
+
+        // ---------- les noms de l'arbre sont recouverts de taches d'ombre noire ----------
+        var stains = room.back.querySelectorAll(".fr-stain");
+        stains.forEach(function (s, i) {
+          var px = +s.dataset.px, py = +s.dataset.py;
+          tl.fromTo(s, { scale: 1, svgOrigin: px + " " + py }, { scale: 1.07, svgOrigin: px + " " + py, duration: 0.9 + (i % 4) * 0.15, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.9 + (i % 4) * 0.15))) }, i * 0.05);
+        });
+
+        // ---------- Abuela Carmen devant la fresque ----------
+        var abu = S.chr(room.actors, "abuela_carmen", 900, 1070, 400);
+        S.breathe(tl, abu, 0, T, 0.9);
+        Q.charBlink(tl, abu.svg, 1.9); Q.charBlink(tl, abu.svg, 5.0); Q.charBlink(tl, abu.svg, 7.4);
+        C.talkBounce(tl, abu.b, L1, 5); C.talkChar(tl, abu, L1);
+        var wMira = C.wordT(PLAN, 3, 1, 1), wNom = C.wordT(PLAN, 3, 1, 9);
+        var aR = abu.svg.querySelector(".c-armR"), aL = abu.svg.querySelector(".c-armL");
+        tl.to(aR, { rotation: -118, svgOrigin: "258 306", duration: 0.4, ease: "back.out(1.7)" }, wMira - 0.1);   // elle montre l'arbre
+        tl.to(aR, { rotation: -105, svgOrigin: "258 306", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, wMira + 0.5);
+        tl.to(aR, { rotation: -140, svgOrigin: "258 306", duration: 0.3, ease: "power2.out" }, wNom - 0.1);
+        tl.to(aL, { rotation: 60, svgOrigin: "142 306", duration: 0.3, ease: "back.out(1.7)" }, wNom - 0.1);       // les deux bras en l'air : « ¡no estan! »
+        tl.to([aR, aL], { rotation: 0, duration: 0.5, ease: "power2.inOut" }, L1.t + L1.d + 0.1);
+        Q.charEmote(tl, abu.svg, wNom - 0.2, "worry", 0.3);
+
+        // ---------- la Sombra sort de la fresque (fumee + yeux) ----------
+        var tS = L2.t - 0.35;
+        var sb = S.mk(room.actors, "sombra"); sb.setAttribute("data-layout-allow-overflow", ""); sb.style.cssText = "position:absolute;left:0;top:0;width:620px;height:744px";
+        sb.innerHTML = Q.sombra({ uid: "sb4", width: 620, height: 744, arm: true });
+        sb.firstChild.style.overflow = "visible";
+        gsap.set(sb, { x: 1640, y: 250, opacity: 0, transformOrigin: "50% 50%" });
+        var sm = S.mk(room.qlayer, "smk"); sm.setAttribute("data-layout-allow-overflow", "");
+        sm.style.cssText = "position:absolute;left:" + (1200 - 520) + "px;top:" + (430 - 400) + "px;width:1040px;height:800px";
+        tl.fromTo(sm, { opacity: 0, scale: 0.6 }, { opacity: 0.9, scale: 1, duration: 0.7, ease: "power2.out", immediateRender: false }, tS);
+        tl.fromTo(sb, { x: 1140, y: 280, opacity: 0, scale: 0.4 }, { x: 1640, y: 250, opacity: 1, scale: 1, duration: 0.9, ease: "power3.out", immediateRender: false }, tS);
+        Q.sombraFloat(tl, sb, tS + 0.5, Math.max(1, Math.floor((T - tS) / 1.6)), 1.6);
+        tl.fromTo(sb.querySelectorAll(".s-eye"), { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, tS + 0.5);
+        for (var k = 0; k < 16; k++) {
+          var d = S.mk(room.actors, "dot"); d.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 16) * 6.283, x0 = 1200 + Math.cos(ang) * 40, y0 = 420 + Math.sin(ang) * 40;
+          tl.fromTo(d, { x: x0, y: y0, scale: 0.3, opacity: 0.9 }, { x: x0 + Math.cos(ang) * (200 + (k % 4) * 50), y: y0 + Math.sin(ang) * (150 + (k % 3) * 40) - 60, scale: 1.3, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, tS + 0.05 + k * 0.015);
+        }
+        // les taches s'assombrissent quand la Sombra parle (« familia »)
+        stains.forEach(function (s, i) { tl.to(s, { opacity: 1, duration: 0.3 }, tS); });
+        tl.to("#dim", { opacity: 0.3, duration: 0.8, ease: "power2.out" }, tS);
+
+        // ---------- camera : large sur la fresque, dolly vers Abuela, pan vif vers l'arbre ----------
+        S.camSet(room, 1200, 430, 0.86);
+        S.cam(tl, room, 1180, 450, 0.9, 0, wNom - 0.9, "sine.inOut");
+        S.cam(tl, room, 860, 650, 1.15, wNom - 0.9, 1.1, "power2.inOut");
+        S.cam(tl, room, 1230, 480, 1.0, tS - 0.15, 1.0, "power3.inOut");
+        tl.fromTo("#stage", { rotation: 1.4, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.1, ease: "power2.out" }, tS - 0.15);
+
+        C.frame(tl, root, PLAN, { seed: 3, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-historia-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

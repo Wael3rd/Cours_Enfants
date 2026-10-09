@@ -58,6 +58,14 @@
       tl.to(m, { opacity: 0, duration: span * 0.5, ease: 'sine.in' }, at + span * 0.5 + (i % 7) * 0.12);
     });
   };
+  /** Fontaine du patio andalou : jets qui scintillent et ondulent (cycles finis sur `span` s). */
+  S.fountain = function (tl, ref, span, at) {
+    at = at || 0;
+    ref.back.querySelectorAll('.pa-jet').forEach(function (j, i) {
+      var per = 0.22 + (i % 4) * 0.05, n = Math.max(1, Math.floor(span / per));
+      tl.fromTo(j, { opacity: 0.9, y: 0 }, { opacity: 0.35, y: 4 + (i % 3) * 2, duration: per, ease: 'sine.inOut', yoyo: true, repeat: n }, at + i * 0.03);
+    });
+  };
   /** Accessoire du kit (QArt.prop) pose dans `layer`, centre en cx, bord haut en top, largeur w. */
   S.prop = function (layer, key, cx, top, w, opts) {
     var d = mk(layer, 'st-prop', Q.prop(key, Object.assign({ width: w }, opts || {}))); d.style.cssText = 'position:absolute;left:' + (cx - w / 2) + 'px;top:' + top + 'px;width:' + w + 'px';

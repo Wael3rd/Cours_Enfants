@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="6.471">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.471" data-media-start="14.462" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.171,"v":1},{"t":6.471,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/lola.cb45d57f88.mp3" data-start="0.5" data-duration="4.921" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-grass-000.mp3" data-start="0.1" data-duration="0.775" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.5" data-duration="0.1" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="6.171" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-historia-3","cinematica":"u03-historia","part":3,"parts":5,"total":6.471,"meta":{"cinematica":"u03-historia","titulo":"El árbol sin nombres","tipo":"historia","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":2,"t0":0,"t1":6.221,"vista":"Patio andalou : fontaine, géraniums, sol en mosaïque. Abuela Carmen serre Marina dans ses bras. Lola arrive en courant avec un chat orange.","camara":"","rotulo":"","personajes":["abuela_carmen","marina","lola","viajero"],"lines":[{"who":"lola","es":"¿Cómo te llamas? ¿De dónde eres? ¿Cuántos años tienes?","key":"lola.cb45d57f88","t":0.5,"d":4.921,"words":[{"w":"¿Cómo","t":0.5,"d":0.423},{"w":"te","t":0.923,"d":0.267},{"w":"llamas?","t":1.19,"d":0.58},{"w":"¿De","t":1.959,"d":0.267},{"w":"dónde","t":2.225,"d":0.502},{"w":"eres?","t":2.727,"d":0.423},{"w":"¿Cuántos","t":4.064,"d":0.478},{"w":"años","t":4.542,"d":0.308},{"w":"tienes?","t":4.85,"d":0.422}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/step-grass-000"},{"t":0.5,"f":"ui/pop"},{"t":6.171,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.patioAndaluz({ uid: "pa" });
+        var room = S.set($("#stage"), set, { below: "#C9A064", motes: 22 });
+        S.drift(tl, room, T); S.fountain(tl, room, T);
+        var abu = S.chr(room.actors, "abuela_carmen", 710, 1070, 360);
+        var mar = S.chr(room.actors, "marina", 1050, 1080, 330);
+        var ale = S.chr(room.actors, "viajero", 1500, 1100, 340);
+        var LX0 = 2500, LX1 = 1930, lol = S.chr(room.actors, "lola", LX0, 1090, 300);
+        var cat = S.prop(room.actors, "gato", LX0 - 30, 1090 - 0.82 * 300, 130, { uid: "gt" });
+        [abu, mar, ale].forEach(function (c, i) { S.breathe(tl, c, 0, T, 0.8); Q.charBlink(tl, c.svg, 1.6 + i * 1.2); Q.charBlink(tl, c.svg, 5.0 + i * 0.7); });
+        // Lola arrive en courant avec son chat, freine
+        var run = L1.t - 0.1;
+        S.walk(tl, lol, LX0, LX1, 0.1, run - 0.1, 0.26, "power2.out");
+        tl.fromTo(cat, { x: 0 }, { x: LX1 - LX0, duration: run - 0.1, ease: "power2.out" }, 0.1);
+        tl.fromTo(cat, { y: 0 }, { y: -12, duration: 0.13, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((run - 0.2) / 0.13)) }, 0.1);
+        tl.to(lol.b, { scaleX: 1.08, scaleY: 0.93, duration: 0.12, ease: "power2.in", transformOrigin: "50% 100%" }, run - 0.1);
+        tl.to(lol.b, { scaleX: 1, scaleY: 1, duration: 0.4, ease: "elastic.out(1,0.45)" }, run + 0.05);
+        // le chat : queue qui remue
+        var tail = cat.querySelector(".pr-tail");
+        tl.fromTo(tail, { rotation: -14, svgOrigin: "170 206" }, { rotation: 14, svgOrigin: "170 206", duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 0.35)) }, 0.1);
+        // trois questions, chacune avec un rebond et un doigt leve
+        C.talkBounce(tl, lol.b, L1, 6); C.talkChar(tl, lol, L1);
+        var wQ = [C.wordT(PLAN, 2, 1, 1), C.wordT(PLAN, 2, 1, 4), C.wordT(PLAN, 2, 1, 8)];
+        var lR = lol.svg.querySelector(".c-armR");
+        wQ.forEach(function (t, i) {
+          tl.to(lR, { rotation: -(70 + i * 22), svgOrigin: "258 306", duration: 0.22, ease: "back.out(2)" }, t - 0.05);
+          tl.to(lR, { rotation: -30, svgOrigin: "258 306", duration: 0.25, ease: "power2.inOut" }, t + 0.45);
+          tl.to(lol.b, { y: -16, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, t);
+        });
+        tl.to(lR, { rotation: 0, svgOrigin: "258 306", duration: 0.4, ease: "power2.inOut" }, L1.t + L1.d);
+        // Alex recule d'un pas, surpris ; Abuela et Marina rient
+        tl.to(ale.el, { x: -50, duration: 0.5, ease: "power2.out" }, run);
+        Q.charEmote(tl, ale.svg, run, "worry", 0.3);
+        Q.charEmote(tl, abu.svg, run, "happy", 0.3); Q.charEmote(tl, mar.svg, run, "happy", 0.3);
+        tl.to([abu.b, mar.b], { y: -8, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 3 }, wQ[1]);
+        // camera : push-in lent sur Alex, puis elargit vers Lola
+        S.camSet(room, 1400, 700, 1.1);
+        S.cam(tl, room, 1580, 700, 1.25, 0, T, "sine.inOut");
+        tl.fromTo("#stage", { rotation: 0.9, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.4, ease: "power2.out" }, 0);
+        C.frame(tl, root, PLAN, { seed: 3, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

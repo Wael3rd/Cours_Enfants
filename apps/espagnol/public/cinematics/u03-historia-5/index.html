@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 6px solid #9bffd6; opacity: 0; }
+      .fgl { position: absolute; left: 0; top: 0; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.95), rgba(66,224,160,.4) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; }
+      .steam { position: absolute; left: 0; top: 0; width: 60px; height: 90px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,255,.7), rgba(255,255,255,0)); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="9.077">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.077" data-media-start="30.448" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.877,"v":1},{"t":9.077,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.06baa1f0ec.mp3" data-start="0.6" data-duration="3.254" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/rafa.0dd2675372.mp3" data-start="4.154" data-duration="3.973" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="0.8" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="4.154" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="7.777" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-historia-5","cinematica":"u03-historia","part":5,"parts":5,"total":9.077,"meta":{"cinematica":"u03-historia","titulo":"El árbol sin nombres","tipo":"historia","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":4,"t0":0,"t1":8.827,"vista":"Gros plan sur le Quetzal : un carreau vert brille au centre de la fresque. Tío Rafa entre avec une guitare et une casserole.","camara":"","rotulo":"","personajes":["quetzal","rafa"],"lines":[{"who":"quetzal","es":"La pluma… aquí. En el árbol.","key":"quetzal.06baa1f0ec","t":0.6,"d":3.254,"words":[{"w":"La","t":0.6,"d":0.224},{"w":"pluma…","t":0.824,"d":0.422},{"w":"aquí.","t":1.581,"d":0.311},{"w":"En","t":2.949,"d":0.194},{"w":"el","t":3.143,"d":0.194},{"w":"árbol.","t":3.338,"d":0.366}]},{"who":"rafa","es":"Soy el tío Rafa. ¡Soy cocinero y hay comida para todos!","key":"rafa.0dd2675372","t":4.154,"d":3.973,"words":[{"w":"Soy","t":4.154,"d":0.247},{"w":"el","t":4.401,"d":0.191},{"w":"tío","t":4.591,"d":0.247},{"w":"Rafa.","t":4.838,"d":0.303},{"w":"¡Soy","t":6.123,"d":0.205},{"w":"cocinero","t":6.328,"d":0.438},{"w":"y","t":6.766,"d":0.112},{"w":"hay","t":6.878,"d":0.205},{"w":"comida","t":7.083,"d":0.345},{"w":"para","t":7.427,"d":0.252},{"w":"todos!","t":7.679,"d":0.298}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/spell-magic"},{"t":0.8,"f":"ui/star"},{"t":4.154,"f":"ui/pop"},{"t":7.777,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.tallerCeramica({ uid: "tc" });
+        var room = S.set($("#stage"), set, { below: "#4A1A10", motes: 20 });
+        S.drift(tl, room, T);
+        var C0 = set.center;
+
+        // ---------- les noms restent effaces ; le Quetzal arrive devant la fresque ----------
+        var abu = S.chr(room.actors, "abuela_carmen", 820, 1070, 390);
+        var mar = S.chr(room.actors, "marina", 1080, 1090, 330);
+        var ale = S.chr(room.actors, "viajero", 1360, 1100, 340);
+        [abu, mar, ale].forEach(function (c, i) { S.breathe(tl, c, 0, T, 0.8); Q.charBlink(tl, c.svg, 1.5 + i * 1.1); Q.charBlink(tl, c.svg, 5.5 + i * 0.8); });
+        var qz = S.quetzal(room.qlayer, 1010, 610, 330, "talk", true, "q5");
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.6, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        gsap.set(qz, { x: -520, y: 60, opacity: 0 });
+        tl.fromTo(qz, { x: -520, y: 60, opacity: 0 }, { motionPath: { path: [{ x: -520, y: 60 }, { x: -300, y: -120 }, { x: -120, y: -40 }, { x: 0, y: 0 }], curviness: 1.3 }, opacity: 1, duration: 0.9, ease: "power2.out", immediateRender: false }, 0.05);
+        Q.quetzalPoseTo(tl, qz, "fly", 0.05, 0.3, "power2.out");
+        Q.quetzalFlap(tl, qz, 0.1, 3, 0.32, 0.8);
+        Q.quetzalPoseTo(tl, qz, "talk", 0.95, 0.35, "power2.out");
+        C.talkQuetzal(tl, qz, L1);
+        Q.quetzalBlink(tl, qz, 2.0); Q.quetzalBlink(tl, qz, 4.4);
+        tl.to(qz, { y: -12, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 0.7)) }, 1.0);
+
+        // ---------- le carreau vert central s'allume (« ... aqui. En el arbol. ») ----------
+        var wAqui = C.wordT(PLAN, 4, 1, 3);
+        var glow = room.back.querySelector(".fr-glow"), tile = room.back.querySelector(".fr-feather");
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, wAqui - 0.1);
+        tl.to(glow, { opacity: 0.5, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 9 }, wAqui + 0.4);
+        tl.fromTo(tile, { scale: 1, svgOrigin: C0.x + " " + C0.y }, { scale: 1.12, svgOrigin: C0.x + " " + C0.y, duration: 0.4, ease: "back.out(2)", yoyo: true, repeat: 1, immediateRender: false }, wAqui - 0.05);
+        for (var r = 0; r < 3; r++) {
+          var rg = S.mk(room.actors, "ring"); rg.setAttribute("data-layout-allow-overflow", ""); gsap.set(rg, { x: C0.x, y: C0.y });
+          tl.fromTo(rg, { scale: 0.3, opacity: 0.9 }, { scale: 4.2, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, wAqui + r * 0.3);
+        }
+        for (var k = 0; k < 10; k++) {
+          var sp = S.mk(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>'); sp.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 10) * 6.283, sx = C0.x + Math.cos(ang) * 40, sy = C0.y + Math.sin(ang) * 40;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 130, y: sy + Math.sin(ang) * 130, scale: 0.9, duration: 0.45, ease: "back.out(3)", immediateRender: false }, wAqui + 0.05 + k * 0.03);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, wAqui + 0.5 + k * 0.03);
+        }
+        Q.charEmote(tl, abu.svg, wAqui, "happy", 0.3); Q.charEmote(tl, mar.svg, wAqui, "happy", 0.3); Q.charEmote(tl, ale.svg, wAqui, "happy", 0.3);
+        tl.to([abu.b, mar.b, ale.b], { y: -12, duration: 0.15, ease: "power2.out", yoyo: true, repeat: 1, stagger: 0.06 }, wAqui);
+
+        // ---------- Tio Rafa entre par la droite : guitare dans le dos, cazuela a la main ----------
+        var RX0 = 2650, RX1 = 1760, raf = S.chr(room.actors, "rafa", RX0, 1090, 360);
+        var gui = S.prop(room.actors, "guitarra", RX0 - 90, 1090 - 0.88 * 360, 100, { uid: "gu" }); gui.style.zIndex = 1;
+        var caz = S.prop(room.actors, "cazuela", RX0 + 0.2 * 360, 1090 - 0.42 * 360, 170, { uid: "cz" });
+        gsap.set(gui, { rotation: 18 });
+        var tE = L2.t - 1.1;
+        S.walk(tl, raf, RX0, RX1, tE, 1.0, 0.28, "power2.out");
+        tl.fromTo([gui, caz], { x: 0 }, { x: RX1 - RX0, duration: 1.0, ease: "power2.out" }, tE);
+        tl.fromTo([gui, caz], { y: 0 }, { y: -10, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 6 }, tE);
+        C.talkBounce(tl, raf.b, L2, 6); C.talkChar(tl, raf, L2);
+        S.breathe(tl, raf, L2.t, T - L2.t, 0.8);
+        Q.charBlink(tl, raf.svg, L2.t + 1.6);
+        var rR = raf.svg.querySelector(".c-armR"), wSoy = C.wordT(PLAN, 4, 2, 5), wCom = C.wordT(PLAN, 4, 2, 9);
+        tl.to(rR, { rotation: -70, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.7)" }, wSoy - 0.2);
+        tl.to(rR, { rotation: -50, svgOrigin: "258 306", duration: 0.35, ease: "sine.inOut", yoyo: true, repeat: 5 }, wSoy + 0.3);
+        // vapeur de la cazuela
+        for (var q = 0; q < 6; q++) {
+          var st = S.mk(room.actors, "steam"); st.setAttribute("data-layout-allow-overflow", "");
+          var sx2 = RX1 + 0.2 * 360 + 60 + (q % 3) * 28, sy2 = 1090 - 0.42 * 360 - 10;
+          tl.fromTo(st, { x: sx2, y: sy2, scale: 0.4, opacity: 0.8 }, { x: sx2 + (q % 2 ? 20 : -20), y: sy2 - 120, scale: 1.4, opacity: 0, duration: 1.1, ease: "power1.out", immediateRender: false }, L2.t + 0.4 + q * 0.35);
+        }
+        Q.charEmote(tl, mar.svg, L2.t, "happy", 0.3); Q.charEmote(tl, ale.svg, L2.t, "happy", 0.3);
+        tl.to(ale.el, { x: -20, duration: 0.5, ease: "power2.out" }, tE + 0.3);
+
+        // ---------- camera : gros plan sur le Quetzal, poussee sur le carreau vert, recul quand Rafa entre ----------
+        S.camSet(room, 1180, 560, 1.5);
+        S.cam(tl, room, 1160, 520, 1.62, 0, wAqui - 0.5, "sine.inOut");
+        S.cam(tl, room, C0.x, C0.y + 20, 2.4, wAqui - 0.5, 0.9, "power3.inOut");
+        S.cam(tl, room, 1380, 700, 1.0, tE - 0.2, 1.3, "power2.inOut");
+        tl.fromTo("#stage", { rotation: -1.0, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.2, ease: "power2.out" }, tE - 0.2);
+
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.35 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

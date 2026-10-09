@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.712">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.712" data-media-start="7.75" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.412,"v":1},{"t":6.712,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/abuela_carmen.afd4326586.mp3" data-start="0.8" data-duration="1.788" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/viajero.5253e494c7.mp3" data-start="2.888" data-duration="3.174" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.75" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.838" data-duration="0.1" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="6.412" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-historia-2","cinematica":"u03-historia","part":2,"parts":5,"total":6.712,"meta":{"cinematica":"u03-historia","titulo":"El árbol sin nombres","tipo":"historia","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":2,"t0":0,"t1":6.462,"vista":"Patio andalou : fontaine, géraniums, sol en mosaïque. Abuela Carmen serre Marina dans ses bras. Lola arrive en courant avec un chat orange.","camara":"","rotulo":"","personajes":["abuela_carmen","marina","lola","viajero"],"lines":[{"who":"abuela_carmen","es":"Y este chico, ¿quién es?","key":"abuela_carmen.afd4326586","t":0.8,"d":1.788,"words":[{"w":"Y","t":0.8,"d":0.142},{"w":"este","t":0.942,"d":0.319},{"w":"chico,","t":1.261,"d":0.378},{"w":"¿quién","t":1.859,"d":0.378},{"w":"es?","t":2.238,"d":0.201}]},{"who":"viajero","es":"Hola, me llamo Álex. Encantado.","key":"viajero.5253e494c7","t":2.888,"d":3.174,"words":[{"w":"Hola,","t":2.888,"d":0.343},{"w":"me","t":3.405,"d":0.284},{"w":"llamo","t":3.689,"d":0.535},{"w":"Álex.","t":4.223,"d":0.451},{"w":"Encantado.","t":5.043,"d":0.869}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.75,"f":"ui/pop"},{"t":2.838,"f":"ui/pop"},{"t":6.412,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.patioAndaluz({ uid: "pa" });
+        var room = S.set($("#stage"), set, { below: "#C9A064", motes: 22 });
+        S.drift(tl, room, T); S.fountain(tl, room, T);
+
+        // ---------- Abuela Carmen serre Marina dans ses bras ; Alex, de l'autre cote de la fontaine ----------
+        var abu = S.chr(room.actors, "abuela_carmen", 740, 1070, 360);
+        var mar = S.chr(room.actors, "marina", 1000, 1080, 330);
+        var ale = S.chr(room.actors, "viajero", 1640, 1100, 340);
+        [abu, mar, ale].forEach(function (c, i) { S.breathe(tl, c, 0, T, 0.8); Q.charBlink(tl, c.svg, 1.4 + i * 1.2); Q.charBlink(tl, c.svg, 4.8 + i * 0.9); });
+        // etreinte : bras qui s'enlacent, balancement, rires
+        var aR = abu.svg.querySelector(".c-armR"), mL = mar.svg.querySelector(".c-armL");
+        tl.fromTo(aR, { rotation: 0 }, { rotation: -62, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.6)", immediateRender: false }, 0.05);
+        tl.fromTo(mL, { rotation: 0 }, { rotation: 62, svgOrigin: "142 306", duration: 0.35, ease: "back.out(1.6)", immediateRender: false }, 0.1);
+        tl.to([abu.b, mar.b], { rotation: 2.5, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 3, transformOrigin: "50% 100%" }, 0.2);
+        Q.charEmote(tl, abu.svg, 0.05, "happy", 0.3); Q.charEmote(tl, mar.svg, 0.05, "happy", 0.3);
+        tl.to(aR, { rotation: -78, svgOrigin: "258 306", duration: 0.4, ease: "power2.inOut" }, L1.t - 0.35);   // elle se detache et designe Alex
+        tl.to(mL, { rotation: 0, svgOrigin: "142 306", duration: 0.4, ease: "power2.inOut" }, L1.t - 0.35);
+        tl.to(abu.el, { x: -30, duration: 0.5, ease: "power2.out" }, L1.t - 0.35);
+        tl.to(mar.el, { x: 50, duration: 0.5, ease: "power2.out" }, L1.t - 0.35);
+        C.talkBounce(tl, abu.b, L1, 4); C.talkChar(tl, abu, L1);
+        tl.to(aR, { rotation: -60, svgOrigin: "258 306", duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: 3 }, L1.t + 0.8);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, L1.t + L1.d + 0.1);
+        Q.charEmote(tl, abu.svg, L1.t + 0.6, "worry", 0.3);
+        // Alex salue (« Hola »), se presente, s'incline (« Encantado »)
+        C.talkBounce(tl, ale.b, L2, 4); C.talkChar(tl, ale, L2, false);
+        Q.charWave(tl, ale.svg, L2.t, 0.9, "R");
+        var wEnc = C.wordT(PLAN, 2, 2, 5);
+        tl.to(ale.b, { rotation: 6, y: 8, duration: 0.3, ease: "power2.out", transformOrigin: "50% 100%" }, wEnc - 0.1);
+        tl.to(ale.b, { rotation: 0, y: 0, duration: 0.45, ease: "power2.inOut" }, wEnc + 0.4);
+        Q.charEmote(tl, ale.svg, L2.t, "happy", 0.3);
+        Q.charEmote(tl, abu.svg, L2.t, "happy", 0.3); Q.charEmote(tl, mar.svg, L2.t, "happy", 0.3);
+        Q.charNod(tl, abu.svg, L2.t + 1.2, 4, 0.16);
+
+        // ---------- camera : large (fontaine), push-in vers le couple, pan vers Alex ----------
+        S.camSet(room, 1200, 680, 0.95);
+        S.cam(tl, room, 1200, 690, 1.0, 0, L1.t - 0.4, "sine.inOut");
+        S.cam(tl, room, 930, 720, 1.2, L1.t - 0.4, 1.4, "power2.inOut");
+        S.cam(tl, room, 1480, 720, 1.2, L2.t - 0.4, 1.0, "power3.inOut");
+        tl.fromTo("#stage", { rotation: -1.0, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.6, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 8, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

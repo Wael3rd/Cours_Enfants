@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u03-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .star { position: absolute; left: 0; top: 0; }
+      .leaf { position: absolute; left: 0; top: 0; background: linear-gradient(180deg, #3a7be0, #2459b8); box-shadow: inset 0 0 0 8px #1d4fa0; }
+      .dglow { position: absolute; left: 0; top: 0; mix-blend-mode: screen; opacity: 0; background: radial-gradient(closest-side, rgba(255,226,150,.95), rgba(255,200,100,.35) 60%, rgba(255,200,100,0)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u03-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="7.75">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.75" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":7.45,"v":1},{"t":7.75,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/marina.e992c76328.mp3" data-start="0.7" data-duration="2.527" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-1-2" src="./assets/voz/abuela_carmen.8775d15522.mp3" data-start="3.527" data-duration="3.373" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-00.mp3" data-start="0.1" data-duration="0.233" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-01.mp3" data-start="0.3" data-duration="0.254" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/step-02.mp3" data-start="0.5" data-duration="0.242" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/step-03.mp3" data-start="0.7" data-duration="0.257" data-track-index="7" data-volume="0.3"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/door-open.mp3" data-start="3.127" data-duration="0.916" data-track-index="8" data-volume="0.4"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/pop.mp3" data-start="3.527" data-duration="0.1" data-track-index="9" data-volume="0.3"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/swoosh-out.mp3" data-start="7.45" data-duration="0.212" data-track-index="10" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u03-historia-1","cinematica":"u03-historia","part":1,"parts":5,"total":7.75,"meta":{"cinematica":"u03-historia","titulo":"El árbol sin nombres","tipo":"historia","unidad":"Mi familia","numero":3,"lugar":"Sevilla","pluma":"Pluma de la Familia","plumaNum":3,"rotulo":"","region":"sevilla"},"plans":[{"n":1,"t0":0,"t1":7.5,"vista":"Ruelle étroite de Triana, façades blanches, azulejos colorés, pots de fleurs. Marina court vers une porte bleue ; Álex la suit.","camara":"suivi à hauteur d’enfant","rotulo":"","personajes":["marina","abuela_carmen","viajero"],"lines":[{"who":"marina","es":"¡Abuela! ¡Ya estamos aquí!","key":"marina.e992c76328","t":0.7,"d":2.527,"words":[{"w":"¡Abuela!","t":0.7,"d":0.551},{"w":"¡Ya","t":2.142,"d":0.185},{"w":"estamos","t":2.327,"d":0.456},{"w":"aquí!","t":2.783,"d":0.293}]},{"who":"abuela_carmen","es":"¡Marina, cariño! ¡Qué alegría!","key":"abuela_carmen.8775d15522","t":3.527,"d":3.373,"words":[{"w":"¡Marina,","t":3.527,"d":0.557},{"w":"cariño!","t":4.247,"d":0.557},{"w":"¡Qué","t":5.942,"d":0.278},{"w":"alegría!","t":6.22,"d":0.53}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/step-00"},{"t":0.3,"f":"rpg/step-01"},{"t":0.5,"f":"rpg/step-02"},{"t":0.7,"f":"rpg/step-03"},{"t":3.127,"f":"rpg/door-open"},{"t":3.527,"f":"ui/pop"},{"t":7.45,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.callejonTriana({ uid: "ct" });
+        var room = S.set($("#stage"), set, { below: "#6B4A2A", motes: 26 });
+        S.drift(tl, room, T);
+        var D = set.door, FL = 900, DW = D.w, DH = D.h + 40, MID = D.x + D.w / 2;
+
+        // ---------- la porte bleue : interieur chaud + deux battants qui vont s'ouvrir ----------
+        var inner = S.mk(room.qlayer, "", '<svg width="' + DW + '" height="' + DH + '" viewBox="0 0 ' + DW + ' ' + DH + '"><defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE6A8"/><stop offset="1" stop-color="#E8964A"/></linearGradient></defs><path d="M0 ' + DH + 'V' + (DW / 2) + 'A' + (DW / 2) + ' ' + (DW / 2) + ' 0 0 1 ' + DW + ' ' + (DW / 2) + 'V' + DH + 'Z" fill="url(#dg)"/><g fill="#5FB06A"><circle cx="30" cy="' + (DH - 40) + '" r="26"/><circle cx="' + (DW - 34) + '" cy="' + (DH - 30) + '" r="30"/></g><g fill="#D81E3A"><circle cx="30" cy="' + (DH - 56) + '" r="8"/><circle cx="' + (DW - 40) + '" cy="' + (DH - 52) + '" r="9"/></g><path d="M0 ' + (DH - 8) + 'H' + DW + '" stroke="#C9573B" stroke-width="16"/></svg>');
+        inner.style.cssText = "position:absolute;left:" + D.x + "px;top:" + (FL - DH) + "px;width:" + DW + "px;height:" + DH + "px"; inner.setAttribute("data-layout-allow-overflow", "");
+        var lL = S.mk(room.actors, "leaf"), lR = S.mk(room.actors, "leaf");
+        [lL, lR].forEach(function (l) { l.setAttribute("data-layout-allow-overflow", ""); l.style.width = DW / 2 + "px"; l.style.height = DH - DW / 2 + 40 + "px"; });
+        lL.style.cssText += ";left:" + D.x + "px;top:" + (FL - DH + DW / 2 - 40) + "px;border-top-left-radius:" + (DW / 2) + "px;transform-origin:0 50%";
+        lR.style.cssText += ";left:" + (D.x + DW / 2) + "px;top:" + (FL - DH + DW / 2 - 40) + "px;border-top-right-radius:" + (DW / 2) + "px;transform-origin:100% 50%";
+        // le haut des battants suit l'arc : on masque l'espace sous l'arc par la forme ci-dessus ; on cache les battants tant que la porte n'est pas ouverte (la porte du decor reste visible)
+        tl.set([lL, lR], { opacity: 0 }, 0);
+        var abu = S.chr(room.actors, "abuela_carmen", MID, FL + 6, 250);
+        gsap.set(abu.el, { opacity: 0 });
+        var dg = S.mk(room.actors, "dglow"); dg.style.cssText += ";width:560px;height:560px"; dg.setAttribute("data-layout-allow-overflow", ""); gsap.set(dg, { x: MID - 280, y: FL - 340 });
+
+        // ---------- Marina court vers la porte, Alex la suit ----------
+        var MX0 = 260, MX1 = 2380, mar = S.chr(room.actors, "marina", MX0, 1010, 330);
+        var ale = S.chr(room.actors, "viajero", -120, 1030, 340);
+        var tStop = L1.t + L1.d - 0.15;
+        S.walk(tl, mar, MX0, MX1, 0, tStop, 0.26, "power1.inOut");
+        S.walk(tl, ale, -120, 2090, 0.35, tStop - 0.2, 0.27, "power1.inOut");
+        C.talkBounce(tl, mar.b, L1, 6); C.talkChar(tl, mar, L1);
+        tl.to(mar.b, { scaleX: 1.07, scaleY: 0.94, duration: 0.12, ease: "power2.in", transformOrigin: "50% 100%" }, tStop - 0.1);
+        tl.to(mar.b, { scaleX: 1, scaleY: 1, duration: 0.4, ease: "elastic.out(1,0.45)" }, tStop + 0.05);
+        // elle tape a la porte / fait signe (« ¡Abuela! »)
+        Q.charWave(tl, mar.svg, tStop + 0.0, 0.5, "R");
+        S.breathe(tl, mar, tStop + 0.5, T - tStop, 0.8); S.breathe(tl, ale, tStop + 0.1, T - tStop, 0.8);
+        Q.charBlink(tl, ale.svg, 5.2);
+
+        // ---------- la porte s'ouvre, Abuela Carmen apparait bras ouverts ----------
+        var tOp = L1.t + L1.d + 0.1;
+        tl.fromTo(dg, { opacity: 0, scale: 0.4 }, { opacity: 0.95, scale: 1, duration: 0.5, ease: "power2.out", immediateRender: false }, tOp);
+        tl.set([lL, lR], { opacity: 1 }, tOp);
+        tl.fromTo(lL, { scaleX: 1, skewY: 0 }, { scaleX: 0.14, skewY: -9, duration: 0.55, ease: "power2.out", immediateRender: false }, tOp);
+        tl.fromTo(lR, { scaleX: 1, skewY: 0 }, { scaleX: 0.14, skewY: 9, duration: 0.55, ease: "power2.out", immediateRender: false }, tOp);
+        tl.to(dg, { opacity: 0.45, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 3 }, tOp + 0.6);
+        tl.fromTo(abu.el, { opacity: 0, x: 0 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, tOp + 0.2);
+        C.talkBounce(tl, abu.b, L2, 5); C.talkChar(tl, abu, L2);
+        tl.to(abu.svg.querySelector(".c-armL"), { rotation: 72, svgOrigin: "142 306", duration: 0.4, ease: "back.out(1.6)" }, L2.t - 0.05);
+        tl.to(abu.svg.querySelector(".c-armR"), { rotation: -72, svgOrigin: "258 306", duration: 0.4, ease: "back.out(1.6)" }, L2.t - 0.05);
+        Q.charEmote(tl, abu.svg, L2.t, "happy", 0.3);
+        // elle s'avance d'un pas, Marina bondit de joie
+        tl.to(abu.el, { x: -60, duration: 0.8, ease: "power2.out" }, L2.t + 0.1);
+        S.hop(tl, mar, L2.t + 1.6, 50);
+        Q.charEmote(tl, mar.svg, L2.t, "happy", 0.3);
+
+        // ---------- camera : suivi a hauteur d'enfant, puis recadrage sur le couple ----------
+        S.camSet(room, 760, 790, 1.1);
+        S.cam(tl, room, 2300, 790, 1.1, 0.0, tStop + 0.1, "power1.inOut");
+        S.cam(tl, room, 2420, 760, 1.28, tOp - 0.1, 1.2, "power2.inOut");
+        tl.fromTo("#stage", { rotation: 0.9, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.2, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u03-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>
