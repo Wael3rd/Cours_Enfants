@@ -18,7 +18,8 @@
     "cinematics:check": "node scripts/cinematics.mjs check",
     "art": "node scripts/cinematics.mjs art",
     "cinematics:sync": "node scripts/cinematics.mjs sync",
-    "icons": "node scripts/make-icons.mjs"
+    "icons": "node scripts/make-icons.mjs",
+    "voices": "node tools/tts/maths-manifest.mjs"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",

@@ -14,9 +14,34 @@ export const APP_NAME = 'maths';
 export interface Settings extends EngineSettings {
   sound: boolean;
   voice: boolean;
+  /** Musique de stade douce (coupable depuis l'accueil). */
+  music: boolean;
+}
+
+export type CrestPattern = 'auto' | 'stripes' | 'band' | 'chevron' | 'split' | 'plain';
+export interface Club {
+  name: string;
+  primary: string;
+  secondary: string;
+  pattern: CrestPattern;
+  initials: string;
+}
+export type HairStyle = 'court' | 'boucles' | 'pique' | 'long';
+export interface AvatarLook {
+  /** Indices dans SKINS / HAIRS du kit (0-5 / 0-6). */
+  skin: number;
+  hair: HairStyle;
+  hairColor: number;
+  number: number;
 }
 
 export interface AppState {
+  /** Premier lancement : prenom, club et joueur crees (sinon l'ecran de creation s'ouvre). */
+  setupDone: boolean;
+  /** Match de detection joue (ou passe). */
+  placementDone: boolean;
+  club: Club;
+  look: AvatarLook;
   childName: string;
   settings: Settings;
   profile: Profile;
@@ -25,9 +50,16 @@ export interface AppState {
 
 export const SESSION_MINUTES_CHOICES = [2, 3, 5] as const;
 
-export const defaultSettings = (): Settings => ({ ...defaultEngineSettings(), sound: true, voice: true });
+export const defaultSettings = (): Settings => ({ ...defaultEngineSettings(), sound: true, voice: true, music: true });
+
+export const defaultClub = (): Club => ({ name: 'Les Lions', primary: '#E8212F', secondary: '#FFFFFF', pattern: 'auto', initials: 'LL' });
+export const defaultLook = (): AvatarLook => ({ skin: 1, hair: 'court', hairColor: 0, number: 10 });
 
 export const defaultState = (): AppState => ({
+  setupDone: false,
+  placementDone: false,
+  club: defaultClub(),
+  look: defaultLook(),
   childName: 'Léo',
   settings: defaultSettings(),
   profile: newProfile(),
@@ -72,6 +104,7 @@ export function normalizeState(raw: unknown): AppState {
   settings.sessionMinutes = Math.min(5, Math.max(2, num(settings.sessionMinutes, 3)));
   settings.sound = settings.sound !== false;
   settings.voice = settings.voice !== false;
+  settings.music = settings.music !== false;
 
   const pr = (r.profile ?? {}) as Partial<Profile>;
   const base = newProfile();
@@ -89,6 +122,20 @@ export function normalizeState(raw: unknown): AppState {
   profile.rewards.medals = { ...newRewards().medals, ...(pr.rewards?.medals ?? {}) };
   profile.rewards.streak = { ...newRewards().streak, ...(pr.rewards?.streak ?? {}) };
 
+  const club: Club = { ...d.club, ...(r.club ?? {}) };
+  club.name = String(club.name || d.club.name).slice(0, 24);
+  club.initials = String(club.initials || d.club.initials).slice(0, 3).toUpperCase();
+  const look: AvatarLook = { ...d.look, ...(r.look ?? {}) };
+  look.skin = Math.min(5, Math.max(0, Math.round(num(look.skin, 1))));
+  look.hairColor = Math.min(6, Math.max(0, Math.round(num(look.hairColor, 0))));
+  look.number = Math.min(99, Math.max(1, Math.round(num(look.number, 10))));
+  if (!['court', 'boucles', 'pique', 'long'].includes(look.hair)) look.hair = 'court';
+
   const name = typeof r.childName === 'string' ? r.childName.trim().slice(0, 16) : '';
-  return { childName: name || d.childName, settings, profile, createdAt: num(r.createdAt, d.createdAt) };
+  // Une sauvegarde d'avant l'ecran de creation (profil deja entame) ne doit pas rejouer le premier lancement.
+  const played = profile.history.length > 0 || Object.keys(progress.facts).length > 0;
+  return {
+    setupDone: r.setupDone === true || played, placementDone: r.placementDone === true || played,
+    club, look, childName: name || d.childName, settings, profile, createdAt: num(r.createdAt, d.createdAt),
+  };
 }

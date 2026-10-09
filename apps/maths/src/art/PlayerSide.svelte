@@ -5,16 +5,16 @@
   import { playerSide, setRunSide, runSide } from './core/ceart.js';
 
   type Props = {
-    primary?: string; secondary?: string; shorts?: string; socks?: string;
+    primary?: string; secondary?: string; shorts?: string; socks?: string; shoe?: string;
     skin?: number | string; hair?: 'court' | 'boucles' | 'pique' | 'long'; hairColor?: number | string;
     number?: number | string; ghost?: boolean; width?: number; speed?: number;
   };
-  let { primary, secondary, shorts, socks, skin, hair, hairColor, number, ghost = false, width = 200, speed = 1 }: Props = $props();
+  let { primary, secondary, shorts, socks, shoe, skin, hair, hairColor, number, ghost = false, width = 200, speed = 1 }: Props = $props();
 
   let host: HTMLDivElement | undefined = $state();
   let tl: gsap.core.Timeline | undefined;
   const reduce = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const html = $derived(playerSide({ primary, secondary, shorts, socks, skin, hair, hairColor, number, ghost }));
+  const html = $derived(playerSide({ primary, secondary, shorts, socks, shoe, skin, hair, hairColor, number, ghost }));
 
   $effect(() => {
     void html;

@@ -1,7 +1,7 @@
 /** Store Svelte 5 (runes) de l'app : etat reactif + persistance IndexedDB via @ce/core. */
 import { createStore, downloadText } from '@ce/core';
 import {
-  APP_NAME, STATE_VERSION, defaultState, migrations, normalizeState, type AppState, type Settings,
+  APP_NAME, STATE_VERSION, defaultState, migrations, normalizeState, type AppState, type AvatarLook, type Club, type Settings,
 } from './model.ts';
 import { forceZone } from '../engine/progress.ts';
 import { startSession, type Session, type StartOptions } from '../engine/session.ts';
@@ -32,6 +32,32 @@ class AppStore {
 
   setName(name: string): void {
     this.state.childName = name.trim().slice(0, 16) || 'Léo';
+    this.save();
+  }
+  /** Fin de la creation du club et du joueur (premier lancement). */
+  completeSetup(name: string, club: Club, look: AvatarLook): void {
+    this.state.childName = name.trim().slice(0, 16) || 'Léo';
+    this.state.club = { ...club };
+    this.state.look = { ...look };
+    this.state.profile.rewards.avatar.jersey = 'club';
+    this.state.setupDone = true;
+    void this.saveNow();
+  }
+  setLook(look: AvatarLook): void {
+    this.state.look = { ...look };
+    this.save();
+  }
+  setClub(club: Club): void {
+    this.state.club = { ...club };
+    this.save();
+  }
+  markPlacementDone(): void {
+    this.state.placementDone = true;
+    void this.saveNow();
+  }
+  /** Maillot ou crampons de l'avatar ('club' = couleurs du club). */
+  setKit(slot: 'jersey' | 'boots', id: string): void {
+    this.state.profile.rewards.avatar[slot] = id;
     this.save();
   }
   setSettings(patch: Partial<Settings>): void {

@@ -99,3 +99,38 @@ export function preloadAudio(keys: { sfx?: string[]; voices?: string[] } = {}): 
   for (const k of keys.sfx ?? Object.keys(cfg.sfx)) if (cfg.sfx[k]) howl(cfg.sfx[k]);
   for (const k of keys.voices ?? []) if (cfg.voices[k]) howl(cfg.voices[k]);
 }
+
+// ---- Musique de fond (boucle, coupable) ------------------------------------------------------
+
+let music: Howl | null = null;
+let musicFile = '';
+let musicVol = 0.25;
+
+/** Lance (ou relance) une musique en boucle a faible volume. Silencieuse tant que l'audio n'est pas deverrouille. */
+export function playMusic(file: string, volume = 0.25): void {
+  musicVol = volume;
+  if (music && musicFile === file) {
+    if (!music.playing()) music.play();
+    music.volume(volume);
+    return;
+  }
+  music?.unload();
+  musicFile = file;
+  music = new Howl({ src: [cfg.base + file], loop: true, volume: 0, html5: false });
+  music.play();
+  music.fade(0, volume, 1200);
+}
+
+export function stopMusic(): void {
+  if (!music) return;
+  const m = music;
+  m.fade(m.volume(), 0, 400);
+  setTimeout(() => m.pause(), 420);
+}
+
+/** Baisse la musique pendant une voix / cinematique (duck) puis la remet. */
+export function duckMusic(on: boolean): void {
+  if (!music || !music.playing()) return;
+  music.fade(music.volume(), on ? musicVol * 0.25 : musicVol, 300);
+}
+export const isMusicPlaying = () => !!music?.playing();

@@ -1,4 +1,6 @@
 import '@ce/core/styles/base.css';
+import '../../../assets/fonts/fonts.css';
+import './styles/app.css';
 import { mount } from 'svelte';
 import { registerSW } from 'virtual:pwa-register';
 import { installAudioUnlock, setupUpdater } from '@ce/core';

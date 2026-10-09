@@ -1,0 +1,2186 @@
+[
+ {
+  "key": "setup_name",
+  "text": "Bienvenue au club ! Un grand peut écrire ton prénom.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "setup_club",
+  "text": "Choisis le nom de ton club, tes couleurs et ton blason !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "setup_avatar",
+  "text": "Maintenant, crée ton joueur ! Peau, cheveux, couleur et numéro.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "placement_intro",
+  "text": "Match amical de détection ! Réponds le plus vite possible. Pas de panique : c'est pour voir ce que tu sais déjà.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "placement_end",
+  "text": "Bravo ! Le coach a tout noté. Voici ton point de départ.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "home_welcome",
+  "text": "Bienvenue au stade ! Prêt pour le match ?",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "match_ready",
+  "text": "Coup d'envoi ! Tape la réponse sur le pavé.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "sprint_intro",
+  "text": "Sprint ! Dix calculs le plus vite possible. Cours plus vite que ton record !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "sprint_go",
+  "text": "À vos marques... Partez !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "penalties_intro",
+  "text": "Tirs au but ! Cinq tirs sur tes calculs les plus durs. Réponds vite pour marquer !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "training_pick",
+  "text": "Choisis une zone pour t'entraîner.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "training_intro",
+  "text": "Regarde bien le dessin, il t'aide à trouver. Ensuite, c'est à toi !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "training_fade",
+  "text": "Maintenant, essaie avec moins d'aide !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "training_alone",
+  "text": "Et maintenant, tout seul comme un champion !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "error_1",
+  "text": "Pas grave ! Regarde le dessin.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "error_2",
+  "text": "Presque ! Regarde comment faire.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "error_3",
+  "text": "Ce n'est rien, on le revoit tout de suite.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "error_4",
+  "text": "Bien essayé ! Regarde bien.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_1",
+  "text": "Bravo !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_2",
+  "text": "Super !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_3",
+  "text": "Excellent !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_4",
+  "text": "Bien joué !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_5",
+  "text": "Parfait !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "praise_6",
+  "text": "Tu es fort !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "goal_1",
+  "text": "Buuuut !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_2",
+  "text": "Quel but !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_3",
+  "text": "Il marque ! Quelle frappe !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_4",
+  "text": "Gooool ! Magnifique !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_5",
+  "text": "Dans la lucarne !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_6",
+  "text": "Oh là là, quel tir !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_7",
+  "text": "C'est au fond des filets !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "goal_8",
+  "text": "Quelle patate ! But !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "streak_1",
+  "text": "Il est en feu !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "streak_2",
+  "text": "Quelle série incroyable !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "streak_3",
+  "text": "Rien ne l'arrête !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "rival_1",
+  "text": "Le rival marque, mais ce n'est pas fini !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "rival_2",
+  "text": "Pas de panique, on revient !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "rival_3",
+  "text": "Un but pour l'autre équipe. Allez, on y croit !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "fulltime_win_1",
+  "text": "Victoire ! Bravo champion !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "fulltime_win_2",
+  "text": "C'est gagné ! Quel match !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "fulltime_draw_1",
+  "text": "Match nul ! Très beau match !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "fulltime_loss_1",
+  "text": "Beau match ! La prochaine fois, ce sera pour toi !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "fulltime_loss_2",
+  "text": "Quel courage ! On les aura au prochain match !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "stars_won",
+  "text": "Tu as gagné des étoiles !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "pack_ready",
+  "text": "Tu as un paquet de cartes ! Ouvre-le !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "pack_open",
+  "text": "Voyons quelle carte tu as gagnée !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "trophy_won",
+  "text": "Un trophée ! Bravo champion !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "album_new",
+  "text": "Une nouvelle carte pour ton album !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "medal_or",
+  "text": "Médaille d'or ! Incroyable !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "medal_argent",
+  "text": "Médaille d'argent ! Bravo !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "medal_bronze",
+  "text": "Médaille de bronze ! Bien couru !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "medal_none",
+  "text": "Bien couru ! Retente pour battre ton temps.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "record_new",
+  "text": "Nouveau record !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_goal_1",
+  "text": "But ! Le gardien est battu !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_goal_2",
+  "text": "Dans la lucarne ! Imparable !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_save_1",
+  "text": "Quel arrêt du gardien ! Presque !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_save_2",
+  "text": "Arrêt de ouf ! Tu y étais presque !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_save_3",
+  "text": "Le gardien s'envole ! Bien tiré !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "pen_caught_1",
+  "text": "Le gardien l'attrape. On y retourne !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "pen_caught_2",
+  "text": "Pas cette fois ! Regarde la bonne réponse.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "pen_end",
+  "text": "C'est fini ! Quelle séance de tirs !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "rate": "+18%",
+  "pitch": "+5Hz"
+ },
+ {
+  "key": "strategy_1",
+  "text": "Quand tu ajoutes zéro, rien ne change. Quand tu ajoutes un, c'est le nombre d'après !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_2",
+  "text": "Plus deux, ce sont deux petits pas : le nombre d'après, et encore le nombre d'après.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_3",
+  "text": "Les doubles ! Deux équipes identiques en miroir. Sept et sept, ça fait quatorze.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_4",
+  "text": "Les amoureux de dix ! Trois et sept font dix, quatre et six aussi. Cherche ce qui manque pour faire dix.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_5",
+  "text": "Les presque-doubles ! Six plus sept, c'est le double de six, douze, plus un.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_6",
+  "text": "Plus dix, on saute une dizaine : sept devient dix-sept.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_7",
+  "text": "Plus neuf, c'est plus dix, puis moins un. Facile !",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_8",
+  "text": "Pour passer la dizaine : huit plus cinq, je complète jusqu'à dix avec deux, puis j'ajoute trois.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "strategy_9",
+  "text": "La Ligue des Champions ! On calcule d'abord avec les dizaines, puis avec les unités.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p0",
+  "text": "Ajouter 0, rien ne change : 0.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p1",
+  "text": "Ajouter 0, rien ne change : 1.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p2",
+  "text": "Ajouter 0, rien ne change : 2.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p3",
+  "text": "Ajouter 0, rien ne change : 3.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p4",
+  "text": "Ajouter 0, rien ne change : 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p5",
+  "text": "Ajouter 0, rien ne change : 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p6",
+  "text": "Ajouter 0, rien ne change : 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p7",
+  "text": "Ajouter 0, rien ne change : 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p8",
+  "text": "Ajouter 0, rien ne change : 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p9",
+  "text": "Ajouter 0, rien ne change : 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0p10",
+  "text": "Ajouter 0, rien ne change : 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p0",
+  "text": "Ajouter 0, rien ne change : 1.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p1",
+  "text": "plus 1 : c'est le nombre d'après 1, 2.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p2",
+  "text": "plus 1 : c'est le nombre d'après 2, 3.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p3",
+  "text": "plus 1 : c'est le nombre d'après 3, 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p4",
+  "text": "plus 1 : c'est le nombre d'après 4, 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p5",
+  "text": "plus 1 : c'est le nombre d'après 5, 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p6",
+  "text": "plus 1 : c'est le nombre d'après 6, 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p7",
+  "text": "plus 1 : c'est le nombre d'après 7, 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p8",
+  "text": "plus 1 : c'est le nombre d'après 8, 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p9",
+  "text": "plus 1 : c'est le nombre d'après 9, 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1p10",
+  "text": "plus 1 : c'est le nombre d'après 10, 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p0",
+  "text": "Ajouter 0, rien ne change : 2.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p1",
+  "text": "plus 1 : c'est le nombre d'après 2, 3.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 3 puis 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p3",
+  "text": "plus 2 : deux petits pas sur le terrain, 4 puis 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p4",
+  "text": "plus 2 : deux petits pas sur le terrain, 5 puis 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p5",
+  "text": "plus 2 : deux petits pas sur le terrain, 6 puis 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p6",
+  "text": "plus 2 : deux petits pas sur le terrain, 7 puis 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p7",
+  "text": "plus 2 : deux petits pas sur le terrain, 8 puis 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p8",
+  "text": "plus 2 : deux petits pas sur le terrain, 9 puis 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p9",
+  "text": "plus 2 : deux petits pas sur le terrain, 10 puis 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2p10",
+  "text": "plus 2 : deux petits pas sur le terrain, 11 puis 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p0",
+  "text": "Ajouter 0, rien ne change : 3.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p1",
+  "text": "plus 1 : c'est le nombre d'après 3, 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 4 puis 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p3",
+  "text": "Les jumeaux : 3 et 3 en miroir, ça fait 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p4",
+  "text": "3 plus 4 : le double de 3 (6), plus 1 égale 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p5",
+  "text": "Dans le cadre à 10 : 3 joueurs plus 5 joueurs égale 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p6",
+  "text": "Dans le cadre à 10 : 3 joueurs plus 6 joueurs égale 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p7",
+  "text": "3 et 7 sont des amoureux de 10 : ensemble, ils font 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p8",
+  "text": "8 plus 3 : je complète 8 jusqu'à 10 avec 2, il reste 1, ça fait 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p9",
+  "text": "plus 9 : d'abord plus 10 (13), puis moins 1 égale 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3p10",
+  "text": "plus 10 : on saute une dizaine, 3 devient 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p0",
+  "text": "Ajouter 0, rien ne change : 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p1",
+  "text": "plus 1 : c'est le nombre d'après 4, 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 5 puis 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p3",
+  "text": "4 plus 3 : le double de 3 (6), plus 1 égale 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p4",
+  "text": "Les jumeaux : 4 et 4 en miroir, ça fait 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p5",
+  "text": "4 plus 5 : le double de 4 (8), plus 1 égale 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p6",
+  "text": "4 et 6 sont des amoureux de 10 : ensemble, ils font 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p7",
+  "text": "7 plus 4 : je complète 7 jusqu'à 10 avec 3, il reste 1, ça fait 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p8",
+  "text": "8 plus 4 : je complète 8 jusqu'à 10 avec 2, il reste 2, ça fait 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p9",
+  "text": "plus 9 : d'abord plus 10 (14), puis moins 1 égale 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4p10",
+  "text": "plus 10 : on saute une dizaine, 4 devient 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p0",
+  "text": "Ajouter 0, rien ne change : 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p1",
+  "text": "plus 1 : c'est le nombre d'après 5, 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 6 puis 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p3",
+  "text": "Dans le cadre à 10 : 5 joueurs plus 3 joueurs égale 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p4",
+  "text": "5 plus 4 : le double de 4 (8), plus 1 égale 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p5",
+  "text": "Les jumeaux : 5 et 5 en miroir, ça fait 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p6",
+  "text": "5 plus 6 : le double de 5 (10), plus 1 égale 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p7",
+  "text": "7 plus 5 : je complète 7 jusqu'à 10 avec 3, il reste 2, ça fait 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p8",
+  "text": "8 plus 5 : je complète 8 jusqu'à 10 avec 2, il reste 3, ça fait 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p9",
+  "text": "plus 9 : d'abord plus 10 (15), puis moins 1 égale 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5p10",
+  "text": "plus 10 : on saute une dizaine, 5 devient 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p0",
+  "text": "Ajouter 0, rien ne change : 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p1",
+  "text": "plus 1 : c'est le nombre d'après 6, 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 7 puis 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p3",
+  "text": "Dans le cadre à 10 : 6 joueurs plus 3 joueurs égale 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p4",
+  "text": "6 et 4 sont des amoureux de 10 : ensemble, ils font 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p5",
+  "text": "6 plus 5 : le double de 5 (10), plus 1 égale 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p6",
+  "text": "Les jumeaux : 6 et 6 en miroir, ça fait 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p7",
+  "text": "6 plus 7 : le double de 6 (12), plus 1 égale 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p8",
+  "text": "8 plus 6 : je complète 8 jusqu'à 10 avec 2, il reste 4, ça fait 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p9",
+  "text": "plus 9 : d'abord plus 10 (16), puis moins 1 égale 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6p10",
+  "text": "plus 10 : on saute une dizaine, 6 devient 16.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p0",
+  "text": "Ajouter 0, rien ne change : 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p1",
+  "text": "plus 1 : c'est le nombre d'après 7, 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 8 puis 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p3",
+  "text": "7 et 3 sont des amoureux de 10 : ensemble, ils font 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p4",
+  "text": "7 plus 4 : je complète 7 jusqu'à 10 avec 3, il reste 1, ça fait 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p5",
+  "text": "7 plus 5 : je complète 7 jusqu'à 10 avec 3, il reste 2, ça fait 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p6",
+  "text": "7 plus 6 : le double de 6 (12), plus 1 égale 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p7",
+  "text": "Les jumeaux : 7 et 7 en miroir, ça fait 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p8",
+  "text": "7 plus 8 : le double de 7 (14), plus 1 égale 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p9",
+  "text": "plus 9 : d'abord plus 10 (17), puis moins 1 égale 16.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7p10",
+  "text": "plus 10 : on saute une dizaine, 7 devient 17.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p0",
+  "text": "Ajouter 0, rien ne change : 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p1",
+  "text": "plus 1 : c'est le nombre d'après 8, 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 9 puis 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p3",
+  "text": "8 plus 3 : je complète 8 jusqu'à 10 avec 2, il reste 1, ça fait 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p4",
+  "text": "8 plus 4 : je complète 8 jusqu'à 10 avec 2, il reste 2, ça fait 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p5",
+  "text": "8 plus 5 : je complète 8 jusqu'à 10 avec 2, il reste 3, ça fait 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p6",
+  "text": "8 plus 6 : je complète 8 jusqu'à 10 avec 2, il reste 4, ça fait 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p7",
+  "text": "8 plus 7 : le double de 7 (14), plus 1 égale 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p8",
+  "text": "Les jumeaux : 8 et 8 en miroir, ça fait 16.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p9",
+  "text": "8 plus 9 : le double de 8 (16), plus 1 égale 17.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8p10",
+  "text": "plus 10 : on saute une dizaine, 8 devient 18.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p0",
+  "text": "Ajouter 0, rien ne change : 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p1",
+  "text": "plus 1 : c'est le nombre d'après 9, 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 10 puis 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p3",
+  "text": "plus 9 : d'abord plus 10 (13), puis moins 1 égale 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p4",
+  "text": "plus 9 : d'abord plus 10 (14), puis moins 1 égale 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p5",
+  "text": "plus 9 : d'abord plus 10 (15), puis moins 1 égale 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p6",
+  "text": "plus 9 : d'abord plus 10 (16), puis moins 1 égale 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p7",
+  "text": "plus 9 : d'abord plus 10 (17), puis moins 1 égale 16.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p8",
+  "text": "9 plus 8 : le double de 8 (16), plus 1 égale 17.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p9",
+  "text": "Les jumeaux : 9 et 9 en miroir, ça fait 18.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9p10",
+  "text": "9 plus 10 : le double de 9 (18), plus 1 égale 19.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p0",
+  "text": "Ajouter 0, rien ne change : 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p1",
+  "text": "plus 1 : c'est le nombre d'après 10, 11.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p2",
+  "text": "plus 2 : deux petits pas sur le terrain, 11 puis 12.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p3",
+  "text": "plus 10 : on saute une dizaine, 3 devient 13.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p4",
+  "text": "plus 10 : on saute une dizaine, 4 devient 14.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p5",
+  "text": "plus 10 : on saute une dizaine, 5 devient 15.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p6",
+  "text": "plus 10 : on saute une dizaine, 6 devient 16.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p7",
+  "text": "plus 10 : on saute une dizaine, 7 devient 17.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p8",
+  "text": "plus 10 : on saute une dizaine, 8 devient 18.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p9",
+  "text": "10 plus 9 : le double de 9 (18), plus 1 égale 19.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10p10",
+  "text": "Les jumeaux : 10 et 10 en miroir, ça fait 20.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_0m0",
+  "text": "0 plus 0 égale 0 donc 0 moins 0 égale 0.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1m0",
+  "text": "0 plus 1 égale 1 donc 1 moins 0 égale 1 (et 1 moins 1 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2m0",
+  "text": "0 plus 2 égale 2 donc 2 moins 0 égale 2 (et 2 moins 2 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3m0",
+  "text": "0 plus 3 égale 3 donc 3 moins 0 égale 3 (et 3 moins 3 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4m0",
+  "text": "0 plus 4 égale 4 donc 4 moins 0 égale 4 (et 4 moins 4 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m0",
+  "text": "0 plus 5 égale 5 donc 5 moins 0 égale 5 (et 5 moins 5 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m0",
+  "text": "0 plus 6 égale 6 donc 6 moins 0 égale 6 (et 6 moins 6 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m0",
+  "text": "0 plus 7 égale 7 donc 7 moins 0 égale 7 (et 7 moins 7 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m0",
+  "text": "0 plus 8 égale 8 donc 8 moins 0 égale 8 (et 8 moins 8 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m0",
+  "text": "0 plus 9 égale 9 donc 9 moins 0 égale 9 (et 9 moins 9 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m0",
+  "text": "0 plus 10 égale 10 donc 10 moins 0 égale 10 (et 10 moins 10 égale 0).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_1m1",
+  "text": "1 plus 0 égale 1 donc 1 moins 1 égale 0 (et 1 moins 0 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2m1",
+  "text": "1 plus 1 égale 2 donc 2 moins 1 égale 1.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3m1",
+  "text": "1 plus 2 égale 3 donc 3 moins 1 égale 2 (et 3 moins 2 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4m1",
+  "text": "1 plus 3 égale 4 donc 4 moins 1 égale 3 (et 4 moins 3 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m1",
+  "text": "1 plus 4 égale 5 donc 5 moins 1 égale 4 (et 5 moins 4 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m1",
+  "text": "1 plus 5 égale 6 donc 6 moins 1 égale 5 (et 6 moins 5 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m1",
+  "text": "1 plus 6 égale 7 donc 7 moins 1 égale 6 (et 7 moins 6 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m1",
+  "text": "1 plus 7 égale 8 donc 8 moins 1 égale 7 (et 8 moins 7 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m1",
+  "text": "1 plus 8 égale 9 donc 9 moins 1 égale 8 (et 9 moins 8 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m1",
+  "text": "1 plus 9 égale 10 donc 10 moins 1 égale 9 (et 10 moins 9 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m1",
+  "text": "1 plus 10 égale 11 donc 11 moins 1 égale 10 (et 11 moins 10 égale 1).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_2m2",
+  "text": "2 plus 0 égale 2 donc 2 moins 2 égale 0 (et 2 moins 0 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3m2",
+  "text": "2 plus 1 égale 3 donc 3 moins 2 égale 1 (et 3 moins 1 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4m2",
+  "text": "2 plus 2 égale 4 donc 4 moins 2 égale 2.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m2",
+  "text": "2 plus 3 égale 5 donc 5 moins 2 égale 3 (et 5 moins 3 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m2",
+  "text": "2 plus 4 égale 6 donc 6 moins 2 égale 4 (et 6 moins 4 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m2",
+  "text": "2 plus 5 égale 7 donc 7 moins 2 égale 5 (et 7 moins 5 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m2",
+  "text": "2 plus 6 égale 8 donc 8 moins 2 égale 6 (et 8 moins 6 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m2",
+  "text": "2 plus 7 égale 9 donc 9 moins 2 égale 7 (et 9 moins 7 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m2",
+  "text": "2 plus 8 égale 10 donc 10 moins 2 égale 8 (et 10 moins 8 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m2",
+  "text": "2 plus 9 égale 11 donc 11 moins 2 égale 9 (et 11 moins 9 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m2",
+  "text": "2 plus 10 égale 12 donc 12 moins 2 égale 10 (et 12 moins 10 égale 2).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_3m3",
+  "text": "3 plus 0 égale 3 donc 3 moins 3 égale 0 (et 3 moins 0 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4m3",
+  "text": "3 plus 1 égale 4 donc 4 moins 3 égale 1 (et 4 moins 1 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m3",
+  "text": "3 plus 2 égale 5 donc 5 moins 3 égale 2 (et 5 moins 2 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m3",
+  "text": "3 plus 3 égale 6 donc 6 moins 3 égale 3.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m3",
+  "text": "3 plus 4 égale 7 donc 7 moins 3 égale 4 (et 7 moins 4 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m3",
+  "text": "3 plus 5 égale 8 donc 8 moins 3 égale 5 (et 8 moins 5 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m3",
+  "text": "3 plus 6 égale 9 donc 9 moins 3 égale 6 (et 9 moins 6 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m3",
+  "text": "3 plus 7 égale 10 donc 10 moins 3 égale 7 (et 10 moins 7 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m3",
+  "text": "3 plus 8 égale 11 donc 11 moins 3 égale 8 (et 11 moins 8 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m3",
+  "text": "3 plus 9 égale 12 donc 12 moins 3 égale 9 (et 12 moins 9 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m3",
+  "text": "3 plus 10 égale 13 donc 13 moins 3 égale 10 (et 13 moins 10 égale 3).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_4m4",
+  "text": "4 plus 0 égale 4 donc 4 moins 4 égale 0 (et 4 moins 0 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m4",
+  "text": "4 plus 1 égale 5 donc 5 moins 4 égale 1 (et 5 moins 1 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m4",
+  "text": "4 plus 2 égale 6 donc 6 moins 4 égale 2 (et 6 moins 2 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m4",
+  "text": "4 plus 3 égale 7 donc 7 moins 4 égale 3 (et 7 moins 3 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m4",
+  "text": "4 plus 4 égale 8 donc 8 moins 4 égale 4.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m4",
+  "text": "4 plus 5 égale 9 donc 9 moins 4 égale 5 (et 9 moins 5 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m4",
+  "text": "4 plus 6 égale 10 donc 10 moins 4 égale 6 (et 10 moins 6 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m4",
+  "text": "4 plus 7 égale 11 donc 11 moins 4 égale 7 (et 11 moins 7 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m4",
+  "text": "4 plus 8 égale 12 donc 12 moins 4 égale 8 (et 12 moins 8 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m4",
+  "text": "4 plus 9 égale 13 donc 13 moins 4 égale 9 (et 13 moins 9 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m4",
+  "text": "4 plus 10 égale 14 donc 14 moins 4 égale 10 (et 14 moins 10 égale 4).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_5m5",
+  "text": "5 plus 0 égale 5 donc 5 moins 5 égale 0 (et 5 moins 0 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m5",
+  "text": "5 plus 1 égale 6 donc 6 moins 5 égale 1 (et 6 moins 1 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m5",
+  "text": "5 plus 2 égale 7 donc 7 moins 5 égale 2 (et 7 moins 2 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m5",
+  "text": "5 plus 3 égale 8 donc 8 moins 5 égale 3 (et 8 moins 3 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m5",
+  "text": "5 plus 4 égale 9 donc 9 moins 5 égale 4 (et 9 moins 4 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m5",
+  "text": "5 plus 5 égale 10 donc 10 moins 5 égale 5.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m5",
+  "text": "5 plus 6 égale 11 donc 11 moins 5 égale 6 (et 11 moins 6 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m5",
+  "text": "5 plus 7 égale 12 donc 12 moins 5 égale 7 (et 12 moins 7 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m5",
+  "text": "5 plus 8 égale 13 donc 13 moins 5 égale 8 (et 13 moins 8 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m5",
+  "text": "5 plus 9 égale 14 donc 14 moins 5 égale 9 (et 14 moins 9 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m5",
+  "text": "5 plus 10 égale 15 donc 15 moins 5 égale 10 (et 15 moins 10 égale 5).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_6m6",
+  "text": "6 plus 0 égale 6 donc 6 moins 6 égale 0 (et 6 moins 0 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m6",
+  "text": "6 plus 1 égale 7 donc 7 moins 6 égale 1 (et 7 moins 1 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m6",
+  "text": "6 plus 2 égale 8 donc 8 moins 6 égale 2 (et 8 moins 2 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m6",
+  "text": "6 plus 3 égale 9 donc 9 moins 6 égale 3 (et 9 moins 3 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m6",
+  "text": "6 plus 4 égale 10 donc 10 moins 6 égale 4 (et 10 moins 4 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m6",
+  "text": "6 plus 5 égale 11 donc 11 moins 6 égale 5 (et 11 moins 5 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m6",
+  "text": "6 plus 6 égale 12 donc 12 moins 6 égale 6.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m6",
+  "text": "6 plus 7 égale 13 donc 13 moins 6 égale 7 (et 13 moins 7 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m6",
+  "text": "6 plus 8 égale 14 donc 14 moins 6 égale 8 (et 14 moins 8 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m6",
+  "text": "6 plus 9 égale 15 donc 15 moins 6 égale 9 (et 15 moins 9 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_16m6",
+  "text": "6 plus 10 égale 16 donc 16 moins 6 égale 10 (et 16 moins 10 égale 6).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_7m7",
+  "text": "7 plus 0 égale 7 donc 7 moins 7 égale 0 (et 7 moins 0 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m7",
+  "text": "7 plus 1 égale 8 donc 8 moins 7 égale 1 (et 8 moins 1 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m7",
+  "text": "7 plus 2 égale 9 donc 9 moins 7 égale 2 (et 9 moins 2 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m7",
+  "text": "7 plus 3 égale 10 donc 10 moins 7 égale 3 (et 10 moins 3 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m7",
+  "text": "7 plus 4 égale 11 donc 11 moins 7 égale 4 (et 11 moins 4 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m7",
+  "text": "7 plus 5 égale 12 donc 12 moins 7 égale 5 (et 12 moins 5 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m7",
+  "text": "7 plus 6 égale 13 donc 13 moins 7 égale 6 (et 13 moins 6 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m7",
+  "text": "7 plus 7 égale 14 donc 14 moins 7 égale 7.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m7",
+  "text": "7 plus 8 égale 15 donc 15 moins 7 égale 8 (et 15 moins 8 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_16m7",
+  "text": "7 plus 9 égale 16 donc 16 moins 7 égale 9 (et 16 moins 9 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_17m7",
+  "text": "7 plus 10 égale 17 donc 17 moins 7 égale 10 (et 17 moins 10 égale 7).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_8m8",
+  "text": "8 plus 0 égale 8 donc 8 moins 8 égale 0 (et 8 moins 0 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m8",
+  "text": "8 plus 1 égale 9 donc 9 moins 8 égale 1 (et 9 moins 1 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m8",
+  "text": "8 plus 2 égale 10 donc 10 moins 8 égale 2 (et 10 moins 2 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m8",
+  "text": "8 plus 3 égale 11 donc 11 moins 8 égale 3 (et 11 moins 3 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m8",
+  "text": "8 plus 4 égale 12 donc 12 moins 8 égale 4 (et 12 moins 4 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m8",
+  "text": "8 plus 5 égale 13 donc 13 moins 8 égale 5 (et 13 moins 5 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m8",
+  "text": "8 plus 6 égale 14 donc 14 moins 8 égale 6 (et 14 moins 6 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m8",
+  "text": "8 plus 7 égale 15 donc 15 moins 8 égale 7 (et 15 moins 7 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_16m8",
+  "text": "8 plus 8 égale 16 donc 16 moins 8 égale 8.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_17m8",
+  "text": "8 plus 9 égale 17 donc 17 moins 8 égale 9 (et 17 moins 9 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_18m8",
+  "text": "8 plus 10 égale 18 donc 18 moins 8 égale 10 (et 18 moins 10 égale 8).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_9m9",
+  "text": "9 plus 0 égale 9 donc 9 moins 9 égale 0 (et 9 moins 0 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m9",
+  "text": "9 plus 1 égale 10 donc 10 moins 9 égale 1 (et 10 moins 1 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m9",
+  "text": "9 plus 2 égale 11 donc 11 moins 9 égale 2 (et 11 moins 2 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m9",
+  "text": "9 plus 3 égale 12 donc 12 moins 9 égale 3 (et 12 moins 3 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m9",
+  "text": "9 plus 4 égale 13 donc 13 moins 9 égale 4 (et 13 moins 4 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m9",
+  "text": "9 plus 5 égale 14 donc 14 moins 9 égale 5 (et 14 moins 5 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m9",
+  "text": "9 plus 6 égale 15 donc 15 moins 9 égale 6 (et 15 moins 6 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_16m9",
+  "text": "9 plus 7 égale 16 donc 16 moins 9 égale 7 (et 16 moins 7 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_17m9",
+  "text": "9 plus 8 égale 17 donc 17 moins 9 égale 8 (et 17 moins 8 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_18m9",
+  "text": "9 plus 9 égale 18 donc 18 moins 9 égale 9.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_19m9",
+  "text": "9 plus 10 égale 19 donc 19 moins 9 égale 10 (et 19 moins 10 égale 9).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_10m10",
+  "text": "10 plus 0 égale 10 donc 10 moins 10 égale 0 (et 10 moins 0 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_11m10",
+  "text": "10 plus 1 égale 11 donc 11 moins 10 égale 1 (et 11 moins 1 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_12m10",
+  "text": "10 plus 2 égale 12 donc 12 moins 10 égale 2 (et 12 moins 2 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_13m10",
+  "text": "10 plus 3 égale 13 donc 13 moins 10 égale 3 (et 13 moins 3 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_14m10",
+  "text": "10 plus 4 égale 14 donc 14 moins 10 égale 4 (et 14 moins 4 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_15m10",
+  "text": "10 plus 5 égale 15 donc 15 moins 10 égale 5 (et 15 moins 5 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_16m10",
+  "text": "10 plus 6 égale 16 donc 16 moins 10 égale 6 (et 16 moins 6 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_17m10",
+  "text": "10 plus 7 égale 17 donc 17 moins 10 égale 7 (et 17 moins 7 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_18m10",
+  "text": "10 plus 8 égale 18 donc 18 moins 10 égale 8 (et 18 moins 8 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_19m10",
+  "text": "10 plus 9 égale 19 donc 19 moins 10 égale 9 (et 19 moins 9 égale 10).",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ },
+ {
+  "key": "hint_20m10",
+  "text": "10 plus 10 égale 20 donc 20 moins 10 égale 10.",
+  "voice": "fr-FR-HenriNeural",
+  "rate": "+8%",
+  "pitch": "+3Hz"
+ }
+]
