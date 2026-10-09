@@ -19,11 +19,43 @@
     /** pan (1 doigt) + pinch/molette (zoom) */
     interactive?: boolean;
     onselect?: (id: string) => void;
+    /** regions d'evenement ouvertes : halo + guirlande de papel picado animes autour du medaillon */
+    highlight?: string[];
   }
-  let { states = { madrid: 'current' }, player, initial = 'A', focusOn = null, zoom = 1.6, interactive = true, onselect }: Props = $props();
+  let { states = { madrid: 'current' }, player, initial = 'A', focusOn = null, zoom = 1.6, interactive = true, onselect, highlight = [] }: Props = $props();
   let host: HTMLElement | undefined = $state();
   let pulse: gsap.core.Timeline | undefined;
   const svg = $derived(Q.worldMap({ states, player, initial }));
+
+  const FLAGS = ['#ff4f8b', '#ffc83d', '#19b7aa', '#8bd04a', '#ff7a45', '#9b6cff'];
+  function flagsRing(R: number) {
+    const n = 14;
+    let out = '';
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2;
+      const x = Math.cos(a) * R, y = Math.sin(a) * R;
+      out += `<path d="M-9 -6H9L9 10L4.5 6L0 10L-4.5 6L-9 10Z" fill="${FLAGS[i % FLAGS.length]}" stroke="#1b1030" stroke-width="1.5" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${((a * 180) / Math.PI + 90).toFixed(0)})"/>`;
+    }
+    return out;
+  }
+  /** Marqueur d'evenement : insere avant chaque medaillon concerne (apres chaque rendu du SVG). */
+  $effect(() => {
+    void svg;
+    if (!host) return;
+    host.querySelectorAll('.m-evfx').forEach((n) => n.remove());
+    for (const id of highlight) {
+      const med = host.querySelector(`.m-med-${id}`) as SVGGElement | null;
+      if (!med || (states[id] ?? 'locked') === 'locked') continue;
+      const x = med.dataset.x, y = med.dataset.y;
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute('class', 'm-evfx');
+      g.setAttribute('transform', `translate(${x} ${y})`);
+      g.setAttribute('pointer-events', 'none');
+      g.innerHTML = `<defs><radialGradient id="evh-${id}"><stop offset="55%" stop-color="#ff4f8b" stop-opacity=".75"/><stop offset="100%" stop-color="#ff4f8b" stop-opacity="0"/></radialGradient></defs>
+<circle class="evh" r="92" fill="url(#evh-${id})"/><g class="evr">${flagsRing(58)}</g><g class="evr2">${flagsRing(74).replace(/fill="#[0-9a-f]{6}"/g, (m) => m)}</g>`;
+      med.parentNode?.insertBefore(g, med);
+    }
+  });
 
   onMount(() => {
     if (!host) return;
@@ -167,4 +199,10 @@
   .wm { width: 100%; height: 100%; display: grid; place-items: center; background: linear-gradient(135deg, #0a4a66, #0e6985 55%, #0b4b73); overflow: hidden; touch-action: none; }
   .wm :global(svg) { width: 100%; height: 100%; display: block; }
   .wm :global(.m-med) { cursor: pointer; }
+  .wm :global(.evh) { animation: evpulse 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .wm :global(.evr) { animation: evspin 14s linear infinite; }
+  .wm :global(.evr2) { animation: evspin 22s linear infinite reverse; opacity: 0.85; }
+  @keyframes evpulse { 0%, 100% { opacity: 0.5; transform: scale(0.88); } 50% { opacity: 1; transform: scale(1.12); } }
+  @keyframes evspin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .wm :global(.evh), .wm :global(.evr), .wm :global(.evr2) { animation: none; } }
 </style>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-pluma</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      #p1b, #p2 { visibility: hidden; }
+      .star, .note, .ring { position: absolute; left: 0; top: 0; }
+      .ring { width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; border: 7px solid #ffd76a; opacity: 0; }
+      .fglow { position: absolute; left: 0; top: 0; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.95), rgba(66,224,160,.4) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; }
+      #fac { position: absolute; left: 50px; top: -407px; }
+      #fac svg { display: block; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-salamanca):not(.m-med-sevilla) { display: none; }
+      #mapbox .m-med text, #mapbox .m-plq text { display: none; }
+      #qz { position: absolute; left: 0; top: 0; width: 400px; height: 480px; z-index: 8; }
+      #qz svg { overflow: visible; }
+      .streak { position: absolute; left: 0; height: 6px; width: 700px; border-radius: 3px; background: linear-gradient(90deg, rgba(255,243,209,0), #fff3d1); opacity: 0; z-index: 60; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-pluma" data-start="0" data-width="1920" data-height="1200" data-duration="10.16">
+      <div id="p1" class="plan" data-layout-allow-overflow><div id="stage"></div></div>
+      <div id="p1b" class="plan" data-layout-allow-overflow><div id="fac" data-layout-allow-overflow></div></div>
+      <div id="p2" class="plan" data-layout-allow-overflow>
+        <div id="mapbox" data-layout-allow-overflow></div>
+        <div id="qz" data-layout-allow-overflow></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.16" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.96,"v":1},{"t":10.16,"v":0}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/pilar.8d244e6d3e.mp3" data-start="1.1" data-duration="3.752" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.ae43ae54e1.mp3" data-start="5.552" data-duration="3.758" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/bell.mp3" data-start="0.05" data-duration="1.741" data-track-index="3" data-volume="0.6"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/bell.mp3" data-start="0.45" data-duration="1.741" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/bell.mp3" data-start="0.85" data-duration="1.741" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/spell-magic.mp3" data-start="0.4" data-duration="1.104" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/item-get.mp3" data-start="0.9" data-duration="0.526" data-track-index="7" data-volume="0.45"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/level-up-big.mp3" data-start="1.1" data-duration="1.015" data-track-index="8" data-volume="0.45"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/swoosh-out.mp3" data-start="4.952" data-duration="0.212" data-track-index="9" data-volume="0.5"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/star.mp3" data-start="6.452" data-duration="0.121" data-track-index="10" data-volume="0.4"></audio>
+      <audio id="a-sfx9" src="./_shared/sfx/spell-cast.mp3" data-start="6.352" data-duration="0.465" data-track-index="11" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-pluma","cinematica":"u02-pluma","part":1,"parts":1,"total":10.16,"meta":{"cinematica":"u02-pluma","titulo":"Segunda pluma","tipo":"pluma","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":1,"t0":0,"t1":5.152,"vista":"La cloche de Doña Pilar se met à sonner à toute volée ; la grenouille de pierre s’ouvre et libère une plume verte brillante.","camara":"","rotulo":"","personajes":["pilar"],"lines":[{"who":"pilar","es":"¡La campana suena! ¡Gracias, viajeros!","key":"pilar.8d244e6d3e","t":1.1,"d":3.752,"words":[{"w":"¡La","t":1.1,"d":0.231},{"w":"campana","t":1.331,"d":0.571},{"w":"suena!","t":1.902,"d":0.435},{"w":"¡Gracias,","t":3.336,"d":0.566},{"w":"viajeros!","t":4.069,"d":0.633}]}]},{"n":2,"t0":5.152,"t1":9.91,"vista":"Sur la carte, l’empreinte lumineuse indique Sevilla ; le Quetzal, plus vert, bat des ailes.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Gracias, amigos. Ahora hablo más.","key":"quetzal.ae43ae54e1","t":5.552,"d":3.758,"words":[{"w":"Gracias,","t":5.552,"d":0.654},{"w":"amigos.","t":6.484,"d":0.603},{"w":"Ahora","t":8.106,"d":0.392},{"w":"hablo","t":8.498,"d":0.392},{"w":"más.","t":8.89,"d":0.27}]}]}],"sfx":[{"t":0.05,"f":"rpg/bell"},{"t":0.45,"f":"rpg/bell"},{"t":0.85,"f":"rpg/bell"},{"t":0.4,"f":"rpg/spell-magic"},{"t":0.9,"f":"rpg/item-get"},{"t":1.1,"f":"rpg/level-up-big"},{"t":4.952,"f":"ui/swoosh-out"},{"t":6.452,"f":"ui/star"},{"t":6.352,"f":"rpg/spell-cast"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var NOTE = '<svg width="70" height="90" viewBox="-35 -45 70 90"><path d="M-8 28V-30L22 -38V20" stroke="#ffd76a" stroke-width="8" fill="none" stroke-linecap="round"/><ellipse cx="-16" cy="28" rx="15" ry="11" fill="#ffd76a"/><ellipse cx="14" cy="20" rx="15" ry="11" fill="#ffd76a"/></svg>';
+        var tF = C.wordT(PLAN, 1, 1, 4) - 0.25;   // whip vers la facade (« ¡Gracias »)
+
+        // ============================ PLAN 1 : la cloche sonne ============================
+        var set = Q.colegioPatio({ uid: "cp", noKids: true });
+        var room = S.set($("#stage"), set, { below: "#7A5530", motes: 24 });
+        S.drift(tl, room, tF + 0.4);
+        var kf = mk(room.qlayer, "", set.kidsFrozen), ka = mk(room.qlayer, "", set.kidsAlive);
+        [kf, ka].forEach(function (k) { k.style.cssText = "position:absolute;left:0;top:0;width:2400px;height:1200px"; k.firstChild.style.display = "block"; });
+        tl.set(ka, { opacity: 0 }, 0);
+        tl.to(kf, { opacity: 0, duration: 0.35, ease: "power2.out" }, 0.12);
+        tl.fromTo(ka, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out", immediateRender: false }, 0.12);
+        tl.to(ka, { y: -16, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 5 }, 0.45);
+        var PX = 1250, pil = S.chr(room.actors, "pilar", PX, 1020, 360);
+        var hx = PX - 0.205 * 360, hy = 1020 - 0.49 * 360;
+        var bM = S.prop(room.actors, "campana", hx, hy - 10, 180, { tone: "muda", uid: "bm" });
+        var bB = S.prop(room.actors, "campana", hx, hy - 10, 180, { uid: "bb" });
+        tl.set(bB, { opacity: 0 }, 0);
+        tl.to(bM, { opacity: 0, duration: 0.15 }, 0.1); tl.fromTo(bB, { opacity: 0 }, { opacity: 1, duration: 0.15, immediateRender: false }, 0.1);
+        var bg = bB.querySelector(".pr-bell"), cl = bB.querySelector(".pr-clap");
+        var ringEnd = tF + 0.1;
+        tl.fromTo(bg, { rotation: -32, svgOrigin: "150 34" }, { rotation: 32, svgOrigin: "150 34", duration: 0.19, ease: "sine.inOut", yoyo: true, repeat: Math.floor((ringEnd - 0.1) / 0.19) - 1 }, 0.1);
+        tl.fromTo(cl, { rotation: 38, svgOrigin: "150 280" }, { rotation: -38, svgOrigin: "150 280", duration: 0.19, ease: "sine.inOut", yoyo: true, repeat: Math.floor((ringEnd - 0.1) / 0.19) - 1 }, 0.14);
+        tl.to(pil.b, { y: 5, duration: 0.19, ease: "sine.inOut", yoyo: true, repeat: Math.floor((ringEnd - 0.1) / 0.19) - 1 }, 0.1);
+        S.breathe(tl, pil, 0, tF, 0.5);
+        // anneaux de son + notes
+        for (var r = 0; r < 12; r++) {
+          var rg = mk(room.actors, "ring"); gsap.set(rg, { x: hx, y: hy + 70 });
+          tl.fromTo(rg, { scale: 0.3, opacity: 0.85 }, { scale: 6.5, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, 0.12 + r * 0.26);
+          if (r % 2 === 0) {
+            var nt = mk(room.actors, "note", NOTE), ang = -1.1 + (r / 12) * 3.2, d = 280 + (r % 3) * 70;
+            tl.fromTo(nt, { x: hx - 30, y: hy + 40, scale: 0.3, opacity: 1, rotation: 0 }, { x: hx - 30 + Math.cos(ang) * d * 1.2, y: hy + 40 - Math.abs(Math.sin(ang)) * d - 60, scale: 1, opacity: 0, rotation: (r % 4 ? 18 : -18), duration: 1.0, ease: "power2.out", immediateRender: false }, 0.15 + r * 0.26);
+          }
+        }
+        // Pilar : « ¡La campana suena! » (elle rit, bras leves) puis « ¡Gracias, viajeros! »
+        C.talkBounce(tl, pil.b, L1, 5); C.talkChar(tl, pil, L1);
+        Q.charEmote(tl, pil.svg, 0.3, "happy", 0.3);
+        var wS = C.wordT(PLAN, 1, 1, 3);
+        tl.to(pil.svg.querySelector(".c-armR"), { rotation: -150, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.7)" }, wS - 0.3);
+        tl.to(pil.svg.querySelector(".c-armR"), { rotation: -135, svgOrigin: "258 306", duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 5 }, wS + 0.1);
+        // camera : large puis pousse vers Pilar
+        S.camSet(room, 1250, 640, 0.95);
+        S.cam(tl, room, 1330, 700, 1.25, 0, tF + 0.2, "sine.inOut");
+        tl.fromTo("#stage", { rotation: -1.4, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.4, ease: "power2.out" }, 0);
+
+        // ============================ WHIP-PAN vers la facade ============================
+        var streaks = [];
+        for (var q = 0; q < 7; q++) { var sk = mk(root, "streak"); sk.style.top = 260 + q * 130 + (q % 2) * 40 + "px"; streaks.push(sk); }
+        tl.fromTo("#p1", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, tF);
+        tl.set("#p1", { visibility: "hidden" }, tF + 0.36);
+        tl.set("#p1b", { visibility: "visible" }, tF + 0.02);
+        tl.fromTo("#p1b", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, tF + 0.1);
+        streaks.forEach(function (sk, i) { tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, tF + 0.02 + i * 0.012); });
+
+        // ============================ PLAN 1b : la grenouille s'ouvre, la plume est liberee ============================
+        var fac = $("#fac");
+        fac.innerHTML = Q.fachadaUniversidad({ uid: "fu", width: 2600 });
+        fac.firstChild.setAttribute("data-layout-allow-overflow", "");
+        var fk = 2.6, gx = 50 + 350 * fk, gy = -407 + 372 * fk; // centre de la grenouille (repere ecran)
+        var frogG = fac.querySelector(".pr-frog"), fglow = fac.querySelector(".fz-glow");
+        var tO = tF + 0.75;
+        tl.to(frogG, { rotation: -17, y: -14, svgOrigin: "30 82", duration: 0.45, ease: "back.out(2.2)" }, tO);
+        tl.fromTo(fglow, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, tO);
+        tl.to(fglow, { opacity: 0.5, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 7 }, tO + 0.5);
+        var gl = mk($("#p1b"), "fglow"); gsap.set(gl, { x: gx - 260, y: gy - 260 });
+        tl.fromTo(gl, { opacity: 0, scale: 0.4 }, { opacity: 0.9, scale: 1.1, duration: 0.5, ease: "power2.out", immediateRender: false }, tO);
+        tl.to(gl, { opacity: 0.45, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 7 }, tO + 0.55);
+        for (var rr = 0; rr < 3; rr++) { var rg2 = mk($("#p1b"), "ring"); rg2.style.borderColor = "#9bffd6"; gsap.set(rg2, { x: gx, y: gy }); tl.fromTo(rg2, { scale: 0.3, opacity: 0.9 }, { scale: 7, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, tO + rr * 0.3); }
+        // la plume monte en tournoyant, puis file vers le haut-droite
+        var fe = mk($("#p1b"), "star", Q.featherSvg({ uid: "fe", width: 90, height: 270 }));
+        fe.style.filter = "drop-shadow(0 0 22px rgba(155,255,214,.95))"; fe.style.zIndex = 9; fe.firstChild.style.overflow = "visible";
+        gsap.set(fe, { x: gx - 45, y: gy - 40, opacity: 0, scale: 0.5, rotation: -20, transformOrigin: "50% 12%" });
+        var tFe = tO + 0.35, tEnd1 = P1.t1;
+        tl.fromTo(fe, { opacity: 0, scale: 0.5, y: gy - 20 }, { opacity: 1, scale: 1, y: gy - 260, duration: 0.8, ease: "power2.out", immediateRender: false }, tFe);
+        tl.fromTo(fe, { rotation: -26 }, { rotation: 26, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, tFe);
+        tl.to(fe, { x: 1500, y: 120, scale: 0.7, rotation: 60, duration: 0.7, ease: "power2.in" }, Math.max(tFe + 1.5, tEnd1 - 0.9));
+        tl.to(fe, { opacity: 0, duration: 0.25 }, Math.max(tFe + 2.0, tEnd1 - 0.35));
+        for (var k = 0; k < 12; k++) {
+          var sp = mk($("#p1b"), "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>');
+          var ang2 = (k / 12) * 6.283, sx = gx + Math.cos(ang2) * 40, sy = gy + Math.sin(ang2) * 40;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang2) * 170, y: sy + Math.sin(ang2) * 170, scale: 1, duration: 0.5, ease: "back.out(3)", immediateRender: false }, tO + 0.1 + k * 0.03);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, tO + 0.6 + k * 0.03);
+        }
+        // camera de la facade : poussee lente vers la grenouille
+        tl.fromTo("#fac", { scale: 1.0, transformOrigin: gx - 50 + "px " + (gy + 407) + "px" }, { scale: 1.25, duration: Math.max(1, tEnd1 - tF), ease: "sine.inOut", immediateRender: false }, tF + 0.1);
+
+        // ============================ WHIP-PAN vers la carte ============================
+        var streaks2 = [];
+        for (var q2 = 0; q2 < 7; q2++) { var sk2 = mk(root, "streak"); sk2.style.top = 260 + q2 * 130 + (q2 % 2) * 40 + "px"; streaks2.push(sk2); }
+        tl.fromTo("#p1b", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, W - 0.24);
+        tl.set("#p1b", { visibility: "hidden" }, W + 0.2);
+        tl.set("#p2", { visibility: "visible" }, W - 0.2);
+        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, W - 0.16);
+        streaks2.forEach(function (sk, i) { tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, W - 0.22 + i * 0.012); });
+
+        // ============================ PLAN 2 : la carte, Sevilla ============================
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "done", salamanca: "done", sevilla: "current", valencia: "open" }, player: "salamanca", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("sevilla"));
+        var sal = Q.mapRegion("salamanca"), sev = Q.mapRegion("sevilla"), mid = { x: (sal.x + sev.x) / 2, y: (sal.y + sev.y) / 2 };
+        Q.mapCamSet(gsap, mapbox, { x: sal.x, y: sal.y }, 2.4);
+        Q.mapCamMove(tl, mapbox, mid, 2.0, W, 0.9, "power2.out");
+        Q.mapFogDrift(tl, mapbox, W, 4);
+        Q.mapPulse(tl, mapbox, W, 4, 0.9);
+        Q.mapTravel(tl, mapbox, "salamanca", "sevilla", L2.t + 0.1, 1.2, gsap);
+        Q.mapFogClear(tl, mapbox, "sevilla", L2.t + 1.15, 1.7);
+        Q.mapCamMove(tl, mapbox, { x: sev.x + 6, y: sev.y }, 3.2, L2.t + 1.0, 1.6, "power2.inOut");
+        var fp = mk($("#p2"), "star", '<svg width="260" height="260" viewBox="-130 -130 260 260"><circle r="100" fill="none" stroke="#ffe9a8" stroke-width="8"/><circle r="60" fill="#ffc83d" opacity=".35"/><path d="' + Q.sparklePath(0, 0, 70, 14) + '" fill="#fff3b0"/></svg>');
+        fp.style.zIndex = 7; gsap.set(fp, { x: 960 - 130, y: 600 - 130, opacity: 0 });
+        tl.fromTo(fp, { scale: 0.2, opacity: 0, rotation: -30 }, { scale: 1.3, opacity: 0.9, rotation: 0, duration: 0.7, ease: "back.out(1.6)", immediateRender: false }, L2.t + 1.9);
+        tl.to(fp, { scale: 1.6, opacity: 0, duration: 0.8, ease: "power2.out" }, L2.t + 2.55);
+        // le Quetzal, plus vert : battements, bec qui parle
+        var qz = $("#qz");
+        qz.innerHTML = Q.quetzal({ uid: "qf", width: 400, height: 480 });
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.7, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        Q.quetzalSet(qz, "talk", gsap);
+        gsap.set(qz, { x: 70, y: 460, opacity: 0 });
+        tl.fromTo(qz, { x: -300, y: 520, opacity: 0 }, { x: 70, y: 460, opacity: 1, duration: 0.7, ease: "power3.out", immediateRender: false }, W + 0.1);
+        tl.to(qz, { y: 440, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((T - W) / 0.7)) }, W + 0.8);
+        Q.quetzalFlap(tl, qz, W + 0.2, Math.floor((T - W - 0.3) / 0.34), 0.34, 0.55);
+        C.talkQuetzal(tl, qz, L2);
+        Q.quetzalBlink(tl, qz, W + 1.2); Q.quetzalBlink(tl, qz, W + 3.0);
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.4 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-pluma"] = tl;
+      })();
+    </script>
+  </body>
+</html>

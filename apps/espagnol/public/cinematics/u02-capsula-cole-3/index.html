@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-capsula-cole-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #root { background: #3b1c12; }
+      #cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1200px; transform-origin: 960px 600px; }
+      #fac { position: absolute; left: 110px; top: 20px; }
+      #fac svg { display: block; }
+      #cnt { position: absolute; left: 40px; top: 300px; width: 540px; padding: 22px 0 26px; border-radius: 36px; background: rgba(20,23,63,.96); box-shadow: 0 14px 0 rgba(0,0,0,.4), inset 0 0 0 6px #ffc83d; text-align: center; z-index: 12; }
+      #cnt .k { font: 900 32px/1 Nunito, sans-serif; letter-spacing: .18em; color: #19b7aa; }
+      #cnt .n { font: 400 190px/1.05 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 8px 0 #c9573b; }
+      #cnt .s { font: 900 34px/1 Nunito, sans-serif; letter-spacing: .12em; color: #ffc83d; }
+      .cap-chip { z-index: 13; }
+      .gl { position: absolute; left: 0; top: 0; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(closest-side, rgba(155,255,214,.9), rgba(66,224,160,.35) 55%, rgba(66,224,160,0)); mix-blend-mode: screen; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-capsula-cole-3" data-start="0" data-width="1920" data-height="1200" data-duration="5.727">
+      <div id="cam" data-layout-allow-overflow><div id="fac" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.727" data-media-start="17.437" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":4.527,"v":1},{"t":5.727,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.342f4f2d6e.mp3" data-start="0.6" data-duration="3.677" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/tick.mp3" data-start="0.9" data-duration="0.045" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/level-up.mp3" data-start="3.577" data-duration="0.37" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-capsula-cole-3","cinematica":"u02-capsula-cole","part":3,"parts":3,"total":5.727,"meta":{"cinematica":"u02-capsula-cole","titulo":"Mil y una escuelas","tipo":"capsula","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":4,"t0":0,"t1":5.477,"vista":"Plan large de la façade de l’Universidad de Salamanca, pierre dorée au soleil, compteur « 1218 ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En Salamanca hay una universidad con más de ochocientos años.","key":"narrador.342f4f2d6e","t":0.6,"d":3.677,"words":[{"w":"En","t":0.6,"d":0.184},{"w":"Salamanca","t":0.784,"d":0.564},{"w":"hay","t":1.349,"d":0.239},{"w":"una","t":1.587,"d":0.239},{"w":"universidad","t":1.826,"d":0.673},{"w":"con","t":2.499,"d":0.239},{"w":"más","t":2.738,"d":0.239},{"w":"de","t":2.976,"d":0.184},{"w":"ochocientos","t":3.161,"d":0.673},{"w":"años.","t":3.834,"d":0.293}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.9,"f":"ui/tick"},{"t":3.577,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 4), L = P.lines[0], T = PLAN.total;
+        Cap.css();
+        var fac = $("#fac");
+        fac.innerHTML = Q.fachadaUniversidad({ uid: "fu", width: 1700 });
+        fac.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        var cam = $("#cam");
+        // camera : plan large de la facade, pousse lentement vers le medaillon central
+        tl.fromTo(cam, { scale: 1.0, x: 0, y: 0 }, { scale: 1.14, x: -20, y: -20, duration: T, ease: "sine.inOut" }, 0);
+        // la grenouille de pierre pulse tres doucement (indice pour la suite)
+        var fr = fac.querySelector(".fz-glow");
+        tl.fromTo(fr, { opacity: 0 }, { opacity: 0.8, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 0.8)) }, 0.6);
+        var gl = document.createElement("div"); gl.className = "gl"; gl.setAttribute("data-layout-allow-overflow", ""); gl.setAttribute("data-layout-ignore", ""); cam.appendChild(gl);
+        gsap.set(gl, { x: 705 - 210, y: 652 - 210 });
+        tl.fromTo(gl, { opacity: 0 }, { opacity: 0.55, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 0.8)) }, 0.6);
+
+        // pastille de lieu
+        var tSal = C.wordT(PLAN, 4, 1, 2), tCon = C.wordT(PLAN, 4, 1, 6), tOcho = C.wordT(PLAN, 4, 1, 9), tEnd = C.wordT(PLAN, 4, 1, 10);
+        var chip = Cap.chip(root, 'SALAMANCA', 1330, 250, "gold");
+        tl.set(chip, { opacity: 0 }, 0);
+        tl.fromTo(chip, { opacity: 0, x: 1330 + 120 }, { opacity: 1, x: 1330, duration: 0.5, ease: "back.out(1.8)", immediateRender: false }, tSal - 0.1);
+        // compteur 0 -> 1218
+        var cnt = document.createElement("div"); cnt.id = "cnt"; cnt.setAttribute("data-layout-ignore", ""); cnt.innerHTML = '<div class="k">FUNDADA EN</div><div class="n" id="num">0</div><div class="s">AÑO DE FUNDACIÓN</div>'; root.appendChild(cnt);
+        tl.set(cnt, { opacity: 0 }, 0);
+        tl.fromTo(cnt, { opacity: 0, x: -140, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, tCon - 0.2);
+        var o = { v: 0 }, num = $("#num");
+        tl.to(o, { v: 1218, duration: Math.max(0.8, tEnd - tCon + 0.2), ease: "power2.out", onUpdate: function () { num.textContent = Math.round(o.v); } }, tCon);
+        tl.fromTo(num, { scale: 1 }, { scale: 1.06, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "50% 50%" }, tEnd + 0.1);
+        var plus = Cap.chip(root, "+ 800 años", 1330, 340, "terra");
+        tl.set(plus, { opacity: 0 }, 0);
+        Cap.pop(tl, plus, tOcho - 0.05, { from: "scale", rot: 4 });
+        Cap.sparks(tl, root, 1500, 370, tOcho, 10, "#ffe9a8");
+
+        C.frame(tl, root, PLAN, { seed: 4, fadeOut: 0.6 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-capsula-cole-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

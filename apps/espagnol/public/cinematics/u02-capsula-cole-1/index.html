@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-capsula-cole-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #root { background: #0d1038; }
+      .plan { position: absolute; inset: 0; }
+      #p2 { visibility: hidden; }
+      .medal { position: absolute; left: 0; top: 0; width: 330px; height: 330px; border-radius: 50%; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 8px rgba(245,230,200,.9); }
+      .medal svg { position: absolute; left: 0; bottom: -4px; }
+      .boc { position: absolute; left: 0; top: 0; z-index: 6; filter: drop-shadow(0 6px 0 rgba(0,0,0,.35)); }
+      .card { position: absolute; left: 150px; top: 330px; width: 1620px; height: 520px; border-radius: 36px; background: #f5e6c8; box-shadow: 0 16px 0 rgba(0,0,0,.35); }
+      .card::after { content: ""; position: absolute; inset: 14px; border-radius: 26px; border: 5px solid #ffc83d; }
+      .cell { position: absolute; width: 120px; height: 150px; border-radius: 22px; text-align: center; font: 400 84px/150px "Alfa Slab One", serif; color: #fff7e6; box-shadow: 0 8px 0 rgba(0,0,0,.28); }
+      .cell.no { background: #a8452f; } .cell.ok { background: #0e7f82; }
+      .lbl { position: absolute; font: 900 40px/1 Nunito, sans-serif; color: #14173f; letter-spacing: .04em; }
+      #ring { position: absolute; left: 0; top: 0; z-index: 8; }
+      #stamp { position: absolute; left: 0; top: 0; z-index: 9; padding: 10px 44px 16px; font: 400 120px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #066a4a; border: 14px double #066a4a; border-radius: 22px; background: rgba(245,230,200,.35); }
+      .spark { position: absolute; left: 0; top: 0; z-index: 15; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-capsula-cole-1" data-start="0" data-width="1920" data-height="1200" data-duration="9.304">
+      <div id="p1" class="plan" data-layout-allow-overflow></div>
+      <div id="p2" class="plan" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.304" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.004,"v":1},{"t":9.304,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.f9b06d7f6b.mp3" data-start="0.5" data-duration="2.859" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.9809a3d2fb.mp3" data-start="4.159" data-duration="4.395" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.741" data-duration="0.1" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.475" data-duration="0.1" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="3.659" data-duration="0.212" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/tick.mp3" data-start="4.159" data-duration="0.045" data-track-index="7" data-volume="0.3"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="7.16" data-duration="0.121" data-track-index="8" data-volume="0.5"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/correct.mp3" data-start="7.905" data-duration="0.295" data-track-index="9" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-capsula-cole-1","cinematica":"u02-capsula-cole","part":1,"parts":3,"total":9.304,"meta":{"cinematica":"u02-capsula-cole","titulo":"Mil y una escuelas","tipo":"capsula","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":1,"t0":0,"t1":3.759,"vista":"Cour de récré animée (style explainer), élèves avec des bocadillos, bulles de call-out.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En el recreo, muchos alumnos comen un bocadillo.","key":"narrador.f9b06d7f6b","t":0.5,"d":2.859,"words":[{"w":"En","t":0.5,"d":0.169},{"w":"el","t":0.669,"d":0.169},{"w":"recreo,","t":0.837,"d":0.367},{"w":"muchos","t":1.424,"d":0.367},{"w":"alumnos","t":1.791,"d":0.416},{"w":"comen","t":2.207,"d":0.317},{"w":"un","t":2.525,"d":0.169},{"w":"bocadillo.","t":2.693,"d":0.516}]}]},{"n":2,"t0":3.759,"t1":9.054,"vista":"Un bulletin avec des notes de 0 à 10 ; le chiffre 5 est entouré en vert avec le mot « aprobado ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Las notas van de cero a diez. Con un cinco, ¡aprobado!","key":"narrador.9809a3d2fb","t":4.159,"d":4.395,"words":[{"w":"Las","t":4.159,"d":0.239},{"w":"notas","t":4.398,"d":0.347},{"w":"van","t":4.744,"d":0.239},{"w":"de","t":4.983,"d":0.184},{"w":"cero","t":5.167,"d":0.293},{"w":"a","t":5.46,"d":0.13},{"w":"diez.","t":5.59,"d":0.293},{"w":"Con","t":6.976,"d":0.233},{"w":"un","t":7.21,"d":0.18},{"w":"cinco,","t":7.39,"d":0.339},{"w":"¡aprobado!","t":7.905,"d":0.498}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.741,"f":"ui/pop"},{"t":2.475,"f":"ui/pop"},{"t":3.659,"f":"ui/swoosh-out"},{"t":4.159,"f":"ui/tick"},{"t":7.16,"f":"ui/star"},{"t":7.905,"f":"ui/correct"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1"), p2 = $("#p2");
+
+        // ============ PLAN 1 : el recreo ============
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Mil y una escuelas", 0.15);
+        var kids = [["alex", "#c9573b", 330], ["marina", "#19b7aa", 750], ["diego", "#d93472", 1170], ["lola", "#e8a53c", 1590]], cy = 590, meds = [], bocs = [];
+        kids.forEach(function (k, i) {
+          var m = mk(p1, "medal", Q.character(k[0], { view: "bust", width: 330, uid: "m" + i })); m.style.background = k[1];
+          m.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+          gsap.set(m, { x: k[2] - 165, y: cy - 165 }); meds.push(m);
+          var b = mk(p1, "boc", Q.prop("bocadillo", { width: 150, uid: "b" + i })); gsap.set(b, { x: k[2] - 75, y: cy + 150, rotation: (i % 2 ? 8 : -8) }); bocs.push(b);
+          var t = 0.45 + i * 0.12;
+          tl.set([m, b], { opacity: 0 }, 0);
+          tl.fromTo(m, { y: cy - 165 + 420, opacity: 0, scale: 0.7 }, { y: cy - 165, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, t);
+          tl.fromTo(b, { y: cy + 150 + 380, opacity: 0, scale: 0.6 }, { y: cy + 150, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.9)", immediateRender: false }, t + 0.1);
+          tl.to(m, { y: cy - 165 - 12, duration: 1.3 + i * 0.1, ease: "sine.inOut", yoyo: true, repeat: 3 }, t + 0.7);
+        });
+        // « el recreo »
+        var tRec = C.wordT(PLAN, 1, 1, 3), tCom = C.wordT(PLAN, 1, 1, 6), tBoc = C.wordT(PLAN, 1, 1, 8);
+        var chip1 = Cap.chip(p1, "el recreo", 1330, 262, "gold");
+        Cap.pop(tl, chip1, tRec - 0.05, { from: "scale", rot: 5 });
+        // « comen » : les bocadillos montent a la bouche, les bustes machent
+        bocs.forEach(function (b, i) {
+          tl.to(b, { y: cy + 78, rotation: -14 + i * 3, duration: 0.3, ease: "power2.out" }, tCom + i * 0.05);
+          tl.to(b, { y: cy + 66, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 7 }, tCom + 0.35 + i * 0.05);
+          tl.to(meds[i].querySelector("svg"), { y: 8, scaleY: 0.985, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 7, transformOrigin: "50% 100%" }, tCom + 0.35 + i * 0.05);
+          tl.to(b, { y: cy + 150, rotation: (i % 2 ? 8 : -8), duration: 0.35, ease: "power2.inOut" }, tBoc - 0.05);
+        });
+        // « bocadillo » : un grand bocadillo tombe au centre
+        var big = mk(p1, "boc", Q.prop("bocadillo", { width: 340, uid: "bb" })); gsap.set(big, { x: 700 - 170, y: 770, opacity: 0 });
+        big.style.zIndex = 9;
+        tl.fromTo(big, { y: 600, opacity: 0, scale: 0.4, rotation: -14 }, { y: 770, opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: "bounce.out", immediateRender: false }, tBoc - 0.05);
+        var chip2 = Cap.chip(p1, "el bocadillo", 940, 820, "terra"); chip2.style.zIndex = 10;
+        Cap.pop(tl, chip2, tBoc + 0.15, { from: "up" });
+        Cap.sparks(tl, p1, 700, 850, tBoc, 10, "#ffe9a8");
+        // sortie du plan 1
+        tl.to(p1, { y: -90, opacity: 0, duration: 0.35, ease: "power3.in" }, W - 0.35);
+        tl.set(p1, { visibility: "hidden" }, W + 0.01);
+
+        // ============ PLAN 2 : las notas ============
+        tl.set(p2, { visibility: "visible" }, W - 0.2);
+        var card = mk(p2, "card", "");
+        tl.fromTo(p2, { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, W - 0.15);
+        tl.set(p2, { opacity: 0 }, 0);
+        var hd = mk(card, "lbl", "BOLETÍN DE NOTAS"); hd.style.cssText = "position:absolute;left:60px;top:40px;font:400 46px/1 'Alfa Slab One',serif;color:#14173f;letter-spacing:.06em"; tl.fromTo(hd, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, W + 0.05); tl.set(hd, { opacity: 0 }, 0);
+        var cx0 = 150 + (1620 - (11 * 120 + 10 * 18)) / 2, cells = [];
+        for (var n = 0; n <= 10; n++) {
+          var c = mk(card, "cell " + (n < 5 ? "no" : "ok"), String(n)); gsap.set(c, { x: cx0 - 150 + n * 138, y: 120 + 30 });
+          cells.push(c); tl.set(c, { opacity: 0 }, 0);
+        }
+        var t0 = C.wordT(PLAN, 2, 1, 5), t10 = C.wordT(PLAN, 2, 1, 7);
+        cells.forEach(function (c, n) { tl.fromTo(c, { opacity: 0, scale: 0.3, y: 120 + 80 }, { opacity: 1, scale: 1, y: 150, duration: 0.4, ease: "back.out(2)", immediateRender: false }, t0 - 0.1 + (n / 10) * (t10 - t0 + 0.2)); });
+                // « cinco » : anneau vert + case qui se souleve
+        var tCin = C.wordT(PLAN, 2, 1, 10), tApr = C.wordT(PLAN, 2, 1, 11);
+        var five = cells[5];
+        var ring = mk(card, "", '<svg width="200" height="230" viewBox="-100 -115 200 230"><circle id="ringc" r="92" fill="none" stroke="#066a4a" stroke-width="12" stroke-linecap="round" transform="rotate(-90)"/></svg>'); ring.id = "ring";
+        gsap.set(ring, { x: cx0 - 150 + 5 * 138 + 60 - 100, y: 150 + 75 - 115 + 6 });
+        var rc = ring.querySelector("circle"), len = 2 * Math.PI * 92; rc.style.strokeDasharray = len; rc.style.strokeDashoffset = len;
+        tl.to(rc, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, tCin - 0.05);
+        tl.to(five, { y: 126, scale: 1.14, duration: 0.3, ease: "back.out(2.2)" }, tCin + 0.1);
+        // « ¡aprobado! » : le tampon claque
+        var st = mk(p2, "", "APROBADO"); st.id = "stamp"; st.style.left = "560px"; st.style.top = "690px";
+        gsap.set(st, { rotation: -8, opacity: 0 });
+        tl.fromTo(st, { opacity: 0, scale: 2.4, rotation: -14 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.35, ease: "expo.out", immediateRender: false }, tApr - 0.05);
+        tl.to(p2, { keyframes: [{ x: -12, duration: 0.04 }, { x: 10, duration: 0.04 }, { x: -6, duration: 0.04 }, { x: 0, duration: 0.05 }] }, tApr + 0.25);
+        Cap.sparks(tl, p2, 960, 640, tApr + 0.2, 12, "#9bffd6");
+        tl.to(five, { y: 134, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 1 }, tApr + 0.4);
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-capsula-cole-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

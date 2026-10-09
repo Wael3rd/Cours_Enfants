@@ -192,8 +192,8 @@ const CINES = {
       ] },
       { plans: [3], lead: { 3: 0.6 }, tail: { 3: 0.8 }, sfx: [
         { f: 'ui/swoosh-in', at: 'p3', off: 0, vol: 0.4 },
-        { f: 'ui/pop', at: 'w3.1.12', off: -0.05, vol: 0.5 },
-        { f: 'ui/pop', at: 'w3.1.14', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w3.1.13', off: -0.05, vol: 0.5 },
+        { f: 'ui/pop', at: 'w3.1.15', off: -0.05, vol: 0.5 },
         { f: 'ui/swoosh-out', at: 'end', off: -0.3, vol: 0.4 },
       ] },
       { plans: [4], lead: { 4: 0.6 }, tail: { 4: 1.2 }, sfx: [

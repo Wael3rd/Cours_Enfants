@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u02-capsula-cole-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #root { background: #0d1038; }
+      .pcard { position: absolute; left: 0; top: 0; width: 300px; height: 380px; border-radius: 38px; overflow: hidden; box-shadow: 0 14px 0 rgba(0,0,0,.35), inset 0 0 0 8px rgba(245,230,200,.9); }
+      .pcard svg { position: absolute; left: -10px; bottom: -4px; }
+      .bub { position: absolute; left: 0; top: 0; z-index: 12; padding: 10px 40px 16px; border-radius: 40px; background: #f5e6c8; color: #14173f; font: 400 72px/1 "Alfa Slab One", serif; box-shadow: 0 8px 0 rgba(0,0,0,.32); white-space: nowrap; }
+      .bub::after { content: ""; position: absolute; bottom: -28px; left: 56px; width: 40px; height: 40px; background: #f5e6c8; clip-path: polygon(0 0, 100% 0, 30% 100%); }
+      .bub.b2::after { left: auto; right: 56px; clip-path: polygon(0 0, 100% 0, 70% 100%); }
+      #uni { position: absolute; left: 0; top: 0; z-index: 10; }
+      #xl { position: absolute; left: 0; top: 0; z-index: 11; }
+      #school { position: absolute; left: 0; top: 0; z-index: 10; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u02-capsula-cole-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.133">
+      <div id="p3" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.133" data-media-start="9.304" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.833,"v":1},{"t":8.133,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.e843541c72.mp3" data-start="0.6" data-duration="6.483" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="5.993" data-duration="0.1" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="6.545" data-duration="0.1" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="7.833" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u02-capsula-cole-2","cinematica":"u02-capsula-cole","part":2,"parts":3,"total":8.133,"meta":{"cinematica":"u02-capsula-cole","titulo":"Mil y una escuelas","tipo":"capsula","unidad":"Mi clase, mi cole","numero":2,"lugar":"Salamanca","pluma":"Pluma de la Campana","plumaNum":2,"rotulo":"","region":"salamanca"},"plans":[{"n":3,"t0":0,"t1":7.883,"vista":"Salle de classe d’un collège public, élèves en vêtements normaux (pas d’uniforme) ; deux call-outs « profe » et « cole » apparaissent.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En los colegios públicos, normalmente no hay uniforme. Y los alumnos dicen «profe» y «cole».","key":"narrador.e843541c72","t":0.6,"d":6.483,"words":[{"w":"En","t":0.6,"d":0.213},{"w":"los","t":0.813,"d":0.276},{"w":"colegios","t":1.089,"d":0.589},{"w":"públicos,","t":1.677,"d":0.589},{"w":"normalmente","t":2.486,"d":0.777},{"w":"no","t":3.263,"d":0.213},{"w":"hay","t":3.476,"d":0.276},{"w":"uniforme.","t":3.752,"d":0.589},{"w":"Y","t":4.69,"d":0.15},{"w":"los","t":4.841,"d":0.276},{"w":"alumnos","t":5.116,"d":0.526},{"w":"dicen","t":5.643,"d":0.401},{"w":"«profe»","t":6.043,"d":0.401},{"w":"y","t":6.444,"d":0.15},{"w":"«cole».","t":6.595,"d":0.338}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":5.993,"f":"ui/pop"},{"t":6.545,"f":"ui/pop"},{"t":7.833,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        Cap.bg(root, $("#p3"));
+        var p3 = $("#p3");
+        var ttl = Cap.title(tl, p3, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Mil y una escuelas", 0.15);
+        var tUni = C.wordT(PLAN, 3, 1, 8), tPro = C.wordT(PLAN, 3, 1, 13), tCol = C.wordT(PLAN, 3, 1, 15);
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, tUni - 0.45);
+
+        // ---------- la profe (Doña Pilar) et quatre eleves en vetements normaux ----------
+        var cards = [["pilar", "#f5e6c8", 250, "pilar"], ["alex", "#c9573b", 640, ""], ["marina", "#19b7aa", 1000, ""], ["diego", "#d93472", 1360, ""], ["lola", "#e8a53c", 1720, ""]], cy = 710, els = [];
+        cards.forEach(function (c, i) {
+          var d = mk(p3, "pcard", Q.character(c[0], { view: "bust", width: 320, uid: "p" + i })); d.style.background = c[1];
+          d.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+          gsap.set(d, { x: c[2] - 150, y: cy - 190 }); els.push(d);
+          var t = 0.4 + i * 0.12;
+          tl.set(d, { opacity: 0 }, 0);
+          tl.fromTo(d, { y: cy - 190 + 460, opacity: 0, rotation: (i % 2 ? 5 : -5) }, { y: cy - 190, opacity: 1, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, t);
+          tl.to(d, { y: cy - 190 - 10, duration: 1.4 + i * 0.1, ease: "sine.inOut", yoyo: true, repeat: 3 }, t + 0.8);
+        });
+        // ---------- « no hay uniforme » : un blazer d'uniforme barre d'une croix ----------
+        var uni = mk(p3, "", '<svg width="250" height="270" viewBox="0 0 250 270"><path d="M62 30L125 14L188 30L222 90L196 106L190 250H60L54 106L28 90Z" fill="#1d2160" stroke="#f5e6c8" stroke-width="6" stroke-linejoin="round"/><path d="M125 14L98 60L125 120L152 60Z" fill="#f5e6c8"/><path d="M125 70L116 90L125 150L134 90Z" fill="#c9573b"/><g fill="#ffc83d"><circle cx="150" cy="170" r="9"/><circle cx="150" cy="206" r="9"/><circle cx="100" cy="170" r="9"/><circle cx="100" cy="206" r="9"/></g><path d="M190 60l22 8M60 60l-22 8" stroke="#ffc83d" stroke-width="5"/></svg>'); uni.id = "uni";
+        gsap.set(uni, { x: 835, y: 240 });
+        Cap.pop(tl, uni, tUni - 0.1, { from: "scale", rot: -6 });
+        var xl = mk(p3, "", '<svg width="300" height="320" viewBox="0 0 300 320"><path id="x1" d="M30 30L270 290" stroke="#e23b3b" stroke-width="22" stroke-linecap="round" fill="none"/><path id="x2" d="M270 30L30 290" stroke="#e23b3b" stroke-width="22" stroke-linecap="round" fill="none"/></svg>'); xl.id = "xl";
+        gsap.set(xl, { x: 810, y: 215 });
+        ["x1", "x2"].forEach(function (id, k) { var p = xl.querySelector("#" + id), len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len; tl.to(p, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, tUni + 0.55 + k * 0.22); });
+        tl.to(xl, { scale: 1.06, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1 }, tUni + 1.0);
+        tl.to([uni, xl], { opacity: 0, scale: 0.7, y: "+=40", duration: 0.4, ease: "power2.in" }, tPro - 0.55);
+        tl.set([uni, xl], { opacity: 0 }, 0);
+        // ---------- « profe » / « cole » : bulles ----------
+        var b1 = mk(p3, "bub", "¡profe!"); gsap.set(b1, { x: 360, y: 330 });
+        Cap.pop(tl, b1, tPro - 0.05, { from: "up", rot: -3 });
+        var b2 = mk(p3, "bub b2", "¡cole!"); gsap.set(b2, { x: 1280, y: 290 });
+        Cap.pop(tl, b2, tCol - 0.05, { from: "up", rot: 3 });
+        tl.to(b1, { y: 320, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: 3 }, tPro + 0.5);
+        tl.to(b2, { y: 280, duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: 2 }, tCol + 0.5);
+        // petit college de papier sous la bulle « cole »
+        var sc = mk(p3, "", '<svg width="170" height="130" viewBox="0 0 170 130"><path d="M10 120V60L85 20L160 60V120Z" fill="#e9b25a"/><path d="M10 60L85 20L160 60Z" fill="#c9573b"/><rect x="68" y="76" width="34" height="44" rx="17" fill="#3b1c12"/><rect x="26" y="70" width="24" height="28" rx="4" fill="#3b1c12"/><rect x="120" y="70" width="24" height="28" rx="4" fill="#3b1c12"/><path d="M85 20V0l30 8-30 8" fill="#d8433f" stroke="#d8433f" stroke-width="3"/></svg>'); sc.id = "school";
+        gsap.set(sc, { x: 1365, y: 405, scale: 0.8 }); tl.set(sc, { opacity: 0 }, 0);
+        tl.fromTo(sc, { opacity: 0, scale: 0.3, y: 470 }, { opacity: 1, scale: 0.8, y: 405, duration: 0.5, ease: "back.out(2)", immediateRender: false }, tCol + 0.1);
+        Cap.sparks(tl, p3, 1450, 420, tCol, 8, "#ffe9a8");
+        Cap.sparks(tl, p3, 520, 450, tPro, 8, "#ffe9a8");
+        // profe : Pilar sourit (rebond)
+        tl.to(els[0], { y: cy - 190 - 24, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, tPro + 0.1);
+        tl.to(els[1], { y: cy - 190 - 24, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, tPro - 0.1);
+
+        C.frame(tl, root, PLAN, { seed: 12, fadeOut: 0.35 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u02-capsula-cole-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>
