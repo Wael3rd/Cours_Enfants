@@ -1,0 +1,952 @@
+[
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, VivienneMultilingualNeural)",
+  "ShortName": "fr-FR-VivienneMultilingualNeural",
+  "Gender": "Female",
+  "Locale": "fr-FR",
+  "LocaleName": "French (France)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft VivienneMultilingual Online (Natural) - French (France)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, RemyMultilingualNeural)",
+  "ShortName": "fr-FR-RemyMultilingualNeural",
+  "Gender": "Male",
+  "Locale": "fr-FR",
+  "LocaleName": "French (France)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft RemyMultilingual Online (Natural) - French (France)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, DeniseNeural)",
+  "ShortName": "fr-FR-DeniseNeural",
+  "Gender": "Female",
+  "Locale": "fr-FR",
+  "LocaleName": "French (France)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Denise Online (Natural) - French (France)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, EloiseNeural)",
+  "ShortName": "fr-FR-EloiseNeural",
+  "Gender": "Female",
+  "Locale": "fr-FR",
+  "LocaleName": "French (France)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Eloise Online (Natural) - French (France)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (fr-FR, HenriNeural)",
+  "ShortName": "fr-FR-HenriNeural",
+  "Gender": "Male",
+  "Locale": "fr-FR",
+  "LocaleName": "French (France)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Henri Online (Natural) - French (France)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, ElenaNeural)",
+  "ShortName": "es-AR-ElenaNeural",
+  "Gender": "Female",
+  "Locale": "es-AR",
+  "LocaleName": "Spanish (Argentina)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Elena Online (Natural) - Spanish (Argentina)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-AR, TomasNeural)",
+  "ShortName": "es-AR-TomasNeural",
+  "Gender": "Male",
+  "Locale": "es-AR",
+  "LocaleName": "Spanish (Argentina)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Tomas Online (Natural) - Spanish (Argentina)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-BO, MarceloNeural)",
+  "ShortName": "es-BO-MarceloNeural",
+  "Gender": "Male",
+  "Locale": "es-BO",
+  "LocaleName": "Spanish (Bolivia)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Marcelo Online (Natural) - Spanish (Bolivia)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-BO, SofiaNeural)",
+  "ShortName": "es-BO-SofiaNeural",
+  "Gender": "Female",
+  "Locale": "es-BO",
+  "LocaleName": "Spanish (Bolivia)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Sofia Online (Natural) - Spanish (Bolivia)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CL, CatalinaNeural)",
+  "ShortName": "es-CL-CatalinaNeural",
+  "Gender": "Female",
+  "Locale": "es-CL",
+  "LocaleName": "Spanish (Chile)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Catalina Online (Natural) - Spanish (Chile)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CL, LorenzoNeural)",
+  "ShortName": "es-CL-LorenzoNeural",
+  "Gender": "Male",
+  "Locale": "es-CL",
+  "LocaleName": "Spanish (Chile)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Lorenzo Online (Natural) - Spanish (Chile)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, GonzaloNeural)",
+  "ShortName": "es-CO-GonzaloNeural",
+  "Gender": "Male",
+  "Locale": "es-CO",
+  "LocaleName": "Spanish (Colombia)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Gonzalo Online (Natural) - Spanish (Colombia)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CO, SalomeNeural)",
+  "ShortName": "es-CO-SalomeNeural",
+  "Gender": "Female",
+  "Locale": "es-CO",
+  "LocaleName": "Spanish (Colombia)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Salome Online (Natural) - Spanish (Colombia)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, XimenaNeural)",
+  "ShortName": "es-ES-XimenaNeural",
+  "Gender": "Female",
+  "Locale": "es-ES",
+  "LocaleName": "Spanish (Spain)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Ximena Online (Natural) - Spanish (Colombia)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CR, JuanNeural)",
+  "ShortName": "es-CR-JuanNeural",
+  "Gender": "Male",
+  "Locale": "es-CR",
+  "LocaleName": "Spanish (Costa Rica)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Juan Online (Natural) - Spanish (Costa Rica)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CR, MariaNeural)",
+  "ShortName": "es-CR-MariaNeural",
+  "Gender": "Female",
+  "Locale": "es-CR",
+  "LocaleName": "Spanish (Costa Rica)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Maria Online (Natural) - Spanish (Costa Rica)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CU, BelkysNeural)",
+  "ShortName": "es-CU-BelkysNeural",
+  "Gender": "Female",
+  "Locale": "es-CU",
+  "LocaleName": "Spanish (Cuba)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Belkys Online (Natural) - Spanish (Cuba)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-CU, ManuelNeural)",
+  "ShortName": "es-CU-ManuelNeural",
+  "Gender": "Male",
+  "Locale": "es-CU",
+  "LocaleName": "Spanish (Cuba)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Manuel Online (Natural) - Spanish (Cuba)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-DO, EmilioNeural)",
+  "ShortName": "es-DO-EmilioNeural",
+  "Gender": "Male",
+  "Locale": "es-DO",
+  "LocaleName": "Spanish (Dominican Republic)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Emilio Online (Natural) - Spanish (Dominican Republic)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-DO, RamonaNeural)",
+  "ShortName": "es-DO-RamonaNeural",
+  "Gender": "Female",
+  "Locale": "es-DO",
+  "LocaleName": "Spanish (Dominican Republic)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Ramona Online (Natural) - Spanish (Dominican Republic)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-EC, AndreaNeural)",
+  "ShortName": "es-EC-AndreaNeural",
+  "Gender": "Female",
+  "Locale": "es-EC",
+  "LocaleName": "Spanish (Ecuador)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Andrea Online (Natural) - Spanish (Ecuador)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-EC, LuisNeural)",
+  "ShortName": "es-EC-LuisNeural",
+  "Gender": "Male",
+  "Locale": "es-EC",
+  "LocaleName": "Spanish (Ecuador)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Luis Online (Natural) - Spanish (Ecuador)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-SV, LorenaNeural)",
+  "ShortName": "es-SV-LorenaNeural",
+  "Gender": "Female",
+  "Locale": "es-SV",
+  "LocaleName": "Spanish (El Salvador)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Lorena Online (Natural) - Spanish (El Salvador)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-SV, RodrigoNeural)",
+  "ShortName": "es-SV-RodrigoNeural",
+  "Gender": "Male",
+  "Locale": "es-SV",
+  "LocaleName": "Spanish (El Salvador)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Rodrigo Online (Natural) - Spanish (El Salvador)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-GQ, JavierNeural)",
+  "ShortName": "es-GQ-JavierNeural",
+  "Gender": "Male",
+  "Locale": "es-GQ",
+  "LocaleName": "Spanish (Equatorial Guinea)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Javier Online (Natural) - Spanish (Equatorial Guinea)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-GQ, TeresaNeural)",
+  "ShortName": "es-GQ-TeresaNeural",
+  "Gender": "Female",
+  "Locale": "es-GQ",
+  "LocaleName": "Spanish (Equatorial Guinea)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Teresa Online (Natural) - Spanish (Equatorial Guinea)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-GT, AndresNeural)",
+  "ShortName": "es-GT-AndresNeural",
+  "Gender": "Male",
+  "Locale": "es-GT",
+  "LocaleName": "Spanish (Guatemala)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Andres Online (Natural) - Spanish (Guatemala)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-GT, MartaNeural)",
+  "ShortName": "es-GT-MartaNeural",
+  "Gender": "Female",
+  "Locale": "es-GT",
+  "LocaleName": "Spanish (Guatemala)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Marta Online (Natural) - Spanish (Guatemala)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-HN, CarlosNeural)",
+  "ShortName": "es-HN-CarlosNeural",
+  "Gender": "Male",
+  "Locale": "es-HN",
+  "LocaleName": "Spanish (Honduras)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Carlos Online (Natural) - Spanish (Honduras)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-HN, KarlaNeural)",
+  "ShortName": "es-HN-KarlaNeural",
+  "Gender": "Female",
+  "Locale": "es-HN",
+  "LocaleName": "Spanish (Honduras)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Karla Online (Natural) - Spanish (Honduras)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-MX, DaliaNeural)",
+  "ShortName": "es-MX-DaliaNeural",
+  "Gender": "Female",
+  "Locale": "es-MX",
+  "LocaleName": "Spanish (Mexico)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Dalia Online (Natural) - Spanish (Mexico)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-MX, JorgeNeural)",
+  "ShortName": "es-MX-JorgeNeural",
+  "Gender": "Male",
+  "Locale": "es-MX",
+  "LocaleName": "Spanish (Mexico)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Jorge Online (Natural) - Spanish (Mexico)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-NI, FedericoNeural)",
+  "ShortName": "es-NI-FedericoNeural",
+  "Gender": "Male",
+  "Locale": "es-NI",
+  "LocaleName": "Spanish (Nicaragua)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Federico Online (Natural) - Spanish (Nicaragua)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-NI, YolandaNeural)",
+  "ShortName": "es-NI-YolandaNeural",
+  "Gender": "Female",
+  "Locale": "es-NI",
+  "LocaleName": "Spanish (Nicaragua)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Yolanda Online (Natural) - Spanish (Nicaragua)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PA, MargaritaNeural)",
+  "ShortName": "es-PA-MargaritaNeural",
+  "Gender": "Female",
+  "Locale": "es-PA",
+  "LocaleName": "Spanish (Panama)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Margarita Online (Natural) - Spanish (Panama)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PA, RobertoNeural)",
+  "ShortName": "es-PA-RobertoNeural",
+  "Gender": "Male",
+  "Locale": "es-PA",
+  "LocaleName": "Spanish (Panama)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Roberto Online (Natural) - Spanish (Panama)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PY, MarioNeural)",
+  "ShortName": "es-PY-MarioNeural",
+  "Gender": "Male",
+  "Locale": "es-PY",
+  "LocaleName": "Spanish (Paraguay)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Mario Online (Natural) - Spanish (Paraguay)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PY, TaniaNeural)",
+  "ShortName": "es-PY-TaniaNeural",
+  "Gender": "Female",
+  "Locale": "es-PY",
+  "LocaleName": "Spanish (Paraguay)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Tania Online (Natural) - Spanish (Paraguay)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PE, AlexNeural)",
+  "ShortName": "es-PE-AlexNeural",
+  "Gender": "Male",
+  "Locale": "es-PE",
+  "LocaleName": "Spanish (Peru)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Alex Online (Natural) - Spanish (Peru)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PE, CamilaNeural)",
+  "ShortName": "es-PE-CamilaNeural",
+  "Gender": "Female",
+  "Locale": "es-PE",
+  "LocaleName": "Spanish (Peru)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Camila Online (Natural) - Spanish (Peru)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PR, KarinaNeural)",
+  "ShortName": "es-PR-KarinaNeural",
+  "Gender": "Female",
+  "Locale": "es-PR",
+  "LocaleName": "Spanish (Puerto Rico)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Karina Online (Natural) - Spanish (Puerto Rico)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-PR, VictorNeural)",
+  "ShortName": "es-PR-VictorNeural",
+  "Gender": "Male",
+  "Locale": "es-PR",
+  "LocaleName": "Spanish (Puerto Rico)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Victor Online (Natural) - Spanish (Puerto Rico)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, AlvaroNeural)",
+  "ShortName": "es-ES-AlvaroNeural",
+  "Gender": "Male",
+  "Locale": "es-ES",
+  "LocaleName": "Spanish (Spain)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Alvaro Online (Natural) - Spanish (Spain)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-ES, ElviraNeural)",
+  "ShortName": "es-ES-ElviraNeural",
+  "Gender": "Female",
+  "Locale": "es-ES",
+  "LocaleName": "Spanish (Spain)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Elvira Online (Natural) - Spanish (Spain)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-US, AlonsoNeural)",
+  "ShortName": "es-US-AlonsoNeural",
+  "Gender": "Male",
+  "Locale": "es-US",
+  "LocaleName": "Spanish (United States)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Alonso Online (Natural) - Spanish (United States)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-US, PalomaNeural)",
+  "ShortName": "es-US-PalomaNeural",
+  "Gender": "Female",
+  "Locale": "es-US",
+  "LocaleName": "Spanish (United States)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Paloma Online (Natural) - Spanish (United States)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-UY, MateoNeural)",
+  "ShortName": "es-UY-MateoNeural",
+  "Gender": "Male",
+  "Locale": "es-UY",
+  "LocaleName": "Spanish (Uruguay)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Mateo Online (Natural) - Spanish (Uruguay)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-UY, ValentinaNeural)",
+  "ShortName": "es-UY-ValentinaNeural",
+  "Gender": "Female",
+  "Locale": "es-UY",
+  "LocaleName": "Spanish (Uruguay)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Valentina Online (Natural) - Spanish (Uruguay)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-VE, PaolaNeural)",
+  "ShortName": "es-VE-PaolaNeural",
+  "Gender": "Female",
+  "Locale": "es-VE",
+  "LocaleName": "Spanish (Venezuela)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Paola Online (Natural) - Spanish (Venezuela)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ },
+ {
+  "Name": "Microsoft Server Speech Text to Speech Voice (es-VE, SebastianNeural)",
+  "ShortName": "es-VE-SebastianNeural",
+  "Gender": "Male",
+  "Locale": "es-VE",
+  "LocaleName": "Spanish (Venezuela)",
+  "SuggestedCodec": "audio-24khz-48kbitrate-mono-mp3",
+  "FriendlyName": "Microsoft Sebastian Online (Natural) - Spanish (Venezuela)",
+  "Status": "GA",
+  "VoiceTag": {
+   "ContentCategories": [
+    "General"
+   ],
+   "VoicePersonalities": [
+    "Friendly",
+    "Positive"
+   ]
+  }
+ }
+]

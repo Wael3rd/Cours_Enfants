@@ -8,7 +8,7 @@ l'app par `<hyperframes-player>` (via `@ce/core`), et rendable en MP4. Référen
 1. Lire le skill `hyperframes-core` (`~/.claude/plugins/cache/hyperframes/hyperframes/0.8.143/skills/`).
 2. Copier `apps/maths/public/cinematics/proof-goal/` vers `<id>/` (garder l'id = nom du dossier).
 3. Contraintes du gabarit (ne pas les casser) :
-   - racine `#root` avec `data-composition-id="<id>"`, `data-width="1920"`, `data-height="1080"`, `data-duration` (2 à 10 s) ;
+   - racine `#root` avec `data-composition-id="<id>"`, `data-width="1920"`, `data-height="1200"` (16:10), `data-duration` (2 à 10 s) ;
    - une seule timeline GSAP `paused`, enregistrée **à la fin** : `window.__timelines["<id>"] = tl` ;
    - **hors-ligne** : aucun CDN. Dans le `<head>`, dans cet ordre :
      `./_shared/hyperframe.runtime.iife.js` puis `./_shared/gsap.min.js`, polices en `@font-face` sur `./_shared/*.woff2` ;

@@ -1,0 +1,6 @@
+[
+ {"key":"fr_coach","text":"Allez les champions ! Trois plus quatre ? Sept ! Quel but magnifique, on continue, tu es en feu !","voice":"fr-FR-HenriNeural","rate":"+12%","pitch":"+4Hz"},
+ {"key":"es_es_mujer","text":"¡Hola, aventurero! Me llamo Lucía y vivo en Madrid. ¿Cómo te llamas tú?","voice":"es-ES-ElviraNeural","rate":"-10%"},
+ {"key":"es_es_hombre","text":"Buenos días. Hoy vamos a visitar la plaza mayor de Salamanca. ¡Sígueme!","voice":"es-ES-AlvaroNeural","rate":"-10%"},
+ {"key":"es_mx","text":"¡Qué padre! Bienvenido a la Ciudad de México, amigo. ¿Quieres probar unos tacos?","voice":"es-MX-JorgeNeural","rate":"-10%"}
+]

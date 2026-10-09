@@ -1,0 +1,7 @@
+{
+  "name": "cours-enfants-assets-tools",
+  "private": true,
+  "type": "module",
+  "description": "Outils de preparation des ressources (emoji Fluent 3D -> WebP)",
+  "dependencies": { "sharp": "^0.34.0" }
+}
