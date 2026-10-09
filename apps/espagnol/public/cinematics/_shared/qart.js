@@ -1706,5 +1706,500 @@ ${kiln}${scRect(0, fl, W, H - fl, `url(#${g('fl')})`)}${(() => { let l = ''; for
   return { back, front, light, W, H, fresco: Fr, names, center };
 }
 
-window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica};
+// ---------------------------------------------------------------- decors de Ciudad de Mexico / Coyoacan (unite 4) : panorama (Parroquia, kiosque, fontaine aux coyotes, jacarandas, Casa Azul),
+// Plaza Hidalgo (decor de scene), patio de la Casa Azul, autoportraits "effaces" par la Sombra, accessoires de capsule (singe, perroquet, xolo, miroir...).
+// Memes conventions que 10-salamanca.js / 11-sevilla.js : calques separes, aucun texte, monuments publics simplifies, aucune vraie personne (les autoportraits sont des figures generiques).
+// Prefixe `mx` pour les helpers internes ; exports : coyoacanSkyline, plazaHidalgo, casaAzulPatio, autorretrato, mxProp.
+
+const MX = {
+  cobalt: '#1F55C4', cobalt2: '#163E94', cobalt3: '#4A85E8', ochre: '#E8A83C', rosa: '#E5638A', turq: '#22B5A8', mostaza: '#F2C14E', terra: '#C9573B', terra2: '#8E3A24',
+  crema: '#FFF1D6', crema2: '#F1DDB4', jac: '#9B6AD9', jac2: '#BE98EE', jac3: '#7B4FC0', leaf: '#3F8A52', leaf2: '#63B66E', leaf3: '#2C6B3F', stone: '#9A8576', stone2: '#6F5F54', rojo: '#D6403A', verde: '#1E8F6A',
+};
+
+/** Pave : bandes de pierres en perspective legere (y0 -> y1) sur la largeur W. */
+function mxCobbles(W, y0, y1, seed, c1, c2) {
+  const rnd = rng(seed); let s = scRect(0, y0, W, y1 - y0, c1);
+  for (let y = y0 + 6, row = 0; y < y1; y += 22 + row * 3.2, row++) {
+    const h = 20 + row * 3, off = (row % 2) * 24;
+    s += `<path d="M0 ${r1(y)}H${W}" stroke="${c2}" stroke-width="3" opacity=".5"/>`;
+    for (let x = -off; x < W; x += 52 + rnd() * 26 + row * 3) s += `<path d="M${r1(x)} ${r1(y)}v${r1(h)}" stroke="${c2}" stroke-width="3" opacity=".42"/>`;
+  }
+  return s;
+}
+/** Maison coloniale de Coyoacan : facade a la chaux coloree, soubassement, corniche, fenetres a grille et volets, porte en bois, tuiles. */
+function mxHouse(x, base, w, h, tone, seed, opts) {
+  opts = opts || {};
+  const rnd = rng(seed); let s = `<g class="mx-house">${scRect(x, base - h, w, h, tone)}${scRect(x + w - 16, base - h, 16, h, '#000', 'opacity=".08"')}`;
+  s += scRect(x, base - 40, w, 40, shade(tone, -0.22)) + scRect(x, base - 44, w, 6, shade(tone, 0.35), 'opacity=".7"');
+  s += scRect(x - 8, base - h - 16, w + 16, 20, MX.crema) + scRect(x - 8, base - h + 2, w + 16, 6, '#000', 'opacity=".12"');
+  s += `<path d="M${x - 14} ${base - h - 16}h${w + 28}l-8 -26h${-(w + 12)}Z" fill="${MX.terra}"/>` + (() => { let t = ''; for (let i = 0; i < w / 22; i++) t += `<path d="M${r1(x - 6 + i * 22)} ${base - h - 18}v-20" stroke="${MX.terra2}" stroke-width="3" opacity=".5"/>`; return t; })();
+  const n = Math.max(2, Math.floor(w / 96));
+  for (let i = 0; i < n; i++) {
+    const wx = x + (w / n) * (i + 0.5) - 24, door = opts.door === i;
+    if (door) { s += scRect(wx - 6, base - 190, 60, 190, MX.crema) + scRect(wx, base - 184, 48, 184, '#6B3E26', 'rx="6"') + `<path d="M${wx + 24} ${base - 184}V${base}" stroke="#4A2A18" stroke-width="3"/><circle cx="${wx + 18}" cy="${base - 90}" r="3.5" fill="#E8A83C"/><circle cx="${wx + 30}" cy="${base - 90}" r="3.5" fill="#E8A83C"/>`; continue; }
+    const wy = base - h + 40, wh = Math.min(96, h - 110);
+    s += scRect(wx - 6, wy - 6, 60, wh + 12, MX.crema, 'rx="6"') + scRect(wx, wy, 48, wh, '#3B2A4A', 'rx="4"') + scRect(wx + 22, wy, 4, wh, MX.crema) + scRect(wx - 12, wy, 10, wh, rnd() < 0.5 ? MX.verde : MX.turq) + scRect(wx + 50, wy, 10, wh, rnd() < 0.5 ? MX.verde : MX.turq);
+    s += `<path d="M${wx} ${wy + wh * 0.5}h48M${wx} ${wy + wh * 0.25}h48M${wx} ${wy + wh * 0.75}h48" stroke="#2A2A3A" stroke-width="3" opacity=".8"/>`;
+    if (rnd() < 0.5) s += `<g><rect x="${wx + 4}" y="${wy + wh + 6}" width="40" height="12" rx="4" fill="${MX.terra}"/><circle cx="${wx + 12}" cy="${wy + wh}" r="7" fill="${MX.rosa}"/><circle cx="${wx + 26}" cy="${wy + wh - 4}" r="7" fill="${MX.mostaza}"/><circle cx="${wx + 38}" cy="${wy + wh}" r="6" fill="${MX.rosa}"/></g>`;
+  }
+  return s + '</g>';
+}
+/** Jacaranda : tronc fin, houppier de nuages violets (fleurs), quelques fleurs tombees autour. */
+function mxJacaranda(x, base, k) {
+  let s = `<g class="mx-jac"><path d="M${x - 8 * k} ${base}Q${x - 6 * k} ${base - 90 * k} ${x - 14 * k} ${base - 170 * k}L${x + 4 * k} ${base - 170 * k}Q${x + 8 * k} ${base - 90 * k} ${x + 10 * k} ${base}Z" fill="#5A4034"/>`;
+  [[0, -230, 86, MX.jac], [-72, -196, 62, MX.jac3], [74, -200, 66, MX.jac], [-30, -270, 56, MX.jac2], [38, -262, 58, MX.jac2], [-108, -170, 44, MX.jac], [112, -168, 46, MX.jac3], [4, -190, 58, MX.jac3]].forEach((b) => { s += `<circle cx="${r1(x + b[0] * k)}" cy="${r1(base + b[1] * k)}" r="${r1(b[2] * k)}" fill="${b[3]}"/>`; });
+  const rnd = rng(Math.round(x) + 7);
+  for (let i = 0; i < 14; i++) s += `<circle cx="${r1(x + (rnd() - 0.5) * 220 * k)}" cy="${r1(base - (150 + rnd() * 140) * k)}" r="${r1((4 + rnd() * 5) * k)}" fill="${i % 2 ? '#E3D0FA' : MX.jac2}" opacity=".9"/>`;
+  return s + '</g>';
+}
+/** Parroquia de San Juan Bautista (simplifiee) : facade de pierre claire, deux tours a lanternons, portail en arc, rosace, coupole. */
+function mxChurch(x, base, k, tone) {
+  const st = tone || '#E9D3A6', st2 = shade(st, -0.18), W = 520 * k;
+  let s = `<g class="mx-church">${scRect(x - W / 2, base - 330 * k, W, 330 * k, st)}${scRect(x + W / 2 - 22 * k, base - 330 * k, 22 * k, 330 * k, '#000', 'opacity=".08"')}`;
+  [-1, 1].forEach((d) => {
+    const tx = x + d * 170 * k;
+    s += scRect(tx - 62 * k, base - 520 * k, 124 * k, 200 * k, st) + scRect(tx - 70 * k, base - 528 * k, 140 * k, 14 * k, st2) + scRect(tx - 62 * k, base - 420 * k, 124 * k, 10 * k, st2);
+    s += `<path d="${archOpen(tx - 20 * k, base - 424 * k, 40 * k, 100 * k)}" fill="#3B2216"/>`;
+    s += `<path d="M${tx - 58 * k} ${base - 520 * k}Q${tx} ${base - 640 * k} ${tx + 58 * k} ${base - 520 * k}Z" fill="${MX.verde}"/><path d="M${tx - 58 * k} ${base - 520 * k}Q${tx - 20 * k} ${base - 600 * k} ${tx} ${base - 630 * k}" stroke="#fff" stroke-width="${3 * k}" fill="none" opacity=".35"/><path d="M${tx} ${base - 640 * k}v${-34 * k}M${tx - 12 * k} ${base - 660 * k}h${24 * k}" stroke="#E8A83C" stroke-width="${6 * k}" stroke-linecap="round"/>`;
+  });
+  s += `<path d="M${x - 110 * k} ${base - 330 * k}Q${x} ${base - 450 * k} ${x + 110 * k} ${base - 330 * k}Z" fill="${st2}"/>`;
+  s += `<path d="${archOpen(x - 54 * k, base, 108 * k, 210 * k)}" fill="#3B2216"/><path d="${archOpen(x - 74 * k, base, 148 * k, 240 * k)}" fill="none" stroke="${st2}" stroke-width="${12 * k}"/>`;
+  s += `<circle cx="${x}" cy="${r1(base - 290 * k)}" r="${34 * k}" fill="#3B2216"/><circle cx="${x}" cy="${r1(base - 290 * k)}" r="${44 * k}" fill="none" stroke="${st2}" stroke-width="${8 * k}"/>`;
+  [-1, 1].forEach((d) => { s += `<path d="${archOpen(x + d * 130 * k - 18 * k, base - 40 * k, 36 * k, 130 * k)}" fill="#3B2216" opacity=".85"/>`; });
+  return s + scRect(x - W / 2 - 20 * k, base - 14 * k, W + 40 * k, 14 * k, st2) + '</g>';
+}
+/** Kiosque de la plaza : plateforme de pierre, 6 colonnes de fonte, toit a nervures et lanterneau. */
+function mxKiosk(x, base, k) {
+  let s = `<g class="mx-kiosk">${scRect(x - 190 * k, base - 36 * k, 380 * k, 36 * k, MX.stone)}${scRect(x - 190 * k, base - 36 * k, 380 * k, 8 * k, shade(MX.stone, 0.3))}${scRect(x - 170 * k, base - 52 * k, 340 * k, 18 * k, MX.stone2)}`;
+  for (let i = 0; i < 6; i++) { const cx = x - 150 * k + i * 60 * k; s += scRect(cx - 5 * k, base - 250 * k, 10 * k, 200 * k, MX.verde) + scRect(cx - 9 * k, base - 62 * k, 18 * k, 12 * k, MX.leaf3); }
+  s += `<path d="M${x - 180 * k} ${base - 200 * k}H${x + 180 * k}" stroke="${MX.leaf3}" stroke-width="${8 * k}"/>`;
+  for (let i = 0; i < 12; i++) s += `<path d="M${r1(x - 176 * k + i * 32 * k)} ${r1(base - 200 * k)}q${5 * k} ${22 * k} ${10 * k} 0" stroke="${MX.leaf3}" stroke-width="${3 * k}" fill="none"/>`;
+  s += `<path d="M${x - 210 * k} ${base - 250 * k}Q${x} ${base - 420 * k} ${x + 210 * k} ${base - 250 * k}Z" fill="${MX.terra}"/>`;
+  for (let i = -3; i <= 3; i++) s += `<path d="M${x} ${base - 410 * k}L${r1(x + i * 62 * k)} ${r1(base - 252 * k)}" stroke="${MX.terra2}" stroke-width="${3 * k}" opacity=".6"/>`;
+  s += `<path d="M${x - 210 * k} ${base - 250 * k}H${x + 210 * k}" stroke="${MX.crema}" stroke-width="${10 * k}"/><circle cx="${x}" cy="${r1(base - 420 * k)}" r="${14 * k}" fill="${MX.mostaza}"/><path d="M${x} ${base - 430 * k}v${-36 * k}l${22 * k} ${8 * k}l${-22 * k} ${8 * k}" fill="${MX.rojo}" stroke="${MX.rojo}" stroke-width="${3 * k}"/>`;
+  return s + '</g>';
+}
+/** Coyote assis, de profil (statue de pierre doree) : corps, cuisse, pattes, queue, tete a museau pointu, oreille. dir = 1 (regarde a droite) | -1. */
+function mxCoyote(x, base, k, dir, c) {
+  const d = dir || 1, X = (v) => r1(x + v * d * k), Y = (v) => r1(base + v * k), col = c || '#E0A85A', dark = shade(col, -0.22);
+  return `<g class="mx-coyote"><path d="M${X(-60)} ${Y(0)}Q${X(-70)} ${Y(-70)} ${X(-30)} ${Y(-120)}Q${X(0)} ${Y(-150)} ${X(30)} ${Y(-140)}L${X(46)} ${Y(-170)}L${X(54)} ${Y(-186)}L${X(66)} ${Y(-170)}Q${X(100)} ${Y(-168)} ${X(120)} ${Y(-146)}L${X(98)} ${Y(-136)}Q${X(70)} ${Y(-130)} ${X(60)} ${Y(-110)}L${X(56)} ${Y(0)}Z" fill="${col}"/>`
+    + `<path d="M${X(-60)} ${Y(0)}Q${X(-110)} ${Y(-20)} ${X(-130)} ${Y(-70)}Q${X(-100)} ${Y(-40)} ${X(-52)} ${Y(-44)}Z" fill="${dark}"/><path d="M${X(-30)} ${Y(-120)}Q${X(-20)} ${Y(-60)} ${X(10)} ${Y(-10)}" stroke="${dark}" stroke-width="${6 * k}" fill="none" stroke-linecap="round" opacity=".55"/>`
+    + `<path d="M${X(46)} ${Y(-170)}L${X(54)} ${Y(-186)}L${X(66)} ${Y(-170)}Z" fill="${dark}"/><circle cx="${X(80)}" cy="${Y(-152)}" r="${5 * k}" fill="#2A160E"/><circle cx="${X(122)}" cy="${Y(-146)}" r="${5 * k}" fill="#2A160E"/><path d="M${X(58)} ${Y(-110)}L${X(56)} ${Y(0)}H${X(30)}V${Y(-90)}Z" fill="${dark}" opacity=".5"/></g>`;
+}
+/** Fontaine du Jardin Centenario : bassin de pierre, piedestal, deux coyotes dos a dos, jets (.mx-jet a animer). */
+function mxCoyoteFountain(x, base, k) {
+  let s = `<g class="mx-fountain"><ellipse cx="${x}" cy="${r1(base - 6 * k)}" rx="${330 * k}" ry="${64 * k}" fill="${MX.stone2}"/><ellipse cx="${x}" cy="${r1(base - 24 * k)}" rx="${330 * k}" ry="${64 * k}" fill="${MX.stone}"/><ellipse cx="${x}" cy="${r1(base - 30 * k)}" rx="${290 * k}" ry="${48 * k}" fill="#6FC2D6"/><ellipse cx="${x}" cy="${r1(base - 30 * k)}" rx="${290 * k}" ry="${48 * k}" fill="none" stroke="${shade(MX.stone, 0.3)}" stroke-width="${10 * k}"/><ellipse cx="${x}" cy="${r1(base - 28 * k)}" rx="${220 * k}" ry="${32 * k}" fill="#fff" opacity=".18"/>`;
+  s += `<path d="M${x - 70 * k} ${base - 30 * k}L${x - 52 * k} ${base - 150 * k}H${x + 52 * k}L${x + 70 * k} ${base - 30 * k}Z" fill="${MX.stone}"/><path d="M${x - 80 * k} ${base - 150 * k}H${x + 80 * k}V${base - 176 * k}H${x - 80 * k}Z" fill="${shade(MX.stone, 0.18)}"/>`;
+  s += mxCoyote(x - 22 * k, base - 176 * k, 0.9 * k, -1) + mxCoyote(x + 22 * k, base - 176 * k, 0.9 * k, 1);
+  s += `<g class="mx-water" stroke="#CFF3FF" stroke-width="${5 * k}" stroke-linecap="round" fill="none">${[-250, -170, 170, 250].map((dx, i) => `<path class="mx-jet" data-i="${i}" d="M${x + dx * k} ${base - 30 * k}Q${x + dx * 0.9 * k} ${base - 130 * k} ${x + dx * 0.78 * k} ${base - 58 * k}" opacity=".8"/>`).join('')}</g>`;
+  return s + '</g>';
+}
+/** Casa Azul (facade simplifiee, aucune enseigne) : murs cobalt, soubassement rouge, fenetres/porte a encadrement vert et creme, toit-terrasse, pots de plantes, cactus. */
+function mxCasaAzul(x, base, w, h, opts) {
+  opts = opts || {};
+  let s = `<g class="mx-casa">${scRect(x, base - h, w, h, MX.cobalt)}${scRect(x + w - 26, base - h, 26, h, '#000', 'opacity=".12"')}${scRect(x, base - h, 14, h, MX.cobalt3, 'opacity=".45"')}`;
+  s += scRect(x, base - 54, w, 54, MX.terra) + scRect(x, base - 58, w, 8, shade(MX.terra, 0.3), 'opacity=".7"');
+  s += scRect(x - 12, base - h - 22, w + 24, 26, MX.crema2) + scRect(x - 12, base - h - 22, w + 24, 8, '#fff', 'opacity=".5"') + scRect(x - 12, base - h + 4, w + 24, 7, '#000', 'opacity=".18"');
+  for (let i = 0; i < Math.floor(w / 44); i++) s += scRect(x + 8 + i * 44, base - h - 40, 28, 20, MX.cobalt2);
+  const cols = opts.cols || 3, st = w / cols;
+  for (let i = 0; i < cols; i++) {
+    const cx = x + st * (i + 0.5), mid = i === Math.floor(cols / 2);
+    if (mid) {
+      s += `<path d="${archOpen(cx - 62, base, 124, 250)}" fill="${MX.crema}"/><path d="${archOpen(cx - 50, base, 100, 236)}" fill="${MX.verde}"/><path d="M${cx} ${base - 236}V${base}" stroke="#0E5A40" stroke-width="4"/><path d="${archOpen(cx - 42, base - 6, 36, 160)}" fill="#0E5A40" opacity=".35"/><path d="${archOpen(cx + 6, base - 6, 36, 160)}" fill="#0E5A40" opacity=".35"/><circle cx="${cx - 12}" cy="${base - 110}" r="4" fill="${MX.mostaza}"/><circle cx="${cx + 12}" cy="${base - 110}" r="4" fill="${MX.mostaza}"/>`;
+    } else {
+      const wy = base - h + 80, wh = Math.min(130, h - 220);
+      s += scRect(cx - 52, wy - 12, 104, wh + 24, MX.crema, 'rx="8"') + scRect(cx - 42, wy, 84, wh, '#2A2148', 'rx="6"') + scRect(cx - 4, wy, 8, wh, MX.verde) + scRect(cx - 52, wy - 12, 12, wh + 24, MX.verde, 'opacity=".9"') + scRect(cx + 40, wy - 12, 12, wh + 24, MX.verde, 'opacity=".9"');
+      s += `<path d="M${cx - 42} ${wy + wh * 0.5}h84" stroke="${MX.crema}" stroke-width="4" opacity=".7"/>`;
+    }
+  }
+  // pots de plantes : agave + cactus + petits pots
+  const pot = (px, c, big) => `<g><path d="M${px - 22} ${base}l5 -${big ? 54 : 40}h34l5 ${big ? 54 : 40}Z" fill="${c}"/><rect x="${px - 26}" y="${base - (big ? 60 : 46)}" width="52" height="10" rx="4" fill="${shade(c, 0.2)}"/><g transform="translate(${px} ${base - (big ? 60 : 46)})">${[-52, -26, 0, 26, 52].map((a, j) => `<path d="M0 0Q${a * 0.9} -${big ? 62 : 46} ${a * 1.5} -${(big ? 96 : 70) - Math.abs(a) * 0.4}Q${a * 0.5} -${big ? 40 : 30} 0 0Z" fill="${[MX.leaf, MX.leaf2, MX.leaf3][j % 3]}"/>`).join('')}</g></g>`;
+  s += pot(x + st * 0.5 - 90, MX.terra, true) + pot(x + st * (cols - 0.5) + 90, MX.cobalt3, true);
+  return s + '</g>';
+}
+/** Ballon (bouquet) : fil + ellipse + reflet. */
+function mxBalloon(x, y, c, k) { return `<g class="mx-balloon"><path d="M${x} ${y + 40 * k}q-8 ${40 * k} ${4 * k} ${90 * k}" stroke="#F5E6C8" stroke-width="${2 * k}" fill="none" opacity=".8"/><ellipse cx="${x}" cy="${y}" rx="${26 * k}" ry="${32 * k}" fill="${c}"/><ellipse cx="${x - 9 * k}" cy="${y - 10 * k}" rx="${6 * k}" ry="${10 * k}" fill="#fff" opacity=".35"/><path d="M${x - 5 * k} ${y + 32 * k}h${10 * k}l-${5 * k} ${7 * k}Z" fill="${shade(c, -0.2)}"/></g>`; }
+/** Etal de marche : toit a rayures, comptoir, auvent festonne ; pose a (x, base), largeur w. */
+function mxStall(x, base, w, c1, c2) {
+  const n = 8, sw = w / n; let aw = '';
+  for (let i = 0; i < n; i++) aw += `<path d="M${r1(x + i * sw)} ${base - 250}h${r1(sw)}v52q-${r1(sw / 2)} 22 -${r1(sw)} 0Z" fill="${i % 2 ? c1 : c2}"/>`;
+  return `<g class="mx-stall">${scRect(x + 12, base - 200, 12, 200, '#6B4A32')}${scRect(x + w - 24, base - 200, 12, 200, '#6B4A32')}<path d="M${x - 10} ${base - 250}L${x + 24} ${base - 300}H${x + w - 24}L${x + w + 10} ${base - 250}Z" fill="${c1}"/>${aw}${scRect(x + 6, base - 96, w - 12, 96, '#C98A52')}${scRect(x, base - 108, w, 16, '#E4B070')}${scRect(x + 6, base - 96, w - 12, 8, '#000', 'opacity=".12"')}</g>`;
+}
+
+// ---------------------------------------------------------------- panorama de Coyoacan (3200 x 1200) : fin d'apres-midi
+/** Retourne { sky, sun, far, mid, near, W, H, sunX, sunY, casa : { x, w } } (parallaxe : far .25, mid .6, near 1). Fontaine .mx-jet, soleil .sk-disc/.sk-rays. */
+function coyoacanSkyline(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('cy'), g = (n) => `${id}-${n}`, W = SKY.W, H = SKY.H, rnd = rng(opts.seed || 41), street = 800;
+  let clouds = ''; [[300, 280, 560, 80], [1100, 180, 640, 90], [1900, 340, 520, 74], [2600, 220, 640, 88], [3000, 430, 420, 64]].forEach((c, i) => { clouds += cloudSvg(c[0], c[1], c[2], c[3], 70 + i * 4, 'dusk'); });
+  const sky = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F7FD0"/><stop offset=".3" stop-color="#6FB8E6"/><stop offset=".48" stop-color="#FBD7A0"/><stop offset=".62" stop-color="#FFA861"/><stop offset=".72" stop-color="#F07A55"/></linearGradient></defs>${scRect(0, 0, W, H, `url(#${g('s')})`)}${clouds}`, 'cy-sky');
+  const sx = opts.sunX || 1500, sy = opts.sunY || 520;
+  let rays = ''; for (let i = 0; i < 14; i++) { const a = (i / 14) * Math.PI * 2, a2 = a + Math.PI / 40; rays += `<path d="M${sx} ${sy}L${r1(sx + Math.cos(a) * 1500)} ${r1(sy + Math.sin(a) * 1500)}L${r1(sx + Math.cos(a2) * 1500)} ${r1(sy + Math.sin(a2) * 1500)}Z"/>`; }
+  const sun = scSvg(W, H, `<defs><radialGradient id="${g('h')}"><stop offset="0" stop-color="#FFF3B0" stop-opacity=".95"/><stop offset=".35" stop-color="#FFC24A" stop-opacity=".5"/><stop offset="1" stop-color="#FF8A47" stop-opacity="0"/></radialGradient></defs><g class="sk-rays" fill="#FFE9A8" opacity=".1" data-px="${sx}" data-py="${sy}">${rays}</g><circle cx="${sx}" cy="${sy}" r="420" fill="url(#${g('h')})"/><circle class="sk-disc" cx="${sx}" cy="${sy}" r="74" fill="#FFF3B0"/>`, 'cy-sun');
+  let hills = `M0 ${street}`; for (let x = 0; x <= W; x += 80) hills += `L${x} ${r1(street - 110 - 56 * Math.sin(x / 360) - 26 * Math.sin(x / 130 + 1))}`; hills += `L${W} ${street}Z`;
+  let farJ = ''; for (let i = 0; i < 12; i++) farJ += mxJacaranda(120 + i * 270 + rnd() * 90, street - 6, 0.55 + rnd() * 0.18).replace(/#9B6AD9|#7B4FC0|#BE98EE/g, (m) => shade(m, 0.28));
+  const far = scSvg(W, H, `<path d="${hills}" fill="#D98A8C" opacity=".6"/>${farJ}${mxChurch(1750, street, 0.8, '#E3BFA0')}${scRect(0, street - 2, W, 14, '#C9786A')}`, 'cy-far');
+  // milieu : maisons coloniales, kiosque, Parroquia au centre, Casa Azul a droite (x 2250 -> 2830)
+  const tones = [MX.ochre, MX.rosa, MX.turq, MX.mostaza, MX.crema2, '#E58B5B'];
+  let houses = '', x = -20, k = 0; const CAS = { x: 1660, w: 780 };
+  while (x < W) {
+    if (x > 380 && x < 880) { x = 880; continue; }              // trou : la Parroquia
+    if (x > 1000 && x < 1330) { x = 1330; continue; }           // trou : le kiosque
+    if (x > CAS.x - 40 && x < CAS.x + CAS.w + 30) { x = CAS.x + CAS.w + 40; continue; }
+    const w = 170 + rnd() * 120, h = 150 + rnd() * 110;
+    houses += mxHouse(x, street, w, h, tones[k++ % tones.length], Math.round(x) + 5, { door: rnd() < 0.5 ? 1 : -1 });
+    if (rnd() < 0.5) houses += mxJacaranda(x + w + 22, street, 0.7 + rnd() * 0.3);
+    x += w + 16;
+  }
+  const mid = scSvg(W, H, `${mxChurch(630, street, 1.0)}${houses}${mxKiosk(1165, street, 0.85)}${mxCasaAzul(CAS.x, street, CAS.w, 400)}${scRect(0, street, W, 400, '#B58A60')}${scRect(0, street + 38, W, 5, '#fff', 'opacity=".25"')}`, 'cy-mid');
+  // premier plan : chaussee pavee, Jardin Centenario (fontaine aux coyotes), branche de jacaranda en surplomb, bancs
+  let bench = (bx) => `<g><rect x="${bx}" y="1020" width="200" height="18" rx="6" fill="#6B4A32"/><rect x="${bx + 8}" y="990" width="184" height="12" rx="5" fill="#6B4A32"/><path d="M${bx + 20} 1038v46M${bx + 180} 1038v46M${bx + 20} 990v30M${bx + 180} 990v30" stroke="#2A2A3A" stroke-width="8"/></g>`;
+  const near = scSvg(W, H, `${mxCobbles(W, 880, 1200, 17, '#A8896A', '#6F5438')}${scRect(0, 868, W, 16, '#8E7358')}${scRect(0, 868, W, 5, '#fff', 'opacity=".3"')}${mxCoyoteFountain(640, 1010, 0.82)}${bench(1120)}${bench(2040)}${(() => { let p = ''; for (let i = 0; i < 70; i++) p += `<ellipse cx="${r1(rnd() * W)}" cy="${r1(900 + rnd() * 290)}" rx="${r1(5 + rnd() * 6)}" ry="${r1(3 + rnd() * 3)}" fill="${i % 3 ? MX.jac2 : MX.jac}" opacity=".85" transform="rotate(${Math.round(rnd() * 180)} 0 0)"/>`; return p; })()}
+<g transform="translate(700 90)" opacity=".95">${papelPicado({ w: 1500, h: 120, n: 11, seed: 3, uid: g('pp'), sag: 40 })}</g><g transform="translate(-40 -50)"><path d="M0 70Q240 40 460 170" stroke="#5A4034" stroke-width="28" fill="none" stroke-linecap="round"/>${[[110, 90, 80], [250, 120, 70], [350, 170, 60], [60, 150, 66], [210, 188, 58]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${[MX.jac, MX.jac2, MX.jac3][i % 3]}"/>`).join('')}</g>
+<g transform="translate(2640 -40)"><path d="M520 40Q320 30 100 180" stroke="#5A4034" stroke-width="28" fill="none" stroke-linecap="round"/>${[[400, 90, 74], [280, 140, 66], [170, 180, 58], [470, 140, 56]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${[MX.jac, MX.jac2, MX.jac3][i % 3]}"/>`).join('')}</g>`, 'cy-near');
+  return { sky, sun, far, mid, near, W, H, sunX: sx, sunY: sy, casa: CAS };
+}
+
+// ---------------------------------------------------------------- Plaza Hidalgo (3200 x 1200) : decor de scene (kiosque, Parroquia, etals a ballons, jacarandas, pave)
+const PLAZA = { W: 3200, H: 1200, floor: 930, kiosk: { x: 1500 } };
+/** Retourne { back, front, light, W, H, floor, kiosk }. Ballons .mx-balloon (a faire flotter), pigeons a poser par la composition. */
+function plazaHidalgo(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('ph'), g = (n) => `${id}-${n}`, W = PLAZA.W, H = PLAZA.H, fl = PLAZA.floor, rnd = rng(opts.seed || 52);
+  const skyG = `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C8FDB"/><stop offset=".45" stop-color="#8CCBEE"/><stop offset=".78" stop-color="#FFE2B0"/></linearGradient><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".55"/><stop offset="1" stop-color="#FFE9A8" stop-opacity=".02"/></linearGradient></defs>`;
+  let houses = '', x = -60, k = 0; const tones = [MX.ochre, MX.rosa, MX.turq, MX.mostaza, MX.crema2, '#E58B5B'];
+  while (x < W) { if (x > 980 && x < 1980) { x = 1980; continue; } const w = 220 + rnd() * 120, h = 260 + rnd() * 90; houses += mxHouse(x, fl - 30, w, h, tones[k++ % tones.length], Math.round(x) + 9, { door: 1 }); x += w + 14; }
+  // etals de ballons / vendeurs, bancs, lampadaires
+  const stalls = mxStall(210, fl + 50, 330, MX.rosa, MX.crema) + mxStall(2560, fl + 50, 340, MX.turq, MX.crema);
+  let balloons = ''; [[330, 560, MX.rojo], [372, 520, MX.mostaza], [418, 566, MX.turq], [2690, 540, MX.rosa], [2740, 500, MX.mostaza], [2790, 552, MX.cobalt3], [2640, 580, MX.rojo]].forEach((b) => { balloons += mxBalloon(b[0], b[1], b[2], 1.4); });
+  const lamp = (lx) => `<g class="mx-lamp"><path d="M${lx} ${fl + 40}V${fl - 330}" stroke="#2A2A3A" stroke-width="12"/><path d="M${lx - 30} ${fl - 330}h60l-8 -34h-44Z" fill="#2A2A3A"/><rect x="${lx - 22}" y="${fl - 400}" width="44" height="52" rx="8" fill="#FFE9A8" opacity=".9"/></g>`;
+  const back = scSvg(W, H, `${skyG}${scRect(0, 0, W, H, `url(#${g('s')})`)}${cloudSvg(600, 150, 520, 74, 81, 'front')}${cloudSvg(2300, 120, 600, 84, 83, 'front')}
+${mxChurch(1500, fl - 40, 1.35)}${houses}${mxJacaranda(960, fl - 20, 1.5)}${mxJacaranda(2040, fl - 20, 1.6)}${mxJacaranda(120, fl - 20, 1.2)}${mxJacaranda(3100, fl - 20, 1.3)}
+${mxKiosk(PLAZA.kiosk.x, fl + 40, 1.1)}${lamp(1010)}${lamp(1990)}${stalls}${balloons}
+${mxCobbles(W, fl, H, 29, '#B59471', '#7A5C3E')}${scRect(0, fl - 8, W, 14, '#8E7358')}
+<g opacity=".5"><path d="M0 ${fl + 120}H${W}" stroke="#6F5438" stroke-width="3" opacity=".3"/></g>`, 'ph-back');
+  const flowerBed = (fx) => `<g>${[0, 1, 2, 3, 4].map((i) => `<circle cx="${fx + i * 36}" cy="${H - 40 + (i % 2) * 8}" r="${24 + (i % 3) * 5}" fill="${[MX.leaf, MX.leaf2, MX.leaf3][i % 3]}"/>`).join('')}${[0, 1, 2, 3, 4, 5].map((i) => `<circle cx="${fx - 10 + i * 30}" cy="${H - 62 + (i % 3) * 10}" r="9" fill="${[MX.rosa, MX.mostaza, MX.rojo][i % 3]}"/>`).join('')}</g>`;
+  const front = scSvg(W, H, `${flowerBed(40)}${flowerBed(3000)}`, 'ph-front');
+  const light = scSvg(W, H, `${skyG}<g class="ac-beams" fill="url(#${g('w')})"><path d="M2200 0L2900 0L2300 ${H}L1500 ${H}Z" opacity=".5"/></g>`, 'ph-light');
+  return { back, front, light, W, H, floor: fl, kiosk: PLAZA.kiosk };
+}
+
+// ---------------------------------------------------------------- patio de la Casa Azul (2400 x 1200) : murs cobalt, patio de plantes, galerie d'autoportraits
+const CASAP = { W: 2400, H: 1200, floor: 900, door: { x: 1960, y: 440, w: 200, h: 460 }, frames: [{ x: 300, y: 250, w: 250, h: 320 }, { x: 640, y: 250, w: 250, h: 320 }, { x: 980, y: 250, w: 250, h: 320 }, { x: 1320, y: 250, w: 250, h: 320 }] };
+/** Retourne { back, front, light, W, H, floor, door, frames }. Les 4 autoportraits du mur sont PRODUITS par la composition (QArt.autorretrato) pour pouvoir etre animes. */
+function casaAzulPatio(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('cp'), g = (n) => `${id}-${n}`, W = CASAP.W, H = CASAP.H, fl = CASAP.floor, D = CASAP.door, rnd = rng(opts.seed || 63);
+  // mur cobalt + soubassement + poutres de la galerie
+  let wall = scRect(0, 0, W, fl + 6, MX.cobalt) + scRect(0, 0, W, 150, MX.cobalt2) + scRect(0, 140, W, 14, MX.crema2) + scRect(0, 150, W, 10, '#000', 'opacity=".2"');
+  for (let i = 0; i < 12; i++) wall += scRect(i * 210 + 20, 20, 150, 100, MX.cobalt3, 'opacity=".18" rx="6"');
+  wall += scRect(0, fl - 70, W, 70, MX.terra) + scRect(0, fl - 76, W, 8, shade(MX.terra, 0.3), 'opacity=".7"');
+  // porte verte du fond (a droite) + ciel dans l'ouverture haute
+  const door = `<path d="${archOpen(D.x - 18, fl, D.w + 36, D.h + 30)}" fill="${MX.crema}"/><path d="${archOpen(D.x, fl, D.w, D.h)}" fill="#26180F"/>`;
+  // plantes : agaves, cactus, fougeres dans des pots cobalt/terracotta
+  const agave = (ax, ay, k, c) => `<g transform="translate(${ax} ${ay}) scale(${k})">${[-70, -44, -20, 0, 20, 44, 70].map((a, j) => `<path d="M0 0Q${a * 1.1} -70 ${a * 1.9} ${-150 + Math.abs(a) * 0.9}Q${a * 0.6} -50 0 0Z" fill="${[MX.leaf, MX.leaf2, MX.leaf3][j % 3]}" transform="rotate(${a * 0.1})"/>`).join('')}</g>`;
+  const cactus = (cx, cy, k) => `<g transform="translate(${cx} ${cy}) scale(${k})"><rect x="-26" y="-250" width="52" height="250" rx="26" fill="${MX.leaf}"/><rect x="-26" y="-250" width="16" height="250" rx="8" fill="${MX.leaf2}" opacity=".5"/><path d="M-26 -150h-40v-70a20 20 0 0 1 40 0Z" fill="${MX.leaf}"/><path d="M26 -110h40v-90a20 20 0 0 0 -40 0Z" fill="${MX.leaf}"/>${[-200, -160, -120, -80, -40].map((y, j) => `<path d="M-2 ${y}h4" stroke="#F5E6C8" stroke-width="3"/>`).join('')}<circle cx="0" cy="-258" r="12" fill="${MX.rosa}"/></g>`;
+  const pot = (px, py, c, w) => `<g><path d="M${px - w / 2} ${py}l${w * 0.08} ${-w * 0.7}h${w * 0.84}l${w * 0.08} ${w * 0.7}Z" fill="${c}"/><rect x="${px - w * 0.56}" y="${py - w * 0.78}" width="${w * 1.12}" height="${w * 0.16}" rx="${w * 0.06}" fill="${shade(c, 0.2)}"/></g>`;
+  let plants = '';
+  [[120, 1], [1630, 1.1], [2260, 1.2]].forEach((p, i) => { plants += pot(p[0], fl + 14, i % 2 ? MX.terra : MX.cobalt3, 130 * p[1]) + agave(p[0], fl - 90 * p[1], 1.2 * p[1]); });
+  plants += cactus(1740, fl + 6, 0.95) + cactus(240, fl + 6, 0.8);
+  // sol : dalles de pierre volcanique + chemin
+  const floor = `<path d="M0 ${fl}H${W}L${W + 400} ${H}H-400Z" fill="#8E7B6C"/>` + (() => { let l = ''; for (let i = 0; i < 12; i++) { const y = fl + Math.pow(i / 12, 1.4) * (H - fl); l += `<path d="M-400 ${r1(y)}H${W + 400}" stroke="#5A4A3E" stroke-width="3" opacity=".4"/>`; } for (let i = -6; i < 16; i++) l += `<path d="M${i * 190} ${fl}L${i * 190 + (i - 5) * 70} ${H}" stroke="#5A4A3E" stroke-width="3" opacity=".3"/>`; return l; })();
+  const back = scSvg(W, H, `${wall}${door}${plants}${floor}`, 'cp-back');
+  // premier plan : pots et feuilles en bas ; papel picado reserve a QCine.frame (garland)
+  const leaf = (a, c, k) => `<path d="M0 0Q${52 * k} -90 0 -190Q${-52 * k} -90 0 0Z" fill="${c}" transform="rotate(${a})"/><path d="M0 -10V-170" stroke="#fff" stroke-width="3" opacity=".3" transform="rotate(${a})"/>`;
+  const front = scSvg(W, H, [[110, 1110, 1.3, MX.cobalt3], [2290, 1100, 1.4, MX.terra]].map((p) => `<g transform="translate(${p[0]} ${p[1]}) scale(${p[2]})"><path d="M-70 0h140l-18 -150h-104Z" fill="${p[3]}"/><rect x="-78" y="-164" width="156" height="22" rx="8" fill="${shade(p[3], 0.2)}"/><g transform="translate(0 -160)">${[-62, -34, -8, 18, 44, 66].map((a, j) => leaf(a, [MX.leaf, MX.leaf2, MX.leaf3][j % 3], 0.9 + (j % 2) * 0.15)).join('')}</g></g>`).join(''), 'cp-front');
+  const light = scSvg(W, H, `<defs><linearGradient id="${g('b')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".55"/><stop offset="1" stop-color="#FFE9A8" stop-opacity=".02"/></linearGradient></defs><g class="ac-beams" fill="url(#${g('b')})"><path d="M900 150L1700 150L1900 ${H}L520 ${H}Z" opacity=".4"/></g>`, 'cp-light');
+  return { back, front, light, W, H, floor: fl, door: D, frames: CASAP.frames };
+}
+
+// ---------------------------------------------------------------- autoportrait encadre (figure GENERIQUE : fleurs dans les cheveux, nattes, col brode) 250 x 320 par defaut
+/** opts : width, uid, state 'full' (visage + couleurs) | 'erased' (visage efface par la Sombra : tache grise, couleurs eteintes) | 'blank' (cadre vide : plus de figure, fond gris, seul .ar-glow vert a allumer). .ar-fig = toute la figure (opacity). Groupes animables :
+ *  .ar-face (visage), .ar-dim (voile gris eteint ; opacity 1 -> 0 pour rendre les couleurs), .ar-smudge (tache grise du visage ; 1 -> 0), .ar-glow (halo vert de la plume). */
+function autorretrato(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('ar'), g = (n) => `${id}-${n}`, W = 250, H = 320, st = opts.state || 'full', ow = opts.width || W, oh = Math.round((ow * H) / W);
+  const erased = st === 'erased' || st === 'blank', blank = st === 'blank';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${ow}" height="${oh}" class="ar-svg" style="overflow:visible" aria-hidden="true"><defs><clipPath id="${g('c')}"><rect x="22" y="22" width="206" height="276" rx="6"/></clipPath><radialGradient id="${g('gl')}"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".95"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".4"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="${W}" height="${H}" rx="14" fill="#C99A4E"/><rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="10" fill="#E8C078"/><rect x="14" y="14" width="${W - 28}" height="${H - 28}" rx="8" fill="#8E5A22"/>
+${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<circle cx="${20 + i * 30}" cy="11" r="4" fill="#FFE9A8"/><circle cx="${20 + i * 30}" cy="${H - 11}" r="4" fill="#FFE9A8"/>`).join('')}
+<g clip-path="url(#${g('c')})"><rect x="22" y="22" width="206" height="276" fill="#1F7F6A"/>
+${[[40, 80, 52, 120], [210, 70, 60, 150], [30, 220, 70, 100], [220, 230, 64, 110]].map((l, i) => `<path d="M${l[0]} ${l[1] + l[3]}Q${l[0] - l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1]}Q${l[0] + l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1] + l[3]}Z" fill="${['#0E5A40', '#2C8F58', '#0E5A40', '#2C8F58'][i]}"/>`).join('')}
+<g class="ar-fig" opacity="${blank ? 0 : 1}"><path d="M62 300Q60 236 100 214L150 214Q190 236 188 300Z" fill="#F5E6C8"/><path d="M96 214Q125 244 154 214L150 232Q125 262 100 232Z" fill="#D93472"/><path d="M80 280Q125 266 170 280" stroke="#D93472" stroke-width="7" fill="none"/><g fill="#FFC83D"><circle cx="100" cy="268" r="5"/><circle cx="125" cy="274" r="5"/><circle cx="150" cy="268" r="5"/></g>
+<path d="M72 150Q70 90 125 82Q180 90 178 150Q176 230 125 238Q74 230 72 150Z" fill="#1E120C"/>
+<g class="ar-face"><ellipse cx="125" cy="168" rx="46" ry="56" fill="#D2956B"/><path d="M84 140Q102 130 118 138M132 138Q148 130 166 140" stroke="#1E120C" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#FFFBF0"><ellipse cx="106" cy="158" rx="11" ry="9"/><ellipse cx="144" cy="158" rx="11" ry="9"/></g><g fill="#2A160E"><circle cx="107" cy="158" r="5.5"/><circle cx="145" cy="158" r="5.5"/></g><path d="M125 164q-6 14 0 18q6 2 9 -2" stroke="#A8683F" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M106 198Q125 210 144 198" stroke="#8F1D4E" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="92" cy="180" r="9" fill="#FF7A7A" opacity=".3"/><circle cx="158" cy="180" r="9" fill="#FF7A7A" opacity=".3"/></g>
+<ellipse class="ar-smudge" cx="125" cy="168" rx="48" ry="58" fill="#7A7C86" opacity="${erased ? 0.95 : 0}"/>
+<path d="M72 130Q125 66 178 130" stroke="#1E120C" stroke-width="22" fill="none"/><g>${[[86, 98, '#D93472'], [118, 80, '#FFC83D'], [152, 86, '#19B7AA'], [174, 110, '#FF7FB0']].map((f) => `<circle cx="${f[0]}" cy="${f[1]}" r="12" fill="${f[2]}"/><circle cx="${f[0]}" cy="${f[1]}" r="4" fill="#FFF3B0"/>`).join('')}</g>
+</g><ellipse class="ar-glow" cx="125" cy="170" rx="130" ry="150" fill="url(#${g('gl')})" opacity="0"/>
+<rect class="ar-dim" x="22" y="22" width="206" height="276" fill="#6E707C" opacity="${blank ? 0.9 : erased ? 0.86 : 0}"/></g></svg>`;
+}
+
+// ---------------------------------------------------------------- accessoires de capsule (papier decoupe) : singe, perroquet, xoloitzcuintle, miroir a main, cadre vide
+/** key : 'mono' | 'loro' | 'xolo' | 'espejo' | 'cadre'. opts : width, uid. Meme API que prop() (09-props.js). */
+function mxProp(key, opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('mp'), W = opts.width || 200;
+  const mk = (vb, h, inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" width="${W}" height="${Math.round(W * h)}" class="mx-prop mx-${key}" aria-hidden="true">${inner}</svg>`;
+  if (key === 'mono') return mk('0 0 200 240', 1.2, `<path d="M150 200Q220 190 196 130Q186 100 166 118" stroke="#6B4222" stroke-width="16" fill="none" stroke-linecap="round"/><ellipse cx="100" cy="170" rx="56" ry="62" fill="#8A5A32"/><ellipse cx="100" cy="184" rx="34" ry="40" fill="#D9A878"/><circle cx="100" cy="90" r="50" fill="#8A5A32"/><circle cx="52" cy="90" r="18" fill="#8A5A32"/><circle cx="148" cy="90" r="18" fill="#8A5A32"/><circle cx="52" cy="90" r="9" fill="#D9A878"/><circle cx="148" cy="90" r="9" fill="#D9A878"/><ellipse cx="100" cy="102" rx="34" ry="30" fill="#D9A878"/><circle cx="84" cy="88" r="7" fill="#2A160E"/><circle cx="116" cy="88" r="7" fill="#2A160E"/><circle cx="86" cy="86" r="2.5" fill="#fff"/><circle cx="118" cy="86" r="2.5" fill="#fff"/><ellipse cx="94" cy="108" rx="3.5" ry="2.5" fill="#6B4222"/><ellipse cx="106" cy="108" rx="3.5" ry="2.5" fill="#6B4222"/><path d="M86 120Q100 130 114 120" stroke="#6B4222" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M60 210Q56 232 74 232M140 210Q144 232 126 232" stroke="#6B4222" stroke-width="14" fill="none" stroke-linecap="round"/>`);
+  if (key === 'loro') return mk('0 0 200 260', 1.3, `<path d="M118 190Q150 250 120 256Q110 230 100 200Z" fill="#D81E3A"/><path d="M92 190Q86 250 70 256Q60 232 74 190Z" fill="#2F6FD0"/><path d="M70 120Q66 200 100 206Q146 200 142 120Q138 56 100 54Q74 56 70 120Z" fill="#1FA85A"/><path d="M82 150Q96 190 124 160" fill="none" stroke="#FFC83D" stroke-width="12" stroke-linecap="round"/><path d="M142 130Q176 150 168 196Q150 176 138 168Z" fill="#2F6FD0"/><circle cx="100" cy="86" r="34" fill="#E8D030"/><circle cx="88" cy="80" r="10" fill="#fff"/><circle cx="90" cy="80" r="5" fill="#2A160E"/><path d="M104 86Q140 80 138 108Q120 116 104 100Z" fill="#F4F0E0"/><path d="M104 86Q130 82 138 100Q116 100 104 94Z" fill="#E8A83C"/><path d="M70 60Q82 30 96 56" fill="#D81E3A"/>`);
+  if (key === 'xolo') return mk('0 0 260 220', 0.85, `<path d="M214 150Q250 130 244 90" stroke="#4A4F5C" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M60 100Q40 40 76 40L96 60Z" fill="#3F4450"/><path d="M60 110Q60 70 130 70Q210 70 214 130Q214 170 190 170L70 170Q46 170 60 110Z" fill="#5A6070"/><path d="M60 170L56 210H84L90 170Z M170 170L168 210H196L200 170Z" fill="#4A4F5C"/><path d="M60 110Q30 100 24 128Q22 150 50 150Q70 148 76 130Z" fill="#5A6070"/><path d="M96 56Q100 20 124 34Q132 60 118 80Z" fill="#3F4450"/><circle cx="68" cy="116" r="6" fill="#1A1A22"/><ellipse cx="30" cy="132" rx="10" ry="8" fill="#1A1A22"/><path d="M84 96Q94 82 104 96" stroke="#FFC9B0" stroke-width="4" fill="none" opacity=".6"/>`);
+  if (key === 'espejo') return mk('0 0 160 300', 1.9, `<rect x="68" y="150" width="24" height="140" rx="12" fill="#C99A4E"/><circle cx="80" cy="84" r="68" fill="#E8C078"/><circle cx="80" cy="84" r="54" fill="#CFE9F5"/><path d="M42 60Q60 36 92 36" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" opacity=".7"/><g fill="#C99A4E">${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<circle cx="${r1(80 + Math.cos((i / 8) * 6.283) * 62)}" cy="${r1(84 + Math.sin((i / 8) * 6.283) * 62)}" r="7"/>`).join('')}</g>`);
+  return mk('0 0 200 240', 1.2, `<rect x="6" y="6" width="188" height="228" rx="10" fill="#C99A4E"/><rect x="18" y="18" width="164" height="204" rx="6" fill="#E8C078"/><rect x="30" y="30" width="140" height="180" rx="4" fill="#1F7F6A"/>`);
+}
+
+// ---------------------------------------------------------------- decors et accessoires de l'evenement Dia de Muertos (Oaxaca) : panorama de rue au crepuscule, patio de nuit avec petit autel,
+// ofrenda a trois etages (fotos, velas, flores, pan de muerto, comida), chemin de petales de cempasuchil, calaveras de azucar, Catrina, sceau de laurier.
+// Respectueux et joyeux : calaveras souriantes et colorees, aucune imagerie effrayante. Prefixe `ox` pour tout helper interne (un seul scope avec les autres fichiers du kit).
+// Aucun texte, aucune marque. Lueurs de bougies = halos (.of-glow) a faire respirer lentement ; flammes = .of-flame (data-px/data-py = pied de la flamme).
+
+const OX = { ocre: '#E8A33A', rosa: '#E0699A', turq: '#19B7AA', azul: '#4F8FE8', terra: '#C9573B', amar: '#FFC83D', viol: '#9A5FD0', naranja: '#FF9F1C', magenta: '#D93472', noche: '#14123F' };
+
+function oxGlowDef(id, c) { return `<radialGradient id="${id}"><stop offset="0" stop-color="${c || '#FFC96A'}" stop-opacity=".55"/><stop offset=".5" stop-color="${c || '#FFC96A'}" stop-opacity=".18"/><stop offset="1" stop-color="${c || '#FFC96A'}" stop-opacity="0"/></radialGradient>`; }
+
+/** Bougie : pied en (x, y), hauteur h, echelle k. Groupe .of-vela > .of-glow (halo), .of-flame (flamme, pivot au pied). gid = id d'un radialGradient (oxGlowDef). */
+function oxCandle(x, y, h, gid, k) {
+  k = k || 1;
+  const w = 18 * k, fh = 34 * k, fy = y - h - 4, tip = fy - fh;
+  return `<g class="of-vela" data-px="${r1(x)}" data-py="${r1(y)}"><circle class="of-glow" cx="${r1(x)}" cy="${r1(fy - fh * 0.4)}" r="${r1(74 * k)}" fill="url(#${gid})"/>` +
+    `<rect x="${r1(x - w / 2)}" y="${r1(y - h)}" width="${r1(w)}" height="${r1(h)}" rx="${r1(4 * k)}" fill="#FFF3D1"/><rect x="${r1(x + w * 0.1)}" y="${r1(y - h)}" width="${r1(w * 0.4)}" height="${r1(h)}" rx="${r1(3 * k)}" fill="#E8D2A0" opacity=".7"/>` +
+    `<path d="M${r1(x)} ${r1(y - h)}v${r1(-5 * k)}" stroke="#3B2216" stroke-width="${r1(3 * k)}"/>` +
+    `<g class="of-flame" data-px="${r1(x)}" data-py="${r1(fy)}"><path d="M${r1(x)} ${r1(tip)}C${r1(x + 12 * k)} ${r1(tip + fh * 0.4)} ${r1(x + 10 * k)} ${r1(fy)} ${r1(x)} ${r1(fy)}C${r1(x - 10 * k)} ${r1(fy)} ${r1(x - 12 * k)} ${r1(tip + fh * 0.4)} ${r1(x)} ${r1(tip)}Z" fill="#FF9F1C"/>` +
+    `<path d="M${r1(x)} ${r1(tip + fh * 0.3)}C${r1(x + 6 * k)} ${r1(tip + fh * 0.55)} ${r1(x + 5 * k)} ${r1(fy)} ${r1(x)} ${r1(fy)}C${r1(x - 5 * k)} ${r1(fy)} ${r1(x - 6 * k)} ${r1(tip + fh * 0.55)} ${r1(x)} ${r1(tip + fh * 0.3)}Z" fill="#FFE9A8"/></g></g>`;
+}
+
+/** Rangee de fanions de papel picado (zigzag + decoupes) : corde de x0 a x0+w en y0, n fanions de hauteur fh. */
+function oxFlags(x0, y0, w, n, seed, cols, fh) {
+  const rnd = rng(seed), step = w / n, fw = step * 0.84;
+  let s = `<path d="M${r1(x0)} ${r1(y0)}H${r1(x0 + w)}" stroke="#F5E6C8" stroke-width="3" opacity=".85"/>`;
+  for (let i = 0; i < n; i++) {
+    const cx = x0 + step * (i + 0.5), xa = cx - fw / 2, xb = cx + fw / 2, hh = fh * (0.9 + rnd() * 0.15), c = cols[i % cols.length], teeth = 5, tw = fw / teeth;
+    let d = `M${r1(xa)} ${r1(y0)}H${r1(xb)}V${r1(y0 + hh - 10)}`;
+    for (let t = teeth; t > 0; t--) d += `L${r1(xa + tw * (t - 0.5))} ${r1(y0 + hh)}L${r1(xa + tw * (t - 1))} ${r1(y0 + hh - 10)}`;
+    d += 'Z' + circlePath(cx, y0 + hh * 0.46, fw * 0.17) + diamondPath(cx, y0 + hh * 0.2, fw * 0.07, fw * 0.1) + diamondPath(cx, y0 + hh * 0.74, fw * 0.07, fw * 0.1) + starPath(cx - fw * 0.28, y0 + hh * 0.46, fw * 0.1, fw * 0.045, 4, 0) + starPath(cx + fw * 0.28, y0 + hh * 0.46, fw * 0.1, fw * 0.045, 4, 0);
+    s += `<g class="m-flag" data-px="${r1(cx)}" data-py="${r1(y0)}"><path d="${d}" fill="${c}" fill-rule="evenodd"/></g>`;
+  }
+  return s;
+}
+
+/** Calavera de azucar souriante (centre cx, cy, rayon r) : yeux a petales, nez, sourire a dents, fleurs au front. pal = 3 couleurs. */
+function oxCalavera(cx, cy, r, pal) {
+  pal = pal || [OX.magenta, OX.turq, OX.amar];
+  let s = `<ellipse cx="${r1(cx)}" cy="${r1(cy + r * 0.78)}" rx="${r1(r * 0.62)}" ry="${r1(r * 0.42)}" fill="#FFF6E4"/><ellipse cx="${r1(cx)}" cy="${r1(cy)}" rx="${r1(r)}" ry="${r1(r * 1.02)}" fill="#FFF6E4"/><ellipse cx="${r1(cx + r * 0.22)}" cy="${r1(cy + r * 0.1)}" rx="${r1(r * 0.7)}" ry="${r1(r * 0.85)}" fill="#EBD9B8" opacity=".35"/>`;
+  s += `<path d="M${r1(cx - r * 0.5)} ${r1(cy - r * 0.62)}Q${r1(cx)} ${r1(cy - r * 0.95)} ${r1(cx + r * 0.5)} ${r1(cy - r * 0.62)}" stroke="${pal[0]}" stroke-width="${r1(r * 0.1)}" fill="none" stroke-linecap="round"/>`;
+  s += `<path d="${diamondPath(r1(cx), r1(cy - r * 0.68), r1(r * 0.1), r1(r * 0.16))}" fill="${pal[2]}"/><circle cx="${r1(cx - r * 0.62)}" cy="${r1(cy - r * 0.35)}" r="${r1(r * 0.07)}" fill="${pal[1]}"/><circle cx="${r1(cx + r * 0.62)}" cy="${r1(cy - r * 0.35)}" r="${r1(r * 0.07)}" fill="${pal[1]}"/>`;
+  [-1, 1].forEach((sx, k) => {
+    const ex = cx + sx * r * 0.38, ey = cy - r * 0.08;
+    for (let i = 0; i < 8; i++) { const a = (i / 8) * Math.PI * 2; s += `<ellipse cx="${r1(ex + Math.cos(a) * r * 0.31)}" cy="${r1(ey + Math.sin(a) * r * 0.31)}" rx="${r1(r * 0.09)}" ry="${r1(r * 0.06)}" transform="rotate(${r1((a * 180) / Math.PI)} ${r1(ex + Math.cos(a) * r * 0.31)} ${r1(ey + Math.sin(a) * r * 0.31)})" fill="${pal[k ? 0 : 2]}"/>`; }
+    s += `<circle cx="${r1(ex)}" cy="${r1(ey)}" r="${r1(r * 0.26)}" fill="${pal[k ? 1 : 0]}"/><circle cx="${r1(ex)}" cy="${r1(ey)}" r="${r1(r * 0.17)}" fill="#2A1040"/><circle cx="${r1(ex + r * 0.05)}" cy="${r1(ey - r * 0.05)}" r="${r1(r * 0.05)}" fill="#fff"/>`;
+  });
+  s += `<path d="M${r1(cx)} ${r1(cy + r * 0.2)}l${r1(-r * 0.09)} ${r1(r * 0.17)}h${r1(r * 0.18)}Z" fill="#2A1040"/>`;
+  s += `<path d="M${r1(cx - r * 0.5)} ${r1(cy + r * 0.52)}Q${r1(cx)} ${r1(cy + r * 0.86)} ${r1(cx + r * 0.5)} ${r1(cy + r * 0.52)}" stroke="#2A1040" stroke-width="${r1(r * 0.055)}" fill="none" stroke-linecap="round"/>`;
+  for (let i = -2; i <= 2; i++) s += `<path d="M${r1(cx + i * r * 0.17)} ${r1(cy + r * 0.62 + Math.abs(i) * r * 0.025)}v${r1(r * 0.17)}" stroke="#2A1040" stroke-width="${r1(r * 0.04)}" stroke-linecap="round"/>`;
+  s += `<circle cx="${r1(cx - r * 0.7)}" cy="${r1(cy + r * 0.3)}" r="${r1(r * 0.09)}" fill="${pal[0]}"/><circle cx="${r1(cx + r * 0.7)}" cy="${r1(cy + r * 0.3)}" r="${r1(r * 0.09)}" fill="${pal[0]}"/>`;
+  return `<g class="ox-skull">${s}</g>`;
+}
+
+/** Catrina stylisee (buste) : base en (cx, baseY), echelle k. Grand chapeau a fleurs, calavera, col a volants. */
+function oxCatrina(cx, baseY, k) {
+  const hy = baseY - 300 * k, r = 62 * k;
+  let s = `<path d="M${r1(cx - 150 * k)} ${r1(baseY)}Q${r1(cx - 140 * k)} ${r1(baseY - 150 * k)} ${r1(cx - 40 * k)} ${r1(baseY - 190 * k)}H${r1(cx + 40 * k)}Q${r1(cx + 140 * k)} ${r1(baseY - 150 * k)} ${r1(cx + 150 * k)} ${r1(baseY)}Z" fill="${OX.magenta}"/>`;
+  for (let i = 0; i < 7; i++) s += `<circle cx="${r1(cx - 108 * k + i * 36 * k)}" cy="${r1(baseY - 176 * k + Math.abs(3 - i) * 8 * k)}" r="${r1(22 * k)}" fill="${i % 2 ? OX.turq : OX.amar}"/>`;
+  s += `<path d="M${r1(cx - 30 * k)} ${r1(baseY - 200 * k)}h${r1(60 * k)}v${r1(34 * k)}h${r1(-60 * k)}Z" fill="#FFF6E4"/>` + oxCalavera(cx, hy, r, [OX.turq, OX.magenta, OX.amar]);
+  s += `<ellipse cx="${r1(cx)}" cy="${r1(hy - r * 0.78)}" rx="${r1(160 * k)}" ry="${r1(30 * k)}" fill="#2A1040"/><path d="M${r1(cx - 76 * k)} ${r1(hy - r * 0.8)}Q${r1(cx - 70 * k)} ${r1(hy - 150 * k)} ${r1(cx)} ${r1(hy - 150 * k)}Q${r1(cx + 70 * k)} ${r1(hy - 150 * k)} ${r1(cx + 76 * k)} ${r1(hy - r * 0.8)}Z" fill="#3B1B5C"/><path d="M${r1(cx - 76 * k)} ${r1(hy - r * 0.8)}H${r1(cx + 76 * k)}" stroke="${OX.magenta}" stroke-width="${r1(14 * k)}"/>`;
+  s += `<path d="M${r1(cx + 40 * k)} ${r1(hy - 140 * k)}Q${r1(cx + 150 * k)} ${r1(hy - 230 * k)} ${r1(cx + 190 * k)} ${r1(hy - 120 * k)}Q${r1(cx + 120 * k)} ${r1(hy - 160 * k)} ${r1(cx + 40 * k)} ${r1(hy - 110 * k)}Z" fill="${OX.turq}"/>`;
+  s += marigoldFlower(cx - 60 * k, hy - 124 * k, 24 * k, OX.naranja, OX.amar) + marigoldFlower(cx + 4 * k, hy - 146 * k, 26 * k, OX.naranja, OX.amar) + marigoldFlower(cx + 60 * k, hy - 118 * k, 22 * k, OX.rosa, '#FF9AC1');
+  return `<g class="ox-catrina">${s}</g>`;
+}
+
+/** Pan de muerto : miche doree, os en croix, boule au centre, sucre. */
+function oxPan(cx, cy, r) {
+  let s = `<ellipse cx="${r1(cx)}" cy="${r1(cy + r * 0.1)}" rx="${r1(r)}" ry="${r1(r * 0.72)}" fill="#B8672F"/><ellipse cx="${r1(cx)}" cy="${r1(cy)}" rx="${r1(r)}" ry="${r1(r * 0.72)}" fill="#E39A4E"/><ellipse cx="${r1(cx - r * 0.2)}" cy="${r1(cy - r * 0.2)}" rx="${r1(r * 0.55)}" ry="${r1(r * 0.3)}" fill="#F2B772" opacity=".7"/>`;
+  [[-1, -0.1], [1, -0.1], [-0.6, 0.45], [0.6, 0.45]].forEach((b) => { s += `<path d="M${r1(cx)} ${r1(cy)}L${r1(cx + b[0] * r * 0.82)} ${r1(cy + b[1] * r * 0.6)}" stroke="#F2B772" stroke-width="${r1(r * 0.17)}" stroke-linecap="round"/>`; });
+  s += `<circle cx="${r1(cx)}" cy="${r1(cy - r * 0.06)}" r="${r1(r * 0.2)}" fill="#F2B772"/>`;
+  for (let i = 0; i < 9; i++) { const a = (i / 9) * Math.PI * 2; s += `<circle cx="${r1(cx + Math.cos(a) * r * 0.6)}" cy="${r1(cy + Math.sin(a) * r * 0.4)}" r="${r1(r * 0.04)}" fill="#FFF6E4" opacity=".85"/>`; }
+  return `<g class="of-pan">${s}</g>`;
+}
+
+/** Photo encadree (cadre dore, silhouette sepia) : coin haut-gauche (x, y), taille w x h ; kind 0 (cheveux longs) | 1 (chapeau + moustache) | 2 (enfant). */
+function oxPhoto(x, y, w, h, kind, gid) {
+  const cx = x + w / 2, hy = y + h * 0.42, hr = w * (kind === 2 ? 0.2 : 0.17);
+  let sil = `<ellipse cx="${r1(cx)}" cy="${r1(y + h * 0.95)}" rx="${r1(w * 0.3)}" ry="${r1(h * 0.28)}" fill="#6B4A32"/><circle cx="${r1(cx)}" cy="${r1(hy)}" r="${r1(hr)}" fill="#8A6444"/>`;
+  if (kind === 0) sil += `<path d="M${r1(cx - hr * 1.15)} ${r1(hy)}Q${r1(cx - hr * 1.2)} ${r1(hy - hr * 1.4)} ${r1(cx)} ${r1(hy - hr * 1.3)}Q${r1(cx + hr * 1.2)} ${r1(hy - hr * 1.4)} ${r1(cx + hr * 1.15)} ${r1(hy)}L${r1(cx + hr * 1.3)} ${r1(hy + hr * 2)}H${r1(cx - hr * 1.3)}Z" fill="#3B2A1E" opacity=".9"/><circle cx="${r1(cx)}" cy="${r1(hy + hr * 0.1)}" r="${r1(hr * 0.9)}" fill="#8A6444"/>`;
+  if (kind === 1) sil += `<ellipse cx="${r1(cx)}" cy="${r1(hy - hr * 0.8)}" rx="${r1(hr * 1.7)}" ry="${r1(hr * 0.3)}" fill="#3B2A1E"/><path d="M${r1(cx - hr * 0.9)} ${r1(hy - hr * 0.8)}Q${r1(cx)} ${r1(hy - hr * 2)} ${r1(cx + hr * 0.9)} ${r1(hy - hr * 0.8)}Z" fill="#3B2A1E"/><path d="M${r1(cx - hr * 0.6)} ${r1(hy + hr * 0.4)}Q${r1(cx)} ${r1(hy + hr * 0.1)} ${r1(cx + hr * 0.6)} ${r1(hy + hr * 0.4)}Q${r1(cx)} ${r1(hy + hr * 0.7)} ${r1(cx - hr * 0.6)} ${r1(hy + hr * 0.4)}Z" fill="#2A1A10"/>`;
+  return `<g class="of-foto"><circle class="of-glow" cx="${r1(cx)}" cy="${r1(y + h / 2)}" r="${r1(w * 0.8)}" fill="url(#${gid})" opacity=".5"/><rect x="${r1(x - 10)}" y="${r1(y - 10)}" width="${r1(w + 20)}" height="${r1(h + 20)}" rx="10" fill="${OX.amar}"/><rect x="${r1(x - 4)}" y="${r1(y - 4)}" width="${r1(w + 8)}" height="${r1(h + 8)}" rx="6" fill="${OX.magenta}"/><rect x="${r1(x)}" y="${r1(y)}" width="${r1(w)}" height="${r1(h)}" rx="3" fill="#E3CFA8"/><clipPath id="${gid}-c${kind}${Math.round(x)}"><rect x="${r1(x)}" y="${r1(y)}" width="${r1(w)}" height="${r1(h)}"/></clipPath><g clip-path="url(#${gid}-c${kind}${Math.round(x)})">${sil}</g></g>`;
+}
+
+/** Fleur de cempasuchil plus grosse avec tige/feuilles pour vase (cx, base, k). */
+function oxVase(cx, base, k, flowers) {
+  let s = `<path d="M${r1(cx - 26 * k)} ${r1(base)}h${r1(52 * k)}l${r1(-8 * k)} ${r1(-60 * k)}h${r1(-36 * k)}Z" fill="${OX.turq}"/><path d="M${r1(cx - 26 * k)} ${r1(base - 36 * k)}h${r1(52 * k)}" stroke="#fff" stroke-width="${r1(5 * k)}" opacity=".5"/>`;
+  [[-34, -100], [0, -126], [34, -98], [-12, -86], [16, -74]].slice(0, flowers || 5).forEach((f, i) => { s += `<path d="M${r1(cx)} ${r1(base - 58 * k)}L${r1(cx + f[0] * k)} ${r1(base + f[1] * k)}" stroke="#2F7F5A" stroke-width="${r1(5 * k)}"/>` + marigoldFlower(cx + f[0] * k, base + f[1] * k, 25 * k, i % 2 ? OX.naranja : OX.amar, i % 2 ? OX.amar : OX.naranja); });
+  return `<g class="of-flor">${s}</g>`;
+}
+
+/**
+ * Ofrenda a trois etages (viewBox 1000 x 820). Groupes animables : .of-cloth (nappes + papel picado, 3 etages .of-tier), .of-foto (x3), .of-vela (x6, .of-flame/.of-glow),
+ * .of-flor (x4), .of-pan (x3), .of-comida (assiette de mole + verre d'eau), .of-calavera, .of-arco (arche de fleurs). opts : uid, width.
+ */
+function ofrendaSvg(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('of'), gid = id + '-g', W = opts.width || 1000, H = Math.round(W * 0.82);
+  const tier = (x, y, w, h, c, c2, n) => `<g class="of-tier"><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/><rect x="${x}" y="${y}" width="${w}" height="14" fill="${c2}"/>${oxFlags(x, y + h - 2, w, n, x + 5, [OX.amar, OX.turq, OX.magenta, OX.naranja], 52).replace('stroke="#F5E6C8"', 'stroke="none"')}</g>`;
+  let s = `<defs>${oxGlowDef(gid)}</defs>`;
+  s += `<g class="of-arco"><path d="M120 760V260Q500 20 880 260V760" stroke="#2F7F5A" stroke-width="22" fill="none" stroke-linecap="round" opacity=".9"/>${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => { const a = Math.PI * (0.06 + i * 0.079); return marigoldFlower(Math.round(500 - Math.cos(a) * 394), Math.round(300 - Math.sin(a) * 270 + (i < 2 || i > 9 ? 120 : 0)), 22, i % 2 ? OX.naranja : OX.amar, i % 2 ? OX.amar : OX.naranja); }).join('')}</g>`;
+  s += `<g class="of-cloth">` + tier(300, 230, 400, 150, '#6B3E9A', '#8E5DBF', 6) + tier(190, 380, 620, 170, '#9A2F6B', '#C9487F', 9) + tier(70, 550, 860, 200, '#2B5FB0', '#4F8FE8', 12) + `</g>`;
+  s += `<g class="of-top">${oxFlags(150, 90, 700, 9, 11, [OX.magenta, OX.turq, OX.amar, OX.viol, OX.naranja], 100)}</g>`;
+  // etage haut : trois photos
+  s += oxPhoto(396, 100, 90, 110, 0, gid).replace('class="of-foto"', 'class="of-foto" data-i="0"');
+  s += oxPhoto(514, 100, 90, 110, 1, gid).replace('class="of-foto"', 'class="of-foto" data-i="1"');
+  s += `<g class="of-foto-big">${oxPhoto(446, 262, 108, 122, 2, gid).replace('class="of-foto"', 'class="of-foto" data-i="2"')}</g>`;
+  // bougies
+  [[330, 380, 70], [670, 380, 70], [240, 550, 56], [760, 550, 56], [150, 750, 70], [850, 750, 70]].forEach((c, i) => { s += oxCandle(c[0], c[1], c[2], gid, 1.1).replace('class="of-vela"', `class="of-vela" data-i="${i}"`); });
+  // fleurs
+  s += oxVase(400, 380, 0.9, 4).replace('class="of-flor"', 'class="of-flor" data-i="0"') + oxVase(600, 380, 0.9, 4).replace('class="of-flor"', 'class="of-flor" data-i="1"');
+  s += oxVase(330, 550, 1, 5).replace('class="of-flor"', 'class="of-flor" data-i="2"') + oxVase(670, 550, 1, 5).replace('class="of-flor"', 'class="of-flor" data-i="3"');
+  // calavera de azucar
+  s += `<g class="of-calavera">${oxCalavera(500, 500, 40, [OX.turq, OX.magenta, OX.amar])}</g>`;
+  // pan de muerto
+  [[250, 745, 50], [500, 748, 54], [750, 745, 50]].forEach((p, i) => { s += oxPan(p[0], p[1] - 30, p[2]).replace('class="of-pan"', `class="of-pan" data-i="${i}"`); });
+  // comida favorita : assiette de mole + verre d'eau + tamal
+  s += `<g class="of-comida"><ellipse cx="380" cy="742" rx="64" ry="18" fill="#F5E6C8"/><ellipse cx="380" cy="736" rx="52" ry="13" fill="#6B2A1E"/><circle cx="360" cy="728" r="12" fill="#C9573B"/><circle cx="392" cy="730" r="11" fill="#FFC83D"/><path d="M606 744h40l-6 -64h-28Z" fill="#CFE9F5" opacity=".7"/><path d="M609 710h34" stroke="#fff" stroke-width="4" opacity=".7"/><ellipse cx="500" cy="690" rx="0.1" ry="0.1" fill="none"/></g>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" width="${W}" height="${H}" class="of-svg" aria-hidden="true" style="overflow:visible">${s}</svg>`;
+}
+
+/** Accessoires isoles : 'calavera' (opts.pal) | 'catrina' | 'pan' | 'vela' | 'flor' | 'foto'. Renvoie un SVG (viewBox centre sur l'objet). opts : width, uid, pal, kind. */
+function oxProp(key, opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('oxp'), gid = id + '-g', W = opts.width || 200;
+  const mk = (vb, h, inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" width="${W}" height="${Math.round((W * h) / 200)}" class="ox-prop" aria-hidden="true" style="overflow:visible"><defs>${oxGlowDef(gid)}</defs>${inner}</svg>`;
+  if (key === 'calavera') return mk('0 0 200 200', 200, oxCalavera(100, 100, 80, opts.pal));
+  if (key === 'catrina') return mk('0 0 400 700', 700, oxCatrina(200, 700, 1.3));
+  if (key === 'pan') return mk('0 0 200 140', 140, oxPan(100, 70, 90));
+  if (key === 'vela') return mk('0 0 200 300', 300, oxCandle(100, 280, 120, gid, 2));
+  if (key === 'flor') return mk('0 0 200 200', 200, marigoldFlower(100, 100, 80, OX.naranja, OX.amar));
+  return mk('0 0 200 240', 240, oxPhoto(40, 30, 120, 150, opts.kind || 0, gid));
+}
+
+/** Sceau de papier generique (laurier, etoile, fleur de cempasuchil) : aucun symbole reel. viewBox 400 x 400. */
+function oxSeal(opts) {
+  opts = opts || {};
+  const W = opts.width || 300;
+  let leaves = '';
+  for (let i = 0; i < 9; i++) {
+    const t = (i + 0.5) / 9, a = Math.PI * (0.55 + 0.9 * t); // arc de gauche a droite en bas
+    const lx = 200 + Math.cos(a) * 138, ly = 200 - Math.sin(a) * 138 * -1;
+    leaves += `<ellipse cx="${r1(lx)}" cy="${r1(ly)}" rx="24" ry="10" transform="rotate(${r1((a * 180) / Math.PI + 90)} ${r1(lx)} ${r1(ly)})" fill="${i % 2 ? '#0E9F6E' : '#42E0A0'}"/>`;
+    const mx = 400 - lx;
+    leaves += `<ellipse cx="${r1(mx)}" cy="${r1(ly)}" rx="24" ry="10" transform="rotate(${r1(-(a * 180) / Math.PI - 90)} ${r1(mx)} ${r1(ly)})" fill="${i % 2 ? '#0E9F6E' : '#42E0A0'}"/>`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="${W}" height="${W}" class="ox-seal" aria-hidden="true" style="overflow:visible"><circle cx="200" cy="200" r="168" fill="#F5E6C8"/><circle cx="200" cy="200" r="150" fill="none" stroke="${OX.magenta}" stroke-width="8"/><circle cx="200" cy="200" r="128" fill="#2B1456"/>${leaves}${marigoldFlower(200, 196, 64, OX.naranja, OX.amar)}<path d="${sparklePath(200, 96, 30, 8)}" fill="#FFE9A8"/></svg>`;
+}
+
+// ---------------------------------------------------------------- panorama d'Oaxaca au crepuscule (3200 x 1200)
+const OAXACA_SKY = { W: 3200, H: 1200, street: 880 };
+/** Retourne { sky, sun (lune), far, mid, near, W, H, moonX, moonY, doors : [{ x, base }], stall : { x } }. Parallaxe : sky .15, sun .2, far .3, mid .6, near 1. */
+function oaxacaSkyline(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('ox'), g = (n) => `${id}-${n}`, W = OAXACA_SKY.W, H = OAXACA_SKY.H, base = 860, rnd = rng(opts.seed || 41);
+  let stars = ''; for (let i = 0; i < 46; i++) stars += `<circle cx="${r1(rnd() * W)}" cy="${r1(20 + rnd() * 380)}" r="${r1(1.5 + rnd() * 2.6)}" fill="#FFF3D1" opacity="${r1(0.4 + rnd() * 0.5)}"/>`;
+  let clouds = ''; [[500, 330, 520, 70], [1500, 240, 620, 80], [2500, 380, 540, 70]].forEach((c, i) => { clouds += cloudSvg(c[0], c[1], c[2], c[3], 71 + i * 4, 'dusk'); });
+  const sky = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B1252"/><stop offset=".3" stop-color="#4A2078"/><stop offset=".5" stop-color="#B2406F"/><stop offset=".64" stop-color="#F0703F"/><stop offset=".74" stop-color="#FFA33A"/></linearGradient></defs>${scRect(0, 0, W, 900, `url(#${g('s')})`)}${stars}${clouds}`, 'ox-sky');
+  const mx = 2250, my = 300;
+  const sun = scSvg(W, H, `<defs><radialGradient id="${g('m')}"><stop offset="0" stop-color="#FFF3D1" stop-opacity=".7"/><stop offset=".4" stop-color="#FFD98A" stop-opacity=".25"/><stop offset="1" stop-color="#FF9F1C" stop-opacity="0"/></radialGradient></defs><circle cx="${mx}" cy="${my}" r="330" fill="url(#${g('m')})"/><circle class="sk-disc" cx="${mx}" cy="${my}" r="104" fill="#FFF3D1"/><circle cx="${mx - 30}" cy="${my - 20}" r="22" fill="#F1DDAE" opacity=".7"/><circle cx="${mx + 34}" cy="${my + 28}" r="16" fill="#F1DDAE" opacity=".7"/>`, 'ox-sun');
+  // lointain : collines + eglise baroque en cantera + pyramide a degres
+  let hills = `M0 ${base - 20}`; for (let x = 0; x <= W; x += 80) hills += `L${x} ${r1(base - 120 - 70 * Math.sin(x / 420) - 28 * Math.sin(x / 130 + 1))}`; hills += `L${W} ${base}L0 ${base}Z`;
+  const ch = (x) => `<g fill="#5A2F6E"><rect x="${x}" y="${base - 300}" width="360" height="300"/><rect x="${x - 40}" y="${base - 190}" width="440" height="190"/><rect x="${x - 10}" y="${base - 380}" width="100" height="120"/><rect x="${x + 270}" y="${base - 380}" width="100" height="120"/><path d="M${x - 10} ${base - 380}Q${x + 40} ${base - 450} ${x + 90} ${base - 380}Z"/><path d="M${x + 270} ${base - 380}Q${x + 320} ${base - 450} ${x + 370} ${base - 380}Z"/><path d="M${x + 110} ${base - 300}Q${x + 180} ${base - 420} ${x + 250} ${base - 300}Z"/></g><g fill="#FFD98A" opacity=".55"><path d="${archOpen(x + 150, base - 120, 60, 110)}"/><circle cx="${x + 180}" cy="${base - 240}" r="22"/></g>`;
+  const pyr = (x) => `<g fill="#4B2566"><path d="M${x} ${base}L${x + 40} ${base - 70}H${x + 340}L${x + 380} ${base}Z"/><path d="M${x + 60} ${base - 70}L${x + 90} ${base - 140}H${x + 290}L${x + 320} ${base - 70}Z"/><path d="M${x + 120} ${base - 140}L${x + 140} ${base - 200}H${x + 240}L${x + 260} ${base - 140}Z"/></g>`;
+  const far = scSvg(W, H, `<path d="${hills}" fill="#6A3380" opacity=".8"/>${pyr(2750)}<g transform="translate(1080 ${base}) scale(1.6) translate(-1080 ${-base})">${ch(900)}</g><g opacity=".75" transform="translate(2180 ${base}) scale(1.4) translate(-2180 ${-base})">${ch(2000).replace(/#5A2F6E/g, '#6A3380')}</g>${scRect(0, base - 2, W, 14, '#5A2F6E')}`, 'ox-far');
+  // milieu : facades coloniales, fenetres allumees, guirlandes de papel picado
+  const tones = [OX.ocre, OX.rosa, OX.turq, OX.azul, OX.terra, OX.amar, OX.viol];
+  let houses = '', garl = '', x = -40, n = 0; const doors = [], tops = [];
+  while (x < W + 40) {
+    const w = 250 + rnd() * 100, h = 320 + rnd() * 100, c = tones[n % tones.length]; n++;
+    houses += `<g class="ox-house">${scRect(x, base - h, w, h, c)}${scRect(x + w - 16, base - h, 16, h, '#000', 'opacity=".12"')}${scRect(x - 6, base - h - 14, w + 12, 18, shade(c, -0.2))}${scRect(x, base - 44, w, 44, shade(c, -0.18))}`;
+    const nw = 2;
+    for (let i = 0; i < nw; i++) { const wx = i ? x + w - 22 - 46 : x + 22; houses += `<g class="ox-win"><path d="${archOpen(wx, base - h + 160, 46, 86)}" fill="#FFD98A"/><path d="M${wx + 23} ${base - h + 74}V${base - h + 160}M${wx} ${base - h + 118}H${wx + 46}" stroke="#7E2F1E" stroke-width="4"/></g>${scRect(wx - 8, base - h + 162, 62, 8, shade(c, -0.3))}`; }
+    const dx = x + w / 2 - 48; houses += `<path d="${archOpen(dx, base, 96, 250)}" fill="#3B1B3C"/><path d="${archOpen(dx + 10, base, 76, 236)}" fill="#6B3E52" opacity=".7"/>`;
+    doors.push({ x: Math.round(dx + 48), base });
+    houses += '</g>'; tops.push({ x: x + w / 2, y: base - h - 14 }); x += w + 14;
+  }
+  for (let i = 0; i < tops.length - 1; i += 2) {
+    const a = tops[i], b = tops[i + 1], mid = (a.x + b.x) / 2, sag = 70, cols = [OX.magenta, OX.turq, OX.amar, OX.viol, OX.naranja];
+    garl += `<path d="M${r1(a.x)} ${r1(a.y)}Q${r1(mid)} ${r1(a.y + sag * 2)} ${r1(b.x)} ${r1(b.y)}" stroke="#F5E6C8" stroke-width="3" fill="none" opacity=".85"/>`;
+    for (let k = 1; k <= 7; k++) { const t = k / 8, fx = a.x + (b.x - a.x) * t, fy = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * (a.y + sag * 2) + t * t * b.y; garl += `<g class="m-flag" data-px="${r1(fx)}" data-py="${r1(fy)}"><path d="M${r1(fx - 20)} ${r1(fy)}H${r1(fx + 20)}V${r1(fy + 44)}L${r1(fx + 10)} ${r1(fy + 38)}L${r1(fx)} ${r1(fy + 46)}L${r1(fx - 10)} ${r1(fy + 38)}L${r1(fx - 20)} ${r1(fy + 44)}Z${circlePath(fx, fy + 22, 7)}" fill="${cols[(i + k) % cols.length]}" fill-rule="evenodd"/></g>`; }
+  }
+  const mid = scSvg(W, H, `${houses}${garl}${scRect(0, base, W, 40, '#4B2F55')}`, 'ox-mid');
+  // premier plan : pavés, petales de cempasuchil, bougies le long de la rue
+  const gid = g('cg'); let stones = '', petals = '', can = '';
+  for (let r = 0; r < 7; r++) { const y = 900 + r * r * 5 + r * 22; for (let xx = (r % 2) * 50; xx < W; xx += 100 + r * 8) stones += `<path d="M${xx} ${y}q${50 + r * 4} -16 ${100 + r * 8} 0" stroke="#2B1840" stroke-width="3" fill="none" opacity=".45"/>`; }
+  for (let i = 0; i < 90; i++) { const px = 40 + (i / 90) * 3100 + (rnd() - 0.5) * 60, py = 960 + Math.sin(i * 0.3) * 40 + (rnd() - 0.5) * 80; petals += `<ellipse class="ox-petal" cx="${r1(px)}" cy="${r1(py)}" rx="${r1(9 + rnd() * 6)}" ry="${r1(5 + rnd() * 3)}" transform="rotate(${r1(rnd() * 180)} ${r1(px)} ${r1(py)})" fill="${i % 3 ? OX.naranja : OX.amar}"/>`; }
+  for (let i = 0; i < 9; i++) can += oxCandle(180 + i * 360, 1150 - (i % 2) * 40, 54, gid, 1.2);
+  const near = scSvg(W, H, `<defs>${oxGlowDef(gid)}</defs>${scRect(0, 880, W, 320, '#5A3358')}${scRect(0, 880, W, 12, '#7A4A6E')}${stones}${petals}${can}`, 'ox-near');
+  return { sky, sun, far, mid, near, W, H, moonX: mx, moonY: my, doors, stall: { x: 1700 } };
+}
+
+/** Etal de rue (viewBox 640 x 420) : table a nappe brodee, pan de muerto, calaveras de azucar, alebrijes, fanions. Pied de table en (320, 410). */
+function oaxacaStall(opts) {
+  opts = opts || {};
+  const W = opts.width || 640;
+  let s = `<rect x="40" y="70" width="12" height="340" fill="#6B3E26"/><rect x="588" y="70" width="12" height="340" fill="#6B3E26"/><path d="M20 90Q320 40 620 90L620 130H20Z" fill="${OX.magenta}"/>${oxFlags(30, 126, 580, 11, 5, [OX.amar, OX.turq, OX.naranja, OX.viol], 60)}`;
+  s += `<rect x="40" y="250" width="560" height="160" fill="${OX.viol}"/><rect x="40" y="250" width="560" height="14" fill="#B58BE0"/>${embroideryBand(60, 350, 520, 36, '#FFFDF4', OX.magenta)}`;
+  [90, 170, 250].forEach((x, i) => { s += oxPan(x + 30, 232, 40 + (i % 2) * 6); });
+  [[360, '#D93472'], [440, '#19B7AA'], [520, '#FFC83D']].forEach((c, i) => { s += oxCalavera(c[0] + 10, 214, 34, [c[1], OX.naranja, OX.turq]); });
+  [[330, 168], [480, 164]].forEach((a, i) => { s += `<g class="ox-alebrije"><ellipse cx="${a[0]}" cy="${a[1]}" rx="46" ry="26" fill="${i ? OX.turq : OX.naranja}"/><circle cx="${a[0] + 44}" cy="${a[1] - 18}" r="22" fill="${i ? OX.amar : OX.magenta}"/><path d="M${a[0] + 36} ${a[1] - 34}l-6 -22l16 12ZM${a[0] + 56} ${a[1] - 34}l8 -20l6 22Z" fill="${OX.viol}"/><circle cx="${a[0] + 50}" cy="${a[1] - 20}" r="4" fill="#2A1040"/><path d="M${a[0] - 40} ${a[1] + 20}v28M${a[0] - 14} ${a[1] + 24}v26M${a[0] + 14} ${a[1] + 24}v26M${a[0] + 36} ${a[1] + 20}v28" stroke="#6B3E26" stroke-width="7" stroke-linecap="round"/><g fill="#fff" opacity=".8"><circle cx="${a[0] - 20}" cy="${a[1] - 4}" r="5"/><circle cx="${a[0]}" cy="${a[1] + 6}" r="5"/><circle cx="${a[0] + 16}" cy="${a[1] - 8}" r="5"/></g></g>`; });
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="${W}" height="${Math.round(W * 420 / 640)}" class="ox-stall" aria-hidden="true" style="overflow:visible">${s}</svg>`;
+}
+
+// ---------------------------------------------------------------- patio d'Oaxaca de nuit avec petit autel (2400 x 1200)
+const OX_PATIO = { W: 2400, H: 1200, floor: 900, altar: { x: 640, y: 760 } };
+/** Retourne { back, front, light, W, H, floor, altar, candles : [{x, y}] }. Flammes : .of-flame (pied data-px/data-py) ; halos .of-glow ; tout l'autel dans back. */
+function patioOfrenda(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('po'), g = (n) => `${id}-${n}`, W = OX_PATIO.W, H = OX_PATIO.H, fl = OX_PATIO.floor, A = OX_PATIO.altar, rnd = rng(opts.seed || 52), gid = g('cg');
+  let stars = ''; for (let i = 0; i < 34; i++) stars += `<circle cx="${r1(rnd() * W)}" cy="${r1(10 + rnd() * 110)}" r="${r1(1.4 + rnd() * 2.2)}" fill="#FFF3D1" opacity="${r1(0.4 + rnd() * 0.5)}"/>`;
+  let wall = `<path d="M0 ${fl}V230H${W}V${fl}Z" fill="url(#${g('w')})"/>`;
+  for (let i = 0; i < 30; i++) wall += `<path d="M${r1(rnd() * W)} ${r1(260 + rnd() * 600)}h${r1(60 + rnd() * 120)}" stroke="#5A2A2A" stroke-width="3" opacity=".12"/>`;
+  // arche de fond (porte vers la rue de nuit) + fenetre
+  wall += `<path d="${archOpen(1500, fl, 300, 520)}" fill="#1A1348"/><path d="${archOpen(1500, fl, 300, 520)}" fill="none" stroke="#E0699A" stroke-width="16"/><path d="${archOpen(1530, fl - 330, 240, 200)}" fill="#2B1F6E" opacity=".0"/>` + `<g fill="#FFD98A" opacity=".5">${[0, 1, 2].map((i) => `<circle cx="${1580 + i * 70}" cy="${fl - 360 - (i % 2) * 40}" r="6"/>`).join('')}</g>`;
+  wall += `<path d="${archOpen(1890, fl - 150, 230, 230)}" fill="#1A1348"/><path d="${archOpen(1890, fl - 150, 230, 230)}" fill="none" stroke="#19B7AA" stroke-width="14"/>`;
+  // bandeau de papel picado sur le mur
+  wall += `<g>${oxFlags(0, 290, W, 24, 8, [OX.magenta, OX.turq, OX.amar, OX.viol, OX.naranja], 96)}</g>`;
+  // autel : table, nappe, retablo de papier, photos, fleurs, bougies
+  const tx = A.x - 360, tw = 720, ty = A.y;
+  let altar = `<g class="po-altar"><rect x="${tx}" y="${ty}" width="${tw}" height="${fl - ty}" fill="#8E3A5E"/><rect x="${tx - 14}" y="${ty - 18}" width="${tw + 28}" height="26" rx="8" fill="#B8537F"/>${oxFlags(tx - 14, fl - 4, tw + 28, 10, 9, [OX.amar, OX.turq, OX.naranja, OX.viol], 70).replace('stroke="#F5E6C8"', 'stroke="none"')}`;
+  altar += `<rect x="${tx + 70}" y="${ty - 250}" width="${tw - 140}" height="240" rx="10" fill="#5A2F86"/><rect x="${tx + 70}" y="${ty - 250}" width="${tw - 140}" height="16" fill="#8E5DBF"/>${oxFlags(tx + 70, ty - 250, tw - 140, 7, 13, [OX.magenta, OX.turq, OX.amar, OX.naranja], 70).replace('stroke="#F5E6C8"', 'stroke="none"')}`;
+  altar += oxPhoto(A.x - 70, ty - 200, 140, 170, 2, gid).replace('class="of-foto"', 'class="of-foto po-photo"') + oxPhoto(A.x - 250, ty - 190, 100, 130, 0, gid) + oxPhoto(A.x + 150, ty - 190, 100, 130, 1, gid);
+  altar += oxVase(A.x - 300, ty - 6, 1.0, 4) + oxVase(A.x + 300, ty - 6, 1.0, 4) + oxPan(A.x - 130, ty - 40, 44) + oxPan(A.x + 130, ty - 40, 44) + oxCalavera(A.x, ty - 36, 36, [OX.turq, OX.magenta, OX.amar]);
+  const cs = [[A.x - 210, ty - 6, 66], [A.x - 90, ty - 6, 50], [A.x + 20, ty - 6, 58], [A.x + 110, ty - 6, 50], [A.x + 220, ty - 6, 66]], candles = [];
+  cs.forEach((c, i) => { altar += oxCandle(c[0], c[1], c[2], gid, 1.2).replace('class="of-vela"', `class="of-vela" data-i="${i}"`); candles.push({ x: c[0], y: c[1] - c[2] - 40 }); });
+  altar += '</g>';
+  // sol de dalles + chemin de petales vers l'autel
+  let tiles = ''; for (let r = 0; r < 8; r++) { const y = fl + Math.pow(r / 8, 1.4) * (H - fl); tiles += `<path d="M-400 ${r1(y)}H${W + 400}" stroke="#2B1840" stroke-width="3" opacity=".4"/>`; }
+  let pet = ''; for (let i = 0; i < 40; i++) { const px = 300 + i * 40 + (rnd() - 0.5) * 30, py = fl + 40 + (i % 5) * 30 + rnd() * 20; pet += `<ellipse cx="${r1(px)}" cy="${r1(py)}" rx="12" ry="6" transform="rotate(${r1(rnd() * 180)} ${r1(px)} ${r1(py)})" fill="${i % 3 ? OX.naranja : OX.amar}" opacity=".95"/>`; }
+  const back = scSvg(W, H, `<defs><linearGradient id="${g('w')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E3A55"/><stop offset="1" stop-color="#A4604A"/></linearGradient><linearGradient id="${g('sk')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15104A"/><stop offset="1" stop-color="#3A1F6E"/></linearGradient><linearGradient id="${g('f')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A2C48"/><stop offset="1" stop-color="#2B1840"/></linearGradient>${oxGlowDef(gid)}</defs>${scRect(0, 0, W, 260, `url(#${g('sk')})`)}${stars}${wall}${scRect(0, 224, W, 22, '#B8672F')}<path d="M0 ${fl}H${W}L${W + 400} ${H}H-400Z" fill="url(#${g('f')})"/>${tiles}${pet}${altar}`, 'po-back');
+  const leaf = (a, c, k) => `<path d="M0 0Q${52 * k} -90 0 -190Q${-52 * k} -90 0 0Z" fill="${c}" transform="rotate(${a})"/>`;
+  const front = scSvg(W, H, [[110, 1110, 1.3, '#C9573B'], [2290, 1100, 1.4, '#2B5FB0']].map((p) => `<g transform="translate(${p[0]} ${p[1]}) scale(${p[2]})"><path d="M-70 0h140l-18 -150h-104Z" fill="${p[3]}"/><g transform="translate(0 -150)">${[-60, -30, 0, 30, 60].map((a, j) => leaf(a, ['#2F7F5A', '#0E9F6E', '#3F8A52'][j % 3], 0.9)).join('')}${marigoldFlower(-30, -150, 24, OX.naranja, OX.amar)}${marigoldFlower(26, -170, 24, OX.naranja, OX.amar)}</g></g>`).join(''), 'po-front');
+  const light = scSvg(W, H, `<defs><radialGradient id="${g('lg')}"><stop offset="0" stop-color="#FFC96A" stop-opacity=".5"/><stop offset="1" stop-color="#FFC96A" stop-opacity="0"/></radialGradient></defs><ellipse class="po-light" cx="${A.x}" cy="${A.y - 100}" rx="760" ry="520" fill="url(#${g('lg')})"/>`, 'po-light');
+  return { back, front, light, W, H, floor: fl, altar: A, candles };
+}
+
+// ---------------------------------------------------------------- chemin de petales (2400 x 1200) : rue de nuit, maison a la porte ouverte, petales et bougies
+/** Retourne { svg, W, H, path : [[x,y]...] (centre de chaque petale, dans l'ordre), door : { x, y, w, h } }. Classes : .pp-petal (data-i), .pp-candle (.of-flame/.of-glow, data-i = indice du petale), .pp-door (halo), .pp-house. */
+function oaxacaPetalPath(opts) {
+  opts = opts || {};
+  const id = opts.uid || uid('pp'), g = (n) => `${id}-${n}`, W = 2400, H = 1200, rnd = rng(opts.seed || 63), gid = g('cg');
+  let stars = ''; for (let i = 0; i < 40; i++) stars += `<circle cx="${r1(rnd() * W)}" cy="${r1(20 + rnd() * 330)}" r="${r1(1.4 + rnd() * 2.4)}" fill="#FFF3D1" opacity="${r1(0.4 + rnd() * 0.5)}"/>`;
+  let row = ''; [[0, 240, 360], [380, 200, 320], [730, 260, 380], [1130, 190, 320]].forEach((h, i) => { row += `<g>${scRect(h[0], 700 - h[1], h[2] - 20, h[1], ['#2B2A7A', '#3A2A82', '#2F2478', '#3C3090'][i])}<path d="${archOpen(h[0] + 40, 700, 50, 90)}" fill="#FFD98A" opacity=".6"/><path d="${archOpen(h[0] + h[2] - 120, 700, 50, 90)}" fill="#FFD98A" opacity=".35"/></g>`; });
+  const door = { x: 1880, y: 560, w: 200, h: 300 };
+  const house = `<g class="pp-house">${scRect(1640, 330, 700, 530, '#E8A33A')}${scRect(1640, 330, 700, 20, '#B8672F')}${scRect(2300, 330, 40, 530, '#000', 'opacity=".14"')}${scRect(1640, 810, 700, 50, '#C9573B')}<path d="${archOpen(door.x - 20, 860, door.w + 40, door.h + 40)}" fill="#E0699A"/><path d="${archOpen(door.x, 860, door.w, door.h)}" fill="url(#${g('d')})"/><rect class="pp-door" x="${door.x - 90}" y="${door.y - 40}" width="${door.w + 180}" height="${door.h + 120}" rx="90" fill="url(#${g('dg')})" opacity="0"/><path d="${archOpen(1690, 640, 70, 110)}" fill="#3B1B3C"/><path d="${archOpen(2200, 640, 70, 110)}" fill="#3B1B3C"/>${scRect(1600, 860, 780, 24, '#7A4A6E')}</g>`;
+  const fl = 860; let cob = ''; for (let r = 0; r < 8; r++) { const y = fl + 20 + r * r * 5 + r * 24; for (let xx = (r % 2) * 60; xx < W; xx += 120 + r * 8) cob += `<path d="M${xx} ${y}q${60 + r * 4} -16 ${120 + r * 8} 0" stroke="#2B1840" stroke-width="3" fill="none" opacity=".45"/>`; }
+  // courbe du chemin : (120, 1080) -> (door.x + 100, 880), S legere
+  const P = (t) => [120 + (door.x + 100 - 120) * t, 1080 - 200 * t + Math.sin(t * Math.PI * 2) * 70 * (1 - t * 0.6)];
+  const path = []; let pet = '', can = '';
+  for (let i = 0; i < 64; i++) { const t = i / 63, p = P(t), px = p[0] + (rnd() - 0.5) * 70, py = p[1] + (rnd() - 0.5) * 36; path.push([r1(px), r1(py)]); pet += `<ellipse class="pp-petal" data-i="${i}" cx="${r1(px)}" cy="${r1(py)}" rx="${r1(13 + rnd() * 6)}" ry="${r1(7 + rnd() * 3)}" transform="rotate(${r1(rnd() * 180)} ${r1(px)} ${r1(py)})" fill="${i % 3 ? OX.naranja : OX.amar}"/>`; }
+  for (let i = 0; i < 64; i += 4) { const t = i / 63, p = P(t), side = (i / 4) % 2 ? 1 : -1; can += oxCandle(p[0] + side * 100, p[1] + 20 + side * 8, 46, gid, 1.2).replace('class="of-vela"', `class="of-vela pp-candle" data-i="${i}"`); }
+  const svg = scSvg(W, H, `<defs><linearGradient id="${g('s')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F1245"/><stop offset=".6" stop-color="#2A1A6E"/><stop offset="1" stop-color="#5A2A7A"/></linearGradient><linearGradient id="${g('d')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE6A8"/><stop offset="1" stop-color="#F0964A"/></linearGradient><radialGradient id="${g('dg')}"><stop offset="0" stop-color="#FFC96A" stop-opacity=".6"/><stop offset="1" stop-color="#FFC96A" stop-opacity="0"/></radialGradient><linearGradient id="${g('f')}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A2C58"/><stop offset="1" stop-color="#2B1840"/></linearGradient>${oxGlowDef(gid)}</defs>${scRect(0, 0, W, 880, `url(#${g('s')})`)}${stars}<circle cx="520" cy="190" r="70" fill="#FFF3D1" opacity=".92"/>${row}${house}<path d="M0 ${fl}H${W}V${H}H0Z" fill="url(#${g('f')})"/>${cob}${can}${pet}`, 'pp-svg');
+  return { svg, W, H, path, door };
+}
+
+window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica,coyoacanSkyline,PLAZA,plazaHidalgo,CASAP,casaAzulPatio,autorretrato,mxProp,ofrendaSvg,oxProp,oxSeal,OAXACA_SKY,oaxacaSkyline,oaxacaStall,OX_PATIO,patioOfrenda,oaxacaPetalPath};
 })();
