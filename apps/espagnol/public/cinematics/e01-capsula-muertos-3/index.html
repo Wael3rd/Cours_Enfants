@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>e01-capsula-muertos-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .pcard { position: absolute; left: 0; top: 0; width: 200px; height: 240px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); }
+      .pcard svg { position: absolute; left: -2px; bottom: -4px; }
+
+      #p1 { position: absolute; inset: 0; overflow: hidden; }
+      #subs .sub-txt { font-size: 44px; line-height: 1.2; }
+      .scn { position: absolute; left: 0; top: 0; width: 2400px; height: 1500px; transform-origin: 0 0; }
+      .scn svg { display: block; }
+      .spirit { position: absolute; left: 0; top: 0; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,226,150,.9), rgba(255,200,100,.35) 55%, rgba(255,200,100,0)); opacity: 0; z-index: 8; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="e01-capsula-muertos-3" data-start="0" data-width="1920" data-height="1200" data-duration="10.337">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.337" data-media-start="14.329" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":10.037,"v":1},{"t":10.337,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.a660d5167b.mp3" data-start="0.6" data-duration="8.487" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/star.mp3" data-start="7.11" data-duration="0.121" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/door-open.mp3" data-start="8.187" data-duration="0.916" data-track-index="5" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"e01-capsula-muertos-3","cinematica":"e01-capsula-muertos","part":3,"parts":4,"total":10.337,"meta":{"cinematica":"e01-capsula-muertos","titulo":"Día de Muertos: una fiesta, no Halloween","tipo":"capsula","unidad":"Día de Muertos","numero":0,"lugar":"Oaxaca","pluma":"Pluma de Cempasúchil","plumaNum":0,"rotulo":"","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":10.087,"vista":"Un chemin de pétales orange part de la rue et mène jusqu’à la porte d’une maison, éclairé par des bougies.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Los pétalos de cempasúchil hacen un camino de color naranja. Según la tradición, este camino guía a los muertos hasta su casa.","key":"narrador.a660d5167b","t":0.6,"d":8.487,"words":[{"w":"Los","t":0.6,"d":0.24},{"w":"pétalos","t":0.84,"d":0.457},{"w":"de","t":1.297,"d":0.185},{"w":"cempasúchil","t":1.482,"d":0.675},{"w":"hacen","t":2.157,"d":0.349},{"w":"un","t":2.506,"d":0.185},{"w":"camino","t":2.691,"d":0.403},{"w":"de","t":3.094,"d":0.185},{"w":"color","t":3.279,"d":0.349},{"w":"naranja.","t":3.628,"d":0.457},{"w":"Según","t":5.072,"d":0.355},{"w":"la","t":5.428,"d":0.189},{"w":"tradición,","t":5.616,"d":0.577},{"w":"este","t":6.456,"d":0.276},{"w":"camino","t":6.732,"d":0.378},{"w":"guía","t":7.11,"d":0.276},{"w":"a","t":7.385,"d":0.123},{"w":"los","t":7.508,"d":0.225},{"w":"muertos","t":7.732,"d":0.429},{"w":"hasta","t":8.161,"d":0.327},{"w":"su","t":8.488,"d":0.174},{"w":"casa.","t":8.661,"d":0.276}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":7.11,"f":"ui/star"},{"t":8.187,"f":"rpg/door-open"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total;
+
+        var P = C.planOf(PLAN, 3), w = function (k) { return C.wordT(PLAN, 3, 1, k); };
+        var p1 = $("#p1"); Cap.css();
+        var pp = Q.oaxacaPetalPath({ uid: "pp" });
+        var sc = mk(p1, "scn", pp.svg);
+        var svg = sc.querySelector("svg"); svg.setAttribute("data-layout-allow-overflow", "");
+        var petals = svg.querySelectorAll(".pp-petal"), cands = svg.querySelectorAll(".pp-candle"), door = svg.querySelector(".pp-door");
+        gsap.set(petals, { opacity: 0 }); gsap.set(cands, { opacity: 0 });
+        // camera : travelling lateral le long du chemin, leger zoom vers la maison
+        gsap.set(sc, { x: 0, y: -520, scale: 1.2 });
+        tl.to(sc, { x: -1180, y: -403, scale: 1.3, duration: T, ease: "power1.inOut" }, 0);
+        // le chemin de petales se dessine petale par petale (de « petalos » a « naranja »)
+        var tS = w(2), tE = w(10) + 0.2, n = petals.length;
+        petals.forEach(function (pt, i) {
+          var t = tS + (i / (n - 1)) * (tE - tS), cx = pp.path[i][0], cy = pp.path[i][1];
+          tl.fromTo(pt, { opacity: 0, scale: 0.2, svgOrigin: cx + " " + cy }, { opacity: 1, scale: 1, svgOrigin: cx + " " + cy, duration: 0.3, ease: "sine.out", immediateRender: false }, t);
+        });
+        cands.forEach(function (c) {
+          var i = +c.dataset.i, t = tS + (i / (n - 1)) * (tE - tS);
+          tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out", immediateRender: false }, t);
+          var fl = c.querySelector(".of-flame"), gl = c.querySelector(".of-glow");
+          tl.fromTo(fl, { scale: 0.95, svgOrigin: fl.dataset.px + " " + fl.dataset.py }, { scale: 1.06, svgOrigin: fl.dataset.px + " " + fl.dataset.py, duration: 0.9 + (i % 3) * 0.15, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - t, 0.9) }, t + 0.3);
+          tl.fromTo(gl, { opacity: 0.7 }, { opacity: 1, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - t, 1.6) }, t + 0.3);
+        });
+        tl.to(door, { opacity: 0.35, duration: 1.0, ease: "sine.inOut" }, w(7));
+        // pastille « el camino de cempasuchil »
+        var chip = Cap.chip(p1, "el camino de cempasúchil", 96, 230, "gold"); chip.style.background = "#0d1038"; gsap.set(chip, { scale: 0 }); tl.fromTo(chip, { scale: 0.3, y: 270 }, { scale: 1, y: 230, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, w(7) - 0.05);
+        tl.to(chip, { scale: 0, y: "-=16", duration: 0.3, ease: "power2.in" }, w(11) + 0.2);
+        // « guia » : une petite lueur doree suit le chemin jusqu'a la porte, qui s'illumine
+        var sp = mk(sc, "spirit"); var tG = w(16), dur = 3.2;
+        var pts = pp.path.filter(function (_, i) { return i % 4 === 0; }).map(function (p) { return { x: p[0] - 75, y: p[1] - 75 }; });
+        pts.push({ x: pp.door.x + 100 - 75, y: pp.door.y + 200 - 75 });
+        gsap.set(sp, { x: pts[0].x, y: pts[0].y });
+        tl.fromTo(sp, { opacity: 0 }, { opacity: 0.8, duration: 0.4, ease: "sine.out", immediateRender: false }, tG - 0.05);
+        tl.to(sp, { motionPath: { path: pts, curviness: 1.2 }, duration: dur, ease: "power1.inOut" }, tG);
+        tl.to(sp, { opacity: 0, duration: 0.5, ease: "sine.in" }, tG + dur - 0.2);
+        tl.to(door, { opacity: 0.95, duration: 0.6, ease: "sine.inOut" }, tG + dur - 0.3);
+        tl.to(door, { opacity: 0.7, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - tG - dur, 1.2) }, tG + dur + 0.4);
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["e01-capsula-muertos-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

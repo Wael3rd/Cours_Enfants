@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>e01-capsula-muertos-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .pcard { position: absolute; left: 0; top: 0; width: 200px; height: 240px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); }
+      .pcard svg { position: absolute; left: -2px; bottom: -4px; }
+
+      #g4, #g5 { position: absolute; inset: 0; }
+      .pc { position: absolute; left: 0; top: 0; width: 330px; height: 420px; border-radius: 30px; overflow: hidden; background: #f5e6c8; box-shadow: 0 14px 0 rgba(0,0,0,.35), inset 0 0 0 8px #e6ce9f; z-index: 5; }
+      .pc svg { position: absolute; }
+      .row { position: absolute; left: 0; right: 0; top: 770px; display: flex; justify-content: center; align-items: center; gap: 44px; z-index: 12; }
+      .cap-chip.rel { position: relative; left: auto; top: auto; }
+      .neq { font: 400 120px/1 "Alfa Slab One", serif; color: #ffc83d; text-shadow: 0 6px 0 rgba(0,0,0,.45); }
+      #xm { position: absolute; left: 0; top: 0; width: 1920px; height: 1440px; transform-origin: 0 0; }
+      #xm svg { width: 1920px; height: 1440px; display: block; }
+      .yr { position: absolute; left: 1330px; top: 150px; width: 480px; text-align: center; font: 400 170px/1 "Alfa Slab One", serif; color: #ffc83d; text-shadow: 0 8px 0 rgba(0,0,0,.5); z-index: 6; }
+      .seal { position: absolute; left: 1380px; top: 350px; z-index: 6; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="e01-capsula-muertos-4" data-start="0" data-width="1920" data-height="1200" data-duration="10.368">
+      <div id="g4" data-layout-allow-overflow></div><div id="g5" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.368" data-media-start="24.666" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.168,"v":1},{"t":10.368,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.d3adf249c3.mp3" data-start="0.35" data-duration="4.195" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-5-1" src="./assets/voz/narrador.d59e75acb7.mp3" data-start="4.995" data-duration="4.673" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="2.174" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.955" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="4.495" data-duration="0.212" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="5.338" data-duration="0.121" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/level-up.mp3" data-start="8.768" data-duration="0.37" data-track-index="8" data-volume="0.35"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"e01-capsula-muertos-4","cinematica":"e01-capsula-muertos","part":4,"parts":4,"total":10.368,"meta":{"cinematica":"e01-capsula-muertos","titulo":"Día de Muertos: una fiesta, no Halloween","tipo":"capsula","unidad":"Día de Muertos","numero":0,"lugar":"Oaxaca","pluma":"Pluma de Cempasúchil","plumaNum":0,"rotulo":"","region":"mexico"},"plans":[{"n":4,"t0":0,"t1":4.695,"vista":"Montage joyeux : calaveras de sucre colorées, la Catrina, papel picado, musiciens et familles ; un signe « ≠ » entre « Halloween » et « Día de Muertos », sans moquerie.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"No es Halloween: es una fiesta alegre, con música, colores y comida.","key":"narrador.d3adf249c3","t":0.35,"d":4.195,"words":[{"w":"No","t":0.35,"d":0.183},{"w":"es","t":0.533,"d":0.183},{"w":"Halloween:","t":0.716,"d":0.56},{"w":"es","t":1.449,"d":0.162},{"w":"una","t":1.611,"d":0.21},{"w":"fiesta","t":1.821,"d":0.353},{"w":"alegre,","t":2.174,"d":0.353},{"w":"con","t":2.745,"d":0.21},{"w":"música,","t":2.955,"d":0.353},{"w":"colores","t":3.526,"d":0.401},{"w":"y","t":3.927,"d":0.114},{"w":"comida.","t":4.042,"d":0.353}]}]},{"n":5,"t0":4.695,"t1":10.118,"vista":"Logo de la UNESCO et carte du Mexique qui s’illumine ; texte « Patrimonio Cultural Inmaterial de la Humanidad · 2008 ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Desde 2008, esta tradición es Patrimonio Cultural Inmaterial de la Humanidad.","key":"narrador.d59e75acb7","t":4.995,"d":4.673,"words":[{"w":"Desde","t":4.995,"d":0.343},{"w":"2008,","t":5.338,"d":0.289},{"w":"esta","t":5.847,"d":0.289},{"w":"tradición","t":6.136,"d":0.557},{"w":"es","t":6.692,"d":0.182},{"w":"Patrimonio","t":6.874,"d":0.61},{"w":"Cultural","t":7.484,"d":0.503},{"w":"Inmaterial","t":7.988,"d":0.61},{"w":"de","t":8.598,"d":0.182},{"w":"la","t":8.78,"d":0.182},{"w":"Humanidad.","t":8.962,"d":0.557}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":2.174,"f":"ui/pop"},{"t":2.955,"f":"ui/pop"},{"t":4.495,"f":"ui/swoosh-out"},{"t":5.338,"f":"ui/star"},{"t":8.768,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total;
+
+        var P4 = C.planOf(PLAN, 4), P5 = C.planOf(PLAN, 5), w4 = function (k) { return C.wordT(PLAN, 4, 1, k); }, w5 = function (k) { return C.wordT(PLAN, 5, 1, k); };
+        Cap.bg(root, $("#g4"));
+        var g4 = $("#g4"), g5 = $("#g5"), T5 = P5.t0;
+        // ===== plan 4 : une fete alegre (montage de papier) =====
+        var card = function (i, inner, label, at, cls) {
+          var x = 240 + i * 370, c = mk(g4, "pc", inner); gsap.set(c, { x: x, y: 190 }); tl.set(c, { opacity: 0 }, 0);
+          tl.fromTo(c, { opacity: 0, y: 190 + 140, rotation: i % 2 ? 4 : -4, scale: 0.7 }, { opacity: 1, y: 190, rotation: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, at);
+          tl.to(c, { y: 182, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T5 - at, 1.4) }, at + 0.6);
+          var ch = Cap.chip(g4, label, x + 40, 640, cls); Cap.pop(tl, ch, at - 0.02, { from: "up" });
+          return c;
+        };
+        var in1 = Q.oxProp("calavera", { width: 270, uid: "k1" }), in2 = Q.oxProp("catrina", { width: 270, uid: "k2" }), in4 = Q.oxProp("pan", { width: 240, uid: "k4" }), in4b = Q.oxProp("flor", { width: 120, uid: "k4b" });
+        var pa = Q.papelPicado({ uid: "k3a", w: 300, h: 190, n: 2, seed: 4, sag: 0, colors: ["#d93472", "#19b7aa"] }), pb = Q.papelPicado({ uid: "k3b", w: 300, h: 190, n: 2, seed: 9, sag: 0, colors: ["#ff9f1c", "#9a5fd0"] });
+        var c1 = card(0, '<div style="position:absolute;left:30px;top:70px">' + in1 + '</div>', "alegre", w4(7), "gold");
+        var c2 = card(1, '<div style="position:absolute;left:30px;top:0px">' + in2 + '</div>', "música", w4(9), "pink");
+        var c3 = card(2, '<div style="position:absolute;left:14px;top:30px">' + pa + '</div><div style="position:absolute;left:14px;top:220px">' + pb + '</div>', "colores", w4(10), "");
+        var c4 = card(3, '<div style="position:absolute;left:44px;top:60px">' + in4 + '</div><div style="position:absolute;left:105px;top:230px">' + in4b + '</div>', "comida", w4(12), "terra");
+        [c1, c2, c3, c4].forEach(function (c) { c.setAttribute("data-layout-allow-occlusion", ""); c.removeAttribute("data-layout-ignore"); });
+        // « no es Halloween » : etiquette sobre, signe different, etiquette chaude (aucune image effrayante)
+        var row = mk(g4, "row", '<span class="cap-chip rel" id="hw" style="border-color:#8F93C7;color:#c9cbe8">Halloween</span><span class="neq" id="neq">≠</span><span class="cap-chip rel gold" id="dm">Día de Muertos</span>');
+        row.removeAttribute("data-layout-ignore"); row.setAttribute("data-layout-allow-occlusion", "");
+        gsap.set("#hw, #neq, #dm", { opacity: 0 });
+        tl.fromTo("#hw", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, w4(3) - 0.05);
+        tl.fromTo("#neq", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, w4(4));
+        tl.fromTo("#dm", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, w4(5) - 0.05);
+        Cap.sparks(tl, g4, 960, 300, w4(9), 8, "#ffd98a");
+        // transition : le papier glisse vers le haut, le plan 5 monte
+        gsap.set(g5, { y: 1300, visibility: "hidden" }); tl.set(g5, { visibility: "visible" }, T5 - 0.4);
+        tl.to(g4, { y: -1300, duration: 0.5, ease: "power3.in" }, T5 - 0.5);
+        tl.fromTo(g5, { y: 1300 }, { y: 0, duration: 0.55, ease: "power3.out", immediateRender: false }, T5 - 0.38);
+        // ===== plan 5 : patrimoine de l'humanite =====
+        var xm = mk(g5, "", Q.explainerMap({ uid: "xm", width: 1920, height: 1440 })); xm.id = "xm";
+        var mx = Q.mapRegion("cdmx"), S5 = 2.6, px = mx.x * 1.2, py = mx.y * 1.2;
+        gsap.set(xm, { x: 192, y: 24, scale: 0.8, transformOrigin: "0 0" });
+        tl.to(xm, { x: 600 - px * S5, y: 470 - py * S5, scale: S5, duration: 1.8, ease: "power2.inOut" }, T5 + 0.1);
+        tl.fromTo(xm.querySelectorAll(".x-hi-mx"), { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.out", immediateRender: false }, w5(3));
+        var yr = mk(g5, "yr", "2008"); yr.removeAttribute("data-layout-ignore"); gsap.set(yr, { opacity: 0 });
+        tl.fromTo(yr, { opacity: 0, scale: 0.6, rotation: -4 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, w5(2));
+        var seal = mk(g5, "seal", Q.oxSeal({ width: 380 })); gsap.set(seal, { opacity: 0 });
+        Cap.pop(tl, seal, w5(6) - 0.05, { from: "scale", rot: -8 });
+        tl.to(seal, { rotation: 4, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - w5(6), 1.6) }, w5(6) + 0.6);
+        var lab = Cap.chip(g5, "Patrimonio Cultural Inmaterial de la Humanidad", 330, 800, "gold"); Cap.pop(tl, lab, w5(6) - 0.05, { from: "up" });
+        Cap.sparks(tl, g5, 1570, 540, w5(6), 10, "#ffe9a8");
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["e01-capsula-muertos-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

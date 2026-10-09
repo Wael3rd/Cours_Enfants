@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>e01-capsula-muertos-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .pcard { position: absolute; left: 0; top: 0; width: 200px; height: 240px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); }
+      .pcard svg { position: absolute; left: -2px; bottom: -4px; }
+
+      .cal { position: absolute; left: 680px; top: 250px; width: 560px; height: 600px; z-index: 6; opacity: 0; }
+      .calpg { position: absolute; inset: 0; border-radius: 34px; background: #f5e6c8; box-shadow: 0 14px 0 rgba(0,0,0,.35), inset 0 0 0 8px #e6ce9f; overflow: hidden; }
+      .calhd { position: absolute; left: 0; right: 0; top: 0; height: 140px; background: #d93472; text-align: center; font: 400 52px/140px "Alfa Slab One", serif; letter-spacing: .12em; color: #fff3d1; border-bottom: 10px solid #9e1f54; }
+      .calnum { position: absolute; left: 0; right: 0; top: 150px; text-align: center; font: 400 340px/1 "Alfa Slab One", serif; color: #14123f; text-shadow: 0 10px 0 rgba(255,159,28,.8); }
+      .calring { position: absolute; top: -26px; width: 26px; height: 64px; border-radius: 13px; background: #8F93C7; box-shadow: 0 4px 0 rgba(0,0,0,.4); z-index: 3; }
+      .big { position: absolute; z-index: 1; opacity: .5; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="e01-capsula-muertos-1" data-start="0" data-width="1920" data-height="1200" data-duration="7.71">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.71" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":7.41,"v":1},{"t":7.71,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.903664566e.mp3" data-start="0.6" data-duration="5.96" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/tick.mp3" data-start="1.452" data-duration="0.045" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="3.658" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/tick.mp3" data-start="5.206" data-duration="0.045" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="5.996" data-duration="0.1" data-track-index="7" data-volume="0.35"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"e01-capsula-muertos-1","cinematica":"e01-capsula-muertos","part":1,"parts":4,"total":7.71,"meta":{"cinematica":"e01-capsula-muertos","titulo":"Día de Muertos: una fiesta, no Halloween","tipo":"capsula","unidad":"Día de Muertos","numero":0,"lugar":"Oaxaca","pluma":"Pluma de Cempasúchil","plumaNum":0,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":7.46,"vista":"Style explainer, papier découpé : un calendrier s’ouvre sur le « 1 » et le « 2 » de noviembre ; des icônes d’enfants puis d’adultes apparaissent.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En México, el uno de noviembre las familias recuerdan a los niños que ya no están, y el dos, a los adultos.","key":"narrador.903664566e","t":0.6,"d":5.96,"words":[{"w":"En","t":0.6,"d":0.152},{"w":"México,","t":0.752,"d":0.332},{"w":"el","t":1.3,"d":0.152},{"w":"uno","t":1.452,"d":0.197},{"w":"de","t":1.65,"d":0.152},{"w":"noviembre","t":1.802,"d":0.466},{"w":"las","t":2.268,"d":0.197},{"w":"familias","t":2.465,"d":0.421},{"w":"recuerdan","t":2.887,"d":0.466},{"w":"a","t":3.353,"d":0.108},{"w":"los","t":3.46,"d":0.197},{"w":"niños","t":3.658,"d":0.287},{"w":"que","t":3.944,"d":0.197},{"w":"ya","t":4.142,"d":0.152},{"w":"no","t":4.294,"d":0.152},{"w":"están,","t":4.446,"d":0.287},{"w":"y","t":4.921,"d":0.118},{"w":"el","t":5.039,"d":0.168},{"w":"dos,","t":5.206,"d":0.217},{"w":"a","t":5.661,"d":0.118},{"w":"los","t":5.779,"d":0.217},{"w":"adultos.","t":5.996,"d":0.414}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.452,"f":"ui/tick"},{"t":3.658,"f":"ui/pop"},{"t":5.206,"f":"ui/tick"},{"t":5.996,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total;
+
+        var P = C.planOf(PLAN, 1);
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Día de Muertos: una fiesta, no Halloween", 0.15);
+        var tCal = C.wordT(PLAN, 1, 1, 3), tUno = C.wordT(PLAN, 1, 1, 4), tNi = C.wordT(PLAN, 1, 1, 12), tDos = C.wordT(PLAN, 1, 1, 19), tAd = C.wordT(PLAN, 1, 1, 22);
+        // grandes fleurs de cempasuchil en papier, qui tournent lentement (decor)
+        [[40, 700, 360], [1560, 120, 320], [1500, 700, 400]].forEach(function (f, i) {
+          var b = mk(p1, "big", Q.oxProp("flor", { width: f[2], uid: "bf" + i })); gsap.set(b, { x: f[0], y: f[1] });
+          tl.fromTo(b.firstChild, { rotation: -10, transformOrigin: "50% 50%" }, { rotation: 25, duration: T, ease: "none" }, 0);
+        });
+        // calendrier de papier : page « 1 » puis page « 2 »
+        var cal = mk(p1, "cal", '<div class="calring" style="left:90px"></div><div class="calring" style="right:90px"></div><div class="calpg" id="pg1"><div class="calhd" data-layout-allow-overlap>NOVIEMBRE</div><div class="calnum" data-layout-allow-overlap>1</div></div><div class="calpg" id="pg2"><div class="calhd" data-layout-allow-overlap>NOVIEMBRE</div><div class="calnum" data-layout-allow-overlap>2</div></div>');
+        cal.setAttribute("data-layout-allow-occlusion", ""); cal.removeAttribute("data-layout-ignore");
+        tl.set(cal, { opacity: 0 }, 0); tl.set("#pg2", { scaleX: 0 }, 0);
+        tl.fromTo(cal, { opacity: 0, y: 170, rotation: -3 }, { opacity: 1, y: 0, rotation: 0, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, tCal - 0.1);
+        tl.fromTo("#pg1 .calnum", { scale: 2, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, tUno - 0.05);
+        tl.to("#pg1", { scaleX: 0, duration: 0.25, ease: "power2.in", transformOrigin: "50% 50%" }, tDos - 0.35);
+        tl.to("#pg2", { scaleX: 1, duration: 0.3, ease: "power2.out", transformOrigin: "50% 50%" }, tDos - 0.08);
+        tl.fromTo("#pg2 .calnum", { scale: 1.8, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, tDos - 0.05);
+        tl.to(cal, { y: -8, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.4) }, tCal + 0.7);
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, tCal - 0.3);
+        // enfants (Xochitl) puis adultes (Dona Remedios, Beto)
+        var card = function (key, bg, x, y, at, rot, uid) {
+          var d = mk(p1, "pcard", Q.character(key, { view: "bust", width: 220, uid: uid })); d.style.background = bg; d.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+          gsap.set(d, { x: x, y: y }); tl.set(d, { opacity: 0 }, 0);
+          tl.fromTo(d, { y: y + 240, opacity: 0, rotation: rot }, { y: y, opacity: 1, rotation: 0, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, at);
+          tl.to(d, { y: y - 10, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - at, 1.3) }, at + 0.6);
+          return d;
+        };
+        card("xochitl", "#19b7aa", 370, 400, tNi, -5, "cx");
+        card("remedios", "#d93472", 1300, 360, tAd, 5, "cr");
+        card("beto", "#ff9f1c", 1530, 440, tAd + 0.12, -4, "cb");
+        var c1 = Cap.chip(p1, "los niños", 370, 680, ""); Cap.pop(tl, c1, tNi - 0.05, { from: "up" });
+        var c2 = Cap.chip(p1, "los adultos", 1380, 740, "pink"); Cap.pop(tl, c2, tAd - 0.05, { from: "up" });
+        Cap.sparks(tl, p1, 450, 520, tNi, 8, "#ffd98a"); Cap.sparks(tl, p1, 1500, 540, tAd, 8, "#ffd98a");
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["e01-capsula-muertos-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

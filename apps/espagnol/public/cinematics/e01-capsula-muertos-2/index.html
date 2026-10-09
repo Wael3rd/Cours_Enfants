@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>e01-capsula-muertos-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0d1038; }
+      .pcard { position: absolute; left: 0; top: 0; width: 200px; height: 240px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); }
+      .pcard svg { position: absolute; left: -2px; bottom: -4px; }
+
+      .ofr { position: absolute; left: 580px; top: 130px; width: 760px; z-index: 5; }
+      .ofr svg { display: block; }
+      .bigm { position: absolute; z-index: 1; opacity: .5; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="e01-capsula-muertos-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.619">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.619" data-media-start="7.71" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.319,"v":1},{"t":6.619,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.984a72ef76.mp3" data-start="0.5" data-duration="5.069" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.409" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="1.931" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="2.344" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="2.912" data-duration="0.1" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/item-get.mp3" data-start="3.887" data-duration="0.526" data-track-index="8" data-volume="0.2"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"e01-capsula-muertos-2","cinematica":"e01-capsula-muertos","part":2,"parts":4,"total":6.619,"meta":{"cinematica":"e01-capsula-muertos","titulo":"Día de Muertos: una fiesta, no Halloween","tipo":"capsula","unidad":"Día de Muertos","numero":0,"lugar":"Oaxaca","pluma":"Pluma de Cempasúchil","plumaNum":0,"rotulo":"","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":6.369,"vista":"Un autel à étages se construit élément par élément : photos, bougies, fleurs de cempasúchil, pain de muerto, verre d’eau, plat favori, papel picado qui flotte en haut.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En la ofrenda hay fotos, velas, flores, pan de muerto y la comida favorita de los muertos.","key":"narrador.984a72ef76","t":0.5,"d":5.069,"words":[{"w":"En","t":0.5,"d":0.158},{"w":"la","t":0.658,"d":0.158},{"w":"ofrenda","t":0.815,"d":0.39},{"w":"hay","t":1.205,"d":0.204},{"w":"fotos,","t":1.409,"d":0.297},{"w":"velas,","t":1.931,"d":0.297},{"w":"flores,","t":2.344,"d":0.344},{"w":"pan","t":2.912,"d":0.204},{"w":"de","t":3.117,"d":0.158},{"w":"muerto","t":3.274,"d":0.344},{"w":"y","t":3.618,"d":0.111},{"w":"la","t":3.729,"d":0.158},{"w":"comida","t":3.887,"d":0.344},{"w":"favorita","t":4.231,"d":0.436},{"w":"de","t":4.667,"d":0.158},{"w":"los","t":4.825,"d":0.204},{"w":"muertos.","t":5.029,"d":0.39}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.409,"f":"ui/pop"},{"t":1.931,"f":"ui/pop"},{"t":2.344,"f":"ui/pop"},{"t":2.912,"f":"ui/pop"},{"t":3.887,"f":"rpg/item-get"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total;
+
+        var P = C.planOf(PLAN, 2);
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var w = function (k) { return C.wordT(PLAN, 2, 1, k); };
+        var o = mk(p1, "ofr", Q.ofrendaSvg({ width: 760, uid: "of" })); o.removeAttribute("data-layout-ignore"); o.setAttribute("data-layout-allow-occlusion", "");
+        var svg = o.querySelector("svg"); svg.setAttribute("data-layout-allow-overflow", "");
+        [[40, 680, 300], [1580, 140, 280]].forEach(function (f, i) { var b = mk(p1, "bigm", Q.oxProp("flor", { width: f[2], uid: "bm" + i })); gsap.set(b, { x: f[0], y: f[1] }); tl.fromTo(b.firstChild, { rotation: -10, transformOrigin: "50% 50%" }, { rotation: 20, duration: T, ease: "none" }, 0); });
+        var all = svg.querySelectorAll(".of-tier, .of-arco, .of-top, .of-foto, .of-vela, .of-flor, .of-pan, .of-calavera, .of-comida");
+        gsap.set(all, { opacity: 0 });
+        // etages (nappes + papel picado) puis un objet par mot
+        var tiers = svg.querySelectorAll(".of-tier"), tOf = w(3);
+        for (var i = tiers.length - 1; i >= 0; i--) tl.fromTo(tiers[i], { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.4)", immediateRender: false }, tOf + (tiers.length - 1 - i) * 0.14);
+        tl.fromTo(svg.querySelector(".of-arco"), { opacity: 0, scale: 0.9, transformOrigin: "50% 100%" }, { opacity: 1, scale: 1, duration: 0.6, ease: "sine.out", immediateRender: false }, tOf + 0.3);
+        tl.fromTo(svg.querySelector(".of-top"), { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.5, ease: "sine.out", immediateRender: false }, tOf + 0.45);
+        var fotos = svg.querySelectorAll(".of-foto"), t5 = w(5);
+        fotos.forEach(function (f, i) { tl.fromTo(f, { opacity: 0, y: -130 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, t5 + i * 0.1); });
+        var velas = svg.querySelectorAll(".of-vela"), t6 = w(6);
+        velas.forEach(function (v, i) { tl.fromTo(v, { opacity: 0, scale: 0.3, svgOrigin: v.dataset.px + " " + v.dataset.py }, { opacity: 1, scale: 1, svgOrigin: v.dataset.px + " " + v.dataset.py, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, t6 + i * 0.07); });
+        svg.querySelectorAll(".of-vela .of-flame").forEach(function (f, i) { tl.fromTo(f, { scale: 0.95, svgOrigin: f.dataset.px + " " + f.dataset.py }, { scale: 1.06, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.9 + (i % 3) * 0.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - t6, 0.9) }, t6 + 0.5); });
+        svg.querySelectorAll(".of-vela .of-glow").forEach(function (g, i) { tl.fromTo(g, { opacity: 0.7 }, { opacity: 1, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - t6, 1.6) }, t6 + 0.5); });
+        var flores = svg.querySelectorAll(".of-flor"), t7 = w(7);
+        flores.forEach(function (f, i) { tl.fromTo(f, { opacity: 0, scale: 0.2, transformOrigin: "50% 100%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)", immediateRender: false }, t7 + i * 0.08); });
+        var panes = svg.querySelectorAll(".of-pan"), t8 = w(8);
+        panes.forEach(function (f, i) { tl.fromTo(f, { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, t8 + i * 0.09); });
+        tl.fromTo(svg.querySelector(".of-calavera"), { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, w(10));
+        tl.fromTo(svg.querySelector(".of-comida"), { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, w(13));
+        // pastilles d'appel
+        var ch = function (txt, x, y, at, cls) { var c = Cap.chip(p1, txt, x, y, cls); Cap.pop(tl, c, at - 0.05, { from: "up" }); tl.to(c, { scale: 0, y: "-=16", duration: 0.3, ease: "power2.in" }, at + 1.1); };
+        ch("fotos", 1380, 250, t5, "gold"); ch("velas", 190, 450, t6, ""); ch("flores", 1380, 450, t7, "pink"); ch("pan de muerto", 160, 650, t8, "terra"); ch("la comida", 1380, 650, w(13), "gold");
+        Cap.sparks(tl, p1, 960, 520, w(10), 8, "#ffd98a");
+        tl.fromTo(p1, { scale: 1.0, transformOrigin: "50% 45%" }, { scale: 1.08, duration: T, ease: "sine.inOut" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["e01-capsula-muertos-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

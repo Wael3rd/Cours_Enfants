@@ -2081,7 +2081,7 @@ function ofrendaSvg(opts) {
 function oxProp(key, opts) {
   opts = opts || {};
   const id = opts.uid || uid('oxp'), gid = id + '-g', W = opts.width || 200;
-  const mk = (vb, h, inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" width="${W}" height="${Math.round((W * h) / 200)}" class="ox-prop" aria-hidden="true" style="overflow:visible"><defs>${oxGlowDef(gid)}</defs>${inner}</svg>`;
+  const mk = (vb, h, inner) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" width="${W}" height="${Math.round((W * h) / parseFloat(vb.split(' ')[2]))}" class="ox-prop" aria-hidden="true" style="overflow:visible"><defs>${oxGlowDef(gid)}</defs>${inner}</svg>`;
   if (key === 'calavera') return mk('0 0 200 200', 200, oxCalavera(100, 100, 80, opts.pal));
   if (key === 'catrina') return mk('0 0 400 700', 700, oxCatrina(200, 700, 1.3));
   if (key === 'pan') return mk('0 0 200 140', 140, oxPan(100, 70, 90));
@@ -2197,12 +2197,12 @@ function patioOfrenda(opts) {
 /** Retourne { svg, W, H, path : [[x,y]...] (centre de chaque petale, dans l'ordre), door : { x, y, w, h } }. Classes : .pp-petal (data-i), .pp-candle (.of-flame/.of-glow, data-i = indice du petale), .pp-door (halo), .pp-house. */
 function oaxacaPetalPath(opts) {
   opts = opts || {};
-  const id = opts.uid || uid('pp'), g = (n) => `${id}-${n}`, W = 2400, H = 1200, rnd = rng(opts.seed || 63), gid = g('cg');
+  const id = opts.uid || uid('pp'), g = (n) => `${id}-${n}`, W = 2400, H = 1500, rnd = rng(opts.seed || 63), gid = g('cg');
   let stars = ''; for (let i = 0; i < 40; i++) stars += `<circle cx="${r1(rnd() * W)}" cy="${r1(20 + rnd() * 330)}" r="${r1(1.4 + rnd() * 2.4)}" fill="#FFF3D1" opacity="${r1(0.4 + rnd() * 0.5)}"/>`;
   let row = ''; [[0, 240, 360], [380, 200, 320], [730, 260, 380], [1130, 190, 320]].forEach((h, i) => { row += `<g>${scRect(h[0], 700 - h[1], h[2] - 20, h[1], ['#2B2A7A', '#3A2A82', '#2F2478', '#3C3090'][i])}<path d="${archOpen(h[0] + 40, 700, 50, 90)}" fill="#FFD98A" opacity=".6"/><path d="${archOpen(h[0] + h[2] - 120, 700, 50, 90)}" fill="#FFD98A" opacity=".35"/></g>`; });
   const door = { x: 1880, y: 560, w: 200, h: 300 };
   const house = `<g class="pp-house">${scRect(1640, 330, 700, 530, '#E8A33A')}${scRect(1640, 330, 700, 20, '#B8672F')}${scRect(2300, 330, 40, 530, '#000', 'opacity=".14"')}${scRect(1640, 810, 700, 50, '#C9573B')}<path d="${archOpen(door.x - 20, 860, door.w + 40, door.h + 40)}" fill="#E0699A"/><path d="${archOpen(door.x, 860, door.w, door.h)}" fill="url(#${g('d')})"/><rect class="pp-door" x="${door.x - 90}" y="${door.y - 40}" width="${door.w + 180}" height="${door.h + 120}" rx="90" fill="url(#${g('dg')})" opacity="0"/><path d="${archOpen(1690, 640, 70, 110)}" fill="#3B1B3C"/><path d="${archOpen(2200, 640, 70, 110)}" fill="#3B1B3C"/>${scRect(1600, 860, 780, 24, '#7A4A6E')}</g>`;
-  const fl = 860; let cob = ''; for (let r = 0; r < 8; r++) { const y = fl + 20 + r * r * 5 + r * 24; for (let xx = (r % 2) * 60; xx < W; xx += 120 + r * 8) cob += `<path d="M${xx} ${y}q${60 + r * 4} -16 ${120 + r * 8} 0" stroke="#2B1840" stroke-width="3" fill="none" opacity=".45"/>`; }
+  const fl = 860; let cob = ''; for (let r = 0; r < 10; r++) { const y = fl + 20 + r * r * 5 + r * 24; for (let xx = (r % 2) * 60; xx < W; xx += 120 + r * 8) cob += `<path d="M${xx} ${y}q${60 + r * 4} -16 ${120 + r * 8} 0" stroke="#2B1840" stroke-width="3" fill="none" opacity=".45"/>`; }
   // courbe du chemin : (120, 1080) -> (door.x + 100, 880), S legere
   const P = (t) => [120 + (door.x + 100 - 120) * t, 1080 - 200 * t + Math.sin(t * Math.PI * 2) * 70 * (1 - t * 0.6)];
   const path = []; let pet = '', can = '';

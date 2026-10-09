@@ -174,5 +174,103 @@
       }
     ],
     "total": 12.335
+  },
+  "u04-intro": {
+    "parts": [
+      {
+        "id": "u04-intro",
+        "duration": 11.799
+      }
+    ],
+    "total": 11.799
+  },
+  "u04-historia": {
+    "parts": [
+      {
+        "id": "u04-historia-1",
+        "duration": 10.102
+      },
+      {
+        "id": "u04-historia-2",
+        "duration": 9.774
+      },
+      {
+        "id": "u04-historia-3",
+        "duration": 8.232
+      },
+      {
+        "id": "u04-historia-4",
+        "duration": 7.451
+      },
+      {
+        "id": "u04-historia-5",
+        "duration": 10.168
+      }
+    ],
+    "total": 45.727
+  },
+  "u04-capsula-frida": {
+    "parts": [
+      {
+        "id": "u04-capsula-frida-1",
+        "duration": 11.231
+      },
+      {
+        "id": "u04-capsula-frida-2",
+        "duration": 8.394
+      },
+      {
+        "id": "u04-capsula-frida-3",
+        "duration": 10.916
+      }
+    ],
+    "total": 30.541
+  },
+  "u04-pluma": {
+    "parts": [
+      {
+        "id": "u04-pluma-1",
+        "duration": 9.388
+      },
+      {
+        "id": "u04-pluma-2",
+        "duration": 6.573
+      }
+    ],
+    "total": 15.961
+  },
+  "e01-intro": {
+    "parts": [
+      {
+        "id": "e01-intro-1",
+        "duration": 9.998
+      },
+      {
+        "id": "e01-intro-2",
+        "duration": 6.269
+      }
+    ],
+    "total": 16.267
+  },
+  "e01-capsula-muertos": {
+    "parts": [
+      {
+        "id": "e01-capsula-muertos-1",
+        "duration": 7.71
+      },
+      {
+        "id": "e01-capsula-muertos-2",
+        "duration": 6.619
+      },
+      {
+        "id": "e01-capsula-muertos-3",
+        "duration": 10.337
+      },
+      {
+        "id": "e01-capsula-muertos-4",
+        "duration": 10.368
+      }
+    ],
+    "total": 35.034
   }
 }
