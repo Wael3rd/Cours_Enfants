@@ -8,7 +8,7 @@
     '.st-fx{position:absolute;left:-900px;top:1196px;width:4200px;height:700px;background:linear-gradient(180deg,#3B1F12,#140804)}' +
     '.st-l{position:absolute;left:0;top:0;width:2400px;height:1200px}' +
     '.st-l svg{display:block}' +
-    '.st-light{mix-blend-mode:screen;opacity:.55}' +
+    '.st-light{opacity:.4}' +
     '.chr{position:absolute}' +
     '.chr-sh{position:absolute;left:12%;right:12%;bottom:-4%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(20,8,4,.55),rgba(20,8,4,0))}' +
     '.chr-b{position:relative;transform-origin:50% 100%}' +

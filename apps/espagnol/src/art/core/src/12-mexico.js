@@ -147,14 +147,14 @@ export function coyoacanSkyline(opts) {
   // premier plan : chaussee pavee, Jardin Centenario (fontaine aux coyotes), branche de jacaranda en surplomb, bancs
   let bench = (bx) => `<g><rect x="${bx}" y="1020" width="200" height="18" rx="6" fill="#6B4A32"/><rect x="${bx + 8}" y="990" width="184" height="12" rx="5" fill="#6B4A32"/><path d="M${bx + 20} 1038v46M${bx + 180} 1038v46M${bx + 20} 990v30M${bx + 180} 990v30" stroke="#2A2A3A" stroke-width="8"/></g>`;
   const near = scSvg(W, H, `${mxCobbles(W, 880, 1200, 17, '#A8896A', '#6F5438')}${scRect(0, 868, W, 16, '#8E7358')}${scRect(0, 868, W, 5, '#fff', 'opacity=".3"')}${mxCoyoteFountain(640, 1010, 0.82)}${bench(1120)}${bench(2040)}${(() => { let p = ''; for (let i = 0; i < 70; i++) p += `<ellipse cx="${r1(rnd() * W)}" cy="${r1(900 + rnd() * 290)}" rx="${r1(5 + rnd() * 6)}" ry="${r1(3 + rnd() * 3)}" fill="${i % 3 ? MX.jac2 : MX.jac}" opacity=".85" transform="rotate(${Math.round(rnd() * 180)} 0 0)"/>`; return p; })()}
-<g transform="translate(700 90)" opacity=".95">${papelPicado({ w: 1500, h: 120, n: 11, seed: 3, uid: g('pp'), sag: 40 })}</g><g transform="translate(-40 -50)"><path d="M0 70Q240 40 460 170" stroke="#5A4034" stroke-width="28" fill="none" stroke-linecap="round"/>${[[110, 90, 80], [250, 120, 70], [350, 170, 60], [60, 150, 66], [210, 188, 58]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${[MX.jac, MX.jac2, MX.jac3][i % 3]}"/>`).join('')}</g>
+<g transform="translate(-40 -50)"><path d="M0 70Q240 40 460 170" stroke="#5A4034" stroke-width="28" fill="none" stroke-linecap="round"/>${[[110, 90, 80], [250, 120, 70], [350, 170, 60], [60, 150, 66], [210, 188, 58]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${[MX.jac, MX.jac2, MX.jac3][i % 3]}"/>`).join('')}</g>
 <g transform="translate(2640 -40)"><path d="M520 40Q320 30 100 180" stroke="#5A4034" stroke-width="28" fill="none" stroke-linecap="round"/>${[[400, 90, 74], [280, 140, 66], [170, 180, 58], [470, 140, 56]].map((b, i) => `<circle cx="${b[0]}" cy="${b[1]}" r="${b[2]}" fill="${[MX.jac, MX.jac2, MX.jac3][i % 3]}"/>`).join('')}</g>`, 'cy-near');
   return { sky, sun, far, mid, near, W, H, sunX: sx, sunY: sy, casa: CAS };
 }
 
 // ---------------------------------------------------------------- Plaza Hidalgo (3200 x 1200) : decor de scene (kiosque, Parroquia, etals a ballons, jacarandas, pave)
 export const PLAZA = { W: 3200, H: 1200, floor: 930, kiosk: { x: 1500 } };
-/** Retourne { back, front, light, W, H, floor, kiosk }. Ballons .mx-balloon (a faire flotter), pigeons a poser par la composition. */
+/** Retourne { back, front, light, W, H, floor, kiosk, balloons : [{ x, y, c }] }. Les ballons ne sont PAS dans le SVG : les poser avec mxBalloonSvg (elements DOM animables). */
 export function plazaHidalgo(opts) {
   opts = opts || {};
   const id = opts.uid || uid('ph'), g = (n) => `${id}-${n}`, W = PLAZA.W, H = PLAZA.H, fl = PLAZA.floor, rnd = rng(opts.seed || 52);
@@ -163,17 +163,29 @@ export function plazaHidalgo(opts) {
   while (x < W) { if (x > 980 && x < 1980) { x = 1980; continue; } const w = 220 + rnd() * 120, h = 260 + rnd() * 90; houses += mxHouse(x, fl - 30, w, h, tones[k++ % tones.length], Math.round(x) + 9, { door: 1 }); x += w + 14; }
   // etals de ballons / vendeurs, bancs, lampadaires
   const stalls = mxStall(210, fl + 50, 330, MX.rosa, MX.crema) + mxStall(2560, fl + 50, 340, MX.turq, MX.crema);
-  let balloons = ''; [[330, 560, MX.rojo], [372, 520, MX.mostaza], [418, 566, MX.turq], [2690, 540, MX.rosa], [2740, 500, MX.mostaza], [2790, 552, MX.cobalt3], [2640, 580, MX.rojo]].forEach((b) => { balloons += mxBalloon(b[0], b[1], b[2], 1.4); });
+  const balloons = [[330, 560, MX.rojo], [372, 520, MX.mostaza], [418, 566, MX.turq], [2690, 540, MX.rosa], [2740, 500, MX.mostaza], [2790, 552, MX.cobalt3], [2640, 580, MX.rojo]].map((b) => ({ x: b[0], y: b[1], c: b[2] }));
   const lamp = (lx) => `<g class="mx-lamp"><path d="M${lx} ${fl + 40}V${fl - 330}" stroke="#2A2A3A" stroke-width="12"/><path d="M${lx - 30} ${fl - 330}h60l-8 -34h-44Z" fill="#2A2A3A"/><rect x="${lx - 22}" y="${fl - 400}" width="44" height="52" rx="8" fill="#FFE9A8" opacity=".9"/></g>`;
   const back = scSvg(W, H, `${skyG}${scRect(0, 0, W, H, `url(#${g('s')})`)}${cloudSvg(600, 150, 520, 74, 81, 'front')}${cloudSvg(2300, 120, 600, 84, 83, 'front')}
 ${mxChurch(1500, fl - 40, 1.35)}${houses}${mxJacaranda(960, fl - 20, 1.5)}${mxJacaranda(2040, fl - 20, 1.6)}${mxJacaranda(120, fl - 20, 1.2)}${mxJacaranda(3100, fl - 20, 1.3)}
-${mxKiosk(PLAZA.kiosk.x, fl + 40, 1.1)}${lamp(1010)}${lamp(1990)}${stalls}${balloons}
+${mxKiosk(PLAZA.kiosk.x, fl + 40, 1.1)}${lamp(1010)}${lamp(1990)}${stalls}
 ${mxCobbles(W, fl, H, 29, '#B59471', '#7A5C3E')}${scRect(0, fl - 8, W, 14, '#8E7358')}
 <g opacity=".5"><path d="M0 ${fl + 120}H${W}" stroke="#6F5438" stroke-width="3" opacity=".3"/></g>`, 'ph-back');
   const flowerBed = (fx) => `<g>${[0, 1, 2, 3, 4].map((i) => `<circle cx="${fx + i * 36}" cy="${H - 40 + (i % 2) * 8}" r="${24 + (i % 3) * 5}" fill="${[MX.leaf, MX.leaf2, MX.leaf3][i % 3]}"/>`).join('')}${[0, 1, 2, 3, 4, 5].map((i) => `<circle cx="${fx - 10 + i * 30}" cy="${H - 62 + (i % 3) * 10}" r="9" fill="${[MX.rosa, MX.mostaza, MX.rojo][i % 3]}"/>`).join('')}</g>`;
   const front = scSvg(W, H, `${flowerBed(40)}${flowerBed(3000)}`, 'ph-front');
   const light = scSvg(W, H, `${skyG}<g class="ac-beams" fill="url(#${g('w')})"><path d="M2200 0L2900 0L2300 ${H}L1500 ${H}Z" opacity=".5"/></g>`, 'ph-light');
-  return { back, front, light, W, H, floor: fl, kiosk: PLAZA.kiosk };
+  return { back, front, light, W, H, floor: fl, kiosk: PLAZA.kiosk, balloons };
+}
+/** Facade de la Casa Azul isolee (SVG 780 x 500, sans enseigne ni decor) pour les capsules en papier decoupe. opts : width, uid. */
+export function casaAzulFachada(opts) {
+  opts = opts || {};
+  const W = opts.width || 780;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="${W}" height="${Math.round((W * 500) / 780)}" class="mx-fachada" style="overflow:visible" aria-hidden="true">${mxCasaAzul(30, 470, 720, 400, { cols: 3 })}${scRect(0, 470, 780, 18, MX.stone2)}</svg>`;
+}
+/** Ballon autonome (SVG 80x180, centre du ballon en 40,40) a poser comme element DOM anime (pas dans un gros calque SVG). opts : c (couleur), width. */
+export function mxBalloonSvg(opts) {
+  opts = opts || {};
+  const W = opts.width || 80;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 180" width="${W}" height="${Math.round(W * 2.25)}" class="mx-balloon" style="overflow:visible" aria-hidden="true">${mxBalloon(40, 40, opts.c || MX.rojo, 1.4)}</svg>`;
 }
 
 // ---------------------------------------------------------------- patio de la Casa Azul (2400 x 1200) : murs cobalt, patio de plantes, galerie d'autoportraits
@@ -206,7 +218,7 @@ export function casaAzulPatio(opts) {
 }
 
 // ---------------------------------------------------------------- autoportrait encadre (figure GENERIQUE : fleurs dans les cheveux, nattes, col brode) 250 x 320 par defaut
-/** opts : width, uid, state 'full' (visage + couleurs) | 'erased' (visage efface par la Sombra : tache grise, couleurs eteintes) | 'blank' (cadre vide : plus de figure, fond gris, seul .ar-glow vert a allumer). .ar-fig = toute la figure (opacity). Groupes animables :
+/** opts : width, uid, bg (couleur du fond de toile), state 'full' (visage + couleurs) | 'erased' (visage efface par la Sombra : tache grise, couleurs eteintes) | 'blank' (cadre vide : plus de figure, fond gris, seul .ar-glow vert a allumer). .ar-fig = toute la figure (opacity). Groupes animables :
  *  .ar-face (visage), .ar-dim (voile gris eteint ; opacity 1 -> 0 pour rendre les couleurs), .ar-smudge (tache grise du visage ; 1 -> 0), .ar-glow (halo vert de la plume). */
 export function autorretrato(opts) {
   opts = opts || {};
@@ -215,15 +227,14 @@ export function autorretrato(opts) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${ow}" height="${oh}" class="ar-svg" style="overflow:visible" aria-hidden="true"><defs><clipPath id="${g('c')}"><rect x="22" y="22" width="206" height="276" rx="6"/></clipPath><radialGradient id="${g('gl')}"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".95"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".4"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs>
 <rect x="0" y="0" width="${W}" height="${H}" rx="14" fill="#C99A4E"/><rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="10" fill="#E8C078"/><rect x="14" y="14" width="${W - 28}" height="${H - 28}" rx="8" fill="#8E5A22"/>
 ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<circle cx="${20 + i * 30}" cy="11" r="4" fill="#FFE9A8"/><circle cx="${20 + i * 30}" cy="${H - 11}" r="4" fill="#FFE9A8"/>`).join('')}
-<g clip-path="url(#${g('c')})"><rect x="22" y="22" width="206" height="276" fill="#1F7F6A"/>
+<g clip-path="url(#${g('c')})"><rect x="22" y="22" width="206" height="276" fill="${opts.bg || '#1F7F6A'}"/>
 ${[[40, 80, 52, 120], [210, 70, 60, 150], [30, 220, 70, 100], [220, 230, 64, 110]].map((l, i) => `<path d="M${l[0]} ${l[1] + l[3]}Q${l[0] - l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1]}Q${l[0] + l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1] + l[3]}Z" fill="${['#0E5A40', '#2C8F58', '#0E5A40', '#2C8F58'][i]}"/>`).join('')}
 <g class="ar-fig" opacity="${blank ? 0 : 1}"><path d="M62 300Q60 236 100 214L150 214Q190 236 188 300Z" fill="#F5E6C8"/><path d="M96 214Q125 244 154 214L150 232Q125 262 100 232Z" fill="#D93472"/><path d="M80 280Q125 266 170 280" stroke="#D93472" stroke-width="7" fill="none"/><g fill="#FFC83D"><circle cx="100" cy="268" r="5"/><circle cx="125" cy="274" r="5"/><circle cx="150" cy="268" r="5"/></g>
 <path d="M72 150Q70 90 125 82Q180 90 178 150Q176 230 125 238Q74 230 72 150Z" fill="#1E120C"/>
 <g class="ar-face"><ellipse cx="125" cy="168" rx="46" ry="56" fill="#D2956B"/><path d="M84 140Q102 130 118 138M132 138Q148 130 166 140" stroke="#1E120C" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#FFFBF0"><ellipse cx="106" cy="158" rx="11" ry="9"/><ellipse cx="144" cy="158" rx="11" ry="9"/></g><g fill="#2A160E"><circle cx="107" cy="158" r="5.5"/><circle cx="145" cy="158" r="5.5"/></g><path d="M125 164q-6 14 0 18q6 2 9 -2" stroke="#A8683F" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M106 198Q125 210 144 198" stroke="#8F1D4E" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="92" cy="180" r="9" fill="#FF7A7A" opacity=".3"/><circle cx="158" cy="180" r="9" fill="#FF7A7A" opacity=".3"/></g>
 <ellipse class="ar-smudge" cx="125" cy="168" rx="48" ry="58" fill="#7A7C86" opacity="${erased ? 0.95 : 0}"/>
 <path d="M72 130Q125 66 178 130" stroke="#1E120C" stroke-width="22" fill="none"/><g>${[[86, 98, '#D93472'], [118, 80, '#FFC83D'], [152, 86, '#19B7AA'], [174, 110, '#FF7FB0']].map((f) => `<circle cx="${f[0]}" cy="${f[1]}" r="12" fill="${f[2]}"/><circle cx="${f[0]}" cy="${f[1]}" r="4" fill="#FFF3B0"/>`).join('')}</g>
-</g><ellipse class="ar-glow" cx="125" cy="170" rx="130" ry="150" fill="url(#${g('gl')})" opacity="0"/>
-<rect class="ar-dim" x="22" y="22" width="206" height="276" fill="#6E707C" opacity="${blank ? 0.9 : erased ? 0.86 : 0}"/></g></svg>`;
+</g><rect class="ar-dim" x="22" y="22" width="206" height="276" fill="#6E707C" opacity="${blank ? 0.9 : erased ? 0.86 : 0}"/><ellipse class="ar-glow" cx="125" cy="170" rx="130" ry="150" fill="url(#${g('gl')})" opacity="0"/></g></svg>`;
 }
 
 // ---------------------------------------------------------------- accessoires de capsule (papier decoupe) : singe, perroquet, xoloitzcuintle, miroir a main, cadre vide

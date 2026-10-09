@@ -9,10 +9,17 @@
     viajero: { name: 'Álex', color: '#6FE7DC', char: 'alex', player: true },
     quetzal: { name: 'Quetzal', color: '#42E0A0', quetzal: true },
     sombra: { name: 'La Sombra', color: '#C65BFF', sombra: true },
+    mateo: { name: 'Mateo', color: '#4F8FE8', char: 'mateo' },
+    valentina: { name: 'Valentina', color: '#FF7FB0', char: 'valentina' },
+    lupita: { name: 'Doña Lupita', color: '#19B7AA', char: 'lupita' },
+    remedios: { name: 'Doña Remedios', color: '#FFA13D', char: 'remedios' },
+    beto: { name: 'Beto', color: '#FFC83D', char: 'beto' },
+    xochitl: { name: 'Xóchitl', color: '#FF9F1C', char: 'xochitl' },
     narrador: null,
   };
   var norm = function (s) { return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]/g, ''); };
   var DEFAULT_NAME = 'Álex';
+  var BASE = (document.currentScript && document.currentScript.src || '').replace(/[^/]*$/, '') || './_shared/';
   var Q = (window.QCine = { speakers: SPEAK, player: { name: DEFAULT_NAME }, nameHooks: [] });
 
   function applyName() {
@@ -33,9 +40,37 @@
         if (typeof n === 'string' && n.trim()) { Q.player.name = n.trim().slice(0, 18); applyName(); }
       });
     } catch (e) { /* hors runtime */ }
+    try {
+      // canal "motion" (reglage "Animations douces" de l'app) : { soft: bool }
+      window.__hyperframes.registerRuntimeDataHandler('motion', function (d) { Q.setSoft(!!(d && d.soft)); });
+    } catch (e) { /* hors runtime */ }
     return Q.player.name;
   };
   Q.applyName = applyName;
+
+  /* ---- mouvement sur (docs/architecture.md) : mode doux + effets plafonnes ---- */
+  Q.soft = false;
+  /** Mode "Animations douces" : plus de lueurs ni secousses ni etincelles/confettis ; les tweens relisent leurs valeurs (invalidate). */
+  Q.setSoft = function (on) {
+    Q.soft = !!on;
+    var root = document.getElementById('root') || document.body;
+    root.classList.toggle('q-soft', Q.soft);
+    var tls = window.__timelines || {};
+    Object.keys(tls).forEach(function (k) { try { var t = tls[k]; t.invalidate(); t.time(0); } catch (e) { /* ignore */ } });
+  };
+  var softV = function (v) { return function () { return Q.soft ? 0 : v; }; };
+  /** Lueur douce a la place d'un flash : opacite <= .25, montee >= .3 s, descente .6 s. sel = element en degrade radial chaud. */
+  Q.bloom = function (tl, sel, at, peak, rise, fall) {
+    var p = Math.min(peak == null ? 0.2 : peak, 0.25), r = Math.max(rise == null ? 0.32 : rise, 0.3);
+    tl.fromTo(sel, { opacity: 0 }, { opacity: softV(p), duration: r, ease: 'sine.inOut', immediateRender: false }, at);
+    tl.to(sel, { opacity: 0, duration: fall || 0.6, ease: 'sine.inOut' }, at + r + 0.005);
+  };
+  /** Secousse moderee : amplitude <= 10 px, oscillations >= .1 s, 4 allers-retours ; rien en mode doux. */
+  Q.shake = function (tl, sel, at, amp) {
+    var a = Math.min(amp == null ? 8 : amp, 10), d = 0.11, ks = [];
+    [-1, 0.8, -0.55, 0.3, 0].forEach(function (k) { ks.push({ x: softV(k * a), y: softV(k * a * 0.35), duration: d, ease: 'sine.inOut' }); });
+    tl.to(sel, { keyframes: ks }, at);
+  };
 
   function el(tag, cls, html, parent) {
     var e = document.createElement(tag);
@@ -47,9 +82,10 @@
   }
 
   var CSS = '' +
+    '.q-soft .q-fx,.q-soft .st-motes,.q-soft .shard,.q-soft .dust,.q-soft .star,.q-soft .spark,.q-soft .cf,.q-soft .vflash,.q-soft #flash,.q-soft #rays,.q-soft #raysB{display:none!important}' +
     '.q-frame{position:absolute;inset:0;pointer-events:none}' +
     '.q-vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 46%,rgba(11,13,42,0) 52%,rgba(11,13,42,.5) 100%);z-index:30}' +
-    '.q-grain{position:absolute;inset:0;z-index:31;opacity:.5;mix-blend-mode:multiply}' +
+    '.q-grain{position:absolute;inset:0;z-index:31;opacity:.55;background-size:256px 256px;background-repeat:repeat}' +
     '.q-garland{position:absolute;left:0;top:-26px;width:1920px;z-index:40}' +
     '.q-fade{position:absolute;inset:0;background:#0B0D2A;z-index:90;opacity:0}' +
     '#subs{position:absolute;left:96px;right:96px;bottom:60px;height:260px;z-index:50}' +
@@ -76,7 +112,7 @@
     Q.css();
     var Qa = window.QArt;
     if (opts.vig !== false) el('div', 'q-vig q-frame', '', root);
-    el('div', 'q-grain q-frame', '<svg width="1920" height="1200" xmlns="http://www.w3.org/2000/svg"><defs>' + Qa.paperGrainFilter('qg') + '</defs><rect width="1920" height="1200" filter="url(#qg)"/></svg>', root);
+    var gr = el('div', 'q-grain q-frame', '', root); gr.style.backgroundImage = 'url(' + BASE + 'img/grain.webp)'; gr.setAttribute('data-layout-ignore', '');
     if (opts.garland !== false) {
       // motif de bordure selon la region : Espagne -> frise d'azulejos + fanions sobres ; Mexique -> papel picado
       var region = opts.region || (plan.meta && plan.meta.region) || 'madrid', mx = region === 'mexico';

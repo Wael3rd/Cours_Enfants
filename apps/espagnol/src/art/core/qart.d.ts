@@ -92,6 +92,7 @@ export function tallerCeramica(...a: any[]): any;
 export function coyoacanSkyline(...a: any[]): any;
 export const PLAZA: any;
 export function plazaHidalgo(...a: any[]): any;
+export function casaAzulFachada(...a: any[]): any;
 export function mxBalloonSvg(...a: any[]): any;
 export const CASAP: any;
 export function casaAzulPatio(...a: any[]): any;

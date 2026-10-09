@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-pluma-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .ar { position: absolute; left: 0; top: 0; }
+      .fth { position: absolute; left: 0; top: 0; z-index: 12; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #bloom { position: absolute; inset: 0; z-index: 15; opacity: 0; background: radial-gradient(ellipse at 60% 40%, #fff3d1, rgba(255,243,209,.55) 70%); pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-pluma-1" data-start="0" data-width="1920" data-height="1200" data-duration="9.388">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.388" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.088,"v":1},{"t":9.388,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/valentina.589e0b59ec.mp3" data-start="0.6" data-duration="4.074" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.434b409499.mp3" data-start="5.474" data-duration="2.964" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.1" data-duration="1.104" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="0.6" data-duration="0.526" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/level-up-big.mp3" data-start="5.474" data-duration="1.015" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-pluma-1","cinematica":"u04-pluma","part":1,"parts":2,"total":9.388,"meta":{"cinematica":"u04-pluma","titulo":"Cuarta pluma","tipo":"pluma","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":5.074,"vista":"Le dernier autoportrait retrouve son visage et toutes ses couleurs ; une plume verte se détache du cadre et tombe dans la main d’Álex.","camara":"","rotulo":"","personajes":["valentina"],"lines":[{"who":"valentina","es":"¡Los autorretratos tienen cara otra vez! ¡Gracias!","key":"valentina.589e0b59ec","t":0.6,"d":4.074,"words":[{"w":"¡Los","t":0.6,"d":0.329},{"w":"autorretratos","t":0.929,"d":1.077},{"w":"tienen","t":2.006,"d":0.553},{"w":"cara","t":2.559,"d":0.404},{"w":"otra","t":2.963,"d":0.404},{"w":"vez!","t":3.367,"d":0.329},{"w":"¡Gracias!","t":3.896,"d":0.628}]}]},{"n":2,"t0":5.074,"t1":9.138,"vista":"Le Quetzal tourne au-dessus du patio, ses plumes brillent de toutes les couleurs.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Cuatro plumas. ¡Vuelo más alto!","key":"quetzal.434b409499","t":5.474,"d":2.964,"words":[{"w":"Cuatro","t":5.474,"d":0.439},{"w":"plumas.","t":5.913,"d":0.439},{"w":"¡Vuelo","t":7.39,"d":0.355},{"w":"más","t":7.745,"d":0.244},{"w":"alto!","t":7.989,"d":0.299}]}]}],"sfx":[{"t":0.1,"f":"rpg/spell-magic"},{"t":0.6,"f":"rpg/item-get"},{"t":5.474,"f":"rpg/level-up-big"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        // ballons : elements DOM autonomes qui flottent (transform seul, cycles finis)
+        var floatBalloons = function (room, set, T) {
+          set.balloons.forEach(function (b, i) {
+            var d = mkp(room.qlayer, "st-balloon", Q.mxBalloonSvg({ c: b.c, width: 80 }), b.x - 40, b.y - 40);
+            var per = 2.4 + (i % 3) * 0.35;
+            tl.to(d, { y: "-=" + (10 + (i % 3) * 3), rotation: (i % 2 ? 2.2 : -2.2), duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1, transformOrigin: "50% 100%" }, i * 0.15);
+          });
+        };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var set = Q.casaAzulPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#6F5F54", motes: 16 });
+        S.drift(tl, room, T);
+        var frames = set.frames.map(function (f, i) { return mkp(room.qlayer, "ar", Q.autorretrato({ width: f.w, uid: "ar" + i, state: i === 3 ? "blank" : "erased" }), f.x, f.y); });
+        var ale = S.chr(room.actors, "viajero", 1250, 1065, 340), mar = S.chr(room.actors, "marina", 1070, 1055, 332), mat = S.chr(room.actors, "mateo", 910, 1065, 350), val = S.chr(room.actors, "valentina", 1600, 1075, 355);
+        [ale, mar, mat, val].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 3.9); Q.charBlink(tl, mat.svg, 3.1); Q.charBlink(tl, val.svg, 5.0);
+
+        // ---------- plan 1 : le dernier autoportrait retrouve son visage et ses couleurs, puis les autres ----------
+        var f4 = frames[3], t4 = 0.15;
+        tl.fromTo(f4.querySelector(".ar-glow"), { opacity: 0.7 }, { opacity: 0, duration: 1.2, ease: "sine.inOut", immediateRender: false }, t4 + 0.6);
+        tl.fromTo(f4.querySelector(".ar-fig"), { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "sine.inOut", immediateRender: false }, t4 + 0.2);
+        tl.fromTo(f4.querySelector(".ar-smudge"), { opacity: 0.95 }, { opacity: 0, duration: 0.8, ease: "sine.inOut", immediateRender: false }, t4 + 0.3);
+        tl.fromTo(f4.querySelector(".ar-dim"), { opacity: 0.9 }, { opacity: 0, duration: 1.4, ease: "sine.inOut", immediateRender: false }, t4 + 0.2);
+        [0, 1, 2].forEach(function (i) {
+          var fr = frames[i], at = t4 + 1.4 + i * 0.3;
+          tl.fromTo(fr.querySelector(".ar-smudge"), { opacity: 0.95 }, { opacity: 0, duration: 0.8, ease: "sine.inOut", immediateRender: false }, at);
+          tl.fromTo(fr.querySelector(".ar-dim"), { opacity: 0.86 }, { opacity: 0, duration: 1.2, ease: "sine.inOut", immediateRender: false }, at);
+        });
+        C.bloom(tl, "#bloom", 0.45, 0.2, 0.32, 0.8);
+        // la plume verte se detache du cadre (halo), tombe en oscillant et finit dans la main d'Alex
+        var fe = mkp(room.qlayer, "fth", Q.featherSvg({ uid: "fe", width: 54, height: 160 }), 1445 - 27, 410 - 80);
+        fe.firstChild.style.overflow = "visible";
+        var tFe = 1.1;
+        tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, tFe);
+        tl.to(fe, { motionPath: { path: [{ x: 1418, y: 330 }, { x: 1340, y: 420 }, { x: 1440, y: 520 }, { x: 1330, y: 640 }, { x: 1300, y: 770 }].map(function (p) { return { x: p.x - 1418, y: p.y - 330 }; }), curviness: 1.1 }, rotation: -25, duration: 1.4, ease: "sine.inOut" }, tFe + 0.4);
+        // Alex tend la main et rattrape la plume ; Valentina remercie
+        var aR = ale.svg.querySelector(".c-armR");
+        tl.to(aR, { rotation: -105, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tFe + 0.5);
+        tl.to(aR, { rotation: -90, svgOrigin: "258 306", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, tFe + 1.5);
+        tl.to(fe, { scale: 0.7, opacity: 0, duration: 0.5, ease: "power2.in" }, W - 0.55);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, W - 0.4);
+        C.talkBounce(tl, val.b, L1, 5); C.talkChar(tl, val, L1);
+        Q.charEmote(tl, val.svg, L1.t, "happy", 0.3);
+        S.hop(tl, val, L1.t + 0.3, 40); S.hop(tl, mar, L1.t + 0.9, 30); S.hop(tl, mat, L1.t + 1.0, 30);
+
+        // ---------- plan 2 : le Quetzal, plus fourni, fait un tour du patio ----------
+        var qz = S.quetzal(room.actors, 1330, 800, 200, "perched", false, "qp1");
+        tl.set(qz, { opacity: 0 }, 0);
+        tl.fromTo(qz, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)", immediateRender: false }, W - 0.2);
+        Q.quetzalPoseTo(tl, qz, "fly", W + 0.1, 0.3);
+        Q.quetzalFlap(tl, qz, W + 0.2, 9, 0.38, 0.9);
+        var path = [{ x: 0, y: 0 }, { x: -260, y: -330 }, { x: -760, y: -520 }, { x: -1120, y: -330 }, { x: -900, y: -40 }, { x: -360, y: -240 }, { x: 160, y: -470 }, { x: 640, y: -460 }, { x: 560, y: -180 }, { x: 30, y: -50 }];
+        var dFly = Math.max(2.6, L2.t - W - 0.1);
+        tl.to(qz, { motionPath: { path: path, curviness: 1.25 }, duration: dFly, ease: "sine.inOut" }, W + 0.15);
+        Q.quetzalPoseTo(tl, qz, "talk", W + 0.15 + dFly, 0.4);
+        C.talkQuetzal(tl, qz, L2);
+        Q.quetzalBlink(tl, qz, L2.t + L2.d + 0.2);
+        // etincelles de lumiere douces le long du vol (classe .star : masquees en mode doux)
+        for (var k = 0; k < 10; k++) {
+          var pt = path[(k * 9 / 10 + 1) | 0], sp = mkp(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>', 1330 + pt.x, 800 + pt.y);
+          var ts = W + 0.3 + (k / 10) * dFly;
+          tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.45, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(sp, { y: "+=60", scale: 0, opacity: 0, duration: 0.6, ease: "power2.in" }, ts + 0.5);
+        }
+        // ---------- camera : gros plan -> recul ; puis suit le vol ----------
+        S.camSet(room, 1445, 410, 1.9);
+        S.cam(tl, room, 1280, 560, 1.12, 0.5, 1.7, "power2.out");
+        S.cam(tl, room, 760, 430, 1.1, W + 0.1, 1.4, "sine.inOut");
+        S.cam(tl, room, 1500, 430, 1.1, W + 1.6, dFly - 1.4, "sine.inOut");
+        S.cam(tl, room, 1250, 560, 1.0, L2.t - 0.3, 1.0, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 10, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-pluma-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

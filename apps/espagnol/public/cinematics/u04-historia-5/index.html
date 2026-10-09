@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .st-balloon { position: absolute; left: 0; top: 0; }
+      .ar { position: absolute; left: 0; top: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="10.168">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.168" data-media-start="35.559" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.968,"v":1},{"t":10.168,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.c9bdc53310.mp3" data-start="0.6" data-duration="2.836" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/valentina.fe087261fa.mp3" data-start="3.736" data-duration="5.482" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.3" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.736" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="8.868" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-historia-5","cinematica":"u04-historia","part":5,"parts":5,"total":10.168,"meta":{"cinematica":"u04-historia","titulo":"Los autorretratos sin cara","tipo":"historia","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":4,"t0":0,"t1":9.918,"vista":"Gros plan sur le dernier tableau, vide : un reflet vert brille dans le cadre. Le Quetzal le montre du bec.","camara":"","rotulo":"","personajes":["quetzal","valentina"],"lines":[{"who":"quetzal","es":"La pluma… está en el último autorretrato.","key":"quetzal.c9bdc53310","t":0.6,"d":2.836,"words":[{"w":"La","t":0.6,"d":0.222},{"w":"pluma…","t":0.822,"d":0.417},{"w":"está","t":1.538,"d":0.286},{"w":"en","t":1.824,"d":0.18},{"w":"el","t":2.004,"d":0.18},{"w":"último","t":2.185,"d":0.392},{"w":"autorretrato.","t":2.577,"d":0.71}]},{"who":"valentina","es":"Para devolver las caras, tienen que decir cómo son las personas. ¡Vamos!","key":"valentina.fe087261fa","t":3.736,"d":5.482,"words":[{"w":"Para","t":3.736,"d":0.267},{"w":"devolver","t":4.003,"d":0.464},{"w":"las","t":4.467,"d":0.217},{"w":"caras,","t":4.684,"d":0.316},{"w":"tienen","t":5.381,"d":0.509},{"w":"que","t":5.89,"d":0.303},{"w":"decir","t":6.193,"d":0.44},{"w":"cómo","t":6.633,"d":0.371},{"w":"son","t":7.004,"d":0.303},{"w":"las","t":7.307,"d":0.303},{"w":"personas.","t":7.609,"d":0.646},{"w":"¡Vamos!","t":8.628,"d":0.44}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-magic"},{"t":1,"f":"ui/star"},{"t":3.736,"f":"ui/pop"},{"t":8.868,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        // ballons : elements DOM autonomes qui flottent (transform seul, cycles finis)
+        var floatBalloons = function (room, set, T) {
+          set.balloons.forEach(function (b, i) {
+            var d = mkp(room.qlayer, "st-balloon", Q.mxBalloonSvg({ c: b.c, width: 80 }), b.x - 40, b.y - 40);
+            var per = 2.4 + (i % 3) * 0.35;
+            tl.to(d, { y: "-=" + (10 + (i % 3) * 3), rotation: (i % 2 ? 2.2 : -2.2), duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1, transformOrigin: "50% 100%" }, i * 0.15);
+          });
+        };
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.casaAzulPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#6F5F54", motes: 16 });
+        S.drift(tl, room, T);
+        var frames = set.frames.map(function (f, i) { return mkp(room.qlayer, "ar", Q.autorretrato({ width: f.w, uid: "ar" + i, state: i === 3 ? "blank" : "erased" }), f.x, f.y); });
+        var ale = S.chr(room.actors, "viajero", 640, 1065, 340), mar = S.chr(room.actors, "marina", 820, 1055, 332), mat = S.chr(room.actors, "mateo", 990, 1065, 350);
+        S.breathe(tl, ale, 0, T, 0.8); S.breathe(tl, mar, 0.1, T, 0.8); S.breathe(tl, mat, 0.2, T, 0.8);
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 4.1); Q.charBlink(tl, mat.svg, 3.3);
+        var val = S.chr(room.actors, "valentina", 1580, 1075, 355);
+        S.breathe(tl, val, 0, T, 0.9);
+        var qz = S.quetzal(room.actors, 870, 780, 200, "perched", false, "qh5");
+        // ---------- gros plan : le dernier cadre vide, un halo vert monte et respire ----------
+        var glow = frames[3].querySelector(".ar-glow");
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 0.75, duration: 1.0, ease: "sine.inOut", immediateRender: false }, 0.3);
+        tl.to(glow, { opacity: 0.45, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.3) }, 1.35);
+        // le Quetzal vole jusqu'au cadre et le montre du bec
+        var tF = 0.1;
+        Q.quetzalPoseTo(tl, qz, "fly", tF, 0.3);
+        Q.quetzalFlap(tl, qz, tF + 0.1, 6, 0.38, 0.8);
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: 0 }, { x: 260, y: -240 }, { x: 470, y: -420 }], curviness: 1.2 }, duration: 1.0, ease: "power2.inOut" }, tF);
+        Q.quetzalPoseTo(tl, qz, "talk", tF + 1.0, 0.4);
+        C.talkQuetzal(tl, qz, L1);
+        // la 2e replique : Valentina ouvre les bras, le groupe bondit sur le dernier mot
+        C.talkBounce(tl, val.b, L2, 5); C.talkChar(tl, val, L2);
+        var nL = L2.words.length, wV = L2.words[nL - 1].t;
+        var vL = val.svg.querySelector(".c-armL"), vR = val.svg.querySelector(".c-armR");
+        tl.to(vL, { rotation: 70, svgOrigin: "142 306", duration: 0.35, ease: "back.out(1.7)" }, L2.t + 0.3);
+        tl.to(vR, { rotation: -70, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.7)" }, L2.t + 0.3);
+        tl.to([vL, vR], { rotation: 0, duration: 0.5, ease: "power2.inOut" }, L2.t + L2.d + 0.1);
+        Q.charEmote(tl, val.svg, L2.t, "happy", 0.3);
+        [ale, mar, mat, val].forEach(function (c, i) { S.hop(tl, c, wV - 0.05 + i * 0.07, 54); Q.charEmote(tl, c.svg, wV - 0.3, "happy", 0.3); });
+        tl.to(qz, { motionPath: { path: [{ x: 470, y: -420 }, { x: 330, y: -300 }, { x: 40, y: -50 }], curviness: 1.1 }, duration: 0.9, ease: "power2.inOut" }, L2.t - 0.3);
+        Q.quetzalPoseTo(tl, qz, "happy", L2.t + 0.5, 0.4);
+        // ---------- camera : gros plan -> recul sur tout le groupe ----------
+        S.camSet(room, 1445, 410, 1.9);
+        S.cam(tl, room, 1440, 400, 1.95, 0, L1.t + L1.d - 0.2, "sine.inOut");
+        S.cam(tl, room, 1250, 600, 0.95, L2.t - 0.5, 1.3, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

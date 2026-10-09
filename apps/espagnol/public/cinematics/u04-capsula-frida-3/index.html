@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-capsula-frida-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1, #p2, #p3, #p4, #p5 { position: absolute; inset: 0; }
+      #p2, #p5 { visibility: hidden; }
+      #stage { position: absolute; inset: 0; }
+      .fac { position: absolute; left: 0; top: 0; z-index: 5; }
+      .frm { position: absolute; left: 0; top: 0; z-index: 6; }
+      .gframe { position: absolute; left: 0; top: 0; border: 10px solid #ffc83d; border-radius: 30px; opacity: 0; z-index: 7; }
+      #cnt { position: absolute; left: 1330px; top: 290px; z-index: 10; font: 400 250px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #c9573b, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+      #cntl { position: absolute; left: 1336px; top: 556px; z-index: 10; font: 900 52px/1 Nunito, sans-serif; color: #ffc83d; letter-spacing: .1em; text-transform: uppercase; }
+      .mir { position: absolute; left: 0; top: 0; z-index: 8; }
+      .mcard { position: absolute; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .mbox { position: absolute; }
+      .ring { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; z-index: 9; }
+      .ovl { position: absolute; left: 0; top: 0; border: 8px solid #ffc83d; border-radius: 50%; opacity: 0; z-index: 9; }
+      .pcard { position: absolute; left: 0; top: 0; width: 200px; height: 240px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 9; }
+      .pcard svg { position: absolute; left: -2px; bottom: -4px; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 8; }
+      .band { position: absolute; left: 0; top: 0; z-index: 5; height: 40px; border-radius: 8px; background-size: auto 40px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-capsula-frida-3" data-start="0" data-width="1920" data-height="1200" data-duration="10.916">
+      <div id="p4" data-layout-allow-overflow><div id="stage"></div></div>
+      <div id="p5" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.916" data-media-start="19.625" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.716,"v":1},{"t":10.916,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.6216d566d2.mp3" data-start="0.5" data-duration="2.799" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-5-1" src="./assets/voz/narrador.33c742c1ce.mp3" data-start="4.399" data-duration="5.267" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.169" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.144" data-duration="0.1" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="3.699" data-duration="0.212" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="4.606" data-duration="0.1" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="9.066" data-duration="0.121" data-track-index="8" data-volume="0.4"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/level-up.mp3" data-start="10.016" data-duration="0.37" data-track-index="9" data-volume="0.35"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-capsula-frida-3","cinematica":"u04-capsula-frida","part":3,"parts":3,"total":10.916,"meta":{"cinematica":"u04-capsula-frida","titulo":"Frida Kahlo y la Casa Azul","tipo":"capsula","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":4,"t0":0,"t1":3.899,"vista":"Le patio de la Casa Azul : singes, perroquets, chiens sans poils (xoloitzcuintles) entre les plantes, en papier découpé.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En su casa viven monos, loros y perros.","key":"narrador.6216d566d2","t":0.5,"d":2.799,"words":[{"w":"En","t":0.5,"d":0.2},{"w":"su","t":0.7,"d":0.2},{"w":"casa","t":0.901,"d":0.318},{"w":"viven","t":1.219,"d":0.377},{"w":"monos,","t":1.597,"d":0.377},{"w":"loros","t":2.194,"d":0.377},{"w":"y","t":2.572,"d":0.142},{"w":"perros.","t":2.713,"d":0.436}]}]},{"n":5,"t0":3.899,"t1":10.666,"vista":"Plan large de la Casa Azul, des visiteurs entrent, panneau « Museo Frida Kahlo » ; la carte revient sur Ciudad de México.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Hoy la Casa Azul es un museo. Está en Coyoacán, en Ciudad de México.","key":"narrador.33c742c1ce","t":4.399,"d":5.267,"words":[{"w":"Hoy","t":4.399,"d":0.257},{"w":"la","t":4.656,"d":0.199},{"w":"Casa","t":4.855,"d":0.316},{"w":"Azul","t":5.171,"d":0.316},{"w":"es","t":5.486,"d":0.199},{"w":"un","t":5.685,"d":0.199},{"w":"museo.","t":5.884,"d":0.374},{"w":"Está","t":7.242,"d":0.284},{"w":"en","t":7.526,"d":0.179},{"w":"Coyoacán,","t":7.704,"d":0.494},{"w":"en","t":8.381,"d":0.179},{"w":"Ciudad","t":8.559,"d":0.389},{"w":"de","t":8.948,"d":0.179},{"w":"México.","t":9.127,"d":0.389}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.169,"f":"ui/pop"},{"t":2.144,"f":"ui/pop"},{"t":3.699,"f":"ui/swoosh-out"},{"t":4.606,"f":"ui/pop"},{"t":9.066,"f":"ui/star"},{"t":10.016,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (tl, el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        // carte explainer recadree sur le Mexique dans une carte de papier : renvoie { card, pos(lon, lat) -> [x, y] dans la carte }
+        var mexMap = function (parent, x, y, cw, ch, S0, uid) {
+          var card = mk(parent, "mcard"); card.style.cssText += ";left:0;top:0;width:" + cw + "px;height:" + ch + "px"; gsap.set(card, { x: x, y: y });
+          var mb = mk(card, "mbox"); mb.innerHTML = Q.explainerMap({ uid: uid, width: 1600 * S0, height: 1200 * S0 });
+          var c = Q.mapProj(-100, 20.5); mb.style.cssText += ";left:" + (cw / 2 - c[0] * S0) + "px;top:" + (ch / 2 - c[1] * S0) + "px;width:" + (1600 * S0) + "px;height:" + (1200 * S0) + "px";
+          mb.firstChild.setAttribute("data-layout-allow-overflow", "");
+          return { card: card, pos: function (lon, lat) { var p = Q.mapProj(lon, lat); return [cw / 2 - c[0] * S0 + p[0] * S0, ch / 2 - c[1] * S0 + p[1] * S0]; }, hi: card.querySelectorAll(".x-hi-mx") };
+        };
+        var T = PLAN.total, PA = C.planOf(PLAN, 4), PB = C.planOf(PLAN, 5), LA = PA.lines[0], LB = PB.lines[0], W = PB.t0;
+        var wa = function (k) { return C.wordT(PLAN, 4, 1, k); }, wb = function (k) { return C.wordT(PLAN, 5, 1, k); };
+        // ============ PLAN 4 : le patio de la Casa Azul et ses habitants (papier decoupe) ============
+        var set = Q.casaAzulPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#6F5F54", motes: 14 });
+        var p4 = $("#p4");
+        S.camSet(room, 1200, 600, 0.8);
+        S.cam(tl, room, 1200, 620, 0.88, 0, W, "sine.inOut");
+        var props = [["mono", 560, 520, 240, "monos", wa(5), "gold", 205, 330], ["loro", 1020, 380, 200, "loros", wa(6), "pink", 640, 290], ["xolo", 1440, 690, 360, "perros", wa(8), "", 1310, 1000]];
+        var pe = [];
+        props.forEach(function (p, i) {
+          var d = mk(p4, "prop cap-paper", Q.mxProp(p[0], { width: p[3], uid: "pp" + i })); gsap.set(d, { x: p[1] - p[3] / 2, y: p[2], transformOrigin: "50% 100%" });
+          tl.set(d, { opacity: 0 }, 0);
+          tl.fromTo(d, { opacity: 0, y: p[2] + 150, scale: 0.7, rotation: -6 }, { opacity: 1, y: p[2], scale: 1, rotation: 0, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, p[5] - 0.1);
+          tl.to(d, { y: "-=14", duration: 0.7 + i * 0.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(W, 0.7 + i * 0.1) }, p[5] + 0.5);
+          var ch = Cap.chip(p4, p[4], p[1] - 100, p[2] - 70, p[6]); popS(tl, ch, p[5] - 0.05, 2); tl.to(ch, { opacity: 0, duration: 0.3 }, W - 0.5);
+          Cap.sparks(tl, p4, p[1], p[2] + 40, p[5], 6, "#ffe9a8");
+        });
+        // transition : papier qui se retracte, le plan 5 fond
+        tl.to(p4, { opacity: 0, duration: 0.45, ease: "sine.inOut" }, W - 0.1);
+        tl.set(p4, { visibility: "hidden" }, W + 0.4);
+
+        // ============ PLAN 5 : la facade, un musee, la carte ============
+        var p5 = $("#p5");
+        tl.set(p5, { opacity: 0 }, 0);
+        tl.set(p5, { visibility: "visible" }, W - 0.15);
+        tl.to(p5, { opacity: 1, duration: 0.45, ease: "sine.inOut" }, W - 0.15);
+        var sky = Q.coyoacanSkyline({ uid: "cy" });
+        var lay = mk(p5, "lay"); gsap.set(lay, { x: -1090 });
+        lay.innerHTML = sky.sky + sky.sun + sky.far + sky.mid + sky.near;
+        Array.prototype.forEach.call(lay.children, function (c) { c.style.cssText += ";position:absolute;left:0;top:0"; });
+        // recul lent
+        tl.fromTo(p5, { scale: 1.12, transformOrigin: "50% 60%" }, { scale: 1.0, duration: T - W + 0.2, ease: "sine.out" }, W - 0.1);
+        // les visiteurs montent (bustes de papier) devant la porte
+        var who = [["alex", "#19b7aa"], ["marina", "#d93472"], ["mateo", "#2f6fd0"]];
+        who.forEach(function (k, i) {
+          var d = mk(p5, "pcard", Q.character(k[0], { view: "bust", width: 220, uid: "v" + i })); d.style.background = k[1]; d.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+          gsap.set(d, { x: 300 + i * 230, y: 560 });
+          tl.set(d, { opacity: 0 }, 0);
+          tl.fromTo(d, { opacity: 0, y: 560 + 200, rotation: (i % 2 ? 5 : -5) }, { opacity: 1, y: 560, rotation: 0, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, wb(3) + i * 0.15);
+          tl.to(d, { y: "-=10", duration: 1.2 + i * 0.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - wb(3), 1.2 + i * 0.1) }, wb(3) + 0.9);
+        });
+        var cm = Cap.chip(p5, "un museo", 1210, 250, "gold"); Cap.pop(tl, cm, wb(6) - 0.05, { from: "down", rot: 2 });
+        // la carte revient (CDMX pulse sur « Ciudad de México »)
+        var tCdmx = wb(12);
+        var mm = mexMap(p5, 1380, 590, 440, 300, 0.56, "xm5");
+        tl.set(mm.card, { opacity: 0 }, 0);
+        tl.fromTo(mm.card, { opacity: 0, y: 590 + 100, rotation: 3 }, { opacity: 1, y: 590, rotation: 0, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, wb(10) - 0.1);
+        tl.fromTo(mm.hi, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out", immediateRender: false }, wb(10));
+        var cp = mm.pos(-99.13, 19.43), ring = mk(mm.card, "ring"); gsap.set(ring, { x: cp[0], y: cp[1] });
+        for (var rr = 0; rr < 3; rr++) tl.fromTo(ring, { scale: 0.4, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, tCdmx - 0.1 + rr * 1.0);
+        var dot = mk(mm.card, "", ""); dot.style.cssText += ";position:absolute;left:0;top:0;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:#ffc83d;border:4px solid #fff;z-index:9"; gsap.set(dot, { x: cp[0], y: cp[1] });
+        tl.fromTo(dot, { scale: 0 }, { scale: 1, duration: 0.4, ease: "back.out(3)", immediateRender: false }, tCdmx - 0.15);
+        Cap.sparks(tl, p5, 1380 + cp[0], 590 + cp[1], tCdmx, 8, "#ffe9a8");
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-capsula-frida-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

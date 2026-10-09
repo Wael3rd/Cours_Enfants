@@ -455,7 +455,7 @@ const CINES = {
       ] },
       { plans: [3], lead: { 3: 0.6 }, tail: { 3: 1.0 }, sfx: [
         { f: 'ui/swoosh-in', at: 'p3', off: 0.0, vol: 0.4 },
-        { f: 'ui/star', at: 'w3.1.14', off: 0, vol: 0.4 },
+        { f: 'ui/star', at: 'w3.1.16', off: 0, vol: 0.4 },
         { f: 'rpg/door-open', at: 'l3.1.end', off: -0.9, vol: 0.3 },
       ] },
       { plans: [4, 5], lead: { 4: 0.35, 5: 0.3 }, tail: { 4: 0.15, 5: 0.45 }, sfx: [

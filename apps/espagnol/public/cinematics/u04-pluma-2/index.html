@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-cdmx):not(.m-med-valencia) { display: none; }
+      #mapbox .m-med text { display: none; }
+      .holo { position: absolute; left: 0; top: 0; z-index: 8; width: 300px; height: 330px; opacity: 0; }
+      .holo .hb { position: absolute; left: 0; top: 0; width: 300px; height: 280px; opacity: .82; }
+      .holo .hg { position: absolute; left: -20px; top: 230px; width: 340px; height: 90px; border-radius: 50%; background: radial-gradient(closest-side, rgba(111,231,220,.8), rgba(111,231,220,0)); }
+      .holo .hl { position: absolute; left: 0; top: 0; width: 300px; height: 280px; background: repeating-linear-gradient(0deg, rgba(20,60,90,.18) 0 3px, rgba(20,60,90,0) 3px 9px); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.573">
+      <div id="p3" style="position:absolute;inset:0;overflow:hidden"><div id="mapbox" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.573" data-media-start="9.388" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.373,"v":1},{"t":6.573,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/ignacio.aa13717da1.mp3" data-start="0.6" data-duration="4.523" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.8" data-duration="0.465" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="5.223" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-pluma-2","cinematica":"u04-pluma","part":2,"parts":2,"total":6.573,"meta":{"cinematica":"u04-pluma","titulo":"Cuarta pluma","tipo":"pluma","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":6.323,"vista":"Don Ignacio apparaît en hologramme au-dessus de la carte ; une empreinte lumineuse traverse l’océan jusqu’à Valencia.","camara":"","rotulo":"","personajes":["ignacio"],"lines":[{"who":"ignacio","es":"La siguiente pluma está en Valencia. ¡Es hora de volver a España!","key":"ignacio.aa13717da1","t":0.6,"d":4.523,"words":[{"w":"La","t":0.6,"d":0.166},{"w":"siguiente","t":0.766,"d":0.508},{"w":"pluma","t":1.274,"d":0.312},{"w":"está","t":1.586,"d":0.264},{"w":"en","t":1.85,"d":0.166},{"w":"Valencia.","t":2.015,"d":0.459},{"w":"¡Es","t":3.6,"d":0.159},{"w":"hora","t":3.758,"d":0.252},{"w":"de","t":4.011,"d":0.159},{"w":"volver","t":4.169,"d":0.346},{"w":"a","t":4.515,"d":0.112},{"w":"España!","t":4.627,"d":0.346}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.8,"f":"rpg/spell-cast"},{"t":5.223,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "done", salamanca: "done", sevilla: "done", cdmx: "done", oaxaca: "open", valencia: "open" }, player: "cdmx", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("valencia"));
+        var mx = Q.mapRegion("cdmx"), va = Q.mapRegion("valencia"), oa = Q.mapRegion("oaxaca"), mid = { x: (mx.x + va.x) / 2 - 20, y: (mx.y + va.y) / 2 };
+        // camera : sur Mexico, recul pour embrasser l'Atlantique, puis on accompagne le pion jusqu'a Valencia
+        Q.mapCamSet(gsap, mapbox, { x: mx.x, y: mx.y }, 3.2);
+        Q.mapCamMove(tl, mapbox, mid, 0.9, P.t0 + 0.1, 1.8, "power2.inOut");
+        Q.mapFogDrift(tl, mapbox, 0, T);
+        Q.mapPulse(tl, mapbox, 0, 3, 0.9);
+        var tT = P.t0 + 0.55, dT = Math.max(1.6, T - tT - 1.5);
+        Q.mapTravel(tl, mapbox, "cdmx", "oaxaca", tT, 0.45, gsap);
+        Q.mapTravel(tl, mapbox, "oaxaca", "valencia", tT + 0.5, dT, gsap);
+        Q.mapCamMove(tl, mapbox, { x: va.x - 120, y: va.y + 20 }, 1.7, tT + 0.5 + dT * 0.55, dT * 0.45 + 0.5, "power1.inOut");
+        Q.mapFogClear(tl, mapbox, "valencia", tT + 0.5 + dT - 0.2, 1.2);
+        // Don Ignacio en hologramme au-dessus de la carte (portrait translucide qui flotte)
+        var ho = mk($("#p3"), "holo", '<div class="hb">' + Q.character("ignacio", { view: "bust", width: 300, uid: "hg" }) + '</div><div class="hl"></div><div class="hg"></div>'); ho.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        gsap.set(ho, { x: 1480, y: 150 });
+        tl.set(ho, { opacity: 0 }, 0);
+        tl.fromTo(ho, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, L.t - 0.1);
+        tl.to(ho, { y: "-=10", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L.t, 1.1) + 1 }, L.t + 0.5);
+        C.talkBounce(tl, ho.querySelector(".hb"), L, 3);
+        tl.to(ho, { opacity: 0, duration: 0.4, ease: "sine.in" }, T - 0.6);
+
+        C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

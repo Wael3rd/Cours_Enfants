@@ -1883,6 +1883,12 @@ ${mxCobbles(W, fl, H, 29, '#B59471', '#7A5C3E')}${scRect(0, fl - 8, W, 14, '#8E7
   const light = scSvg(W, H, `${skyG}<g class="ac-beams" fill="url(#${g('w')})"><path d="M2200 0L2900 0L2300 ${H}L1500 ${H}Z" opacity=".5"/></g>`, 'ph-light');
   return { back, front, light, W, H, floor: fl, kiosk: PLAZA.kiosk, balloons };
 }
+/** Facade de la Casa Azul isolee (SVG 780 x 500, sans enseigne ni decor) pour les capsules en papier decoupe. opts : width, uid. */
+function casaAzulFachada(opts) {
+  opts = opts || {};
+  const W = opts.width || 780;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="${W}" height="${Math.round((W * 500) / 780)}" class="mx-fachada" style="overflow:visible" aria-hidden="true">${mxCasaAzul(30, 470, 720, 400, { cols: 3 })}${scRect(0, 470, 780, 18, MX.stone2)}</svg>`;
+}
 /** Ballon autonome (SVG 80x180, centre du ballon en 40,40) a poser comme element DOM anime (pas dans un gros calque SVG). opts : c (couleur), width. */
 function mxBalloonSvg(opts) {
   opts = opts || {};
@@ -1920,7 +1926,7 @@ function casaAzulPatio(opts) {
 }
 
 // ---------------------------------------------------------------- autoportrait encadre (figure GENERIQUE : fleurs dans les cheveux, nattes, col brode) 250 x 320 par defaut
-/** opts : width, uid, state 'full' (visage + couleurs) | 'erased' (visage efface par la Sombra : tache grise, couleurs eteintes) | 'blank' (cadre vide : plus de figure, fond gris, seul .ar-glow vert a allumer). .ar-fig = toute la figure (opacity). Groupes animables :
+/** opts : width, uid, bg (couleur du fond de toile), state 'full' (visage + couleurs) | 'erased' (visage efface par la Sombra : tache grise, couleurs eteintes) | 'blank' (cadre vide : plus de figure, fond gris, seul .ar-glow vert a allumer). .ar-fig = toute la figure (opacity). Groupes animables :
  *  .ar-face (visage), .ar-dim (voile gris eteint ; opacity 1 -> 0 pour rendre les couleurs), .ar-smudge (tache grise du visage ; 1 -> 0), .ar-glow (halo vert de la plume). */
 function autorretrato(opts) {
   opts = opts || {};
@@ -1929,15 +1935,14 @@ function autorretrato(opts) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${ow}" height="${oh}" class="ar-svg" style="overflow:visible" aria-hidden="true"><defs><clipPath id="${g('c')}"><rect x="22" y="22" width="206" height="276" rx="6"/></clipPath><radialGradient id="${g('gl')}"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".95"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".4"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs>
 <rect x="0" y="0" width="${W}" height="${H}" rx="14" fill="#C99A4E"/><rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="10" fill="#E8C078"/><rect x="14" y="14" width="${W - 28}" height="${H - 28}" rx="8" fill="#8E5A22"/>
 ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<circle cx="${20 + i * 30}" cy="11" r="4" fill="#FFE9A8"/><circle cx="${20 + i * 30}" cy="${H - 11}" r="4" fill="#FFE9A8"/>`).join('')}
-<g clip-path="url(#${g('c')})"><rect x="22" y="22" width="206" height="276" fill="#1F7F6A"/>
+<g clip-path="url(#${g('c')})"><rect x="22" y="22" width="206" height="276" fill="${opts.bg || '#1F7F6A'}"/>
 ${[[40, 80, 52, 120], [210, 70, 60, 150], [30, 220, 70, 100], [220, 230, 64, 110]].map((l, i) => `<path d="M${l[0]} ${l[1] + l[3]}Q${l[0] - l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1]}Q${l[0] + l[2]} ${l[1] + l[3] * 0.4} ${l[0]} ${l[1] + l[3]}Z" fill="${['#0E5A40', '#2C8F58', '#0E5A40', '#2C8F58'][i]}"/>`).join('')}
 <g class="ar-fig" opacity="${blank ? 0 : 1}"><path d="M62 300Q60 236 100 214L150 214Q190 236 188 300Z" fill="#F5E6C8"/><path d="M96 214Q125 244 154 214L150 232Q125 262 100 232Z" fill="#D93472"/><path d="M80 280Q125 266 170 280" stroke="#D93472" stroke-width="7" fill="none"/><g fill="#FFC83D"><circle cx="100" cy="268" r="5"/><circle cx="125" cy="274" r="5"/><circle cx="150" cy="268" r="5"/></g>
 <path d="M72 150Q70 90 125 82Q180 90 178 150Q176 230 125 238Q74 230 72 150Z" fill="#1E120C"/>
 <g class="ar-face"><ellipse cx="125" cy="168" rx="46" ry="56" fill="#D2956B"/><path d="M84 140Q102 130 118 138M132 138Q148 130 166 140" stroke="#1E120C" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#FFFBF0"><ellipse cx="106" cy="158" rx="11" ry="9"/><ellipse cx="144" cy="158" rx="11" ry="9"/></g><g fill="#2A160E"><circle cx="107" cy="158" r="5.5"/><circle cx="145" cy="158" r="5.5"/></g><path d="M125 164q-6 14 0 18q6 2 9 -2" stroke="#A8683F" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M106 198Q125 210 144 198" stroke="#8F1D4E" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="92" cy="180" r="9" fill="#FF7A7A" opacity=".3"/><circle cx="158" cy="180" r="9" fill="#FF7A7A" opacity=".3"/></g>
 <ellipse class="ar-smudge" cx="125" cy="168" rx="48" ry="58" fill="#7A7C86" opacity="${erased ? 0.95 : 0}"/>
 <path d="M72 130Q125 66 178 130" stroke="#1E120C" stroke-width="22" fill="none"/><g>${[[86, 98, '#D93472'], [118, 80, '#FFC83D'], [152, 86, '#19B7AA'], [174, 110, '#FF7FB0']].map((f) => `<circle cx="${f[0]}" cy="${f[1]}" r="12" fill="${f[2]}"/><circle cx="${f[0]}" cy="${f[1]}" r="4" fill="#FFF3B0"/>`).join('')}</g>
-</g><ellipse class="ar-glow" cx="125" cy="170" rx="130" ry="150" fill="url(#${g('gl')})" opacity="0"/>
-<rect class="ar-dim" x="22" y="22" width="206" height="276" fill="#6E707C" opacity="${blank ? 0.9 : erased ? 0.86 : 0}"/></g></svg>`;
+</g><rect class="ar-dim" x="22" y="22" width="206" height="276" fill="#6E707C" opacity="${blank ? 0.9 : erased ? 0.86 : 0}"/><ellipse class="ar-glow" cx="125" cy="170" rx="130" ry="150" fill="url(#${g('gl')})" opacity="0"/></g></svg>`;
 }
 
 // ---------------------------------------------------------------- accessoires de capsule (papier decoupe) : singe, perroquet, xoloitzcuintle, miroir a main, cadre vide
@@ -2207,5 +2212,5 @@ function oaxacaPetalPath(opts) {
   return { svg, W, H, path, door };
 }
 
-window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica,coyoacanSkyline,PLAZA,plazaHidalgo,mxBalloonSvg,CASAP,casaAzulPatio,autorretrato,mxProp,ofrendaSvg,oxProp,oxSeal,OAXACA_SKY,oaxacaSkyline,oaxacaStall,OX_PATIO,patioOfrenda,oaxacaPetalPath};
+window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica,coyoacanSkyline,PLAZA,plazaHidalgo,casaAzulFachada,mxBalloonSvg,CASAP,casaAzulPatio,autorretrato,mxProp,ofrendaSvg,oxProp,oxSeal,OAXACA_SKY,oaxacaSkyline,oaxacaStall,OX_PATIO,patioOfrenda,oaxacaPetalPath};
 })();

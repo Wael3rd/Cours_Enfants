@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .st-balloon { position: absolute; left: 0; top: 0; }
+      .st-pigeon { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="10.102">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.102" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.802,"v":1},{"t":10.102,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/quetzal.cb0d8b84d6.mp3" data-start="0.8" data-duration="2.764" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-1-2" src="./assets/voz/mateo.3cb03433b9.mp3" data-start="3.864" data-duration="5.388" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-grass-000.mp3" data-start="0.2" data-duration="0.775" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.7" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/step-00.mp3" data-start="3.764" data-duration="0.233" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/step-01.mp3" data-start="3.964" data-duration="0.254" data-track-index="7" data-volume="0.3"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/step-02.mp3" data-start="4.164" data-duration="0.242" data-track-index="8" data-volume="0.3"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/pop.mp3" data-start="3.814" data-duration="0.1" data-track-index="9" data-volume="0.35"></audio>
+      <audio id="a-sfx8" src="./_shared/sfx/swoosh-out.mp3" data-start="9.802" data-duration="0.212" data-track-index="10" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-historia-1","cinematica":"u04-historia","part":1,"parts":5,"total":10.102,"meta":{"cinematica":"u04-historia","titulo":"Los autorretratos sin cara","tipo":"historia","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":9.852,"vista":"Plaza Hidalgo de Coyoacán : vendeurs, ballons, pigeons. Le Quetzal sort du sac de Marina, ouvre grand les ailes, ses plumes sont plus vertes. Mateo, 12 ans, grand et mince, casquette bleue, arrive en trottinant.","camara":"plan large puis plan moyen sur Mateo","rotulo":"","personajes":["quetzal","mateo","marina","viajero"],"lines":[{"who":"quetzal","es":"México… ¡Estoy en casa!","key":"quetzal.cb0d8b84d6","t":0.8,"d":2.764,"words":[{"w":"México…","t":0.8,"d":0.643},{"w":"¡Estoy","t":2.492,"d":0.388},{"w":"en","t":2.881,"d":0.206},{"w":"casa!","t":3.087,"d":0.328}]},{"who":"mateo","es":"¡Qué onda! Me llamo Mateo y soy de Coyoacán. ¿Ustedes son los viajeros?","key":"mateo.3cb03433b9","t":3.864,"d":5.388,"words":[{"w":"¡Qué","t":3.864,"d":0.214},{"w":"onda!","t":4.078,"d":0.263},{"w":"Me","t":5.262,"d":0.158},{"w":"llamo","t":5.42,"d":0.297},{"w":"Mateo","t":5.717,"d":0.297},{"w":"y","t":6.014,"d":0.111},{"w":"soy","t":6.126,"d":0.204},{"w":"de","t":6.33,"d":0.158},{"w":"Coyoacán.","t":6.488,"d":0.436},{"w":"¿Ustedes","t":7.859,"d":0.393},{"w":"son","t":8.251,"d":0.206},{"w":"los","t":8.457,"d":0.206},{"w":"viajeros?","t":8.663,"d":0.439}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/step-grass-000"},{"t":0.7,"f":"ui/pop"},{"t":3.764,"f":"rpg/step-00"},{"t":3.964,"f":"rpg/step-01"},{"t":4.164,"f":"rpg/step-02"},{"t":3.814,"f":"ui/pop"},{"t":9.802,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        // ballons : elements DOM autonomes qui flottent (transform seul, cycles finis)
+        var floatBalloons = function (room, set, T) {
+          set.balloons.forEach(function (b, i) {
+            var d = mkp(room.qlayer, "st-balloon", Q.mxBalloonSvg({ c: b.c, width: 80 }), b.x - 40, b.y - 40);
+            var per = 2.4 + (i % 3) * 0.35;
+            tl.to(d, { y: "-=" + (10 + (i % 3) * 3), rotation: (i % 2 ? 2.2 : -2.2), duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1, transformOrigin: "50% 100%" }, i * 0.15);
+          });
+        };
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.plazaHidalgo({ uid: "ph" });
+        var room = S.set($("#stage"), set, { below: "#B59471", motes: 14 });
+        S.drift(tl, room, T);
+        floatBalloons(room, set, T);
+
+        // ---------- Alex et Marina au bord de la place ; Dona Lupita derriere son etal (fond) ----------
+        var lup = S.chr(room.actors, "lupita", 2740, 1000, 270);
+        var ale = S.chr(room.actors, "viajero", 700, 1040, 330), mar = S.chr(room.actors, "marina", 880, 1030, 322);
+        S.breathe(tl, lup, 0, T, 0.8); S.breathe(tl, ale, 0.1, T, 0.8); S.breathe(tl, mar, 0.2, T, 0.8);
+        Q.charWave(tl, lup.svg, 1.2, 1.2, "R");
+        Q.charBlink(tl, ale.svg, 2.4); Q.charBlink(tl, mar.svg, 3.9); Q.charBlink(tl, lup.svg, 5.5);
+
+        // ---------- le Quetzal sort de derriere l'epaule de Marina, ouvre grand les ailes ----------
+        var qz = S.quetzal(room.actors, 975, 770, 200, "perched", false, "qh1");
+        var tQ = L1.t - 0.25;
+        gsap.set(qz, { opacity: 0, scale: 0.2, x: 0, y: 0, transformOrigin: "50% 80%" });
+        tl.fromTo(qz, { opacity: 0, scale: 0.2, y: 30 }, { opacity: 1, scale: 1, y: -70, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, tQ);
+        Q.quetzalPoseTo(tl, qz, "fly", tQ, 0.35);
+        Q.quetzalFlap(tl, qz, tQ + 0.2, 5, 0.38, 0.8);
+        tl.to(qz, { y: -150, x: 30, duration: 0.9, ease: "sine.inOut" }, tQ + 0.6);
+        C.talkQuetzal(tl, qz, L1);
+        var tEnd1 = L1.t + L1.d;
+        tl.to(qz, { x: 0, y: -8, duration: 0.7, ease: "power2.inOut" }, tEnd1 + 0.05);
+        Q.quetzalPoseTo(tl, qz, "perched", tEnd1 + 0.1, 0.5);
+        Q.quetzalBlink(tl, qz, tEnd1 + 0.9);
+        Q.charEmote(tl, mar.svg, tQ, "happy", 0.3); Q.charEmote(tl, ale.svg, tQ, "happy", 0.3);
+
+        // ---------- Mateo arrive en trottinant par la droite ----------
+        var mat = S.chr(room.actors, "mateo", 3100, 1040, 340);
+        var tR = tEnd1 - 0.35, dR = 1.6, xM = 1260;
+        S.walk(tl, mat, 3100, xM, tR, dR, 0.26, "power1.out");
+        S.breathe(tl, mat, tR + dR, T - tR - dR, 0.8);
+        tl.fromTo(mat.b, { scaleX: 1, scaleY: 1 }, { scaleX: 1.06, scaleY: 0.95, duration: 0.12, ease: "power2.in", transformOrigin: "50% 100%", immediateRender: false }, tR + dR - 0.05);
+        tl.to(mat.b, { scaleX: 1, scaleY: 1, duration: 0.4, ease: "elastic.out(1,0.45)" }, tR + dR + 0.08);
+        C.talkBounce(tl, mat.b, L2, 6); C.talkChar(tl, mat, L2);
+        Q.charWave(tl, mat.svg, L2.t - 0.1, 0.9, "R");               // « ¡Qué onda! »
+        Q.charEmote(tl, mat.svg, L2.t, "happy", 0.3);
+        // Alex et Marina se tournent vers lui : petit rebond d'attention
+        S.hop(tl, ale, L2.t + 2.2, 26); Q.charNod(tl, mar.svg, L2.t + 3.0, 4, 0.2);
+        Q.charBlink(tl, mat.svg, L2.t + 2.6);
+
+        // ---------- camera : plan large de la place -> pousse vers le groupe -> suit Mateo ----------
+        S.camSet(room, 1500, 650, 0.66);
+        S.cam(tl, room, 1180, 760, 0.95, 0, tR + 0.5, "sine.inOut");
+        S.cam(tl, room, 1230, 770, 1.1, tR + 0.3, 1.5, "power2.inOut");
+        tl.fromTo("#stage", { rotation: -0.8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.4, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -51,11 +51,11 @@
   /** Fond clair de papier (grain) pour les scenes plein cadre. */
   Cap.sparks = function (tl, parent, x, y, at, n, color) {
     for (var k = 0; k < (n || 8); k++) {
-      var sp = el('div', 'cap-spark', '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + window.QArt.sparklePath(0, 0, 16, 4) + '" fill="' + (color || '#ffe9a8') + '"/></svg>', parent);
+      var sp = el('div', 'cap-spark q-fx', '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + window.QArt.sparklePath(0, 0, 16, 4) + '" fill="' + (color || '#ffe9a8') + '"/></svg>', parent);
       sp.style.cssText = 'position:absolute;left:0;top:0;z-index:15';
       var ang = (k / (n || 8)) * 6.283, d = 60 + (k % 3) * 24;
-      tl.fromTo(sp, { x: x, y: y, scale: 0, opacity: 1 }, { x: x + Math.cos(ang) * d, y: y + Math.sin(ang) * d, scale: 0.9, duration: 0.35, ease: 'back.out(3)', immediateRender: false }, at + k * 0.02);
-      tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, at + 0.4 + k * 0.02);
+      tl.fromTo(sp, { x: x, y: y, scale: 0, opacity: 1 }, { x: x + Math.cos(ang) * d, y: y + Math.sin(ang) * d, scale: 0.9, duration: 0.45, ease: 'power2.out', immediateRender: false }, at + k * 0.03);
+      tl.to(sp, { scale: 0, opacity: 0, duration: 0.35 }, at + 0.5 + k * 0.03);
     }
   };
 })();

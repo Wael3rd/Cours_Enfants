@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u04-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .st-balloon { position: absolute; left: 0; top: 0; }
+      .ar { position: absolute; left: 0; top: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u04-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="8.232">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.232" data-media-start="19.876" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.932,"v":1},{"t":8.232,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/valentina.1905623ef1.mp3" data-start="0.7" data-duration="6.782" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-grass-001.mp3" data-start="0.2" data-duration="0.671" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.65" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="7.932" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u04-historia-3","cinematica":"u04-historia","part":3,"parts":5,"total":8.232,"meta":{"cinematica":"u04-historia","titulo":"Los autorretratos sin cara","tipo":"historia","unidad":"¿Cómo eres?","numero":4,"lugar":"Ciudad de México","pluma":"Pluma del Autorretrato","plumaNum":4,"rotulo":"","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":7.982,"vista":"La Casa Azul : murs cobalt, patio plein de plantes. Valentina, la guide, sort en courant, des fleurs dans les cheveux. À l’intérieur, des autoportraits dont les visages sont devenus des taches grises.","camara":"","rotulo":"","personajes":["valentina","sombra"],"lines":[{"who":"valentina","es":"Por favor, necesito ayuda. Los autorretratos no tienen cara. ¡Y no hay colores!","key":"valentina.1905623ef1","t":0.7,"d":6.782,"words":[{"w":"Por","t":0.7,"d":0.228},{"w":"favor,","t":0.928,"d":0.332},{"w":"necesito","t":1.49,"d":0.588},{"w":"ayuda.","t":2.078,"d":0.4},{"w":"Los","t":3.464,"d":0.234},{"w":"autorretratos","t":3.698,"d":0.767},{"w":"no","t":4.465,"d":0.181},{"w":"tienen","t":4.646,"d":0.394},{"w":"cara.","t":5.04,"d":0.288},{"w":"¡Y","t":6.316,"d":0.131},{"w":"no","t":6.447,"d":0.186},{"w":"hay","t":6.633,"d":0.24},{"w":"colores!","t":6.873,"d":0.458}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/step-grass-001"},{"t":0.65,"f":"ui/pop"},{"t":7.932,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        // ballons : elements DOM autonomes qui flottent (transform seul, cycles finis)
+        var floatBalloons = function (room, set, T) {
+          set.balloons.forEach(function (b, i) {
+            var d = mkp(room.qlayer, "st-balloon", Q.mxBalloonSvg({ c: b.c, width: 80 }), b.x - 40, b.y - 40);
+            var per = 2.4 + (i % 3) * 0.35;
+            tl.to(d, { y: "-=" + (10 + (i % 3) * 3), rotation: (i % 2 ? 2.2 : -2.2), duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1, transformOrigin: "50% 100%" }, i * 0.15);
+          });
+        };
+        var P = C.planOf(PLAN, 3), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.casaAzulPatio({ uid: "cp" });
+        var room = S.set($("#stage"), set, { below: "#6F5F54", motes: 16 });
+        S.drift(tl, room, T);
+        var frames = set.frames.map(function (f, i) { return mkp(room.qlayer, "ar", Q.autorretrato({ width: f.w, uid: "ar" + i, state: "erased" }), f.x, f.y); });
+        var ale = S.chr(room.actors, "viajero", 640, 1065, 340), mar = S.chr(room.actors, "marina", 820, 1055, 332), mat = S.chr(room.actors, "mateo", 990, 1065, 350);
+        S.breathe(tl, ale, 0, T, 0.8); S.breathe(tl, mar, 0.1, T, 0.8); S.breathe(tl, mat, 0.2, T, 0.8);
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 4.1); Q.charBlink(tl, mat.svg, 3.3);
+        var val = S.chr(room.actors, "valentina", 2060, 1075, 355);
+        var tV = L1.t - 0.1;
+        tl.set(val.el, { opacity: 0 }, 0);
+        tl.fromTo(val.el, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "sine.out", immediateRender: false }, tV);
+        S.walk(tl, val, 2060, 1580, tV, 1.05, 0.25, "power2.out");
+        S.breathe(tl, val, tV + 1.1, T - tV - 1.1, 0.9);
+        C.talkBounce(tl, val.b, L1, 5); C.talkChar(tl, val, L1);
+        Q.charEmote(tl, val.svg, tV, "worry", 0.3);
+        var nW = L1.words.length, wCol = L1.words[nW - 1].t, wHay = L1.words[nW - 3].t;
+        var vL = val.svg.querySelector(".c-armL"), vR = val.svg.querySelector(".c-armR");
+        tl.to(vL, { rotation: 20, svgOrigin: "142 306", duration: 0.3, ease: "sine.out" }, tV + 1.0);
+        tl.to(vR, { rotation: -20, svgOrigin: "258 306", duration: 0.3, ease: "sine.out" }, tV + 1.0);
+        tl.to(vL, { rotation: 74, svgOrigin: "142 306", duration: 0.35, ease: "back.out(1.7)" }, wHay - 0.1);
+        tl.to(vR, { rotation: -74, svgOrigin: "258 306", duration: 0.35, ease: "back.out(1.7)" }, wHay - 0.1);
+        tl.to([vL, vR], { rotation: 0, duration: 0.5, ease: "power2.inOut" }, L1.t + L1.d + 0.15);
+        // les trois visiteurs se retournent vers elle : rebond d'attention
+        S.hop(tl, ale, tV + 0.9, 22); S.hop(tl, mar, tV + 1.0, 22); S.hop(tl, mat, tV + 1.1, 22);
+        [ale, mar, mat].forEach(function (c) { Q.charEmote(tl, c.svg, wCol - 0.6, "worry", 0.3); });
+        // les cadres : la tache grise ondule doucement (respiration lente)
+        frames.forEach(function (f, i) { tl.fromTo(f.querySelector(".ar-smudge"), { opacity: 0.95 }, { opacity: 0.7, duration: 1.4 + i * 0.15, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.4 + i * 0.15) }, i * 0.2); });
+
+        // ---------- camera : mur d'autoportraits -> pan vers l'entree -> recul sur tout le groupe ----------
+        S.camSet(room, 800, 470, 1.05);
+        S.cam(tl, room, 1250, 540, 1.05, 0, tV + 1.6, "sine.inOut");
+        S.cam(tl, room, 1180, 640, 0.9, wHay - 0.9, 1.2, "power2.inOut");
+        tl.fromTo("#stage", { rotation: 0.9, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.2, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 7, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u04-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>
