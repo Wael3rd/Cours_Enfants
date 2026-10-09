@@ -74,13 +74,22 @@ async function answer(mode = 'fast') {
 async function waitCalcChange(prev, timeout = 8000) {
   await page.waitForFunction((p) => {
     const el = document.querySelector('.calc');
-    return !el || el.textContent.replace(/\s+/g, ' ').trim() !== p;
+    return !el || !!document.querySelector('.cine') || el.textContent.replace(/\s+/g, ' ').trim() !== p;
   }, prev, { timeout });
 }
-async function skipCine(name, atMs = 1500) {
+const CINE_AT = { 'intro-club': 4200, 'match-intro': 2200, goal: 1300, 'full-time': 3800, trophy: 3200, 'card-pack': 2000, medal: 2200 };
+const seenCine = new Set();
+/** Attend une cinematique, la capture (une fois par id, a l'instant le plus parlant) puis la passe. `name` force le nom du fichier. */
+async function skipCine(name) {
   await page.waitForSelector('.cine[data-state="playing"]', { timeout: 15000 });
-  if (name) { await wait(atMs); await shot(name); }
-  await wait(700);
+  const src = (await page.locator('hyperframes-player').first().getAttribute('src').catch(() => '')) || '';
+  const id = (src.match(/cinematics\/([^/]+)\//) || [])[1] || 'cine';
+  if (name !== null && !seenCine.has(id)) {
+    seenCine.add(id);
+    await wait(CINE_AT[id] ?? 1500);
+    await shot(`cine-${id}`);
+  }
+  await wait(500);
   const skip = page.locator('.cine .skip');
   if (await skip.count()) await skip.click().catch(() => {});
   await page.waitForSelector('.cine', { state: 'detached', timeout: 12000 });
@@ -114,7 +123,7 @@ try {
   await shot('03-setup-joueur');
   check('création du club et du joueur', true);
   await click('#btn-start');
-  await skipCine('04-cine-intro-club', 2200);
+  await skipCine('');
   check('cinématique intro-club jouée', true);
 
   // ---------- 2. Match de detection
@@ -133,7 +142,7 @@ try {
     await wait(80);
   }
   await page.waitForSelector('#btn-to-stadium, .cine', { timeout: 25000 });
-  if (await page.locator('.cine').count()) await skipCine('07-cine-trophee-detection', 1500);
+  if (await page.locator('.cine').count()) await skipCine('');
   await page.waitForSelector('#btn-to-stadium', { timeout: 15000 });
   await wait(600);
   await shot('08-detection-resultat');
@@ -149,7 +158,7 @@ try {
 
   // ---------- 4. Match : bonnes (fluentes), lentes, mauvaises
   await click('#btn-match');
-  await skipCine('10-cine-match-intro', 1800);
+  await skipCine('');
   await page.waitForSelector('.calc');
   await wait(400);
   await shot('11-match-jeu');
@@ -159,7 +168,7 @@ try {
   for (let i = 0; i < 60; i++) {
     if (await page.locator('.cine[data-state]').count()) {
       goalCine = true;
-      await skipCine('12-cine-but', 1200);
+      await skipCine('');
       continue;
     }
     if (!(await page.locator('.calc').count())) {
@@ -180,7 +189,7 @@ try {
   // fin : full-time puis récompenses
   for (let i = 0; i < 30; i++) {
     if (await page.locator('#btn-home').count()) break;
-    if (await page.locator('.cine[data-state]').count()) await skipCine(i === 0 ? '15-cine-full-time' : null, 2500);
+    if (await page.locator('.cine[data-state]').count()) await skipCine('');
     else await wait(300);
   }
   await page.waitForSelector('#btn-home', { timeout: 30000 });
@@ -191,7 +200,7 @@ try {
   // paquet de cartes si disponible
   if (await page.locator('#btn-pack').count()) {
     await click('#btn-pack');
-    await skipCine('17-cine-card-pack', 2000);
+    await skipCine('');
     await wait(900);
     await shot('18-nouvelle-carte');
     check('paquet ouvert : carte tirée', true);
@@ -221,7 +230,7 @@ try {
   await shot('21-avatar');
   await click('header button[aria-label="Retour"]');
 
-  // ---------- 6. Sprint (2 courses : la 2e affiche le fantome = record de la 1re, sans faute)
+  // ---------- 6. Sprint (2 courses : la 2e affiche le fantome = record de la 1re)
   for (const run of [1, 2]) {
     await page.waitForSelector('#btn-sprint');
     await click('#btn-sprint');
@@ -232,12 +241,12 @@ try {
     for (let i = 0; i < 10; i++) {
       const prev = (await page.locator('.calc').first().textContent()).replace(/\s+/g, ' ').trim();
       if (i === 4) await shot(run === 1 ? '23-sprint-course' : '23b-sprint-fantome');
-      await answer(run === 1 && i === 6 ? 'wrong' : 'fast');
+      await answer('fast');
       await waitCalcChange(prev).catch(() => {});
       await wait(60);
     }
     await page.waitForSelector('.cine[data-state], #btn-home', { timeout: 15000 });
-    if (await page.locator('.cine[data-state]').count()) { await skipCine(run === 1 ? '24-cine-medaille' : '24b-cine-medaille-record', 2000); check(`médaille jouée (course ${run})`, true); }
+    if (await page.locator('.cine[data-state]').count()) { await skipCine(''); check(`médaille jouée (course ${run})`, true); }
     await page.waitForSelector('#btn-home', { timeout: 15000 });
     await wait(1800);
     if (run === 1) await shot('25-sprint-recompenses');

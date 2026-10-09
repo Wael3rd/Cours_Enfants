@@ -45,7 +45,7 @@
   let running = false;
   let t0 = 0;
   let raf = 0;
-  const RUNNER_W = 130;
+  const RUNNER_W = 104;
   const maxX = $derived(Math.max(0, trackW - RUNNER_W - 120));
   const wait = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
   const fmt = (ms: number) => `${(ms / 1000).toFixed(1).replace('.', ',')}`;
@@ -199,8 +199,8 @@
   .start { position: absolute; left: 120px; top: 0; bottom: 0; width: 6px; background: #fff; opacity: 0.8; }
   .finish { position: absolute; right: 26px; top: 0; bottom: 0; width: 34px; background: conic-gradient(#fff 25%, #0A1030 0 50%, #fff 0 75%, #0A1030 0) 0 0 / 34px 34px; }
   .run { position: absolute; left: 0; will-change: transform; line-height: 0; }
-  .run.ghost { top: 0; margin-top: -26px; }
-  .run.me { bottom: -22px; }
+  .run.ghost { top: 4px; }
+  .run.me { bottom: -16px; }
   .run { margin-left: -4px; }
   .count { position: absolute; inset: 0; display: grid; place-items: center; font-size: 9rem; color: var(--jaune); -webkit-text-stroke: 8px #0A1030; paint-order: stroke fill; }
   .pen { position: absolute; right: 70px; top: 10px; font-size: 2.2rem; color: #fff; background: var(--corail); padding: 2px 14px; border-radius: 10px; }

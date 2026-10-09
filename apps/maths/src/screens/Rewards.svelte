@@ -52,10 +52,10 @@
     if (r.stars > 0) say('stars_won');
     if (r.stars >= 3 && root) burst(document.body, innerWidth / 2, innerHeight * 0.3, { count: 26 });
     // Trophees de zone gagnee.
-    for (const z of r.zonesWon) {
+    if (r.zonesWon.length) {
       await new Promise((res) => setTimeout(res, 500));
       say('trophy_won');
-      await cine('trophy', { competition: trophyName(z), name: app.state.childName });
+      await cine('trophy', { competition: trophyName(Math.max(...r.zonesWon)), name: app.state.childName });
     }
     ready = true;
     if (packs > 0) {

@@ -21,3 +21,4 @@ PWA éducatives pour les enfants de Wael, tablette Android, hors-ligne, animatio
 ## State
 
 - 2026-10-09 : specs écrites, HyperFrames installé (plugin projet). Fondations en cours.
+- 2026-10-09 : app maths jouable de bout en bout (apps/maths/src/screens : Setup, Placement, Home, Match, Sprint, Penalties, Training, Rewards, Album, Trophies, AvatarScreen ; ui/ : GameButton, Keypad, CalcPanel, HintVisual, Pitch, Gauge). Voix : `npm run voices` (apps/maths/src/audio/voice-lines.ts -> public/audio/fr). E2E : `npm run build && npm run e2e` (tools/e2e/maths.mjs, screenshots `tools/e2e/out/maths-*.png`). Rythme : cinematique `goal` seulement pour le 1er but et le but decisif (reste = but en jeu <= 0,8 s) ; `match-intro` au coup d'envoi, `full-time` puis recompenses ; `trophy` (1 seule, la zone la plus haute) ; `card-pack` a l'ouverture ; `medal` en fin de sprint. Emplacement des strategies : `STRATEGY_CINEMATICS` dans voice-lines.ts.

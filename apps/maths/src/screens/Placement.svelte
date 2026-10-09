@@ -85,7 +85,8 @@
     result = app.finishSession(ps);
     app.markPlacementDone();
     sfx('whistle-triple');
-    for (const z of result.zonesWon) await cine('trophy', { competition: trophyName(z), name: app.state.childName });
+    // Plusieurs zones d'un coup : une seule cinematique (la plus haute), les autres sont sur l'etagere.
+    if (result.zonesWon.length) await cine('trophy', { competition: trophyName(Math.max(...result.zonesWon)), name: app.state.childName });
     phase = 'result';
     say('placement_end');
     sfx('jingle-win', 0.7);
