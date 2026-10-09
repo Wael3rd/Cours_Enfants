@@ -19,5 +19,6 @@ export function normalizeState(raw: Partial<GameState> | undefined): GameState {
     days: { ...r.days },
     offline: { ...r.offline },
     unlocked: [...(r.unlocked ?? [])],
+    flags: { ...r.flags },
   };
 }

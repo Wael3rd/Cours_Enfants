@@ -21,7 +21,7 @@ import type { Content, DayStat, GameState, Settings, StatId, StepResult } from '
 export const STATE_VERSION = 1;
 
 export function defaultSettings(): Settings {
-  return { sound: true, haptics: true, speechEnabled: true, lentoDefault: false, autoDownload: true, dailyGoalMin: 10, reducedMotion: false };
+  return { sound: true, haptics: true, speechEnabled: true, lentoDefault: false, autoDownload: true, music: true, dailyGoalMin: 10, reducedMotion: false };
 }
 
 export function defaultState(now = new Date()): GameState {
@@ -39,6 +39,7 @@ export function defaultState(now = new Date()): GameState {
     unlocked: [],
     offline: {},
     createdAt: ymd(now),
+    flags: {},
   };
 }
 

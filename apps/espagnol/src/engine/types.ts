@@ -108,6 +108,8 @@ export interface Settings {
   /** Joue la variante lente par defaut */
   lentoDefault: boolean;
   autoDownload: boolean;
+  /** Musique d'ambiance */
+  music: boolean;
   /** Objectif quotidien en minutes */
   dailyGoalMin: number;
   /** Jours de la semaine (0=dim) ou le parent attend une session ; informatif */
@@ -140,4 +142,6 @@ export interface GameState {
   unlocked: string[];
   offline: Record<string, { status: OfflineStatus; at: string; files: number; bytes: number }>;
   createdAt: string;
+  /** Drapeaux d'interface (ex. prologue vu) */
+  flags: Record<string, string>;
 }

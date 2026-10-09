@@ -202,7 +202,7 @@ describe('RPG / progression', () => {
 });
 
 describe('evenements', () => {
-  const ev = { ...units[0], id: 'e01', numero: 90, titulo: 'Día de Muertos', lugar: 'Oaxaca' } as Unit;
+  const ev = { ...units[0], id: 'e01', numero: 90, titulo: 'Día de Muertos', lugar: 'Oaxaca', evento: { desde: '10-25', hasta: '11-02' } } as Unit;
   it('fenetres', () => {
     expect(inWindow({ from: '10-25', to: '11-02' }, new Date(2026, 9, 31))).toBe(true);
     expect(inWindow({ from: '10-25', to: '11-02' }, new Date(2026, 10, 3))).toBe(false);
@@ -217,6 +217,8 @@ describe('evenements', () => {
     expect(unitStatus(cc, s, ev, NOW)).toBe('closed');
     expect(unitStatus(cc, s, ev, new Date(2026, 9, 28))).toBe('available');
     expect(activeEvents(cc, s, new Date(2026, 9, 28)).length).toBe(1);
+    // plus aucune heuristique par mots-cles : sans `evento`, "Navidad" / "Muertos" = unite ordinaire
+    expect(eventWindow({ ...ev, evento: undefined, titulo: '¡Feliz Navidad!', lugar: 'Madrid' } as Unit)).toBeNull();
     expect(eventWindow({ ...ev, evento: { desde: '03-01', hasta: '03-10' } } as unknown as Unit)).toEqual({ from: '03-01', to: '03-10' });
   });
 });

@@ -1,0 +1,566 @@
+[
+ {
+  "id": "u01",
+  "numero": 1,
+  "titulo": "¡Hola! Me presento",
+  "lugar": "Madrid",
+  "emoji": "🏛️",
+  "ejes": [
+   1
+  ],
+  "periodo": "sept",
+  "pluma": {
+   "numero": 1,
+   "nombre": "Pluma de la Voz",
+   "descripcion": {
+    "es": "Esta pluma es mi voz. ¡Ahora puedo decir hola!",
+    "fr": "Cette plume est ma voix. Maintenant je peux dire salut !",
+    "voz": "quetzal",
+    "audio": "quetzal.39487a46a2"
+   }
+  },
+  "nVocab": 59,
+  "quests": [
+   {
+    "id": "u01-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Madrid",
+    "emoji": "🏛️",
+    "intro": {
+     "es": "¡Bienvenido a Madrid, viajero! Tu aventura empieza aquí.",
+     "fr": "Bienvenue à Madrid, voyageur ! Ton aventure commence ici.",
+     "voz": "ignacio",
+     "audio": "ignacio.228e66b636"
+    },
+    "pista": "Découverte de Madrid et de l'Académie ; tu comprends l'histoire sans tout traduire.",
+    "stats": [
+     "escuchar",
+     "cultura"
+    ],
+    "minutos": 10,
+    "nSteps": 10
+   },
+   {
+    "id": "u01-q02",
+    "tipo": "vocabulario",
+    "titulo": "Hola, ¿qué tal?",
+    "emoji": "👋",
+    "intro": {
+     "es": "¡Buenos días! Soy Rosa. Aquí primero se saluda. ¡Después se comen churros!",
+     "fr": "Bonjour ! Je suis Rosa. Ici, on salue d’abord. Les churros, ensuite !",
+     "voz": "rosa",
+     "audio": "rosa.18bcbecf75"
+    },
+    "pista": "Les salutations et les formules de politesse, avec Rosa la churrera.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 12,
+    "nSteps": 15
+   },
+   {
+    "id": "u01-q03",
+    "tipo": "hechizo",
+    "titulo": "El hechizo del abecedario",
+    "emoji": "🔤",
+    "intro": {
+     "es": "Para viajar necesitas el abecedario. ¡Es tu primer hechizo!",
+     "fr": "Pour voyager, il te faut l’alphabet. C’est ton premier sort !",
+     "voz": "marina",
+     "audio": "marina.d26cf711af"
+    },
+    "pista": "L'alphabet espagnol, l'épellation de ton prénom et les sons difficiles (j, h, ñ, rr, ll).",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u01-q04",
+    "tipo": "escucha",
+    "titulo": "Los números mágicos",
+    "emoji": "🔢",
+    "intro": {
+     "es": "Los números están por toda la ciudad. ¿Los contamos juntos?",
+     "fr": "Les nombres sont partout dans la ville. On les compte ensemble ?",
+     "voz": "nacho",
+     "audio": "nacho.1949985f17"
+    },
+    "pista": "Les nombres de 0 à 100, à l’oreille d’abord, puis à l’écrit.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u01-q05",
+    "tipo": "cultura",
+    "titulo": "El mundo en español",
+    "emoji": "🌎",
+    "intro": {
+     "es": "El español es la lengua de muchos países. Vamos a conocerlos.",
+     "fr": "L’espagnol est la langue de nombreux pays. Allons les découvrir.",
+     "voz": "ignacio",
+     "audio": "ignacio.6ba04c1c00"
+    },
+    "pista": "Le monde hispanophone : pays et nationalités.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escuchar"
+    ],
+    "minutos": 12,
+    "nSteps": 14
+   },
+   {
+    "id": "u01-q06",
+    "tipo": "forja",
+    "titulo": "La Forja: soy, me llamo, tengo",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Palabras… poder. Forja conmigo: soy, me llamo, tengo.",
+     "fr": "Les mots… ont du pouvoir. Forge avec moi : soy, me llamo, tengo.",
+     "voz": "quetzal",
+     "audio": "quetzal.6ca9aa7c1a"
+    },
+    "pista": "Les verbes ser, llamarse et tener au présent : découverte puis forge.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u01-q07",
+    "tipo": "dialogo",
+    "titulo": "Me presento",
+    "emoji": "💬",
+    "intro": {
+     "es": "Es hora de presentarte. ¡Yo te ayudo!",
+     "fr": "C’est l’heure de te présenter. Je t’aide !",
+     "voz": "marina",
+     "audio": "marina.81eaaba18f"
+    },
+    "pista": "Te présenter : prénom, âge, origine, lieu de vie. Dialogues à choix puis écriture et prise de parole.",
+    "stats": [
+     "hablar",
+     "escribir",
+     "escuchar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u01-q08",
+    "tipo": "desafio",
+    "titulo": "La Sombra del Silencio",
+    "emoji": "👤",
+    "intro": {
+     "es": "Silencio. Nadie habla aquí. Solo yo.",
+     "fr": "Silence. Personne ne parle ici. Seulement moi.",
+     "voz": "sombra",
+     "audio": "sombra.6af9dc2d82"
+    },
+    "pista": "Boss de la région : révision mixte de l’unité 1. Chaque bonne réponse est une attaque.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 6
+    },
+    "nSteps": 14
+   }
+  ]
+ },
+ {
+  "id": "u02",
+  "numero": 2,
+  "titulo": "Mi clase, mi cole",
+  "lugar": "Salamanca",
+  "emoji": "🏰",
+  "ejes": [
+   3
+  ],
+  "periodo": "sept-oct",
+  "pluma": {
+   "numero": 2,
+   "nombre": "Pluma de la Campana",
+   "descripcion": {
+    "es": "Dos plumas. Ahora hablo más. ¡Gracias!",
+    "fr": "Deux plumes. Maintenant je parle plus. Merci !",
+    "voz": "quetzal",
+    "audio": "quetzal.50b062434d"
+   }
+  },
+  "nVocab": 51,
+  "quests": [
+   {
+    "id": "u02-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Salamanca",
+    "emoji": "🏰",
+    "intro": {
+     "es": "¡Salamanca! Mira qué bonita… Pero ¿por qué hay tanto silencio?",
+     "fr": "Salamanque ! Regarde comme elle est jolie… Mais pourquoi y a-t-il autant de silence ?",
+     "voz": "marina",
+     "audio": "marina.81d9040ae8"
+    },
+    "pista": "Arrivée à Salamanque : tu rencontres Diego et doña Pilar, et l’histoire avance.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 11
+   },
+   {
+    "id": "u02-q02",
+    "tipo": "vocabulario",
+    "titulo": "La mochila de Álex",
+    "emoji": "🎒",
+    "intro": {
+     "es": "Para ir al cole necesitas una mochila. ¡Vamos a llenarla!",
+     "fr": "Pour aller à l’école, il te faut un sac à dos. Remplissons-le !",
+     "voz": "diego",
+     "audio": "diego.d7987a49c4"
+    },
+    "pista": "Le matériel scolaire et les articles (el, la, un, una).",
+    "stats": [
+     "leer",
+     "escuchar",
+     "escribir"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u02-q03",
+    "tipo": "escucha",
+    "titulo": "Mi horario",
+    "emoji": "🗓️",
+    "intro": {
+     "es": "Mi horario es un caos. ¿Me ayudas a entenderlo?",
+     "fr": "Mon emploi du temps est un chaos. Tu m’aides à le comprendre ?",
+     "voz": "diego",
+     "audio": "diego.e497f7a120"
+    },
+    "pista": "Les matières et les jours de la semaine, avec lecture d’un emploi du temps.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u02-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: verbos en -ar",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Yo hablo. Tú hablas. ¡Forja conmigo!",
+     "fr": "Je parle. Tu parles. Forge avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.43e849f9ce"
+    },
+    "pista": "Le présent des verbes en -ar : hablar, escuchar, estudiar, cantar.",
+    "stats": [
+     "escribir",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u02-q05",
+    "tipo": "dialogo",
+    "titulo": "Órdenes en clase",
+    "emoji": "📢",
+    "intro": {
+     "es": "Silencio, por favor. Hoy practicamos las órdenes de clase.",
+     "fr": "Silence, s’il vous plaît. Aujourd’hui, on s’entraîne aux consignes de classe.",
+     "voz": "pilar",
+     "audio": "pilar.816af932c2"
+    },
+    "pista": "Les consignes de classe (impératif) et « hay » : écoute, obéis, puis réponds.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u02-q06",
+    "tipo": "lectura",
+    "titulo": "El calendario",
+    "emoji": "📅",
+    "intro": {
+     "es": "Los días y los meses se escriben todos con minúscula. ¡Vamos a ver el calendario!",
+     "fr": "Les jours et les mois s’écrivent tous en minuscule. Regardons le calendrier !",
+     "voz": "diego",
+     "audio": "diego.65ae4e8b8f"
+    },
+    "pista": "Les mois et la date : lire un calendrier et dire sa date d’anniversaire.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "escribir"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u02-q07",
+    "tipo": "cultura",
+    "titulo": "Mil y una escuelas",
+    "emoji": "🏫",
+    "intro": {
+     "es": "En el mundo hay mil y una escuelas. Vamos a conocer la nuestra.",
+     "fr": "Dans le monde, il y a mille et une écoles. Découvrons la nôtre.",
+     "voz": "pilar",
+     "audio": "pilar.f6d25eef6f"
+    },
+    "pista": "L’école en Espagne (récré, notes sur 10 avec 5 pour réussir, souvent pas d’uniforme dans le public) et la légende de la grenouille de Salamanque.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escuchar"
+    ],
+    "minutos": 12,
+    "nSteps": 13
+   },
+   {
+    "id": "u02-q08",
+    "tipo": "desafio",
+    "titulo": "El examen de la Sombra",
+    "emoji": "📝",
+    "intro": {
+     "es": "Examen sorpresa. Nadie aprueba. Nadie.",
+     "fr": "Contrôle surprise. Personne ne réussit. Personne.",
+     "voz": "sombra",
+     "audio": "sombra.042ee216b4"
+    },
+    "pista": "Boss de Salamanque : révision mixte des unités 1 et 2.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 7
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u03",
+  "numero": 3,
+  "titulo": "Mi familia",
+  "lugar": "Sevilla",
+  "emoji": "👪",
+  "ejes": [
+   1
+  ],
+  "periodo": "oct",
+  "pluma": {
+   "numero": 3,
+   "nombre": "Pluma de la Familia",
+   "descripcion": {
+    "es": "Esta pluma es la familia. Tres plumas… ¡y vuelo!",
+    "fr": "Cette plume, c’est la famille. Trois plumes… et je vole !",
+    "voz": "quetzal",
+    "audio": "quetzal.3bab983218"
+   }
+  },
+  "nVocab": 48,
+  "quests": [
+   {
+    "id": "u03-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Sevilla",
+    "emoji": "🌇",
+    "intro": {
+     "es": "¡Mi ciudad! Vamos a casa de mi abuela.",
+     "fr": "Ma ville ! Allons chez ma grand-mère.",
+     "voz": "marina",
+     "audio": "marina.76ac02cf63"
+    },
+    "pista": "Arrivée à Séville dans la famille de Marina ; l’histoire du Quetzal avance.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 11
+   },
+   {
+    "id": "u03-q02",
+    "tipo": "vocabulario",
+    "titulo": "El árbol genealógico",
+    "emoji": "👪",
+    "intro": {
+     "es": "Cariño, aquí está el árbol de nuestra familia. ¿Conoces a todos?",
+     "fr": "Mon chou, voici l’arbre de notre famille. Tu connais tout le monde ?",
+     "voz": "abuela_carmen",
+     "audio": "abuela_carmen.6f3becb7b3"
+    },
+    "pista": "La famille et les possessifs (mi, tu, su) pour nommer les membres de sa famille.",
+    "stats": [
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u03-q03",
+    "tipo": "escucha",
+    "titulo": "Fotos de familia",
+    "emoji": "📷",
+    "intro": {
+     "es": "¡Mira, mira! ¡Tengo fotos! ¿Quieres ver a mi familia?",
+     "fr": "Regarde, regarde ! J’ai des photos ! Tu veux voir ma famille ?",
+     "voz": "lola",
+     "audio": "lola.7878ef4575"
+    },
+    "pista": "Les animaux et les métiers de la famille ; tu comprends des descriptions de photos.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u03-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: comer, vivir, tener",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Comer, vivir… verbos importantes. ¡Forja, amigo!",
+     "fr": "Manger, habiter… des verbes importants. Forge, mon ami !",
+     "voz": "quetzal",
+     "audio": "quetzal.a0b5742b6b"
+    },
+    "pista": "Le présent des verbes en -er / -ir, puis tener et ser.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 14,
+    "nSteps": 15
+   },
+   {
+    "id": "u03-q05",
+    "tipo": "lectura",
+    "titulo": "La casa de la abuela",
+    "emoji": "🏡",
+    "intro": {
+     "es": "Bienvenido a la casa de mi madre. ¡Aquí se come muy bien!",
+     "fr": "Bienvenue chez ma mère. Ici, on mange très bien !",
+     "voz": "rafa",
+     "audio": "rafa.31de7e6d85"
+    },
+    "pista": "Les pièces de la maison et quelques adjectifs ; lecture et écriture guidée.",
+    "stats": [
+     "leer",
+     "escribir",
+     "escuchar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u03-q06",
+    "tipo": "dialogo",
+    "titulo": "Presento a mi familia",
+    "emoji": "💬",
+    "intro": {
+     "es": "Ahora tú presentas a tu familia. ¡Yo te ayudo!",
+     "fr": "Maintenant, c’est toi qui présentes ta famille. Je t’aide !",
+     "voz": "marina",
+     "audio": "marina.481c0c7452"
+    },
+    "pista": "Parler de sa famille : combien de frères et sœurs, métiers, où l’on habite.",
+    "stats": [
+     "hablar",
+     "escribir",
+     "escuchar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u03-q07",
+    "tipo": "cultura",
+    "titulo": "Familias del mundo hispano",
+    "emoji": "🌍",
+    "intro": {
+     "es": "En España tenemos dos apellidos. ¡Y en Sevilla, patios con flores!",
+     "fr": "En Espagne, nous avons deux noms de famille. Et à Séville, des patios fleuris !",
+     "voz": "abuela_carmen",
+     "audio": "abuela_carmen.229c88b1b6"
+    },
+    "pista": "Portraits de familles : deux noms de famille (un du père, un de la mère ; depuis 2017 les parents choisissent l’ordre, mais le plus souvent celui du père vient en premier), repas du dimanche, patios et azulejos de Séville.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escuchar"
+    ],
+    "minutos": 12,
+    "nSteps": 13
+   },
+   {
+    "id": "u03-q08",
+    "tipo": "desafio",
+    "titulo": "El árbol sin nombres",
+    "emoji": "🌳",
+    "intro": {
+     "es": "Sin nombres no hay familia. Sin familia no hay palabras.",
+     "fr": "Sans noms, pas de famille. Sans famille, pas de mots.",
+     "voz": "sombra",
+     "audio": "sombra.ddb68ac4ba"
+    },
+    "pista": "Boss de Séville : révision mixte des unités 1 à 3 pour rendre ses noms à l’arbre.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 8
+    },
+    "nSteps": 15
+   }
+  ]
+ }
+]

@@ -1,0 +1,15 @@
+import { open, seed, go, out } from './lib.mjs';
+const { browser, page } = await open();
+await seed(page, `(game, c) => { const u = c.units[0]; u.quests.slice(0,3).forEach((q,i)=>{ game.state.quests[q.id] = { done:true, stars:[3,2,1][i], bestAccuracy:.9, bestHints:0, attempts:1 }; }); }`);
+await go(page, { name: 'map' });
+await page.reload();
+await page.waitForFunction(() => window.__q);
+await page.waitForTimeout(2500);
+await page.screenshot({ path: `${out}/map.png` });
+await page.evaluate(() => window.__q.nav.go({ name: 'region', unit: 'u01' }));
+await page.waitForTimeout(2500);
+await page.screenshot({ path: `${out}/region.png` });
+await page.click('.node.available');
+await page.waitForTimeout(900);
+await page.screenshot({ path: `${out}/region-sheet.png` });
+await browser.close();

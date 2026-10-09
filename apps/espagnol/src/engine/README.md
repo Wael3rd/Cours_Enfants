@@ -53,7 +53,7 @@ const q = game.mutate((s) => completeQuest(content, s, quest.id, run));   // ét
 `unitStatus(c, s, unit, now)` → `locked | available | done | closed` ; `questStatus(c, s, questId, now)` → `locked | available | done` ;
 `currentUnit(c, s)`, `nextQuest(c, s, unit)`, `activeEvents(c, s, now)` (événements ouverts), `unitProgress(s, unit)`.
 Quêtes séquentielles ; unité suivante débloquée par la plume de la précédente ; unités **événement** (fenêtre `MM-DD → MM-DD`,
-champ `evento: {desde, hasta}` sur l'unité, ou déduit de l'id/titre « Muertos », « Navidad ») ouvertes seulement dans la fenêtre,
+champ explicite `evento: {desde, hasta}` sur l'unité, JAMAIS déduit du titre : l'unité 6 ¡Feliz Navidad! est une unité normale) ouvertes seulement dans la fenêtre,
 hors de la séquence. Quête réussie si précision ≥ 50 % ; étoiles : ≥ 50 % → 1, ≥ 80 % → 2, ≥ 92 % → 3, moins une si pistes > 25 % des étapes
 (min. 3). Meilleur résultat conservé. `bossLives(quest, nbFautes)` pour les `desafio`. Tout accepte un `now: Date` (tests / dev).
 
@@ -94,3 +94,10 @@ Plume + élément d'avatar par région (`avatarRewardForUnit`) dans `state.unloc
 
 `game.state` (réactif), `game.mutate(fn)` (reducer + sauvegarde différée), `game.init()` (déjà appelé par App), temps passé compté automatiquement
 (app visible + toucher < 45 s). Persisté en IndexedDB (`ce:espagnol`, version `STATE_VERSION`, migrations dans `state/persist.ts`).
+
+## Contenu à la demande
+
+`engine/data.ts` : `content` est un singleton mutable. Au départ, des unités « squelettes » (`content/units-index.json`, généré par
+`tools/content/build-units-index.mjs` à chaque build ; titres, quêtes, plume, sans vocab ni étapes) suffisent pour la carte et la progression.
+`await loadUnit(id)` / `loadUnits([...])` / `loadAllUnits()` charge l'unité complète (un chunk JS par unité) et reconstruit `content` en place.
+À charger avant de jouer une quête, d'afficher le dictionnaire ou de construire la Misión del día.

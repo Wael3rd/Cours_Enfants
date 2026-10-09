@@ -1,0 +1,23 @@
+/* Styles globaux de l'app espagnol (en plus de art/art.css : tokens + polices). */
+@import '../art/art.css';
+
+html, body { background: #0b0d2a; font-family: var(--q-font-body); }
+#app { height: 100%; position: relative; overflow: hidden; }
+button { font-family: var(--q-font-body); }
+
+/* Ecran plein cadre */
+.scr { position: absolute; inset: 0; display: flex; flex-direction: column; overflow: hidden; color: var(--q-papel); }
+.scr-bg { background: radial-gradient(ellipse at 50% -10%, #3a41a8 0%, #1d2160 38%, #14173f 70%, #0b0d2a 100%); }
+
+/* Defilement tactile propre */
+.scroll { overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; scrollbar-width: none; }
+.scroll::-webkit-scrollbar { display: none; }
+
+/* Titres RPG */
+.h-rpg { font-family: var(--q-font-title); font-weight: 400; color: var(--q-sol); text-shadow: 0 4px 0 #8a4a05, 0 8px 0 rgba(0, 0, 0, 0.22); letter-spacing: 0.02em; margin: 0; }
+
+:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

@@ -1,5 +1,6 @@
 import { downloadText, setHaptics } from '@ce/core';
-import { content } from '../engine/data';
+import { content, loadUnits } from '../engine/data';
+import { autoDownloadPlan } from '../services/offline';
 import { addTime } from '../engine/progress';
 import { defaultState } from '../engine/progress';
 import type { GameState } from '../engine/types';
@@ -90,6 +91,7 @@ class Game {
   async refreshOffline(): Promise<void> {
     const lento = await loadLentoSet();
     for (const u of content.units) {
+      if (!u.vocab.length) continue; // unite non chargee : on garde l'etat memorise
       const st = await unitOfflineStatus(u, lento);
       const prev = this.state.offline[u.id];
       this.state.offline[u.id] = { status: st.status, at: prev?.at ?? '', files: st.cached, bytes: prev?.bytes ?? 0 };
@@ -115,6 +117,7 @@ class Game {
 
   /** Unite en cours + suivante, si l'option est active et la connexion adaptee. */
   async autoDownload(): Promise<void> {
+    await loadUnits(autoDownloadPlan(content, this.state).map((u) => u.id));
     const lento = await loadLentoSet();
     await runAutoDownload(content, this.state, lento, {
       onUnit: (u, p) => (this.downloads[u.id] = p),

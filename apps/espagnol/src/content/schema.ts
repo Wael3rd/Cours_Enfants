@@ -411,6 +411,8 @@ export interface Unit {
   quests: Quest[];
   /** Plume du Quetzal recuperee a la fin de l'unite */
   pluma: Pluma;
+  /** Unite EVENEMENT : ouverte seulement entre ces dates annuelles ("MM-DD"). Seule source de verite (pas de deduction par mots-cles). */
+  evento?: { desde: string; hasta: string };
 }
 
 // ───────────────────────── Audio ─────────────────────────

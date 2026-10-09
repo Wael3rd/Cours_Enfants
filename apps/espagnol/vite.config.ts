@@ -1,13 +1,14 @@
 import { appConfig } from '../../packages/core/vite.ts';
+import { writeIndex } from '../../tools/content/build-units-index.mjs';
 
-export default appConfig({
+const cfg = appConfig({
   dir: import.meta.dirname,
   base: '/espagnol/',
   name: 'La Leyenda del Quetzal',
   shortName: 'Quetzal',
   description: "Espagnol 5e - aventure RPG",
-  themeColor: '#7a1f2b',
-  backgroundColor: '#2a0b10',
+  themeColor: '#14173f',
+  backgroundColor: '#14173f',
   foreignScopes: [],
   // Les voix (centaines de mp3) ne sont PAS precachees : telechargees par unite (src/services/offline.ts)
   // dans le cache 'espagnol-audio-v1', servi en CacheFirst par le service worker.
@@ -24,3 +25,8 @@ export default appConfig({
     },
   ],
 });
+
+// Regenere src/content/units-index.json (version legere des unites) a chaque build / demarrage du serveur de dev.
+(cfg.plugins as unknown[]).push({ name: 'units-index', buildStart() { writeIndex(); } });
+
+export default cfg;

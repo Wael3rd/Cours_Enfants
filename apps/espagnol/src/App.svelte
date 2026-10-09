@@ -1,47 +1,79 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { ParentGate, UpdateToast, type Updater } from '@ce/core';
+  import { fade } from 'svelte/transition';
+  import { UpdateToast, type Updater } from '@ce/core';
   import { game } from './state/game.svelte';
   import { initAudio } from './services/audio';
-  import ParentSpace from './parent/ParentSpace.svelte';
+  import { music } from './services/music';
+  import { nav } from './ui/nav.svelte';
+  import { ui } from './ui/ui.svelte';
+  import MapScreen from './screens/MapScreen.svelte';
+  import { content, loadUnit, loadAllUnits } from './engine/data';
 
   let { updater }: { updater: Updater } = $props();
-  let parentOpen = $state(false);
   // Demo temporaire du kit graphique (src/art) : /espagnol/#art
   const showArt = location.hash === '#art';
   const loadArt = () => import('./art/ArtDemo.svelte');
 
+  const R = {
+    welcome: () => import('./screens/Welcome.svelte'),
+    region: () => import('./screens/Region.svelte'),
+    quest: () => import('./screens/QuestPlayer.svelte'),
+    mission: () => import('./screens/Mission.svelte'),
+    dictionary: () => import('./screens/Dictionary.svelte'),
+    profile: () => import('./screens/Profile.svelte'),
+    settings: () => import('./screens/Settings.svelte'),
+    credits: () => import('./screens/Credits.svelte'),
+  } as const;
+
+  const route = $derived(nav.route);
+  const key = $derived(route.name + ('unit' in route ? route.unit : '') + ('quest' in route ? route.quest : ''));
+
   onMount(async () => {
     await game.init();
+    // Acces de test (e2e / dev) : ?debug dans l'URL
+    if (import.meta.env.DEV || location.search.includes('debug')) (window as unknown as Record<string, unknown>).__q = { game, nav, content, loadUnit, loadAllUnits };
+    ui.lento = game.state.settings.lentoDefault;
+    music.setEnabled(game.state.settings.music);
     void initAudio();
+    nav.init(game.state.profile.name && game.state.flags.prologue ? { name: 'map' } : { name: 'welcome' });
     void game.refreshOffline().then(() => game.autoDownload());
   });
 </script>
 
 {#if showArt}
   {#await loadArt() then m}<m.default />{/await}
+{:else if !game.ready}
+  <div class="splash"><h1 class="h-rpg">La Leyenda<br />del Quetzal</h1></div>
 {:else}
-<main>
-  <h1>La Leyenda del Quetzal</h1>
-  <p class="sub">Espagnol 5e - aventure en immersion</p>
-  <p class="soon">Bientôt</p>
-  <!-- Accès temporaire à l'espace parent (appui long 3 s) : sera déplacé dans les réglages de l'écran d'accueil -->
-  <div class="gate"><ParentGate onpass={() => (parentOpen = true)} /></div>
-</main>
+  {#key key}
+    <div class="route" in:fade={{ duration: 260 }}>
+      {#if route.name === 'map'}
+        <MapScreen />
+      {:else if route.name === 'welcome'}
+        {#await R.welcome() then m}<m.default />{/await}
+      {:else if route.name === 'region'}
+        {#await R.region() then m}<m.default unit={route.unit} />{/await}
+      {:else if route.name === 'quest'}
+        {#await R.quest() then m}<m.default quest={route.quest} />{/await}
+      {:else if route.name === 'mission'}
+        {#await R.mission() then m}<m.default />{/await}
+      {:else if route.name === 'dictionary'}
+        {#await R.dictionary() then m}<m.default />{/await}
+      {:else if route.name === 'profile'}
+        {#await R.profile() then m}<m.default />{/await}
+      {:else if route.name === 'settings'}
+        {#await R.settings() then m}<m.default />{/await}
+      {:else if route.name === 'credits'}
+        {#await R.credits() then m}<m.default />{/await}
+      {/if}
+    </div>
+  {/key}
 {/if}
-
-{#if parentOpen}<ParentSpace onclose={() => (parentOpen = false)} />{/if}
 <UpdateToast {updater} />
 
 <style>
-  main {
-    height: 100%;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
-    padding: env(safe-area-inset-top) 24px env(safe-area-inset-bottom);
-    background: radial-gradient(ellipse at 50% 70%, #7a1f2b 0%, #3d0f17 55%, #1a0508 100%);
-  }
-  h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 4rem); text-align: center; color: #ffd98a; text-shadow: 0 5px 0 #1a0508; }
-  .sub { margin: 0; opacity: 0.85; font-size: 1.3rem; }
-  .soon { margin: 12px 0 0; font-size: 1.1rem; opacity: 0.6; }
-  .gate { position: fixed; right: 12px; bottom: 12px; opacity: 0.5; }
+  .route { position: absolute; inset: 0; }
+  .splash { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; background: radial-gradient(ellipse at 50% 70%, #3b2a8a, #0b0d2a 80%); }
+  .splash h1 { font-size: clamp(48px, 7vw, 96px); line-height: 1; }
 </style>

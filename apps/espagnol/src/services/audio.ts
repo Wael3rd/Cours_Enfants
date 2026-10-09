@@ -1,5 +1,6 @@
 import { configureAudio, playVoice, preloadAudio, setMuted, speakFallback, stopVoice } from '@ce/core';
 import { audioUrl, lentoKey } from './paths';
+import { registerSfx } from './sfx';
 export { AUDIO_BASE, audioUrl, lentoKey } from './paths';
 
 
@@ -21,6 +22,7 @@ export const hasLento = (key: string) => lento?.has(lentoKey(key)) ?? false;
 /** A appeler au demarrage : configure le chemin des voix et charge la liste des variantes lentes. */
 export async function initAudio(): Promise<void> {
   configureAudio({ base: '', lang: 'es-ES' });
+  registerSfx();
   await loadLentoSet();
 }
 
