@@ -4,6 +4,7 @@
 //   node tools/a11y/flash-check.mjs maths espagnol       # cibles : maths | espagnol | home | <dossier de composition> | --video <fichier>
 //   node tools/a11y/flash-check.mjs maths --only goal,intro-club --json tools/a11y/out/maths.json
 //   options : --report-only (code 0 meme en cas d'echec), --soft (cinematiques et accueil en "Animations douces"),
+//             --dist <dossier> (autre build pour l'accueil, ex. comparaison avant/apres),
 //             --fps 30, --jobs 4 (cinematiques en parallele), --home-seconds 10
 //
 // Cinematique : chaque image (30 i/s) est obtenue en positionnant la timeline (window.__player.renderSeek, comme le rendu
@@ -27,7 +28,7 @@ const JOBS = Number(opt('--jobs', 4));
 const SOFT = flag('--soft');
 const ONLY = opt('--only', '')?.split(',').filter(Boolean) ?? [];
 const HOME_S = Number(opt('--home-seconds', 10));
-const valued = new Set(['--fps', '--jobs', '--only', '--json', '--video', '--home-seconds', '--save-frames']);
+const valued = new Set(['--fps', '--jobs', '--only', '--json', '--video', '--home-seconds', '--save-frames', '--dist']);
 const targets = argv.filter((a, i) => !a.startsWith('--') && !valued.has(argv[i - 1]));
 if (!targets.length && !opt('--video')) targets.push('maths', 'home');
 
@@ -109,7 +110,7 @@ function decodeVideo(file, skip = 0) {
  * screencast CDP (images horodatees, reechantillonnees a FPS) pendant HOME_S secondes ; video MP4 de controle si ffmpeg.
  */
 async function captureHome(browser) {
-  const dist = join(root, 'dist');
+  const dist = resolve(opt('--dist', join(root, 'dist')));
   if (!existsSync(join(dist, 'maths', 'index.html'))) throw new Error("dist/maths absent : lancer `npm run build` avant le controle de l'accueil");
   const { srv, url } = await serve(dist);
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, hasTouch: true, serviceWorkers: 'block' });
@@ -152,7 +153,7 @@ async function captureHome(browser) {
     }
     const lum = new Map();
     for (const j of new Set(idx)) {
-      const { data, info } = await sharp(Buffer.from(shots[j].data, 'base64')).resize(160, 100, { fit: 'fill' }).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+      const { data, info } = await sharp(Buffer.from(shots[j].data, 'base64')).resize(320, 200, { fit: 'fill' }).removeAlpha().raw().toBuffer({ resolveWithObject: true });
       lum.set(j, toLuminance(data, info.width, info.height, 3));
     }
     const frames = idx.map((j) => lum.get(j));
@@ -162,7 +163,7 @@ async function captureHome(browser) {
     const ff = spawnSync('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-i', '-', '-pix_fmt', 'yuv420p', '-vf', 'scale=320:200', mp4],
       { input: Buffer.concat(idx.map((j) => Buffer.from(shots[j].data, 'base64'))), maxBuffer: 1 << 28 });
     const file = ff.status === 0 ? mp4 : null;
-    const w = 160, h = 100;
+    const w = 320, h = 200; // 1/4 de la definition CSS : les petits eclats (flashs de foule) restent mesurables
     return { frames, w, h, errors: [], file };
   } finally {
     await ctx.close();
