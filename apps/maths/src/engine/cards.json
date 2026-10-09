@@ -1,0 +1,626 @@
+[
+ {
+  "id": "c01",
+  "name": "Gaston Tapedur",
+  "post": "Attaquant",
+  "number": 38,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#f59e0b",
+   "secondary": "#0b1b3a",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c02",
+  "name": "Lulu Bouchetrou",
+  "post": "Milieu",
+  "number": 75,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#db2777",
+   "secondary": "#ffffff",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c03",
+  "name": "Ricardo Pastèque",
+  "post": "Défenseur",
+  "number": 14,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#ea580c",
+   "secondary": "#ffffff",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c04",
+  "name": "Nono Filetsec",
+  "post": "Gardien",
+  "number": 51,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#d03b3b",
+   "secondary": "#ffffff",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c05",
+  "name": "Mimi Cacahuète",
+  "post": "Attaquant",
+  "number": 88,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#0891b2",
+   "secondary": "#ffffff",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c06",
+  "name": "Bruno Patatras",
+  "post": "Milieu",
+  "number": 27,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#16a34a",
+   "secondary": "#ffffff",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c07",
+  "name": "Zazou Frappemolle",
+  "post": "Défenseur",
+  "number": 64,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#1d4ed8",
+   "secondary": "#ffffff",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c08",
+  "name": "Titou Crampon",
+  "post": "Gardien",
+  "number": 3,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#7c3aed",
+   "secondary": "#fde68a",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c09",
+  "name": "Pépito Galopin",
+  "post": "Attaquant",
+  "number": 40,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#111827",
+   "secondary": "#fbbf24",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c10",
+  "name": "Kiki Raplapla",
+  "post": "Milieu",
+  "number": 77,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#0a6b30",
+   "secondary": "#ffd23f",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c11",
+  "name": "Boris Boulenfeu",
+  "post": "Défenseur",
+  "number": 16,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#f59e0b",
+   "secondary": "#0b1b3a",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c12",
+  "name": "Oscar Dribblouille",
+  "post": "Gardien",
+  "number": 53,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#db2777",
+   "secondary": "#ffffff",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c13",
+  "name": "Doudou Sifflet",
+  "post": "Attaquant",
+  "number": 90,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#ea580c",
+   "secondary": "#ffffff",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c14",
+  "name": "Gégé Tacletout",
+  "post": "Milieu",
+  "number": 29,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#d03b3b",
+   "secondary": "#ffffff",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c15",
+  "name": "Roméo Pointu",
+  "post": "Défenseur",
+  "number": 66,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#0891b2",
+   "secondary": "#ffffff",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c16",
+  "name": "Lola Gazon",
+  "post": "Gardien",
+  "number": 5,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#16a34a",
+   "secondary": "#ffffff",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c17",
+  "name": "Max Barretransversale",
+  "post": "Attaquant",
+  "number": 42,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#1d4ed8",
+   "secondary": "#ffffff",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c18",
+  "name": "Tonio Chaussette",
+  "post": "Milieu",
+  "number": 79,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#7c3aed",
+   "secondary": "#fde68a",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c19",
+  "name": "Fifi Ballon",
+  "post": "Défenseur",
+  "number": 18,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#111827",
+   "secondary": "#fbbf24",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c20",
+  "name": "Rémi Zigzag",
+  "post": "Gardien",
+  "number": 55,
+  "rarity": "bronze",
+  "colors": {
+   "primary": "#0a6b30",
+   "secondary": "#ffd23f",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c21",
+  "name": "Capitaine Tornade",
+  "post": "Attaquant",
+  "number": 92,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#f59e0b",
+   "secondary": "#0b1b3a",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c22",
+  "name": "Sacha Turbo",
+  "post": "Milieu",
+  "number": 31,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#db2777",
+   "secondary": "#ffffff",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c23",
+  "name": "Ninja Pelouse",
+  "post": "Défenseur",
+  "number": 68,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#ea580c",
+   "secondary": "#ffffff",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c24",
+  "name": "Léa Fusée",
+  "post": "Gardien",
+  "number": 7,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#d03b3b",
+   "secondary": "#ffffff",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c25",
+  "name": "Moussa Éclair",
+  "post": "Attaquant",
+  "number": 44,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#0891b2",
+   "secondary": "#ffffff",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c26",
+  "name": "Pablo Lucarne",
+  "post": "Milieu",
+  "number": 81,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#16a34a",
+   "secondary": "#ffffff",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c27",
+  "name": "Yuki Boulet-de-Canon",
+  "post": "Défenseur",
+  "number": 20,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#1d4ed8",
+   "secondary": "#ffffff",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c28",
+  "name": "Hugo Filet-Volant",
+  "post": "Gardien",
+  "number": 57,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#7c3aed",
+   "secondary": "#fde68a",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c29",
+  "name": "Inès Petit-Pont",
+  "post": "Attaquant",
+  "number": 94,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#111827",
+   "secondary": "#fbbf24",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c30",
+  "name": "Samir Talonnade",
+  "post": "Milieu",
+  "number": 33,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#0a6b30",
+   "secondary": "#ffd23f",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c31",
+  "name": "Clara Retournée",
+  "post": "Défenseur",
+  "number": 70,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#f59e0b",
+   "secondary": "#0b1b3a",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c32",
+  "name": "Diego Tire-Bouchon",
+  "post": "Gardien",
+  "number": 9,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#db2777",
+   "secondary": "#ffffff",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c33",
+  "name": "Nora Contre-Pied",
+  "post": "Attaquant",
+  "number": 46,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#ea580c",
+   "secondary": "#ffffff",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c34",
+  "name": "Théo Dribblor",
+  "post": "Milieu",
+  "number": 83,
+  "rarity": "argent",
+  "colors": {
+   "primary": "#d03b3b",
+   "secondary": "#ffffff",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c35",
+  "name": "Super Marco Volt",
+  "post": "Défenseur",
+  "number": 22,
+  "rarity": "or",
+  "colors": {
+   "primary": "#0891b2",
+   "secondary": "#ffffff",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c36",
+  "name": "Alba Étoile-Filante",
+  "post": "Gardien",
+  "number": 59,
+  "rarity": "or",
+  "colors": {
+   "primary": "#16a34a",
+   "secondary": "#ffffff",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c37",
+  "name": "Kenji Météore",
+  "post": "Attaquant",
+  "number": 96,
+  "rarity": "or",
+  "colors": {
+   "primary": "#1d4ed8",
+   "secondary": "#ffffff",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c38",
+  "name": "Zoé Tonnerre",
+  "post": "Milieu",
+  "number": 35,
+  "rarity": "or",
+  "colors": {
+   "primary": "#7c3aed",
+   "secondary": "#fde68a",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c39",
+  "name": "Rayan Boule-de-Feu",
+  "post": "Défenseur",
+  "number": 72,
+  "rarity": "or",
+  "colors": {
+   "primary": "#111827",
+   "secondary": "#fbbf24",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c40",
+  "name": "Mia Comète",
+  "post": "Gardien",
+  "number": 11,
+  "rarity": "or",
+  "colors": {
+   "primary": "#0a6b30",
+   "secondary": "#ffd23f",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c41",
+  "name": "Lucas Aigle-d'Or",
+  "post": "Attaquant",
+  "number": 48,
+  "rarity": "or",
+  "colors": {
+   "primary": "#f59e0b",
+   "secondary": "#0b1b3a",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c42",
+  "name": "Amara Foudroyante",
+  "post": "Milieu",
+  "number": 85,
+  "rarity": "or",
+  "colors": {
+   "primary": "#db2777",
+   "secondary": "#ffffff",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ },
+ {
+  "id": "c43",
+  "name": "Nikolaï Glaçon",
+  "post": "Défenseur",
+  "number": 24,
+  "rarity": "or",
+  "colors": {
+   "primary": "#ea580c",
+   "secondary": "#ffffff",
+   "skin": "#e0ac82",
+   "hair": "#c2410c"
+  }
+ },
+ {
+  "id": "c44",
+  "name": "Sofia Cyclone",
+  "post": "Gardien",
+  "number": 61,
+  "rarity": "or",
+  "colors": {
+   "primary": "#d03b3b",
+   "secondary": "#ffffff",
+   "skin": "#c68642",
+   "hair": "#111111"
+  }
+ },
+ {
+  "id": "c45",
+  "name": "Le Roi Pelouse",
+  "post": "Attaquant",
+  "number": 98,
+  "rarity": "legende",
+  "colors": {
+   "primary": "#0891b2",
+   "secondary": "#ffffff",
+   "skin": "#8d5524",
+   "hair": "#e6b800"
+  }
+ },
+ {
+  "id": "c46",
+  "name": "Dame Lucarne",
+  "post": "Milieu",
+  "number": 37,
+  "rarity": "legende",
+  "colors": {
+   "primary": "#16a34a",
+   "secondary": "#ffffff",
+   "skin": "#ffdbb4",
+   "hair": "#a0522d"
+  }
+ },
+ {
+  "id": "c47",
+  "name": "Professeur Gazon",
+  "post": "Défenseur",
+  "number": 74,
+  "rarity": "legende",
+  "colors": {
+   "primary": "#1d4ed8",
+   "secondary": "#ffffff",
+   "skin": "#a9744f",
+   "hair": "#5a3825"
+  }
+ },
+ {
+  "id": "c48",
+  "name": "Maître Ballon",
+  "post": "Gardien",
+  "number": 13,
+  "rarity": "legende",
+  "colors": {
+   "primary": "#7c3aed",
+   "secondary": "#fde68a",
+   "skin": "#f1c9a5",
+   "hair": "#2b1a0f"
+  }
+ }
+]

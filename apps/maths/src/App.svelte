@@ -1,23 +1,23 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Button, UpdateToast, createStore, playCinematic, preloadCinematic, pop, gsap, type Updater } from '@ce/core';
+  import { Button, UpdateToast, playCinematic, preloadCinematic, pop, gsap, type Updater } from '@ce/core';
+  import { app } from './state/store.svelte.ts';
+  import ParentEntry from './parent/ParentEntry.svelte';
 
   let { updater }: { updater: Updater } = $props();
 
-  const store = createStore({ name: 'maths', version: 1, defaults: () => ({ childName: 'Léo' }) });
   const CINE = `${import.meta.env.BASE_URL}cinematics/proof-goal/index.html`;
 
-  let childName = $state('Léo');
   let status = $state('');
   let title: HTMLElement | undefined = $state();
 
   onMount(async () => {
-    childName = (await store.load()).childName;
+    await app.load();
     void preloadCinematic(CINE);
     if (title) gsap.from(title, { y: -40, opacity: 0, duration: 0.6, ease: 'cePunch' });
   });
 
-  const saveName = () => store.save({ childName });
+  const saveName = () => app.setName(app.state.childName);
 
   async function testCinematic() {
     status = '';
@@ -25,7 +25,7 @@
     await saveName();
     const result = await playCinematic({
       src: CINE,
-      data: { goal: { name: childName.trim() || 'Léo', calc: '8 + 6 = 14' } },
+      data: { goal: { name: app.state.childName.trim() || 'Léo', calc: '8 + 6 = 14' } },
     });
     status = `Cinématique : ${result}`;
   }
@@ -37,12 +37,15 @@
 
   <label class="name">
     <span>Prénom</span>
-    <input id="child-name" bind:value={childName} onchange={saveName} maxlength="16" autocomplete="off" />
+    <input id="child-name" bind:value={app.state.childName} onchange={saveName} maxlength="16" autocomplete="off" />
   </label>
 
   <Button size="xl" onclick={testCinematic}>Tester la cinématique</Button>
   <p id="status" class="status" role="status">{status}</p>
 </main>
+
+<!-- Acces parent temporaire (appui long 3 s + calcul) : sera deplace dans l'ecran d'accueil. -->
+<div class="parent-access"><ParentEntry /></div>
 
 <UpdateToast {updater} />
 
@@ -61,5 +64,6 @@
     font: inherit; font-size: 1.6rem; color: #0b1b3a; background: #fff;
     -webkit-user-select: text; user-select: text;
   }
+  .parent-access { position: fixed; right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
   .status { min-height: 1.5em; margin: 0; opacity: 0.8; }
 </style>
