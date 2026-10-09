@@ -109,6 +109,34 @@ describe('compositions maths : regles statiques', () => {
   }
 });
 
+describe('compositions espagnol : regles statiques (mouvement sur)', () => {
+  const dir = join(root, 'apps/espagnol/public/cinematics');
+  const comps = readdirSync(dir).filter((n) => n !== '_shared' && existsSync(join(dir, n, 'index.html')));
+  it('kit commun : canal "motion", bloom plafonne, secousse plafonnee, aucun mode de fusion', () => {
+    const q = readFileSync(join(dir, '_shared/qcine.js'), 'utf8');
+    expect(q).toContain("registerRuntimeDataHandler('motion'");
+    expect(q).toContain('Math.min(peak == null ? 0.2 : peak, 0.25)');
+    expect(q).toContain('Math.max(rise == null ? 0.32 : rise, 0.3)');
+    expect(q).toContain('Math.min(amp == null ? 8 : amp, 10)');
+    for (const f of ['qcine.js', 'qcap.js', 'qstage.js']) expect(readFileSync(join(dir, '_shared', f), 'utf8')).not.toMatch(/mix-blend-mode:\s*(screen|multiply|overlay)/);
+  });
+  for (const id of comps) {
+    const html = readFileSync(join(dir, id, 'index.html'), 'utf8');
+    describe(id, () => {
+      it('charge le kit commun (QCine.initPlayer : canaux player + motion)', () => {
+        expect(html).toContain('_shared/qcine.js');
+        expect(html).toContain('initPlayer()');
+      });
+      it('pas de flash plein ecran, ni de mode de fusion, ni de filtre anime', () => {
+        expect(html).not.toMatch(/mix-blend-mode/);
+        expect(html).not.toMatch(/#(flash|wipe) \{[^}]*background: #fff/);
+        expect(html).not.toMatch(/tl\.(fromTo|to)\("#(flash|wipe|vflash)"/);
+        expect(html).not.toMatch(/tl\.(fromTo|to)\([^;]*filter:/);
+      });
+    });
+  }
+});
+
 describe('flash-core (analyse des flashs)', () => {
   const W = 20, H = 12, FPS = 30;
   const frames = (fn: (t: number) => number) => Array.from({ length: 60 }, (_, i) => new Float32Array(W * H).fill(fn(i)));

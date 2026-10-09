@@ -85,7 +85,7 @@ docs/                        specs
 
 ## Mouvement sûr (photosensibilité — WCAG 2.3.1 + confort d'un enfant de 7 ans)
 
-Règle pour l'app maths (écrans, kit `CEArt`, 16 cinématiques) et pour toute nouvelle animation. L'énergie « habillage TV »
+Règle pour l'app maths (écrans, kit `CEArt`, 16 cinématiques), pour l'app espagnol (kit `QArt` / `QCine`, toutes les cinématiques `apps/espagnol/public/cinematics/`) et pour toute nouvelle animation. L'énergie « habillage TV »
 vient du **mouvement** (push-in, glissements, overshoot, échelle), **pas de la lumière**.
 
 - **≤ 3 flashs par seconde**, pour n'importe quel élément et pour l'écran entier (WCAG 2.3.1 : transition de luminance
@@ -103,13 +103,15 @@ vient du **mouvement** (push-in, glissements, overshoot, échelle), **pas de la 
 - **« Animations douces »** (espace parent → Réglages ; forcé si `prefers-reduced-motion`) : `@ce/core`
   `setSoftMotion` (pop/shake/burst/countUp réduits), fond immobile, pas de respiration du bouton MATCH ; les cinématiques
   reçoivent `{ motion: { soft } }` (canal `motion`, chaque composition maths appelle `CEArt.setSoft` puis se reconstruit).
+- **Espagnol** (même politique, kit commun `_shared/qcine.js`) : `QCine.bloom(tl, sel, at, peak, rise, fall)` (opacité ≤ 0,25, montée ≥ 0,3 s) remplace tout éclair ; `QCine.shake` ≤ 10 px, oscillations ≥ 0,11 s ; fondus d'ouverture ≥ 0,45 s ; transitions de plan par fondu enchaîné (jamais d'écran crème plein cadre) ; aucun `mix-blend-mode` ni `filter` animé (lueurs = dégradés radiaux en opacité) ; le **grain de papier** n'est plus un filtre `feTurbulence` plein cadre mais une tuile WebP rastérisée (`_shared/img/grain.webp`, `node tools/art/es-grain.mjs`) ; scintillements (lampes, rayons) ≥ 0,4 s par cycle ; confettis/étincelles/pétales/éclats (`.cf .spark .star .shard .dust`, `.q-fx`) apparaissent en ≥ 0,4 s. Les décors SVG du kit font ≤ ~1 000 nœuds par calque (rien à rastériser) ; seul le grain l'était.
+  **« Animaciones suaves »** : `Ajustes` → réglage `settings.reducedMotion` → `@ce/core` `setSoftMotion` (`GameState.applySettings`, forcé si `prefers-reduced-motion`), transmis aux cinématiques par le canal `motion` (`CinematicRef.svelte` : `data: { player, motion: { soft } }`) ; `QCine.initPlayer` l'écoute (`QCine.setSoft` : classe `q-soft` sur `#root` qui masque lueurs/rayons/confettis/étincelles/poussière, `bloom`/`shake` à 0, timelines invalidées). Garde-fous statiques : `tests/safe-motion.test.ts` (kit commun + chaque composition espagnole).
 - **Contrôle** : `npm run a11y:flash` (après `npm run build`) — `tools/a11y/flash-check.mjs` rend chaque cinématique image
   par image à 30 i/s (timeline positionnée comme le rendu HyperFrames), capture 10 s de l'accueil (screencast Playwright,
   MP4 de contrôle dans `tools/a11y/out/`) et mesure la luminance relative par image : **échec** si > 3 flashs généraux/s
   ou **éblouissement** (luminance moyenne de l'écran ou d'une moitié qui monte de > 0,2 en 0,1 s, soit plus vite qu'un
   fondu de 0,3 s depuis le noir) ; « scintillement »
   (petits éclats sur place) = indicateur seulement. Options : `espagnol`, `home`, `<dossier>`, `--video f.mp4`,
-  `--only a,b`, `--soft`, `--json`, `--report-only`. Garde-fous statiques : `tests/safe-motion.test.ts`.
+  `--only a,b`, `--soft` (maths : `CEArt.setSoft` ; espagnol : `QCine.setSoft`), `--json`, `--report-only`. Garde-fous statiques : `tests/safe-motion.test.ts`.
 
 ## Hébergement
 

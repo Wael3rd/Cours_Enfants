@@ -74,7 +74,7 @@ async function captureComposition(browser, url) {
     await page.goto(url);
     await page.waitForFunction(() => window.__playerReady && window.__player, null, { timeout: 20000 });
     // "Animations douces" : meme effet que le canal "motion" envoye par l'app (compositions maths)
-    if (SOFT) await page.evaluate(() => { if (window.CEArt?.setSoft && typeof window.build === 'function') { window.CEArt.setSoft(true); window.build(); } });
+    if (SOFT) await page.evaluate(() => { if (window.CEArt?.setSoft && typeof window.build === 'function') { window.CEArt.setSoft(true); window.build(); } if (window.QCine?.setSoft) window.QCine.setSoft(true); });
     const cdp = await page.context().newCDPSession(page);
     await cdp.send('Emulation.setDeviceMetricsOverride', { width: 1920, height: 1200, deviceScaleFactor: 0.1, mobile: false });
     const dur = await page.evaluate(() => window.__player.getDuration());
