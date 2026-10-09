@@ -9,5 +9,5 @@ export { default as ProgressRing } from './ui/ProgressRing.svelte';
 export { default as ParentGate } from './ui/ParentGate.svelte';
 export { default as UpdateToast } from './ui/UpdateToast.svelte';
 export { default as Cinematic, type CinematicResult } from './cinematic/Cinematic.svelte';
-export { playCinematic, type PlayOptions } from './cinematic/play';
+export { playCinematic, playCinematicSequence, type PlayOptions, type PlaySequenceOptions } from './cinematic/play';
 export { preloadCinematic } from './cinematic/preload';

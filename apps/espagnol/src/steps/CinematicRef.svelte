@@ -4,7 +4,7 @@
    * si elle existe ; sinon REPLI : diaporama anime des repliques du script (decor, personnages, sous-titres, voix).
    */
   import { onDestroy, onMount } from 'svelte';
-  import { gsap, playCinematic, preloadCinematic, prefersReducedMotion } from '@ce/core';
+  import { gsap, playCinematicSequence, preloadCinematic, prefersReducedMotion } from '@ce/core';
   import type { CinematicRefStep, Linea, Plano } from '../content/schema';
   import { game } from '../state/game.svelte';
   import { playerName } from '../engine/progress';
@@ -58,16 +58,14 @@
     }
     mode = 'cine';
     music.setMode('off');
-    parts.forEach((p) => void preloadCinematic(`${BASE}${p}/index.html`));
-    for (const p of parts) {
-      const r = await playCinematic({ src: `${BASE}${p}/index.html`, data: { player: { name: playerName(game.state) } }, skipLabel: 'Saltar' });
-      if (!alive) return;
-      if (r === 'error') {
-        mode = 'fallback';
-        music.setMode('quest');
-        return;
-      }
-      if (r === 'skipped') break;
+    const srcs = parts.map((p) => `${BASE}${p}/index.html`);
+    srcs.slice(0, 2).forEach((u) => void preloadCinematic(u));
+    const r = await playCinematicSequence({ srcs, data: { player: { name: playerName(game.state) } }, skipLabel: 'Saltar' });
+    if (!alive) return;
+    if (r === 'error') {
+      mode = 'fallback';
+      music.setMode('quest');
+      return;
     }
     music.setMode('quest');
     finish();
