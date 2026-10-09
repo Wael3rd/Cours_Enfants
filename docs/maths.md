@@ -7,7 +7,8 @@ Le reste du programme est acquis. Tout le design sert la **fluence** (exactitude
 
 - Faits d'addition : `a + b`, a, b ∈ [0..10] → 121 faits (a+b et b+a sont deux items, liés : réussir l'un donne un
   petit crédit à l'autre).
-- Faits de soustraction : inverses, `c − a` avec c = a+b ≤ 20 → 121 faits.
+- Faits de soustraction : inverses, `c − a` avec c = a+b ≤ 20 → 121 faits, travaillés **avec** les additions (voir Zones) : on
+  apprend les familles de nombres (3+5=8 → 8−5=3, 8−3=5) au fil de l'eau, additions et soustractions rapides ensemble.
 - Niveau 2 "Ligue des Champions" (CE1/CE2, débloqué quand +/− sont fluents) : calcul mental à 2 chiffres généré
   (dizaines ± dizaines, 2 chiffres ± 1 chiffre sans puis avec passage de dizaine, compléments à la dizaine supérieure).
   Suivi par catégorie de compétence, pas par fait.
@@ -22,11 +23,17 @@ Par fait : tentatives, 5 derniers temps de réponse, série de réussites, boît
   plus tard dans la même session.
 - Composition d'une session : ~15 % faits nouveaux de la zone en cours (jamais plus de 2 nouveaux non maîtrisés à la
   fois), ~60 % faits dus / non fluents, ~25 % faits fluents (confiance et rythme). Répétition incrémentale.
-- **Zones** (ordre par stratégie — chaque zone = une compétition à gagner) :
+- **Zones** (ordre par stratégie — chaque zone = une compétition à gagner ; 9 zones) :
   1. +0 et +1 (Échauffement) · 2. +2 · 3. Doubles · 4. Les amoureux de 10 (compléments à 10) ·
   5. Presque-doubles (6+7 = 6+6+1) · 6. +10 · 7. +9 (= +10 −1) · 8. Passer la dizaine (8+5 = 8+2+3) ·
-  9. Soustractions par familles de nombres (3+5=8 → 8−5, 8−3) · 10. Ligue des Champions (calcul mental 2 chiffres)
-- Zone suivante débloquée quand ≥ 80 % des faits de la zone sont fluents (le parent peut forcer).
+  9. Ligue des Champions (calcul mental 2 chiffres)
+- **Familles de nombres** : chaque zone 1-8 contient ses additions ET leurs soustractions inverses (a+b=c → c−a=b, c−b=a ; la
+  soustraction va dans la zone de son addition parente la plus précoce). Zones 1 à 8 : 80 / 34 / 16 / 8 / 28 / 24 / 20 / 32 faits
+  (moitié +, moitié −).
+- **Gating par fait** : une soustraction n'apparaît comme nouveau fait que lorsque son addition parente (a+b ou b+a) est fluente,
+  pour que l'enfant s'appuie sur le fait connu (« 8−5 ? pense à 5+3 »). Après une erreur sur une soustraction, l'indice montre la
+  famille : « 5 + 3 = 8 donc 8 − 5 = 3 ».
+- Zone gagnée (et suivante débloquée) quand ≥ 80 % de ses faits — additions et soustractions — sont fluents (le parent peut forcer).
 - **Match de détection** au premier lancement (~2 min) pour pré-remplir les faits déjà connus et sauter les zones
   maîtrisées.
 

@@ -10,7 +10,7 @@ const settings = defaultEngineSettings();
 let clock = 1_700_000_000_000;
 const now = () => (clock += 500);
 
-/** Un enfant virtuel enchaine des sessions Match jusqu'a gagner les 10 zones. */
+/** Un enfant virtuel enchaine des sessions Match jusqu'a gagner les 9 zones. */
 function runChild(cp: ChildProfile, seed: number, opts: { placement?: boolean; maxSessions?: number } = {}) {
   const profile: Profile = newProfile();
   const child = new VirtualChild(cp, seed);
@@ -22,28 +22,34 @@ function runChild(cp: ChildProfile, seed: number, opts: { placement?: boolean; m
   }
   const wonAt: Record<number, number> = {};
   let sessions = 0;
+  let firstSub = 0; // 1re soustraction proposee comme nouvelle (numero de session)
   const max = opts.maxSessions ?? 600;
-  while (sessions < max && profile.progress.zonesWon.length < 10) {
+  while (sessions < max && profile.progress.zonesWon.length < 9) {
     // une journee type : 1 Match (+ 1 entrainement de la zone quand on apprend une nouvelle zone)
     const s = startSession(profile, settings, 'match', { seed: seed * 1000 + sessions, now });
     let q: Question | null;
-    while ((q = s.next())) { const a = child.answer(q); s.submit(a.value, a.ms); }
+    while ((q = s.next())) {
+      if (!firstSub && q.kind === 'fact' && q.op === '-' && q.isNew) firstSub = sessions + 1;
+      const a = child.answer(q); s.submit(a.value, a.ms);
+    }
     const r = s.finish();
     sessions++;
     for (const z of r.zonesWon) wonAt[z] = sessions;
   }
-  return { profile, wonAt, sessions };
+  return { profile, wonAt, sessions, firstSub };
 }
 
 describe('simulation : enfant virtuel qui progresse avec la pratique', () => {
-  it('enfant moyen : traverse les 10 zones en un nombre raisonnable de sessions', () => {
-    const { wonAt, sessions, profile } = runChild(AVERAGE_CHILD, 1);
-    console.log('[sim moyen] sessions par zone (cumul) :', JSON.stringify(wonAt), 'total', sessions);
-    expect(Object.keys(wonAt)).toHaveLength(10);
-    expect(profile.progress.zonesWon).toHaveLength(10);
+  it('enfant moyen : traverse les 9 zones en un nombre raisonnable de sessions', () => {
+    const { wonAt, sessions, profile, firstSub: first } = runChild(AVERAGE_CHILD, 1);
+    expect(first).toBeGreaterThan(0);
+    expect(first).toBeLessThan(30); // les soustractions arrivent dans les premieres semaines, pas apres ~56 sessions
+    console.log('[sim moyen] sessions par zone (cumul) :', JSON.stringify(wonAt), 'total', sessions, '1re soustraction a la session', first);
+    expect(Object.keys(wonAt)).toHaveLength(9);
+    expect(profile.progress.zonesWon).toHaveLength(9);
     // zones triees dans l'ordre
     const order = Object.entries(wonAt).sort((a, b) => a[1] - b[1] || +a[0] - +b[0]).map(([z]) => +z);
-    expect(order).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(order).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(sessions).toBeLessThan(250);
     // les premieres zones sont franchies vite
     expect(wonAt[1]).toBeLessThan(30);
@@ -52,8 +58,8 @@ describe('simulation : enfant virtuel qui progresse avec la pratique', () => {
   it('enfant plus lent : plus de sessions, mais il y arrive', () => {
     const avg = runChild(AVERAGE_CHILD, 2);
     const slow = runChild(SLOW_CHILD, 2);
-    console.log('[sim lent] sessions par zone (cumul) :', JSON.stringify(slow.wonAt), 'total', slow.sessions);
-    expect(slow.profile.progress.zonesWon).toHaveLength(10);
+    console.log('[sim lent] sessions par zone (cumul) :', JSON.stringify(slow.wonAt), 'total', slow.sessions, '1re soustraction a la session', slow.firstSub);
+    expect(slow.profile.progress.zonesWon).toHaveLength(9);
     expect(slow.sessions).toBeGreaterThan(avg.sessions);
     expect(slow.sessions).toBeLessThan(400);
   });
@@ -98,9 +104,17 @@ describe('simulation : enfant virtuel qui progresse avec la pratique', () => {
   it('enfant fort place puis joue : finit bien plus vite qu\'un debutant', () => {
     const strong = runChild(FAST_CHILD, 8, { placement: true });
     const avg = runChild(AVERAGE_CHILD, 8);
-    console.log('[sim fort apres placement] sessions', strong.sessions, 'vs moyen', avg.sessions);
-    expect(strong.profile.progress.zonesWon.length).toBe(10);
+    console.log('[sim fort apres placement] sessions', strong.sessions, 'vs moyen', avg.sessions, 'wonAt', JSON.stringify(strong.wonAt), '1re soustraction', strong.firstSub);
+    expect(strong.profile.progress.zonesWon.length).toBe(9);
     expect(strong.sessions).toBeLessThan(avg.sessions / 2);
+  });
+
+  it('enfant fort sans detection : les familles avancent vite, soustractions des les premieres sessions', () => {
+    const strong = runChild(FAST_CHILD, 6);
+    console.log('[sim fort sans detection] sessions par zone (cumul) :', JSON.stringify(strong.wonAt), 'total', strong.sessions, '1re soustraction a la session', strong.firstSub);
+    expect(strong.profile.progress.zonesWon).toHaveLength(9);
+    expect(strong.firstSub).toBeGreaterThan(0);
+    expect(strong.firstSub).toBeLessThan(10);
   });
 
   it('la progression est monotone : zone de travail et zones gagnees ne reculent jamais', () => {

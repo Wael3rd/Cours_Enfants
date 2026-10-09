@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { ALL_FACTS, getFact, FACT_BY_ID } from '../src/engine/facts.ts';
-import { ZONES, ZONE_FACTS, FACT_ZONE, zoneFacts } from '../src/engine/zones.ts';
+import { ZONES, ZONE_FACTS, FACT_ZONE, MENTAL_ZONE, zoneFacts, parentIds } from '../src/engine/zones.ts';
 
 describe('faits', () => {
   it('121 additions + 121 soustractions, ids uniques', () => {
@@ -29,19 +29,22 @@ describe('faits', () => {
 });
 
 describe('zones', () => {
-  it('10 zones, chaque fait dans exactement une zone (la premiere qui le couvre)', () => {
-    expect(ZONES).toHaveLength(10);
+  it('9 zones, chaque fait dans exactement une zone, la soustraction avec son addition parente', () => {
+    expect(ZONES).toHaveLength(9);
+    expect(MENTAL_ZONE).toBe(9);
     const all = ZONE_FACTS.flat();
     expect(all).toHaveLength(242);
     expect(new Set(all.map((f) => f.id)).size).toBe(242);
     for (const f of ALL_FACTS) {
-      const first = ZONES.find((z) => z.covers(f))!.id;
-      expect(FACT_ZONE.get(f.id)).toBe(first);
+      if (f.op === '+') expect(FACT_ZONE.get(f.id)).toBe(ZONES.find((z) => z.covers(f))!.id);
+      else expect(FACT_ZONE.get(f.id)).toBe(Math.min(...parentIds(f).map((id) => FACT_ZONE.get(id)!)));
     }
+    expect(zoneFacts(9)).toHaveLength(0);
   });
-  it('tailles et contenus attendus', () => {
-    expect(ZONE_FACTS.map((z) => z.length)).toEqual([40, 17, 8, 4, 14, 12, 10, 16, 121, 0]);
-    const ids = (z: number) => zoneFacts(z).map((f) => f.id);
+  it('tailles : autant de soustractions que d additions dans chaque zone de faits', () => {
+    expect(ZONE_FACTS.map((z) => z.length)).toEqual([80, 34, 16, 8, 28, 24, 20, 32, 0]);
+    for (const z of ZONE_FACTS) expect(z.filter((f) => f.op === '+').length).toBe(z.filter((f) => f.op === '-').length);
+    const ids = (z: number) => zoneFacts(z).filter((f) => f.op === '+').map((f) => f.id);
     expect(ids(1)).toContain('0+0');
     expect(ids(1)).toContain('1+10');
     expect(ids(1)).toContain('10+0');
@@ -55,7 +58,16 @@ describe('zones', () => {
     expect(ids(7)).toContain('9+4');
     expect(ids(8)).toContain('8+5');
     expect(ids(8)).toContain('7+4');
-    expect(ids(9).every((id) => id.includes('-'))).toBe(true);
+  });
+  it('familles : 8-5 et 8-3 sont avec 5+3 et 3+5 (zone 4 pour les amoureux de 10)', () => {
+    expect(parentIds(getFact('8-5')).sort()).toEqual(['3+5', '5+3']);
+    expect(parentIds(getFact('4-2'))).toEqual(['2+2']);
+    expect(FACT_ZONE.get('10-3')).toBe(4);
+    expect(FACT_ZONE.get('10-7')).toBe(4);
+    expect(FACT_ZONE.get('8-4')).toBe(3);
+    expect(FACT_ZONE.get('8-5')).toBe(8);
+    expect(FACT_ZONE.get('7-6')).toBe(1); // 6+1 : +1
+    expect(FACT_ZONE.get('12-10')).toBe(2); // 10+2 : +2 (avant +10)
   });
   it('priorite a la premiere zone : 5+5 est un double, 9+1 un +1, 10+10 un double', () => {
     expect(FACT_ZONE.get('5+5')).toBe(3);

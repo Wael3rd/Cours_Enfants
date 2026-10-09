@@ -27,8 +27,8 @@ Sans store (tests / hors Svelte) : `startSession(profile, settings, mode, opts)`
 
 ```ts
 { kind:'fact', id:'7+8', text:'7 + 8', op:'+', left:7, right:8, answer:15, digits:2,
-  zone:8, isNew:boolean, isRetry:boolean, fact }          // faits (zones 1-9)
-{ kind:'mental', id:'m:two-one-carry:38 + 7', cat, text:'38 + 7', op, left, right|null, answer, digits } // zone 10
+  zone:8, isNew:boolean, isRetry:boolean, fact }          // faits (zones 1-8 : additions ET soustractions)
+{ kind:'mental', id:'m:two-one-carry:38 + 7', cat, text:'38 + 7', op, left, right|null, answer, digits } // zone 9
 ```
 - `text` est prêt à afficher (le « − » est le vrai signe moins ; compléments : `"37 + ? = 40"`).
 - `digits` = nombre de chiffres de la réponse -> **validation automatique** du pavé quand autant de chiffres sont saisis.
@@ -69,10 +69,10 @@ newFluentFacts[], zonesWon[], missed[], newAvatarItems[], packsAvailable, streak
 
 | Mode | Questions | Contenu |
 |---|---|---|
-| `match` | minutes × 10 (réglage parent, 2/3/5 min) | mélange ~15 % nouveaux (max 2 non maîtrisés à la fois) / ~60 % dus ou non fluents / ~25 % fluents ; en zone 10 : 50 % calcul mental |
+| `match` | minutes × 10 (réglage parent, 2/3/5 min) | mélange ~15 % nouveaux (max 2 non maîtrisés à la fois) / ~60 % dus ou non fluents / ~25 % fluents ; en zone 9 : 50 % calcul mental |
 | `sprint` | 10 | faits connus, tous différents ; `profile.sprint.ghost` = fantôme |
 | `penalties` | 5 | les 5 faits les plus difficiles (erreurs, lenteur, boîte basse) |
-| `training` | 15 (`zone` choisie, défaut zone en cours) | uniquement les faits de la zone ; zone 10 = mental seul |
+| `training` | 15 (`zone` choisie, défaut zone en cours) | uniquement les faits de la zone ; zone 9 = mental seul |
 
 Médailles Sprint (`sprintMedal`, ref = 10 × seuil) : bronze ≤ ref (≤ 2 erreurs) · argent ≤ 0,8 ref et ≤ 1,1 × record
 (≤ 1 erreur) · or ≤ 0,6 ref, ou record battu sous 0,8 ref (0 erreur).
@@ -88,9 +88,27 @@ Pré-remplit les faits des zones réussies (boîte 3, `inferred`), place l'enfan
 
 ## Zones, progression, parent
 
-`ZONES` (10), `zoneFacts(z)`, `FACT_ZONE`. `app.state.profile.progress` : `focusZone` (zone en cours), `maxUnlocked`,
-`zonesWon`. Zone gagnée = ≥ 80 % de faits fluents (fluent = juste ET ≤ seuil, 2 fois de suite). `app.forceZone(z)` =
+`ZONES` (9), `MENTAL_ZONE` (9), `zoneFacts(z)`, `FACT_ZONE`. `app.state.profile.progress` : `focusZone` (zone en cours), `maxUnlocked`,
+`zonesWon`. Zone gagnée = ≥ 80 % de faits fluents (fluent = juste ET ≤ seuil, 2 fois de suite) sur **tous** ses faits, additions
+et soustractions. `app.forceZone(z)` =
 forçage parent. Stats : `heatmap(progress,'+'|'-',T)`, `avgTimeSeries(history)`, `summary(profile,T)`.
+
+## Familles de nombres (zones 1-8)
+
+Chaque zone d'addition contient aussi les soustractions inverses de ses additions (`a+b=c` → `c−a=b`, `c−b=a`) : 80 / 34 / 16 / 8 / 28 / 24 / 20 / 32
+faits pour les zones 1 à 8 (moitié additions, moitié soustractions ; 242 au total). Une soustraction appartient à la zone de son addition
+parente la plus précoce (`parentIds(f)`, `FACT_ZONE`). Zone 9 = Ligue des Champions (calcul mental, 0 fait).
+
+- **Gating par fait** : une soustraction n'est proposée comme *nouveau* fait que si une de ses additions parentes (`a+b` ou `b+a`) est
+  fluente (`isFactAvailable(p, f, T)`). Les soustractions déjà vues (ou pré-remplies par la détection) se révisent normalement.
+- Introduction des nouveaux faits : zones débloquées de la plus basse à la plus haute (les soustractions qui viennent de se débloquer
+  en bas passent avant la suite de la zone de travail), toujours max 2 faits « en apprentissage » à la fois.
+- Après une erreur sur une soustraction : `hint.kind = 'fact-family'`, légende `"5 + 3 = 8 donc 8 − 5 = 3 (et 8 − 3 = 5)"`,
+  étapes `["5 + 3 = 8", "8 − 5 = 3"]`.
+- Détection : 3 sondes par zone (2 additions + 1 soustraction quand la zone en a) ; une zone réussie pré-remplit additions et soustractions.
+- Persistance : `STATE_VERSION = 3`. Migration v2→v3 : ancienne zone 9 (soustractions) → 8, ancienne 10 (Ligue) → 9, `zonesWon`,
+  `forcedZones`, `history[].zone` renumérotés ; faits, récompenses, historique intacts. La zone de travail ne recule jamais (elle avance
+  seulement quand sa fluence réelle ≥ 80 %).
 
 ## Récompenses (`profile.rewards`)
 

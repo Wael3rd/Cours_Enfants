@@ -2,6 +2,7 @@
   import { app } from '../state/store.svelte.ts';
   import { heatmap, avgTimeSeries, summary } from '../engine/stats.ts';
   import { THRESHOLD_CHOICES_MS } from '../engine/progress.ts';
+  import { MENTAL_ZONE } from '../engine/zones.ts';
   import { SESSION_MINUTES_CHOICES } from '../state/model.ts';
   import { dayKey } from '../engine/rewards.ts';
   import Heatmap from './Heatmap.svelte';
@@ -135,7 +136,7 @@
       <p class="note">Étoiles : {profile.rewards.stars} · Cartes : {profile.rewards.cards.length} · Médailles sprint : {medalTxt}.</p>
     {:else if tab === 'zones'}
       <section class="card">
-        <p class="note top">Une zone est gagnée quand au moins 80 % de ses faits sont fluents ; la suivante se débloque alors. Vous pouvez forcer une zone.</p>
+        <p class="note top">Une zone est gagnée quand au moins 80 % de ses faits (additions et soustractions de la même famille) sont fluents ; la suivante se débloque alors. Vous pouvez forcer une zone.</p>
         <ol class="zones">
           {#each sum.zones as z}
             <li class:focus={z.focus}>
@@ -150,7 +151,7 @@
                 <i style="width:{Math.round(z.ratio * 100)}%"></i><u></u>
               </div>
               <div class="zf">
-                <span>{z.fluent}/{z.total}{z.id === 10 ? ' catégories' : ' faits'} · {pct(z.ratio)}</span>
+                <span>{z.fluent}/{z.total}{z.id === MENTAL_ZONE ? ' catégories' : ' faits'} · {pct(z.ratio)}</span>
                 {#if confirmZone === z.id}
                   <span class="confirm">Forcer la zone {z.id} ?
                     <button type="button" class="btn small" onclick={() => force(z.id)}>Oui</button>
@@ -160,7 +161,7 @@
                   <button type="button" class="btn small ghost" onclick={() => (confirmZone = z.id)}>Forcer</button>
                 {/if}
               </div>
-              {#if z.id === 10}
+              {#if z.id === MENTAL_ZONE}
                 <ul class="mental">
                   {#each sum.mental as m}
                     <li><span>{m.label}</span><span class="n">{m.attempts ? pct(m.rate) : '—'}{m.fluent ? ' ✓' : ''}</span></li>

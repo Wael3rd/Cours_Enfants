@@ -67,7 +67,7 @@ describe('calcul mental (niveau 2)', () => {
     recordMental(s, false, 3000, 3000);
     expect(isMentalFluent(s)).toBe(false); // 7 sur 10
   });
-  it('la zone 10 est gagnee quand toutes les categories sont fluentes', () => {
+  it('la zone 9 est gagnee quand toutes les categories sont fluentes', () => {
     const m = newMental();
     expect(mentalZoneRatio(m)).toBe(0);
     for (const c of MENTAL_CATS) for (let i = 0; i < 10; i++) recordMental(m[c], true, 2000, 3000);
@@ -97,6 +97,13 @@ describe('indices visuels', () => {
     expect(kind('8+5')).toBe('bridge-ten');
     expect(kind('3+5')).toBe('ten-frame');
     expect(kind('8-3')).toBe('fact-family');
+  });
+  it('indice d une soustraction = la famille ("5 + 3 = 8 donc 8 − 5 = 3")', () => {
+    const h = hintFor(getFact('8-5'));
+    expect(h.caption).toContain('5 + 3 = 8 donc 8 − 5 = 3');
+    expect(h.caption).toContain('8 − 3 = 5');
+    expect(h.steps.map((s) => s.label)).toEqual(['5 + 3 = 8', '8 − 5 = 3']);
+    expect(hintFor(getFact('8-4')).caption).toBe('4 + 4 = 8 donc 8 − 4 = 4.');
   });
   it('les etapes sont arithmetiquement justes', () => {
     const h = hintFor(getFact('8+5'));
@@ -209,7 +216,7 @@ describe('statistiques', () => {
     expect(series.map((x) => x.avgMs)).toEqual([2000, 1700, 1400]);
     expect(series.map((x) => x.n)).toEqual([1, 2, 3]);
     const sm = summary(profile, 3000);
-    expect(sm.zones).toHaveLength(10);
+    expect(sm.zones).toHaveLength(9);
     expect(sm.zones[0].focus).toBe(true);
     expect(sm.sessions).toBe(3);
   });

@@ -1,6 +1,6 @@
 /** Etat d'apprentissage persistant + regles de fluence / boites de Leitner. Pur, sans UI. */
 import { ALL_FACTS, getFact, type Fact } from './facts.ts';
-import { ZONES, zoneFacts, LAST_ZONE, MENTAL_ZONE, FACT_ZONE } from './zones.ts';
+import { ZONES, zoneFacts, LAST_ZONE, MENTAL_ZONE, FACT_ZONE, parentIds } from './zones.ts';
 import { newMental, mentalZoneRatio, type MentalCat, type MentalStat } from './mental.ts';
 
 export const DEFAULT_THRESHOLD_MS = 3000;
@@ -44,7 +44,7 @@ export interface Progress {
   mental: Record<MentalCat, MentalStat>;
   /** Nombre de sessions demarrees (sert de calendrier Leitner). */
   sessionCount: number;
-  /** Zone en cours de travail (1..10). */
+  /** Zone en cours de travail (1..9). */
   focusZone: number;
   /** Plus haute zone debloquee. */
   maxUnlocked: number;
@@ -77,6 +77,13 @@ export const avgMs = (s: FactStat | undefined): number | null =>
   s && s.times.length ? s.times.reduce((a, b) => a + b, 0) / s.times.length : null;
 
 export const isZoneUnlocked = (p: Progress, z: number) => z <= p.maxUnlocked || p.forcedZones.includes(z);
+
+/**
+ * Une soustraction n'est introduite comme nouvelle que lorsque son addition parente (a + b ou b + a) est fluente :
+ * l'enfant s'appuie sur le fait connu ("8 - 5 ? pense a 5 + 3"). Les additions sont toujours disponibles.
+ */
+export const isFactAvailable = (p: Progress, f: Fact, T: number): boolean =>
+  f.op === '+' || parentIds(f).some((id) => isFluent(p.facts[id], T));
 
 /** Nouveau fait encore non maitrise : vu 1..8 fois et pas fluent. Au plus 2 en meme temps. */
 export const MAX_LEARNING = 2;
@@ -174,7 +181,9 @@ export function advanceZones(p: Progress, T: number, now: number): number[] {
       won.push(z.id);
     }
   }
-  while (p.focusZone < LAST_ZONE && isZoneWon(p, p.focusZone)) {
+  // la zone de travail avance quand elle est reellement fluente (une zone deja gagnee avant la v3 mais dont les
+  // soustractions restent a apprendre garde le focus)
+  while (p.focusZone < LAST_ZONE && isZoneWon(p, p.focusZone) && zoneRatio(p, p.focusZone, T) >= UNLOCK_RATIO) {
     p.focusZone++;
     p.maxUnlocked = Math.max(p.maxUnlocked, p.focusZone);
   }

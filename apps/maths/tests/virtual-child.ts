@@ -1,5 +1,5 @@
 import { mulberry32, type Rng } from '../src/engine/rng.ts';
-import { FACT_ZONE } from '../src/engine/zones.ts';
+import { FACT_ZONE, MENTAL_ZONE } from '../src/engine/zones.ts';
 import type { Question } from '../src/engine/builder.ts';
 
 export interface ChildProfile {
@@ -27,7 +27,7 @@ export class VirtualChild {
   private key(q: Question) { return q.kind === 'mental' ? `cat:${q.cat}` : q.id; }
 
   private practice(q: Question): number {
-    const z = q.kind === 'fact' ? FACT_ZONE.get(q.id)! : 10;
+    const z = q.kind === 'fact' ? FACT_ZONE.get(q.id)! : MENTAL_ZONE;
     let n = (this.n.get(this.key(q)) ?? 0) + (z <= this.priorZone ? 30 : 0);
     if (q.kind === 'fact' && q.op === '-') {
       // transfert de famille : c - a = b profite de a + b et b + a deja travailles
@@ -40,7 +40,7 @@ export class VirtualChild {
   /** Reponse + temps. */
   answer(q: Question): { value: number; ms: number } {
     const n = this.practice(q);
-    const z = q.kind === 'fact' ? FACT_ZONE.get(q.id)! : 10;
+    const z = q.kind === 'fact' ? FACT_ZONE.get(q.id)! : MENTAL_ZONE;
     const hardness = 1 + 0.025 * (z - 1); // zones tardives un peu plus dures
     const learn = 1 - Math.exp(-n / this.cp.tau);
     const pOk = Math.min(this.cp.accMax, (this.cp.acc0 + (this.cp.accMax - this.cp.acc0) * learn) / 1);
@@ -56,4 +56,4 @@ export class VirtualChild {
 
 export const AVERAGE_CHILD: ChildProfile = { acc0: 0.75, accMax: 0.97, t0: 5200, tMin: 1700, tau: 4 };
 export const SLOW_CHILD: ChildProfile = { acc0: 0.65, accMax: 0.95, t0: 6500, tMin: 2000, tau: 6 };
-export const FAST_CHILD: ChildProfile = { acc0: 0.9, accMax: 0.99, t0: 3200, tMin: 1300, tau: 2, priorZone: 9 };
+export const FAST_CHILD: ChildProfile = { acc0: 0.9, accMax: 0.99, t0: 3200, tMin: 1300, tau: 2, priorZone: 8 };

@@ -15,6 +15,39 @@ describe('etat persistant', () => {
     expect(st.profile.progress.focusZone).toBe(1);
   });
 
+  it('migration v2 -> v3 : zones renumerotees (9 soustractions -> 8, 10 Ligue -> 9), donnees conservees', () => {
+    const old = {
+      childName: 'Ana', settings: { thresholdMs: 2500 },
+      profile: {
+        history: [{ at: 1, mode: 'match', zone: 10, questions: 5 }, { at: 2, mode: 'match', zone: 9, questions: 5 }],
+        rewards: { stars: 42 },
+        progress: {
+          facts: { '3+5': { attempts: 4, box: 3 } }, sessionCount: 90, focusZone: 10, maxUnlocked: 10,
+          zonesWon: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((zone) => ({ zone, at: zone })), forcedZones: [9, 10], placementDone: true,
+        },
+      },
+    };
+    const st = normalizeState(migrate(old, 2, STATE_VERSION, migrations));
+    const pr = st.profile.progress;
+    expect(STATE_VERSION).toBe(3);
+    expect(pr.zonesWon.map((w) => w.zone)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(pr.focusZone).toBe(9);
+    expect(pr.maxUnlocked).toBe(9);
+    expect(pr.forcedZones.sort()).toEqual([8, 9]);
+    expect(pr.facts['3+5'].box).toBe(3);
+    expect(pr.sessionCount).toBe(90);
+    expect(st.profile.rewards.stars).toBe(42);
+    expect(st.profile.history.map((h) => h.zone)).toEqual([9, 8]);
+    expect(st.settings.thresholdMs).toBe(2500);
+    expect(st.childName).toBe('Ana');
+  });
+
+  it('migration v2 -> v3 : un enfant en zone 5 y reste, sans perdre ses zones gagnees', () => {
+    const old = { childName: 'Bo', profile: { progress: { focusZone: 5, maxUnlocked: 5, zonesWon: [1, 2, 3, 4].map((zone) => ({ zone, at: 1 })) } } };
+    const pr = normalizeState(migrate(old, 2, STATE_VERSION, migrations)).profile.progress;
+    expect([pr.focusZone, pr.maxUnlocked, pr.zonesWon.length]).toEqual([5, 5, 4]);
+  });
+
   it('normalizeState complete les champs manquants et corrige les valeurs hors bornes', () => {
     const st = normalizeState({ childName: '  ', settings: { thresholdMs: 1234, sessionMinutes: 99 }, profile: { history: 'oups' } });
     expect(st.childName).toBe('Léo');

@@ -111,7 +111,7 @@ export const AVATAR_ITEMS: readonly AvatarItem[] = [
   { id: 'orange', slot: 'jersey', name: 'Orange Mandarine', colors: ['#f97316', '#0b1b3a'], unlock: { type: 'zone', zone: 4 } },
   { id: 'violet', slot: 'jersey', name: 'Violet Galaxie', colors: ['#7c3aed', '#fde68a'], unlock: { type: 'stars', n: 80 } },
   { id: 'tigre', slot: 'jersey', name: 'Rayé Tigre', colors: ['#f59e0b', '#111827'], unlock: { type: 'zone', zone: 6 } },
-  { id: 'or', slot: 'jersey', name: 'Maillot en Or', colors: ['#fbbf24', '#ffffff'], unlock: { type: 'zone', zone: 9 } },
+  { id: 'or', slot: 'jersey', name: 'Maillot en Or', colors: ['#fbbf24', '#ffffff'], unlock: { type: 'zone', zone: 8 } },
   { id: 'noirs', slot: 'boots', name: 'Crampons Classiques', colors: ['#111827', '#ffffff'], unlock: { type: 'start' } },
   { id: 'bleus', slot: 'boots', name: 'Crampons Éclair', colors: ['#0ea5e9', '#ffffff'], unlock: { type: 'stars', n: 12 } },
   { id: 'fluo', slot: 'boots', name: 'Crampons Fluo', colors: ['#a3e635', '#111827'], unlock: { type: 'medal', medal: 'bronze', n: 1 } },

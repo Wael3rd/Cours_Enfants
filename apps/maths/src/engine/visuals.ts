@@ -1,6 +1,6 @@
 /** Indices visuels : quel manipulable montrer pour chaque fait (modelisation apres erreur + entrainement). */
 import { operands, type Fact } from './facts.ts';
-import { FACT_ZONE } from './zones.ts';
+import { FACT_ZONE, MENTAL_ZONE } from './zones.ts';
 import type { MentalQuestion } from './mental.ts';
 
 export type HintKind =
@@ -24,7 +24,7 @@ export interface HintStep {
 
 export interface VisualHint {
   kind: HintKind;
-  /** Zone du fait (ou 10 pour le calcul mental). */
+  /** Zone du fait (ou 9 = MENTAL_ZONE pour le calcul mental). */
   zone: number;
   /** Operandes pour dessiner : premier groupe, second groupe (additions) ; famille: [a, b, c]. */
   a: number;
@@ -52,7 +52,7 @@ export function hintFor(item: Fact | MentalQuestion): VisualHint {
     return H('fact-family', [
       { label: `${a} + ${b} = ${sum}`, value: sum },
       { label: `${sum} − ${a} = ${b}`, value: b },
-    ], `${a} + ${b} = ${sum}, donc ${sum} − ${a} = ${b} et ${sum} − ${b} = ${a}.`, a, b);
+    ], `${a} + ${b} = ${sum} donc ${sum} − ${a} = ${b}${a === b ? '' : ` (et ${sum} − ${b} = ${a})`}.`, a, b);
   }
   const big = Math.max(a, b), small = Math.min(a, b);
   switch (zone) {
@@ -95,7 +95,7 @@ export function hintFor(item: Fact | MentalQuestion): VisualHint {
 }
 
 function mentalHint(q: MentalQuestion): VisualHint {
-  const base = { zone: 10, result: q.answer, showMs: MODEL_MS };
+  const base = { zone: MENTAL_ZONE, result: q.answer, showMs: MODEL_MS };
   switch (q.cat) {
     case 'tens': {
       const l = q.left / 10, r = (q.right ?? 0) / 10;

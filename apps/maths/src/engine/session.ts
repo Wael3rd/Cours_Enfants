@@ -1,6 +1,6 @@
 /** Sessions de jeu : Match, Sprint 100 m, Tirs au but, Entrainement. Point d'entree : startSession(). */
 import { ALL_FACTS } from './facts.ts';
-import { zoneFacts, FACT_ZONE } from './zones.ts';
+import { zoneFacts, FACT_ZONE, LAST_FACT_ZONE } from './zones.ts';
 import {
   advanceZones, avgMs, isFluent, isSeen, isZoneUnlocked, recordAnswer, reviewableFacts, type Progress,
 } from './progress.ts';
@@ -193,7 +193,7 @@ export class Session {
     const seen = reviewableFacts(p).filter((f) => p.facts[f.id].box >= 1 || isFluent(p.facts[f.id], this.T));
     let pool = seen.length >= SPRINT_LENGTH ? seen : reviewableFacts(p);
     if (pool.length < SPRINT_LENGTH) {
-      const z = Math.min(p.focusZone, 9);
+      const z = Math.min(p.focusZone, LAST_FACT_ZONE);
       pool = [...pool, ...ALL_FACTS.filter((f) => FACT_ZONE.get(f.id)! <= z && !pool.includes(f))];
     }
     if (pool.length < SPRINT_LENGTH) pool = [...pool, ...zoneFacts(1)];
@@ -208,7 +208,7 @@ export class Session {
   private penaltyFacts(): string[] {
     const p = this.profile.progress;
     const out = hardestFacts(p, this.T, PENALTY_SHOTS);
-    const z = Math.min(p.focusZone, 9);
+    const z = Math.min(p.focusZone, LAST_FACT_ZONE);
     for (const f of shuffle(this.rng, zoneFacts(z))) {
       if (out.length >= PENALTY_SHOTS) break;
       if (!out.includes(f.id)) out.push(f.id);

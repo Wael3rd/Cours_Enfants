@@ -1,7 +1,7 @@
 /** Statistiques pour le tableau de bord parent (donnees pures, sans rendu). */
 import { ALL_FACTS, addId, subId, getFact, factText, type Op } from './facts.ts';
 import { avgMs, isFluent, isSeen, zoneRatio, isZoneWon, type Progress } from './progress.ts';
-import { ZONES, zoneFacts } from './zones.ts';
+import { ZONES, MENTAL_ZONE, zoneFacts } from './zones.ts';
 import { MENTAL_CATS, MENTAL_LABELS, mentalRate, isMentalFluent, type MentalCat } from './mental.ts';
 import type { Profile, SessionRecord } from './profile.ts';
 
@@ -76,8 +76,8 @@ export function summary(profile: Profile, T: number): Summary {
     zones: ZONES.map((z) => ({
       id: z.id, name: z.name, ratio: zoneRatio(p, z.id, T), won: isZoneWon(p, z.id),
       unlocked: z.id <= p.maxUnlocked, focus: z.id === p.focusZone,
-      fluent: z.id === 10 ? MENTAL_CATS.filter((c) => isMentalFluent(p.mental[c])).length : zoneFacts(z.id).filter((f) => isFluent(p.facts[f.id], T)).length,
-      total: z.id === 10 ? MENTAL_CATS.length : zoneFacts(z.id).length,
+      fluent: z.id === MENTAL_ZONE ? MENTAL_CATS.filter((c) => isMentalFluent(p.mental[c])).length : zoneFacts(z.id).filter((f) => isFluent(p.facts[f.id], T)).length,
+      total: z.id === MENTAL_ZONE ? MENTAL_CATS.length : zoneFacts(z.id).length,
     })),
     mental: MENTAL_CATS.map((c) => ({ cat: c, label: MENTAL_LABELS[c], rate: mentalRate(p.mental[c]), fluent: isMentalFluent(p.mental[c]), attempts: p.mental[c].attempts })),
   };

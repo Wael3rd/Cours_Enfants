@@ -305,10 +305,10 @@ describe('Entrainement', () => {
       n++;
     }
     expect(n).toBeGreaterThanOrEqual(15);
-    expect([...kinds]).toEqual(['doubles']);
+    expect([...kinds].sort()).toEqual(['doubles', 'fact-family']); // doubles + leurs soustractions
   });
-  it('zone 10 : calcul mental uniquement', () => {
-    const s = startSession(newProfile(), settings, 'training', { seed: 8, now, zone: 10, questions: 10 });
+  it('zone 9 : calcul mental uniquement', () => {
+    const s = startSession(newProfile(), settings, 'training', { seed: 8, now, zone: 9, questions: 10 });
     let q: Question | null;
     while ((q = s.next())) { expect(q.kind).toBe('mental'); s.submit(q.answer, 4000); }
     const r = s.finish();

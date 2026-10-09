@@ -1,8 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
-  newProgress, recordAnswer, isFluent, advanceZones, forceZone, zoneRatio, BOX_INTERVAL, learningCount,
+  newProgress, recordAnswer, isFluent, advanceZones, forceZone, zoneRatio, BOX_INTERVAL, learningCount, isFactAvailable,
 } from '../src/engine/progress.ts';
 import { zoneFacts } from '../src/engine/zones.ts';
+import { getFact } from '../src/engine/facts.ts';
+import { newProfile, defaultEngineSettings } from '../src/engine/profile.ts';
+import { startSession } from '../src/engine/session.ts';
 
 const T = 3000;
 const NOW = 1_700_000_000_000;
@@ -99,10 +102,10 @@ describe('zones : deblocage', () => {
   it('deblocage a >= 80 % de faits fluents', () => {
     const p = fresh();
     const z1 = zoneFacts(1).map((f) => f.id);
-    makeFluent(p, z1.slice(0, 31)); // 31/40 = 77,5 %
+    makeFluent(p, z1.slice(0, 63)); // 63/80 = 78,75 %
     expect(advanceZones(p, T, NOW)).toEqual([]);
     expect(p.focusZone).toBe(1);
-    makeFluent(p, z1.slice(31, 32)); // 32/40 = 80 %
+    makeFluent(p, z1.slice(63, 64)); // 64/80 = 80 %
     expect(zoneRatio(p, 1, T)).toBeCloseTo(0.8);
     expect(advanceZones(p, T, NOW)).toEqual([1]);
     expect(p.focusZone).toBe(2);
@@ -122,5 +125,34 @@ describe('zones : deblocage', () => {
     expect(p.maxUnlocked).toBe(6);
     expect(p.forcedZones).toContain(6);
     expect(() => forceZone(p, 11)).toThrow();
+  });
+});
+
+describe('familles de nombres : soustraction debloquee par son addition', () => {
+  const T3 = 3000;
+  it('une soustraction n est disponible comme nouveau fait que si 3+5 ou 5+3 est fluent', () => {
+    const p = fresh();
+    const f = getFact('8-5');
+    expect(isFactAvailable(p, f, T3)).toBe(false);
+    recordAnswer(p, '3+5', true, 1000, T3, NOW);
+    expect(isFactAvailable(p, f, T3)).toBe(false); // une seule reussite : pas encore fluent
+    recordAnswer(p, '3+5', true, 1000, T3, NOW);
+    expect(isFactAvailable(p, f, T3)).toBe(true);
+    expect(isFactAvailable(p, getFact('8-3'), T3)).toBe(true);
+    expect(isFactAvailable(p, getFact('7-3'), T3)).toBe(false);
+    expect(isFactAvailable(p, getFact('3+5'), T3)).toBe(true);
+  });
+  it('en Match, aucune soustraction n est posee tant qu aucune addition n est fluente', () => {
+    const profile = newProfile();
+    const s = startSession(profile, defaultEngineSettings(), 'match', { seed: 3, now: () => 1, questions: 12 });
+    let q;
+    while ((q = s.next())) { expect(q.kind === 'fact' && q.op === '-').toBe(false); s.submit(q.answer, 5000); } // toujours lent
+  });
+  it('une zone est gagnee sur additions ET soustractions (80 % de 80 faits en zone 1)', () => {
+    const p = fresh();
+    const adds = zoneFacts(1).filter((f) => f.op === '+').map((f) => f.id);
+    for (const id of adds) { recordAnswer(p, id, true, 1000, T3, NOW); recordAnswer(p, id, true, 1000, T3, NOW); }
+    expect(zoneRatio(p, 1, T3)).toBeCloseTo(0.5);
+    expect(advanceZones(p, T3, NOW)).toEqual([]);
   });
 });

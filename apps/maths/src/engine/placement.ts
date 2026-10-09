@@ -7,7 +7,7 @@ import { touchStreak, packsAvailable } from './rewards.ts';
 import { HISTORY_CAP, type EngineSettings, type Profile } from './profile.ts';
 import type { StartOptions } from './session.ts';
 
-/** Zones testees (la 10 = calcul mental, hors detection). */
+/** Zones testees (la 9 = calcul mental, hors detection). */
 export const PLACEMENT_ZONES = LAST_ZONE - 1;
 export const PROBES_PER_ZONE = 3;
 export const PLACEMENT_MAX_MS = 120_000;
@@ -60,7 +60,12 @@ export class PlacementSession {
   }
 
   private loadZone() {
-    this.queue = shuffle(this.rng, zoneFacts(this.zone)).slice(0, PROBES_PER_ZONE).map((f) => f.id);
+    // sondes : surtout des additions, plus une soustraction de la famille quand la zone en a
+    const all = zoneFacts(this.zone);
+    const adds = shuffle(this.rng, all.filter((f) => f.op === '+'));
+    const subs = shuffle(this.rng, all.filter((f) => f.op === '-'));
+    const picked = subs.length ? [...adds.slice(0, PROBES_PER_ZONE - 1), subs[0]] : adds.slice(0, PROBES_PER_ZONE);
+    this.queue = shuffle(this.rng, picked).map((f) => f.id);
     this.probes = [];
   }
 

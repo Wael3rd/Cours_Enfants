@@ -1,8 +1,8 @@
 /** Constructeur de session : choisit la prochaine question (nouveaux / dus / fluents, reinsertion des erreurs). */
 import { ALL_FACTS, factDigits, factText, type Fact } from './facts.ts';
-import { FACT_ZONE, MENTAL_ZONE, zoneFacts } from './zones.ts';
+import { FACT_ZONE, MENTAL_ZONE, LAST_FACT_ZONE, zoneFacts } from './zones.ts';
 import {
-  isFluent, isSeen, isLearning, isZoneUnlocked, learningCount, reviewableFacts, MAX_LEARNING, type Progress, type AnswerOutcome,
+  isFluent, isSeen, isLearning, isZoneUnlocked, isFactAvailable, learningCount, reviewableFacts, MAX_LEARNING, type Progress, type AnswerOutcome,
 } from './progress.ts';
 import { genMental, pickMentalCat, type MentalQuestion } from './mental.ts';
 import { weighted, int, type Rng } from './rng.ts';
@@ -40,9 +40,9 @@ export const MIX = { fresh: 0.15, due: 0.6, fluent: 0.25 } as const;
 interface Pending { id: string; at: number; kind: 'error' | 'incremental' }
 
 export interface BuilderOptions {
-  /** Restreint aux faits de cette zone (entrainement). 10 = calcul mental uniquement. */
+  /** Restreint aux faits de cette zone (entrainement). 9 = calcul mental uniquement. */
   zone?: number;
-  /** Part de questions de calcul mental quand la zone de travail est la 10 (defaut 0.5). */
+  /** Part de questions de calcul mental quand la zone de travail est la 9 (defaut 0.5). */
   mentalShare?: number;
 }
 
@@ -116,7 +116,7 @@ export class QuestionBuilder {
     const zones = this.opts.zone !== undefined ? [this.opts.zone] : zonesToIntroduce(this.p);
     for (const z of zones) {
       if (!isZoneUnlocked(this.p, z)) continue;
-      const fresh = zoneFacts(z).filter((f) => !isSeen(this.p.facts[f.id]) && !this.introduced.has(f.id));
+      const fresh = zoneFacts(z).filter((f) => !isSeen(this.p.facts[f.id]) && !this.introduced.has(f.id) && isFactAvailable(this.p, f, this.T));
       if (fresh.length) return fresh;
     }
     return [];
@@ -143,8 +143,8 @@ export class QuestionBuilder {
     }
     // Repli : n'importe quel fait vu, puis un fait de la zone de travail.
     if (review.length) return this.mark(this.weightedPick(review).id, false, false) as FactQuestion;
-    const zoneId = this.opts.zone ?? Math.min(p.focusZone, 9);
-    const pool = zoneFacts(zoneId).filter((f) => f.id !== lastId);
+    const zoneId = this.opts.zone ?? Math.min(p.focusZone, LAST_FACT_ZONE);
+    const pool = zoneFacts(zoneId).filter((f) => f.id !== lastId && isFactAvailable(p, f, T));
     const f = pool[Math.floor(rng.next() * pool.length)] ?? ALL_FACTS[0];
     return this.mark(f.id, !isSeen(p.facts[f.id]), false) as FactQuestion;
   }
@@ -178,11 +178,16 @@ export class QuestionBuilder {
   }
 }
 
-/** Ordre d'introduction des nouveaux faits : zone de travail, puis zones debloquees plus basses, puis hautes. */
+/**
+ * Ordre d'introduction des nouveaux faits : zones debloquees de la plus basse a la plus haute. Ce qui reste a apprendre
+ * en bas (soustractions dont l'addition parente vient de devenir fluente) passe avant les faits de la zone de travail :
+ * les familles de nombres se travaillent au fil de l'eau.
+ */
 function zonesToIntroduce(p: Progress): number[] {
-  const out: number[] = [p.focusZone];
-  for (let z = 1; z <= 9; z++) if (z !== p.focusZone && isZoneUnlocked(p, z)) out.push(z);
-  return out.filter((z) => z <= 9);
+  const out: number[] = [];
+  for (let z = 1; z <= LAST_FACT_ZONE; z++) if (isZoneUnlocked(p, z)) out.push(z);
+  if (!out.includes(p.focusZone) && p.focusZone <= LAST_FACT_ZONE) out.push(p.focusZone);
+  return out;
 }
 
 export type { AnswerOutcome };

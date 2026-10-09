@@ -58,7 +58,7 @@ export function recordMental(s: MentalStat, ok: boolean, ms: number, T: number):
 export const mentalRate = (s: MentalStat) => (s.recent.length ? s.recent.filter(Boolean).length / s.recent.length : 0);
 export const isMentalFluent = (s: MentalStat) => s.recent.length >= MIN_RECENT && mentalRate(s) >= 0.8;
 
-/** Part de categories fluentes (0..1) : sert de "ratio de zone" pour la zone 10. */
+/** Part de categories fluentes (0..1) : sert de "ratio de zone" pour la zone 9. */
 export function mentalZoneRatio(m: Record<MentalCat, MentalStat>): number {
   return MENTAL_CATS.filter((c) => isMentalFluent(m[c])).length / MENTAL_CATS.length;
 }
