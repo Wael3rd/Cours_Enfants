@@ -17,7 +17,7 @@
       #cam { position: absolute; inset: 0; transform-origin: 960px 600px; }
       #glow { position: absolute; left: 960px; top: 600px; width: 1100px; height: 1100px; margin: -550px 0 0 -550px; border-radius: 50%; opacity: 0;
         background: radial-gradient(circle, rgba(255, 220, 110, 0.85), rgba(255, 220, 110, 0) 62%); }
-      #rays { position: absolute; left: 960px; top: 600px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 600px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; will-change: transform, opacity; }
       #rays svg { width: 100%; height: 100%; }
       #pack { position: absolute; left: 720px; top: 229px; width: 480px; }
       #pack svg { width: 100%; height: auto; display: block; }
@@ -29,7 +29,7 @@
       #ring { position: absolute; left: 960px; top: 600px; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%; border: 22px solid #ffd23f; box-sizing: border-box; opacity: 0; }
       .spk { position: absolute; left: 0; top: 0; width: 150px; height: 150px; margin: -75px 0 0 -75px; opacity: 0; }
       .spk svg { width: 100%; height: 100%; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #confetti { position: absolute; inset: 0; }
       #fade { position: absolute; inset: 0; background: #0a1030; opacity: 0; }
     </style>
@@ -72,6 +72,8 @@
       var cur = DEFAULTS, ready = false;
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("card-pack", function (d) { cur = { card: Object.assign({}, DEFAULTS.card, (d || {}).card) }; if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
       $("#rays").innerHTML = CEArt.rays({ count: 18, color: "#ffd23f", opacity: 1, size: 2400 });
       var SP = [[640, 330], [1280, 340], [600, 640], [1330, 660], [800, 220], [1130, 230], [700, 900], [1240, 910]];
@@ -102,18 +104,19 @@
         CEArt.shake(gsap, tl, "#cam", 0.31, 8, 0.2);
 
         // tremblement
-        var t = 0.5, amps = [5, -6, 6, -7, 7, -8];
-        amps.forEach(function (a, i) { tl.to("#pack", { rotation: a, x: a * 1.4, duration: 0.07, ease: "sine.inOut" }, t + i * 0.075); });
+        // tremblement modere (4 oscillations de 0,1 s, +-5 deg max)
+        var t = 0.5, amps = [3, -4, 4, -5];
+        amps.forEach(function (a, i) { tl.to("#pack", { rotation: a, x: a * 1.4, duration: 0.1, ease: "sine.inOut" }, t + i * 0.105); });
         tl.to("#pack", { rotation: 0, x: 0, duration: 0.05 }, 0.95);
         tl.fromTo("#glow", { opacity: 0 }, { opacity: 0.8, duration: 0.45, ease: "power2.in" }, 0.5);
 
         // dechirure
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.85, duration: 0.05, ease: "power1.out" }, 0.95);
-        tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.out" }, 1.0);
+        // bloom chaud et doux (<= 0,22, montee 0,3 s) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 0.83, 0.22, 0.3);
         tl.to(top, { x: 260, y: -380, rotation: 28, opacity: 0, svgOrigin: "220 60", duration: 0.3, ease: "power2.out" }, 0.95);
         tl.to(body, { y: 420, scale: 0.85, opacity: 0, svgOrigin: "220 340", duration: 0.3, ease: "power2.in" }, 0.97);
-        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.55, duration: 0.25, ease: "power2.out" }, 0.95);
-        tl.to("#rays", { rotation: 30, duration: 2.05, ease: "none" }, 0.95);
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.24, duration: 0.35, ease: "sine.out" }, 0.95);
+        tl.to("#rays", { rotation: 14, duration: 2.05, ease: "none" }, 0.95);
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 0.95);
         tl.to("#ring", { scale: 3.4, opacity: 0, duration: 0.6, ease: "expo.out" }, 0.95);
         tl.to("#pack", { opacity: 0, duration: 0.05 }, 1.25);
@@ -135,26 +138,26 @@
         CEArt.confetti(gsap, tl, $("#confetti"), { at: 1.8, count: R.conf, x: 960, y: 640, power: 1150, spread: 80, gravity: 1700, duration: 1.4, seed: 51, colors: c.rarity === "legende" ? ["#00F0FF", "#FF4FD8", "#FFE14F", "#FFFFFF", "#7B5CFF", "#3CFF9E"] : c.rarity === "argent" ? ["#FFFFFF", "#D3DAE6", "#8A95A8", "#35D6FF"] : c.rarity === "bronze" ? ["#E0975C", "#FFD9B3", "#9A5A2B"] : ["#FFD23F", "#FFFFFF", "#FF4D6D", "#35D6FF", "#FFF3B0"] });
         SP.forEach(function (p, i) {
           if (i >= R.spk) return;
-          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: 1 + (i % 3) * 0.3, rotation: 40, opacity: 1, duration: 0.28, ease: "back.out(3)" }, 1.82 + i * 0.05);
-          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.4, ease: "power2.in" }, 2.2 + i * 0.05);
+          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: 0.8 + (i % 3) * 0.2, rotation: 30, opacity: 1, duration: 0.35, ease: "sine.out" }, 1.82 + i * 0.1);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.45, ease: "sine.in" }, 2.22 + i * 0.08);
         });
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 1.8);
         tl.to("#ring", { scale: 3.2, opacity: 0, duration: 0.6, ease: "expo.out" }, 1.8);
         if (c.rarity === "legende") {
-          tl.fromTo("#chroma", { opacity: 0, rotation: 0 }, { opacity: 0.75, duration: 0.3, ease: "power2.out" }, 1.8);
-          tl.to("#chroma", { rotation: 120, duration: 1.2, ease: "none" }, 1.8);
-          tl.to("#chroma", { opacity: 0.25, duration: 0.8, ease: "power1.in" }, 2.2);
+          tl.fromTo("#chroma", { opacity: 0, rotation: 0 }, { opacity: 0.45, duration: 0.4, ease: "sine.out" }, 1.8);
+          tl.to("#chroma", { rotation: 50, duration: 1.2, ease: "none" }, 1.8);
+          tl.to("#chroma", { opacity: 0.2, duration: 0.8, ease: "sine.inOut" }, 2.25);
         }
 
         // reflet holographique
         var shine = $("#cardFront .card-shine");
         tl.set(shine, { x: 0, opacity: 0 }, 0);
         tl.to(shine, { x: 1100, duration: 0.55, ease: "power2.inOut" }, 2.0);
-        tl.to(shine, { opacity: 1, duration: 0.08 }, 2.0);
-        tl.to(shine, { opacity: 0, duration: 0.1 }, 2.47);
+        tl.to(shine, { opacity: 1, duration: 0.2, ease: "sine.out" }, 2.0);
+        tl.to(shine, { opacity: 0, duration: 0.2, ease: "sine.in" }, 2.33);
         if (c.rarity === "legende") {
-          tl.to(shine, { x: 0, duration: 0.01 }, 2.5);
-          tl.to(shine, { opacity: 1, duration: 0.05 }, 2.52);
+          tl.to(shine, { x: 0, duration: 0.01 }, 2.53);
+          tl.to(shine, { opacity: 1, duration: 0.15, ease: "sine.out" }, 2.54);
           tl.to(shine, { x: 1100, duration: 0.45, ease: "power2.inOut" }, 2.52);
         }
 

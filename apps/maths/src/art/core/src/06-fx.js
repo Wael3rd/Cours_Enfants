@@ -48,7 +48,7 @@ export function confetti(gsap, tl, host, o) {
     if (life > tUp) tl.to(el, { y: yEnd, duration: life - tUp, ease: 'power2.in' }, t0 + tUp);
     tl.to(el, { rotation: '+=' + ((r() - 0.5) * 900).toFixed(0), duration: life, ease: 'none' }, t0);
     // retournement lent (<= ~1 par seconde) : pas de papillotement
-    if (!SOFT) { const flips = Math.max(1, Math.round(life / 1.1)); tl.to(el, { scaleY: 0.45, duration: life / (2 * flips), repeat: 2 * flips - 1, yoyo: true, ease: 'sine.inOut' }, t0); }
+    if (!SOFT) { const flips = Math.max(1, Math.floor(life / 1.1)); tl.to(el, { scaleY: 0.45, duration: life / (2 * flips), repeat: 2 * flips - 1, yoyo: true, ease: 'sine.inOut' }, t0); }
     tl.to(el, { opacity: 0, duration: 0.3, ease: 'power1.in' }, t0 + life - 0.3);
   }
 }
@@ -72,9 +72,9 @@ export function crowdFlashes(gsap, tl, root, at, dur, density, seed) {
   if (SOFT || !list.length) return;
   const r = rng(seed || 9), n = Math.min(list.length, Math.max(1, Math.floor(2 * dur * Math.min(1, density == null ? 1 : density))));
   for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)), x = list[i]; list[i] = list[j]; list[j] = x; }
-  const step = dur / n;
+  const step = dur / n; // >= 0,5 s : jamais plus de 2 departs dans une meme seconde
   for (let i = 0; i < n; i++) {
-    const t = at + i * step + r() * step * 0.25;
+    const t = at + i * step;
     tl.fromTo(list[i], { opacity: 0 }, { opacity: 0.7, duration: 0.3, ease: 'sine.out', immediateRender: false }, t);
     tl.to(list[i], { opacity: 0, duration: 0.45, ease: 'sine.inOut' }, t + 0.32);
   }

@@ -15,19 +15,19 @@
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; }
       .abs { position: absolute; left: 0; top: 0; }
-      #cam { position: absolute; inset: 0; transform-origin: 960px 696px; }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 696px; will-change: transform; }
       #cam svg { display: block; }
       #goalwrap { position: absolute; left: 700px; top: 440px; width: 520px; }
       #goalwrap svg { width: 100%; height: auto; }
       #shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, rgba(7, 12, 43, 0) 35%, rgba(7, 12, 43, 0.72) 100%); }
-      #rays { position: absolute; left: 960px; top: 560px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 560px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; will-change: transform, opacity; }
       #rays svg { width: 100%; height: 100%; }
       #ball { position: absolute; left: 0; top: 0; width: 220px; height: 220px; margin: -110px 0 0 -110px; opacity: 0; }
       #ball svg { width: 100%; height: 100%; }
       #tail { position: absolute; left: 0; top: 0; width: 760px; height: 86px; margin: -43px 0 0 -760px; border-radius: 43px; opacity: 0;
         background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,244,190,0.85)); transform-origin: 100% 50%; }
       #ring { position: absolute; left: 960px; top: 604px; width: 300px; height: 300px; margin: -150px 0 0 -150px; border-radius: 50%; border: 18px solid #ffd23f; box-sizing: border-box; opacity: 0; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #confetti { position: absolute; inset: 0; }
       #word { position: absolute; left: 0; right: 0; top: 250px; text-align: center; font-family: "Anton", sans-serif; font-size: 470px; line-height: 0.95; letter-spacing: 6px; color: #fff;
         -webkit-text-stroke: 12px #0a1030; paint-order: stroke fill; opacity: 0; white-space: nowrap;
@@ -77,10 +77,13 @@
       }
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("goal", function (d) { cur = merge(d); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
 
       var $ = function (s) { return document.querySelector(s); };
       // éléments statiques (jamais re-rendus)
-      $("#stadium").innerHTML = CEArt.stadium();
+      // stade rasterise (WebP) + 8 emplacements de flashs (politique "mouvement sur")
+      $("#stadium").innerHTML = CEArt.stadium({ raster: "./_shared/img/", flashes: 8, lights: "img" });
       $("#goalwrap").innerHTML = CEArt.goal();
       $("#rays").innerHTML = CEArt.rays({ count: 16, color: "#ffd23f", opacity: 0.9, size: 2400 });
       $("#ball").innerHTML = CEArt.ball();
@@ -115,19 +118,22 @@
         tl.to("#ball", { opacity: 0, duration: 0.1, ease: "power1.out" }, 0.55);
 
         // --- 0.55 : impact
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.95, duration: 0.05, ease: "power1.out" }, 0.53);
-        tl.to("#flash", { opacity: 0, duration: 0.45, ease: "power2.out" }, 0.585);
+        // bloom chaud et doux (<= 0,22, montee 0,3 s) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 0.41, 0.22, 0.3);
         tl.fromTo(back, { scale: 1, svgOrigin: "450 300" }, { scale: 1.12, svgOrigin: "450 300", duration: 0.12, ease: "power2.out" }, 0.55);
         tl.to(back, { scale: 1, svgOrigin: "450 300", duration: 0.5, ease: "elastic.out(1,0.4)" }, 0.67);
         CEArt.shake(gsap, tl, "#cam", 0.56, 18, 0.4);
         tl.set("#ring", { scale: 0.2, opacity: 1 }, 0.55);
         tl.to("#ring", { scale: 3.4, opacity: 0, duration: 0.55, ease: "expo.out" }, 0.55);
-        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.55, duration: 0.2, ease: "power2.out" }, 0.55);
-        tl.to("#rays", { rotation: 40, duration: 2.0, ease: "none" }, 0.55);
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.22, duration: 0.35, ease: "sine.out" }, 0.55);
+        tl.to("#rays", { rotation: 16, duration: 2.0, ease: "none" }, 0.55);
         CEArt.crowdFlashes(gsap, tl, stad, 0.6, 1.0, 1, 21);
 
         // --- 0.55 - 0.95 : BUT !
-        tl.fromTo("#word", { opacity: 0, scale: 3.2, rotation: -9, y: 0 }, { opacity: 1, scale: 1, rotation: -3, duration: 0.38, ease: "expo.out" }, 0.55);
+        // "BUT !" claque par le mouvement (echelle) mais apparait en fondu de 0,3 s : pas d'eclair blanc
+        tl.set("#word", { opacity: 0, scale: 3.2, rotation: -9, y: 0 }, 0);
+        tl.to("#word", { scale: 1, rotation: -3, duration: 0.38, ease: "expo.out" }, 0.55);
+        tl.to("#word", { opacity: 1, duration: 0.3, ease: "sine.out" }, 0.55);
         tl.fromTo("#word", { scale: 1 }, { scale: 1.06, duration: 0.09, ease: "power1.out", immediateRender: false }, 0.93);
         tl.to("#word", { scale: 1, duration: 0.3, ease: "back.out(3)" }, 1.02);
         $("#confetti").innerHTML = "";

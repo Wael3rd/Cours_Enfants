@@ -13,17 +13,17 @@
       html, body { margin: 0; background: #070c2b; }
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; font-family: "Fredoka", sans-serif; }
-      #cam { position: absolute; inset: 0; transform-origin: 960px 600px; }
-      #bg { position: absolute; inset: 0; filter: brightness(0.5) blur(4px); }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 600px; will-change: transform; }
+      #bg { position: absolute; inset: 0; filter: brightness(0.5) blur(4px); will-change: transform; } /* calque statique : filtre calcule une seule fois */
       #dim { position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 50%, rgba(7, 12, 43, 0) 30%, rgba(7, 12, 43, 0.7) 100%); }
-      #rays { position: absolute; left: 960px; top: 580px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 580px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; will-change: transform, opacity; }
       #rays svg { width: 100%; height: 100%; }
       #medalWrap { position: absolute; left: 660px; top: -120px; width: 600px; transform-origin: 50% 0; }
       #medalWrap svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.45)); }
       #ring { position: absolute; left: 960px; top: 585px; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%; border: 20px solid #ffd23f; box-sizing: border-box; opacity: 0; }
       .spk { position: absolute; left: 0; top: 0; width: 140px; height: 140px; margin: -70px 0 0 -70px; opacity: 0; }
       .spk svg { width: 100%; height: 100%; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #timeBox { position: absolute; left: 1010px; top: 430px; width: 800px; height: 330px; opacity: 0; }
       #timebg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, #1b2c86, #0a1030 75%); clip-path: polygon(46px 0, 100% 0, calc(100% - 46px) 100%, 0 100%); }
       #timebar { position: absolute; left: 0; right: 0; top: 0; height: 14px; background: #ffd23f; }
@@ -72,10 +72,12 @@
       var cur = DEFAULTS, ready = false;
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("medal", function (d) { cur = Object.assign({}, DEFAULTS, d || {}); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
 
       var L = "position:absolute;left:0;top:0;width:100%;height:100%;display:block";
-      $("#bg").innerHTML = [CEArt.stadiumSky(), CEArt.stadiumCrowd(), CEArt.track(), CEArt.stadiumLights()].map(function (s) { return s.replace("<svg ", '<svg style="' + L + '" '); }).join("");
+      $("#bg").innerHTML = [CEArt.stadiumSky(), CEArt.stadiumCrowd({ flashes: 0 }), CEArt.track(), CEArt.stadiumLights()].map(function (s) { return s.replace("<svg ", '<svg style="' + L + '" '); }).join("");
       $("#rays").innerHTML = CEArt.rays({ count: 18, color: "#ffffff", opacity: 1, size: 2400 });
       var SP = [[700, 300], [1230, 320], [660, 700], [1260, 740]];
       $("#sparks").innerHTML = SP.map(function (p, i) { return '<div class="spk" id="spk' + i + '" style="left:' + p[0] + "px;top:" + p[1] + 'px">' + CEArt.sparkle({ size: 140, color: "#ffffff" }) + "</div>"; }).join("");
@@ -111,15 +113,15 @@
         sw.forEach(function (s) { tl.to("#medalWrap", { rotation: s[0], duration: s[1], ease: "sine.inOut" }, t); t += s[1]; });
 
         // eclat
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.6, duration: 0.05, ease: "power1.out" }, 0.78);
-        tl.to("#flash", { opacity: 0, duration: 0.35, ease: "power2.out" }, 0.835);
+        // bloom chaud et doux (<= 0,22, montee 0,3 s) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 0.66, 0.22, 0.3);
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 0.8);
         tl.to("#ring", { scale: 3, opacity: 0, duration: 0.6, ease: "expo.out" }, 0.8);
         tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.32, duration: 0.4, ease: "power2.out" }, 0.8);
         tl.to("#rays", { rotation: 24, duration: 3.2, ease: "none" }, 0.8);
         SP.forEach(function (p, i) {
-          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: 1.1 + (i % 2) * 0.3, rotation: 40, opacity: 1, duration: 0.25, ease: "back.out(3)" }, 0.85 + i * 0.07);
-          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" }, 1.25 + i * 0.07);
+          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: 0.9 + (i % 2) * 0.2, rotation: 30, opacity: 1, duration: 0.35, ease: "sine.out" }, 0.85 + i * 0.1);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.45, ease: "sine.in" }, 1.3 + i * 0.08);
         });
         var gl = $("#medalWrap .md-glint");
         tl.set(gl, { opacity: 0.2 }, 0);

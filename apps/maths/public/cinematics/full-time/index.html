@@ -13,8 +13,10 @@
       html, body { margin: 0; background: #070c2b; }
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; color: #fff; font-family: "Fredoka", sans-serif; }
-      #bg { position: absolute; inset: 0; filter: brightness(0.42) blur(5px); }
-      #cam { position: absolute; inset: 0; transform-origin: 1100px 600px; }
+      /* stade flou et assombri = image pre-floutee + voile (aucun filtre : fluide sur tablette) */
+      #bg { position: absolute; inset: 0; background: #000; }
+      #bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.42; }
+      #cam { position: absolute; inset: 0; transform-origin: 1100px 600px; will-change: transform; }
       #banner { position: absolute; left: 700px; top: 66px; width: 1000px; height: 96px; line-height: 96px; text-align: center; background: #ffd23f; color: #0a1030; font-weight: 700; font-size: 58px;
         clip-path: polygon(40px 0, 100% 0, calc(100% - 40px) 100%, 0 100%); opacity: 0; white-space: nowrap; }
       #panel { position: absolute; left: 560px; top: 196px; width: 1264px; height: 372px; opacity: 0; }
@@ -110,8 +112,10 @@
       }
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("full-time", function (d) { cur = merge(d); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
-      $("#bg").innerHTML = CEArt.stadium();
+      $("#bg").innerHTML = '<img src="./_shared/img/stadium-soft.webp" alt="" />';
       var STAR = '<svg viewBox="-50 -50 100 100"><path d="M0 -44 L13 -14 L45 -11 L21 10 L28 42 L0 25 L-28 42 L-21 10 L-45 -11 L-13 -14Z" fill="FILL" stroke="STROKE" stroke-width="7" stroke-linejoin="round"/></svg>';
       var verdict; // {txt, bg}
       function render() {

@@ -13,21 +13,23 @@
       html, body { margin: 0; background: #050820; }
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #050820; font-family: "Fredoka", sans-serif; }
-      #cam { position: absolute; inset: 0; transform-origin: 960px 520px; }
-      #bg { position: absolute; inset: 0; filter: brightness(0.22) blur(10px); }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 520px; will-change: transform; }
+      /* stade flou et tres assombri = image pre-floutee sous un voile (aucun filtre) */
+      #bg { position: absolute; inset: 0; background: #000; }
+      #bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.24; }
       #dark { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(5, 8, 32, 0.15) 0%, rgba(5, 8, 32, 0.85) 75%); }
-      .beam { position: absolute; top: -80px; width: 900px; height: 1700px; margin-left: -450px; transform-origin: 50% 0; mix-blend-mode: screen; opacity: 0;
+      .beam { position: absolute; top: -80px; width: 900px; height: 1700px; margin-left: -450px; transform-origin: 50% 0; opacity: 0; will-change: transform, opacity;
         background: linear-gradient(180deg, rgba(255, 246, 200, 0.7), rgba(255, 246, 200, 0.05)); clip-path: polygon(46% 0, 54% 0, 100% 100%, 0 100%); }
       #beamL { left: 160px; }
       #beamR { left: 1760px; }
       #pool { position: absolute; left: 560px; top: 740px; width: 800px; height: 200px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 226, 120, 0.7), rgba(255, 226, 120, 0) 70%); opacity: 0; }
-      #rays { position: absolute; left: 960px; top: 420px; width: 2200px; height: 2200px; margin: -1100px 0 0 -1100px; opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 420px; width: 2200px; height: 2200px; margin: -1100px 0 0 -1100px; opacity: 0; will-change: transform, opacity; }
       #rays svg { width: 100%; height: 100%; }
       #trophy { position: absolute; left: 710px; top: 56px; width: 500px; opacity: 0; }
       #trophy svg { width: 100%; height: auto; display: block; }
       .spk { position: absolute; left: 0; top: 0; width: 160px; height: 160px; margin: -80px 0 0 -80px; opacity: 0; }
       .spk svg { width: 100%; height: 100%; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #ring { position: absolute; left: 960px; top: 400px; width: 460px; height: 460px; margin: -230px 0 0 -230px; border-radius: 50%; border: 22px solid #ffd23f; box-sizing: border-box; opacity: 0; }
       #confetti { position: absolute; inset: 0; }
       #plate { position: absolute; left: 96px; top: 880px; width: 1300px; height: 150px; opacity: 0; filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.4)); }
@@ -72,9 +74,11 @@
       var cur = DEFAULTS, ready = false;
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("trophy", function (d) { cur = Object.assign({}, DEFAULTS, d || {}); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
 
-      $("#bg").innerHTML = CEArt.stadium();
+      $("#bg").innerHTML = '<img src="./_shared/img/stadium-soft.webp" alt="" />';
       $("#rays").innerHTML = CEArt.rays({ count: 20, color: "#ffd23f", opacity: 1, size: 2200 });
       $("#trophy").innerHTML = CEArt.trophy({});
       var SPK = [[820, 250], [1100, 250], [960, 170], [760, 420], [1160, 420], [880, 520], [1040, 520], [960, 330]];
@@ -104,12 +108,12 @@
 
         // trophee qui monte
         tl.fromTo("#trophy", { y: 560, rotation: -4, opacity: 0 }, { y: 0, rotation: 0, opacity: 1, duration: 2.3, ease: "power3.out" }, 0.4);
-        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.5, duration: 1.5, ease: "power1.in" }, 1.2);
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.28, duration: 1.5, ease: "power1.in" }, 1.2);
         tl.to("#rays", { rotation: 28, duration: 4.8, ease: "none" }, 1.2);
 
         // revelation
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.85, duration: 0.05, ease: "power1.out" }, 2.62);
-        tl.to("#flash", { opacity: 0, duration: 0.45, ease: "power2.out" }, 2.68);
+        // bloom chaud et doux (<= 0,22, montee 0,3 s) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 2.5, 0.22, 0.3);
         CEArt.shake(gsap, tl, "#shk", 2.66, 14, 0.35);
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 2.65);
         tl.to("#ring", { scale: 3.2, opacity: 0, duration: 0.7, ease: "expo.out" }, 2.65);

@@ -13,12 +13,16 @@
       html, body { margin: 0; background: #070c2b; }
       #root, #root * { pointer-events: none; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; }
-      #cam { position: absolute; inset: 0; transform-origin: 960px 600px; }
-      #bg { position: absolute; inset: 0; filter: brightness(0.5) blur(8px); }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 600px; will-change: transform; }
+      #bg { position: absolute; inset: 0; }
+      /* stade flou et assombri = image pre-floutee + voile (pas de filtre anime : fluide sur tablette) */
+      #bgsoft, #bgdim { position: absolute; inset: 0; width: 100%; height: 100%; will-change: opacity; }
+      #bgsoft { object-fit: cover; }
+      #bgdim { background: #000; opacity: 0.5; }
       .panel { position: absolute; inset: 0; }
       #panL { clip-path: polygon(0 0, 1087px 0, 833px 1200px, 0 1200px); }
       #panR { clip-path: polygon(1087px 0, 1920px 0, 1920px 1200px, 833px 1200px); }
-      #speed { position: absolute; inset: 0; opacity: 0.55; }
+      #speed { position: absolute; inset: 0; opacity: 0.35; }
       #seam { position: absolute; inset: 0; opacity: 0; }
       .crest { position: absolute; top: 110px; width: 540px; opacity: 0; }
       .crest::before { content: ""; position: absolute; inset: -140px; background: radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 62%); }
@@ -33,7 +37,7 @@
       #vs { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font-family: "Anton", sans-serif; font-size: 350px; line-height: 1; color: #ffd23f; opacity: 0;
         -webkit-text-stroke: 14px #0a1030; paint-order: stroke fill; text-shadow: 0 16px 0 #0a1030, 0 40px 70px rgba(0, 0, 0, 0.55); }
       #ring { position: absolute; left: 960px; top: 540px; width: 340px; height: 340px; margin: -170px 0 0 -170px; border-radius: 50%; border: 18px solid #ffd23f; box-sizing: border-box; opacity: 0; }
-      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, #fff6d6 0%, rgba(255, 246, 214, 0.45) 40%, rgba(255, 246, 214, 0) 72%); opacity: 0; }
       #band { position: absolute; left: 96px; top: 950px; width: 1728px; height: 170px; opacity: 0; filter: drop-shadow(0 14px 0 rgba(10, 16, 48, 0.55)); transform-origin: 0 50%; }
       #bandbg { position: absolute; inset: 0; background: #ffd23f; clip-path: polygon(70px 0, 100% 0, calc(100% - 70px) 100%, 0 100%); }
       #bandtxt { position: absolute; inset: 0; text-align: center; line-height: 170px; font-family: "Anton", sans-serif; font-size: 132px; letter-spacing: 6px; color: #0a1030; white-space: nowrap; }
@@ -43,6 +47,8 @@
     <div id="root" data-composition-id="match-intro" data-start="0" data-width="1920" data-height="1200" data-duration="4">
       <div id="cam">
         <div id="bg" data-layout-ignore></div>
+        <img id="bgsoft" src="./_shared/img/stadium-soft.webp" alt="" data-layout-ignore />
+        <div id="bgdim" data-layout-ignore></div>
         <div id="panL" class="panel" data-layout-ignore></div>
         <div id="panR" class="panel" data-layout-ignore></div>
         <div id="speed" data-layout-ignore></div>
@@ -79,9 +85,11 @@
       function merge(d) { d = d || {}; return { home: Object.assign({}, DEFAULTS.home, d.home), away: Object.assign({}, DEFAULTS.away, d.away) }; }
       var tl = gsap.timeline({ paused: true });
       window.__hyperframes.registerRuntimeDataHandler("match-intro", function (d) { cur = merge(d); if (ready) build(); });
+      // "Animations douces" (reglage parent / prefers-reduced-motion), envoye par l'app sur le canal "motion"
+      window.__hyperframes.registerRuntimeDataHandler("motion", function (d) { CEArt.setSoft(!!(d && d.soft)); if (ready) build(); });
       var $ = function (s) { return document.querySelector(s); };
 
-      $("#bg").innerHTML = CEArt.stadium();
+      $("#bg").innerHTML = CEArt.stadium({ raster: "./_shared/img/", flashes: 0, lights: "img" });
       $("#speed").innerHTML = CEArt.speedLines({ seed: 4, count: 30 });
 
       function panelCss(c) {
@@ -100,25 +108,28 @@
 
       function build() {
         tl.clear();
-        gsap.set(["#cam", "#panL", "#panR", "#crestL", "#crestR", "#plateL", "#plateR", "#vs", "#ring", "#flash", "#band", "#seam", "#speed", "#bg"], { clearProps: "all" });
+        gsap.set(["#cam", "#panL", "#panR", "#crestL", "#crestR", "#plateL", "#plateR", "#vs", "#ring", "#flash", "#band", "#seam", "#speed", "#bg", "#bgsoft", "#bgdim"], { clearProps: "all" });
         render();
 
         // --- 0.00 : stade assombri, puis panneaux de couleur
-        tl.fromTo("#panL", { x: -1100 }, { x: 0, duration: 0.45, ease: "expo.out" }, 0);
-        tl.fromTo("#panR", { x: 1100 }, { x: 0, duration: 0.45, ease: "expo.out" }, 0);
-        tl.fromTo("#seam", { opacity: 0 }, { opacity: 1, duration: 0.08, ease: "power1.out" }, 0.4);
-        tl.fromTo("#speed", { x: 420, opacity: 0.55 }, { x: -420, opacity: 0.55, duration: 0.9, ease: "none" }, 0);
+        tl.fromTo("#panL", { x: -1100 }, { x: 0, duration: 0.55, ease: "power3.out" }, 0);
+        tl.fromTo("#panR", { x: 1100 }, { x: 0, duration: 0.55, ease: "power3.out" }, 0);
+        tl.fromTo("#seam", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "sine.out" }, 0.3);
+        tl.fromTo("#speed", { x: 420, opacity: 0.35 }, { x: -420, opacity: 0.35, duration: 0.9, ease: "none" }, 0);
 
         // --- 0.30 - 1.00 : whip-pan des blasons
-        tl.fromTo("#crestL", { x: -1300, scale: 0.9, opacity: 1, filter: "blur(28px)" }, { x: 0, scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 0.3);
-        tl.fromTo("#crestR", { x: 1300, scale: 0.9, opacity: 1, filter: "blur(28px)" }, { x: 0, scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 0.4);
+        // whip-pan sans flou anime (le filtre blur recalcule a chaque image saccadait sur tablette)
+        tl.fromTo("#crestL", { x: -1300, scale: 0.9, opacity: 1 }, { x: 0, scale: 1, opacity: 1, duration: 0.6, ease: "expo.out" }, 0.3);
+        tl.fromTo("#crestR", { x: 1300, scale: 0.9, opacity: 1 }, { x: 0, scale: 1, opacity: 1, duration: 0.6, ease: "expo.out" }, 0.4);
         tl.fromTo("#plateL", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.8);
         tl.fromTo("#plateR", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.88);
 
         // --- 1.00 - 1.45 : VS
-        tl.fromTo("#vs", { scale: 4.5, rotation: -10, opacity: 0 }, { scale: 1, rotation: -4, opacity: 1, duration: 0.3, ease: "expo.out" }, 1.0);
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.7, duration: 0.05, ease: "power1.out" }, 0.99);
-        tl.to("#flash", { opacity: 0, duration: 0.25, ease: "power2.out" }, 1.06);
+        tl.set("#vs", { scale: 3, rotation: -10, opacity: 0 }, 0);
+        tl.to("#vs", { scale: 1, rotation: -4, duration: 0.35, ease: "expo.out" }, 1.0);
+        tl.to("#vs", { opacity: 1, duration: 0.2, ease: "sine.out" }, 1.0);
+        // bloom chaud et doux (<= 0,22, montee 0,3 s) a la place du flash blanc plein ecran
+        CEArt.bloom(gsap, tl, "#flash", 0.87, 0.22, 0.3);
         CEArt.shake(gsap, tl, "#cam", 1.02, 16, 0.35);
         tl.set("#ring", { scale: 0.3, opacity: 1 }, 1.02);
         tl.to("#ring", { scale: 3.6, opacity: 0, duration: 0.55, ease: "expo.out" }, 1.02);
@@ -135,12 +146,12 @@
           var t = 1.7 + i * 0.25;
           tl.set(sw, { x: 0, opacity: 0 }, 0);
           tl.to(sw, { x: 330, duration: 0.5, ease: "power2.inOut" }, t);
-          tl.to(sw, { opacity: 1, duration: 0.08 }, t);
-          tl.to(sw, { opacity: 0, duration: 0.08 }, t + 0.42);
+          tl.to(sw, { opacity: 1, duration: 0.2, ease: "sine.out" }, t);
+          tl.to(sw, { opacity: 0, duration: 0.2, ease: "sine.in" }, t + 0.32);
         });
 
         // --- 2.90 - 3.35 : bandeau
-        tl.fromTo("#band", { x: 1900, opacity: 1 }, { x: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, 2.9);
+        tl.fromTo("#band", { x: 1900, opacity: 1 }, { x: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 2.9);
         tl.fromTo("#bandtxt", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "power2.out" }, 3.0);
 
         // --- 3.55 - 4.00 : ouverture sur le stade
@@ -149,7 +160,7 @@
         tl.to("#seam", { opacity: 0, duration: 0.15 }, 3.55);
         tl.to(["#crestL", "#crestR", "#plateL", "#plateR", "#vs"], { scale: 0.6, opacity: 0, duration: 0.3, ease: "power2.in" }, 3.55);
         tl.to("#band", { x: -1900, duration: 0.35, ease: "power3.in" }, 3.55);
-        tl.to("#bg", { filter: "brightness(1) blur(0px)", duration: 0.45, ease: "power2.out" }, 3.55);
+        tl.to(["#bgsoft", "#bgdim"], { opacity: 0, duration: 0.45, ease: "sine.inOut" }, 3.55);
         tl.time(0);
       }
       build();
