@@ -5,6 +5,8 @@ export interface PlayOptions {
   src: string;
   data?: Record<string, unknown>;
   skippable?: boolean;
+  /** Libelle du bouton passer (defaut 'Passer'). */
+  skipLabel?: string;
   /** Conteneur (defaut: document.body). */
   target?: HTMLElement;
 }
@@ -19,6 +21,7 @@ export function playCinematic(opts: PlayOptions): Promise<CinematicResult> {
         src: opts.src,
         data: opts.data,
         skippable: opts.skippable,
+        skipLabel: opts.skipLabel,
         onend: (r: CinematicResult) => {
           void unmount(comp);
           resolve(r);

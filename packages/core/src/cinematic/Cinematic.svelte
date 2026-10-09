@@ -19,9 +19,11 @@
     skipAfterMs?: number;
     /** Abandon si la composition n'est pas prete a temps (l'app ne reste jamais bloquee). */
     readyTimeoutMs?: number;
+    /** Libelle du bouton passer (defaut francais ; l'app espagnol passe 'Saltar'). */
+    skipLabel?: string;
     onend?: (result: CinematicResult) => void;
   }
-  let { src, data = {}, skippable = true, skipAfterMs = 600, readyTimeoutMs = 8000, onend }: Props = $props();
+  let { src, data = {}, skippable = true, skipAfterMs = 600, readyTimeoutMs = 8000, skipLabel = 'Passer', onend }: Props = $props();
 
   let root: HTMLElement | undefined = $state();
   let player: HTMLElement | undefined = $state();
@@ -78,7 +80,7 @@
     <hyperframes-player bind:this={player} {src} width="1920" height="1080"></hyperframes-player>
   </div>
   {#if skippable && canSkip && phase !== 'done'}
-    <button type="button" class="skip" onclick={skip} aria-label="Passer">Passer &#9654;&#9654;</button>
+    <button type="button" class="skip" onclick={skip} aria-label={skipLabel}>{skipLabel} &#9654;&#9654;</button>
   {/if}
 </div>
 

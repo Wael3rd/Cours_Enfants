@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
   /** Carte-objet de vocabulaire : image Fluent 3D, mot, article colore (el/los = bleu, la/las = rouge), bordure de rarete qui brille. */
   interface Props {
     word: string;
@@ -8,8 +9,10 @@
     locked?: boolean;
     size?: number; // largeur px
     ontap?: () => void;
+    /** contenu d'image personnalise (ex. drapeau SVG, nombre) : remplace `img` */
+    art?: Snippet;
   }
-  let { word, article = '', img, rarity = 'comun', locked = false, size = 220, ontap }: Props = $props();
+  let { word, article = '', img, rarity = 'comun', locked = false, size = 220, ontap, art }: Props = $props();
   const masc = $derived(article === 'el' || article === 'los' || article === 'un');
   const RC: Record<string, string> = { comun: '#9aa3c7', raro: '#35b8ff', epico: '#c65bff', legendario: '#ffc83d' };
 </script>
@@ -17,7 +20,7 @@
 <button class="card {rarity}" class:locked style:width="{size}px" style:--rc={RC[rarity]} onclick={() => ontap?.()} aria-label={`${article} ${word}`}>
   <span class="frame">
     <span class="art">
-      {#if img && !locked}<img src={img} alt="" draggable="false" />{:else}<b class="q">?</b>{/if}
+      {#if art && !locked}{@render art()}{:else if img && !locked}<img src={img} alt="" draggable="false" />{:else}<b class="q">?</b>{/if}
       {#if rarity !== 'comun' && !locked}<i class="sheen"></i>{/if}
     </span>
     <span class="name">
