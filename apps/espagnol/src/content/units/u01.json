@@ -60,10 +60,10 @@
         "saludos"
       ],
       "ejemplo": {
-        "es": "Adiós, Don Ignacio.",
-        "fr": "Au revoir, Don Ignacio.",
+        "es": "Adiós, don Ignacio.",
+        "fr": "Au revoir, don Ignacio.",
         "voz": "narrador",
-        "audio": "narrador.1fcbbe91e8"
+        "audio": "narrador.5e0182b386"
       },
       "audio": "narrador.01674e46d2"
     },
@@ -86,14 +86,14 @@
     {
       "id": "buenas_tardes",
       "es": "buenas tardes",
-      "fr": "bon après-midi, bonsoir",
+      "fr": "bonjour (l'après-midi), bonsoir (avant la nuit)",
       "emoji": "🌇",
       "tags": [
         "saludos"
       ],
       "ejemplo": {
         "es": "Buenas tardes, Nacho.",
-        "fr": "Bon après-midi, Nacho.",
+        "fr": "Bonjour, Nacho. (l'après-midi)",
         "voz": "narrador",
         "audio": "narrador.e27ba1125e"
       },
@@ -150,7 +150,7 @@
     {
       "id": "por_favor",
       "es": "por favor",
-      "fr": "s'il te plaît",
+      "fr": "s'il te plaît, s'il vous plaît",
       "emoji": "🙏",
       "tags": [
         "saludos"
@@ -204,10 +204,10 @@
         "saludos"
       ],
       "ejemplo": {
-        "es": "Perdón, Don Ignacio.",
-        "fr": "Pardon, Don Ignacio.",
+        "es": "Perdón, don Ignacio.",
+        "fr": "Pardon, don Ignacio.",
         "voz": "narrador",
-        "audio": "narrador.27f7cf1dab"
+        "audio": "narrador.4c6e544c1e"
       },
       "audio": "narrador.e2b4cc30bb"
     },
@@ -564,10 +564,10 @@
         "paises"
       ],
       "ejemplo": {
-        "es": "México es el país del Quetzal.",
-        "fr": "Le Mexique est le pays du Quetzal.",
+        "es": "El Quetzal es de México.",
+        "fr": "Le Quetzal vient du Mexique.",
         "voz": "narrador",
-        "audio": "narrador.00b9b867cb"
+        "audio": "narrador.57c6fb82ad"
       },
       "audio": "narrador.e9d4eca609"
     },
@@ -593,7 +593,7 @@
       "fr": "espagnol",
       "genero": "m",
       "femenino": "española",
-      "emoji": "🐂",
+      "emoji": "🥘",
       "tags": [
         "nacionalidades"
       ],
@@ -1011,16 +1011,25 @@
           "audio": "narrador.ce82989eed"
         },
         {
-          "es": "eme, a, ere, i, ene, a",
+          "es": "eme, a, erre, i, ene, a",
           "fr": "M, A, R, I, N, A : Marina épelée",
           "voz": "narrador",
-          "audio": "narrador.a17425f770"
+          "audio": "narrador.1d5e37f5cc"
         },
         {
           "es": "¿Cómo se escribe «Álex»?",
           "fr": "Comment s’écrit « Álex » ?",
           "voz": "nacho",
           "audio": "nacho.dec43722a8"
+        },
+        {
+          "es": "A con tilde, ele, e, equis.",
+          "fr": "A avec accent, L, E, X.",
+          "voz": "viajero",
+          "audio": "viajero.d5226f9283",
+          "resaltar": [
+            "con tilde"
+          ]
         }
       ],
       "regla": {
@@ -1029,7 +1038,7 @@
         "voz": "narrador",
         "audio": "narrador.9ebf051b64"
       },
-      "pista": "27 lettres : le ñ (« eñe ») s'ajoute à notre alphabet. Le h est muet. K et W n'existent presque que dans des mots étrangers. Pour épeler, on dit le nom des lettres : Marina = eme, a, ere, i, ene, a.",
+      "pista": "27 lettres : le ñ (« eñe ») s'ajoute à notre alphabet. Le h est muet. K et W n'existent presque que dans des mots étrangers. Pour épeler, on dit le nom des lettres : Marina = eme, a, erre, i, ene, a (pour le R, on entend aussi « ere »). Une lettre avec un accent écrit se dit « con tilde » : Á = a con tilde. CH et LL ne sont plus des lettres à part : ce sont deux lettres qui forment un son.",
       "tabla": {
         "encabezado": [
           "Letra",
@@ -1110,7 +1119,7 @@
           ],
           [
             "R",
-            "ere"
+            "erre"
           ],
           [
             "S",
@@ -1169,7 +1178,8 @@
           "voz": "marina",
           "audio": "marina.06c081bbf7",
           "resaltar": [
-            "h"
+            "hola",
+            "hotel"
           ]
         },
         {
@@ -1182,17 +1192,17 @@
           ]
         },
         {
-          "es": "La erre doble: perro, carro.",
-          "fr": "Le RR roulé : perro, carro.",
+          "es": "La erre doble: perro, guitarra.",
+          "fr": "Le RR roulé : perro (chien), guitarra (guitare).",
           "voz": "marina",
-          "audio": "marina.d9c246943f",
+          "audio": "marina.9776daac38",
           "resaltar": [
             "rr"
           ]
         },
         {
           "es": "La elle: me llamo, calle.",
-          "fr": "Le LL : me llamo, calle.",
+          "fr": "Le LL : me llamo, calle (rue).",
           "voz": "marina",
           "audio": "marina.4e91c5e3c2",
           "resaltar": [
@@ -1201,12 +1211,12 @@
         }
       ],
       "regla": {
-        "es": "La jota suena fuerte. La hache no suena. La eñe suena «ni». La erre doble vibra. La elle suena casi como la ye.",
+        "es": "La jota suena fuerte. La hache no suena. La eñe suena como «ni». La erre doble vibra. La elle suena casi como la ye.",
         "fr": "Le J est dur, au fond de la gorge. Le H est muet. Le Ñ sonne « gn ». Le RR roule. Le LL ressemble à « y ».",
         "voz": "narrador",
-        "audio": "narrador.503bdea294"
+        "audio": "narrador.3bb04a8ebc"
       },
-      "pista": "Piège des francophones : J ≠ « j » français (c'est un h expiré rude), H muet, et l'accent tonique : on insiste sur l'avant-dernière syllabe (Ma-RI-na, es-pa-ÑOL, Ma-DRID)."
+      "pista": "Pièges des francophones : le J n'est pas le « j » français (c'est un « h » soufflé, rude, du fond de la gorge) et le H est muet. Accent tonique : un mot terminé par une voyelle, -n ou -s porte l'accent sur l'avant-dernière syllabe (Ma-RI-na, LU-nes) ; terminé par une autre consonne, sur la dernière (es-pa-ÑOL, Ma-DRID). Sinon, un accent écrit montre la syllabe forte (a-DIÓS, MÉ-xi-co)."
     },
     {
       "id": "g_numeros",
@@ -1250,15 +1260,25 @@
           "resaltar": [
             "y"
           ]
+        },
+        {
+          "es": "sesenta, setenta, ochenta, noventa, cien",
+          "fr": "60, 70, 80, 90, 100",
+          "voz": "narrador",
+          "audio": "narrador.1e0d7cc179",
+          "resaltar": [
+            "sesenta",
+            "setenta"
+          ]
         }
       ],
       "regla": {
-        "es": "Del dieciséis al diecinueve: dieci más el número. Del veintiuno al veintinueve: veinti más el número. Desde treinta: la decena, y, el número.",
-        "fr": "De 16 à 19 : dieci + le nombre. De 21 à 29 : veinti + le nombre. À partir de 30 : dizaine + y + unité.",
+        "es": "Del dieciséis al diecinueve: dieci más el número. Del veintiuno al veintinueve: veinti más el número. Desde el treinta y uno: la decena, «y» y el número.",
+        "fr": "De 16 à 19 : dieci + le nombre. De 21 à 29 : veinti + le nombre. À partir de 31 : dizaine + y + unité.",
         "voz": "narrador",
-        "audio": "narrador.adb96280ce"
+        "audio": "narrador.688c37b4ff"
       },
-      "pista": "Les accents : dieciséis, veintidós, veintitrés, veintiséis. Entre 16 et 29, un seul mot ; à partir de 31, trois mots avec « y » (treinta y cinco).",
+      "pista": "Les accents : dieciséis, veintidós, veintitrés, veintiséis. Entre 16 et 29, un seul mot ; à partir de 31, trois mots avec « y » (treinta y cinco). Les dizaines : treinta, cuarenta, cincuenta, sesenta, setenta, ochenta, noventa ; attention, sesenta (60) ≠ setenta (70). 100 = cien.",
       "tabla": {
         "encabezado": [
           "Cifra",
@@ -1285,6 +1305,26 @@
             "48",
             "cuarenta + y + ocho",
             "cuarenta y ocho"
+          ],
+          [
+            "60 · 70",
+            "decena",
+            "sesenta · setenta"
+          ],
+          [
+            "80 · 90",
+            "decena",
+            "ochenta · noventa"
+          ],
+          [
+            "99",
+            "noventa + y + nueve",
+            "noventa y nueve"
+          ],
+          [
+            "100",
+            "—",
+            "cien"
           ]
         ]
       }
@@ -1315,29 +1355,29 @@
           ]
         },
         {
-          "es": "Soy mexicano.",
-          "fr": "Je suis mexicain.",
+          "es": "Leo es mexicano.",
+          "fr": "Leo est mexicain.",
           "voz": "marina",
-          "audio": "marina.d613c921b8",
+          "audio": "marina.608c88a061",
           "resaltar": [
             "mexicano"
           ]
         },
         {
-          "es": "Ella es argentina.",
-          "fr": "Elle est argentine.",
+          "es": "Sofía es argentina.",
+          "fr": "Sofía est argentine.",
           "voz": "marina",
-          "audio": "marina.d4e30be302",
+          "audio": "marina.3b4d4344df",
           "resaltar": [
             "argentina"
           ]
         }
       ],
       "regla": {
-        "es": "Para un chico: español, francés, mexicano. Para una chica: española, francesa, mexicana. En español, la nacionalidad lleva minúscula.",
+        "es": "Para un chico: español, francés, mexicano. Para una chica: española, francesa, mexicana. Las nacionalidades se escriben con minúscula.",
         "fr": "Pour un garçon : español, francés, mexicano. Pour une fille : española, francesa, mexicana. Pas de majuscule pour les nationalités.",
         "voz": "narrador",
-        "audio": "narrador.46b655a2d2"
+        "audio": "narrador.f6e5302988"
       },
       "pista": "L'adjectif s'accorde : -o devient -a, et les mots en consonne ajoutent -a (francés → francesa : l'accent écrit disparaît). Pas de majuscule pour les nationalités ni les langues.",
       "tabla": {
@@ -1542,7 +1582,7 @@
         "voz": "narrador",
         "audio": "narrador.6d87f5efb8"
       },
-      "pista": "Comme en français, on « a » un âge : jamais « soy doce años ». Tener est irrégulier à la 1re personne : tengo (et non « teno »). Ensuite : tienes, tiene.",
+      "pista": "Comme en français, on « a » un âge : jamais « soy doce años ». Tener est irrégulier : tengo (avec un g), puis tienes, tiene (le e devient ie).",
       "tabla": {
         "encabezado": [
           "Pronombre",
@@ -1609,10 +1649,10 @@
         }
       ],
       "regla": {
-        "es": "En español, la pregunta empieza con ¿ y termina con ?. Las palabras cómo, dónde, cuántos y qué llevan acento.",
-        "fr": "En espagnol, la question commence par ¿ et se termine par ?. Les mots cómo, dónde, cuántos et qué portent un accent.",
+        "es": "En español, una pregunta tiene dos signos: uno al principio y otro al final. Las palabras para preguntar llevan tilde: cómo, dónde, cuántos, qué.",
+        "fr": "En espagnol, une question a deux signes : ¿ au début et ? à la fin. Les mots interrogatifs portent un accent écrit : cómo, dónde, cuántos, qué.",
         "voz": "narrador",
-        "audio": "narrador.add7407aea"
+        "audio": "narrador.d1055b6a24"
       },
       "pista": "Le point d'interrogation s'ouvre à l'envers (¿) au début de la question — et de même ¡ ... ! pour l'exclamation. Les mots interrogatifs ont toujours un accent écrit."
     }
@@ -1793,7 +1833,7 @@
                 "lineas": [
                   {
                     "es": "La Sombra del Silencio tiene las plumas del Quetzal. Quiere un mundo sin palabras.",
-                    "fr": "La Sombra del Silencio a les plumes du Quetzal. Elle veut un monde sans mots.",
+                    "fr": "L'Ombre du Silence a les plumes du Quetzal. Elle veut un monde sans mots.",
                     "voz": "ignacio",
                     "audio": "ignacio.4fdd5d6698"
                   },
@@ -2041,19 +2081,22 @@
           "id": "u01-q01-s10",
           "tipo": "speak",
           "consigna": {
-            "es": "Escucha y repite el hechizo.",
-            "fr": "Écoute et répète le sort.",
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
             "voz": "narrador",
-            "audio": "narrador.d1cd7484b4"
+            "audio": "narrador.2a1641197d"
           },
           "objetivo": {
             "es": "Hola, me llamo Álex.",
-            "fr": "Salut, je m’appelle Álex.",
-            "voz": "marina",
-            "audio": "marina.cbc0e807dd"
+            "fr": "Salut, je m’appelle Álex. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.cbc0e807dd"
           },
           "aceptadas": [
             "hola me llamo álex"
+          ],
+          "patrones": [
+            "hola me llamo {nombre}"
           ],
           "hechizo": {
             "nombre": "Hechizo del saludo",
@@ -2643,13 +2686,13 @@
             "audio": "narrador.c052b4b436"
           },
           "habla": {
-            "es": "a, ele, e, equis",
+            "es": "a con tilde, ele, e, equis",
             "voz": "viajero",
-            "audio": "viajero.2f79025b90"
+            "audio": "viajero.244862c6a6"
           },
           "respuesta": "Álex",
           "aceptadas": [
-            "alex"
+            "álex"
           ]
         },
         {
@@ -2662,9 +2705,9 @@
             "audio": "narrador.c052b4b436"
           },
           "habla": {
-            "es": "eme, a, ere, i, ene, a",
+            "es": "eme, a, erre, i, ene, a",
             "voz": "marina",
-            "audio": "marina.a17425f770"
+            "audio": "marina.1d5e37f5cc"
           },
           "respuesta": "Marina",
           "aceptadas": [
@@ -2692,7 +2735,8 @@
             "audio": "marina.f280257340"
           },
           "aceptadas": [
-            "mi amigo josé"
+            "mi amigo josé",
+            "mi amigo jose"
           ],
           "foco": "La j espagnole est rude : un « h » soufflé du fond de la gorge, bien plus fort qu’en anglais.",
           "hechizo": {
@@ -2837,11 +2881,11 @@
           "opciones": [
             {
               "habla": {
-                "es": "A, ele, e, equis.",
+                "es": "A con tilde, ele, e, equis.",
                 "voz": "viajero",
-                "audio": "viajero.40d8274dce"
+                "audio": "viajero.d5226f9283"
               },
-              "fr": "A, L, E, X.",
+              "fr": "A avec accent, L, E, X.",
               "correcta": true,
               "reaccion": {
                 "es": "¡Perfecto! Álex, con tilde. ¡Qué elegante!",
@@ -2993,20 +3037,17 @@
           "id": "u01-q04-s05",
           "tipo": "dictado",
           "consigna": {
-            "es": "Escucha y escribe.",
-            "fr": "Écoute et écris.",
+            "es": "Escucha y escribe el número en letras.",
+            "fr": "Écoute et écris le nombre en lettres.",
             "voz": "narrador",
-            "audio": "narrador.214c0f0f93"
+            "audio": "narrador.1a8e5c4bda"
           },
           "habla": {
             "es": "ocho",
             "voz": "narrador",
             "audio": "narrador.311047fbb0"
           },
-          "respuesta": "ocho",
-          "aceptadas": [
-            "8"
-          ]
+          "respuesta": "ocho"
         },
         {
           "id": "u01-q04-s06",
@@ -3134,39 +3175,35 @@
             "voz": "narrador",
             "audio": "narrador.c8dfcbb8f1"
           },
-          "frase": "Veinte, treinta, ___, cincuenta.",
-          "respuesta": "cuarenta",
+          "frase": "Veinte, treinta, cuarenta, cincuenta, ___.",
+          "respuesta": "sesenta",
           "opciones": [
-            "cuarenta",
-            "cien",
-            "diez"
+            "sesenta",
+            "setenta",
+            "seis"
           ],
           "habla": {
-            "es": "Veinte, treinta, cuarenta, cincuenta.",
+            "es": "Veinte, treinta, cuarenta, cincuenta, sesenta.",
             "voz": "narrador",
-            "audio": "narrador.42d357762c"
+            "audio": "narrador.1cd4a26832"
           },
-          "fr": "20, 30, 40, 50."
+          "fr": "20, 30, 40, 50, 60."
         },
         {
           "id": "u01-q04-s13",
           "tipo": "dictado",
           "consigna": {
-            "es": "Escucha y escribe.",
-            "fr": "Écoute et écris.",
+            "es": "Escucha y escribe el número en letras.",
+            "fr": "Écoute et écris le nombre en lettres (attention à l’accent).",
             "voz": "narrador",
-            "audio": "narrador.214c0f0f93"
+            "audio": "narrador.1a8e5c4bda"
           },
           "habla": {
             "es": "dieciséis",
             "voz": "narrador",
             "audio": "narrador.a7be45493f"
           },
-          "respuesta": "dieciséis",
-          "aceptadas": [
-            "dieciseis",
-            "16"
-          ]
+          "respuesta": "dieciséis"
         },
         {
           "id": "u01-q04-s14",
@@ -3214,9 +3251,9 @@
             "audio": "nacho.b7e33a91b1"
           },
           "aceptadas": [
-            "tres dos uno… cero",
+            "tres dos uno cero",
             "3 2 1 0",
-            "tres dos uno cero"
+            "3 2 1 cero"
           ],
           "hechizo": {
             "nombre": "Hechizo de la cuenta atrás",
@@ -3257,7 +3294,7 @@
               {
                 "n": 1,
                 "duracion": 4,
-                "vista": "Planisphère animé (style explainer Vox) : l'Espagne, l'Amérique latine et la Guinée équatoriale s'illuminent en turquoise.",
+                "vista": "Planisphère animé (style explainer Vox) : l'Espagne, les pays hispanophones d'Amérique (du Mexique à l'Argentine, Cuba, Porto Rico… mais PAS le Brésil, lusophone) et la Guinée équatoriale s'illuminent en turquoise.",
                 "camara": "plan fixe sur la carte",
                 "lineas": [
                   {
@@ -3271,13 +3308,13 @@
               {
                 "n": 2,
                 "duracion": 5,
-                "vista": "Compteur animé qui monte jusqu'à « 500 000 000 », call-out « personas ».",
+                "vista": "Compteur animé qui monte jusqu'à « 600 000 000 », call-out « personas » (source : Instituto Cervantes, environ 600 millions de locuteurs, dont environ 500 millions de langue maternelle).",
                 "lineas": [
                   {
-                    "es": "Casi quinientos millones de personas hablan español.",
-                    "fr": "Presque cinq cents millions de personnes parlent espagnol.",
+                    "es": "Unos seiscientos millones de personas hablan español.",
+                    "fr": "Environ six cents millions de personnes parlent espagnol.",
                     "voz": "narrador",
-                    "audio": "narrador.4d7808bf77"
+                    "audio": "narrador.ed8c684e84"
                   }
                 ]
               },
@@ -3837,7 +3874,7 @@
             "voz": "narrador",
             "audio": "narrador.c8dfcbb8f1"
           },
-          "frase": "¿Cómo te ___?",
+          "frase": "Y tú, ¿cómo te ___?",
           "respuesta": "llamas",
           "opciones": [
             "llamas",
@@ -3845,11 +3882,11 @@
             "llama"
           ],
           "habla": {
-            "es": "¿Cómo te llamas?",
+            "es": "Y tú, ¿cómo te llamas?",
             "voz": "marina",
-            "audio": "marina.f9d4d5f290"
+            "audio": "marina.a49859644c"
           },
-          "fr": "Comment tu t’appelles ?"
+          "fr": "Et toi, comment tu t’appelles ?"
         },
         {
           "id": "u01-q06-s11",
@@ -4048,10 +4085,10 @@
               "fr": "Je suis Nacho.",
               "correcta": false,
               "reaccion": {
-                "es": "¡Pero ese soy yo! Tú eres otro Nacho… ¡qué lío!",
-                "fr": "Mais ça, c’est moi ! Tu es un autre Nacho… quel bazar !",
+                "es": "¡Pero Nacho soy yo! ¿Tú eres otro Nacho? ¡Qué lío!",
+                "fr": "Mais Nacho, c’est moi ! Tu es un autre Nacho ? Quel bazar !",
                 "voz": "nacho",
-                "audio": "nacho.32e7bb6a7a",
+                "audio": "nacho.4a9d09db61",
                 "emoji": "🤨"
               }
             },
@@ -4064,10 +4101,10 @@
               "fr": "Bien, merci.",
               "correcta": false,
               "reaccion": {
-                "es": "Me alegra, pero yo te pregunto el nombre.",
-                "fr": "Tant mieux, mais moi je te demande ton prénom.",
+                "es": "Me alegro, pero te pregunto tu nombre.",
+                "fr": "Tant mieux, mais je te demande ton prénom.",
                 "voz": "nacho",
-                "audio": "nacho.5ede437bfb",
+                "audio": "nacho.f434daa3c8",
                 "emoji": "🤨"
               }
             }
@@ -4115,10 +4152,10 @@
               "fr": "J’ai douze ans.",
               "correcta": false,
               "reaccion": {
-                "es": "Vale, pero yo pregunto de dónde eres.",
-                "fr": "D’accord, mais je demande d’où tu viens.",
+                "es": "Vale, pero te pregunto de dónde eres.",
+                "fr": "D’accord, mais je te demande d’où tu viens.",
                 "voz": "nacho",
-                "audio": "nacho.bda87bd094",
+                "audio": "nacho.438d82d633",
                 "emoji": "🤨"
               }
             },
@@ -4506,20 +4543,28 @@
           "id": "u01-q07-s15",
           "tipo": "speak",
           "consigna": {
-            "es": "Escucha y repite el hechizo.",
-            "fr": "Écoute et répète le sort.",
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
             "voz": "narrador",
-            "audio": "narrador.d1cd7484b4"
+            "audio": "narrador.2a1641197d"
           },
           "objetivo": {
             "es": "Hola, me llamo Álex. Tengo doce años. Vivo en París.",
-            "fr": "Salut, je m’appelle Álex. J’ai douze ans. J’habite à Paris.",
-            "voz": "marina",
-            "audio": "marina.039d8192e2"
+            "fr": "Salut, je m’appelle Álex. J’ai douze ans. J’habite à Paris. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.039d8192e2"
           },
           "aceptadas": [
             "hola me llamo álex tengo doce años vivo en parís",
-            "hola me llamo alex tengo 12 años vivo en parís"
+            "hola me llamo álex tengo 12 años vivo en parís",
+            "hola me llamo álex tengo doce años vivo en paris",
+            "hola me llamo álex tengo 12 años vivo en paris"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} tengo doce años vivo en parís",
+            "hola me llamo {nombre} tengo 12 años vivo en parís",
+            "hola me llamo {nombre} tengo doce años vivo en paris",
+            "hola me llamo {nombre} tengo 12 años vivo en paris"
           ],
           "hechizo": {
             "nombre": "Hechizo de la presentación",
@@ -4646,7 +4691,7 @@
               "correcta": true,
               "reaccion": {
                 "es": "¡Aaah! Más palabras no, por favor…",
-                "fr": "Aaah ! Plus de mots, s’il vous plaît…",
+                "fr": "Aaah ! Pas d’autres mots, s’il te plaît…",
                 "voz": "sombra",
                 "audio": "sombra.3c08de1f3c",
                 "emoji": "😄"
@@ -4658,7 +4703,7 @@
                 "voz": "viajero",
                 "audio": "viajero.bb059af29f"
               },
-              "fr": "Bon après-midi.",
+              "fr": "Bonjour. (l’après-midi)",
               "correcta": false,
               "reaccion": {
                 "es": "Las tardes no son un país.",
@@ -4677,10 +4722,10 @@
               "fr": "Je suis espagnol, d’Argentine.",
               "correcta": false,
               "reaccion": {
-                "es": "¿Español de Argentina? Eso no suena bien.",
-                "fr": "Espagnol d’Argentine ? Ça ne sonne pas juste.",
+                "es": "¿De Argentina? Entonces eres argentino, no español.",
+                "fr": "D’Argentine ? Alors tu es argentin, pas espagnol.",
                 "voz": "sombra",
-                "audio": "sombra.2a2d84aacf",
+                "audio": "sombra.275f31d724",
                 "emoji": "🤨"
               }
             }
@@ -4842,8 +4887,8 @@
           ],
           "habla": {
             "es": "Nacho es español y tiene trece años.",
-            "voz": "nacho",
-            "audio": "nacho.7cc9220303"
+            "voz": "marina",
+            "audio": "marina.7cc9220303"
           },
           "fr": "Nacho est espagnol et a treize ans."
         },
@@ -4964,15 +5009,15 @@
           "opciones": [
             {
               "habla": {
-                "es": "A, ele, e, equis.",
+                "es": "A con tilde, ele, e, equis.",
                 "voz": "viajero",
-                "audio": "viajero.40d8274dce"
+                "audio": "viajero.d5226f9283"
               },
-              "fr": "A, L, E, X.",
+              "fr": "A avec accent, L, E, X.",
               "correcta": true,
               "reaccion": {
                 "es": "¡NOOO! ¡Ya no puedo con tantas letras!",
-                "fr": "NOOON ! Je ne tiens plus devant toutes ces lettres !",
+                "fr": "NOOON ! Je n’en peux plus, trop de lettres !",
                 "voz": "sombra",
                 "audio": "sombra.9b54ba35ee",
                 "emoji": "😄"
@@ -5016,20 +5061,24 @@
           "id": "u01-q08-s13",
           "tipo": "speak",
           "consigna": {
-            "es": "Escucha y repite el hechizo.",
-            "fr": "Écoute et répète le sort.",
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
             "voz": "narrador",
-            "audio": "narrador.d1cd7484b4"
+            "audio": "narrador.2a1641197d"
           },
           "objetivo": {
             "es": "Hola, me llamo Álex. Soy francés y tengo doce años.",
-            "fr": "Salut, je m’appelle Álex. Je suis français et j’ai douze ans.",
-            "voz": "marina",
-            "audio": "marina.fc66a5d97b"
+            "fr": "Salut, je m’appelle Álex. Je suis français et j’ai douze ans. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.fc66a5d97b"
           },
           "aceptadas": [
             "hola me llamo álex soy francés y tengo doce años",
-            "hola me llamo alex soy francés y tengo 12 años"
+            "hola me llamo álex soy francés y tengo 12 años"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} soy francés y tengo doce años",
+            "hola me llamo {nombre} soy francés y tengo 12 años"
           ],
           "hechizo": {
             "nombre": "Hechizo final",

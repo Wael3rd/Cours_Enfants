@@ -230,14 +230,27 @@ export interface ReadAnswerStep extends StepBase {
   preguntas: PreguntaLectura[];
 }
 
+/** Jeton de `SpeakStep.patrones` remplace par le prenom de l'eleve. */
+export const NOMBRE_LIBRE = '{nombre}';
+
 /** Hechizo : dire une phrase (Web Speech es-ES). */
 export interface SpeakStep extends StepBase {
   tipo: 'speak';
   consigna: Consigna;
   /** Phrase modele (audio normal + lento) */
   objetivo: Linea;
-  /** Transcriptions acceptees (normalisees : minuscules, sans ¿¡?!.,), la 1re = objetivo normalise */
+  /**
+   * Transcriptions acceptees, normalisees : NFC, minuscules, ponctuation ¿?¡!.,;:«»"“”()…—– remplacee par
+   * un espace, espaces compactes (accents conserves). La 1re = objetivo normalise.
+   */
   aceptadas: string[];
+  /**
+   * Prenom libre : gabarits normalises (comme `aceptadas`) contenant une fois NOMBRE_LIBRE ("{nombre}").
+   * Le jeton accepte 1 a 3 mots quelconques : l'eleve dit SON prenom au lieu de celui du modele
+   * (l'audio de `objetivo` garde "Álex"). Ex. "hola me llamo {nombre}". Une transcription est correcte
+   * si elle est dans `aceptadas` OU correspond a un gabarit.
+   */
+  patrones?: string[];
   /** Point de phonologie travaille (explication FR) */
   foco?: string;
   hechizo?: { nombre: string; efecto: string };

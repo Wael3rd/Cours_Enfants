@@ -21,7 +21,7 @@ export default function build() {
     W('ordenador', 'ordenador', 'ordinateur', '💻', 'material', 'Hay un ordenador en la clase.', 'Il y a un ordinateur dans la classe.', { genero: 'm', plural: 'ordenadores' }),
     // asignaturas
     W('matematicas', 'matemáticas', 'mathématiques', '➗', 'asignaturas', 'El lunes tengo matemáticas.', 'Le lundi, j’ai maths.', { genero: 'f' }),
-    W('lengua', 'lengua', 'cours de langue espagnole, langue', '🔤', 'asignaturas', 'El martes tengo lengua.', 'Le mardi, j’ai espagnol (langue).', { genero: 'f' }),
+    W('lengua', 'lengua', 'langue (le cours d’espagnol des élèves espagnols, comme notre cours de français)', '🔤', 'asignaturas', 'El martes tengo lengua.', 'Le mardi, j’ai cours de langue (espagnol).', { genero: 'f' }),
     W('ingles', 'inglés', 'anglais', '🇬🇧', 'asignaturas', 'Mi profesor de inglés es muy simpático.', 'Mon prof d’anglais est très sympa.', { genero: 'm' }),
     W('historia', 'historia', 'histoire', '🏰', 'asignaturas', 'La historia de España es larga.', 'L’histoire de l’Espagne est longue.', { genero: 'f' }),
     W('geografia', 'geografía', 'géographie', '🗺️', 'asignaturas', 'En geografía miramos mapas.', 'En géographie, on regarde des cartes.', { genero: 'f' }),
@@ -44,7 +44,7 @@ export default function build() {
     W('cumpleanos', 'cumpleaños', 'anniversaire', '🥳', 'tiempo', 'Mi cumpleaños es en mayo.', 'Mon anniversaire est en mai.', { genero: 'm' }),
     // dias
     W('lunes', 'lunes', 'lundi', '🌙', 'dias', 'El lunes tengo matemáticas.', 'Le lundi, j’ai maths.', { genero: 'm' }),
-    W('martes', 'martes', 'mardi', '🔴', 'dias', 'El martes tengo lengua.', 'Le mardi, j’ai langue.', { genero: 'm' }),
+    W('martes', 'martes', 'mardi', '🔴', 'dias', 'El martes tengo lengua.', 'Le mardi, j’ai cours de langue.', { genero: 'm' }),
     W('miercoles', 'miércoles', 'mercredi', '⚪', 'dias', 'El miércoles tengo inglés.', 'Le mercredi, j’ai anglais.', { genero: 'm' }),
     W('jueves', 'jueves', 'jeudi', '🟠', 'dias', 'El jueves tengo música.', 'Le jeudi, j’ai musique.', { genero: 'm' }),
     W('viernes', 'viernes', 'vendredi', '🟡', 'dias', 'El viernes tengo educación física.', 'Le vendredi, j’ai EPS.', { genero: 'm' }),
@@ -60,8 +60,8 @@ export default function build() {
     W('julio', 'julio', 'juillet', '🏖️', 'meses', 'En julio no hay clase.', 'En juillet, il n’y a pas cours.', { genero: 'm' }),
     W('agosto', 'agosto', 'août', '🌴', 'meses', 'En agosto hay vacaciones.', 'En août, il y a des vacances.', { genero: 'm' }),
     W('septiembre', 'septiembre', 'septembre', '🍇', 'meses', 'En septiembre empieza el cole.', 'En septembre, l’école commence.', { genero: 'm' }),
-    W('octubre', 'octubre', 'octobre', '🎃', 'meses', 'En octubre empieza el otoño.', 'En octobre, l’automne commence.', { genero: 'm' }),
-    W('noviembre', 'noviembre', 'novembre', '🍂', 'meses', 'El dos de noviembre es el Día de Muertos.', 'Le 2 novembre, c’est le Jour des Morts.', { genero: 'm' }),
+    W('octubre', 'octubre', 'octobre', '🎃', 'meses', 'El doce de octubre es fiesta en España.', 'Le 12 octobre est un jour férié en Espagne.', { genero: 'm' }),
+    W('noviembre', 'noviembre', 'novembre', '🍂', 'meses', 'En México, el Día de Muertos es el uno y el dos de noviembre.', 'Au Mexique, le Jour des Morts, c’est le 1er et le 2 novembre.', { genero: 'm' }),
     W('diciembre', 'diciembre', 'décembre', '🎄', 'meses', 'En diciembre es Navidad.', 'En décembre, c’est Noël.', { genero: 'm' }),
   ];
 
@@ -79,8 +79,8 @@ export default function build() {
     G('g_plural', 'Los libros, las mochilas', 'Le pluriel', [
       ['los libros, los cuadernos', 'les livres, les cahiers', 'pilar', ['los']],
       ['las sillas, las reglas', 'les chaises, les règles', 'pilar', ['las']],
-      ['los profesores', 'les professeurs', 'diego', ['es']],
-      ['los lápices', 'les crayons', 'diego', ['ices']],
+      ['el profesor, los profesores', 'le professeur, les professeurs', 'diego', ['profesores']],
+      ['el lápiz, los lápices', 'le crayon, les crayons', 'diego', ['lápices']],
     ], 'Para el plural: si el nombre termina en vocal, añadimos -s. Si termina en consonante, añadimos -es. Los artículos son los y las.',
     'Pour le pluriel : après une voyelle, on ajoute -s ; après une consonne, -es. Les articles : los et las.',
     "Pluriel : voyelle + s, consonne + es ; z devient c (lápiz → lápices). Articles : el/la → los/las ; un/una → unos/unas. L'accent peut disparaître : lección → lecciones.",
@@ -92,7 +92,7 @@ export default function build() {
       ['¿Hay un ordenador en la clase?', 'Y a-t-il un ordinateur dans la classe ?', 'pilar', ['Hay']],
     ], 'La palabra «hay» sirve para decir que algo existe. Es igual para uno o para muchos.',
     'Le mot « hay » sert à dire que quelque chose existe. Il est identique pour un ou plusieurs.',
-    "hay = il y a (invariable : « hay una mesa », « hay dos mesas »). Après hay : un/una, un nombre, ou pas d'article. On ne dit pas « hay el libro » mais « hay un libro ».", null),
+    "hay = il y a (invariable : « hay una mesa », « hay dos mesas »). Après hay : un/una, un nombre (dos, tres…) ou pas d'article (hay flores). On ne dit pas « hay el libro » mais « hay un libro ».", null),
     G('g_ar', 'Los verbos en -ar', 'Les verbes en -ar', [
       ['Yo hablo español.', 'Je parle espagnol.', 'diego', ['hablo']],
       ['Tú estudias mucho.', 'Tu étudies beaucoup.', 'pilar', ['estudias']],
@@ -109,15 +109,15 @@ export default function build() {
       ['Lee y escribe, por favor.', 'Lis et écris, s’il te plaît.', 'pilar', ['Lee', 'escribe']],
     ], 'Para dar una orden a una persona, usamos la forma «tú»: abre, cierra, escucha. Con «por favor» es más amable.',
     'Pour donner un ordre à quelqu’un, on utilise la forme « tú » : abre, cierra, escucha. Avec « por favor », c’est plus poli.',
-    "Impératif affirmatif (tu) = forme « él/ella » du présent : abre, cierra, escucha, repite, lee, escribe. Ce sont les ordres que tu entendras toute l'année en classe.", null),
+    "Impératif affirmatif (tu) = forme « él/ella » du présent : abre, cierra, escucha, repite, lee, escribe (sauf quelques verbes irréguliers que tu verras plus tard). Ce sont les ordres que tu entendras toute l'année en classe.", null),
     G('g_fecha', '¿Qué día es hoy?', 'La date', [
       ['Hoy es lunes.', 'Aujourd’hui, c’est lundi.', 'diego', ['lunes']],
       ['Hoy es lunes, doce de octubre.', 'Aujourd’hui, c’est lundi 12 octobre.', 'diego', ['doce de octubre']],
       ['Mi cumpleaños es el cuatro de mayo.', 'Mon anniversaire est le 4 mai.', 'marina', ['el cuatro de mayo']],
       ['El domingo no hay cole.', 'Le dimanche, il n’y a pas école.', 'diego', ['El domingo']],
-    ], 'Para la fecha decimos: el, el número, de, el mes. Los días y los meses van con minúscula.',
+    ], 'Para la fecha decimos: el, el número, de, el mes. Los días y los meses se escriben con minúscula.',
     'Pour la date, on dit : el + le nombre + de + le mois. Les jours et les mois s’écrivent sans majuscule.',
-    "Format : « el cuatro de mayo » (el + nombre + de + mois). Pas de majuscule aux jours ni aux mois. Pour le 1er : « el uno de mayo » ou « el primero de mayo ». « El lunes » = lundi prochain / chaque lundi selon le contexte.", null),
+    "Format : « el cuatro de mayo » (el + nombre + de + mois). Pas de majuscule aux jours ni aux mois. Pour le 1er : « el uno de mayo » ou « el primero de mayo ». Devant un jour, on met l'article : « el lunes » = lundi (ce lundi-là, ou le lundi de ton emploi du temps) ; « los lunes » = tous les lundis.", null),
   ];
 
   // ───────────── Cinemáticas ─────────────
@@ -126,7 +126,7 @@ export default function build() {
     P(5, "Façades en grès doré de la Plaza Mayor et de l’université, cigognes sur les clochers ; au loin, une cloche qui reste muette.", [L(N, 'Salamanca, la ciudad dorada.', 'Salamanque, la ville dorée.'), L(N, 'Aquí hay un colegio muy especial.', 'Ici, il y a une école très spéciale.')], { camara: 'panoramique lent, lumière d’après-midi' }),
   ]);
   const historia = cine('u02-historia', 'historia', 'La campana muda', [
-    P(7, "Cour du Colegio de San Fray Luis : élèves immobiles, silence total. Doña Pilar tient une grande cloche de bronze muette. Diego arrive en courant avec un bocadillo.", [
+    P(7, "Cour du Colegio Fray Luis de León : élèves immobiles, silence total. Doña Pilar tient une grande cloche de bronze muette. Diego arrive en courant avec un bocadillo.", [
       L('diego', '¡Perdón, perdón! ¡Llego tarde!', 'Pardon, pardon ! Je suis en retard !'),
       L('pilar', 'Buenos días, Diego. La campana no suena.', 'Bonjour, Diego. La cloche ne sonne pas.'),
     ], { personajes: ['pilar', 'diego'], camara: 'plan large puis travelling vers Pilar' }),
@@ -144,9 +144,9 @@ export default function build() {
     ], { personajes: ['quetzal', 'diego'], musica: 'thème d’aventure' }),
   ]);
   const capsula = cine('u02-capsula-cole', 'capsula', 'Mil y una escuelas', [
-    P(4, "Cour de récré animée (style explainer), élèves avec des bocadillos, bulles de call-out.", [L(N, 'En el recreo, los alumnos comen un bocadillo.', 'À la récré, les élèves mangent un sandwich.')], { camara: 'plan fixe, animations de papier découpé' }),
+    P(4, "Cour de récré animée (style explainer), élèves avec des bocadillos, bulles de call-out.", [L(N, 'En el recreo, muchos alumnos comen un bocadillo.', 'À la récré, beaucoup d’élèves mangent un sandwich (un bocadillo).')], { camara: 'plan fixe, animations de papier découpé' }),
     P(5, "Un bulletin avec des notes de 0 à 10 ; le chiffre 5 est entouré en vert avec le mot « aprobado ».", [L(N, 'Las notas van de cero a diez. Con un cinco, ¡aprobado!', 'Les notes vont de zéro à dix. Avec un cinq, c’est réussi !')]),
-    P(5, "Salle de classe, élèves en vêtements normaux (pas d’uniforme) ; deux call-outs « profe » et « cole » apparaissent.", [L(N, 'Muchos alumnos no llevan uniforme. Y dicen «profe» y «cole».', 'Beaucoup d’élèves ne portent pas d’uniforme. Et ils disent « profe » et « cole ».')]),
+    P(5, "Salle de classe d’un collège public, élèves en vêtements normaux (pas d’uniforme) ; deux call-outs « profe » et « cole » apparaissent.", [L(N, 'En los colegios públicos, normalmente no hay uniforme. Y los alumnos dicen «profe» y «cole».', 'Dans les écoles publiques, en général, il n’y a pas d’uniforme. Et les élèves disent « profe » (prof) et « cole » (école).')]),
     P(4, "Plan large de la façade de l’Universidad de Salamanca, pierre dorée au soleil, compteur « 1218 ».", [L(N, 'En Salamanca hay una universidad con más de ochocientos años.', 'À Salamanque, il y a une université de plus de huit cents ans.')]),
   ]);
   const pluma = cine('u02-pluma', 'pluma', 'Segunda pluma', [
@@ -159,17 +159,17 @@ export default function build() {
   // 1 — Cinemática
   quests.push(quest('u02', 1, 'cinematica', 'Llegada a Salamanca', '🏰',
     ['marina', '¡Salamanca! Mira qué bonita… Pero ¿por qué hay tanto silencio?', 'Salamanque ! Regarde comme elle est jolie… Mais pourquoi y a-t-il autant de silence ?'],
-    'Arrivée à Salamanque : tu rencontres Diego et Doña Pilar, et l’histoire avance.', ['escuchar', 'cultura', 'hablar'], 10, [
+    'Arrivée à Salamanque : tu rencontres Diego et doña Pilar, et l’histoire avance.', ['escuchar', 'cultura', 'hablar'], 10, [
       intro,
       tf('Salamanca es una ciudad de España.', true, N, { tr: 'Salamanque est une ville d’Espagne.' }),
-      tf('La campana del colegio suena.', false, N, { tr: 'La cloche de l’école sonne.' }),
       historia,
+      tf('La campana del colegio suena.', false, N, { tr: 'La cloche de l’école sonne.' }),
       flash('clase', 'cole', 'profesor', 'companero'),
       lcT('Hola, me llamo Diego. Tengo doce años.', 'diego', ['Diego tiene doce años.', 'Diego tiene trece años.', 'Diego es profesor.'], 0),
       lcT('La campana no suena.', 'pilar', ['La campana suena.', 'La campana no suena.', 'No hay colegio.'], 1),
-      dlg('pilar', 'Buenos días. Soy Doña Pilar, la profesora. ¿Cómo te llamas?', 'Bonjour. Je suis Doña Pilar, la professeure. Comment tu t’appelles ?', [
-        ['Buenos días, Doña Pilar. Me llamo Álex.', 1, 'Muy bien, Álex. Bienvenido al cole.', 'Très bien, Álex. Bienvenue à l’école.', 'Bonjour, Doña Pilar. Je m’appelle Álex.'],
-        ['Hola, Pilar, ¿qué tal?', 0, 'En clase, «Doña Pilar» o «profesora», por favor.', 'En classe, « Doña Pilar » ou « profesora », s’il vous plaît.', 'Salut, Pilar, ça va ?'],
+      dlg('pilar', 'Buenos días. Soy doña Pilar, la profesora. ¿Cómo te llamas?', 'Bonjour. Je suis doña Pilar, la professeure. Comment tu t’appelles ?', [
+        ['Buenos días, doña Pilar. Me llamo Álex.', 1, 'Muy bien, Álex. Bienvenido al cole.', 'Très bien, Álex. Bienvenue à l’école.', 'Bonjour, doña Pilar. Je m’appelle Álex.'],
+        ['Buenas noches, profesora.', 0, '¿Buenas noches? ¡Son las nueve de la mañana!', 'Bonne nuit ? Il est neuf heures du matin !', 'Bonne nuit, professeure.'],
         ['Adiós, profesora.', 0, '¿Ya te vas? ¡Pero si la clase no ha empezado!', 'Tu t’en vas déjà ? Mais le cours n’a pas commencé !', 'Au revoir, professeure.'],
       ]),
       dlg('diego', '¿De dónde eres?', 'D’où viens-tu ?', [
@@ -178,7 +178,7 @@ export default function build() {
         ['Tengo doce años.', 0, '¡Yo también! Pero ¿de dónde eres?', 'Moi aussi ! Mais d’où viens-tu ?', 'J’ai douze ans.'],
       ]),
       tf('Diego es profesor.', false, N, { tr: 'Diego est professeur.' }),
-      speak('Buenos días, profesora.', 'pilar', { tr: 'Bonjour, professeure.', hechizo: ['Hechizo del respeto', 'La puerta del colegio se abre despacio'] }),
+      speak('Buenos días, profesora.', 'viajero', { tr: 'Bonjour, professeure.', hechizo: ['Hechizo del respeto', 'La puerta del colegio se abre despacio'] }),
     ]));
 
   // 2 — Material
@@ -189,7 +189,6 @@ export default function build() {
       lcV('libro', ['cuaderno', 'libro', 'regla']),
       match(['libro', 'cuaderno', 'boligrafo', 'lapiz', 'goma', 'regla']),
       flash('mochila', 'estuche', 'pizarra', 'silla', 'mesa', 'ordenador'),
-      lcV('mochila', ['mochila', 'estuche', 'silla']),
       match(['mochila', 'estuche', 'pizarra', 'silla', 'mesa', 'ordenador']),
       gram('g_articulos'),
       fill('Abre ___ libro.', 'el', 'pilar', { opts: ['el', 'la', 'una'], tr: 'Ouvre le livre.' }),
@@ -203,6 +202,7 @@ export default function build() {
       lcI('Tengo una regla.', 'diego', 'regla', ['regla', 'lapiz', 'libro']),
       reord('Tengo un estuche y una regla.', 'diego', { tr: 'J’ai une trousse et une règle.' }),
       gram('g_plural'),
+      fill('En mi estuche hay tres ___.', 'lápices', 'diego', { opts: ['lápiz', 'lápizes', 'lápices'], tr: 'Dans ma trousse, il y a trois crayons.' }),
       speak('Tengo un libro y un cuaderno.', 'diego', { tr: 'J’ai un livre et un cahier.', hechizo: ['Hechizo de la mochila', 'Tu mochila se llena de objetos mágicos'] }),
     ]));
 
@@ -219,14 +219,14 @@ export default function build() {
       lcT('El lunes tengo matemáticas.', 'diego', ['El lunes: matemáticas.', 'El martes: matemáticas.', 'El lunes: música.'], 0),
       lcT('El miércoles tengo inglés.', 'diego', ['El jueves: inglés.', 'El miércoles: inglés.', 'El miércoles: historia.'], 1),
       read('Mi horario. El lunes tengo matemáticas y lengua. El martes tengo inglés. El miércoles tengo historia y geografía. El jueves tengo música y ciencias. El viernes tengo educación física. El sábado y el domingo no hay cole.', 'diego',
-        'Mon emploi du temps. Le lundi, j’ai maths et langue. Le mardi, j’ai anglais. Le mercredi, j’ai histoire et géographie. Le jeudi, j’ai musique et sciences. Le vendredi, j’ai EPS. Le samedi et le dimanche, il n’y a pas école.', [
+        'Mon emploi du temps. Le lundi, j’ai maths et cours de langue (espagnol). Le mardi, j’ai anglais. Le mercredi, j’ai histoire et géographie. Le jeudi, j’ai musique et sciences. Le vendredi, j’ai EPS. Le samedi et le dimanche, il n’y a pas école.', [
           ['¿Qué día tiene inglés?', 'Quel jour a-t-il anglais ?', ['El lunes.', 'El martes.', 'El jueves.'], 1],
           ['¿Cuándo tiene música?', 'Quand a-t-il musique ?', ['El jueves.', 'El viernes.', 'El lunes.'], 0],
           ['¿Hay cole el sábado?', 'Y a-t-il école le samedi ?', ['Sí.', 'No.'], 1],
         ]),
-      fill('El ___ tengo educación física.', 'viernes', 'diego', { opts: ['lunes', 'viernes', 'domingo'], tr: 'Le vendredi, j’ai EPS.' }),
+      fill('El ___ tengo educación física.', 'viernes', 'diego', { opts: ['lunes', 'viernes', 'domingo'], tr: 'Le vendredi, j’ai EPS.', es: 'Mira el horario de Diego y completa.', fr: 'Regarde l’emploi du temps de Diego et complète.' }),
       fill('El sábado y el ___ no hay cole.', 'domingo', 'diego', { opts: ['martes', 'domingo', 'viernes'], tr: 'Le samedi et le dimanche, il n’y a pas école.' }),
-      dict('El jueves tengo música.', 'diego', { acept: ['el jueves tengo musica'] }),
+      dict('El jueves tengo música.', 'diego'),
       reord('El martes tengo inglés.', 'diego', { tr: 'Le mardi, j’ai anglais.' }),
       dlg('diego', 'Hoy es lunes. ¿Qué tienes hoy?', 'Aujourd’hui, c’est lundi. Qu’as-tu aujourd’hui ?', [
         ['Hoy tengo matemáticas.', 1, '¡Qué suerte! Yo odio los lunes.', 'Quelle chance ! Moi, je déteste les lundis.', 'Aujourd’hui, j’ai maths.'],
@@ -302,9 +302,9 @@ export default function build() {
         'Aujourd’hui, c’est vendredi 9 octobre. Le lundi 12 octobre, il n’y a pas école : c’est férié. Le mardi, j’ai maths.', [
           ['¿Qué día es hoy?', 'Quel jour est-on aujourd’hui ?', ['Viernes, nueve de octubre.', 'Lunes, doce de octubre.', 'Martes, trece de octubre.'], 0],
           ['¿Hay cole el doce de octubre?', 'Y a-t-il école le 12 octobre ?', ['Sí.', 'No.'], 1],
-          ['¿Qué tiene el martes?', 'Qu’a-t-il le mardi ?', ['Matemáticas.', 'Música.', 'Historia.'], 0],
+          ['¿Qué asignatura tiene Diego el martes?', 'Quelle matière Diego a-t-il le mardi ?', ['Matemáticas.', 'Música.', 'Historia.'], 0],
         ]),
-      fill('Hoy es ___, nueve de octubre.', 'viernes', 'diego', { opts: ['lunes', 'viernes', 'sábado'], tr: 'Aujourd’hui, c’est vendredi 9 octobre.' }),
+      fill('Hoy es ___, nueve de octubre.', 'viernes', 'diego', { opts: ['lunes', 'viernes', 'sábado'], tr: 'Aujourd’hui, c’est vendredi 9 octobre.', es: 'Completa con el texto de Diego.', fr: 'Complète d’après le texte de Diego.' }),
       fill('Septiembre, octubre, ___.', 'noviembre', N, { opts: ['noviembre', 'enero', 'mayo'], tr: 'Septembre, octobre, novembre.' }),
       reord('Hoy es lunes, doce de octubre.', 'diego', { tr: 'Aujourd’hui, c’est lundi 12 octobre.' }),
       dlg('diego', 'Mi cumpleaños es el cuatro de mayo. ¿Cuándo es tu cumpleaños?', 'Mon anniversaire est le 4 mai. C’est quand, ton anniversaire ?', [
@@ -313,32 +313,33 @@ export default function build() {
         ['Mi cumpleaños tiene doce años.', 0, '¿Tu cumpleaños tiene doce años? ¡Qué cosas dices!', 'Ton anniversaire a douze ans ? Tu dis de ces choses !', 'Mon anniversaire a douze ans.'],
       ]),
       writeFree('Mi cumpleaños es el ___ de ___.', [
-        { id: 'dia', pista: 'Le jour de ton anniversaire (en lettres : cuatro, doce…)', tipo: 'texto' },
+        { id: 'dia', pista: 'Le jour de ton anniversaire, en lettres (uno, cuatro, doce, veintitrés…)', tipo: 'texto' },
         { id: 'mes', pista: 'Le mois de ton anniversaire (sans majuscule)', tipo: 'texto' },
       ], 'Mi cumpleaños es el cuatro de mayo.', 'Mon anniversaire est le 4 mai.', 'diego'),
-      speak('Hoy es viernes, nueve de octubre.', 'diego', { tr: 'Aujourd’hui, c’est vendredi 9 octobre.', hechizo: ['Hechizo del calendario', 'Las hojas del calendario vuelan a tu alrededor'] }),
+      speak('Hoy es viernes, nueve de octubre.', 'diego', { tr: 'Aujourd’hui, c’est vendredi 9 octobre.', acept: ['hoy es viernes 9 de octubre'], hechizo: ['Hechizo del calendario', 'Las hojas del calendario vuelan a tu alrededor'] }),
     ]));
 
   // 7 — Cultura
   quests.push(quest('u02', 7, 'cultura', 'Mil y una escuelas', '🏫',
     ['pilar', 'En el mundo hay mil y una escuelas. Vamos a conocer la nuestra.', 'Dans le monde, il y a mille et une écoles. Découvrons la nôtre.'],
-    'L’école en Espagne (récré, notes sur 10, pas d’uniforme) et la légende de la grenouille de Salamanque.', ['cultura', 'leer', 'escuchar'], 12, [
+    'L’école en Espagne (récré, notes sur 10 avec 5 pour réussir, souvent pas d’uniforme dans le public) et la légende de la grenouille de Salamanque.', ['cultura', 'leer', 'escuchar'], 12, [
       capsula,
       tf('Las notas en España van de cero a diez.', true, N, { tr: 'En Espagne, les notes vont de zéro à dix.' }),
       tf('En todos los colegios españoles hay uniforme.', false, N, { tr: 'Dans toutes les écoles espagnoles, il y a un uniforme.' }),
-      tf('En el recreo los alumnos comen un bocadillo.', true, N, { tr: 'À la récré, les élèves mangent un sandwich.' }),
+      tf('En el recreo, muchos alumnos comen un bocadillo.', true, N, { tr: 'À la récré, beaucoup d’élèves mangent un sandwich.' }),
       lcT('Tengo un nueve en matemáticas.', 'diego', ['9', '7', '19'], 0),
       lcT('Tengo un siete en lengua.', 'diego', ['6', '7', '17'], 1),
-      read('Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama Doña Pilar.', 'diego',
-        'Salut, c’est Diego. Dans mon école, les cours commencent le matin. À la récré, je mange un sandwich avec mes camarades. Il n’y a pas d’uniforme. Ma prof préférée s’appelle Doña Pilar.', [
+      read('Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama doña Pilar.', 'diego',
+        'Salut, c’est Diego. Dans mon école, les cours commencent le matin. À la récré, je mange un sandwich avec mes camarades. Il n’y a pas d’uniforme. Ma prof préférée s’appelle doña Pilar.', [
           ['¿Hay uniforme en el cole de Diego?', 'Y a-t-il un uniforme dans l’école de Diego ?', ['Sí, hay uniforme.', 'No, no hay uniforme.'], 1],
           ['¿Qué come Diego en el recreo?', 'Que mange Diego à la récré ?', ['Un bocadillo.', 'Un churro.', 'Una regla.'], 0],
           ['¿Cómo se llama su profesora favorita?', 'Comment s’appelle sa prof préférée ?', ['Rosa.', 'Pilar.', 'Marina.'], 1],
         ]),
-      read('En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los alumnos la buscan. Si la encuentran, tienen suerte.', 'pilar',
-        'À l’Université de Salamanque, il y a une grenouille de pierre. Elle est très petite et se trouve sur la façade. Les élèves la cherchent. S’ils la trouvent, ils ont de la chance.', [
+      read('En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los estudiantes la buscan. Según la leyenda, si la encuentran, ¡aprueban los exámenes!', 'pilar',
+        'À l’Université de Salamanque, il y a une grenouille de pierre. Elle est très petite et se trouve sur la façade. Les étudiants la cherchent. Selon la légende, s’ils la trouvent, ils réussissent leurs examens !', [
           ['¿Dónde hay una rana?', 'Où y a-t-il une grenouille ?', ['En la Universidad de Salamanca.', 'En el mercado.', 'En París.'], 0],
           ['¿Cómo es la rana?', 'Comment est la grenouille ?', ['Muy pequeña.', 'Muy grande.', 'Roja.'], 0],
+          ['Según la leyenda, ¿qué pasa si los estudiantes la encuentran?', 'Selon la légende, que se passe-t-il si les étudiants la trouvent ?', ['Aprueban los exámenes.', 'Comen un bocadillo.', 'No tienen clase.'], 0],
         ]),
       tf('La rana es muy grande.', false, 'diego', { tr: 'La grenouille est très grande.' }),
       dlg('diego', 'Mira, ¡la fachada de la Universidad! ¿Ves la rana?', 'Regarde, la façade de l’Université ! Tu vois la grenouille ?', [
@@ -373,14 +374,14 @@ export default function build() {
       conj('hablar', 'nosotros', 'habl', 'amos', ['amos', 'an', 'a'], 'pilar', { tr: 'Nous, nous parlons…' }),
       conj('escuchar', 'tú', 'escuch', 'as', ['o', 'as', 'a'], 'pilar', { tr: 'Toi, tu écoutes…' }),
       reord('El domingo no hay cole.', 'diego', { tr: 'Le dimanche, il n’y a pas école.' }),
-      dict('septiembre', N),
+      dict('septiembre', N, { acept: ['setiembre'] }),
       read('Hola, soy Marina. Hoy es martes. Tengo matemáticas y lengua. En mi mochila hay un libro, dos cuadernos y un estuche.', 'marina',
         'Salut, c’est Marina. Aujourd’hui, c’est mardi. J’ai maths et langue. Dans mon sac à dos, il y a un livre, deux cahiers et une trousse.', [
           ['¿Qué día es hoy?', 'Quel jour est-on aujourd’hui ?', ['Lunes.', 'Martes.', 'Jueves.'], 1],
           ['¿Cuántos cuadernos hay en la mochila?', 'Combien de cahiers y a-t-il dans le sac à dos ?', ['Uno.', 'Dos.', 'Tres.'], 1],
         ]),
       tf('Las notas van de cero a veinte.', false, N, { tr: 'Les notes vont de zéro à vingt.' }),
-      speak('En mi mochila hay un libro y dos cuadernos.', 'pilar', { tr: 'Dans mon sac à dos, il y a un livre et deux cahiers.', hechizo: ['Hechizo final', '¡La campana vuelve a sonar!'] }),
+      speak('En mi mochila hay un libro y dos cuadernos.', 'pilar', { tr: 'Dans mon sac à dos, il y a un livre et deux cahiers.', acept: ['en mi mochila hay un libro y 2 cuadernos'], hechizo: ['Hechizo final', '¡La campana vuelve a sonar!'] }),
       pluma,
     ], { jefe: { personaje: 'sombra', vidas: 7 } }));
 

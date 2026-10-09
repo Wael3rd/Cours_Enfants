@@ -1,6 +1,6 @@
 // Aides d'ecriture des unites (generent le JSON de reference des contenus).
 // Usage : node tools/content/author/build.mjs   (ecrit apps/espagnol/src/content/units/uNN.json)
-import { audioKey, normSpeech } from '../lib.mjs';
+import { audioKey, normSpeech, NOMBRE_LIBRE } from '../lib.mjs';
 
 export const NARR = 'narrador';
 export const reg = new Map(); // registre global du vocabulaire (ordre de construction = ordre des unites)
@@ -47,6 +47,7 @@ export const K = {
   responde: C('Responde.', 'Réponds.'),
   lee: C('Lee y contesta.', 'Lis et réponds.'),
   di: C('Escucha y repite el hechizo.', 'Écoute et répète le sort.'),
+  diNombre: C('Escucha y repite el hechizo con tu nombre.', 'Écoute et répète le sort en disant TON prénom.'),
   vf: C('¿Verdadero o falso?', 'Vrai ou faux ?'),
   ficha: C('Escribe tu ficha de viajero.', 'Écris ta fiche de voyageur.'),
 };
@@ -114,11 +115,22 @@ export const read = (texto, voz, tFr, qs, o = {}) => ({
     pregunta: L(NARR, q, qfr), opciones: opts.map((texto, i) => ({ texto, correcta: i === ok })),
   })),
 });
-export const speak = (es, voz, o = {}) => ({
-  tipo: 'speak', consigna: cons(K.di, o.es, o.fr), objetivo: L(voz, es, o.tr ?? ''),
-  aceptadas: [normSpeech(es), ...(o.acept ?? [])],
-  ...(o.foco ? { foco: o.foco } : {}), ...(o.hechizo ? { hechizo: { nombre: o.hechizo[0], efecto: o.hechizo[1] } } : {}),
-});
+/** o.nombre : prenom du modele ("Álex") que l'eleve peut remplacer par le sien -> patrones + consigne adaptee */
+export const speak = (es, voz, o = {}) => {
+  const aceptadas = [normSpeech(es), ...(o.acept ?? [])];
+  let patrones;
+  if (o.nombre) {
+    const n = normSpeech(o.nombre), n2 = n.normalize('NFD').replace(/\p{M}/gu, '').normalize('NFC');
+    patrones = [...new Set(aceptadas.map((a) => a.split(' ').map((w) => (w === n || w === n2 ? NOMBRE_LIBRE : w)).join(' ')))]
+      .filter((p) => p.includes(NOMBRE_LIBRE));
+    if (!patrones.length) throw new Error(`speak: prenom ${o.nombre} absent de "${es}"`);
+  }
+  return {
+    tipo: 'speak', consigna: o.nombre && !o.es ? K.diNombre : cons(K.di, o.es, o.fr), objetivo: L(voz, es, o.tr ?? ''),
+    aceptadas, ...(patrones ? { patrones } : {}),
+    ...(o.foco ? { foco: o.foco } : {}), ...(o.hechizo ? { hechizo: { nombre: o.hechizo[0], efecto: o.hechizo[1] } } : {}),
+  };
+};
 export const tf = (es, ok, voz, o = {}) => ({
   tipo: 'true_false', consigna: cons(K.vf, o.es, o.fr), afirmacion: L(voz, es, o.tr ?? ''), correcta: ok,
   ...(o.img ? { imagen: o.img } : {}), ...(o.expl ? { explicacion: L(NARR, o.expl[0], o.expl[1]) } : {}),

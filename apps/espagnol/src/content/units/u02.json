@@ -271,7 +271,7 @@
     {
       "id": "lengua",
       "es": "lengua",
-      "fr": "cours de langue espagnole, langue",
+      "fr": "langue (le cours d’espagnol des élèves espagnols, comme notre cours de français)",
       "genero": "f",
       "emoji": "🔤",
       "tags": [
@@ -279,7 +279,7 @@
       ],
       "ejemplo": {
         "es": "El martes tengo lengua.",
-        "fr": "Le mardi, j’ai espagnol (langue).",
+        "fr": "Le mardi, j’ai cours de langue (espagnol).",
         "voz": "narrador",
         "audio": "narrador.20d1fc2e93"
       },
@@ -621,7 +621,7 @@
       ],
       "ejemplo": {
         "es": "El martes tengo lengua.",
-        "fr": "Le mardi, j’ai langue.",
+        "fr": "Le mardi, j’ai cours de langue.",
         "voz": "narrador",
         "audio": "narrador.20d1fc2e93"
       },
@@ -875,10 +875,10 @@
         "meses"
       ],
       "ejemplo": {
-        "es": "En octubre empieza el otoño.",
-        "fr": "En octobre, l’automne commence.",
+        "es": "El doce de octubre es fiesta en España.",
+        "fr": "Le 12 octobre est un jour férié en Espagne.",
         "voz": "narrador",
-        "audio": "narrador.4eefb37fb1"
+        "audio": "narrador.2b944c462c"
       },
       "audio": "narrador.ed4c928435"
     },
@@ -892,10 +892,10 @@
         "meses"
       ],
       "ejemplo": {
-        "es": "El dos de noviembre es el Día de Muertos.",
-        "fr": "Le 2 novembre, c’est le Jour des Morts.",
+        "es": "En México, el Día de Muertos es el uno y el dos de noviembre.",
+        "fr": "Au Mexique, le Jour des Morts, c’est le 1er et le 2 novembre.",
         "voz": "narrador",
-        "audio": "narrador.e3737c7de8"
+        "audio": "narrador.b4312d9978"
       },
       "audio": "narrador.69fab63d9a"
     },
@@ -1015,21 +1015,21 @@
           ]
         },
         {
-          "es": "los profesores",
-          "fr": "les professeurs",
+          "es": "el profesor, los profesores",
+          "fr": "le professeur, les professeurs",
           "voz": "diego",
-          "audio": "diego.7be9457d1d",
+          "audio": "diego.82555cc482",
           "resaltar": [
-            "es"
+            "profesores"
           ]
         },
         {
-          "es": "los lápices",
-          "fr": "les crayons",
+          "es": "el lápiz, los lápices",
+          "fr": "le crayon, les crayons",
           "voz": "diego",
-          "audio": "diego.5ee08148c3",
+          "audio": "diego.64a3253cb9",
           "resaltar": [
-            "ices"
+            "lápices"
           ]
         }
       ],
@@ -1115,7 +1115,7 @@
         "voz": "narrador",
         "audio": "narrador.c9a1a9d856"
       },
-      "pista": "hay = il y a (invariable : « hay una mesa », « hay dos mesas »). Après hay : un/una, un nombre, ou pas d'article. On ne dit pas « hay el libro » mais « hay un libro »."
+      "pista": "hay = il y a (invariable : « hay una mesa », « hay dos mesas »). Après hay : un/una, un nombre (dos, tres…) ou pas d'article (hay flores). On ne dit pas « hay el libro » mais « hay un libro »."
     },
     {
       "id": "g_ar",
@@ -1253,7 +1253,7 @@
         "voz": "narrador",
         "audio": "narrador.9f632c03f8"
       },
-      "pista": "Impératif affirmatif (tu) = forme « él/ella » du présent : abre, cierra, escucha, repite, lee, escribe. Ce sont les ordres que tu entendras toute l'année en classe."
+      "pista": "Impératif affirmatif (tu) = forme « él/ella » du présent : abre, cierra, escucha, repite, lee, escribe (sauf quelques verbes irréguliers que tu verras plus tard). Ce sont les ordres que tu entendras toute l'année en classe."
     },
     {
       "id": "g_fecha",
@@ -1300,12 +1300,12 @@
         }
       ],
       "regla": {
-        "es": "Para la fecha decimos: el, el número, de, el mes. Los días y los meses van con minúscula.",
+        "es": "Para la fecha decimos: el, el número, de, el mes. Los días y los meses se escriben con minúscula.",
         "fr": "Pour la date, on dit : el + le nombre + de + le mois. Les jours et les mois s’écrivent sans majuscule.",
         "voz": "narrador",
-        "audio": "narrador.b8bff9e681"
+        "audio": "narrador.83fa62a61b"
       },
-      "pista": "Format : « el cuatro de mayo » (el + nombre + de + mois). Pas de majuscule aux jours ni aux mois. Pour le 1er : « el uno de mayo » ou « el primero de mayo ». « El lunes » = lundi prochain / chaque lundi selon le contexte."
+      "pista": "Format : « el cuatro de mayo » (el + nombre + de + mois). Pas de majuscule aux jours ni aux mois. Pour le 1er : « el uno de mayo » ou « el primero de mayo ». Devant un jour, on met l'article : « el lunes » = lundi (ce lundi-là, ou le lundi de ton emploi du temps) ; « los lunes » = tous les lundis."
     }
   ],
   "quests": [
@@ -1320,7 +1320,7 @@
         "voz": "marina",
         "audio": "marina.81d9040ae8"
       },
-      "pista": "Arrivée à Salamanque : tu rencontres Diego et Doña Pilar, et l’histoire avance.",
+      "pista": "Arrivée à Salamanque : tu rencontres Diego et doña Pilar, et l’histoire avance.",
       "stats": [
         "escuchar",
         "cultura",
@@ -1395,23 +1395,6 @@
         },
         {
           "id": "u02-q01-s03",
-          "tipo": "true_false",
-          "consigna": {
-            "es": "¿Verdadero o falso?",
-            "fr": "Vrai ou faux ?",
-            "voz": "narrador",
-            "audio": "narrador.d92741ae05"
-          },
-          "afirmacion": {
-            "es": "La campana del colegio suena.",
-            "fr": "La cloche de l’école sonne.",
-            "voz": "narrador",
-            "audio": "narrador.d8fd39da6a"
-          },
-          "correcta": false
-        },
-        {
-          "id": "u02-q01-s04",
           "tipo": "cinematic_ref",
           "cinematica": "u02-historia",
           "escena": {
@@ -1423,7 +1406,7 @@
               {
                 "n": 1,
                 "duracion": 7,
-                "vista": "Cour du Colegio de San Fray Luis : élèves immobiles, silence total. Doña Pilar tient une grande cloche de bronze muette. Diego arrive en courant avec un bocadillo.",
+                "vista": "Cour du Colegio Fray Luis de León : élèves immobiles, silence total. Doña Pilar tient une grande cloche de bronze muette. Diego arrive en courant avec un bocadillo.",
                 "camara": "plan large puis travelling vers Pilar",
                 "personajes": [
                   "pilar",
@@ -1520,6 +1503,23 @@
           }
         },
         {
+          "id": "u02-q01-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La campana del colegio suena.",
+            "fr": "La cloche de l’école sonne.",
+            "voz": "narrador",
+            "audio": "narrador.d8fd39da6a"
+          },
+          "correcta": false
+        },
+        {
           "id": "u02-q01-s05",
           "tipo": "flashcard",
           "vocab": [
@@ -1600,19 +1600,19 @@
           },
           "pnj": "pilar",
           "replica": {
-            "es": "Buenos días. Soy Doña Pilar, la profesora. ¿Cómo te llamas?",
-            "fr": "Bonjour. Je suis Doña Pilar, la professeure. Comment tu t’appelles ?",
+            "es": "Buenos días. Soy doña Pilar, la profesora. ¿Cómo te llamas?",
+            "fr": "Bonjour. Je suis doña Pilar, la professeure. Comment tu t’appelles ?",
             "voz": "pilar",
-            "audio": "pilar.5062fa3723"
+            "audio": "pilar.14d31a0308"
           },
           "opciones": [
             {
               "habla": {
-                "es": "Buenos días, Doña Pilar. Me llamo Álex.",
+                "es": "Buenos días, doña Pilar. Me llamo Álex.",
                 "voz": "viajero",
-                "audio": "viajero.f6f00351ca"
+                "audio": "viajero.f90d5130bc"
               },
-              "fr": "Bonjour, Doña Pilar. Je m’appelle Álex.",
+              "fr": "Bonjour, doña Pilar. Je m’appelle Álex.",
               "correcta": true,
               "reaccion": {
                 "es": "Muy bien, Álex. Bienvenido al cole.",
@@ -1624,17 +1624,17 @@
             },
             {
               "habla": {
-                "es": "Hola, Pilar, ¿qué tal?",
+                "es": "Buenas noches, profesora.",
                 "voz": "viajero",
-                "audio": "viajero.60fce6d036"
+                "audio": "viajero.a49dd291a5"
               },
-              "fr": "Salut, Pilar, ça va ?",
+              "fr": "Bonne nuit, professeure.",
               "correcta": false,
               "reaccion": {
-                "es": "En clase, «Doña Pilar» o «profesora», por favor.",
-                "fr": "En classe, « Doña Pilar » ou « profesora », s’il vous plaît.",
+                "es": "¿Buenas noches? ¡Son las nueve de la mañana!",
+                "fr": "Bonne nuit ? Il est neuf heures du matin !",
                 "voz": "pilar",
-                "audio": "pilar.86c3fc71f8",
+                "audio": "pilar.4838f1b095",
                 "emoji": "🤨"
               }
             },
@@ -1752,8 +1752,8 @@
           "objetivo": {
             "es": "Buenos días, profesora.",
             "fr": "Bonjour, professeure.",
-            "voz": "pilar",
-            "audio": "pilar.65ad0df11a"
+            "voz": "viajero",
+            "audio": "viajero.65ad0df11a"
           },
           "aceptadas": [
             "buenos días profesora"
@@ -1870,36 +1870,6 @@
         },
         {
           "id": "u02-q02-s05",
-          "tipo": "listen_choose",
-          "consigna": {
-            "es": "Escucha y elige la imagen.",
-            "fr": "Écoute et choisis l'image.",
-            "voz": "narrador",
-            "audio": "narrador.34edf25feb"
-          },
-          "habla": {
-            "es": "mochila",
-            "voz": "narrador",
-            "audio": "narrador.a02f4c78a6"
-          },
-          "modo": "imagen",
-          "opciones": [
-            {
-              "vocab": "mochila",
-              "correcta": true
-            },
-            {
-              "vocab": "estuche",
-              "correcta": false
-            },
-            {
-              "vocab": "silla",
-              "correcta": false
-            }
-          ]
-        },
-        {
-          "id": "u02-q02-s06",
           "tipo": "match_image",
           "consigna": {
             "es": "Une cada palabra con su imagen.",
@@ -1929,12 +1899,12 @@
           ]
         },
         {
-          "id": "u02-q02-s07",
+          "id": "u02-q02-s06",
           "tipo": "grammar_card",
           "ref": "g_articulos"
         },
         {
-          "id": "u02-q02-s08",
+          "id": "u02-q02-s07",
           "tipo": "fill_blank",
           "consigna": {
             "es": "Completa la frase.",
@@ -1957,7 +1927,7 @@
           "fr": "Ouvre le livre."
         },
         {
-          "id": "u02-q02-s09",
+          "id": "u02-q02-s08",
           "tipo": "fill_blank",
           "consigna": {
             "es": "Completa la frase.",
@@ -1980,7 +1950,7 @@
           "fr": "J’ai une gomme dans la trousse."
         },
         {
-          "id": "u02-q02-s10",
+          "id": "u02-q02-s09",
           "tipo": "fill_blank",
           "consigna": {
             "es": "Completa la frase.",
@@ -2003,7 +1973,7 @@
           "fr": "Marina a un ordinateur."
         },
         {
-          "id": "u02-q02-s11",
+          "id": "u02-q02-s10",
           "tipo": "dialogue_choice",
           "consigna": {
             "es": "Responde.",
@@ -2070,7 +2040,7 @@
           ]
         },
         {
-          "id": "u02-q02-s12",
+          "id": "u02-q02-s11",
           "tipo": "listen_choose",
           "consigna": {
             "es": "Escucha y elige la imagen.",
@@ -2100,7 +2070,7 @@
           ]
         },
         {
-          "id": "u02-q02-s13",
+          "id": "u02-q02-s12",
           "tipo": "reorder_words",
           "consigna": {
             "es": "Ordena las palabras.",
@@ -2124,9 +2094,32 @@
           "fr": "J’ai une trousse et une règle."
         },
         {
-          "id": "u02-q02-s14",
+          "id": "u02-q02-s13",
           "tipo": "grammar_card",
           "ref": "g_plural"
+        },
+        {
+          "id": "u02-q02-s14",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En mi estuche hay tres ___.",
+          "respuesta": "lápices",
+          "opciones": [
+            "lápiz",
+            "lápizes",
+            "lápices"
+          ],
+          "habla": {
+            "es": "En mi estuche hay tres lápices.",
+            "voz": "diego",
+            "audio": "diego.9a9cb20219"
+          },
+          "fr": "Dans ma trousse, il y a trois crayons."
         },
         {
           "id": "u02-q02-s15",
@@ -2343,7 +2336,7 @@
           },
           "texto": {
             "es": "Mi horario. El lunes tengo matemáticas y lengua. El martes tengo inglés. El miércoles tengo historia y geografía. El jueves tengo música y ciencias. El viernes tengo educación física. El sábado y el domingo no hay cole.",
-            "fr": "Mon emploi du temps. Le lundi, j’ai maths et langue. Le mardi, j’ai anglais. Le mercredi, j’ai histoire et géographie. Le jeudi, j’ai musique et sciences. Le vendredi, j’ai EPS. Le samedi et le dimanche, il n’y a pas école.",
+            "fr": "Mon emploi du temps. Le lundi, j’ai maths et cours de langue (espagnol). Le mardi, j’ai anglais. Le mercredi, j’ai histoire et géographie. Le jeudi, j’ai musique et sciences. Le vendredi, j’ai EPS. Le samedi et le dimanche, il n’y a pas école.",
             "voz": "diego",
             "audio": "diego.03f9fd3980"
           },
@@ -2416,10 +2409,10 @@
           "id": "u02-q03-s10",
           "tipo": "fill_blank",
           "consigna": {
-            "es": "Completa la frase.",
-            "fr": "Complète la phrase.",
+            "es": "Mira el horario de Diego y completa.",
+            "fr": "Regarde l’emploi du temps de Diego et complète.",
             "voz": "narrador",
-            "audio": "narrador.c8dfcbb8f1"
+            "audio": "narrador.4b7628b763"
           },
           "frase": "El ___ tengo educación física.",
           "respuesta": "viernes",
@@ -2472,10 +2465,7 @@
             "voz": "diego",
             "audio": "diego.cb77fbdee8"
           },
-          "respuesta": "El jueves tengo música.",
-          "aceptadas": [
-            "el jueves tengo musica"
-          ]
+          "respuesta": "El jueves tengo música."
         },
         {
           "id": "u02-q03-s13",
@@ -3639,10 +3629,10 @@
             },
             {
               "pregunta": {
-                "es": "¿Qué tiene el martes?",
-                "fr": "Qu’a-t-il le mardi ?",
+                "es": "¿Qué asignatura tiene Diego el martes?",
+                "fr": "Quelle matière Diego a-t-il le mardi ?",
                 "voz": "narrador",
-                "audio": "narrador.4621fdddf4"
+                "audio": "narrador.26bac43cb8"
               },
               "opciones": [
                 {
@@ -3665,10 +3655,10 @@
           "id": "u02-q06-s10",
           "tipo": "fill_blank",
           "consigna": {
-            "es": "Completa la frase.",
-            "fr": "Complète la phrase.",
+            "es": "Completa con el texto de Diego.",
+            "fr": "Complète d’après le texte de Diego.",
             "voz": "narrador",
-            "audio": "narrador.c8dfcbb8f1"
+            "audio": "narrador.809053f91a"
           },
           "frase": "Hoy es ___, nueve de octubre.",
           "respuesta": "viernes",
@@ -3811,7 +3801,7 @@
           "campos": [
             {
               "id": "dia",
-              "pista": "Le jour de ton anniversaire (en lettres : cuatro, doce…)",
+              "pista": "Le jour de ton anniversaire, en lettres (uno, cuatro, doce, veintitrés…)",
               "tipo": "texto"
             },
             {
@@ -3844,7 +3834,8 @@
             "audio": "diego.36aa06f1a3"
           },
           "aceptadas": [
-            "hoy es viernes nueve de octubre"
+            "hoy es viernes nueve de octubre",
+            "hoy es viernes 9 de octubre"
           ],
           "hechizo": {
             "nombre": "Hechizo del calendario",
@@ -3864,7 +3855,7 @@
         "voz": "pilar",
         "audio": "pilar.f6d25eef6f"
       },
-      "pista": "L’école en Espagne (récré, notes sur 10, pas d’uniforme) et la légende de la grenouille de Salamanque.",
+      "pista": "L’école en Espagne (récré, notes sur 10 avec 5 pour réussir, souvent pas d’uniforme dans le public) et la légende de la grenouille de Salamanque.",
       "stats": [
         "cultura",
         "leer",
@@ -3889,10 +3880,10 @@
                 "camara": "plan fixe, animations de papier découpé",
                 "lineas": [
                   {
-                    "es": "En el recreo, los alumnos comen un bocadillo.",
-                    "fr": "À la récré, les élèves mangent un sandwich.",
+                    "es": "En el recreo, muchos alumnos comen un bocadillo.",
+                    "fr": "À la récré, beaucoup d’élèves mangent un sandwich (un bocadillo).",
                     "voz": "narrador",
-                    "audio": "narrador.a199b0b009"
+                    "audio": "narrador.f9b06d7f6b"
                   }
                 ]
               },
@@ -3912,13 +3903,13 @@
               {
                 "n": 3,
                 "duracion": 5,
-                "vista": "Salle de classe, élèves en vêtements normaux (pas d’uniforme) ; deux call-outs « profe » et « cole » apparaissent.",
+                "vista": "Salle de classe d’un collège public, élèves en vêtements normaux (pas d’uniforme) ; deux call-outs « profe » et « cole » apparaissent.",
                 "lineas": [
                   {
-                    "es": "Muchos alumnos no llevan uniforme. Y dicen «profe» y «cole».",
-                    "fr": "Beaucoup d’élèves ne portent pas d’uniforme. Et ils disent « profe » et « cole ».",
+                    "es": "En los colegios públicos, normalmente no hay uniforme. Y los alumnos dicen «profe» y «cole».",
+                    "fr": "Dans les écoles publiques, en général, il n’y a pas d’uniforme. Et les élèves disent « profe » (prof) et « cole » (école).",
                     "voz": "narrador",
-                    "audio": "narrador.58471f9faf"
+                    "audio": "narrador.e843541c72"
                   }
                 ]
               },
@@ -3982,10 +3973,10 @@
             "audio": "narrador.d92741ae05"
           },
           "afirmacion": {
-            "es": "En el recreo los alumnos comen un bocadillo.",
-            "fr": "À la récré, les élèves mangent un sandwich.",
+            "es": "En el recreo, muchos alumnos comen un bocadillo.",
+            "fr": "À la récré, beaucoup d’élèves mangent un sandwich.",
             "voz": "narrador",
-            "audio": "narrador.f7e3df5614"
+            "audio": "narrador.f9b06d7f6b"
           },
           "correcta": true
         },
@@ -4059,10 +4050,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama Doña Pilar.",
-            "fr": "Salut, c’est Diego. Dans mon école, les cours commencent le matin. À la récré, je mange un sandwich avec mes camarades. Il n’y a pas d’uniforme. Ma prof préférée s’appelle Doña Pilar.",
+            "es": "Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama doña Pilar.",
+            "fr": "Salut, c’est Diego. Dans mon école, les cours commencent le matin. À la récré, je mange un sandwich avec mes camarades. Il n’y a pas d’uniforme. Ma prof préférée s’appelle doña Pilar.",
             "voz": "diego",
-            "audio": "diego.6293421504"
+            "audio": "diego.92071d170f"
           },
           "preguntas": [
             {
@@ -4139,10 +4130,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los alumnos la buscan. Si la encuentran, tienen suerte.",
-            "fr": "À l’Université de Salamanque, il y a une grenouille de pierre. Elle est très petite et se trouve sur la façade. Les élèves la cherchent. S’ils la trouvent, ils ont de la chance.",
+            "es": "En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los estudiantes la buscan. Según la leyenda, si la encuentran, ¡aprueban los exámenes!",
+            "fr": "À l’Université de Salamanque, il y a une grenouille de pierre. Elle est très petite et se trouve sur la façade. Les étudiants la cherchent. Selon la légende, s’ils la trouvent, ils réussissent leurs examens !",
             "voz": "pilar",
-            "audio": "pilar.62afeb8102"
+            "audio": "pilar.aebabb155e"
           },
           "preguntas": [
             {
@@ -4185,6 +4176,28 @@
                 },
                 {
                   "texto": "Roja.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "Según la leyenda, ¿qué pasa si los estudiantes la encuentran?",
+                "fr": "Selon la légende, que se passe-t-il si les étudiants la trouvent ?",
+                "voz": "narrador",
+                "audio": "narrador.9f0c921a38"
+              },
+              "opciones": [
+                {
+                  "texto": "Aprueban los exámenes.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Comen un bocadillo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "No tienen clase.",
                   "correcta": false
                 }
               ]
@@ -4731,7 +4744,10 @@
             "voz": "narrador",
             "audio": "narrador.ba8e2b5f5f"
           },
-          "respuesta": "septiembre"
+          "respuesta": "septiembre",
+          "aceptadas": [
+            "setiembre"
+          ]
         },
         {
           "id": "u02-q08-s12",
@@ -4828,7 +4844,8 @@
             "audio": "pilar.6b4c8be5d7"
           },
           "aceptadas": [
-            "en mi mochila hay un libro y dos cuadernos"
+            "en mi mochila hay un libro y dos cuadernos",
+            "en mi mochila hay un libro y 2 cuadernos"
           ],
           "hechizo": {
             "nombre": "Hechizo final",

@@ -9,7 +9,7 @@ export default function build() {
   const vocab = [
     // familia
     W('familia', 'familia', 'famille', '👪', 'familia', 'La familia de Marina es grande.', 'La famille de Marina est grande.', { genero: 'f' }),
-    W('padres', 'padres', 'parents', '👨‍👩‍👧', 'familia', 'Mis padres se llaman Ana y Javier.', 'Mes parents s’appellent Ana et Javier.', { genero: 'm' }),
+    W('padres', 'padres', 'parents (le père et la mère)', '👫', 'familia', 'Mis padres se llaman Ana y Javier.', 'Mes parents s’appellent Ana et Javier.', { genero: 'm' }),
     W('madre', 'madre', 'mère', '👩‍👧', 'familia', 'Mi madre es médica.', 'Ma mère est médecin.', { genero: 'f' }),
     W('padre', 'padre', 'père', '👨‍👦', 'familia', 'Mi padre se llama Javier.', 'Mon père s’appelle Javier.', { genero: 'm' }),
     W('hermano', 'hermano', 'frère', null, 'familia', 'Marina tiene un hermano pequeño.', 'Marina a un petit frère.', { genero: 'm', femenino: 'hermana', ...ilu('Un garçon qui sourit, avec le même t-shirt que sa sœur') }),
@@ -43,10 +43,10 @@ export default function build() {
     W('jardin', 'jardín', 'jardin', '🌷', 'casa', 'Hay un jardín con flores.', 'Il y a un jardin avec des fleurs.', { genero: 'm' }),
     W('patio', 'patio', 'patio, cour intérieure', '⛲', 'casa', 'El patio de la abuela tiene flores.', 'Le patio de la grand-mère a des fleurs.', { genero: 'm', ...ilu('Un patio andalou avec fontaine, pots de géraniums et sol en mosaïque') }),
     // posesivos
-    W('mi', 'mi', 'mon, ma, mes', null, 'posesivos', 'Mi madre se llama Ana.', 'Ma mère s’appelle Ana.', ilu('Une main qui pointe vers soi, avec le mot « mi »')),
-    W('tu_pos', 'tu', 'ton, ta, tes', null, 'posesivos', '¿Cómo se llama tu padre?', 'Comment s’appelle ton père ?', ilu('Une main qui pointe vers l’autre personne, avec le mot « tu »')),
-    W('su', 'su', 'son, sa, ses, leur', null, 'posesivos', 'Su abuela vive en Sevilla.', 'Sa grand-mère habite à Séville.', ilu('Une flèche qui part d’une personne vers un objet lointain, avec le mot « su »')),
-    W('nuestro', 'nuestro', 'notre, nos', null, 'posesivos', 'Nuestra casa está en Sevilla.', 'Notre maison est à Séville.', { femenino: 'nuestra', ...ilu('Deux personnes qui tiennent ensemble un même objet, avec le mot « nuestro »') }),
+    W('mi', 'mi', 'mon, ma (au pluriel : mis = mes)', null, 'posesivos', 'Mi madre se llama Ana.', 'Ma mère s’appelle Ana.', ilu('Une main qui pointe vers soi, avec le mot « mi »')),
+    W('tu_pos', 'tu', 'ton, ta (au pluriel : tus = tes)', null, 'posesivos', '¿Cómo se llama tu padre?', 'Comment s’appelle ton père ?', ilu('Une main qui pointe vers l’autre personne, avec le mot « tu »')),
+    W('su', 'su', 'son, sa, leur (au pluriel : sus = ses, leurs)', null, 'posesivos', 'Su abuela vive en Sevilla.', 'Sa grand-mère habite à Séville.', ilu('Une flèche qui part d’une personne vers un objet lointain, avec le mot « su »')),
+    W('nuestro', 'nuestro', 'notre (nuestros, nuestras = nos)', null, 'posesivos', 'Nuestra casa está en Sevilla.', 'Notre maison est à Séville.', { femenino: 'nuestra', ...ilu('Deux personnes qui tiennent ensemble un même objet, avec le mot « nuestro »') }),
     // verbos
     W('comer', 'comer', 'manger', '🍽️', 'verbos', 'Comemos en el patio.', 'Nous mangeons dans le patio.'),
     W('beber', 'beber', 'boire', '🥤', 'verbos', 'Lola bebe leche.', 'Lola boit du lait.'),
@@ -59,7 +59,7 @@ export default function build() {
     W('mayor', 'mayor', 'âgé, plus âgé, grand (frère/sœur)', '🧓', 'adjetivos', 'Mi abuelo es muy mayor.', 'Mon grand-père est très âgé.', { genero: 'mf' }),
     W('pequeno', 'pequeño', 'petit', '🐜', 'adjetivos', 'Mi hermano es pequeño.', 'Mon frère est petit.', { genero: 'm', femenino: 'pequeña' }),
     W('grande', 'grande', 'grand', '🐘', 'adjetivos', 'Mi familia es muy grande.', 'Ma famille est très grande.', { genero: 'mf' }),
-    W('cuantos', '¿cuántos?', 'combien ? (masculin pluriel)', '🔢', 'preguntas', '¿Cuántos hermanos tienes?', 'Combien de frères as-tu ?', { femenino: '¿cuántas?' }),
+    W('cuantos', '¿cuántos?', 'combien ? (masculin pluriel)', '🔢', 'preguntas', '¿Cuántos hermanos tienes?', 'Combien de frères et sœurs as-tu ?', { femenino: '¿cuántas?' }),
     W('tambien', 'también', 'aussi', '➕', 'conectores', 'Marina también tiene un gato.', 'Marina aussi a un chat.'),
   ];
 
@@ -72,33 +72,33 @@ export default function build() {
       ['Mis padres viven en Madrid.', 'Mes parents habitent à Madrid.', 'marina', ['Mis']],
     ], 'Mi, tu y su van antes del nombre. Con un nombre plural: mis, tus y sus. Para «nosotros»: nuestro y nuestra.',
     'Mi, tu et su se placent avant le nom. Avec un nom pluriel : mis, tus, sus. Pour « nous » : nuestro, nuestra.',
-    "Pas d'accent sur ces possessifs (≠ mí, tú pronoms). Ils s'accordent avec la chose possédée, pas avec le possesseur : su = son, sa, ses, leur. Mi madre (ma mère), mis padres (mes parents).",
+    "Pas d'accent sur ces possessifs (tu = ton/ta ; tú avec accent = toi). Ils s'accordent en nombre avec la chose possédée, pas avec le possesseur : mi madre (ma mère), mis padres (mes parents). Su = son, sa ou leur ; sus = ses ou leurs. Nuestro s'accorde aussi en genre : nuestro padre, nuestra casa.",
     { encabezado: ['', 'singular', 'plural'], filas: [['yo', 'mi', 'mis'], ['tú', 'tu', 'tus'], ['él / ella', 'su', 'sus'], ['nosotros', 'nuestro / nuestra', 'nuestros / nuestras']] }),
     G('g_profesion', 'Mi madre es médica', 'Les métiers', [
       ['Mi padre es médico.', 'Mon père est médecin.', 'marina', ['médico']],
       ['Mi madre es médica.', 'Ma mère est médecin.', 'marina', ['médica']],
       ['Mi tía es policía.', 'Ma tante est policière.', 'marina', ['policía']],
       ['Mi abuela es artista.', 'Ma grand-mère est artiste.', 'marina', ['artista']],
-    ], 'Para las profesiones usamos «ser». Chico: -o. Chica: -a. Policía y artista no cambian. No usamos «un» ni «una» después de «ser».',
-    'Pour les métiers, on utilise « ser ». Garçon : -o. Fille : -a. Policía et artista ne changent pas. On n’emploie pas « un » ni « una » après « ser ».',
-    "Métier avec ser et sans article : « Mi padre es médico » (pas « un médico »). Féminin : -o → -a (cocinero → cocinera). Les mots en -a ou -ista (policía, artista) sont identiques au masculin et au féminin.",
+    ], 'Para las profesiones usamos «ser», sin «un» ni «una». Para un hombre: -o. Para una mujer: -a. Policía y artista no cambian.',
+    'Pour les métiers, on utilise « ser », sans « un » ni « una ». Pour un homme : -o. Pour une femme : -a. Policía et artista ne changent pas.',
+    "Métier avec ser et sans article : « Mi padre es médico » (pas « es un médico »). Féminin : -o → -a (cocinero → cocinera) ; consonne → + a (conductor → conductora). Les métiers en -ista (artista) et policía sont identiques au masculin et au féminin. On remet un article seulement si on ajoute un adjectif : « es un médico muy bueno ».",
     { encabezado: ['él', 'ella'], filas: [['médico', 'médica'], ['cocinero', 'cocinera'], ['bombero', 'bombera'], ['policía', 'policía'], ['artista', 'artista']] }),
     G('g_er_ir', 'Comer y vivir', 'Les verbes en -er et -ir', [
       ['Yo como en el patio.', 'Je mange dans le patio.', 'rafa', ['como']],
       ['Tú vives en Madrid.', 'Tu habites à Madrid.', 'marina', ['vives']],
       ['Mi abuelo bebe café.', 'Mon grand-père boit du café.', 'marina', ['bebe']],
       ['Nosotros compartimos la casa.', 'Nous partageons la maison.', 'marina', ['compartimos']],
-    ], 'Los verbos en -er: como, comes, come, comemos, coméis, comen. Los verbos en -ir: vivo, vives, vive, vivimos, vivís, viven. Solo cambian nosotros y vosotros.',
-    'Verbes en -er : como, comes, come, comemos, coméis, comen. Verbes en -ir : vivo, vives, vive, vivimos, vivís, viven. Seuls nosotros et vosotros changent.',
+    ], 'Los verbos en -er: como, comes, come, comemos, coméis, comen. Los verbos en -ir: vivo, vives, vive, vivimos, vivís, viven. Son iguales, menos con nosotros y vosotros.',
+    'Verbes en -er : como, comes, come, comemos, coméis, comen. Verbes en -ir : vivo, vives, vive, vivimos, vivís, viven. Ce sont les mêmes terminaisons, sauf avec nosotros et vosotros.',
     "-er et -ir ont les mêmes terminaisons sauf à nosotros (-emos / -imos) et vosotros (-éis / -ís). Même logique qu'avec -ar : on retire l'infinitif et on ajoute la terminaison.",
     { encabezado: ['Pronombre', 'comer', 'vivir'], filas: [['yo', 'como', 'vivo'], ['tú', 'comes', 'vives'], ['él / ella', 'come', 'vive'], ['nosotros', 'comemos', 'vivimos'], ['vosotros', 'coméis', 'vivís'], ['ellos / ellas', 'comen', 'viven']] }),
     G('g_tener_ser', 'Tener y ser', 'Avoir et être', [
       ['Tengo dos hermanos.', 'J’ai deux frères et sœurs.', 'marina', ['Tengo']],
       ['Mi madre es médica.', 'Ma mère est médecin.', 'marina', ['es']],
-      ['Mi tío Rafa tiene un gato.', 'Mon oncle Rafa a un chat.', 'lola', ['tiene']],
+      ['Mi tío Rafa tiene un gato.', 'Mon oncle Rafa a un chat.', 'marina', ['tiene']],
       ['Somos una familia grande.', 'Nous sommes une grande famille.', 'rafa', ['Somos']],
-    ], 'Con «tener» decimos lo que tenemos: hermanos, un gato, una casa. Con «ser» decimos quién es una persona.',
-    'Avec « tener », on dit ce qu’on a : des frères et sœurs, un chat, une maison. Avec « ser », on dit qui est une personne.',
+    ], 'Con «tener» decimos lo que tenemos: hermanos, un gato, una casa. Con «ser» decimos quién es una persona: su nombre, su profesión, su nacionalidad.',
+    'Avec « tener », on dit ce qu’on a : des frères et sœurs, un chat, une maison. Avec « ser », on dit qui est une personne : son prénom, son métier, sa nationalité.',
     "Tener : tengo (irrégulier), tienes, tiene, tenemos, tenéis, tienen (e → ie, sauf nosotros et vosotros). Ser est irrégulier partout : soy, eres, es, somos, sois, son.",
     { encabezado: ['Pronombre', 'tener', 'ser'], filas: [['yo', 'tengo', 'soy'], ['tú', 'tienes', 'eres'], ['él / ella', 'tiene', 'es'], ['nosotros', 'tenemos', 'somos'], ['vosotros', 'tenéis', 'sois'], ['ellos / ellas', 'tienen', 'son']] }),
   ];
@@ -110,7 +110,7 @@ export default function build() {
   ]);
   const historia = cine('u03-historia', 'historia', 'El árbol sin nombres', [
     P(7, "Ruelle étroite de Triana, façades blanches, azulejos colorés, pots de fleurs. Marina court vers une porte bleue ; Álex la suit.", [
-      L('marina', '¡Abuela! ¡Estoy en casa!', 'Grand-mère ! Je suis à la maison !'),
+      L('marina', '¡Abuela! ¡Ya estamos aquí!', 'Grand-mère ! On est là !'),
       L('abuela_carmen', '¡Marina, cariño! ¡Qué alegría!', 'Marina, mon chou ! Quelle joie !'),
     ], { personajes: ['marina', 'abuela_carmen', 'viajero'], camara: 'suivi à hauteur d’enfant' }),
     P(7, "Patio andalou : fontaine, géraniums, sol en mosaïque. Abuela Carmen serre Marina dans ses bras. Lola arrive en courant avec un chat orange.", [
@@ -119,7 +119,7 @@ export default function build() {
       L('lola', '¿Cómo te llamas? ¿De dónde eres? ¿Cuántos años tienes?', 'Comment tu t’appelles ? D’où viens-tu ? Quel âge as-tu ?'),
     ], { personajes: ['abuela_carmen', 'marina', 'lola', 'viajero'] }),
     P(7, "Atelier de céramique : au fond, une grande fresque d’azulejos « El árbol de la familia ». Les noms sont effacés par des taches d’ombre noire.", [
-      L('abuela_carmen', 'Mira, es nuestro árbol de la familia. Pero los nombres no están.', 'Regarde, c’est notre arbre de famille. Mais les noms ne sont plus là.'),
+      L('abuela_carmen', 'Mira, es el árbol de nuestra familia. ¡Pero los nombres no están!', 'Regarde, c’est l’arbre de notre famille. Mais les noms ne sont plus là !'),
       L('sombra', 'Sin nombres, no hay familia…', 'Sans noms, pas de famille…'),
     ], { personajes: ['abuela_carmen', 'sombra'], musica: 'tension douce, guitare espagnole' }),
     P(7, "Gros plan sur le Quetzal : un carreau vert brille au centre de la fresque. Tío Rafa entre avec une guitare et une casserole.", [
@@ -162,8 +162,8 @@ export default function build() {
       ]),
       tf('Rafa es cocinero.', true, N, { tr: 'Rafa est cuisinier.' }),
       tf('El árbol de la familia tiene todos los nombres.', false, N, { tr: 'L’arbre de la famille a tous les noms.' }),
-      reord('Esta es mi casa.', 'abuela_carmen', { tr: 'Ceci est ma maison.' }),
-      speak('Encantado, me llamo Álex.', 'abuela_carmen', { tr: 'Enchanté, je m’appelle Álex.', hechizo: ['Hechizo de la bienvenida', 'Los azulejos del patio brillan de colores'] }),
+      reord('Esta es mi casa.', 'abuela_carmen', { tr: 'Voici ma maison.' }),
+      speak('Encantado, me llamo Álex.', 'viajero', { tr: 'Enchanté, je m’appelle Álex. (dis ton prénom)', nombre: 'Álex', hechizo: ['Hechizo de la bienvenida', 'Los azulejos del patio brillan de colores'] }),
     ]));
 
   // 2 — Árbol genealógico
@@ -173,13 +173,13 @@ export default function build() {
       flash('familia', 'padres', 'madre', 'padre', 'abuelo', 'abuela'),
       flash('hermano', 'hermana', 'tio', 'tia', 'primo', 'prima'),
       lcV('madre', ['madre', 'abuela', 'padre']),
-      match(['padre', 'madre', 'abuelo', 'abuela', 'padres', 'familia']),
+      match(['padre', 'madre', 'abuelo', 'abuela', 'familia', 'prima']),
       flash('foto', 'arbol', 'apellido'),
       flash('mi', 'tu_pos', 'su', 'nuestro'),
       gram('g_posesivos'),
-      fill('___ madre se llama Ana.', 'Mi', 'marina', { opts: ['Mi', 'Mis', 'Tu'], tr: 'Ma mère s’appelle Ana.' }),
-      fill('¿Cómo se llama ___ padre?', 'tu', 'lola', { opts: ['tu', 'tus', 'su'], tr: 'Comment s’appelle ton père ?' }),
-      fill('Mis ___ viven en Madrid.', 'padres', 'marina', { opts: ['padre', 'padres', 'madres'], tr: 'Mes parents habitent à Madrid.' }),
+      fill('___ madre se llama Ana.', 'Mi', 'marina', { opts: ['Mi', 'Mis', 'Mí'], tr: 'Ma mère s’appelle Ana.' }),
+      fill('¿Cómo se llama ___ padre?', 'tu', 'lola', { opts: ['tu', 'tus', 'tú'], tr: 'Comment s’appelle ton père ?' }),
+      fill('Mis ___ viven en Madrid.', 'padres', 'marina', { opts: ['padre', 'padres', 'madre'], tr: 'Mes parents habitent à Madrid.' }),
       reord('Mi abuela se llama Carmen.', 'marina', { tr: 'Ma grand-mère s’appelle Carmen.' }),
       dlg('lola', '¿Cómo se llama tu madre?', 'Comment s’appelle ta mère ?', [
         ['Mi madre se llama Claire.', 1, '¡Qué nombre más bonito!', 'Quel joli prénom !', 'Ma mère s’appelle Claire.'],
@@ -193,7 +193,7 @@ export default function build() {
 
   // 3 — Fotos de familia
   quests.push(quest('u03', 3, 'escucha', 'Fotos de familia', '📷',
-    ['lola', '¡Mira, mira! ¡Tengo fotos! ¿Quieres ver mi familia?', 'Regarde, regarde ! J’ai des photos ! Tu veux voir ma famille ?'],
+    ['lola', '¡Mira, mira! ¡Tengo fotos! ¿Quieres ver a mi familia?', 'Regarde, regarde ! J’ai des photos ! Tu veux voir ma famille ?'],
     'Les animaux et les métiers de la famille ; tu comprends des descriptions de photos.', ['escuchar', 'leer', 'hablar'], 14, [
       flash('perro', 'gato'),
       flash('medico', 'ingeniero', 'cocinero', 'policia'),
@@ -210,7 +210,7 @@ export default function build() {
           ['¿Qué es Ana?', 'Quel est le métier d’Ana ?', ['Médica.', 'Policía.', 'Cocinera.'], 0],
           ['¿Quién es cocinero?', 'Qui est cuisinier ?', ['Rafa.', 'Javier.', 'Carmen.'], 0],
         ]),
-      fill('Mi madre es ___.', 'médica', 'marina', { opts: ['médico', 'médica', 'médicas'], tr: 'Ma mère est médecin.' }),
+      fill('Mi tía Elena es ___.', 'policía', 'marina', { opts: ['policía', 'policío', 'policías'], tr: 'Ma tante Elena est policière.' }),
       fill('Mi tío Rafa es ___.', 'cocinero', 'marina', { opts: ['cocinero', 'cocinera', 'cocineros'], tr: 'Mon oncle Rafa est cuisinier.' }),
       reord('Mi padre es ingeniero.', 'marina', { tr: 'Mon père est ingénieur.' }),
       dlg('lola', '¿Tienes un perro o un gato?', 'Tu as un chien ou un chat ?', [
@@ -223,7 +223,7 @@ export default function build() {
 
   // 4 — Forja -er / -ir
   quests.push(quest('u03', 4, 'forja', 'La Forja: comer, vivir, tener', '⚒️',
-    ['quetzal', 'Comer, vivir… verbos fuertes. ¡Forja, amigo!', 'Manger, vivre… des verbes puissants. Forge, mon ami !'],
+    ['quetzal', 'Comer, vivir… verbos importantes. ¡Forja, amigo!', 'Manger, habiter… des verbes importants. Forge, mon ami !'],
     'Le présent des verbes en -er / -ir, puis tener et ser.', ['escribir', 'leer'], 14, [
       flash('comer', 'beber', 'vivir', 'leer', 'escribir', 'compartir', 'trabajar'),
       gram('g_er_ir'),
@@ -270,7 +270,7 @@ export default function build() {
       writeFree('Mi casa es ___. Hay ___ dormitorios y un ___.', [
         { id: 'adjetivo', pista: 'Comment est ta maison ? (grande, pequeña…)', tipo: 'texto' },
         { id: 'dormitorios', pista: 'Le nombre de chambres', tipo: 'numero' },
-        { id: 'lugar', pista: 'Une pièce ou un lieu (salón, jardín, patio…)', tipo: 'texto' },
+        { id: 'lugar', pista: 'Une autre pièce, au masculin car il y a « un » (salón, baño, jardín, patio…)', tipo: 'texto' },
       ], 'Mi casa es grande. Hay tres dormitorios y un salón.', 'Ma maison est grande. Il y a trois chambres et un salon.'),
       speak('En mi casa hay un salón y una cocina.', 'marina', { tr: 'Dans ma maison, il y a un salon et une cuisine.', hechizo: ['Hechizo de la casa', 'Las paredes se llenan de muebles dorados'] }),
     ]));
@@ -283,9 +283,10 @@ export default function build() {
       dlg('lola', '¿Cuántos hermanos tienes?', 'Combien de frères et sœurs as-tu ?', [
         ['Tengo un hermano.', 1, '¡Un hermano! Yo no tengo hermanos.', 'Un frère ! Moi, je n’ai pas de frères et sœurs.', 'J’ai un frère.'],
         ['Tengo dos hermanas.', 1, '¡Dos hermanas! ¡Qué suerte!', 'Deux sœurs ! Quelle chance !', 'J’ai deux sœurs.'],
+        ['No tengo hermanos.', 1, '¡Como yo! Pero tengo un gato.', 'Comme moi ! Mais j’ai un chat.', 'Je n’ai pas de frères et sœurs.'],
         ['Soy de Francia.', 0, 'Eso ya lo sé. ¿Cuántos hermanos?', 'Ça, je le sais déjà. Combien de frères et sœurs ?', 'Je suis de France.'],
       ]),
-      dlg('rafa', '¿Cómo se llama tu padre? ¿Qué es?', 'Comment s’appelle ton père ? Quel est son métier ?', [
+      dlg('rafa', '¿Cómo se llama tu padre? ¿En qué trabaja?', 'Comment s’appelle ton père ? Quel est son métier ?', [
         ['Mi padre se llama Paul y es ingeniero.', 1, '¡Ingeniero! Entonces sabe hacer cosas.', 'Ingénieur ! Alors il sait construire des choses.', 'Mon père s’appelle Paul et il est ingénieur.'],
         ['Mi padre soy yo.', 0, 'Ja, ja… No, tu padre es otra persona.', 'Haha… Non, ton père est quelqu’un d’autre.', 'Mon père, c’est moi.'],
         ['Mi padre tiene un gato y una casa.', 0, 'Está bien, pero ¿cómo se llama?', 'D’accord, mais comment s’appelle-t-il ?', 'Mon père a un chat et une maison.'],
@@ -296,9 +297,9 @@ export default function build() {
         ['Vivo en mi familia.', 0, 'No, cariño: vives en una casa.', 'Non, mon chou : tu habites dans une maison.', 'J’habite dans ma famille.'],
       ]),
       dlg('marina', 'Esta es mi familia: mis padres, mi hermano Pablo y yo. ¿Y tu familia?', 'Voici ma famille : mes parents, mon frère Pablo et moi. Et ta famille ?', [
-        ['En mi familia somos cuatro: mis padres, mi hermana y yo.', 1, '¡Como mi familia! También somos cuatro.', 'Comme ma famille ! Nous sommes quatre aussi.', 'Dans ma famille, nous sommes quatre : mes parents, ma sœur et moi.'],
+        ['En mi familia somos cuatro: mis padres, mi hermana y yo.', 1, '¡Como mi familia! Nosotros también somos cuatro.', 'Comme ma famille ! Nous aussi, nous sommes quatre.', 'Dans ma famille, nous sommes quatre : mes parents, ma sœur et moi.'],
         ['Mi familia es un perro.', 0, 'Un perro es un buen amigo, pero no es toda la familia.', 'Un chien est un bon ami, mais pas toute la famille.', 'Ma famille, c’est un chien.'],
-        ['Hola, me llamo Marina.', 0, 'Ya me llamo Marina. ¡No me copies!', 'Je m’appelle déjà Marina. Ne me copie pas !', 'Salut, je m’appelle Marina.'],
+        ['Hola, me llamo Marina.', 0, '¡Marina me llamo yo! ¡No me copies!', 'Marina, c’est moi ! Ne me copie pas !', 'Salut, je m’appelle Marina.'],
       ]),
       lcT('Mi hermano Pablo tiene ocho años y también tiene un gato.', 'marina', ['Pablo tiene ocho años y un gato.', 'Pablo tiene doce años y un perro.', 'Pablo tiene ocho años y un perro.'], 0),
       lcT('Mi gato se llama Churro y mi prima se llama Marina.', 'lola', ['El gato se llama Marina.', 'El gato se llama Churro.', 'La prima se llama Churro.'], 1),
@@ -308,18 +309,18 @@ export default function build() {
       fill('Yo tengo un gato y Lola ___ tiene un gato.', 'también', 'marina', { opts: ['también', 'cuántos', 'mayor'], tr: 'J’ai un chat et Lola a aussi un chat.' }),
       fill('Mis abuelos ___ en Sevilla.', 'viven', 'marina', { opts: ['vive', 'viven', 'vivimos'], tr: 'Mes grands-parents habitent à Séville.' }),
       dict('Tengo un hermano pequeño.', 'viajero', { acept: ['tengo un hermano pequeño'] }),
-      writeFree('Tengo ___ hermanos. Mi padre es ___ y mi madre es ___.', [
-        { id: 'hermanos', pista: 'Le nombre de frères et sœurs', tipo: 'numero' },
-        { id: 'padre', pista: 'Le métier de ton père (masculin)', tipo: 'texto' },
-        { id: 'madre', pista: 'Le métier de ta mère (féminin)', tipo: 'texto' },
-      ], 'Tengo un hermano. Mi padre es ingeniero y mi madre es médica.', 'J’ai un frère. Mon père est ingénieur et ma mère est médecin.'),
-      speak('En mi familia somos cuatro.', 'marina', { tr: 'Dans ma famille, nous sommes quatre.', hechizo: ['Hechizo de la familia', 'Los nombres vuelven al árbol, uno a uno'] }),
+      writeFree('En mi familia somos ___. Mi ___ es ___.', [
+        { id: 'familia_numero', pista: 'Combien vous êtes dans ta famille, toi compris (en lettres : tres, cuatro…)', tipo: 'texto' },
+        { id: 'familiar', pista: 'Une personne de ta famille (madre, padre, hermano, abuela, tío…)', tipo: 'texto' },
+        { id: 'profesion', pista: 'Son métier, au féminin si c’est une femme (médica, cocinera, policía…)', tipo: 'texto' },
+      ], 'En mi familia somos cuatro. Mi madre es médica.', 'Dans ma famille, nous sommes quatre. Ma mère est médecin.'),
+      speak('En mi familia somos cuatro.', 'marina', { tr: 'Dans ma famille, nous sommes quatre.', acept: ['en mi familia somos 4'], hechizo: ['Hechizo de la familia', 'Los nombres vuelven al árbol, uno a uno'] }),
     ]));
 
   // 7 — Cultura
   quests.push(quest('u03', 7, 'cultura', 'Familias del mundo hispano', '🌍',
-    ['abuela_carmen', 'En mi casa tenemos dos apellidos y un patio. ¡Son tradiciones de familia!', 'Chez moi, nous avons deux noms de famille et un patio. Ce sont des traditions de famille !'],
-    'Portraits de familles : deux noms de famille, repas du dimanche, patios et azulejos de Séville.', ['cultura', 'leer', 'escuchar'], 12, [
+    ['abuela_carmen', 'En España tenemos dos apellidos. ¡Y en Sevilla, patios con flores!', 'En Espagne, nous avons deux noms de famille. Et à Séville, des patios fleuris !'],
+    'Portraits de familles : deux noms de famille (un du père, un de la mère ; depuis 2017 les parents choisissent l’ordre, mais le plus souvent celui du père vient en premier), repas du dimanche, patios et azulejos de Séville.', ['cultura', 'leer', 'escuchar'], 12, [
       capsula,
       tf('En España las personas tienen dos apellidos.', true, N, { tr: 'En Espagne, les gens ont deux noms de famille.' }),
       tf('Los dos apellidos son los dos del padre.', false, N, { tr: 'Les deux noms de famille sont les deux du père.' }),
@@ -332,14 +333,14 @@ export default function build() {
         ]),
       lcT('Me llamo Lucía Ruiz Pérez.', N, ['Su primer apellido es Ruiz.', 'Su primer apellido es Pérez.', 'Su nombre es Pérez.'], 0),
       fill('Marina Ortega García tiene ___ apellidos.', 'dos', N, { opts: ['uno', 'dos', 'tres'], tr: 'Marina Ortega García a deux noms de famille.' }),
-      dlg('abuela_carmen', 'En mi casa, la familia come junta el domingo. ¿Y en tu casa?', 'Chez moi, la famille mange ensemble le dimanche. Et chez toi ?', [
-        ['Sí, comemos juntos el domingo.', 1, '¡Qué bien, cariño! La familia es lo primero.', 'Super, mon chou ! La famille, c’est le plus important.', 'Oui, nous mangeons ensemble le dimanche.'],
-        ['No, comemos en la cocina.', 1, 'Muy bien. ¡En la cocina también se come muy bien!', 'Très bien. Dans la cuisine aussi, on mange très bien !', 'Non, nous mangeons dans la cuisine.'],
+      dlg('abuela_carmen', 'En mi casa, los domingos comemos todos juntos. ¿Y en tu casa?', 'Chez moi, le dimanche, nous mangeons tous ensemble. Et chez toi ?', [
+        ['Nosotros también comemos juntos los domingos.', 1, '¡Qué bien, cariño! La familia es lo primero.', 'Super, mon chou ! La famille, c’est le plus important.', 'Nous aussi, nous mangeons ensemble le dimanche.'],
+        ['No, el domingo no comemos juntos.', 1, 'Bueno, cada familia es diferente, cariño.', 'Bon, chaque famille est différente, mon chou.', 'Non, le dimanche, nous ne mangeons pas ensemble.'],
         ['Mi casa come el domingo.', 0, '¿Tu casa come? ¡Qué casa más rara!', 'Ta maison mange ? Quelle drôle de maison !', 'Ma maison mange le dimanche.'],
       ]),
       reord('Tengo dos apellidos.', 'marina', { tr: 'J’ai deux noms de famille.' }),
       dict('mis abuelos, mis tíos y mis primos', 'marina', { acept: ['mis abuelos mis tíos y mis primos'] }),
-      fill('El domingo ___ en familia.', 'comemos', 'marina', { opts: ['como', 'comemos', 'comen'], tr: 'Le dimanche, nous mangeons en famille.' }),
+      fill('Los domingos, mi familia y yo ___ juntos.', 'comemos', 'marina', { opts: ['como', 'comemos', 'comen'], tr: 'Le dimanche, ma famille et moi, nous mangeons ensemble.' }),
       lcV('abuela', ['abuelo', 'abuela', 'madre']),
       speak('Los domingos comemos con mi familia.', 'marina', { tr: 'Le dimanche, nous mangeons avec ma famille.', hechizo: ['Hechizo del domingo', 'Una mesa enorme aparece en el patio'] }),
     ]));
@@ -356,7 +357,7 @@ export default function build() {
       dlg('sombra', '¿Tienes hermanos?', 'As-tu des frères et sœurs ?', [
         ['Sí, tengo un hermano.', 1, 'Otro nombre… ¡Basta!', 'Un autre nom… Ça suffit !', 'Oui, j’ai un frère.'],
         ['Mi hermano es un jardín.', 0, '¿Un jardín? Qué tontería.', 'Un jardin ? Quelle bêtise.', 'Mon frère est un jardin.'],
-        ['Adiós, buenas noches.', 0, 'No te vas hasta responder.', 'Tu ne pars pas avant d’avoir répondu.', 'Au revoir, bonne nuit.'],
+        ['Adiós, buenas noches.', 0, 'No te vas sin responder.', 'Tu ne pars pas sans répondre.', 'Au revoir, bonne nuit.'],
       ]),
       lcV('abuelo', ['abuelo', 'abuela', 'padre']),
       lcT('Mi tío es bombero y mi tía es policía.', 'sombra', ['Su tío es bombero y su tía es policía.', 'Su tío es policía y su tía es bombera.', 'Su tío es cocinero.'], 0),
@@ -368,8 +369,8 @@ export default function build() {
       conj('tener', 'ellos', 'tien', 'en', ['emos', 'en', 'e'], 'rafa', { tr: 'Eux, ils ont…' }),
       reord('Mis abuelos viven en una casa con patio.', 'abuela_carmen', { tr: 'Mes grands-parents habitent dans une maison avec un patio.' }),
       dict('Mi familia es grande.', 'marina', { acept: ['mi familia es grande'] }),
-      read('Hola, soy Lola. Tengo seis años. Mi padre es el tío Rafa y es cocinero. Mi madre es policía. Tengo un gato. Se llama Churro.', 'lola',
-        'Salut, c’est Lola. J’ai six ans. Mon père est l’oncle Rafa et il est cuisinier. Ma mère est policière. J’ai un chat. Il s’appelle Churro.', [
+      read('Hola, soy Lola. Tengo seis años. Mi padre se llama Rafa y es cocinero. Mi madre es policía. Tengo un gato. Se llama Churro.', 'lola',
+        'Salut, c’est Lola. J’ai six ans. Mon père s’appelle Rafa et il est cuisinier. Ma mère est policière. J’ai un chat. Il s’appelle Churro.', [
           ['¿Cuántos años tiene Lola?', 'Quel âge a Lola ?', ['Cinco.', 'Seis.', 'Ocho.'], 1],
           ['¿Qué es la madre de Lola?', 'Quel est le métier de la mère de Lola ?', ['Policía.', 'Panadera.', 'Médica.'], 0],
           ['¿Cómo se llama su gato?', 'Comment s’appelle son chat ?', ['Churro.', 'Pablo.', 'Toby.'], 0],

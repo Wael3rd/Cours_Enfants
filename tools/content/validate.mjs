@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Valide la coherence des contenus : characters.json + units/uNN.json (Node pur, sans dependance).
 // Usage : node tools/content/validate.mjs     (code de sortie 1 s'il y a des erreurs)
-import { audioKey, loadCharacters, loadUnits, normSpeech, collectSpoken } from './lib.mjs';
+import { audioKey, loadCharacters, loadUnits, normSpeech, collectSpoken, NOMBRE_LIBRE, patronRegex } from './lib.mjs';
 
 const errors = [];
 const warns = [];
@@ -32,6 +32,8 @@ for (const [i, c] of (Array.isArray(chars) ? chars : []).entries()) {
   }
 }
 for (const need of ['narrador', 'viajero', 'quetzal', 'ignacio', 'marina', 'sombra']) if (!charIds.has(need)) err('characters.json', `personnage requis absent : ${need}`);
+// prenom de l'avatar : un `speak` qui le fait dire doit offrir des `patrones` (l'eleve dit SON prenom)
+const nombreViajero = normSpeech((Array.isArray(chars) ? chars : []).find((c) => c.id === 'viajero')?.nombre ?? '');
 
 // ── texte espagnol : ponctuation ──
 const PIEGES = [[/\bmas\b/i, 'más ?'], [/\bademas\b/i, 'además'], [/\bdespues\b/i, 'después'], [/\bestan\b/i, 'están ?'], [/\bpagina\b/i, 'página'], [/\bingles\b/i, 'inglés'], [/\bfrances\b/i, 'francés'], [/\bespanol\b/i, 'español'], [/\bsenor\b/i, 'señor'], [/\bmañana\b.*\bmañana\b/i, null]];
@@ -243,6 +245,19 @@ units.forEach(({ file, data: u }, ui) => {
         case 'speak':
           checkHabla(s.objetivo, `${sw}.objetivo`, { needFr: true });
           if (!s.aceptadas?.length || s.aceptadas[0] !== normSpeech(s.objetivo?.es ?? '')) err(sw, 'aceptadas[0] doit valoir normSpeech(objetivo.es)');
+          (s.aceptadas ?? []).forEach((a) => { if (a !== normSpeech(a)) err(sw, `aceptada non normalisee : "${a}"`); });
+          if (new Set(s.aceptadas ?? []).size !== (s.aceptadas?.length ?? 0)) err(sw, 'aceptadas dupliquees');
+          if (s.patrones !== undefined) {
+            if (!Array.isArray(s.patrones) || !s.patrones.length) err(sw, 'patrones: tableau non vide attendu');
+            (s.patrones ?? []).forEach((p) => {
+              if (typeof p !== 'string' || p.split(NOMBRE_LIBRE).length !== 2) return err(sw, `patron "${p}" : exactement un ${NOMBRE_LIBRE} attendu`);
+              const probe = p.replace(NOMBRE_LIBRE, 'x');
+              if (probe !== normSpeech(probe) || !new RegExp(`(^| )${NOMBRE_LIBRE.replace(/[{}]/g, '\\$&')}( |$)`).test(p)) err(sw, `patron non normalise : "${p}"`);
+            });
+            if (s.aceptadas?.length && !(s.patrones ?? []).some((p) => typeof p === 'string' && patronRegex(p).test(s.aceptadas[0]))) err(sw, 'aucun patron ne reconnait aceptadas[0] (objetivo)');
+          } else if (nombreViajero && normSpeech(s.objetivo?.es ?? '').split(' ').includes(nombreViajero)) {
+            err(sw, `speak fait dire "${nombreViajero}" sans patrones : l'eleve doit pouvoir dire son prenom`);
+          }
           break;
         case 'true_false':
           checkHabla(s.afirmacion, `${sw}.afirmacion`, { needFr: true });

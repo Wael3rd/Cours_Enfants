@@ -36,14 +36,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.1fcbbe91e8",
-    "text": "Adiós, Don Ignacio.",
+    "key": "narrador.5e0182b386",
+    "text": "Adiós, don Ignacio.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.1fcbbe91e8.lento",
-    "text": "Adiós, Don Ignacio.",
+    "key": "narrador.5e0182b386.lento",
+    "text": "Adiós, don Ignacio.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -252,14 +252,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.27f7cf1dab",
-    "text": "Perdón, Don Ignacio.",
+    "key": "narrador.4c6e544c1e",
+    "text": "Perdón, don Ignacio.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.27f7cf1dab.lento",
-    "text": "Perdón, Don Ignacio.",
+    "key": "narrador.4c6e544c1e.lento",
+    "text": "Perdón, don Ignacio.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -780,14 +780,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.00b9b867cb",
-    "text": "México es el país del Quetzal.",
+    "key": "narrador.57c6fb82ad",
+    "text": "El Quetzal es de México.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.00b9b867cb.lento",
-    "text": "México es el país del Quetzal.",
+    "key": "narrador.57c6fb82ad.lento",
+    "text": "El Quetzal es de México.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -1428,14 +1428,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.a17425f770",
-    "text": "eme, a, ere, i, ene, a",
+    "key": "narrador.1d5e37f5cc",
+    "text": "eme, a, erre, i, ene, a",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.a17425f770.lento",
-    "text": "eme, a, ere, i, ene, a",
+    "key": "narrador.1d5e37f5cc.lento",
+    "text": "eme, a, erre, i, ene, a",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -1452,6 +1452,19 @@
     "voice": "es-ES-AlvaroNeural",
     "rate": "-15%",
     "pitch": "+32Hz"
+  },
+  {
+    "key": "viajero.d5226f9283",
+    "text": "A con tilde, ele, e, equis.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "viajero.d5226f9283.lento",
+    "text": "A con tilde, ele, e, equis.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "narrador.9ebf051b64",
@@ -1502,15 +1515,15 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d9c246943f",
-    "text": "La erre doble: perro, carro.",
+    "key": "marina.9776daac38",
+    "text": "La erre doble: perro, guitarra.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d9c246943f.lento",
-    "text": "La erre doble: perro, carro.",
+    "key": "marina.9776daac38.lento",
+    "text": "La erre doble: perro, guitarra.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
@@ -1530,8 +1543,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "narrador.503bdea294",
-    "text": "La jota suena fuerte. La hache no suena. La eñe suena «ni». La erre doble vibra. La elle suena casi como la ye.",
+    "key": "narrador.3bb04a8ebc",
+    "text": "La jota suena fuerte. La hache no suena. La eñe suena como «ni». La erre doble vibra. La elle suena casi como la ye.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -1584,8 +1597,20 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.adb96280ce",
-    "text": "Del dieciséis al diecinueve: dieci más el número. Del veintiuno al veintinueve: veinti más el número. Desde treinta: la decena, y, el número.",
+    "key": "narrador.1e0d7cc179",
+    "text": "sesenta, setenta, ochenta, noventa, cien",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.1e0d7cc179.lento",
+    "text": "sesenta, setenta, ochenta, noventa, cien",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-29%"
+  },
+  {
+    "key": "narrador.688c37b4ff",
+    "text": "Del dieciséis al diecinueve: dieci más el número. Del veintiuno al veintinueve: veinti más el número. Desde el treinta y uno: la decena, «y» y el número.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -1618,36 +1643,36 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d613c921b8",
-    "text": "Soy mexicano.",
+    "key": "marina.608c88a061",
+    "text": "Leo es mexicano.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d613c921b8.lento",
-    "text": "Soy mexicano.",
+    "key": "marina.608c88a061.lento",
+    "text": "Leo es mexicano.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d4e30be302",
-    "text": "Ella es argentina.",
+    "key": "marina.3b4d4344df",
+    "text": "Sofía es argentina.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.d4e30be302.lento",
-    "text": "Ella es argentina.",
+    "key": "marina.3b4d4344df.lento",
+    "text": "Sofía es argentina.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
   },
   {
-    "key": "narrador.46b655a2d2",
-    "text": "Para un chico: español, francés, mexicano. Para una chica: española, francesa, mexicana. En español, la nacionalidad lleva minúscula.",
+    "key": "narrador.f6e5302988",
+    "text": "Para un chico: español, francés, mexicano. Para una chica: española, francesa, mexicana. Las nacionalidades se escriben con minúscula.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -1835,8 +1860,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "narrador.add7407aea",
-    "text": "En español, la pregunta empieza con ¿ y termina con ?. Las palabras cómo, dónde, cuántos y qué llevan acento.",
+    "key": "narrador.d1055b6a24",
+    "text": "En español, una pregunta tiene dos signos: uno al principio y otro al final. Las palabras para preguntar llevan tilde: cómo, dónde, cuántos, qué.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -2057,24 +2082,23 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.d1cd7484b4",
-    "text": "Escucha y repite el hechizo.",
+    "key": "narrador.2a1641197d",
+    "text": "Escucha y repite el hechizo con tu nombre.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "marina.cbc0e807dd",
+    "key": "viajero.cbc0e807dd",
     "text": "Hola, me llamo Álex.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
   },
   {
-    "key": "marina.cbc0e807dd.lento",
+    "key": "viajero.cbc0e807dd.lento",
     "text": "Hola, me llamo Álex.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-17%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "rosa.18bcbecf75",
@@ -2212,6 +2236,12 @@
     "rate": "-4%"
   },
   {
+    "key": "narrador.d1cd7484b4",
+    "text": "Escucha y repite el hechizo.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
     "key": "rosa.9c3bbebefb",
     "text": "Buenos días, ¿qué tal?",
     "voice": "es-ES-ElviraNeural",
@@ -2269,14 +2299,14 @@
     "rate": "-4%"
   },
   {
-    "key": "viajero.2f79025b90",
-    "text": "a, ele, e, equis",
+    "key": "viajero.244862c6a6",
+    "text": "a con tilde, ele, e, equis",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "marina.a17425f770",
-    "text": "eme, a, ere, i, ene, a",
+    "key": "marina.1d5e37f5cc",
+    "text": "eme, a, erre, i, ene, a",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
@@ -2352,12 +2382,6 @@
     "pitch": "+32Hz"
   },
   {
-    "key": "viajero.40d8274dce",
-    "text": "A, ele, e, equis.",
-    "voice": "es-ES-AlvaroNeural",
-    "pitch": "+28Hz"
-  },
-  {
     "key": "nacho.77a6ba3faa",
     "text": "¡Perfecto! Álex, con tilde. ¡Qué elegante!",
     "voice": "es-ES-AlvaroNeural",
@@ -2398,6 +2422,12 @@
     "pitch": "+32Hz"
   },
   {
+    "key": "narrador.1a8e5c4bda",
+    "text": "Escucha y escribe el número en letras.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
     "key": "nacho.c24b8eb0d0",
     "text": "doce",
     "voice": "es-ES-AlvaroNeural",
@@ -2419,8 +2449,8 @@
     "pitch": "-12Hz"
   },
   {
-    "key": "narrador.42d357762c",
-    "text": "Veinte, treinta, cuarenta, cincuenta.",
+    "key": "narrador.1cd4a26832",
+    "text": "Veinte, treinta, cuarenta, cincuenta, sesenta.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -2465,8 +2495,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.4d7808bf77",
-    "text": "Casi quinientos millones de personas hablan español.",
+    "key": "narrador.ed8c684e84",
+    "text": "Unos seiscientos millones de personas hablan español.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -2604,6 +2634,13 @@
     "pitch": "+25Hz"
   },
   {
+    "key": "marina.a49859644c",
+    "text": "Y tú, ¿cómo te llamas?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
+  },
+  {
     "key": "viajero.710c1fb87a",
     "text": "yo tengo",
     "voice": "es-ES-AlvaroNeural",
@@ -2651,15 +2688,15 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "nacho.32e7bb6a7a",
-    "text": "¡Pero ese soy yo! Tú eres otro Nacho… ¡qué lío!",
+    "key": "nacho.4a9d09db61",
+    "text": "¡Pero Nacho soy yo! ¿Tú eres otro Nacho? ¡Qué lío!",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+10%",
     "pitch": "+32Hz"
   },
   {
-    "key": "nacho.5ede437bfb",
-    "text": "Me alegra, pero yo te pregunto el nombre.",
+    "key": "nacho.f434daa3c8",
+    "text": "Me alegro, pero te pregunto tu nombre.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+10%",
     "pitch": "+32Hz"
@@ -2685,8 +2722,8 @@
     "pitch": "+32Hz"
   },
   {
-    "key": "nacho.bda87bd094",
-    "text": "Vale, pero yo pregunto de dónde eres.",
+    "key": "nacho.438d82d633",
+    "text": "Vale, pero te pregunto de dónde eres.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+10%",
     "pitch": "+32Hz"
@@ -2884,18 +2921,17 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.039d8192e2",
+    "key": "viajero.039d8192e2",
     "text": "Hola, me llamo Álex. Tengo doce años. Vivo en París.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
   },
   {
-    "key": "marina.039d8192e2.lento",
+    "key": "viajero.039d8192e2.lento",
     "text": "Hola, me llamo Álex. Tengo doce años. Vivo en París.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-17%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "sombra.6af9dc2d82",
@@ -2978,8 +3014,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "sombra.2a2d84aacf",
-    "text": "¿Español de Argentina? Eso no suena bien.",
+    "key": "sombra.275f31d724",
+    "text": "¿De Argentina? Entonces eres argentino, no español.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-18%",
     "pitch": "-45Hz"
@@ -2992,11 +3028,11 @@
     "pitch": "-45Hz"
   },
   {
-    "key": "nacho.7cc9220303",
+    "key": "marina.7cc9220303",
     "text": "Nacho es español y tiene trece años.",
-    "voice": "es-ES-AlvaroNeural",
-    "rate": "+10%",
-    "pitch": "+32Hz"
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
   },
   {
     "key": "narrador.a8257d02e7",
@@ -3064,18 +3100,17 @@
     "pitch": "-45Hz"
   },
   {
-    "key": "marina.fc66a5d97b",
+    "key": "viajero.fc66a5d97b",
     "text": "Hola, me llamo Álex. Soy francés y tengo doce años.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "+8%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
   },
   {
-    "key": "marina.fc66a5d97b.lento",
+    "key": "viajero.fc66a5d97b.lento",
     "text": "Hola, me llamo Álex. Soy francés y tengo doce años.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-17%",
-    "pitch": "+25Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "quetzal.ae8070b510",
@@ -4244,14 +4279,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.4eefb37fb1",
-    "text": "En octubre empieza el otoño.",
+    "key": "narrador.2b944c462c",
+    "text": "El doce de octubre es fiesta en España.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.4eefb37fb1.lento",
-    "text": "En octubre empieza el otoño.",
+    "key": "narrador.2b944c462c.lento",
+    "text": "El doce de octubre es fiesta en España.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -4268,14 +4303,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.e3737c7de8",
-    "text": "El dos de noviembre es el Día de Muertos.",
+    "key": "narrador.b4312d9978",
+    "text": "En México, el Día de Muertos es el uno y el dos de noviembre.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.e3737c7de8.lento",
-    "text": "El dos de noviembre es el Día de Muertos.",
+    "key": "narrador.b4312d9978.lento",
+    "text": "En México, el Día de Muertos es el uno y el dos de noviembre.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -4394,29 +4429,29 @@
     "pitch": "-6Hz"
   },
   {
-    "key": "diego.7be9457d1d",
-    "text": "los profesores",
+    "key": "diego.82555cc482",
+    "text": "el profesor, los profesores",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+4%",
     "pitch": "+20Hz"
   },
   {
-    "key": "diego.7be9457d1d.lento",
-    "text": "los profesores",
+    "key": "diego.82555cc482.lento",
+    "text": "el profesor, los profesores",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-21%",
     "pitch": "+20Hz"
   },
   {
-    "key": "diego.5ee08148c3",
-    "text": "los lápices",
+    "key": "diego.64a3253cb9",
+    "text": "el lápiz, los lápices",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+4%",
     "pitch": "+20Hz"
   },
   {
-    "key": "diego.5ee08148c3.lento",
-    "text": "los lápices",
+    "key": "diego.64a3253cb9.lento",
+    "text": "el lápiz, los lápices",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-21%",
     "pitch": "+20Hz"
@@ -4642,8 +4677,8 @@
     "pitch": "+20Hz"
   },
   {
-    "key": "narrador.b8bff9e681",
-    "text": "Para la fecha decimos: el, el número, de, el mes. Los días y los meses van con minúscula.",
+    "key": "narrador.83fa62a61b",
+    "text": "Para la fecha decimos: el, el número, de, el mes. Los días y los meses se escriben con minúscula.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -4675,12 +4710,6 @@
   {
     "key": "narrador.d34a7cb3c4",
     "text": "Salamanca es una ciudad de España.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-4%"
-  },
-  {
-    "key": "narrador.d8fd39da6a",
-    "text": "La campana del colegio suena.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -4741,6 +4770,12 @@
     "pitch": "+20Hz"
   },
   {
+    "key": "narrador.d8fd39da6a",
+    "text": "La campana del colegio suena.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
     "key": "diego.ca350aabb8",
     "text": "Hola, me llamo Diego. Tengo doce años.",
     "voice": "es-ES-AlvaroNeural",
@@ -4755,15 +4790,15 @@
     "pitch": "-6Hz"
   },
   {
-    "key": "pilar.5062fa3723",
-    "text": "Buenos días. Soy Doña Pilar, la profesora. ¿Cómo te llamas?",
+    "key": "pilar.14d31a0308",
+    "text": "Buenos días. Soy doña Pilar, la profesora. ¿Cómo te llamas?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-6%",
     "pitch": "-6Hz"
   },
   {
-    "key": "viajero.f6f00351ca",
-    "text": "Buenos días, Doña Pilar. Me llamo Álex.",
+    "key": "viajero.f90d5130bc",
+    "text": "Buenos días, doña Pilar. Me llamo Álex.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
@@ -4775,14 +4810,14 @@
     "pitch": "-6Hz"
   },
   {
-    "key": "viajero.60fce6d036",
-    "text": "Hola, Pilar, ¿qué tal?",
+    "key": "viajero.a49dd291a5",
+    "text": "Buenas noches, profesora.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "pilar.86c3fc71f8",
-    "text": "En clase, «Doña Pilar» o «profesora», por favor.",
+    "key": "pilar.4838f1b095",
+    "text": "¿Buenas noches? ¡Son las nueve de la mañana!",
     "voice": "es-ES-ElviraNeural",
     "rate": "-6%",
     "pitch": "-6Hz"
@@ -4847,18 +4882,17 @@
     "rate": "-4%"
   },
   {
-    "key": "pilar.65ad0df11a",
+    "key": "viajero.65ad0df11a",
     "text": "Buenos días, profesora.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-6%",
-    "pitch": "-6Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
   },
   {
-    "key": "pilar.65ad0df11a.lento",
+    "key": "viajero.65ad0df11a.lento",
     "text": "Buenos días, profesora.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-31%",
-    "pitch": "-6Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "diego.d7987a49c4",
@@ -4942,6 +4976,13 @@
     "pitch": "+20Hz"
   },
   {
+    "key": "diego.9a9cb20219",
+    "text": "En mi estuche hay tres lápices.",
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "+4%",
+    "pitch": "+20Hz"
+  },
+  {
     "key": "diego.f5a95dcaf6",
     "text": "Tengo un libro y un cuaderno.",
     "voice": "es-ES-AlvaroNeural",
@@ -4998,6 +5039,12 @@
   {
     "key": "narrador.6e18239187",
     "text": "¿Hay cole el sábado?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.4b7628b763",
+    "text": "Mira el horario de Diego y completa.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -5380,8 +5427,14 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.4621fdddf4",
-    "text": "¿Qué tiene el martes?",
+    "key": "narrador.26bac43cb8",
+    "text": "¿Qué asignatura tiene Diego el martes?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.809053f91a",
+    "text": "Completa con el texto de Diego.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -5473,8 +5526,8 @@
     "pitch": "-6Hz"
   },
   {
-    "key": "narrador.a199b0b009",
-    "text": "En el recreo, los alumnos comen un bocadillo.",
+    "key": "narrador.f9b06d7f6b",
+    "text": "En el recreo, muchos alumnos comen un bocadillo.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -5485,8 +5538,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.58471f9faf",
-    "text": "Muchos alumnos no llevan uniforme. Y dicen «profe» y «cole».",
+    "key": "narrador.e843541c72",
+    "text": "En los colegios públicos, normalmente no hay uniforme. Y los alumnos dicen «profe» y «cole».",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -5509,12 +5562,6 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.f7e3df5614",
-    "text": "En el recreo los alumnos comen un bocadillo.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-4%"
-  },
-  {
     "key": "diego.3d45c5fff0",
     "text": "Tengo un nueve en matemáticas.",
     "voice": "es-ES-AlvaroNeural",
@@ -5529,8 +5576,8 @@
     "pitch": "+20Hz"
   },
   {
-    "key": "diego.6293421504",
-    "text": "Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama Doña Pilar.",
+    "key": "diego.92071d170f",
+    "text": "Hola, soy Diego. En mi cole, las clases empiezan por la mañana. En el recreo como un bocadillo con mis compañeros. No hay uniforme. Mi profesora favorita se llama doña Pilar.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+4%",
     "pitch": "+20Hz"
@@ -5554,8 +5601,8 @@
     "rate": "-4%"
   },
   {
-    "key": "pilar.62afeb8102",
-    "text": "En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los alumnos la buscan. Si la encuentran, tienen suerte.",
+    "key": "pilar.aebabb155e",
+    "text": "En la Universidad de Salamanca hay una rana de piedra. Es muy pequeña y está en la fachada. Los estudiantes la buscan. Según la leyenda, si la encuentran, ¡aprueban los exámenes!",
     "voice": "es-ES-ElviraNeural",
     "rate": "-6%",
     "pitch": "-6Hz"
@@ -5569,6 +5616,12 @@
   {
     "key": "narrador.3d8c1969bd",
     "text": "¿Cómo es la rana?",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.9f0c921a38",
+    "text": "Según la leyenda, ¿qué pasa si los estudiantes la encuentran?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -7085,8 +7138,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "narrador.e6a44e4339",
-    "text": "Para las profesiones usamos «ser». Chico: -o. Chica: -a. Policía y artista no cambian. No usamos «un» ni «una» después de «ser».",
+    "key": "narrador.573649f69c",
+    "text": "Para las profesiones usamos «ser», sin «un» ni «una». Para un hombre: -o. Para una mujer: -a. Policía y artista no cambian.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -7147,8 +7200,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "narrador.0e7eab7dc9",
-    "text": "Los verbos en -er: como, comes, come, comemos, coméis, comen. Los verbos en -ir: vivo, vives, vive, vivimos, vivís, viven. Solo cambian nosotros y vosotros.",
+    "key": "narrador.42213cec56",
+    "text": "Los verbos en -er: como, comes, come, comemos, coméis, comen. Los verbos en -ir: vivo, vives, vive, vivimos, vivís, viven. Son iguales, menos con nosotros y vosotros.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -7167,18 +7220,18 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "lola.a5c52a4559",
+    "key": "marina.a5c52a4559",
     "text": "Mi tío Rafa tiene un gato.",
     "voice": "es-ES-ElviraNeural",
-    "rate": "+6%",
-    "pitch": "+48Hz"
+    "rate": "+8%",
+    "pitch": "+25Hz"
   },
   {
-    "key": "lola.a5c52a4559.lento",
+    "key": "marina.a5c52a4559.lento",
     "text": "Mi tío Rafa tiene un gato.",
     "voice": "es-ES-ElviraNeural",
-    "rate": "-19%",
-    "pitch": "+48Hz"
+    "rate": "-17%",
+    "pitch": "+25Hz"
   },
   {
     "key": "rafa.b3f1af61aa",
@@ -7195,8 +7248,8 @@
     "pitch": "+2Hz"
   },
   {
-    "key": "narrador.9371a98634",
-    "text": "Con «tener» decimos lo que tenemos: hermanos, un gato, una casa. Con «ser» decimos quién es una persona.",
+    "key": "narrador.59e2bec834",
+    "text": "Con «tener» decimos lo que tenemos: hermanos, un gato, una casa. Con «ser» decimos quién es una persona: su nombre, su profesión, su nacionalidad.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -7238,8 +7291,8 @@
     "rate": "-4%"
   },
   {
-    "key": "marina.976898fdfb",
-    "text": "¡Abuela! ¡Estoy en casa!",
+    "key": "marina.e992c76328",
+    "text": "¡Abuela! ¡Ya estamos aquí!",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
@@ -7272,8 +7325,8 @@
     "pitch": "+48Hz"
   },
   {
-    "key": "abuela_carmen.b046112e34",
-    "text": "Mira, es nuestro árbol de la familia. Pero los nombres no están.",
+    "key": "abuela_carmen.6f3ae7def7",
+    "text": "Mira, es el árbol de nuestra familia. ¡Pero los nombres no están!",
     "voice": "es-ES-ElviraNeural",
     "rate": "-14%",
     "pitch": "-20Hz"
@@ -7400,18 +7453,17 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "abuela_carmen.d651610f61",
+    "key": "viajero.d651610f61",
     "text": "Encantado, me llamo Álex.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-14%",
-    "pitch": "-20Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
   },
   {
-    "key": "abuela_carmen.d651610f61.lento",
+    "key": "viajero.d651610f61.lento",
     "text": "Encantado, me llamo Álex.",
-    "voice": "es-ES-ElviraNeural",
-    "rate": "-39%",
-    "pitch": "-20Hz"
+    "voice": "es-ES-AlvaroNeural",
+    "rate": "-25%",
+    "pitch": "+28Hz"
   },
   {
     "key": "abuela_carmen.6f3becb7b3",
@@ -7502,8 +7554,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "lola.f9b7fec3e2",
-    "text": "¡Mira, mira! ¡Tengo fotos! ¿Quieres ver mi familia?",
+    "key": "lola.7878ef4575",
+    "text": "¡Mira, mira! ¡Tengo fotos! ¿Quieres ver a mi familia?",
     "voice": "es-ES-ElviraNeural",
     "rate": "+6%",
     "pitch": "+48Hz"
@@ -7553,6 +7605,13 @@
     "text": "¿Quién es cocinero?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
+  },
+  {
+    "key": "marina.56ec25cbec",
+    "text": "Mi tía Elena es policía.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+8%",
+    "pitch": "+25Hz"
   },
   {
     "key": "marina.d2e6265838",
@@ -7622,8 +7681,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "quetzal.c4ab70ddbb",
-    "text": "Comer, vivir… verbos fuertes. ¡Forja, amigo!",
+    "key": "quetzal.a0b5742b6b",
+    "text": "Comer, vivir… verbos importantes. ¡Forja, amigo!",
     "voice": "es-MX-JorgeNeural",
     "rate": "-6%",
     "pitch": "+22Hz"
@@ -7893,6 +7952,19 @@
     "pitch": "+48Hz"
   },
   {
+    "key": "viajero.99274ccea4",
+    "text": "No tengo hermanos.",
+    "voice": "es-ES-AlvaroNeural",
+    "pitch": "+28Hz"
+  },
+  {
+    "key": "lola.2b0a68bee2",
+    "text": "¡Como yo! Pero tengo un gato.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+6%",
+    "pitch": "+48Hz"
+  },
+  {
     "key": "viajero.ada2734d62",
     "text": "Soy de Francia.",
     "voice": "es-ES-AlvaroNeural",
@@ -7906,8 +7978,8 @@
     "pitch": "+48Hz"
   },
   {
-    "key": "rafa.67916baa2b",
-    "text": "¿Cómo se llama tu padre? ¿Qué es?",
+    "key": "rafa.47214b6c97",
+    "text": "¿Cómo se llama tu padre? ¿En qué trabaja?",
     "voice": "es-ES-AlvaroNeural",
     "rate": "+4%",
     "pitch": "+2Hz"
@@ -8011,8 +8083,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "marina.ad4d54bad3",
-    "text": "¡Como mi familia! También somos cuatro.",
+    "key": "marina.caf25c462e",
+    "text": "¡Como mi familia! Nosotros también somos cuatro.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
@@ -8037,8 +8109,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "marina.56880af154",
-    "text": "Ya me llamo Marina. ¡No me copies!",
+    "key": "marina.9e5f98dd0f",
+    "text": "¡Marina me llamo yo! ¡No me copies!",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
@@ -8085,15 +8157,15 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "marina.0c40df888d",
-    "text": "Tengo un hermano. Mi padre es ingeniero y mi madre es médica.",
+    "key": "marina.6bf53e785a",
+    "text": "En mi familia somos cuatro. Mi madre es médica.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.0c40df888d.lento",
-    "text": "Tengo un hermano. Mi padre es ingeniero y mi madre es médica.",
+    "key": "marina.6bf53e785a.lento",
+    "text": "En mi familia somos cuatro. Mi madre es médica.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
@@ -8113,8 +8185,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "abuela_carmen.7e57aa7bd7",
-    "text": "En mi casa tenemos dos apellidos y un patio. ¡Son tradiciones de familia!",
+    "key": "abuela_carmen.229c88b1b6",
+    "text": "En España tenemos dos apellidos. ¡Y en Sevilla, patios con flores!",
     "voice": "es-ES-ElviraNeural",
     "rate": "-14%",
     "pitch": "-20Hz"
@@ -8199,15 +8271,15 @@
     "rate": "-4%"
   },
   {
-    "key": "abuela_carmen.d2799ae859",
-    "text": "En mi casa, la familia come junta el domingo. ¿Y en tu casa?",
+    "key": "abuela_carmen.464099540b",
+    "text": "En mi casa, los domingos comemos todos juntos. ¿Y en tu casa?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-14%",
     "pitch": "-20Hz"
   },
   {
-    "key": "viajero.116f451c1a",
-    "text": "Sí, comemos juntos el domingo.",
+    "key": "viajero.38abfa7f9e",
+    "text": "Nosotros también comemos juntos los domingos.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
@@ -8219,14 +8291,14 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "viajero.5fbdd70e69",
-    "text": "No, comemos en la cocina.",
+    "key": "viajero.3b7e0e4138",
+    "text": "No, el domingo no comemos juntos.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "abuela_carmen.129234bbf2",
-    "text": "Muy bien. ¡En la cocina también se come muy bien!",
+    "key": "abuela_carmen.eb7c3d9932",
+    "text": "Bueno, cada familia es diferente, cariño.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-14%",
     "pitch": "-20Hz"
@@ -8259,8 +8331,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.223665739c",
-    "text": "El domingo comemos en familia.",
+    "key": "marina.6f5845f703",
+    "text": "Los domingos, mi familia y yo comemos juntos.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
@@ -8353,8 +8425,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "sombra.e7893595bd",
-    "text": "No te vas hasta responder.",
+    "key": "sombra.0c306a1a68",
+    "text": "No te vas sin responder.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-18%",
     "pitch": "-45Hz"
@@ -8402,8 +8474,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "lola.0f4abf9b3a",
-    "text": "Hola, soy Lola. Tengo seis años. Mi padre es el tío Rafa y es cocinero. Mi madre es policía. Tengo un gato. Se llama Churro.",
+    "key": "lola.9664d67229",
+    "text": "Hola, soy Lola. Tengo seis años. Mi padre se llama Rafa y es cocinero. Mi madre es policía. Tengo un gato. Se llama Churro.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+6%",
     "pitch": "+48Hz"

@@ -37,9 +37,18 @@ export function normSpeech(s) {
   return s
     .normalize('NFC')
     .toLowerCase()
-    .replace(/[¿?¡!.,;:«»"“”()]/g, ' ')
+    .replace(/[¿?¡!.,;:«»"“”()…—–]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+/** Jeton des gabarits `speak.patrones` : l'eleve dit SON prenom (voir schema.ts, SpeakStep.patrones). */
+export const NOMBRE_LIBRE = '{nombre}';
+
+/** RegExp d'un gabarit normalise : NOMBRE_LIBRE = 1 a 3 mots quelconques. */
+export function patronRegex(p) {
+  const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`^${p.split(NOMBRE_LIBRE).map(esc).join('\\S+(?: \\S+){0,2}')}$`, 'u');
 }
 
 /**
