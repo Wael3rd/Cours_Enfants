@@ -17,7 +17,7 @@
       html, body { margin: 0; background: #0b0d2a; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
       .star { position: absolute; left: 0; top: 0; }
-      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, rgba(155,255,214,.5), rgba(155,255,214,0) 62%); mix-blend-mode: screen; z-index: 20; opacity: 0; pointer-events: none; }
+      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, rgba(155,255,214,.5), rgba(155,255,214,0) 62%); z-index: 20; opacity: 0; pointer-events: none; }
       .st-feather { filter: drop-shadow(0 0 14px rgba(155,255,214,.8)); }
       .dot { position: absolute; left: 0; top: 0; width: 18px; height: 18px; border-radius: 50%; background: #9bffd6; opacity: 0; }
     </style>
@@ -75,7 +75,7 @@
           tl.fromTo(d, { x: dx, y: dy, scale: 0.3, opacity: 0 }, { y: dy + 90, scale: 1, opacity: 0.9, duration: 0.3, ease: "power1.out", immediateRender: false }, tt);
           tl.to(d, { y: dy + 200, scale: 0, opacity: 0, duration: 0.5, ease: "power1.in" }, tt + 0.3);
         }
-        tl.fromTo("#vflash", { opacity: 0 }, { opacity: 0.6, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, fT + fD - 0.05);
+        QCine.bloom(tl, "#vflash", fT + fD - 0.2, 0.22, 0.32, 0.6);
 
         // ---------- camera : suit la plume (tilt vers le bas) puis plan serre sur le Quetzal ----------
         S.cam(tl, room, 1600, 520, 1.25, 0.35, 1.2, "power2.inOut");
@@ -101,7 +101,7 @@
         }
         Q.quetzalBlink(tl, qz, 3.2); Q.quetzalBlink(tl, qz, 5.9); Q.quetzalBlink(tl, qz, 8.2);
         // il tremble de fatigue, ses plumes ternes ondulent
-        tl.fromTo(qz, { x: 0 }, { x: 5, duration: 0.07, ease: "sine.inOut", yoyo: true, repeat: 9 }, L2.t + 0.2);
+        tl.fromTo(qz, { x: 0 }, { x: 4, duration: 0.1, ease: "sine.inOut", yoyo: true, repeat: 6 }, L2.t + 0.2);
         Q.quetzalSway(tl, qz, L1.t, 2.6, 0.6);
 
         // ---------- Ignacio : il montre le Quetzal, il le presente ----------

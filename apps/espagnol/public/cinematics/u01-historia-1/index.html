@@ -20,7 +20,7 @@
       #place b { display: block; font: 400 58px/1.05 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 4px 0 rgba(0,0,0,.4); }
       .ask { position: absolute; width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #fff1b5, #ffc83d 70%); color: #14173f; font: 400 100px/1 "Alfa Slab One", serif; box-shadow: 0 8px 0 rgba(0,0,0,.3), inset 0 0 0 5px rgba(255,255,255,.5); }
       .star { position: absolute; left: 0; top: 0; }
-      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,233,168,.55), rgba(255,233,168,0) 60%); mix-blend-mode: screen; z-index: 20; opacity: 0; pointer-events: none; }
+      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,233,168,.55), rgba(255,233,168,0) 60%); z-index: 20; opacity: 0; pointer-events: none; }
     </style>
   </head>
   <body>
@@ -88,7 +88,7 @@
           tl.fromTo(st, { x: sx, y: sy + 40, scale: 0, opacity: 1 }, { y: sy - 40, scale: 0.8 + (i % 3) * 0.3, rotation: 80, duration: 0.45, ease: "back.out(2.4)", immediateRender: false }, tB + 0.05 + i * 0.07);
           tl.to(st, { opacity: 0, scale: 0, duration: 0.3 }, tB + 0.6 + i * 0.07);
         }
-        tl.fromTo("#vflash", { opacity: 0.8 }, { opacity: 0, duration: 0.6, ease: "power2.out", immediateRender: false }, tB);
+        QCine.bloom(tl, "#vflash", tB - 0.3, 0.22, 0.32, 0.6);
         // question
         C.talkBounce(tl, ign.b, L2, 5); C.talkChar(tl, ign, L2);
         tl.to(ign.b, { rotation: -7, x: -24, duration: 0.4, ease: "power2.out" }, L2.t);

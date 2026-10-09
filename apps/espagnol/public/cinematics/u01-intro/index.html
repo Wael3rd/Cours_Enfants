@@ -24,8 +24,8 @@
       #mapbox .m-plq:not(.m-plq-madrid), #mapbox .m-med:not(.m-med-madrid) { display: none; }
       #mapbox .m-med text { display: none; }
       #mapdim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; }
-      #flash { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 20; }
-      #rays { mix-blend-mode: screen; position: absolute; left: 260px; top: -90px; width: 1400px; height: 1400px; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #fff3d1, rgba(255,243,209,.55) 70%); opacity: 0; z-index: 20; }
+      #rays { position: absolute; left: 260px; top: -90px; width: 1400px; height: 1400px; opacity: 0; }
       .center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 150px; }
       #tc { position: relative; width: 1240px; padding: 44px 40px 30px; box-sizing: border-box; text-align: center; }
       .tcbox { position: absolute; inset: 0; border-radius: 44px; background: linear-gradient(180deg, #1d2160, #14173f); border: 8px solid #f5e6c8; box-shadow: 0 0 0 6px #14173f, 0 26px 0 -4px rgba(0,0,0,.3), inset 0 0 0 6px rgba(255,200,61,.6); }
@@ -36,7 +36,7 @@
       .tc-city { position: relative; display: inline-block; margin: 14px 0 38px; padding: 12px 70px 16px; font: 400 76px/1 "Alfa Slab One", serif; letter-spacing: .12em; color: #fff3d1; background: linear-gradient(180deg, #e0694a, #c9573b); box-shadow: 0 8px 0 #7e2f1e; clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%); }
       .cf { position: absolute; left: 0; top: 0; width: 28px; height: 36px; opacity: 0; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
       /* plan 2 : skyline */
-      #glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 76% 52%, rgba(255,206,110,.35), rgba(255,206,110,0) 55%); mix-blend-mode: screen; }
+      #glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 76% 52%, rgba(255,206,110,.35), rgba(255,206,110,0) 55%); }
       #chip { position: absolute; left: 96px; top: 208px; display: flex; align-items: center; gap: 18px; padding: 12px 34px 14px 18px; border-radius: 999px; background: rgba(20,23,63,.92); border: 4px solid #ffc83d; box-shadow: 0 6px 0 rgba(0,0,0,.3); z-index: 25; }
       #chip b { font: 400 44px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #f5e6c8; }
       #chip svg { display: block; }
@@ -123,7 +123,7 @@
         $("#rays").innerHTML = '<svg width="1400" height="1400" viewBox="0 0 1400 1400"><g fill="#ffd76a" opacity=".42">' + rays + "</g></svg>";
         // confettis de papel picado (positions deterministes)
         var rnd = Q.rng(21), cols = ["#d93472", "#ffc83d", "#19b7aa", "#c9573b", "#0e9f6e", "#ff9f1c"], cfs = [];
-        for (var k = 0; k < 44; k++) { var d = document.createElement("div"); d.className = "cf"; d.setAttribute("data-layout-allow-overflow", ""); d.style.background = cols[k % cols.length]; $("#p1").insertBefore(d, $("#flash")); cfs.push(d); }
+        for (var k = 0; k < 30; k++) { var d = document.createElement("div"); d.className = "cf"; d.setAttribute("data-layout-allow-overflow", ""); d.style.background = cols[k % cols.length]; $("#p1").insertBefore(d, $("#flash")); cfs.push(d); }
 
         var tK = C.wordT(PLAN, 1, 1, 1), tH = C.wordT(PLAN, 1, 1, 3);
         tl.set(tc, { opacity: 0 }, 0);
@@ -135,23 +135,23 @@
         tl.fromTo(".tc-kicker", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, tK + 0.1);
         // ¡HOLA! claque
         tl.fromTo(".tc-hola", { opacity: 0, scale: 2.6, rotation: -7, transformOrigin: "50% 60%" }, { opacity: 1, scale: 1, rotation: -2, duration: 0.5, ease: "expo.out" }, tH - 0.02);
-        tl.fromTo("#flash", { opacity: 0.75 }, { opacity: 0, duration: 0.45, ease: "power2.out", immediateRender: false }, tH);
-        tl.fromTo("#rays", { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 0.55, scale: 1, rotation: 0, duration: 0.7, ease: "expo.out" }, tH - 0.02);
-        tl.to("#rays", { rotation: 24, duration: W - tH, ease: "none" }, tH + 0.7);
-        tl.to("#p1", { keyframes: [{ x: -16, duration: 0.05 }, { x: 14, duration: 0.05 }, { x: -9, duration: 0.05 }, { x: 5, duration: 0.05 }, { x: 0, duration: 0.06 }], ease: "power1.inOut" }, tH);
+        QCine.bloom(tl, "#flash", tH - 0.3, 0.2, 0.32, 0.7);
+        tl.fromTo("#rays", { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 0.28, scale: 1, rotation: 0, duration: 0.7, ease: "expo.out" }, tH - 0.02);
+        tl.to("#rays", { rotation: 10, duration: W - tH, ease: "none" }, tH + 0.7);
+        QCine.shake(tl, "#p1", tH, 8);
         tl.fromTo(".tc-city", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 0 50%)", x: -40 }, { opacity: 1, clipPath: "polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%)", x: 0, duration: 0.45, ease: "power3.out" }, tH + 0.32);
         tl.to("#tc", { y: -10, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 1 }, tH + 0.6);
         cfs.forEach(function (c, i) {
           var ang = rnd() * Math.PI * 2, dist = 380 + rnd() * 560, x1 = 960 + Math.cos(ang) * dist, y1 = 480 + Math.sin(ang) * dist * 0.7;
           var t0 = tH + 0.04 + rnd() * 0.06;
-          tl.fromTo(c, { x: 960, y: 520, opacity: 1, scale: 0.4 + rnd() * 0.8, rotation: 0 }, { x: x1, y: y1, rotation: (rnd() - 0.5) * 540, duration: 0.55, ease: "expo.out", immediateRender: false }, t0);
+          tl.fromTo(c, { x: 960, y: 520, opacity: 1, scale: 0.4 + rnd() * 0.8, rotation: 0 }, { x: x1, y: y1, rotation: (rnd() - 0.5) * 300, duration: 0.7, ease: "expo.out", immediateRender: false }, t0);
           tl.to(c, { y: y1 + 520 + rnd() * 200, x: x1 + (rnd() - 0.5) * 160, rotation: "+=" + ((rnd() - 0.5) * 360), opacity: 0, duration: 1.5 + rnd() * 0.4, ease: "power1.in" }, t0 + 0.5);
         });
         // plus de lumiere : etincelles autour de la carte-titre
         for (var s = 0; s < 8; s++) {
           var sp = document.createElement("div"); sp.className = "spark"; sp.setAttribute("data-layout-allow-overflow", ""); sp.innerHTML = '<svg width="60" height="60" viewBox="-30 -30 60 60"><path d="' + Q.sparklePath(0, 0, 26, 6) + '" fill="#fff3d1"/></svg>'; $("#p1").insertBefore(sp, $("#flash"));
           var sx = 220 + rnd() * 1480, sy = 130 + rnd() * 560, st = tH + 0.25 + s * 0.12;
-          tl.fromTo(sp, { x: sx, y: sy, scale: 0, rotation: 0, opacity: 1 }, { scale: 0.6 + rnd() * 0.7, rotation: 90, duration: 0.3, ease: "back.out(3)" }, st);
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, rotation: 0, opacity: 1 }, { scale: 0.6 + rnd() * 0.7, rotation: 60, duration: 0.4, ease: "power2.out", immediateRender: false }, st);
           tl.to(sp, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, st + 0.35);
         }
 
@@ -161,7 +161,9 @@
         tl.fromTo("#p1", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, W - 0.24);
         tl.set("#p1", { visibility: "hidden" }, W + 0.2);
         tl.set("#p2", { visibility: "visible" }, W - 0.2);
-        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.5, ease: "power3.out" }, W - 0.16);
+        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.7, ease: "power3.out" }, W - 0.16);
+        tl.set("#p2", { opacity: 0 }, 0);
+        tl.to("#p2", { opacity: 1, duration: 0.45, ease: "sine.inOut" }, W - 0.16);
         streaks.forEach(function (sk, i) {
           tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, W - 0.22 + i * 0.012);
         });

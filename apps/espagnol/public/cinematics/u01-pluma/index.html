@@ -21,8 +21,8 @@
       #dawn { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 42%, #fff1b5 0%, #ffc83d 22%, #ff8a47 48%, #8f1d4e 78%, #1d2160 100%); opacity: 0; }
       #stars { position: absolute; inset: 0; }
       #floor { position: absolute; left: 0; right: 0; top: 880px; height: 320px; background-size: auto, 90px 90px; }
-      #raysB { position: absolute; left: 160px; top: -260px; width: 1600px; height: 1600px; opacity: 0; mix-blend-mode: screen; }
-      #flash { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 30; }
+      #raysB { position: absolute; left: 160px; top: -260px; width: 1600px; height: 1600px; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 40%, #fff3d1, rgba(255,243,209,.55) 70%); opacity: 0; z-index: 30; }
       #spell { position: absolute; left: 0; top: 0; z-index: 8; opacity: 0; }
       #beam { position: absolute; left: 0; top: 0; height: 26px; width: 560px; margin-top: -13px; border-radius: 13px; background: linear-gradient(90deg, rgba(255,243,176,0), #fff3b0 30%, #ffc83d 70%, #fff); box-shadow: 0 0 40px 12px rgba(255,200,61,.8); transform-origin: 0 50%; opacity: 0; z-index: 7; }
       #cracks { position: absolute; left: 0; top: 0; z-index: 6; filter: drop-shadow(0 0 12px #fff3b0); }
@@ -41,7 +41,6 @@
       #mapbox svg { width: 1920px; height: 1440px; }
       #mapbox .m-plq:not(.m-plq-salamanca), #mapbox .m-med:not(.m-med-madrid):not(.m-med-salamanca) { display: none; }
       #mapbox .m-med text { display: none; }
-      #wipe { position: absolute; inset: 0; background: #fff7dc; opacity: 0; z-index: 31; }
     </style>
   </head>
   <body>
@@ -61,7 +60,6 @@
       <div id="p2" class="plan">
         <div id="mapbox" data-layout-allow-overflow></div>
       </div>
-      <div id="wipe"></div>
       <!--GEN:audio-->
       <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.66" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.46,"v":1},{"t":9.66,"v":0}]}]}'></audio>
       <audio id="a-voz-1-1" src="./assets/voz/quetzal.ae8070b510.mp3" data-start="3.3" data-duration="2.894" data-track-index="1" data-volume="1"></audio>
@@ -114,7 +112,7 @@
 
         // camera : leger push-in tendu vers le duel, secousse a l'explosion, puis respiration large
         tl.fromTo("#world", { scale: 1.0 }, { scale: 1.1, duration: 1.7, ease: "power2.in" }, 0);
-        tl.to("#world", { keyframes: [{ x: -22, y: 10, duration: 0.05 }, { x: 18, y: -12, duration: 0.05 }, { x: -12, y: 8, duration: 0.05 }, { x: 8, y: -4, duration: 0.05 }, { x: 0, y: 0, duration: 0.08 }], ease: "power1.inOut" }, 1.7);
+        tl.to("#world", { keyframes: [{ x: -9, y: 3, duration: 0.11 }, { x: 7, y: -4, duration: 0.11 }, { x: -5, y: 2, duration: 0.11 }, { x: 3, y: -1, duration: 0.11 }, { x: 0, y: 0, duration: 0.12 }], ease: "sine.inOut" }, 1.7);
         tl.to("#world", { scale: 1.0, duration: 1.5, ease: "power3.out" }, 1.75);
 
         // hechizo : le cercle runique s'allume devant Alex, le rayon fonce sur la Sombra
@@ -134,7 +132,7 @@
         var bx = HX + 30, by = HY - 30, tx = SOX, ty = SOY + 380, len = Math.hypot(tx - bx, ty - by);
         gsap.set(beam, { x: bx, y: by, width: len, rotation: Math.atan2(ty - by, tx - bx) * 180 / Math.PI });
         tl.fromTo(beam, { scaleX: 0, opacity: 1 }, { scaleX: 1, duration: 0.3, ease: "power3.out", immediateRender: false }, 0.75);
-        tl.to(beam, { opacity: 0.55, duration: 0.07, yoyo: true, repeat: 7, ease: "none" }, 1.05);
+        tl.to(beam, { opacity: 0.4, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 1.05);
         tl.to(beam, { opacity: 0, duration: 0.2 }, 1.7);
         // la Sombra se fissure (traits de lumiere)
         var cr = mk(actors, ""); cr.id = "cracks";
@@ -144,22 +142,21 @@
           var l = p.getTotalLength(); p.style.strokeDasharray = l; p.style.strokeDashoffset = l;
           tl.to(p, { strokeDashoffset: 0, duration: 0.35, ease: "power2.out" }, crs[i][1]);
         });
-        tl.fromTo(sh, { filter: "brightness(1)" }, { filter: "brightness(2.2)", duration: 0.5, ease: "power2.in", immediateRender: false }, 1.2);
-        tl.to(sh, { x: "+=10", duration: 0.04, ease: "none", yoyo: true, repeat: 15 }, 1.1);
+        tl.to(sh, { x: "+=5", duration: 0.12, ease: "sine.inOut", yoyo: true, repeat: 7 }, 1.1);
         // EXPLOSION : eclair blanc, eclats de lumiere, poussiere doree
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 1, duration: 0.07, ease: "power2.out", immediateRender: false }, 1.7);
-        tl.to("#flash", { opacity: 0, duration: 0.6, ease: "power2.out" }, 1.78);
+        QCine.bloom(tl, "#flash", 1.45, 0.22, 0.32, 0.7);
         tl.to(sh, { opacity: 0, scale: 1.18, duration: 0.25, ease: "power2.out", transformOrigin: "50% 50%" }, 1.72);
         tl.to("#cracks", { opacity: 0, duration: 0.2 }, 1.72);
         tl.to("#dawn", { opacity: 1, duration: 1.4, ease: "power2.inOut" }, 1.72);
-        tl.fromTo("#raysB", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 0.65, scale: 1, rotation: 0, duration: 0.9, ease: "expo.out" }, 1.72);
-        tl.to("#raysB", { rotation: 30, duration: W - 1.7, ease: "none" }, 2.4);
+        tl.fromTo("#raysB", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 0.28, scale: 1, rotation: 0, duration: 0.9, ease: "expo.out" }, 1.72);
+        tl.to("#raysB", { rotation: 12, duration: W - 1.7, ease: "none" }, 2.4);
         tl.to("#raysB", { opacity: 0, duration: 0.6 }, W - 1.0);
         tl.to("#night", { opacity: 0, duration: 1.2 }, 1.8);
-        for (var s = 0; s < 70; s++) {
+        for (var s = 0; s < 48; s++) {
           var sd = mk(actors, "shard"); sd.style.background = s % 3 === 0 ? "#fff7dc" : s % 3 === 1 ? "#ffc83d" : "#ff9f1c";
           var ang2 = rnd() * 6.283, d = 260 + rnd() * 760, x0 = SOX + (rnd() - 0.5) * 200, y0 = SOY + 360 + (rnd() - 0.5) * 360, sc = 0.4 + rnd() * 1.1;
-          tl.fromTo(sd, { x: x0, y: y0, opacity: 1, scale: sc, rotation: rnd() * 360 }, { x: x0 + Math.cos(ang2) * d, y: y0 + Math.sin(ang2) * d * 0.8 - 80, rotation: "+=" + (200 + rnd() * 400), duration: 0.8 + rnd() * 0.4, ease: "power3.out", immediateRender: false }, 1.72 + rnd() * 0.04);
+          tl.fromTo(sd, { x: x0, y: y0, opacity: 0, scale: sc, rotation: rnd() * 360 }, { x: x0 + Math.cos(ang2) * d, y: y0 + Math.sin(ang2) * d * 0.8 - 80, rotation: "+=" + (200 + rnd() * 400), duration: 0.8 + rnd() * 0.4, ease: "power3.out", immediateRender: false }, 1.72 + rnd() * 0.04);
+          tl.to(sd, { opacity: 1, duration: 0.3, ease: "sine.out" }, 1.72);
           tl.to(sd, { y: "-=" + (120 + rnd() * 220), opacity: 0, scale: 0.1, duration: 1.3 + rnd() * 0.6, ease: "power1.in" }, 2.5 + rnd() * 0.3);
         }
         for (var q = 0; q < 26; q++) {
@@ -193,15 +190,13 @@
         Q.quetzalRegrow(tl, qzEl, catchT + 1.0);
         Q.quetzalFlap(tl, qzEl, catchT + 1.5, 6, 0.38, 0.6);
         Q.quetzalBlink(tl, qzEl, catchT + 2.4);
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.6, duration: 0.08, ease: "power2.out", immediateRender: false }, catchT + 0.05);
-        tl.to("#flash", { opacity: 0, duration: 0.5, ease: "power2.out" }, catchT + 0.13);
-        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.7, duration: 0.1, ease: "power2.out", immediateRender: false }, catchT + 1.05);
-        tl.to("#flash", { opacity: 0, duration: 0.7, ease: "power2.out" }, catchT + 1.15);
+        QCine.bloom(tl, "#flash", catchT, 0.16, 0.32, 0.5);
+        QCine.bloom(tl, "#flash", catchT + 1.0, 0.18, 0.32, 0.7);
         // etincelles de la prise
         for (var z = 0; z < 10; z++) {
           var sp = mk(actors, "star", '<svg width="54" height="54" viewBox="-27 -27 54 54"><path d="' + Q.sparklePath(0, 0, 24, 6) + '" fill="#fff3b0"/></svg>');
           var za = (z / 10) * 6.283, zx = 640 + Math.cos(za) * 20, zy = 480 + Math.sin(za) * 20;
-          tl.fromTo(sp, { x: zx, y: zy, scale: 0, opacity: 1 }, { x: zx + Math.cos(za) * 150, y: zy + Math.sin(za) * 150, scale: 0.7 + (z % 3) * 0.3, rotation: 90, duration: 0.5, ease: "back.out(2.4)", immediateRender: false }, catchT + 0.05 + z * 0.015);
+          tl.fromTo(sp, { x: zx, y: zy, scale: 0, opacity: 1 }, { x: zx + Math.cos(za) * 150, y: zy + Math.sin(za) * 150, scale: 0.7 + (z % 3) * 0.3, rotation: 90, duration: 0.5, ease: "power2.out", immediateRender: false }, catchT + 0.05 + z * 0.015);
           tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, catchT + 0.5 + z * 0.015);
         }
         // Quetzal parle (« ¡Gracias, amigo! ¡Hola! »)
@@ -217,11 +212,11 @@
         tl.fromTo("#banner .rb", { rotation: -2 }, { rotation: 1, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: 3 }, bt + 0.5);
         tl.to("#banner", { y: -240, opacity: 0, duration: 0.4, ease: "power3.in" }, W - 0.5);
 
-        // ============ TRANSITION : eclair de lumiere, la carte s'ouvre ============
-        tl.fromTo("#wipe", { opacity: 0 }, { opacity: 1, duration: 0.22, ease: "power2.in", immediateRender: false }, W - 0.25);
-        tl.set("#p1", { visibility: "hidden" }, W);
-        tl.set("#p2", { visibility: "visible" }, W);
-        tl.to("#wipe", { opacity: 0, duration: 0.45, ease: "power2.out" }, W + 0.02);
+        // ============ TRANSITION : fondu enchaine vers la carte (jamais de flash plein ecran) ============
+        tl.set("#p2", { opacity: 0 }, 0);
+        tl.set("#p2", { visibility: "visible" }, W - 0.3);
+        tl.to("#p2", { opacity: 1, duration: 0.55, ease: "sine.inOut" }, W - 0.3);
+        tl.set("#p1", { visibility: "hidden" }, W + 0.3);
 
         // ============ PLAN 2 : la carte, l'empreinte lumineuse vers Salamanca ============
         var mapbox = $("#mapbox");

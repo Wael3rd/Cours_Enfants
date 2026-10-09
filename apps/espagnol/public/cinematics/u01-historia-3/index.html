@@ -16,7 +16,7 @@
       html, body { margin: 0; background: #0b0d2a; }
       #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
       #dim { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(60,10,90,0), rgba(11,13,42,.75)); opacity: 0; z-index: 12; pointer-events: none; }
-      #tint { position: absolute; inset: 0; background: radial-gradient(ellipse at 66% 36%, rgba(217,52,114,.38), rgba(217,52,114,0) 60%); mix-blend-mode: screen; opacity: 0; z-index: 13; pointer-events: none; }
+      #tint { position: absolute; inset: 0; background: radial-gradient(ellipse at 66% 36%, rgba(217,52,114,.38), rgba(217,52,114,0) 60%); opacity: 0; z-index: 13; pointer-events: none; }
     </style>
   </head>
   <body>
@@ -68,7 +68,7 @@
         tl.to("#tint", { opacity: 1, duration: 0.8, ease: "power2.inOut" }, L1.words[3].t);
         tl.to("#dim", { opacity: 0.5, duration: 1.2, ease: "sine.inOut" }, L2.t - 0.2);
         tl.to("#tint", { opacity: 0.25, duration: 1.2, ease: "sine.inOut" }, L2.t - 0.2);
-        room.back.querySelectorAll(".ac-lamp-glow").forEach(function (g, i) { tl.to(g, { opacity: 0.05, duration: 0.15, yoyo: true, repeat: 5, ease: "none" }, L1.words[3].t + i * 0.18); });
+        room.back.querySelectorAll(".ac-lamp-glow").forEach(function (g, i) { tl.to(g, { opacity: 0.08, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, L1.words[3].t + i * 0.18); });
 
         // ---------- la Sombra du Silencio glisse sur la carte (silhouette de fumee, yeux magenta) ----------
         var sh = S.mk(room.mid, "sombra"); sh.setAttribute("data-layout-allow-overflow", "");
@@ -105,7 +105,7 @@
         // ---------- le Quetzal supplie ----------
         Q.quetzalSway(tl, qz, 0.5, 2.4, 0.5);
         Q.quetzalBlink(tl, qz, 1.9); Q.quetzalBlink(tl, qz, 4.6);
-        tl.fromTo(qz, { x: 0 }, { x: 4, duration: 0.07, ease: "sine.inOut", yoyo: true, repeat: 13 }, 0.4);
+        tl.fromTo(qz, { x: 0 }, { x: 4, duration: 0.1, ease: "sine.inOut", yoyo: true, repeat: 9 }, 0.4);
         Q.quetzalPoseTo(tl, qz, "talk", L2.t - 0.15, 0.4, "power2.out");
         C.talkQuetzal(tl, qz, L2);
         tl.to(qz, { y: -22, duration: 0.2, ease: "power2.out", yoyo: true, repeat: 1 }, L2.words[0].t);

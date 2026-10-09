@@ -19,7 +19,7 @@
       .plan { position: absolute; inset: 0; overflow: hidden; }
       #p2 { visibility: hidden; }
       .star { position: absolute; left: 0; top: 0; }
-      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(255,243,176,.7), rgba(255,243,176,0) 62%); mix-blend-mode: screen; z-index: 20; opacity: 0; pointer-events: none; }
+      .vflash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(255,243,176,.7), rgba(255,243,176,0) 62%); z-index: 20; opacity: 0; pointer-events: none; }
       .streak { position: absolute; left: 0; height: 6px; width: 700px; border-radius: 3px; background: linear-gradient(90deg, rgba(255,243,209,0), #fff3d1); opacity: 0; z-index: 60; }
     </style>
   </head>
@@ -92,7 +92,7 @@
           tl.fromTo(sp, { x: sx, y: sy, scale: 0, opacity: 1 }, { x: sx + Math.cos(ang) * 190, y: sy + Math.sin(ang) * 190, scale: 1, duration: 0.5, ease: "back.out(3)", immediateRender: false }, tNom + 0.5 + k * 0.04);
           tl.to(sp, { scale: 0, opacity: 0, duration: 0.3 }, tNom + 1.0 + k * 0.04);
         }
-        tl.fromTo("#vflash", { opacity: 0 }, { opacity: 0.55, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, tNom + 0.4);
+        QCine.bloom(tl, "#vflash", tNom + 0.2, 0.22, 0.32, 0.6);
         // Abuela : « ¡Los nombres! » (bras en l'air) puis « ¡Gracias, cariño! »
         C.talkBounce(tl, abu.b, L1, 6); C.talkChar(tl, abu, L1);
         var aR = abu.svg.querySelector(".c-armR"), aL = abu.svg.querySelector(".c-armL");

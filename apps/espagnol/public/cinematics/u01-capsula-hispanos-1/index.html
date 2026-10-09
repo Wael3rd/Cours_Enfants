@@ -103,7 +103,6 @@
         steps.forEach(function (s, i) {
           var wd = L1.words[Math.min(s.w, L1.words.length - 1)], t = wd.t - 0.05;
           tl.fromTo(s.sel, { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power2.out" }, t);
-          tl.fromTo(s.sel, { filter: "brightness(2.2)" }, { filter: "brightness(1)", duration: 0.7, ease: "power2.out", immediateRender: false }, t);
           var ring = document.createElement("div"); ring.className = "ring"; ring.setAttribute("data-layout-allow-overflow", ""); ring.style.left = s.at[0] + "px"; ring.style.top = s.at[1] + "px"; $("#p1").appendChild(ring);
           tl.fromTo(ring, { scale: 0.3, opacity: 1 }, { scale: 3.4, opacity: 0, duration: 0.9, ease: "power2.out", immediateRender: false }, t);
           tl.fromTo(ring, { scale: 0.3, opacity: 1 }, { scale: 2.4, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, t + 0.22);
