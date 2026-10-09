@@ -4,7 +4,7 @@
    * Rythme : but en jeu (<= 0,8 s) a chaque reponse fluente ; cinematique `goal` seulement pour le 1er but et le but decisif.
    */
   import { onMount } from 'svelte';
-  import { gsap, burst } from '@ce/core';
+  import { gsap, burst, prefersReducedMotion } from '@ce/core';
   import { app } from '../state/store.svelte.ts';
   import { nav } from '../lib/nav.svelte.ts';
   import { AnswerEntry } from '../lib/entry.svelte.ts';
@@ -148,7 +148,8 @@
     pitch?.celebrate();
     goalText = true;
     if (goalEl) gsap.fromTo(goalEl, { scale: 0.3, opacity: 0, rotate: -6 }, { scale: 1, opacity: 1, rotate: -3, duration: 0.22, ease: 'cePunch', overwrite: true });
-    if (flash) gsap.fromTo(flash, { opacity: 0.55 }, { opacity: 0, duration: 0.5, ease: 'power2.out' });
+    // lueur douce (politique "mouvement sur") : <= 0,22 en 0,2 s puis fondu, jamais d'eclair blanc
+    if (flash) gsap.timeline().fromTo(flash, { opacity: 0 }, { opacity: prefersReducedMotion() ? 0.1 : 0.22, duration: 0.2, ease: 'sine.out' }).to(flash, { opacity: 0, duration: 0.45, ease: 'sine.inOut' });
     if (pitchBox) {
       const r = pitchBox.getBoundingClientRect();
       burst(document.body, r.right - 90, r.top + r.height / 2, { count: 22, colors: [club.primary, club.secondary, '#FFD23F', '#ffffff'] });

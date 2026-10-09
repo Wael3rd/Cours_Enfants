@@ -49,8 +49,9 @@
       tl.to(ballEl, { y: -10, duration: 0.17, ease: 'power2.in' }, 0.17);
       tl.add(() => {
         sfx('ball-net');
-        gsap.fromTo(netEl!, { scaleX: 1 }, { scaleX: 1.22, duration: 0.09, yoyo: true, repeat: 3, ease: 'sine.inOut', transformOrigin: '0 50%' });
-        gsap.fromTo(goalEl!, { y: 0 }, { y: -6, duration: 0.08, yoyo: true, repeat: 3 });
+        // filet qui se tend une fois (secousse moderee, pas de vibration rapide)
+        gsap.fromTo(netEl!, { scaleX: 1 }, { scaleX: 1.15, duration: 0.14, yoyo: true, repeat: 1, ease: 'sine.inOut', transformOrigin: '0 50%' });
+        gsap.fromTo(goalEl!, { y: 0 }, { y: -5, duration: 0.12, yoyo: true, repeat: 1, ease: 'sine.inOut' });
       }, 0.34);
       tl.to(ballEl, { x: goalX + 40, y: 14, opacity: 0, duration: 0.16, ease: 'power1.out' }, 0.34);
     });

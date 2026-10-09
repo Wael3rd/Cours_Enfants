@@ -76,6 +76,39 @@ docs/                        specs
 - Respecter `prefers-reduced-motion` (atténuer, pas supprimer le feedback).
 - Durées : micro-interactions 120–250 ms, transitions d'écran 350–600 ms, célébrations 1,2–2,5 s.
 - Budget : JS initial < 250 KB gzip par app hors cinématiques.
+- Fonds lourds (stade : ~2 500 nœuds SVG) **rastérisés une fois en WebP** (`npm run art:raster` →
+  `apps/maths/public/cinematics/_shared/img/`, commités) ; jamais de `mix-blend-mode` ni de `filter` animé
+  (repeint complet à chaque image) : assombrir/flouter = image pré-floutée + voile dont on anime l'opacité.
+  Boucles infinies uniquement en `transform`/`opacity` sur un conteneur composé (`will-change`), pas sur des groupes SVG.
+- Mesure : `npm run perf:frames` (Playwright, CPU ralenti 4×, 1280×800 @1,5 : accueil + intro-club, goal, match-intro ;
+  objectif p95 < 20 ms). Machine de dev chargée → `--runs 3` (médiane) et comparer en alternant (`--dist <autre build>`).
+
+## Mouvement sûr (photosensibilité — WCAG 2.3.1 + confort d'un enfant de 7 ans)
+
+Règle pour l'app maths (écrans, kit `CEArt`, 16 cinématiques) et pour toute nouvelle animation. L'énergie « habillage TV »
+vient du **mouvement** (push-in, glissements, overshoot, échelle), **pas de la lumière**.
+
+- **≤ 3 flashs par seconde**, pour n'importe quel élément et pour l'écran entier (WCAG 2.3.1 : transition de luminance
+  relative ≥ 0,1, côté sombre < 0,8, sur ≥ ~10 % de l'écran).
+- **Pas de flash blanc plein écran.** À la place : `CEArt.bloom` (dégradé radial chaud, opacité ≤ 0,25, montée ≥ 0,3 s,
+  descente 0,6 s). Aucune variation brutale de luminance sur une grande surface : fondus ≥ 0,3 s ; un gros élément clair
+  qui « claque » (blason, « BUT ! », « VS ») arrive par l'échelle mais apparaît en fondu (0,2–0,3 s).
+- **Flashs de foule rares, petits, doux** : `CEArt.crowdFlashes` = ≤ 2 par seconde, fondus 0,3 s / 0,45 s, emplacements
+  tous différents (12 au maximum dans le stade) ; aucun en mode doux. Étincelles (`sparkle`) : apparition ≥ 0,35 s.
+- **Aucun clignotement en boucle sur les écrans** : le fond de l'accueil est calme (projecteurs qui respirent en 3,4 s,
+  rien d'autre) ; pas de reflets/balayages plus rapides que 1 par seconde.
+- **Confettis sans papillotement** : retournement lent (≤ ~1 par seconde), 70 % du nombre demandé (30 % en mode doux).
+- **Secousses modérées** : `CEArt.shake` plafonné à 10 px (cadre 1920), 6 oscillations douces ; rien en mode doux.
+  Tremblements d'objets ≤ ±5°, oscillations ≥ 0,1 s. Rayons (`rays`) : opacité ≤ 0,3, rotation < 1 passage/s en un point.
+- **« Animations douces »** (espace parent → Réglages ; forcé si `prefers-reduced-motion`) : `@ce/core`
+  `setSoftMotion` (pop/shake/burst/countUp réduits), fond immobile, pas de respiration du bouton MATCH ; les cinématiques
+  reçoivent `{ motion: { soft } }` (canal `motion`, chaque composition maths appelle `CEArt.setSoft` puis se reconstruit).
+- **Contrôle** : `npm run a11y:flash` (après `npm run build`) — `tools/a11y/flash-check.mjs` rend chaque cinématique image
+  par image à 30 i/s (timeline positionnée comme le rendu HyperFrames), capture 10 s de l'accueil (screencast Playwright,
+  MP4 de contrôle dans `tools/a11y/out/`) et mesure la luminance relative par image : **échec** si > 3 flashs généraux/s
+  ou **éblouissement** (luminance moyenne de l'écran ou d'une moitié qui monte de > 0,12 en 0,1 s) ; « scintillement »
+  (petits éclats sur place) = indicateur seulement. Options : `espagnol`, `home`, `<dossier>`, `--video f.mp4`,
+  `--only a,b`, `--soft`, `--json`, `--report-only`. Garde-fous statiques : `tests/safe-motion.test.ts`.
 
 ## Hébergement
 

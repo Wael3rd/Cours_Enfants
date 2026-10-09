@@ -103,7 +103,13 @@ Le SVG des personnages, blasons, cage, stade, HUD, cartes, trophée, médaille�
 Ne jamais éditer les deux fichiers générés (le test `tests/art.test.ts` vérifie qu'ils restent synchrones et que chaque SVG est bien formé).
 Le rig du joueur expose des groupes `p-armL/p-armR/p-legL/p-legR/p-body/p-head/p-rig` ; `CEArt.setPose / toPose / idleCycle / runCycle`
 prennent `gsap` en paramètre : mêmes animations dans l'app (boucle infinie) et dans une timeline HyperFrames (finie).
-Effets déterministes : `CEArt.confetti` (balistique graine fixe), `shake`, `countUp` (piloté par la progression), `crowdFlashes`, `rays`, `sparkle`, `speedLines`.
+Effets déterministes : `CEArt.confetti` (balistique graine fixe), `shake`, `countUp` (piloté par la progression), `crowdFlashes`, `bloom`, `rays`, `sparkle`, `speedLines`.
+**Mouvement sûr** (règles complètes : `docs/architecture.md`) : jamais de flash blanc plein écran (`CEArt.bloom(gsap, tl, "#flash", t, 0.22, 0.3)`
+sur un `#flash` en dégradé radial chaud), `crowdFlashes` ≤ 2/s, pas de `filter` animé ni de `mix-blend-mode`. Stade :
+`CEArt.stadium({ raster: "./_shared/img/", flashes: 8, lights: "img" })` (tribunes en WebP ; `lights` omis = projecteurs SVG animables,
+cf. intro-club) ; fond flou = `./_shared/img/stadium-soft.webp` sous un voile noir. Chaque composition maths écoute le canal `motion`
+(`registerRuntimeDataHandler("motion", d => { CEArt.setSoft(!!d.soft); if (ready) build(); })`) envoyé par `lib/cine.ts`.
+Contrôle : `npm run a11y:flash` (0 échec exigé).
 Sons : `_shared/sfx/` (copie de `assets/sfx`, découpes avec fondus par `tools/assets/build-cine-sfx.sh`), `<audio id data-start data-duration src="./_shared/sfx/…">`.
 
 ### Patron d'une composition (à copier)
