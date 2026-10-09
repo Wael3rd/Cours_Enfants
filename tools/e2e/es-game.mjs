@@ -48,7 +48,7 @@ const check = (label, ok, extra = '') => {
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, hasTouch: true });
 // Reconnaissance vocale simulee (Chrome headless n'a pas de micro) : renvoie window.__heard
-await ctx.addInitScript(() => {
+const fakeSpeech = () => {
   class FakeRec {
     constructor() { this.lang = ''; this.interimResults = true; this.maxAlternatives = 5; this.continuous = false; }
     start() {
@@ -64,8 +64,9 @@ await ctx.addInitScript(() => {
   }
   window.webkitSpeechRecognition = FakeRec;
   window.SpeechRecognition = FakeRec;
-});
-const page = await ctx.newPage();
+};
+await ctx.addInitScript(fakeSpeech);
+let page = await ctx.newPage();
 const errors = [];
 const external = [];
 page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
@@ -513,6 +514,238 @@ try {
   await shot('43-mapa-viaje');
   const plumas = await page.evaluate(() => Object.keys(window.__q.game.state.plumas));
   check('plume u01 enregistrée', plumas.includes('u01'));
+
+  // ---- 9b. corrections de revue : cinematiques en parties, evenement, unite 4, Desafio compact, Diccionario typographique
+  {
+    const mk = async (viewport, now) => {
+      const c = await browser.newContext({ viewport, hasTouch: true });
+      await c.addInitScript(fakeSpeech);
+      const p = await c.newPage();
+      p.on('pageerror', (e) => errors.push('pageerror(extra): ' + e.message));
+      p.on('response', (r) => r.status() >= 400 && !r.url().includes('/audio/es/') && errors.push(r.status() + ' ' + r.url()));
+      c.on('request', (req) => { const u = req.url(); if (!/^(data|blob|about):/.test(u) && new URL(u).origin !== ORIGIN) external.push(u); });
+      await p.goto(`${APP}?debug${now ? `&now=${now}` : ''}`);
+      await p.waitForFunction(() => window.__q);
+      await p.evaluate(async () => {
+        const { game, loadAllUnits, content } = window.__q;
+        await loadAllUnits();
+        game.mutate((s) => {
+          s.flags.prologue = '1';
+          s.profile.name = 'Josué';
+          for (const u of ['u01', 'u02', 'u03']) {
+            s.plumas[u] = '2026-10-01';
+            for (const q of content.unitById.get(u).quests) s.quests[q.id] = { done: true, stars: 2, bestAccuracy: 0.9, bestHints: 0, attempts: 1 };
+          }
+          for (const u of content.units) for (const v of u.vocab) s.discovered[v.id] = '2026-10-01';
+        });
+        await game.flush();
+      });
+      return { c, p };
+    };
+    const shotp = (p, name) => p.screenshot({ path: join(out, `es-${name}.png`) });
+    const playOn = async (p, opts) => {
+      const saved = page;
+      page = p;
+      try { await playAll(opts); } finally { page = saved; }
+    };
+
+    // (1) cinematique en parties : un seul overlay, la partie 2 suit sans trou, "Saltar" saute tout
+    {
+      const { c, p } = await mk({ width: 1280, height: 800 }, '2026-10-12');
+      const manifest = await p.evaluate(() => fetch('cinematics/manifest.json').then((r) => r.json()).catch(() => ({})));
+      const multi = manifest['u01-historia'];
+      check('manifeste des cinématiques lu (u01-historia en parties)', !!multi && multi.parts.length >= 3, `(${multi?.parts.length} parties)`);
+      const info = await p.evaluate(async () => {
+        const { loadUnit, content } = window.__q;
+        await loadUnit('u01');
+        for (const q of content.unitById.get('u01').quests) {
+          const i = q.steps.findIndex((st) => st.tipo === 'cinematic_ref' && st.cinematica === 'u01-historia');
+          if (i >= 0) return { quest: q.id, i, n: q.steps.length };
+        }
+        return null;
+      });
+      await p.evaluate(({ quest, i }) => { history.replaceState(null, '', `?debug&from=${i}`); window.__q.nav.go({ name: 'quest', quest }, { root: true }); }, info);
+      await p.waitForSelector('.cine[data-state="playing"]', { timeout: 20000 });
+      const seen = new Set();
+      let maxOverlays = 0;
+      const t0 = Date.now();
+      while (Date.now() - t0 < 40000 && seen.size < 2) {
+        const r = await p.evaluate(() => ({ n: document.querySelectorAll('.cine').length, src: document.querySelector('.cine hyperframes-player.on')?.getAttribute('src') ?? '' }));
+        maxOverlays = Math.max(maxOverlays, r.n);
+        if (r.src) seen.add(r.src);
+        await p.waitForTimeout(250);
+      }
+      await shotp(p, '46-cinematica-partes');
+      check('cinématique : la partie 2 enchaîne dans le même overlay', seen.size >= 2 && maxOverlays === 1, `(${[...seen].map((x) => x.split('/').slice(-2)[0]).join(' -> ')})`);
+      const idxBefore = await p.evaluate(() => window.__qidx);
+      await p.locator('.cine .skip').click();
+      await p.waitForSelector('.cine', { state: 'detached', timeout: 8000 });
+      await p.waitForTimeout(800);
+      const after = await p.evaluate(() => ({ idx: window.__qidx, step: window.__qstep?.cinematica ?? null }));
+      check('« Saltar » saute toute la cinématique (étape suivante)', after.idx === idxBefore + 1 && after.step !== 'u01-historia', `(${idxBefore} -> ${after.idx})`);
+      await c.close();
+    }
+
+    // (2) evenement : dans la fenetre / hors fenetre / ouverture forcee par le parent
+    {
+      const { c, p } = await mk({ width: 1280, height: 800 }, '2026-10-28');
+      await p.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
+      await p.waitForSelector('.map .evento', { timeout: 15000 });
+      await p.waitForTimeout(1500);
+      const banner = await p.locator('.map .evento').innerText();
+      check('événement (28 oct) : bannière « ¡Evento: Día de Muertos! »', /¡Evento: Día de Muertos!/.test(banner), `(${banner.replace(/\s+/g, ' ')})`);
+      check('événement : marqueur animé (halo + papel picado) sur Oaxaca', (await p.locator('.map .m-evfx').count()) === 1);
+      await shotp(p, '47-mapa-evento');
+      await p.evaluate(() => window.__q.nav.go({ name: 'region', unit: 'e01' }));
+      await p.waitForSelector('.reg .node', { timeout: 15000 });
+      await p.waitForTimeout(1200);
+      const cap = await p.locator('.reg .cap').innerText();
+      check('région événement : « Evento especial », jamais « Capítulo 0 »', /Evento especial/.test(cap) && !/Cap[ií]tulo 0/.test(await p.locator('.reg').innerText()), `(${cap})`);
+      await shotp(p, '48-region-evento');
+      await p.locator('.reg .node.available').first().click();
+      await p.waitForTimeout(600);
+      await p.click('.sheet button:has-text("Jugar")');
+      await p.waitForSelector('.run .stepwrap', { timeout: 20000 });
+      await p.waitForTimeout(800);
+      await playOn(p, { max: 40 });
+      await p.waitForSelector('.end', { timeout: 40000 });
+      await p.waitForTimeout(4500);
+      check('événement e01 : une quête jouée jusqu\'au bout', true);
+      await shotp(p, '48b-quest-evento');
+      await c.close();
+
+      const o = await mk({ width: 1280, height: 800 }, '2026-06-10');
+      await o.p.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
+      await o.p.waitForSelector('.map .hud-l');
+      await o.p.waitForTimeout(1200);
+      check('hors fenêtre (10 juin) : ni bannière ni marqueur d\'événement', (await o.p.locator('.map .evento').count()) === 0 && (await o.p.locator('.map .m-evfx').count()) === 0);
+      await o.p.evaluate(() => window.__q.nav.go({ name: 'settings' }, { root: true }));
+      await o.p.waitForSelector('.set .gate button');
+      const gate = await o.p.locator('.set .gate button').boundingBox();
+      await o.p.mouse.move(gate.x + gate.width / 2, gate.y + gate.height / 2);
+      await o.p.mouse.down();
+      await o.p.waitForTimeout(3400);
+      await o.p.mouse.up();
+      await o.p.waitForSelector('[data-testid=parent-space]');
+      await o.p.click('[data-testid=tab-ajustes]');
+      await o.p.locator('[data-testid=force-e01] input').check();
+      await o.p.waitForTimeout(400);
+      await o.p.click('[data-testid=parent-close]');
+      await o.p.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
+      await o.p.waitForSelector('.map .evento', { timeout: 15000 });
+      check('espace parent : ouverture forcée de l\'événement hors dates', (await o.p.locator('.map .m-evfx').count()) === 1);
+      await shotp(o.p, '49-evento-forzado');
+      await o.c.close();
+    }
+
+    // (3) Desafio compact : aucune etape rognee en haut, en 1280x800 et en portrait 800x1280 (u04 + e01)
+    const shotDone = new Set();
+    const bossLayout = async (vp, qid, fb) => {
+      const { c, p } = await mk(vp, '2026-10-28');
+      const uid = qid.split('-')[0];
+      const n = await p.evaluate(async ({ uid, qid }) => (await window.__q.loadUnit(uid)).quests.find((q) => q.id === qid).steps.length, { uid, qid });
+      const bad = [];
+      const types = new Set();
+      for (let i = 0; i < n; i++) {
+        await p.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
+        await p.waitForTimeout(300);
+        await p.evaluate(({ qid, i }) => { history.replaceState(null, '', `?debug&now=2026-10-28&from=${i}`); window.__q.nav.go({ name: 'quest', quest: qid }, { root: true }); }, { qid, i });
+        await p.waitForSelector('.run .stepwrap', { timeout: 20000 });
+        await p.waitForSelector('.bossintro', { state: 'hidden', timeout: 8000 }).catch(() => {});
+        await p.waitForTimeout(700);
+        const t = await p.evaluate(() => window.__qstep?.tipo);
+        if (t === 'cinematic_ref') continue;
+        types.add(t);
+        if (fb) await p.evaluate(() => { const w = document.querySelector('.stepwrap'); w.classList.add('fbshown'); w.style.paddingBottom = '110px'; });
+        await p.waitForTimeout(250);
+        const r = await p.evaluate(() => {
+          const area = document.querySelector('.area').getBoundingClientRect();
+          const out = [];
+          document.querySelectorAll('.stepwrap *').forEach((e) => {
+            if (e.children.length || getComputedStyle(e).position === 'absolute' || getComputedStyle(e).visibility === 'hidden') return;
+            const b = e.getBoundingClientRect();
+            if (b.width && (b.top < area.top - 2 || b.left < -2 || b.right > innerWidth + 2)) out.push(`${String(e.className?.baseVal ?? e.className).slice(0, 24)}@${Math.round(b.top - area.top)}`);
+          });
+          const forge = document.querySelector('.forge')?.getBoundingClientRect();
+          if (forge) for (const sel of ['.work', '.anvilwrap', '.bank']) { const b = document.querySelector(sel)?.getBoundingClientRect(); if (b && (b.top < forge.top - 1 || b.bottom > forge.bottom + 1)) out.push(`forge ${sel} hors cadre`); }
+          return out;
+        });
+        if (r.length) bad.push(`#${i} ${t}: ${r.slice(0, 3).join(',')}`);
+        const key = `${qid}${vp.width}${fb}`;
+        if (t === 'conjugar' && !shotDone.has(key)) { shotDone.add(key); await shotp(p, `50-desafio-forja-${vp.width}x${vp.height}${fb ? '-fb' : ''}`); }
+        if (t === 'match_image' && !shotDone.has('m' + key)) { shotDone.add('m' + key); await shotp(p, `50b-desafio-asociar-${vp.width}x${vp.height}${fb ? '-fb' : ''}`); }
+      }
+      await c.close();
+      return { bad, types: [...types] };
+    };
+    for (const [vp, qid, fb] of [[{ width: 1280, height: 800 }, 'u04-q08', true], [{ width: 800, height: 1280 }, 'u04-q08', true], [{ width: 1280, height: 800 }, 'e01-q04', false]]) {
+      const r = await bossLayout(vp, qid, fb);
+      check(`Desafío ${qid} ${vp.width}x${vp.height}${fb ? ' (bandeau de réponse)' : ''} : aucune étape rognée`, r.bad.length === 0, `(${r.types.join(',')}) ${r.bad.join(' | ')}`);
+    }
+
+    // (4) unite 4 (Ciudad de Mexico) : carte, region, quete, Desafio
+    {
+      const { c, p } = await mk({ width: 1280, height: 800 }, '2026-10-12');
+      await p.evaluate(() => window.__q.nav.go({ name: 'map' }, { root: true }));
+      await p.waitForSelector('.map .hud-l');
+      await p.waitForTimeout(1500);
+      check('unité 4 : pas de bannière d\'événement le 12 oct', (await p.locator('.map .evento').count()) === 0);
+      const cdmx = await p.evaluate(() => document.querySelector('.m-med-cdmx')?.getAttribute('class') ?? '');
+      check('unité 4 : Ciudad de México ouverte sur la carte', /m-current|m-open/.test(cdmx), `(${cdmx})`);
+      await shotp(p, '51-mapa-u04');
+      await p.evaluate(() => window.__q.nav.go({ name: 'region', unit: 'u04' }));
+      await p.waitForSelector('.reg .node', { timeout: 15000 });
+      await p.waitForTimeout(1200);
+      check('unité 4 : région « Capítulo 4 » avec 8 quêtes', (await p.locator('.reg .node').count()) === 8 && /Cap[ií]tulo 4/.test(await p.locator('.reg .cap').innerText()));
+      await shotp(p, '52-region-u04');
+      await p.locator('.reg .node.available').first().click();
+      await p.waitForTimeout(600);
+      await p.click('.sheet button:has-text("Jugar")');
+      await p.waitForSelector('.run .stepwrap', { timeout: 20000 });
+      await p.waitForTimeout(1000);
+      await playOn(p, { max: 40 });
+      await p.waitForSelector('.end', { timeout: 40000 });
+      await p.waitForTimeout(4500);
+      check('unité 4 : quête 1 jouée jusqu\'au bout', true);
+      await shotp(p, '53-quest-u04');
+      await p.evaluate(() => window.__q.game.mutate((s) => { for (const q of ['u04-q01', 'u04-q02', 'u04-q03', 'u04-q04', 'u04-q05', 'u04-q06', 'u04-q07']) s.quests[q] = { done: true, stars: 2, bestAccuracy: 0.9, bestHints: 0, attempts: 1 }; }));
+      await p.evaluate(() => { history.replaceState(null, '', '?debug&now=2026-10-12'); window.__q.nav.go({ name: 'quest', quest: 'u04-q08' }, { root: true }); });
+      await p.waitForSelector('.bossintro', { timeout: 20000 });
+      await p.waitForSelector('.bossintro', { state: 'hidden', timeout: 8000 }).catch(() => {});
+      await p.waitForTimeout(600);
+      await playOn(p, { max: 40 });
+      await p.waitForSelector('.end', { timeout: 40000 });
+      await p.waitForTimeout(4500);
+      await shotp(p, '54-desafio-u04');
+      check('unité 4 : Desafío terminé', await p.evaluate(() => window.__q.game.state.quests['u04-q08']?.done === true));
+      await c.close();
+    }
+
+    // (5) Diccionario : jamais de texte "SOON" ; carte typographique pour un mot sans image
+    {
+      const { c, p } = await mk({ width: 1280, height: 800 }, '2026-10-12');
+      await p.evaluate(() => window.__q.nav.go({ name: 'dictionary' }, { root: true }));
+      await p.waitForSelector('.dic .cell', { timeout: 30000 });
+      await p.waitForTimeout(1000);
+      await p.locator('.dic .u').first().click();
+      await p.waitForTimeout(500);
+      const nTypo1 = await p.locator('.dic .typo').count();
+      const html1 = await p.locator('.dic').innerHTML();
+      await p.locator('.dic .u:has-text("México")').first().click();
+      await p.waitForTimeout(500);
+      const nTypo4 = await p.locator('.dic .typo').count();
+      const html4 = await p.locator('.dic').innerHTML();
+      check('Diccionario : cartes typographiques (mot en grand, article, motif), sans placeholder', nTypo1 + nTypo4 > 0 && !/SOON/i.test(html1 + html4) && !(html1 + html4).includes('\u{1F51C}'), `(${nTypo1} u1, ${nTypo4} u4)`);
+      await shotp(p, '55-diccionario-tipografico');
+      await p.locator('.dic .u').first().click();
+      await p.waitForTimeout(400);
+      await p.locator('.dic .cell:has-text("hasta luego") button').click();
+      await p.waitForSelector('.det', { timeout: 5000 });
+      await p.waitForTimeout(600);
+      await shotp(p, '56-diccionario-carta-tipografica');
+      await c.close();
+    }
+  }
 
   // ---- 10. hors-ligne : le service worker sert l'app et les unites sans reseau (build uniquement)
   if (!DEV) {
