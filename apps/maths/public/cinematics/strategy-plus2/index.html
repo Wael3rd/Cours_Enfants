@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 2 · Les +2</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/plus2.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-plus2" data-start="0" data-width="1920" data-height="1200" data-duration="9.16">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">+2</div>
+      <div id="zname"><b>ZONE 2</b>Les +2</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="2.067" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="2.487" data-duration="3.819" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="6.426" data-duration="2.234" data-track-index="12" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.403" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/kick.mp3" data-start="2.602" data-duration="1.392" data-track-index="31" data-volume="0.45"></audio>
+      <audio id="sx2" src="./_shared/sfx/kick.mp3" data-start="4.511" data-duration="1.392" data-track-index="32" data-volume="0.45"></audio>
+      <audio id="sx3" src="./_shared/sfx/star.mp3" data-start="5.542" data-duration="0.121" data-track-index="33" data-volume="0.7"></audio>
+      <audio id="sx4" src="./_shared/sfx/kick.mp3" data-start="6.873" data-duration="1.392" data-track-index="34" data-volume="0.4"></audio>
+      <audio id="sx5" src="./_shared/sfx/level-up.mp3" data-start="7.99" data-duration="0.37" data-track-index="35" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,2.487,6.426],"d":[2.067,3.819,2.234],"total":9.16}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-plus2", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 2 : +2 = deux passes (6 -> 7 -> 8), puis retour (8 - 2 = 6).
+      // Phrases : 0 "Plus deux : deux passes !" 1 "Une passe : sept. Encore une : huit !" 2 "Et huit moins deux, six."
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var xs = [280, 680, 1080];
+        function disc(n, x) {
+          return c.put('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="#fff" stroke="#0a1030" stroke-width="10"/><text x="100" y="138" text-anchor="middle" font-family="Anton" font-size="112" fill="#0a1030">' + n + '</text></svg>', x, 690, 230, "it");
+        }
+        var d = [disc(6, xs[0]), disc(7, xs[1]), disc(8, xs[2])];
+        var p = xs.map(function (x, i) { return c.tok({ c: S.RED, c2: "#fff", skin: [1, 3, 0][i], hair: [0, 3, 2][i] }, x, 590, 230); });
+        var ball = c.ball(xs[0] + 150, 560, 130);
+        var plus2 = c.lbl("+ 2", 1180, 130, "gold");
+        var up1 = c.lbl("+ 1", 480, 200, "gold"), up2 = c.lbl("+ 1", 880, 200, "gold");
+        var dn1 = c.lbl("− 1", 880, 200, "pink"), dn2 = c.lbl("− 1", 480, 200, "pink");
+        var e1 = S.eq(c.eq[0], [["6", "e"], ["+", "op"], ["2", "e"], ["=", "op"], ["8", "res"]]);
+        var e2 = S.eq(c.eq[1], [["8", "e"], ["−", "op"], ["2", "e"], ["=", "op"], ["6", "res"]]);
+        S.hide(tl, [d[0], p[0], ball, plus2, up1, up2, dn1, dn2].concat(e1, e2));
+        tl.set([d[1], d[2], p[1], p[2]], { opacity: 0, scale: 0.2 }, 0);
+        // --- phrase 0 : 6, +2
+        S.pop(tl, d[0], T(0, 0)); S.pop(tl, p[0], T(0, 0.08));
+        S.pop(tl, e1.slice(0, 3), T(0, 0.15), 0.3);
+        S.pop(tl, plus2, T(0, 0.3)); S.pop(tl, ball, T(0, 0.5));
+        tl.to([d[1], d[2]], { opacity: 0.35, scale: 1, duration: 0.35, ease: "back.out(2)" }, T(0, 0.62));
+        // --- phrase 1 : deux passes
+        var a1 = T(1, 0.02), a2 = T(1, 0.52), L = 0.55;
+        S.arc(tl, ball, 0, 0, 400, 0, a1, L, 190);
+        tl.to(ball, { rotation: 360, duration: L, ease: "none" }, a1);
+        S.pop(tl, up1, a1 + 0.15, 0.3);
+        tl.to(d[1], { opacity: 1, duration: 0.15 }, a1 + L);
+        S.pop(tl, p[1], a1 + L - 0.05, 0.3);
+        S.arc(tl, ball, 400, 0, 800, 0, a2, L, 190);
+        tl.to(ball, { rotation: 720, duration: L, ease: "none" }, a2);
+        S.pop(tl, up2, a2 + 0.15, 0.3);
+        tl.to(d[2], { opacity: 1, duration: 0.15 }, a2 + L);
+        S.pop(tl, p[2], a2 + L - 0.05, 0.3);
+        S.pop(tl, e1.slice(3), T(1, 0.8));
+        c.ring(xs[2], 690, T(1, 0.8));
+        // --- phrase 2 : retour, 8 - 2 = 6
+        S.unpop(tl, [].concat(e1, [up1, up2, plus2]), T(2, 0));
+        S.pop(tl, e2.slice(0, 3), T(2, 0.08), 0.3);
+        var b1 = T(2, 0.2), b2 = T(2, 0.58);
+        S.arc(tl, ball, 800, 0, 400, 0, b1, 0.42, 160); S.pop(tl, dn1, b1 + 0.1, 0.25);
+        S.arc(tl, ball, 400, 0, 0, 0, b2, 0.42, 160); S.pop(tl, dn2, b2 + 0.1, 0.25);
+        tl.to([d[2], p[2]], { opacity: 0.3, duration: 0.2 }, b1 + 0.1);
+        tl.to([d[1], p[1]], { opacity: 0.3, duration: 0.2 }, b2 + 0.1);
+        S.pop(tl, e2.slice(3), T(2, 0.66));
+        c.ring(xs[0], 690, T(2, 0.7));
+        c.cheer(T(2, 0.72));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-plus2"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 4 · Les amoureux de 10</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/amoureux10.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-amoureux10" data-start="0" data-width="1920" data-height="1200" data-duration="11.564">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">10</div>
+      <div id="zname"><b>ZONE 4</b>Les amoureux de 10</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="3.135" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="3.555" data-duration="2.275" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.95" data-duration="2.186" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo3" src="./assets/vo-3.mp3" data-start="8.256" data-duration="2.808" data-track-index="13" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.363" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/pop.mp3" data-start="3.601" data-duration="0.1" data-track-index="31" data-volume="0.5"></audio>
+      <audio id="sx2" src="./_shared/sfx/swoosh-in.mp3" data-start="6.169" data-duration="0.208" data-track-index="32" data-volume="0.6"></audio>
+      <audio id="sx3" src="./_shared/sfx/star.mp3" data-start="7.262" data-duration="0.121" data-track-index="33" data-volume="0.7"></audio>
+      <audio id="sx4" src="./_shared/sfx/combo.mp3" data-start="9.8" data-duration="0.352" data-track-index="34" data-volume="0.6"></audio>
+      <audio id="sx5" src="./_shared/sfx/level-up.mp3" data-start="9.997" data-duration="0.37" data-track-index="35" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,3.555,5.95,8.256],"d":[3.135,2.275,2.186,2.808],"total":11.564}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-amoureux10", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 4 : cadre a 10 = formation de 10 joueurs ; 7 + 3 = 10, 10 - 7 = 3.
+      // Phrases : 0 "Amoureux de dix : ensemble, ça fait dix !" 1 "Sept joueurs : il en manque trois !" 2 "Sept plus trois, dix !" 3 "Dix moins sept ? Trois !"
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var fr = S.frame10(c.field, 560, 430, 170);
+        var W = 120, FOOT = 84, slot = fr.slots;
+        var red = [], gold = [];
+        for (var i = 0; i < 7; i++) red.push(c.tok({ c: S.RED, c2: "#fff", num: i + 1, skin: i % 6, hair: i % 5 }, slot[i].x, slot[i].y + FOOT, W));
+        for (var j = 0; j < 3; j++) gold.push(c.tok({ c: S.GOLD, c2: "#0a1030", num: 8 + j, skin: (j + 2) % 6, hair: (j + 1) % 5 }, slot[7 + j].x, slot[7 + j].y + FOOT, W));
+        var heart = c.put('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 90"><path d="M50 84 C10 56 0 36 0 24 C0 8 14 0 26 0 C38 0 46 8 50 16 C54 8 62 0 74 0 C86 0 100 8 100 24 C100 36 90 56 50 84Z" fill="#ff4d6d" stroke="#fff" stroke-width="6"/></svg>', 1190, 600, 190, "it");
+        var n10 = c.nb("10", 1190, 230, "gold");
+        var e1 = S.eq(c.eq[0], [["7", "e"], ["+", "op"], ["?", "fam"], ["=", "op"], ["10", "res"]]);
+        var e2 = S.eq(c.eq[1], [["7", "e"], ["+", "op"], ["3", "e"], ["=", "op"], ["10", "res"]]);
+        var e3 = S.eq(c.eq[2], [["10", "e"], ["−", "op"], ["7", "e"], ["=", "op"], ["3", "res"]]);
+        var e0 = S.eq(c.eq[3], [["10", "res"]]);
+        S.hide(tl, red.concat([heart, n10, fr.el], e0, e1, e2, e3));
+        // les 3 joueurs qui manquent attendent hors du terrain (a droite)
+        gold.forEach(function (g) { tl.set(g, { opacity: 0, scale: 1, x: 900 }, 0); });
+        // --- phrase 0 : le cadre = formation de 10
+        S.pop(tl, fr.el, T(0, 0), 0.4); S.pop(tl, n10, T(0, 0.55), 0.4, "back.out(3)"); S.pop(tl, e0, T(0, 0.6), 0.4, "back.out(3)");
+        // --- phrase 1 : 7 joueurs, il en manque 3
+        red.forEach(function (t, i) { S.pop(tl, t, T(1, 0) + i * 0.06, 0.3); });
+        S.unpop(tl, e0, T(1, 0), 0.2);
+        S.pop(tl, e1.slice(0, 2), T(1, 0.05), 0.3);
+        S.pop(tl, e1[2], T(1, 0.55), 0.35); S.pop(tl, e1.slice(3), T(1, 0.75), 0.3);
+        // --- phrase 2 : les 3 arrivent
+        S.unpop(tl, e1, T(2, 0));
+        S.pop(tl, e2.slice(0, 3), T(2, 0.06), 0.3);
+        gold.forEach(function (g, k) {
+          var at = T(2, 0.1) + k * 0.13;
+          tl.set(g, { opacity: 1 }, at);
+          tl.to(g, { x: 0, duration: 0.55, ease: "power2.out" }, at);
+          S.hop(tl, g, at, 0.55, 3, 22);
+        });
+        S.pop(tl, e2.slice(3), T(2, 0.55));
+        c.ring(slot[9].x, slot[9].y, T(2, 0.6)); S.pop(tl, heart, T(2, 0.62), 0.4, "back.out(3)");
+        tl.to(n10, { scale: 1.25, duration: 0.15, ease: "power2.out" }, T(2, 0.6)); tl.to(n10, { scale: 1, duration: 0.3, ease: "back.out(3)" }, T(2, 0.75));
+        // --- phrase 3 : 10 - 7 = 3
+        S.unpop(tl, e2, T(3, 0));
+        S.pop(tl, e3.slice(0, 3), T(3, 0.06), 0.3);
+        red.forEach(function (t) { tl.to(t, { opacity: 0.55, duration: 0.3 }, T(3, 0.15)); });
+        S.pop(tl, e3.slice(3), T(3, 0.55));
+        gold.forEach(function (g, k) { S.hop(tl, g, T(3, 0.55) + k * 0.07, 0.4, 1, 34); });
+        c.ring(slot[8].x, slot[8].y, T(3, 0.58));
+        c.cheer(T(3, 0.62));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-amoureux10"] = tl;
+    </script>
+  </body>
+</html>

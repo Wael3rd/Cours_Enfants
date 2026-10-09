@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 9 · Ligue des Champions</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/ligue.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-ligue" data-start="0" data-width="1920" data-height="1200" data-duration="11.122">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">10</div>
+      <div id="zname"><b>ZONE 9</b>Ligue des Champions</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="1.998" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="2.418" data-duration="3.168" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.705" data-duration="3.095" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo3" src="./assets/vo-3.mp3" data-start="8.921" data-duration="1.701" data-track-index="13" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.34" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/pop.mp3" data-start="1.199" data-duration="0.1" data-track-index="31" data-volume="0.5"></audio>
+      <audio id="sx2" src="./_shared/sfx/swoosh-in.mp3" data-start="3.052" data-duration="0.208" data-track-index="32" data-volume="0.6"></audio>
+      <audio id="sx3" src="./_shared/sfx/star.mp3" data-start="5.016" data-duration="0.121" data-track-index="33" data-volume="0.7"></audio>
+      <audio id="sx4" src="./_shared/sfx/swoosh-in.mp3" data-start="6.262" data-duration="0.208" data-track-index="34" data-volume="0.6"></audio>
+      <audio id="sx5" src="./_shared/sfx/star.mp3" data-start="8.181" data-duration="0.121" data-track-index="35" data-volume="0.7"></audio>
+      <audio id="sx6" src="./_shared/sfx/level-up-big.mp3" data-start="9.601" data-duration="1.015" data-track-index="36" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,2.418,5.705,8.921],"d":[1.998,3.168,3.095,1.701],"total":11.122}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-ligue", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 9 : calcul mental a 2 chiffres : paquets de 10 ballons (dizaines) + ballons seuls (unites). 35 + 24 = 59.
+      // Phrases : 0 "Trente-cinq plus vingt-quatre !" 1 "Les paquets de dix : trois plus deux, cinq." 2 "Les ballons seuls : cinq plus quatre, neuf." 3 "Cinquante-neuf !"
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        function pack() {
+          var dots = "";
+          for (var r = 0; r < 2; r++) for (var k = 0; k < 5; k++) dots += '<circle cx="' + (26 + k * 27) + '" cy="' + (36 + r * 28) + '" r="10" fill="#fff" stroke="#0a1030" stroke-width="3"/>';
+          return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><rect x="4" y="4" width="152" height="152" rx="22" fill="#1b6bff" stroke="#fff" stroke-width="8"/>' + dots +
+            '<text x="80" y="140" text-anchor="middle" font-family="Anton" font-size="56" fill="#ffd23f" stroke="#0a1030" stroke-width="4" paint-order="stroke">10</text></svg>';
+        }
+        var PW = 170, BW = 100;
+        // groupe 35 a gauche (centre 300), groupe 24 a droite (centre 1060) : paquets en haut, ballons seuls en bas
+        var xa = [110, 300, 490], xb = [965, 1155], xba = [90, 195, 300, 405, 510], xbb = [902, 1007, 1112, 1217];
+        var pa = [], pb = [], ba = [], bb = [];
+        xa.forEach(function (x) { pa.push(c.put(pack(), x, 380, PW, "it")); });
+        xb.forEach(function (x) { pb.push(c.put(pack(), x, 380, PW, "it")); });
+        xba.forEach(function (x) { ba.push(c.ball(x, 600, BW)); });
+        xbb.forEach(function (x) { bb.push(c.ball(x, 600, BW)); });
+        var n35 = c.nb("35", 300, 130, ""), n24 = c.nb("24", 1060, 130, ""), plus = c.nb("+", 680, 380, "gold");
+        var n5p = c.nb("5", 680, 130, "gold"), n9b = c.nb("9", 680, 130, "gold");
+        var e1 = S.eq(c.eq[0], [["35", "e"], ["+", "op"], ["24", "e"]]);
+        var e2 = S.eq(c.eq[1], [["30", "e"], ["+", "op"], ["20", "e"], ["=", "op"], ["50", "res"]]);
+        var e3 = S.eq(c.eq[2], [["5", "e"], ["+", "op"], ["4", "e"], ["=", "op"], ["9", "res"]]);
+        var e4 = S.eq(c.eq[3], [["50", "e"], ["+", "op"], ["9", "e"], ["=", "op"], ["59", "res"]]);
+        var all = [].concat(pa, pb, ba, bb);
+        S.hide(tl, all.concat([n35, n24, plus, n5p, n9b], e1, e2, e3, e4));
+        // --- phrase 0 : 35 + 24 : 3 paquets + 5 ballons, 2 paquets + 4 ballons
+        pa.concat(ba).forEach(function (t, i) { S.pop(tl, t, T(0, 0.02) + i * 0.05, 0.3); });
+        S.pop(tl, n35, T(0, 0.15), 0.35); S.pop(tl, e1.slice(0, 1), T(0, 0.15), 0.3);
+        S.pop(tl, plus, T(0, 0.4), 0.3); S.pop(tl, e1[1], T(0, 0.4), 0.3);
+        pb.concat(bb).forEach(function (t, i) { S.pop(tl, t, T(0, 0.45) + i * 0.05, 0.3); });
+        S.pop(tl, n24, T(0, 0.6), 0.35); S.pop(tl, e1[2], T(0, 0.6), 0.3);
+        // --- phrase 1 : les paquets de dix : 3 + 2 = 5 paquets
+        S.unpop(tl, [].concat(e1, [plus, n35, n24]), T(1, 0));
+        S.pop(tl, e2.slice(0, 3), T(1, 0.08), 0.3);
+        tl.to(ba.concat(bb), { opacity: 0.3, duration: 0.25 }, T(1, 0.1));
+        var all5 = pa.concat(pb);
+        var px = xa.concat(xb), tx = [280, 480, 680, 880, 1080];
+        all5.forEach(function (p, i) {
+          tl.to(p, { x: tx[i] - px[i], y: 40, duration: 0.55, ease: "power2.inOut" }, T(1, 0.2) + i * 0.05);
+        });
+        S.pop(tl, n5p, T(1, 0.78), 0.35, "back.out(3)");
+        S.pop(tl, [e2[3], e2[4]], T(1, 0.82), 0.3);
+        c.ring(680, 420, T(1, 0.82));
+        // --- phrase 2 : les ballons seuls : 5 + 4 = 9
+        S.unpop(tl, [].concat(e2, [n5p]), T(2, 0));
+        S.pop(tl, e3.slice(0, 3), T(2, 0.08), 0.3);
+        tl.to(ba.concat(bb), { opacity: 1, duration: 0.2 }, T(2, 0.05));
+        tl.to(all5, { opacity: 0.3, duration: 0.25 }, T(2, 0.05));
+        var bxs = xba.concat(xbb);
+        ba.concat(bb).forEach(function (b, i) {
+          tl.to(b, { x: 680 + (i - 4) * 112 - bxs[i], y: 70, duration: 0.5, ease: "power2.inOut" }, T(2, 0.18) + i * 0.04);
+        });
+        S.pop(tl, n9b, T(2, 0.75), 0.35, "back.out(3)");
+        S.pop(tl, [e3[3], e3[4]], T(2, 0.8), 0.3);
+        c.ring(680, 670, T(2, 0.8), "#7fe3ff");
+        // --- phrase 3 : cinquante-neuf !
+        S.unpop(tl, [].concat(e3, [n9b]), T(3, 0));
+        tl.to(all5, { opacity: 1, duration: 0.2 }, T(3, 0));
+        S.pop(tl, e4.slice(0, 3), T(3, 0.05), 0.3);
+        S.pop(tl, e4.slice(3), T(3, 0.4), 0.4, "back.out(3)");
+        all5.forEach(function (t, i) { S.hop(tl, t, T(3, 0.4) + i * 0.02, 0.4, 1, 24, 40); });
+        ba.concat(bb).forEach(function (t, i) { S.hop(tl, t, T(3, 0.4) + i * 0.02, 0.4, 1, 24, 70); });
+        c.ring(680, 420, T(3, 0.42));
+        c.cheer(T(3, 0.45));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-ligue"] = tl;
+    </script>
+  </body>
+</html>

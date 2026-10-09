@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 1 · Échauffement</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/echauffement.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-echauffement" data-start="0" data-width="1920" data-height="1200" data-duration="10.692">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">+1</div>
+      <div id="zname"><b>ZONE 1</b>Échauffement</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="2.763" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="3.183" data-duration="2.019" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.323" data-duration="2.015" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo3" src="./assets/vo-3.mp3" data-start="7.458" data-duration="2.734" data-track-index="13" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.438" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/swoosh-in.mp3" data-start="3.385" data-duration="0.208" data-track-index="31" data-volume="0.6"></audio>
+      <audio id="sx2" src="./_shared/sfx/star.mp3" data-start="6.431" data-duration="0.121" data-track-index="32" data-volume="0.7"></audio>
+      <audio id="sx3" src="./_shared/sfx/swoosh-out.mp3" data-start="7.786" data-duration="0.212" data-track-index="33" data-volume="0.6"></audio>
+      <audio id="sx4" src="./_shared/sfx/level-up.mp3" data-start="9.645" data-duration="0.37" data-track-index="34" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,3.183,5.323,7.458],"d":[2.763,2.019,2.015,2.734],"total":10.692}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-echauffement", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 1 : +0 (rien ne change), +1 (un joueur entre), -1 (un joueur sort).
+      // Phrases : 0 "Plus zéro, rien ne change : sept." 1 "Plus un : un joueur entre !" 2 "Sept plus un, huit !" 3 "Un joueur sort : huit moins un, sept !"
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var spots = [[290, 380], [470, 380], [650, 380], [830, 380], [380, 620], [560, 620], [740, 620]];
+        var team = [];
+        spots.forEach(function (p, i) { team.push(c.tok({ c: S.RED, c2: "#fff", num: i + 2, skin: i % 6, hair: i % 5 }, p[0], p[1], 140)); });
+        var sub = c.tok({ c: S.GOLD, c2: "#0a1030", num: 8, skin: 2, hair: 1 }, 920, 620, 140);
+        var ghost = c.put('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><circle cx="80" cy="80" r="66" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="8" stroke-dasharray="16 14"/><text x="80" y="108" text-anchor="middle" font-family="Anton" font-size="84" fill="#fff">0</text></svg>', 1000, 620, 170, "it");
+        var n7 = c.nb("7", 1180, 250, "gold"), n8 = c.nb("8", 1180, 250, "gold"), n7b = c.nb("7", 1180, 250, "gold");
+        var l0 = c.lbl("+ 0", 1180, 730, ""), l1 = c.lbl("+ 1", 1180, 730, "gold"), lm = c.lbl("− 1", 1180, 730, "pink");
+        var e1 = S.eq(c.eq[0], [["7", "e"], ["+", "op"], ["0", "e"], ["=", "op"], ["7", "res"]]);
+        var e2 = S.eq(c.eq[1], [["7", "e"], ["+", "op"], ["1", "e"], ["=", "op"], ["8", "res"]]);
+        var e3 = S.eq(c.eq[2], [["8", "e"], ["−", "op"], ["1", "e"], ["=", "op"], ["7", "res"]]);
+        S.hide(tl, team.concat([ghost, n7, n8, n7b, l0, l1, lm], e1, e2, e3));
+        tl.set(sub, { scale: 1, opacity: 0, x: 640 }, 0);
+        // --- phrase 0 : 7 joueurs, +0, rien ne change
+        team.forEach(function (t, i) { S.pop(tl, t, T(0, 0) + i * 0.07, 0.35); });
+        S.pop(tl, n7, T(0, 0.12));
+        S.pop(tl, [e1[0]], T(0, 0.1)); S.pop(tl, [e1[1], e1[2]], T(0, 0.28));
+        S.pop(tl, l0, T(0, 0.28)); S.pop(tl, ghost, T(0, 0.3));
+        tl.to(ghost, { x: -80, scale: 0.4, opacity: 0, duration: 0.5, ease: "power2.in" }, T(0, 0.58));
+        S.pop(tl, [e1[3], e1[4]], T(0, 0.74));
+        // --- phrase 1 : +1, un joueur entre
+        S.unpop(tl, [].concat(e1, [l0]), T(1, 0));
+        S.pop(tl, l1, T(1, 0.05)); S.pop(tl, [e2[0], e2[1], e2[2]], T(1, 0.1), 0.3);
+        tl.set(sub, { opacity: 1 }, T(1, 0.1));
+        tl.to(sub, { x: 0, duration: 1.0, ease: "power2.out" }, T(1, 0.1));
+        S.hop(tl, sub, T(1, 0.1), 1.0, 4, 28);
+        // --- phrase 2 : huit !
+        S.pop(tl, [e2[3], e2[4]], T(2, 0.45));
+        S.unpop(tl, n7, T(2, 0.42), 0.18);
+        S.pop(tl, n8, T(2, 0.5), 0.4, "back.out(3)");
+        tl.to(sub, { y: -40, duration: 0.18, ease: "power2.out" }, T(2, 0.5)); tl.to(sub, { y: 0, duration: 0.28, ease: "bounce.out" }, T(2, 0.68));
+        // --- phrase 3 : un joueur sort, 8 - 1 = 7
+        S.unpop(tl, [].concat(e2, [l1]), T(3, 0));
+        S.pop(tl, lm, T(3, 0.05)); S.pop(tl, e3.slice(0, 3), T(3, 0.1), 0.3);
+        tl.to(sub, { x: 640, duration: 0.9, ease: "power2.in" }, T(3, 0.14));
+        S.hop(tl, sub, T(3, 0.14), 0.9, 4, 24);
+        S.unpop(tl, n8, T(3, 0.72), 0.18);
+        S.pop(tl, n7b, T(3, 0.78), 0.4, "back.out(3)");
+        S.pop(tl, e3.slice(3), T(3, 0.78));
+        c.cheer(T(3, 0.8));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-echauffement"] = tl;
+    </script>
+  </body>
+</html>

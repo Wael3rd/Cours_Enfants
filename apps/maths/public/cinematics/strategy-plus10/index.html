@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 6 · Les +10</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/plus10.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-plus10" data-start="0" data-width="1920" data-height="1200" data-duration="11.865">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">+10</div>
+      <div id="zname"><b>ZONE 6</b>Les +10</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="2.476" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="2.896" data-duration="2.419" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.435" data-duration="3.43" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo3" src="./assets/vo-3.mp3" data-start="8.985" data-duration="2.38" data-track-index="13" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.35" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/swoosh-in.mp3" data-start="1.167" data-duration="0.208" data-track-index="31" data-volume="0.6"></audio>
+      <audio id="sx2" src="./_shared/sfx/star.mp3" data-start="4.106" data-duration="0.121" data-track-index="32" data-volume="0.7"></audio>
+      <audio id="sx3" src="./_shared/sfx/swoosh-in.mp3" data-start="6.807" data-duration="0.208" data-track-index="33" data-volume="0.6"></audio>
+      <audio id="sx4" src="./_shared/sfx/swoosh-out.mp3" data-start="9.342" data-duration="0.212" data-track-index="34" data-volume="0.5"></audio>
+      <audio id="sx5" src="./_shared/sfx/level-up.mp3" data-start="10.699" data-duration="0.37" data-track-index="35" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,2.896,5.435,8.985],"d":[2.476,2.419,3.43,2.38],"total":11.865}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-plus10", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 6 : +10 = une equipe de 10 arrive ; 7 + 10 = 17 (le 7 reste, un 1 devant) ; 17 - 10 = 7.
+      // Phrases : 0 "Plus dix : une équipe entière arrive !" 1 "Sept plus dix, dix-sept." 2 "Le sept reste là. Un un arrive devant !" 3 "Dix-sept moins dix, sept."
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var fr = S.frame10(c.field, 980, 500, 130);
+        var slot = fr.slots, W = 100, FOOT = 72;
+        var red = [], blue = [];
+        var pos = [[130, 470], [260, 470], [390, 470], [520, 470], [195, 710], [325, 710], [455, 710]];
+        pos.forEach(function (p, i) { red.push(c.tok({ c: S.RED, c2: "#fff", skin: i % 6, hair: i % 5 }, p[0], p[1], 130)); });
+        for (var i = 0; i < 10; i++) blue.push(c.tok({ c: S.BLUE, c2: "#FFD23F", skin: (i + 2) % 6, hair: (i * 2) % 5 }, slot[i].x, slot[i].y + FOOT, W));
+        var n10 = c.nb("10", 980, 150, "gold");
+        var n7 = c.nb("7", 380, 150, ""), n1 = c.nb("1", 250, 150, "gold");
+        var e1 = S.eq(c.eq[0], [["7", "e"], ["+", "op"], ["10", "e"], ["=", "op"], ["17", "res"]]);
+        var e3 = S.eq(c.eq[2], [["17", "e"], ["−", "op"], ["10", "e"], ["=", "op"], ["7", "res"]]);
+        S.hide(tl, red.concat([fr.el, n10, n7, n1], e1, e3));
+        blue.forEach(function (b) { tl.set(b, { opacity: 0, scale: 1, x: 760 }, 0); });
+        // --- phrase 0 : 7 joueurs la, une equipe de 10 arrive dans le cadre
+        red.forEach(function (t, i) { S.pop(tl, t, T(0, 0) + i * 0.05, 0.3); });
+        S.pop(tl, n7, T(0, 0.1)); S.pop(tl, e1.slice(0, 3), T(0, 0.15), 0.3);
+        S.pop(tl, fr.el, T(0, 0.3), 0.3);
+        blue.forEach(function (b, i) {
+          var at = T(0, 0.35) + i * 0.1;
+          tl.set(b, { opacity: 1 }, at);
+          tl.to(b, { x: 0, duration: 0.5, ease: "power2.out" }, at);
+          S.hop(tl, b, at, 0.5, 2, 20);
+        });
+        S.pop(tl, n10, T(0, 0.75), 0.4, "back.out(3)");
+        // --- phrase 1 : 7 + 10 = 17
+        S.pop(tl, e1.slice(3), T(1, 0.5));
+        c.ring(980, 500, T(1, 0.5));
+        // --- phrase 2 : le 7 reste, un 1 arrive devant
+        tl.to(n7, { scale: 1.25, duration: 0.18, ease: "power2.out" }, T(2, 0.05)); tl.to(n7, { scale: 1, duration: 0.3, ease: "back.out(3)" }, T(2, 0.23));
+        tl.set(n1, { x: 730, y: 250, opacity: 1, scale: 1.4 }, T(2, 0.4));
+        tl.to(n1, { x: 0, duration: 0.5, ease: "power2.out" }, T(2, 0.4));
+        tl.to(n1, { y: 0, scale: 1, duration: 0.5, ease: "power3.inOut" }, T(2, 0.4));
+        S.unpop(tl, n10, T(2, 0.4), 0.2);
+        c.ring(315, 150, T(2, 0.9), "#7fe3ff");
+        // --- phrase 3 : 17 - 10 = 7
+        S.unpop(tl, e1, T(3, 0));
+        S.pop(tl, e3.slice(0, 3), T(3, 0.06), 0.3);
+        blue.forEach(function (b, i) { tl.to(b, { x: 760, duration: 0.5, ease: "power2.in" }, T(3, 0.15) + i * 0.05); });
+        S.unpop(tl, n1, T(3, 0.3), 0.25); S.unpop(tl, fr.el, T(3, 0.55), 0.25);
+        S.pop(tl, e3.slice(3), T(3, 0.7));
+        tl.to(n7, { scale: 1.25, duration: 0.15, ease: "power2.out" }, T(3, 0.7)); tl.to(n7, { scale: 1, duration: 0.3, ease: "back.out(3)" }, T(3, 0.85));
+        c.cheer(T(3, 0.72));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-plus10"] = tl;
+    </script>
+  </body>
+</html>

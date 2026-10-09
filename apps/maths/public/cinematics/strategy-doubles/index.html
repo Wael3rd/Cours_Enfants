@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 3 · Les doubles</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/doubles.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-doubles" data-start="0" data-width="1920" data-height="1200" data-duration="8.734">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">2×</div>
+      <div id="zname"><b>ZONE 3</b>Les doubles</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="2.536" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="2.956" data-duration="2.086" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.162" data-duration="3.072" data-track-index="12" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.351" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/swoosh-in.mp3" data-start="1.314" data-duration="0.208" data-track-index="31" data-volume="0.5"></audio>
+      <audio id="sx2" src="./_shared/sfx/pop.mp3" data-start="1.695" data-duration="0.1" data-track-index="32" data-volume="0.5"></audio>
+      <audio id="sx3" src="./_shared/sfx/star.mp3" data-start="3.999" data-duration="0.121" data-track-index="33" data-volume="0.7"></audio>
+      <audio id="sx4" src="./_shared/sfx/swoosh-out.mp3" data-start="6.084" data-duration="0.212" data-track-index="34" data-volume="0.5"></audio>
+      <audio id="sx5" src="./_shared/sfx/level-up.mp3" data-start="7.067" data-duration="0.37" data-track-index="35" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,2.956,5.162],"d":[2.536,2.086,3.072],"total":8.734}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-doubles", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 3 : doubles = deux equipes identiques en miroir (6 + 6 = 12), moitie (12 - 6 = 6).
+      // Phrases : 0 "Les doubles : deux équipes en miroir !" 1 "Six et six, douze !" 2 "La moitié de douze ? Six !"
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var rows = [380, 690], lx = [130, 300, 470], rx = [890, 1060, 1230];
+        var line = c.put('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 760" width="40" height="760"><line x1="20" y1="0" x2="20" y2="760" stroke="#fff" stroke-width="10" stroke-dasharray="26 20" stroke-linecap="round"/></svg>', 680, 400, 40, "it");
+        line.style.height = "760px"; line.style.top = "20px";
+        var L = [], R = [];
+        rows.forEach(function (y, r) {
+          lx.forEach(function (x, k) { L.push(c.tok({ c: S.RED, c2: "#fff", skin: (r + k) % 6, hair: (r * 2 + k) % 5 }, x, y, 150)); });
+          rx.forEach(function (x, k) { R.push(c.tok({ c: S.BLUE, c2: "#FFD23F", skin: (r + k + 2) % 6, hair: (r + k * 2) % 5 }, x, y, 150)); });
+        });
+        var n12 = c.nb("12", 680, 400, "gold md"), n6 = c.nb("6", 680, 400, "gold");
+        var e1 = S.eq(c.eq[0], [["6", "e"], ["+", "op"], ["6", "e"], ["=", "op"], ["12", "res"]]);
+        var e2 = S.eq(c.eq[1], [["12", "e"], ["−", "op"], ["6", "e"], ["=", "op"], ["6", "res"]]);
+        S.hide(tl, L.concat(R, [n12, n6], e1, e2));
+        tl.set(line, { scaleY: 0 }, 0);
+        // --- phrase 0 : deux equipes en miroir
+        L.forEach(function (t, i) { S.pop(tl, t, T(0, 0) + i * 0.07, 0.3); });
+        S.pop(tl, e1[0], T(0, 0.3), 0.3);
+        tl.to(line, { scaleY: 1, duration: 0.4, ease: "power2.out" }, T(0, 0.38));
+        R.forEach(function (t, i) { S.pop(tl, t, T(0, 0.55) + i * 0.07, 0.3); });
+        S.pop(tl, [e1[1], e1[2]], T(0, 0.75), 0.3);
+        // --- phrase 1 : six et six, douze
+        S.pop(tl, [e1[3], e1[4]], T(1, 0.5));
+        S.pop(tl, n12, T(1, 0.5), 0.4, "back.out(3)");
+        L.concat(R).forEach(function (t, i) { S.hop(tl, t, T(1, 0.5) + (i % 6) * 0.02, 0.4, 1, 30); });
+        c.ring(680, 400, T(1, 0.5));
+        // --- phrase 2 : moitie
+        S.unpop(tl, [].concat(e1, [n12]), T(2, 0));
+        S.pop(tl, e2.slice(0, 3), T(2, 0.08), 0.3);
+        R.forEach(function (t, i) { S.unpop(tl, t, T(2, 0.3) + i * 0.06, 0.25); });
+        tl.to(line, { opacity: 0, duration: 0.3 }, T(2, 0.4));
+        S.pop(tl, n6, T(2, 0.62)); S.pop(tl, e2.slice(3), T(2, 0.62));
+        c.ring(680, 400, T(2, 0.64));
+        c.cheer(T(2, 0.66));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-doubles"] = tl;
+    </script>
+  </body>
+</html>

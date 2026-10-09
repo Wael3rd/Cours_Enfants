@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Zone 8 · Passer la dizaine</title>
+    <!-- GENERE par tools/cinematics/strategy-build.mjs (template + scenes/passer-dizaine.js + strategy-scripts.json). Ne pas editer a la main. -->
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <script src="./_shared/strat.js"></script>
+    <link rel="stylesheet" href="./_shared/strat.css" />
+  </head>
+  <body>
+    <div id="root" data-composition-id="strategy-passer-dizaine" data-start="0" data-width="1920" data-height="1200" data-duration="11.337">
+      <div id="bg"></div>
+      <div id="spot" data-layout-ignore></div>
+      <div id="board" data-layout-ignore></div>
+      <div id="field" data-layout-ignore></div>
+      <div id="badge">10+</div>
+      <div id="zname"><b>ZONE 8</b>Passer la dizaine</div>
+      <div id="coach" data-layout-ignore></div>
+      <div class="plate"></div>
+      <div class="eq" id="eq1"></div>
+      <div class="eq" id="eq2"></div>
+      <div class="eq" id="eq3"></div>
+      <div class="eq" id="eq4"></div>
+      <div id="flash"></div>
+      <div id="vignette" data-layout-ignore></div>
+      <div id="fadein" data-layout-ignore></div>
+
+      <!--VO-->
+      <audio id="vo0" src="./assets/vo-0.mp3" data-start="0.3" data-duration="2.807" data-track-index="10" data-volume="1"></audio>
+      <audio id="vo1" src="./assets/vo-1.mp3" data-start="3.227" data-duration="2.16" data-track-index="11" data-volume="1"></audio>
+      <audio id="vo2" src="./assets/vo-2.mp3" data-start="5.506" data-duration="2.998" data-track-index="12" data-volume="1"></audio>
+      <audio id="vo3" src="./assets/vo-3.mp3" data-start="8.624" data-duration="2.213" data-track-index="13" data-volume="1"></audio>
+      <!--/VO-->
+      <!--SFX-->
+      <audio id="sx0" src="./_shared/sfx/pop.mp3" data-start="0.581" data-duration="0.1" data-track-index="30" data-volume="0.5"></audio>
+      <audio id="sx1" src="./_shared/sfx/swoosh-in.mp3" data-start="3.486" data-duration="0.208" data-track-index="31" data-volume="0.6"></audio>
+      <audio id="sx2" src="./_shared/sfx/star.mp3" data-start="4.566" data-duration="0.121" data-track-index="32" data-volume="0.7"></audio>
+      <audio id="sx3" src="./_shared/sfx/swoosh-in.mp3" data-start="6.106" data-duration="0.208" data-track-index="33" data-volume="0.6"></audio>
+      <audio id="sx4" src="./_shared/sfx/star.mp3" data-start="7.545" data-duration="0.121" data-track-index="34" data-volume="0.7"></audio>
+      <audio id="sx5" src="./_shared/sfx/swoosh-out.mp3" data-start="8.956" data-duration="0.212" data-track-index="35" data-volume="0.5"></audio>
+      <audio id="sx6" src="./_shared/sfx/level-up.mp3" data-start="10.04" data-duration="0.37" data-track-index="36" data-volume="0.6"></audio>
+      <!--/SFX-->
+    </div>
+    <script>
+      /*PLAN*/ window.PLAN = {"t":[0.3,3.227,5.506,8.624],"d":[2.807,2.16,2.998,2.213],"total":11.337}; /*END*/
+      var P = window.PLAN;
+      var tl = gsap.timeline({ paused: true });
+      // Pas de donnees dynamiques (voix pre-generee, aucun prenom) : handler vide pour que le player ne signale pas d'erreur.
+      window.__hyperframes.registerRuntimeDataHandler("strategy-passer-dizaine", function () {});
+      var $ = function (s) { return document.querySelector(s); };
+      var S = window.Strat, nid = 0;
+      $("#board").innerHTML = S.pitch();
+      // instant (s) d'une phrase i, a la fraction f de sa duree
+      function T(i, f) { return P.t[i] + (f || 0) * P.d[i]; }
+
+      /*SCENE*/
+      // Zone 8 : passer la dizaine : 8 + 5 = 8 + 2 + 3 : remplir le 1er cadre (10) puis le reste dans le 2e ; 13 - 5 = 8.
+      // Phrases : 0 "Huit plus cinq : remplis d'abord le cadre !" 1 "Huit plus deux, dix." 2 "Il reste trois : dix plus trois, treize !" 3 "Treize moins cinq, huit."
+      function scene(c) {
+        var tl = c.tl, T = c.T, S = c.S;
+        var A = S.frame10(c.field, 340, 400, 115), B = S.frame10(c.field, 1020, 400, 115);
+        var W = 100, FOOT = 74;
+        var red = [], gold = [];
+        for (var i = 0; i < 8; i++) red.push(c.tok({ c: S.RED, c2: "#fff", skin: i % 6, hair: i % 5 }, A.slots[i].x, A.slots[i].y + FOOT, W));
+        // 5 remplacants sur le banc (en bas) : 2 iront dans le cadre A, 3 dans le cadre B
+        var bx = [360, 520, 680, 840, 1000];
+        var dst = [A.slots[8], A.slots[9], B.slots[0], B.slots[1], B.slots[2]];
+        for (var j = 0; j < 5; j++) gold.push(c.tok({ c: S.GOLD, c2: "#0a1030", num: 9 + j, skin: (j + 1) % 6, hair: (j + 2) % 5 }, bx[j], 760, W));
+        var nA = c.nb("8", 340, 120, ""), nA10 = c.nb("10", 340, 120, "gold"), nB = c.nb("3", 1020, 120, ""), n13 = c.nb("13", 680, 120, "gold");
+        var split = c.lbl("5 = 2 + 3", 680, 620, "gold");
+        var e1 = S.eq(c.eq[0], [["8", "e"], ["+", "op"], ["5", "e"]]);
+        var e2 = S.eq(c.eq[1], [["8", "e"], ["+", "op"], ["2", "e"], ["=", "op"], ["10", "res"]]);
+        var e3 = S.eq(c.eq[2], [["10", "e"], ["+", "op"], ["3", "e"], ["=", "op"], ["13", "res"]]);
+        var e4 = S.eq(c.eq[3], [["13", "e"], ["−", "op"], ["5", "e"], ["=", "op"], ["8", "res"]]);
+        S.hide(tl, red.concat(gold, [A.el, B.el, nA, nA10, nB, n13, split], e1, e2, e3, e4));
+        // --- phrase 0 : 8 joueurs dans le cadre, 5 remplacants sur le banc
+        S.pop(tl, A.el, T(0, 0), 0.35);
+        red.forEach(function (t, i) { S.pop(tl, t, T(0, 0.1) + i * 0.05, 0.3); });
+        S.pop(tl, nA, T(0, 0.3)); S.pop(tl, e1, T(0, 0.35), 0.3);
+        gold.forEach(function (g, i) { S.pop(tl, g, T(0, 0.55) + i * 0.06, 0.3); });
+        S.pop(tl, split, T(0, 0.85), 0.35);
+        // --- phrase 1 : 8 + 2 = 10
+        S.unpop(tl, e1, T(1, 0));
+        S.pop(tl, e2.slice(0, 3), T(1, 0.06), 0.3);
+        [0, 1].forEach(function (k) {
+          var at = T(1, 0.12) + k * 0.14;
+          tl.to(gold[k], { x: dst[k].x - bx[k], y: dst[k].y + FOOT - 760, duration: 0.55, ease: "power2.inOut" }, at);
+        });
+        S.unpop(tl, nA, T(1, 0.5), 0.15);
+        S.pop(tl, [e2[3], e2[4], nA10], T(1, 0.62), 0.35);
+        c.ring(A.slots[9].x, A.slots[9].y, T(1, 0.62));
+        // --- phrase 2 : il reste 3, 10 + 3 = 13
+        S.unpop(tl, [].concat(e2, [split]), T(2, 0));
+        S.pop(tl, e3.slice(0, 3), T(2, 0.06), 0.3);
+        S.pop(tl, B.el, T(2, 0.1), 0.35);
+        [2, 3, 4].forEach(function (k) {
+          var at = T(2, 0.2) + (k - 2) * 0.14;
+          tl.to(gold[k], { x: dst[k].x - bx[k], y: dst[k].y + FOOT - 760, duration: 0.55, ease: "power2.inOut" }, at);
+        });
+        S.pop(tl, nB, T(2, 0.45));
+        S.pop(tl, [e3[3], e3[4], n13], T(2, 0.68), 0.35);
+        c.ring(B.slots[2].x, B.slots[2].y, T(2, 0.7));
+        // --- phrase 3 : 13 - 5 = 8
+        S.unpop(tl, [].concat(e3, [n13, nB, nA10]), T(3, 0));
+        S.pop(tl, e4.slice(0, 3), T(3, 0.06), 0.3);
+        gold.forEach(function (g, k) { S.unpop(tl, g, T(3, 0.15) + k * 0.06, 0.25); });
+        S.unpop(tl, B.el, T(3, 0.4), 0.25);
+        S.pop(tl, nA, T(3, 0.55));
+        S.pop(tl, e4.slice(3), T(3, 0.6));
+        c.ring(340, 400, T(3, 0.62));
+        c.cheer(T(3, 0.64));
+      }
+      /*ENDSCENE*/
+
+      function build() {
+        tl.clear();
+        var field = $("#field");
+        field.innerHTML = "";
+        gsap.set(["#flash", "#fadein", "#coach"], { clearProps: "transform,opacity" });
+        var ctx = {
+          tl: tl, field: field, P: P, T: T, S: S,
+          eq: [$("#eq1"), $("#eq2"), $("#eq3"), $("#eq4")],
+          put: function (html, x, y, w, kind, cls) { return S.put(field, html, x, y, w, kind, cls); },
+          tok: function (o, x, y, w, cls) { return S.put(field, S.token(o), x, y, w, "tk", cls); },
+          ball: function (x, y, size) { return S.put(field, CEArt.ball({ uid: "bl" + (nid++) }), x, y, size, "it"); },
+          // anneau d'onde (celebration d'un resultat) en (x,y) a l'instant `at`
+          ring: function (x, y, at, color) {
+            var r = S.put(field, '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="' + (color || "#ffd23f") + '" stroke-width="14"/></svg>', x, y, 200, "it");
+            tl.set(r, { opacity: 0, scale: 0.3 }, 0);
+            tl.set(r, { opacity: 1, scale: 0.3 }, at);
+            tl.to(r, { scale: 2.6, opacity: 0, duration: 0.6, ease: "expo.out" }, at + 0.005);
+            return r;
+          },
+          // texte geant / etiquette, centres en (x,y)
+          nb: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "nb " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+          lbl: function (txt, x, y, cls) {
+            var e = document.createElement("div"); e.className = "lbl " + (cls || ""); e.textContent = txt; e.style.left = x + "px"; e.style.top = y + "px";
+            field.appendChild(e); gsap.set(e, { xPercent: -50, yPercent: -50 }); return e;
+          },
+        };
+        ctx.coachSvg = S.coach(tl, $("#coach"), P, null);
+        ctx.cheer = function (at) { CEArt.toPose(gsap, tl, ctx.coachSvg, "celebration", at, 0.4, "back.out(1.7)"); };
+        scene(ctx);
+        S.fades(tl, P.total);
+        tl.set("#flash", { opacity: 0 }, 0);
+        tl.time(0);
+      }
+      build();
+      window.__timelines["strategy-passer-dizaine"] = tl;
+    </script>
+  </body>
+</html>
