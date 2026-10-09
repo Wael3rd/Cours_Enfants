@@ -1164,6 +1164,66 @@ const CHX = {
   },
 };
 
+// ---------------------------------------------------------------- personnages du Mexique (unite 4 + evenement Dia de Muertos) : meme chibi 400x660.
+// Mateo (Coyoacan, casquette bleue + lunettes), Valentina (guide de la Casa Azul, fleurs dans les cheveux), Dona Lupita (marchande, rebozo),
+// Dona Remedios (abuela d'Oaxaca, huipil brode), Beto (artisan d'alebrijes, tablier), Xochitl (fillette d'Oaxaca, couronne de cempasuchil).
+// Chaque entree : torso (+ jupe/tablier), back / front (cheveux, couvre-chef), acc (lunettes...). Visage, bras, jambes et rig : 08-characters.js.
+Object.assign(CHARS, {
+  mateo: { name: 'Mateo', skin: '#C98A5E', hair: '#1E120C', top: '#E8A33A', pants: '#3D4468', shoes: '#F5E6C8', accent: '#2F6FD0', mouthY: 0 },
+  valentina: { name: 'Valentina', skin: '#D2956B', hair: '#1E120C', top: '#FFFDF4', pants: '#0E7F82', shoes: '#C9573B', accent: '#D93472', mouthY: 0 },
+  lupita: { name: 'Doña Lupita', skin: '#B87F55', hair: '#6E6762', top: '#C9573B', pants: '#2B318A', shoes: '#3B2216', accent: '#D93472', mouthY: 0 },
+  remedios: { name: 'Doña Remedios', skin: '#C08558', hair: '#E4E0DA', top: '#FFFDF4', pants: '#3B2A4A', shoes: '#3B2216', accent: '#D93472', mouthY: 0 },
+  beto: { name: 'Beto', skin: '#B9764A', hair: '#1E120C', top: '#19B7AA', pants: '#2B318A', shoes: '#6B3E26', accent: '#FF9F1C', mouthY: 14 },
+  xochitl: { name: 'Xóchitl', skin: '#C78758', hair: '#1A0F0A', top: '#FFFDF4', pants: '#D93472', shoes: '#FFC83D', accent: '#FF9F1C', mouthY: 0 },
+});
+
+/** Fleur de cempasuchil (tagete) vue de face : petales orange en couronne, coeur jaune. */
+function marigoldFlower(cx, cy, r, c1, c2) {
+  let p = '';
+  for (let i = 0; i < 10; i++) { const a = (i / 10) * Math.PI * 2; p += `<ellipse cx="${r1(cx + Math.cos(a) * r * 0.55)}" cy="${r1(cy + Math.sin(a) * r * 0.55)}" rx="${r1(r * 0.42)}" ry="${r1(r * 0.3)}" transform="rotate(${r1((a * 180) / Math.PI)} ${r1(cx + Math.cos(a) * r * 0.55)} ${r1(cy + Math.sin(a) * r * 0.55)})" fill="${i % 2 ? c1 : c2}"/>`; }
+  return p + `<circle cx="${r1(cx)}" cy="${r1(cy)}" r="${r1(r * 0.34)}" fill="#FFC83D"/>`;
+}
+/** Broderie de bas de jupe / col : bande de losanges + petites fleurs. */
+function embroideryBand(x, y, w, h, c1, c2) {
+  const n = Math.max(2, Math.floor(w / (h * 1.1))), st = w / n; let s = `<rect x="${r1(x)}" y="${r1(y)}" width="${r1(w)}" height="${r1(h)}" fill="${c1}"/>`;
+  for (let i = 0; i < n; i++) s += `<path d="${diamondPath(r1(x + st * (i + 0.5)), r1(y + h / 2), r1(st * 0.28), r1(h * 0.38))}" fill="${c2}"/>`;
+  return s;
+}
+
+Object.assign(CHX, {
+  mateo: {
+    torso: (c) => `<path class="c-torso" d="M138 292Q200 272 262 292L276 442Q200 466 124 442Z" fill="${c.top}"/><path d="M262 292L276 442Q240 454 214 458L222 300Z" fill="${shade(c.top, -0.22)}" opacity=".5"/><path d="M162 286Q200 322 238 286L238 304Q200 340 162 304Z" fill="${shade(c.top, -0.2)}"/><path d="M200 322V450" stroke="${shade(c.top, -0.3)}" stroke-width="5"/><path d="M150 420h100" stroke="${shade(c.top, -0.3)}" stroke-width="4" opacity=".6"/>`,
+    front: (c) => `<path d="M100 184Q92 96 200 90Q308 96 300 184Q290 150 262 146Q200 132 138 146Q110 150 100 184Z" fill="${c.hair}"/><path d="M104 150Q110 64 200 58Q290 64 296 150Q200 124 104 150Z" fill="${c.accent}"/><path d="M104 150Q200 124 296 150" stroke="${shade(c.accent, -0.3)}" stroke-width="6" fill="none"/><path d="M96 154Q160 138 232 144Q300 150 322 172Q296 176 268 164Q200 148 96 168Z" fill="${shade(c.accent, -0.22)}"/><circle cx="200" cy="96" r="14" fill="#FFC83D"/><path d="M200 86l3 7h7l-6 5 2 8-6 -5 -6 5 2 -8 -6 -5h7Z" fill="${c.accent}"/>`,
+    acc: () => `<g fill="#CFE9F5" fill-opacity=".14" stroke="#1E120C" stroke-width="6"><rect x="122" y="178" width="66" height="50" rx="14"/><rect x="212" y="178" width="66" height="50" rx="14"/></g><path d="M188 196Q200 188 212 196M122 190L106 184M278 190L294 184" stroke="#1E120C" stroke-width="6" fill="none"/>`,
+  },
+  valentina: {
+    torso: (c) => `<path d="M126 436L274 436L304 600Q200 622 96 600Z" fill="${c.pants}"/><path d="M204 440L210 606Q256 604 304 600L274 436Z" fill="#000" opacity=".16"/>${embroideryBand(98, 566, 206, 30, '#D93472', '#FFC83D')}<path d="M130 296Q200 272 270 296L280 446Q200 470 120 446Z" fill="${c.top}"/><path d="M270 296L280 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.12)}" opacity=".5"/><path d="M150 290Q200 326 250 290L250 308Q200 344 150 308Z" fill="#D93472"/>${embroideryBand(150, 322, 100, 22, '#FFC83D', '#D93472')}<g fill="#D93472"><circle cx="176" cy="372" r="8"/><circle cx="224" cy="372" r="8"/><circle cx="200" cy="400" r="8"/></g><g fill="#0E9F6E"><circle cx="176" cy="372" r="3"/><circle cx="224" cy="372" r="3"/><circle cx="200" cy="400" r="3"/></g><path d="M124 436Q200 462 276 436L276 452Q200 478 124 452Z" fill="#FFC83D"/>`,
+    back: (c) => `<path d="M98 196Q86 90 200 78Q314 90 302 196Q312 270 288 330Q272 270 272 240L128 240Q128 270 112 330Q88 270 98 196Z" fill="${c.hair}"/>`,
+    front: (c) => `<path d="M102 190Q100 96 200 90Q300 96 298 190Q284 142 244 138Q210 118 168 140Q122 142 102 190Z" fill="${c.hair}"/><path d="M122 150Q160 112 214 122" stroke="${shade(c.hair, 0.4)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/><path d="M110 120Q200 52 290 120" stroke="${shade(c.hair, 0.12)}" stroke-width="22" fill="none" stroke-linecap="round"/><g>${marigoldFlower(150, 82, 20, '#D93472', '#FF7FB0')}${marigoldFlower(200, 62, 22, '#FFC83D', '#FF9F1C')}${marigoldFlower(252, 80, 20, '#19B7AA', '#6FE7DC')}</g><path d="M178 56q-10 -16 6 -22M226 52q12 -14 -4 -22" stroke="#0E9F6E" stroke-width="5" fill="none"/>`,
+  },
+  lupita: {
+    torso: (c) => `<path d="M126 436L274 436L302 596Q200 616 98 596Z" fill="${c.pants}"/><path d="M204 440L208 604Q254 602 302 596L274 436Z" fill="#000" opacity=".16"/><path d="M134 294Q200 272 266 294L278 446Q200 470 122 446Z" fill="${c.top}"/><path d="M266 294L278 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.22)}" opacity=".5"/><path d="M122 296Q200 340 278 296L292 400Q200 456 108 400Z" fill="#19B7AA"/><path d="M122 296Q200 340 278 296" stroke="#FFC83D" stroke-width="7" fill="none"/>${[0, 1, 2, 3].map((i) => `<path d="M${116 + i * 4} ${322 + i * 24}Q200 ${372 + i * 24} ${284 - i * 4} ${322 + i * 24}" stroke="${['#D93472', '#FFC83D', '#2B318A', '#F5E6C8'][i]}" stroke-width="6" fill="none" opacity=".9"/>`).join('')}<path d="M150 400H250L262 480Q200 494 138 480Z" fill="#F5E6C8"/><path d="M150 400Q200 414 250 400" fill="none" stroke="${c.accent}" stroke-width="4"/>`,
+    back: (c) => `<path d="M98 196Q88 92 200 80Q312 92 302 196Q308 250 286 270Q290 214 274 190L126 190Q110 214 114 270Q92 250 98 196Z" fill="${c.hair}"/><path d="M98 200Q70 270 90 340Q112 320 118 262Z" fill="${c.hair}"/><path d="M302 200Q330 270 310 340Q288 320 282 262Z" fill="${c.hair}"/><path d="M86 330l-8 18M314 330l8 18" stroke="${c.accent}" stroke-width="9" stroke-linecap="round"/>`,
+    front: (c) => `<path d="M104 190Q100 100 200 92Q300 100 296 190Q280 142 236 136Q208 112 170 138Q124 144 104 190Z" fill="${c.hair}"/><path d="M122 148Q164 112 214 122" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".55"/><path d="M198 98V140" stroke="${shade(c.hair, -0.3)}" stroke-width="4" opacity=".6"/>`,
+  },
+  remedios: {
+    torso: (c) => `<path d="M130 436L270 436L298 596Q200 614 102 596Z" fill="${c.pants}"/><path d="M204 440L208 604Q252 602 298 596L270 436Z" fill="#000" opacity=".16"/>${embroideryBand(102, 566, 196, 26, '#D93472', '#FFC83D')}<path d="M134 294Q200 272 266 294L278 446Q200 470 122 446Z" fill="${c.top}"/><path d="M266 294L278 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.12)}" opacity=".5"/>${embroideryBand(146, 308, 108, 30, '#D93472', '#FFC83D')}<g>${marigoldFlower(176, 384, 16, '#D93472', '#FF7FB0')}${marigoldFlower(224, 384, 16, '#19B7AA', '#6FE7DC')}${marigoldFlower(200, 420, 16, '#FF9F1C', '#FFC83D')}</g>${embroideryBand(122, 436, 156, 20, '#19B7AA', '#FFFDF4')}`,
+    back: (c) => `<circle cx="200" cy="72" r="42" fill="${c.hair}"/><circle cx="200" cy="72" r="42" fill="none" stroke="#B8B3AD" stroke-width="4" opacity=".6"/><path d="M96 196Q86 90 200 78Q314 90 304 196Q310 250 286 280Q290 210 274 190L126 190Q110 210 114 280Q90 250 96 196Z" fill="${c.hair}"/><path d="M100 220Q76 300 98 372Q120 352 124 280Z" fill="${c.hair}"/><path d="M300 220Q324 300 302 372Q280 352 276 280Z" fill="${c.hair}"/><path d="M92 366l-6 24M308 366l6 24" stroke="${c.accent}" stroke-width="9" stroke-linecap="round"/>`,
+    front: (c) => `<path d="M104 190Q100 100 200 92Q300 100 296 190Q280 142 236 136Q208 112 170 138Q124 144 104 190Z" fill="${c.hair}"/><path d="M122 148Q164 112 214 122" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".7"/><g>${marigoldFlower(256, 92, 15, '#FF9F1C', '#FFC83D')}${marigoldFlower(278, 112, 12, '#FF9F1C', '#FFC83D')}</g>`,
+    acc: (c) => `<path d="M126 246Q136 266 150 268M274 246Q264 266 250 268" stroke="${shade(c.skin, -0.3)}" stroke-width="4" fill="none" opacity=".6" stroke-linecap="round"/>`,
+  },
+  beto: {
+    torso: (c) => `<path class="c-torso" d="M136 292Q200 272 264 292L280 446Q200 470 120 446Z" fill="${c.top}"/><path d="M264 292L280 446Q240 458 214 462L224 304Z" fill="${shade(c.top, -0.25)}" opacity=".5"/><path d="M150 330H250L262 480Q200 494 138 480Z" fill="#C9573B"/><path d="M150 330Q200 344 250 330" fill="none" stroke="#7E2F1E" stroke-width="5"/><path d="M168 300L158 334M232 300L242 334" stroke="#7E2F1E" stroke-width="7" stroke-linecap="round"/><g><circle cx="176" cy="398" r="9" fill="#FFC83D"/><circle cx="224" cy="428" r="8" fill="#19B7AA"/><circle cx="196" cy="456" r="7" fill="#D93472"/><circle cx="214" cy="372" r="6" fill="#2F6FD0"/></g><rect x="176" y="404" width="48" height="34" rx="8" fill="none" stroke="#7E2F1E" stroke-width="4"/>`,
+    front: (c) => `<path d="M100 184Q94 92 200 86Q306 92 300 184Q290 150 266 144Q200 128 134 144Q108 150 100 184Z" fill="${c.hair}"/><path d="M98 138Q200 98 302 138L300 164Q200 126 100 164Z" fill="#FF9F1C"/><path d="M98 138Q200 98 302 138" fill="none" stroke="#fff" stroke-width="3" opacity=".3"/><g fill="#FFFDF4"><circle cx="150" cy="136" r="5"/><circle cx="200" cy="124" r="5"/><circle cx="250" cy="136" r="5"/></g><path d="M298 142Q338 150 346 182Q316 172 296 164Z" fill="#FF9F1C"/>`,
+    acc: () => `<path d="M150 238Q176 218 200 234Q224 218 250 238Q244 262 200 250Q156 262 150 238Z" fill="#1E120C"/>`,
+  },
+  xochitl: {
+    torso: (c) => `<path d="M132 436L268 436L300 590Q200 612 100 590Z" fill="${c.top}"/><path d="M204 440L210 598Q254 596 300 590L268 436Z" fill="#000" opacity=".1"/>${embroideryBand(102, 556, 196, 34, '#D93472', '#FFC83D')}${embroideryBand(110, 528, 180, 14, '#19B7AA', '#FFFDF4')}<path class="c-torso" d="M138 292Q200 272 262 292L276 442Q200 466 124 442Z" fill="${c.top}"/><path d="M262 292L276 442Q240 454 214 458L222 300Z" fill="${shade(c.top, -0.14)}" opacity=".5"/><path d="M158 286Q200 330 242 286L242 306Q200 350 158 306Z" fill="#D93472"/>${embroideryBand(150, 340, 100, 22, '#FF9F1C', '#D93472')}<g>${marigoldFlower(174, 398, 13, '#FF9F1C', '#FFC83D')}${marigoldFlower(226, 398, 13, '#FF9F1C', '#FFC83D')}</g><path d="M126 436Q200 462 274 436L274 452Q200 478 126 452Z" fill="#D93472"/>`,
+    back: (c) => `<path d="M98 196Q86 90 200 78Q314 90 302 196Q312 250 290 270Q292 214 276 190L124 190Q108 214 110 270Q88 250 98 196Z" fill="${c.hair}"/><path d="M106 232Q64 300 92 386Q124 364 126 290Z" fill="${c.hair}"/><path d="M294 232Q336 300 308 386Q276 364 274 290Z" fill="${c.hair}"/><path d="M88 372l-6 22M312 372l6 22" stroke="#FF9F1C" stroke-width="10" stroke-linecap="round"/>`,
+    front: (c) => `<path d="M102 190Q100 96 200 90Q300 96 298 190Q282 140 240 138Q212 112 176 140Q124 142 102 190Z" fill="${c.hair}"/><path d="M122 148Q160 112 214 122" stroke="${shade(c.hair, 0.4)}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".6"/><path d="M104 134Q200 70 296 134" stroke="#0E9F6E" stroke-width="10" fill="none" stroke-linecap="round"/><g>${marigoldFlower(126, 120, 17, '#FF9F1C', '#FFC83D')}${marigoldFlower(166, 92, 18, '#FF9F1C', '#FFC83D')}${marigoldFlower(208, 80, 19, '#FF9F1C', '#FFC83D')}${marigoldFlower(250, 94, 18, '#FF9F1C', '#FFC83D')}${marigoldFlower(284, 124, 17, '#FF9F1C', '#FFC83D')}</g>`,
+  },
+});
+
 // ---------------------------------------------------------------- accessoires d'histoire (unites 2 et 3) : cloche, bocadillo, chat, guitare, cazuela, grenouille, cigogne, enfant fige
 // Chaque prop = chaine SVG (viewBox fixe). Parties animables : .pr-bell (cloche, pivot haut), .pr-clap (battant), .pr-frog, .st-wing*.
 
