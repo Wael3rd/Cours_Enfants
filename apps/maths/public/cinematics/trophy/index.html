@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Remise du trophée</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("./_shared/Anton-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Fredoka"; src: url("./_shared/Fredoka-latin.woff2") format("woff2"); font-weight: 300 700; }
+      html, body { margin: 0; background: #050820; }
+      #root, #root * { pointer-events: none; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #050820; font-family: "Fredoka", sans-serif; }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 520px; }
+      #bg { position: absolute; inset: 0; filter: brightness(0.22) blur(10px); }
+      #dark { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(5, 8, 32, 0.15) 0%, rgba(5, 8, 32, 0.85) 75%); }
+      .beam { position: absolute; top: -80px; width: 900px; height: 1700px; margin-left: -450px; transform-origin: 50% 0; mix-blend-mode: screen; opacity: 0;
+        background: linear-gradient(180deg, rgba(255, 246, 200, 0.7), rgba(255, 246, 200, 0.05)); clip-path: polygon(46% 0, 54% 0, 100% 100%, 0 100%); }
+      #beamL { left: 160px; }
+      #beamR { left: 1760px; }
+      #pool { position: absolute; left: 560px; top: 740px; width: 800px; height: 200px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255, 226, 120, 0.7), rgba(255, 226, 120, 0) 70%); opacity: 0; }
+      #rays { position: absolute; left: 960px; top: 420px; width: 2200px; height: 2200px; margin: -1100px 0 0 -1100px; opacity: 0; }
+      #rays svg { width: 100%; height: 100%; }
+      #trophy { position: absolute; left: 710px; top: 56px; width: 500px; opacity: 0; }
+      #trophy svg { width: 100%; height: auto; display: block; }
+      .spk { position: absolute; left: 0; top: 0; width: 160px; height: 160px; margin: -80px 0 0 -80px; opacity: 0; }
+      .spk svg { width: 100%; height: 100%; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #ring { position: absolute; left: 960px; top: 400px; width: 460px; height: 460px; margin: -230px 0 0 -230px; border-radius: 50%; border: 22px solid #ffd23f; box-sizing: border-box; opacity: 0; }
+      #confetti { position: absolute; inset: 0; }
+      #plate { position: absolute; left: 96px; top: 880px; width: 1300px; height: 150px; opacity: 0; filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.4)); }
+      #platebg { position: absolute; inset: 0; background: linear-gradient(180deg, #fff3b0, #ffd23f 55%, #d99a00); clip-path: polygon(60px 0, 100% 0, calc(100% - 60px) 100%, 0 100%); }
+      #platetxt { position: absolute; inset: 0; text-align: center; line-height: 154px; font-family: "Anton", sans-serif; color: #0a1030; letter-spacing: 3px; white-space: nowrap; }
+      #sub { position: absolute; left: 96px; top: 1030px; height: 96px; padding: 0 64px 0 56px; line-height: 98px; background: #0a1030; color: #fff; font-weight: 700; font-size: 60px; white-space: nowrap;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 30px) 100%, 0 100%); opacity: 0; }
+      #fade { position: absolute; inset: 0; background: #050820; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="trophy" data-start="0" data-width="1920" data-height="1200" data-duration="6">
+      <div id="cam"><div id="shk" style="position:absolute;inset:0">
+        <div id="bg" data-layout-ignore></div>
+        <div id="dark"></div>
+        <div id="rays" data-layout-ignore></div>
+        <div id="beamL" class="beam" data-layout-ignore></div>
+        <div id="beamR" class="beam" data-layout-ignore></div>
+        <div id="pool"></div>
+        <div id="trophy" data-layout-ignore></div>
+        <div id="sparks" data-layout-ignore></div>
+      </div></div>
+      <div id="ring"></div>
+      <div id="flash"></div>
+      <div id="confetti" data-layout-ignore></div>
+      <div id="plate" data-layout-allow-overflow><div id="platebg"></div><div id="platetxt">Coupe des doubles</div></div>
+      <div id="sub" data-layout-allow-overflow>Léo remporte le trophée !</div>
+      <div id="fade"></div>
+
+      <audio id="a-mur" src="./_shared/sfx/murmur.mp3" data-start="0" data-duration="5.2" data-track-index="1" data-volume="0.5"></audio>
+      <audio id="a-op" src="./_shared/sfx/open.mp3" data-start="0.4" data-duration="0.15" data-track-index="2" data-volume="0.7"></audio>
+      <audio id="a-sl" src="./_shared/sfx/steel00.mp3" data-start="2.55" data-duration="0.92" data-track-index="3" data-volume="0.8"></audio>
+      <audio id="a-lu" src="./_shared/sfx/level-up-big.mp3" data-start="2.62" data-duration="1.01" data-track-index="4" data-volume="0.8"></audio>
+      <audio id="a-r1" src="./_shared/sfx/roar-outro.mp3" data-start="2.6" data-duration="2.4" data-track-index="5" data-volume="0.8"></audio>
+      <audio id="a-r2" src="./_shared/sfx/roar-short.mp3" data-start="3.4" data-duration="2.6" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="a-sw" src="./_shared/sfx/swoosh-in.mp3" data-start="3.0" data-duration="0.2" data-track-index="7" data-volume="0.7"></audio>
+      <audio id="a-s5" src="./_shared/sfx/streak-5.mp3" data-start="3.45" data-duration="0.53" data-track-index="8" data-volume="0.8"></audio>
+    </div>
+    <script>
+      // Donnees (canal "trophy") : { competition, name }
+      var DEFAULTS = { competition: "Coupe des doubles", name: "Léo" };
+      var cur = DEFAULTS, ready = false;
+      var tl = gsap.timeline({ paused: true });
+      window.__hyperframes.registerRuntimeDataHandler("trophy", function (d) { cur = Object.assign({}, DEFAULTS, d || {}); if (ready) build(); });
+      var $ = function (s) { return document.querySelector(s); };
+
+      $("#bg").innerHTML = CEArt.stadium();
+      $("#rays").innerHTML = CEArt.rays({ count: 20, color: "#ffd23f", opacity: 1, size: 2200 });
+      $("#trophy").innerHTML = CEArt.trophy({});
+      var SPK = [[820, 250], [1100, 250], [960, 170], [760, 420], [1160, 420], [880, 520], [1040, 520], [960, 330]];
+      $("#sparks").innerHTML = SPK.map(function (p, i) { return '<div class="spk" id="spk' + i + '" style="left:' + p[0] + "px;top:" + p[1] + 'px">' + CEArt.sparkle({ size: 160, color: i % 2 ? "#fff6c8" : "#ffffff" }) + "</div>"; }).join("");
+
+      function render() {
+        var t = $("#platetxt"); t.textContent = cur.competition;
+        t.style.fontSize = Math.min(124, Math.floor(1150 / (cur.competition.length * 0.46))) + "px";
+        $("#sub").textContent = cur.name + " remporte le trophée !";
+      }
+
+      function build() {
+        tl.clear();
+        gsap.set(["#cam", ".beam", "#pool", "#rays", "#trophy", ".spk", "#ring", "#flash", "#plate", "#sub", "#fade", "#platetxt"], { clearProps: "transform,opacity" });
+        render();
+        var glint = $("#trophy .tr-glint");
+
+        // beams : apparition + balayage
+        tl.set("#cam", { y: 320, scale: 1.18 }, 0);
+        tl.to("#cam", { y: 0, scale: 1.0, duration: 2.6, ease: "power3.out" }, 0.3);
+        tl.fromTo("#beamL", { rotation: -18, opacity: 0 }, { rotation: -44, opacity: 0.6, duration: 2.0, ease: "sine.inOut" }, 0.2);
+        tl.fromTo("#beamR", { rotation: 18, opacity: 0 }, { rotation: 44, opacity: 0.6, duration: 2.0, ease: "sine.inOut" }, 0.2);
+        tl.to(["#beamL", "#beamR"], { opacity: 0.85, duration: 0.3, ease: "power2.out" }, 2.6);
+        tl.to("#beamL", { rotation: -34, duration: 2.2, ease: "sine.inOut" }, 3.6);
+        tl.to("#beamR", { rotation: 34, duration: 2.2, ease: "sine.inOut" }, 3.6);
+        tl.fromTo("#pool", { opacity: 0 }, { opacity: 1, duration: 1.4, ease: "power2.in" }, 1.2);
+
+        // trophee qui monte
+        tl.fromTo("#trophy", { y: 560, rotation: -4, opacity: 0 }, { y: 0, rotation: 0, opacity: 1, duration: 2.3, ease: "power3.out" }, 0.4);
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.5, duration: 1.5, ease: "power1.in" }, 1.2);
+        tl.to("#rays", { rotation: 28, duration: 4.8, ease: "none" }, 1.2);
+
+        // revelation
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.85, duration: 0.05, ease: "power1.out" }, 2.62);
+        tl.to("#flash", { opacity: 0, duration: 0.45, ease: "power2.out" }, 2.68);
+        CEArt.shake(gsap, tl, "#shk", 2.66, 14, 0.35);
+        tl.set("#ring", { scale: 0.3, opacity: 1 }, 2.65);
+        tl.to("#ring", { scale: 3.2, opacity: 0, duration: 0.7, ease: "expo.out" }, 2.65);
+        SPK.forEach(function (p, i) {
+          var t = 2.7 + i * 0.06;
+          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: i === 2 ? 1.6 : 1.1, rotation: 30, opacity: 1, duration: 0.28, ease: "back.out(3)" }, t);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.4, ease: "power2.in" }, t + 0.35);
+        });
+        SPK.forEach(function (p, i) {
+          var t = 4.6 + i * 0.07;
+          tl.to("#spk" + i, { scale: 0.9, opacity: 1, rotation: 70, duration: 0.25, ease: "back.out(3)" }, t);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" }, t + 0.3);
+        });
+        // confettis : pluie en trois vagues
+        $("#confetti").innerHTML = "";
+        [2.65, 3.2, 3.75].forEach(function (at, k) {
+          CEArt.confetti(gsap, tl, $("#confetti"), { at: at, count: 80, x: 960, xSpread: 940, y: -120, angle: 90, spread: 28, power: 260, gravity: 700, duration: 2.6, seed: 40 + k, colors: ["#FFD23F", "#FFFFFF", "#FF4D6D", "#35D6FF", "#FFE680"] });
+        });
+
+        // plaque competition
+        tl.fromTo("#plate", { x: -1500, opacity: 1 }, { x: 0, opacity: 1, duration: 0.55, ease: "expo.out" }, 3.0);
+        tl.fromTo("#sub", { clipPath: "inset(0 100% 0 0)", opacity: 1 }, { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 0.45, ease: "power2.out" }, 3.4);
+
+        // maintien
+        tl.to("#cam", { scale: 1.1, duration: 3.0, ease: "sine.inOut" }, 3.0);
+        tl.to("#trophy", { y: -8, duration: 1.4, ease: "sine.inOut" }, 3.0);
+        tl.to("#trophy", { y: 0, duration: 1.4, ease: "sine.inOut" }, 4.4);
+        tl.set(glint, { opacity: 0.45 }, 0);
+        tl.to(glint, { opacity: 1, duration: 0.35, ease: "sine.inOut" }, 4.2);
+        tl.to(glint, { opacity: 0.45, duration: 0.4, ease: "sine.inOut" }, 4.55);
+        tl.fromTo("#fade", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.in" }, 5.65);
+        tl.time(0);
+      }
+      build();
+      ready = true;
+      window.__timelines["trophy"] = tl;
+    </script>
+  </body>
+</html>

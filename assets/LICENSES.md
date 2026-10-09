@@ -152,6 +152,12 @@ Sous-ensembles latin + latin-ext, woff2, declares dans `assets/fonts/fonts.css` 
 | `music/stade-energique.mp3` | Mixkit Music #51 "Sports Highlights" - https://mixkit.co/free-stock-music/sports/ |
 | `music/aventure-douce.mp3` | Mixkit Music #31 "Dreaming Big" - https://mixkit.co/free-stock-music/fantasy/ |
 
+## Cinematiques maths, `apps/maths/public/cinematics/_shared/`
+
+- `fonts` (Anton, Fredoka, Bebas Neue, Baloo 2) : copies des sous-ensembles latin de `assets/fonts/` (OFL, voir plus haut).
+- `sfx/*.mp3` : copies de `assets/sfx/` (memes licences : Kenney CC0 / Mixkit) ; les fichiers `roar-*.mp3`, `murmur.mp3`, `ambience.mp3`, `chant.mp3` sont des **decoupes avec fondus** de `foot/crowd-*.mp3` et `foot/ambience-stadium-loop.mp3` (script : `tools/assets/build-cine-sfx.sh`), meme licence Mixkit.
+- `ceart.js` : kit graphique maison (SVG proceduraux, code du projet, aucune ressource tierce). Source : `apps/maths/src/art/core/src/*.js`.
+
 ## Voix de synthese
 
 - Generees avec `edge-tts` (voix neurales Microsoft Edge, API non officielle ; lib LGPLv3 https://github.com/rany2/edge-tts) via `tools/tts/generate.py`. Pas d'attribution exigee. Point d'attention : les conditions de l'API Microsoft ne donnent pas de licence commerciale explicite - OK pour un usage familial/prive ; a revoir (Azure Speech officiel) en cas de distribution publique.

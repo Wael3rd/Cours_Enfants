@@ -1,7 +1,7 @@
 # Cinématiques HyperFrames — mode d'emploi
 
 Une cinématique = une composition HTML autonome (`apps/<app>/public/cinematics/<id>/index.html`), jouée en direct dans
-l'app par `<hyperframes-player>` (via `@ce/core`), et rendable en MP4. Référence vivante : `proof-goal` (app maths).
+l'app par `<hyperframes-player>` (via `@ce/core`), et rendable en MP4. Référence vivante : `goal` (app maths) ; les 7 cinématiques de l'app maths sont décrites en §7 (contrat de données) et chacune a son `STORYBOARD.md`.
 
 ## 1. Créer
 
@@ -76,7 +76,7 @@ Deux mécanismes, tous deux avec valeurs par défaut (la composition reste prév
   liées par `data-var-text="id"` (texte) / `data-var-src="id"` (image), ou lues avec `window.__hyperframes.getVariables()`.
   Valeurs : `--variables '{"name":"Inès"}'`.
 
-`proof-goal` utilise les deux : `data-var-text` (défauts + rendu MP4) et le handler `goal` (live).
+Les cinématiques maths n'utilisent que le handler (live) : au rendu MP4 elles prennent leurs valeurs par défaut (déclarées en tête de script, `DEFAULTS`).
 
 ## 6. Rendre en MP4
 
@@ -84,9 +84,58 @@ Deux mécanismes, tous deux avec valeurs par défaut (la composition reste prév
 npx hyperframes render apps/maths/public/cinematics/<id> --variables '{"name":"Inès","calc":"8 + 6 = 14"}' -f 30 -o renders/<id>.mp4
 ```
 
-`-q draft|looks|delivery`, `--format mp4|webm|mov|gif`. `renders/` est gitignoré. `proof-goal` : 3 s, ~15 s de rendu, 1,2 Mo.
+`-q draft|looks|delivery`, `--format mp4|webm|mov|gif`. `renders/` est gitignoré. 
 
 ## Vérification e2e
 
 `npm run build && npm run e2e` : sert `dist/`, ouvre `/maths/` (1280×800), joue la cinématique, vérifie prénom injecté, aucune requête
 hors origine, puis recharge hors-ligne depuis le cache SW et rejoue. Screenshots dans `tools/e2e/out/`.
+
+## 6bis. Kit graphique `CEArt` : une source, deux usages
+
+Le SVG des personnages, blasons, cage, stade, HUD, cartes, trophée, médaille… est écrit **une seule fois** dans
+`apps/maths/src/art/core/src/*.js` (fonctions pures qui renvoient une chaîne SVG, sans import). `npm run art`
+(lancé aussi par `cinematics:sync` / `check`) concatène ces fichiers en :
+
+- `apps/maths/src/art/core/ceart.js` (+ `.d.ts`) : ESM, importé par les composants Svelte (`Player`, `Keeper`, `Coach`, `Crest`, `Ball`, `GoalNet`, `StadiumBackdrop`, `ScoreBug`, `LowerThird`, `PlayerCard`) et par `ArtDemo.svelte` (`/maths/#art`) ;
+- `apps/maths/public/cinematics/_shared/ceart.js` : IIFE `window.CEArt`, chargé par les compositions (`<script src="./_shared/ceart.js">` après gsap).
+
+Ne jamais éditer les deux fichiers générés (le test `tests/art.test.ts` vérifie qu'ils restent synchrones et que chaque SVG est bien formé).
+Le rig du joueur expose des groupes `p-armL/p-armR/p-legL/p-legR/p-body/p-head/p-rig` ; `CEArt.setPose / toPose / idleCycle / runCycle`
+prennent `gsap` en paramètre : mêmes animations dans l'app (boucle infinie) et dans une timeline HyperFrames (finie).
+Effets déterministes : `CEArt.confetti` (balistique graine fixe), `shake`, `countUp` (piloté par la progression), `crowdFlashes`, `rays`, `sparkle`, `speedLines`.
+Sons : `_shared/sfx/` (copie de `assets/sfx`, découpes avec fondus par `tools/assets/build-cine-sfx.sh`), `<audio id data-start data-duration src="./_shared/sfx/…">`.
+
+### Patron d'une composition (à copier)
+
+1. `DEFAULTS` + `cur` ; `registerRuntimeDataHandler(id, d => { cur = merge(d); if (ready) build(); })` **avant** la première construction.
+2. `build()` : `tl.clear()` → `gsap.set(éléments, {clearProps})` → `render()` (injecte SVG/texte depuis `cur`) → ajoute les tweens → `tl.time(0)`. Appelée une fois à la fin du script, puis à chaque `setRuntimeData`.
+   `clearProps: "transform,opacity"` (jamais `"all"` sur un élément dont `left/top/background` sont posés en ligne).
+3. Les tweens ne ciblent que des conteneurs stables ou des éléments requêtés **dans** `build()` après `render()`.
+
+### Pièges `hyperframes check` rencontrés
+
+- Éléments cachés au départ : un `fromTo` doit mettre `opacity: 1` aussi dans les vars d'arrivée (`gsap_cold_seek_hidden_fromto_missing_reveal`). Plusieurs `fromTo` sur la même cible → utiliser `tl.set(…, 0)` (baseline) puis des `.to`. Deux tweens qui se touchent exactement (fin = début) déclenchent `overlapping_gsap_tweens` : décaler de 0.005 s.
+- Élément à `opacity` 1 en `from` qui doit rester invisible avant son instant : utiliser `tl.set(el, {…}, t)` + `.to`, pas un `fromTo` (sinon il est visible dès t = 0).
+- Texte **tourné** (`rotation`) : faux positif `text_occluded` (échantillons sur la boîte englobante) → ne pas faire tourner un bloc de texte réel, incliner via `clip-path`.
+- Décors (stade, rayons, confettis, joueur) : `data-layout-ignore`. Déplacements volontaires hors cadre : `data-layout-allow-overflow`. Texte réel survolé par des confettis : `data-layout-allow-occlusion` sur les éléments texte.
+- `#root, #root * { pointer-events: none }` (sinon un overlay transparent est vu comme occultant).
+- Pas de texte dans les décors (panneaux LED…) : l'audit de contraste les compte.
+- Secousse (`CEArt.shake`) sur un wrapper distinct de celui que la caméra anime en x/y.
+
+## 7. Contrats de données des cinématiques maths (canal = id de la composition)
+
+Toutes les clés sont optionnelles (valeurs par défaut) ; `team = { name, primary, secondary, initials }` (couleurs hex).
+
+| id | durée | données | défauts |
+|---|---|---|---|
+| `intro-club` | 7 s | `{ name: string, club: team }` | `Léo`, Les Lions rouge/blanc `LB` |
+| `match-intro` | 4 s | `{ home: team, away: team }` | Lions rouge/blanc, Aigles bleu/jaune |
+| `goal` | 2,5 s | `{ name, calc, time, scoreHome, scoreAway, home?: team, away?: team }` (le score est celui **après** le but ; le bug affiche N-1 puis compte N) | `Léo`, `7 + 8 = 15`, `1,8 s`, 1-0 |
+| `full-time` | 6 s | `{ home: team, away: team, scoreHome, scoreAway, win: bool, goals: int, avgTime: "1,9 s", bestStreak: int, stars: 0..3 }` | 3-2, victoire, 4, `1,9 s`, 5, 2 |
+| `trophy` | 6 s | `{ competition: string, name: string }` | `Coupe des doubles`, `Léo` |
+| `card-pack` | 3 s | `{ card: { name, number, position, rarity: "bronze"\|"argent"\|"or"\|"legende", primary, secondary } }` (le visage est dérivé du nom : `CEArt.avatarOf`) | Léo Martin, 10, ATT, `or`, rouge/blanc |
+| `medal` | 4 s | `{ medal: "or"\|"argent"\|"bronze", time: "12,4 s", record: bool }` | `or`, `12,4 s`, `false` |
+
+Appel : `playCinematic({ src, data: { '<id>': payload } })`. `win=false` avec score égal → « MATCH NUL » ; défaite → « BEAU MATCH ! » (jamais punitif).
+Limites : au rendu MP4 les valeurs sont celles de `DEFAULTS` (pas de `--variables` câblé) ; les noms très longs sont réduits automatiquement (prénom ≤ ~12 lettres conseillé).

@@ -5,8 +5,11 @@
   import ParentEntry from './parent/ParentEntry.svelte';
 
   let { updater }: { updater: Updater } = $props();
+  // Demo temporaire du kit graphique (apps/maths/src/art) : /maths/#art
+  const showArt = location.hash === '#art';
+  const loadArt = () => import('./art/ArtDemo.svelte');
 
-  const CINE = `${import.meta.env.BASE_URL}cinematics/proof-goal/index.html`;
+  const CINE = `${import.meta.env.BASE_URL}cinematics/goal/index.html`;
 
   let status = $state('');
   let title: HTMLElement | undefined = $state();
@@ -31,6 +34,9 @@
   }
 </script>
 
+{#if showArt}
+  {#await loadArt() then m}<m.default />{/await}
+{:else}
 <main>
   <h1 bind:this={title}>Calcul Champion</h1>
   <p class="sub">Les tables d'addition, version foot</p>
@@ -43,6 +49,7 @@
   <Button size="xl" onclick={testCinematic}>Tester la cinématique</Button>
   <p id="status" class="status" role="status">{status}</p>
 </main>
+{/if}
 
 <!-- Acces parent temporaire (appui long 3 s + calcul) : sera deplace dans l'ecran d'accueil. -->
 <div class="parent-access"><ParentEntry /></div>

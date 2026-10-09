@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>Médaille du sprint</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/ceart.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("./_shared/Anton-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Fredoka"; src: url("./_shared/Fredoka-latin.woff2") format("woff2"); font-weight: 300 700; }
+      html, body { margin: 0; background: #070c2b; }
+      #root, #root * { pointer-events: none; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #070c2b; font-family: "Fredoka", sans-serif; }
+      #cam { position: absolute; inset: 0; transform-origin: 960px 600px; }
+      #bg { position: absolute; inset: 0; filter: brightness(0.5) blur(4px); }
+      #dim { position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 50%, rgba(7, 12, 43, 0) 30%, rgba(7, 12, 43, 0.7) 100%); }
+      #rays { position: absolute; left: 960px; top: 580px; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px; opacity: 0; }
+      #rays svg { width: 100%; height: 100%; }
+      #medalWrap { position: absolute; left: 660px; top: -120px; width: 600px; transform-origin: 50% 0; }
+      #medalWrap svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.45)); }
+      #ring { position: absolute; left: 960px; top: 585px; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%; border: 20px solid #ffd23f; box-sizing: border-box; opacity: 0; }
+      .spk { position: absolute; left: 0; top: 0; width: 140px; height: 140px; margin: -70px 0 0 -70px; opacity: 0; }
+      .spk svg { width: 100%; height: 100%; }
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+      #timeBox { position: absolute; left: 1010px; top: 430px; width: 800px; height: 330px; opacity: 0; }
+      #timebg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, #1b2c86, #0a1030 75%); clip-path: polygon(46px 0, 100% 0, calc(100% - 46px) 100%, 0 100%); }
+      #timebar { position: absolute; left: 0; right: 0; top: 0; height: 14px; background: #ffd23f; }
+      #timelbl { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-weight: 700; font-size: 54px; color: #c9d3ff; }
+      #timeval { position: absolute; left: 0; right: 0; top: 100px; text-align: center; font-family: "Anton", sans-serif; font-size: 210px; line-height: 1.25; color: #ffd23f; white-space: nowrap; }
+      #stamp { position: absolute; left: 1010px; top: 810px; width: 800px; height: 150px; opacity: 0; }
+      #stampbg { position: absolute; inset: 0; background: #ff4d6d; clip-path: polygon(40px 0, 100% 0, calc(100% - 40px) 100%, 0 100%); }
+      #stamptxt { position: absolute; inset: 0; text-align: center; line-height: 156px; font-family: "Anton", sans-serif; font-size: 104px; letter-spacing: 3px; color: #fff; -webkit-text-stroke: 0; white-space: nowrap; text-shadow: 0 5px 0 #7a0f2a; }
+      #bravo { position: absolute; left: 1010px; top: 810px; width: 800px; height: 130px; opacity: 0; }
+      #bravobg { position: absolute; inset: 0; background: #0a1030; clip-path: polygon(40px 0, 100% 0, calc(100% - 40px) 100%, 0 100%); }
+      #bravotxt { position: absolute; inset: 0; text-align: center; line-height: 132px; font-weight: 700; font-size: 58px; color: #fff; white-space: nowrap; }
+      #confetti { position: absolute; inset: 0; }
+      #fade { position: absolute; inset: 0; background: #070c2b; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="medal" data-start="0" data-width="1920" data-height="1200" data-duration="4">
+      <div id="cam"><div id="shk" style="position: absolute; inset: 0">
+        <div id="bg" data-layout-ignore></div>
+        <div id="dim"></div>
+        <div id="rays" data-layout-ignore></div>
+        <div id="medalWrap" data-layout-ignore></div>
+        <div id="sparks" data-layout-ignore></div>
+        <div id="timeBox" data-layout-allow-overflow><div id="timebg"></div><div id="timebar"></div><div id="timelbl">Ton temps</div><div id="timeval">12,4 s</div></div>
+        <div id="stamp" data-layout-allow-overflow><div id="stampbg"></div><div id="stamptxt">NOUVEAU RECORD !</div></div>
+        <div id="bravo" data-layout-allow-overflow><div id="bravobg"></div><div id="bravotxt">Bravo, continue comme ça !</div></div>
+      </div></div>
+      <div id="ring"></div>
+      <div id="flash"></div>
+      <div id="confetti" data-layout-ignore></div>
+      <div id="fade"></div>
+
+      <audio id="a-wh" src="./_shared/sfx/whistle-short.mp3" data-start="0" data-duration="0.95" data-track-index="1" data-volume="0.9"></audio>
+      <audio id="a-st" src="./_shared/sfx/steel00.mp3" data-start="0.7" data-duration="0.92" data-track-index="2" data-volume="0.8"></audio>
+      <audio id="a-lu" src="./_shared/sfx/level-up.mp3" data-start="0.82" data-duration="0.37" data-track-index="3" data-volume="0.7"></audio>
+      <audio id="a-t1" src="./_shared/sfx/tick.mp3" data-start="1.4" data-duration="0.05" data-track-index="4" data-volume="0.8"></audio>
+      <audio id="a-t2" src="./_shared/sfx/tick.mp3" data-start="1.55" data-duration="0.05" data-track-index="5" data-volume="0.8"></audio>
+      <audio id="a-t3" src="./_shared/sfx/tick.mp3" data-start="1.7" data-duration="0.05" data-track-index="6" data-volume="0.8"></audio>
+      <audio id="a-lb" src="./_shared/sfx/level-up-big.mp3" data-start="2.0" data-duration="1.01" data-track-index="7" data-volume="0.7"></audio>
+      <audio id="a-ro" src="./_shared/sfx/roar-short.mp3" data-start="1.4" data-duration="2.6" data-track-index="8" data-volume="0.6"></audio>
+    </div>
+    <script>
+      // Donnees (canal "medal") : { medal:"or"|"argent"|"bronze", time, record }
+      var DEFAULTS = { medal: "or", time: "12,4 s", record: false };
+      var COL = { or: "#FFD23F", argent: "#DDE6FF", bronze: "#E0975C" };
+      var cur = DEFAULTS, ready = false;
+      var tl = gsap.timeline({ paused: true });
+      window.__hyperframes.registerRuntimeDataHandler("medal", function (d) { cur = Object.assign({}, DEFAULTS, d || {}); if (ready) build(); });
+      var $ = function (s) { return document.querySelector(s); };
+
+      var L = "position:absolute;left:0;top:0;width:100%;height:100%;display:block";
+      $("#bg").innerHTML = [CEArt.stadiumSky(), CEArt.stadiumCrowd(), CEArt.track(), CEArt.stadiumLights()].map(function (s) { return s.replace("<svg ", '<svg style="' + L + '" '); }).join("");
+      $("#rays").innerHTML = CEArt.rays({ count: 18, color: "#ffffff", opacity: 1, size: 2400 });
+      var SP = [[700, 300], [1230, 320], [660, 700], [1260, 740]];
+      $("#sparks").innerHTML = SP.map(function (p, i) { return '<div class="spk" id="spk' + i + '" style="left:' + p[0] + "px;top:" + p[1] + 'px">' + CEArt.sparkle({ size: 140, color: "#ffffff" }) + "</div>"; }).join("");
+
+      function num(t) { var n = parseFloat(String(t).replace(",", ".")); return isNaN(n) ? null : n; }
+      function render() {
+        var m = COL[cur.medal] ? cur.medal : "or", col = COL[m];
+        $("#medalWrap").innerHTML = CEArt.medal({ metal: m });
+        $("#ring").style.borderColor = col;
+        $("#timeval").textContent = cur.time;
+        $("#rays svg g").setAttribute("fill", col);
+        $("#rays svg g").querySelectorAll("polygon").forEach(function (p) { p.setAttribute("fill", col); });
+        $("#stamp").style.display = cur.record ? "block" : "none";
+        $("#bravo").style.display = cur.record ? "none" : "block";
+        $("#timebar").style.background = col;
+        $("#timeval").style.color = m === "or" ? "#ffd23f" : m === "argent" ? "#e8eeff" : "#ffb985";
+      }
+
+      function build() {
+        tl.clear();
+        gsap.set(["#cam", "#shk", "#rays", "#medalWrap", "#ring", ".spk", "#flash", "#timeBox", "#stamp", "#bravo", "#fade"], { clearProps: "transform,opacity" });
+        render();
+        var rec = !!cur.record, nTime = num(cur.time);
+
+        // tilt-down sur la piste
+        tl.set("#cam", { y: -260, scale: 1.2 }, 0);
+        tl.to("#cam", { y: 0, scale: 1.0, duration: 0.9, ease: "power3.out" }, 0);
+
+        // medaille : descente + pendule
+        tl.set("#medalWrap", { y: -1100, rotation: 0 }, 0);
+        tl.to("#medalWrap", { y: 0, duration: 0.6, ease: "expo.out" }, 0.2);
+        var sw = [[16, 0.2], [-11, 0.2], [7, 0.18], [-4, 0.16], [0, 0.16]], t = 0.5;
+        sw.forEach(function (s) { tl.to("#medalWrap", { rotation: s[0], duration: s[1], ease: "sine.inOut" }, t); t += s[1]; });
+
+        // eclat
+        tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.6, duration: 0.05, ease: "power1.out" }, 0.78);
+        tl.to("#flash", { opacity: 0, duration: 0.35, ease: "power2.out" }, 0.835);
+        tl.set("#ring", { scale: 0.3, opacity: 1 }, 0.8);
+        tl.to("#ring", { scale: 3, opacity: 0, duration: 0.6, ease: "expo.out" }, 0.8);
+        tl.fromTo("#rays", { opacity: 0, rotation: 0 }, { opacity: 0.32, duration: 0.4, ease: "power2.out" }, 0.8);
+        tl.to("#rays", { rotation: 24, duration: 3.2, ease: "none" }, 0.8);
+        SP.forEach(function (p, i) {
+          tl.fromTo("#spk" + i, { scale: 0, opacity: 1, rotation: 0 }, { scale: 1.1 + (i % 2) * 0.3, rotation: 40, opacity: 1, duration: 0.25, ease: "back.out(3)" }, 0.85 + i * 0.07);
+          tl.to("#spk" + i, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" }, 1.25 + i * 0.07);
+        });
+        var gl = $("#medalWrap .md-glint");
+        tl.set(gl, { opacity: 0.2 }, 0);
+        tl.to(gl, { opacity: 1, duration: 0.25, ease: "sine.inOut" }, 0.85);
+        tl.to(gl, { opacity: 0.2, duration: 0.3, ease: "sine.inOut" }, 1.1);
+
+        // decalage a gauche + chrono
+        tl.to("#medalWrap", { x: -300, duration: 0.5, ease: "power3.inOut" }, 1.2);
+        tl.to("#rays", { x: -300, duration: 0.5, ease: "power3.inOut" }, 1.2);
+        tl.fromTo("#timeBox", { x: 900, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" }, 1.3);
+        if (nTime !== null) {
+          CEArt.countUp(gsap, tl, $("#timeval"), 0, nTime, 1.4, 0.6, function (v) { return v.toFixed(1).replace(".", ",") + " s"; }, "power2.out");
+        }
+
+        // record / bravo
+        $("#confetti").innerHTML = "";
+        if (rec) {
+          tl.fromTo("#stamp", { scale: 3.4, rotation: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "expo.out" }, 2.0);
+          CEArt.shake(gsap, tl, "#shk", 2.02, 14, 0.3);
+          CEArt.confetti(gsap, tl, $("#confetti"), { at: 2.0, count: 90, x: 1400, y: 800, power: 1100, spread: 75, gravity: 1650, duration: 1.8, seed: 61, colors: ["#FFD23F", "#FFFFFF", "#FF4D6D", "#35D6FF", "#FFE680"] });
+        } else {
+          tl.fromTo("#bravo", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 2.1);
+        }
+
+        // maintien + sortie
+        tl.to("#cam", { scale: 1.06, duration: 3.0, ease: "sine.inOut" }, 1.0);
+        tl.fromTo("#fade", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.in" }, 3.7);
+        tl.time(0);
+      }
+      build();
+      ready = true;
+      window.__timelines["medal"] = tl;
+    </script>
+  </body>
+</html>

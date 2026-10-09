@@ -37,10 +37,8 @@ function art() {
     writeFileSync(join(src, '..', a.file), esm);
     const names = [...esm.matchAll(/^export (?:function|const|let) ([A-Za-z0-9_]+)/gm)].map((m) => m[1]);
     const iife = '(function(){' + NL + esm.replace(/^export /gm, '') + NL + 'window.' + a.glob + ' = {' + names.join(',') + '};' + NL + '})();' + NL;
-    if (a.app === 'espagnol') {
-      const dts = names.map((n) => (/^[A-Z_0-9]+$/.test(n) ? `export const ${n}: any;` : `export function ${n}(...a: any[]): any;`));
-      writeFileSync(join(src, '..', 'qart.d.ts'), '// GENERE (art)' + NL + dts.join(NL) + NL);
-    }
+    const dts = names.map((n) => (/^[A-Z_0-9]+$/.test(n) ? `export const ${n}: any;` : `export function ${n}(...a: any[]): any;`));
+    writeFileSync(join(src, '..', a.file.replace(/\.js$/, '.d.ts')), '// GENERE (art)' + NL + dts.join(NL) + NL);
     const sh = join(cinDir(a.app), '_shared');
     mkdirSync(sh, { recursive: true });
     writeFileSync(join(sh, a.file), iife);

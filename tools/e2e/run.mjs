@@ -49,22 +49,22 @@ async function playAndVerify(tag) {
   const shots = [
     [0.6, 'impact'],
     [1.5, 'lower-third'],
-    [2.4, 'fin'],
+    [2.1, 'sortie'],
   ];
   for (const [t, name] of shots) {
     await page.waitForFunction((x) => document.querySelector('hyperframes-player')?.currentTime >= x, t, { timeout: 8000 });
     await page.screenshot({ path: join(out, `${tag}-${name}.png`) });
   }
   const cur = await time();
-  check(`[${tag}] le temps avance (currentTime=${cur.toFixed(2)} >= 2.4)`, cur >= 2.4);
+  check(`[${tag}] le temps avance (currentTime=${cur.toFixed(2)} >= 2.1)`, cur >= 2.1);
 
   const dom = await page.evaluate(() => {
     const d = document.querySelector('hyperframes-player').iframeElement.contentDocument;
-    return { who: d.getElementById('pg-who')?.textContent, what: d.getElementById('pg-what')?.textContent, word: d.getElementById('goal-word')?.textContent };
+    return { who: d.querySelector('.lt-title')?.textContent, what: d.querySelector('.lt-sub')?.textContent, word: d.getElementById('word')?.textContent };
   });
   check(`[${tag}] prénom injecté affiché ("${dom.who}")`, dom.who === NAME);
-  check(`[${tag}] calcul injecté affiché ("${dom.what}")`, dom.what === CALC);
-  check(`[${tag}] "BUT !" présent`, dom.word === 'BUT !');
+  check(`[${tag}] calcul injecté affiché ("${dom.what}")`, !!dom.what && dom.what.includes(CALC));
+  check(`[${tag}] "BUT !" présent`, (dom.word || '').replace(/ /g, ' ') === 'BUT !');
 
   await page.waitForFunction(() => document.getElementById('status')?.textContent.includes('ended'), null, { timeout: 8000 });
   check(`[${tag}] fin propre -> overlay retiré, promesse résolue 'ended'`, (await page.locator('.cine').count()) === 0);
@@ -81,7 +81,7 @@ try {
   const cached = await page.evaluate(async () => {
     const reg = await navigator.serviceWorker.ready;
     for (let i = 0; i < 50 && !reg.active; i++) await new Promise((r) => setTimeout(r, 100));
-    const need = ['cinematics/proof-goal/index.html', 'cinematics/_shared/hyperframe.runtime.iife.js', 'cinematics/_shared/gsap.min.js', 'cinematics/_shared/BebasNeue-latin.woff2'];
+    const need = ['cinematics/goal/index.html', 'cinematics/_shared/hyperframe.runtime.iife.js', 'cinematics/_shared/gsap.min.js', 'cinematics/_shared/ceart.js', 'cinematics/_shared/Anton-latin.woff2'];
     for (let i = 0; i < 100; i++) {
       const keys = await caches.keys();
       const urls = [];
