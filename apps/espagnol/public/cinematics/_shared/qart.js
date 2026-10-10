@@ -240,13 +240,34 @@ const TAILS = [
   [[270, 414, 16], [284, 476, 20], [286, 548, 20], [270, 620, 16], [244, 676, 10], [226, 706, 4]],
 ];
 const TAIL_ORDER = [2, 0, 1, 3]; // ordre de repousse
+/** Plumes de queue supplementaires (une par plume gagnee, jusqu'a 6) : eventail [angle depuis la verticale (deg), longueur, largeur, courbure]. */
+const EXTRA_TAILS = [[-62, 250, 15, 22], [24, 300, 16, -18], [-44, 330, 15, 26], [40, 240, 14, -20], [-24, 360, 14, 18], [12, 380, 13, -12]];
+function extraTail(e) {
+  const a = (e[0] * Math.PI) / 180, sx = Math.sin(a), cy = Math.cos(a), L = e[1], w = e[2], bow = e[3];
+  return [0, 0.22, 0.46, 0.7, 0.88, 1].map((t, i, arr) => [r1(262 + sx * L * t + bow * Math.sin(t * Math.PI) * cy), r1(410 + cy * L * t + bow * Math.sin(t * Math.PI) * -sx), r1(w * (1 - t * t * 0.78) * (i === arr.length - 1 ? 0.35 : 1))]);
+}
+/** Plume de huppe supplementaire (au-dela de 6 plumes gagnees : 7e a 10e), eventail vers l'arriere : [angle, longueur]. */
+const EXTRA_CREST = [[-58, 70], [-36, 92], [-14, 100], [8, 84]];
+function crestPlume(c) {
+  const a = (c[0] * Math.PI) / 180, L = c[1], sx = Math.sin(a), cy = Math.cos(a), bx = 300, by = 92;
+  return [0, 0.35, 0.7, 1].map((t, i) => [r1(bx + sx * L * t - (1 - cy) * 10 * t), r1(by - cy * L * t * 0.9), i === 3 ? 3 : 11 - t * 5]);
+}
+/** Nombre de plumes gagnees (0-10) deduit de l'id de la composition u0N-pluma* (rien hors cinematiques) : le Quetzal s'etoffe d'unite en unite. */
+function plumasFromDoc() {
+  try {
+    const el = typeof document !== 'undefined' && document.querySelector('[data-composition-id]');
+    const m = el && /^u([0-9]+)-(?:pluma|finale)/.exec(el.getAttribute('data-composition-id') || '');
+    return m ? Math.min(10, +m[1]) : 0;
+  } catch (e) { return 0; }
+}
 
 function wingShape() {
   return smooth([[300, 250], [338, 266], [352, 318], [336, 382], [304, 446], [282, 470], [262, 428], [250, 360], [262, 296]], true);
 }
 
 /**
- * Quetzal SVG. opts : uid, branch (bool, perchoir), width, height.
+ * Quetzal SVG. opts : uid, branch (bool, perchoir), width, height, plumas (0-10 : nombre de plumes gagnees ; 1 a 6 = plumes de queue en plus, 7 a 10 = plumes de huppe ;
+ * defaut : numero N d'une composition `uN-pluma*`, sinon 0).
  * Le SVG est en plumage complet ; pour "sans plumes" appeler quetzalSet(root, 'bare', gsap).
  */
 function quetzal(opts) {
@@ -258,6 +279,15 @@ function quetzal(opts) {
     const x = t[0][0], y = t[0][1];
     const barbs = t.slice(1, -1).map((p) => `<path d="M${p[0]} ${p[1]}l${r1(-p[2] * 0.55)} ${r1(-p[2] * 0.25)}M${p[0]} ${p[1]}l${r1(p[2] * 0.55)} ${r1(p[2] * 0.25)}" stroke="${PAL.quetzal2}" stroke-width="1.6" opacity=".55" stroke-linecap="round"/>`).join('');
     return `<g class="q-tail q-tail-${i}" data-px="${x}" data-py="${y}"><path d="${ribbon(t)}" fill="url(#${g('tail' + (i % 2))})"/><path d="${spine(t.map((p) => [p[0], p[1]]))}" stroke="${PAL.quetzalClaro}" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round"/>${barbs}</g>`;
+  }).join('');
+  const np = Math.max(0, Math.min(10, Math.round(opts.plumas == null ? plumasFromDoc() : opts.plumas)));
+  const extraTails = EXTRA_TAILS.slice(0, Math.min(6, np)).map((e, j) => {
+    const t = extraTail(e), i = 4 + j;
+    return `<g class="q-tail q-tail-${i} q-tail-x" data-px="262" data-py="410"><path d="${ribbon(t)}" fill="url(#${g('tail' + (j % 2 ? 1 : 0))})"/><path d="${spine(t.map((p) => [p[0], p[1]]))}" stroke="${PAL.quetzalClaro}" stroke-width="2.6" fill="none" opacity=".65" stroke-linecap="round"/></g>`;
+  }).join('');
+  const extraCrest = EXTRA_CREST.slice(0, Math.max(0, np - 6)).map((c) => {
+    const t = crestPlume(c);
+    return `<path class="q-crest-x" d="${ribbon(t)}" fill="url(#${g('crest')})"/><path d="${spine(t.map((p) => [p[0], p[1]]))}" stroke="${PAL.quetzalClaro}" stroke-width="2.2" fill="none" opacity=".6" stroke-linecap="round"/>`;
   }).join('');
   const flightFeathers = [0, 1, 2, 3, 4].map((k) => {
     const x0 = 296 - k * 7, y0 = 400 + k * 6, ang = 14 - k * 6, s = Math.sin((ang * Math.PI) / 180);
@@ -272,7 +302,7 @@ ${flightFeathers}<path d="${wingShape()}" fill="url(#${g('wing')})"/>
 <g transform="translate(-14 -2)"><path d="${wingShape()}" fill="${PAL.quetzal2}"/><path d="M268 360l40 14M276 400l26 10" stroke="#042F22" stroke-width="3" opacity=".5" stroke-linecap="round"/></g></g></g>`;
   const body = smooth([[286, 214], [248, 252], [226, 322], [230, 392], [262, 436], [318, 436], [356, 392], [374, 322], [368, 262], [352, 224]], true);
   const redCut = 'M200 340C250 328 330 322 400 352L400 470L200 470Z';
-  const crest = `<g class="q-crest"><path d="${smooth([[262, 128], [262, 96], [288, 72], [322, 66], [352, 82], [362, 112], [350, 138], [310, 150]], true)}" fill="url(#${g('crest')})"/>
+  const crest = `<g class="q-crest">${extraCrest}<path d="${smooth([[262, 128], [262, 96], [288, 72], [322, 66], [352, 82], [362, 112], [350, 138], [310, 150]], true)}" fill="url(#${g('crest')})"/>
 <path d="M286 130q8 -28 36 -40M308 138q14 -26 40 -30M270 112q10 -18 30 -26" stroke="${PAL.quetzalClaro}" stroke-width="3.5" fill="none" opacity=".6" stroke-linecap="round"/></g>`;
   const branch = opts.branch ? `<g class="q-branch"><path d="M20 470Q200 454 320 460T590 448" stroke="#5A3418" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M20 464Q200 448 320 454T590 442" stroke="#8A5A2B" stroke-width="7" fill="none" stroke-linecap="round" opacity=".7"/><path d="M470 452q40 -34 80 -30M110 466q-10 -38 -50 -52" stroke="#5A3418" stroke-width="10" fill="none" stroke-linecap="round"/></g>` : '';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${opts.view || '0 0 600 720'}" width="${W}" height="${H}" class="q-svg" role="img" aria-label="El Quetzal">
@@ -289,7 +319,7 @@ ${flightFeathers}<path d="${wingShape()}" fill="url(#${g('wing')})"/>
 </defs>
 ${branch}
 <g class="q-rig">
-${tails}
+${tails}${extraTails}
 ${wingF}
 <g class="q-bodyg">
 <path class="q-body" d="${body}" fill="url(#${g('body')})"/>
@@ -402,6 +432,7 @@ function quetzalRegrow(tl, root, at) {
     const t = tails[idx]; if (!t) return;
     tl.to(t, { scale: 1, svgOrigin: tailOrigin(t), duration: 0.9, ease: 'elastic.out(1,0.55)' }, at + 0.15 + k * 0.28);
   });
+  tails.slice(4).forEach((t, k) => tl.to(t, { scale: 1, svgOrigin: tailOrigin(t), duration: 0.8, ease: 'elastic.out(1,0.55)' }, at + 0.5 + k * 0.16));
   tl.to(qa(root, '.q-crest'), { scale: 1, svgOrigin: '300 150', duration: 0.8, ease: 'back.out(2.2)' }, at + 0.9);
   tl.to(qa(root, '.q-dull, .q-dull-h'), { opacity: 0, duration: 1.2, ease: 'power2.out' }, at + 0.1);
   tl.to(qa(root, '.q-red'), { opacity: 1, duration: 1.2, ease: 'power2.out' }, at + 0.1);

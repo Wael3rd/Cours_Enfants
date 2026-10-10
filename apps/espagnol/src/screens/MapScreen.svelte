@@ -149,7 +149,7 @@
   <div class="bird">
     {#if bubble}<div class="bubble">{bubble}</div>{/if}
     <button type="button" class="birdbtn" onclick={chirp} aria-label="El Quetzal">
-      <QuetzalMascot bind:this={quetzal} pose="perched" bare={plumas === 0} branch width={170} />
+      <QuetzalMascot bind:this={quetzal} pose="perched" bare={plumas === 0} {plumas} branch width={170} />
     </button>
   </div>
 

@@ -217,6 +217,36 @@ Un nouveau texte joué doit avoir son mp3 (`tools/tts/generate.py` avec les entr
 Pièges supplémentaires (unité 4) : `Cap.css()` n'est appelé que par `Cap.bg`/`Cap.title` → l'appeler à la main dans une capsule sans fond ni titre (sinon les pastilles ne sont pas stylées) ; une pastille de capsule posée sur un décor clair doit apparaître par l'**échelle** (`tl.set` opacité 0 puis 1) et non par un fondu, sinon le contrôle de contraste échantillonne le fondu ; un calque de grain (`div` avec image) à opacité ≥ 0,6 est vu comme occultant par `hyperframes check` (garder ≤ 0,55) ; la carte `worldMap` est une loupe centrée sur le Mexique (zoom ×1 = Mexique ≈ 650 px de large : cadrer une carte de capsule à ×1,05, pas ×3).
 Vérification visuelle : `npx hyperframes snapshot apps/espagnol/public/cinematics/<id> --at 1,3,5` (images dans `<id>/snapshots/`, gitignorées).
 
+## 8bis. App espagnol — unités 5 à 10, finale, carte, sous-titres, plumes du Quetzal
+
+**Une région = un kit de décors + une frise + 3 personnages** (même structure que la u04). Chaque unité a `uNN-intro`, `uNN-historia`, `uNN-capsula-<sujet>`, `uNN-pluma` (+ `u10-finale` et `u10-finale-sombra`).
+La frise de bordure se choisit par `meta.region` (`QArt.bunting`, `QCine.frame`) ; elle suit la région, pas l'unité.
+
+| Unité | Région (`meta.region` → frise) | Kit (`apps/espagnol/src/art/core/src/`) | Personnages (`QCine.speakers`) | Capsule |
+|---|---|---|---|---|
+| u05 | `valencia` → azulejos turquoise/orange | `14-valencia.js` (Ciudad de las Artes, horloges 12:05, paella, fallas) | Neus, Vicent, Nacho (`08d-chars-valencia.js`) | `capsula-horarios` |
+| u06 | `madridnoche` → azulejos, fanions de Noël | `15-madrid-noel.js` (Plaza Mayor, marché, sapin ; lumières animables `.mn-lights`…) | Rosa, Paloma (`08e-chars-madrid.js`) | `capsula-uvas-reyes` |
+| u07 | `argentina` → filete porteño | `16-buenosaires.js` (Obelisco, Caminito, San Telmo ; bandonéon, mate, tango) | Facu, Sol, Don Aníbal (`08f-chars-baires.js`) | `capsula-buenosaires` |
+| u08 | `colombia` → tissage de mochila | `14-bogota.js` (Monserrate, La Candelaria, Museo del Oro) | Camila, Don Hernán, Doña Marta (`08d-characters-colombia.js`) | `capsula-candelaria` |
+| u09 | `mexico` → papel picado | `15-yucatan.js` (selva, El Castillo, cenote ; glyphes génériques) | Itzel, Don Chan, Doña Chabela (`08f-characters-yucatan.js`) | `capsula-mayas` |
+| u10 | `andes` → aguayo (`03b-frieze-andes.js`) | `16-cusco.js` (Plaza de Armas, murs incas, Machu Picchu à l'aube) | Killa, Don Huamán, Doña Paulina (`08e-characters-andes.js`) | `capsula-machu-picchu` |
+
+**Finale (u10)** : `u10-finale` (« Décima pluma · El final de la leyenda » : le Quetzal a ses dix plumes) puis `u10-finale-sombra` (« El eco de la Sombra » : La Sombra, seule, est enfin écoutée) ; le Quetzal y porte les 10 plumes (`plumas` détecté par l'id).
+
+**Carte** (`06-map.js`) : `MAP_REGIONS` = 10 médaillons (Madrid, Salamanca, Sevilla, Ciudad de México, **Oaxaca** (événement), Valencia, Buenos Aires, Bogotá, Yucatán, Cusco ; la Nochebuena de la u06 réutilise Madrid).
+`MAP_ROUTE` = route principale dans l'ordre des unités : madrid → salamanca → sevilla → cdmx → valencia → **madrid** → baires → bogota → yucatan → cusco ; `MAP_SPUR` = branche de l'événement (cdmx → oaxaca → valencia) ;
+`MAP_SEGMENTS` = les deux réunis (tous les segments pointillés sont dans le SVG de `worldMap`, `Q.mapTravel(tl, root, from, to, …)` trouve donc n'importe quel couple consécutif : plus de segment à recréer dans une composition).
+App : `WorldMap.travel(from, to)` déplace le jeton **et la caméra** (recul vers le milieu du segment puis arrivée), le jeton ne capte plus le toucher (`pointer-events: none`) : la région courante reste cliquable.
+Contrôle : `node tools/e2e/es-map.mjs` (progression forcée via `window.__q`, médaillons, segments, voyage cdmx → valencia, ouverture des unités 5 à 10 ; captures `tools/e2e/out/es-map-*.png`).
+
+**Sous-titres** (`QCine.subs`) : taille de départ 56 px, **réduite par pas de 2 px (mini 30 px)** tant que la réplique dépasse la hauteur utile de la plaque (152 px) ; mesure à la construction, puis refaite quand la police est chargée ou que le prénom change.
+Ne plus poser de `font-size` / `max-width` locaux sur `.sub-txt` (inutiles, et un `!important` local désactiverait l'ajustement). Les répliques les plus longues (≈ 170 caractères) tiennent sur 3 lignes à ≈ 40 px.
+
+**Plumes du Quetzal** : `Q.quetzal({ plumas: N })` (0-10) → 1 à 6 plumes de queue supplémentaires (éventail), puis 7 à 10 = plumes de huppe supplémentaires. Par défaut `N` = numéro de la composition `uN-pluma*` / `uN-finale*`
+(détecté via `data-composition-id`, donc automatique dans `S.quetzal`, les portraits de sous-titres, etc. ; 0 ailleurs et dans l'app sauf si on passe `plumas`). `QuetzalMascot` (carte) reçoit `plumas` = nombre de plumes gagnées.
+`quetzalSet(…, 'bare')` / `quetzalRegrow` traitent aussi les plumes supplémentaires (classe `q-tail-x`, dans `.q-tail`).
+**Piège `motionPath`** : le chemin est en coordonnées **absolues** par défaut ; pour un élément posé par `gsap.set({x, y})`, donner les points absolus (`u04-pluma-1` / `u08-pluma-1` les passaient relatifs : la plume partait en haut à gauche).
+
 ## 9. Cinématiques de stratégie maths (`strategy-<clé de zone>`, 9 compositions, 8,7 à 11,9 s)
 
 Une par zone (clés de `engine/zones.ts` : echauffement, plus2, doubles, amoureux10, presquedoubles, plus10, plus9, passer-dizaine, ligue). Aucune donnée dynamique (voix pré-générée, pas de prénom).

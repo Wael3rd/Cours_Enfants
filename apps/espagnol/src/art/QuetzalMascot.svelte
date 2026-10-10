@@ -14,13 +14,15 @@
     width?: number;
     /** viewBox personnalise (ex. buste : "210 50 220 220") */
     view?: string;
+    /** plumes gagnees (0-10) : plumes de queue puis de huppe en plus */
+    plumas?: number;
     /** clignement + ondulation de la queue en boucle */
     idle?: boolean;
   }
-  let { pose = 'perched', bare = false, branch = false, width = 300, view, idle = true }: Props = $props();
+  let { pose = 'perched', bare = false, branch = false, width = 300, view, idle = true, plumas = 0 }: Props = $props();
   let host: HTMLElement | undefined = $state();
   let loop: gsap.core.Timeline | undefined;
-  const svg = $derived(Q.quetzal({ branch, width, height: view ? width : Math.round(width * 1.2), view }));
+  const svg = $derived(Q.quetzal({ branch, plumas, width, height: view ? width : Math.round(width * 1.2), view }));
   let current = 'perched';
 
   function startIdle() {
