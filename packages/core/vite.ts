@@ -48,8 +48,9 @@ export function appConfig(o: AppOptions): UserConfig {
           short_name: o.shortName,
           description: o.description,
           lang: 'fr',
-          start_url: o.base,
-          scope: o.base,
+          // Le hub ne doit PAS englober les apps (sinon Android croit /espagnol/ deja installe) : scope = sa seule page.
+          start_url: isHub ? `${o.base}index.html` : o.base,
+          scope: isHub ? `${o.base}index.html` : o.base,
           display: 'fullscreen',
           display_override: ['fullscreen', 'standalone'],
           orientation: 'any',
