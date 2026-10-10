@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw { position: absolute; left: 0; top: 0; }
+      .smk { border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .cutlayer { position: absolute; inset: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="7.159">
+
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.159" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":6.859,"v":1},{"t":7.159,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/quetzal.fb13f00af9.mp3" data-start="0.8" data-duration="5.409" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-grass-000.mp3" data-start="0.3" data-duration="0.775" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.7" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="6.859" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-historia-1","cinematica":"u09-historia","part":1,"parts":7,"total":7.159,"meta":{"cinematica":"u09-historia","titulo":"Las piedras mudas","tipo":"historia","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":6.909,"vista":"Un sentier dans la forêt tropicale, lumière verte. Le Quetzal sort du sac de Marina et vole d’un arbre à l’autre. Itzel, 12 ans, huipil blanc brodé de fleurs, un panier au bras, les accueille en souriant.","camara":"plan large dans les arbres puis plan moyen sur Itzel","rotulo":"","personajes":["quetzal","itzel","marina","viajero"],"lines":[{"who":"quetzal","es":"México… ¡Estoy en casa! Pero la selva está muy callada.","key":"quetzal.fb13f00af9","t":0.8,"d":5.409,"words":[{"w":"México…","t":0.8,"d":0.643},{"w":"¡Estoy","t":2.489,"d":0.387},{"w":"en","t":2.877,"d":0.206},{"w":"casa!","t":3.083,"d":0.327},{"w":"Pero","t":4.447,"d":0.261},{"w":"la","t":4.708,"d":0.164},{"w":"selva","t":4.872,"d":0.309},{"w":"está","t":5.181,"d":0.261},{"w":"muy","t":5.442,"d":0.212},{"w":"callada.","t":5.654,"d":0.405}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/step-grass-000"},{"t":0.7,"f":"ui/pop"},{"t":6.859,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0];
+        var set = Q.selvaSentier({ uid: "sv" });
+        var room = S.set($("#stage"), set, { below: "#4C8F47", motes: 18 });
+        S.drift(tl, room, T);
+        var lr = Q.rng(5);
+        for (var k = 0; k < 14; k++) {
+          var lx = 200 + lr() * 2800, ly = -40 - lr() * 160, ld = 3.2 + lr() * 2, ts = (k / 14) * Math.max(0.5, T - 1.4);
+          var lf = mkp(room.qlayer, "leaf", '<svg width="34" height="18" viewBox="-17 -9 34 18"><ellipse rx="15" ry="7" fill="' + (k % 3 ? "#86CF86" : "#2A7F45") + '"/></svg>', lx, ly);
+          tl.set(lf, { opacity: 0 }, 0);
+          tl.fromTo(lf, { opacity: 0, rotation: lr() * 180 }, { x: lx + 120 - lr() * 240, y: 900 + lr() * 100, rotation: "+=200", opacity: 0.9, duration: ld, ease: "none", immediateRender: false }, ts);
+          tl.to(lf, { opacity: 0, duration: 0.5 }, ts + ld - 0.5);
+        }
+        var ale = S.chr(room.actors, "viajero", 760, 1050, 330), mar = S.chr(room.actors, "marina", 940, 1040, 322);
+        S.breathe(tl, ale, 0, T, 0.8); S.breathe(tl, mar, 0.1, T, 0.8);
+        Q.charBlink(tl, ale.svg, 2.4); Q.charBlink(tl, mar.svg, 4.0);
+        // le Quetzal sort de derriere l'epaule de Marina, puis vole d'un arbre a l'autre
+        var qz = S.quetzal(room.actors, 1035, 780, 200, "perched", false, "qh1");
+        var tQ = 0.45;
+        gsap.set(qz, { opacity: 0, scale: 0.2, x: 0, y: 0, transformOrigin: "50% 80%" });
+        tl.fromTo(qz, { opacity: 0, scale: 0.2, y: 30 }, { opacity: 1, scale: 1, y: -70, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, tQ);
+        Q.quetzalPoseTo(tl, qz, "fly", tQ, 0.35);
+        var tF = tQ + 0.6, dF = L1.t + L1.d - tF + 0.4;
+        Q.quetzalFlap(tl, qz, tQ + 0.2, Math.floor((dF + 0.4) / 0.4), 0.4, 0.8);
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: -70 }, { x: 300, y: -330 }, { x: 760, y: -450 }, { x: 1180, y: -300 }, { x: 1560, y: -440 }, { x: 1120, y: -580 }, { x: 560, y: -400 }, { x: 150, y: -170 }], curviness: 1.2 }, duration: dF, ease: "sine.inOut" }, tF);
+        C.talkQuetzal(tl, qz, L1);
+        Q.quetzalPoseTo(tl, qz, "perched", tF + dF + 0.05, 0.5);
+        Q.charEmote(tl, mar.svg, tQ, "happy", 0.3); Q.charEmote(tl, ale.svg, tQ, "happy", 0.3);
+        // « la selva est tres silencieuse » : Alex et Marina regardent autour d'eux
+        var wCal = C.wordT(PLAN, 1, 1, 9);
+        Q.charNod(tl, ale.svg, wCal, -5, 0.3); Q.charNod(tl, mar.svg, wCal + 0.2, 5, 0.3);
+        Q.charEmote(tl, ale.svg, wCal, "worry", 0.3);
+        // camera : plan large dans les arbres -> on suit le groupe
+        S.camSet(room, 1500, 660, 0.72);
+        S.cam(tl, room, 1250, 660, 0.92, 0, T - 0.4, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 21, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

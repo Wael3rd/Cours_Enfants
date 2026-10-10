@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-pluma-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw, .ring2, .spk { position: absolute; left: 0; top: 0; }
+      #stA, #stB, #stage2 { position: absolute; inset: 0; }
+      #stB { visibility: hidden; }
+      .ring2 { width: 240px; height: 50px; margin: -25px 0 0 -120px; border-radius: 50%; border: 6px solid #cff7ee; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-pluma-1" data-start="0" data-width="1920" data-height="1200" data-duration="5.815">
+
+      <div id="stA"><div id="stage"></div></div>
+      <div id="stB"><div id="stage2"></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.815" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":5.515,"v":1},{"t":5.815,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/itzel.21bbb64f82.mp3" data-start="1.5" data-duration="3.165" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.1" data-duration="1.104" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="0.9" data-duration="0.526" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/level-up-big.mp3" data-start="2.4" data-duration="1.015" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="2.4" data-duration="0.212" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="3.765" data-duration="0.121" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-pluma-1","cinematica":"u09-pluma","part":1,"parts":3,"total":5.815,"meta":{"cinematica":"u09-pluma","titulo":"Novena pluma","tipo":"pluma","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":5.565,"vista":"Dans le cénote, la plume verte monte lentement dans l’eau turquoise jusqu’au rayon de lumière. Là-haut, les dessins reviennent sur les pierres de la pyramide, un à un.","camara":"","rotulo":"","personajes":["itzel"],"lines":[{"who":"itzel","es":"¡Las piedras hablan otra vez! ¡Gracias!","key":"itzel.21bbb64f82","t":1.5,"d":3.165,"words":[{"w":"¡Las","t":1.5,"d":0.323},{"w":"piedras","t":1.823,"d":0.616},{"w":"hablan","t":2.438,"d":0.543},{"w":"otra","t":2.981,"d":0.396},{"w":"vez!","t":3.377,"d":0.323},{"w":"¡Gracias!","t":3.9,"d":0.616}]}]}],"sfx":[{"t":0.1,"f":"rpg/spell-magic"},{"t":0.9,"f":"rpg/item-get"},{"t":2.4,"f":"rpg/level-up-big"},{"t":2.4,"f":"ui/swoosh-out"},{"t":3.765,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 1), L = P.lines[0], tCut = L.t + 0.75;
+        // ---------- A : le cenote, la plume monte vers le rayon de lumiere ----------
+        var set = Q.cenote({ uid: "cn" });
+        var room = S.set($("#stage"), set, { below: "#083F55", motes: 14, moteColors: ["#BFF3EC", "#FFF3B0", "#FFFFFF"] });
+        S.drift(tl, room, tCut + 0.4);
+        var mar = S.chr(room.actors, "marina", 310, 1010, 340), ale = S.chr(room.actors, "viajero", 520, 1030, 345), itz = S.chr(room.actors, "itzel", 730, 1020, 345);
+        [mar, ale, itz].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, tCut, 0.8); Q.charEmote(tl, c.svg, 0.2, "happy", 0.3); });
+        var qz = S.quetzal(room.actors, 405, 700, 210, "happy", false, "qp1");
+        var gl = S.mk(room.qlayer, "glw", '<svg width="420" height="260" viewBox="-210 -130 420 260"><defs><radialGradient id="gp1"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".9"/><stop offset=".45" stop-color="#42E0A0" stop-opacity=".45"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs><ellipse rx="200" ry="120" fill="url(#gp1)"/></svg>'); gl.setAttribute("data-layout-allow-overflow", ""); gl.setAttribute("data-layout-ignore", "");
+        var fe = S.mk(room.qlayer, "glw", Q.featherSvg({ uid: "fp1", width: 56, height: 168 })); fe.setAttribute("data-layout-allow-overflow", ""); fe.setAttribute("data-layout-ignore", ""); fe.firstChild.style.overflow = "visible";
+        var pts = [[1640, 1100], [1604, 1000], [1572, 880], [1546, 720], [1520, 540]];
+        var cf = function (o, dx, dy) { return pts.map(function (p) { return { x: p[0] - dx, y: p[1] - dy }; }); };
+        gsap.set(fe, { x: pts[0][0] - 28, y: pts[0][1] - 84, rotation: 70, transformOrigin: "50% 50%" }); gsap.set(gl, { x: pts[0][0] - 210, y: pts[0][1] - 130, scale: 0.9 });
+        var tR0 = 0.1, dR = tCut - 0.1;
+        tl.to(fe, { motionPath: { path: cf(fe, 28, 84), curviness: 1.1 }, duration: dR, ease: "sine.inOut" }, tR0);
+        tl.to(gl, { motionPath: { path: cf(gl, 210, 130), curviness: 1.1 }, scale: 1.25, duration: dR, ease: "sine.inOut" }, tR0);
+        tl.to(fe, { rotation: 4, duration: dR, ease: "sine.inOut" }, tR0);
+        // rides a la traversee de la surface
+        [0, 1, 2].forEach(function (i) { var r = mkp(room.qlayer, "ring2", "", 1572, 960); tl.fromTo(r, { opacity: 0.85, scale: 0.4 }, { opacity: 0, scale: 1.8 + i * 0.5, duration: 1.0, ease: "power2.out", immediateRender: false }, tR0 + dR * 0.38 + i * 0.22); });
+        S.camSet(room, 1100, 650, 0.85);
+        S.cam(tl, room, 1250, 620, 0.95, 0, tCut + 0.2, "sine.inOut");
+        // ---------- B : El Castillo, les dessins reviennent ----------
+        var set2 = Q.elCastillo({ uid: "ec" });
+        var room2 = S.set($("#stage2"), set2, { below: "#E4D9B6", motes: 14 });
+        S.drift(tl, room2, T - tCut, tCut);
+        var ghosts = set2.slots.map(function (s, i) { var g = mkp(room2.qlayer, "gl", Q.yuGlyph({ v: i, width: s.w, ink: "#6F634B" }), s.x, s.y); gsap.set(g, { opacity: 0.13 }); return g; });
+        var real = set2.slots.map(function (s, i) { var g = mkp(room2.qlayer, "gl", Q.yuGlyph({ v: i, width: s.w }), s.x, s.y); gsap.set(g, { opacity: 0 }); return g; });
+        var ale2 = S.chr(room2.actors, "viajero", 540, 1405, 330), mar2 = S.chr(room2.actors, "marina", 720, 1395, 322), chan = S.chr(room2.actors, "chan", 1000, 1385, 345), itz2 = S.chr(room2.actors, "itzel", 1290, 1415, 335);
+        [ale2, mar2, chan, itz2].forEach(function (c, i) { S.breathe(tl, c, tCut + i * 0.1, T - tCut, 0.8); Q.charEmote(tl, c.svg, tCut, "happy", 0.3); });
+        var qz2 = S.quetzal(room2.actors, 815, 1135, 200, "happy", false, "qp1b");
+        var order = real.map(function (_, i) { return i; }).sort(function (a, b) { return Math.abs(set2.slots[a].x - 1600) - Math.abs(set2.slots[b].x - 1600); });
+        var t0g = tCut + 0.1, gapg = 1.7 / Math.max(1, real.length - 1);
+        order.forEach(function (idx, k) {
+          var t = t0g + k * gapg;
+          tl.fromTo(real[idx], { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)", immediateRender: false }, t);
+          tl.to(ghosts[idx], { opacity: 0, duration: 0.4, ease: "sine.inOut" }, t);
+          if (k % 3 === 0) {
+            var sp = mkp(room2.actors, "spk", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#ffe9a8"/></svg>', set2.slots[idx].x + set2.slots[idx].w / 2 - 20, set2.slots[idx].y - 10);
+            tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 1, duration: 0.4, ease: "power2.out", immediateRender: false }, t + 0.15);
+            tl.to(sp, { scale: 0, opacity: 0, y: "-=30", duration: 0.4, ease: "power2.in" }, t + 0.55);
+          }
+        });
+        C.talkBounce(tl, itz2.b, L, 5); C.talkChar(tl, itz2, L); C.talkBounce(tl, itz.b, L, 4); C.talkChar(tl, itz, L);
+        var wGr = C.wordT(PLAN, 1, 1, L.words.length);
+        S.hop(tl, itz2, wGr, 44); S.hop(tl, ale2, wGr + 0.1, 36); S.hop(tl, mar2, wGr + 0.2, 36);
+        Q.quetzalPoseTo(tl, qz2, "fly", wGr, 0.3); Q.quetzalFlap(tl, qz2, wGr + 0.1, 3, 0.4, 0.8);
+        tl.to(qz2, { y: -90, duration: 0.8, ease: "sine.inOut" }, wGr + 0.1);
+        S.camSet(room2, 1500, 850, 0.6);
+        S.cam(tl, room2, 1250, 1020, 0.92, tCut, T - tCut - 0.2, "sine.inOut");
+        // ---------- fondu enchaine ----------
+        tl.set("#stB", { visibility: "visible", opacity: 0 }, tCut - 0.3);
+        tl.to("#stB", { opacity: 1, duration: 0.35, ease: "sine.inOut" }, tCut - 0.3);
+        tl.set("#stA", { visibility: "hidden" }, tCut + 0.08);
+        C.frame(tl, root, PLAN, { seed: 41, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-pluma-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

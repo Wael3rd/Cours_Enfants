@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-historia-6</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw { position: absolute; left: 0; top: 0; }
+      .smk { border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .cutlayer { position: absolute; inset: 0; }
+      #stA, #stB, #stage2 { position: absolute; inset: 0; }
+      #stB { visibility: hidden; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-historia-6" data-start="0" data-width="1920" data-height="1200" data-duration="7.554">
+
+      <div id="stA"><div id="stage"></div></div>
+      <div id="stB"><div id="stage2"></div></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.554" data-media-start="37.614" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.254,"v":1},{"t":7.554,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/chan.8d5a819a5f.mp3" data-start="0.6" data-duration="3.458" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.cc0a07a8d1.mp3" data-start="4.858" data-duration="1.946" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="4.258" data-duration="0.212" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/spell-magic.mp3" data-start="4.758" data-duration="1.104" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="4.808" data-duration="0.1" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="7.254" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-historia-6","cinematica":"u09-historia","part":6,"parts":7,"total":7.554,"meta":{"cinematica":"u09-historia","titulo":"Las piedras mudas","tipo":"historia","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":4.458,"vista":"Tout en haut de l’escalier, la Sombra aspire les derniers glyphes qui coulent comme de l’encre noire hors de la pierre.","camara":"","rotulo":"","personajes":["sombra","chan"],"lines":[{"who":"chan","es":"¡No! Esas piedras tienen mil años.","key":"chan.8d5a819a5f","t":0.6,"d":3.458,"words":[{"w":"¡No!","t":0.6,"d":0.316},{"w":"Esas","t":1.972,"d":0.337},{"w":"piedras","t":2.309,"d":0.525},{"w":"tienen","t":2.834,"d":0.462},{"w":"mil","t":3.296,"d":0.275},{"w":"años.","t":3.571,"d":0.337}]}]},{"n":4,"t0":4.458,"t1":7.304,"vista":"Dans la forêt, un puits de lumière : un cénote turquoise où brille un reflet vert tout au fond. Le Quetzal le montre du bec.","camara":"","rotulo":"","personajes":["quetzal","itzel","marina","viajero"],"lines":[{"who":"quetzal","es":"La pluma… está en el agua.","key":"quetzal.cc0a07a8d1","t":4.858,"d":1.946,"words":[{"w":"La","t":4.858,"d":0.218},{"w":"pluma…","t":5.076,"d":0.41},{"w":"está","t":5.794,"d":0.264},{"w":"en","t":6.058,"d":0.166},{"w":"el","t":6.224,"d":0.166},{"w":"agua.","t":6.39,"d":0.264}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/pop"},{"t":4.258,"f":"ui/swoosh-out"},{"t":4.758,"f":"rpg/spell-magic"},{"t":4.808,"f":"ui/pop"},{"t":7.254,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P3 = C.planOf(PLAN, 3), P4 = C.planOf(PLAN, 4), L3 = P3.lines[0], L4 = P4.lines[0], W = P4.t0;
+        // ---------- plan 3 : Don Chan crie, la Sombra plane au sommet ----------
+        var set = Q.templeCima({ uid: "tc" });
+        var room = S.set($("#stage"), set, { below: "#DCCDA8", motes: 12 });
+        S.drift(tl, room, W, 0);
+        var sm = S.mk(room.qlayer, "smk"); sm.setAttribute("data-layout-allow-overflow", ""); sm.style.cssText = "position:absolute;left:1260px;top:160px;width:900px;height:760px";
+        var sb = S.mk(room.actors, "sombra"); sb.setAttribute("data-layout-allow-overflow", ""); sb.style.cssText = "position:absolute;left:0;top:0;width:470px;height:564px";
+        sb.innerHTML = Q.sombra({ uid: "sb6", width: 470, height: 564, arm: true }); sb.firstChild.style.overflow = "visible";
+        gsap.set(sb, { x: 1470, y: 230 });
+        tl.set(sm, { opacity: 0.8 }, 0);
+        Q.sombraFloat(tl, sb, 0, Math.max(1, Math.floor(W / 1.7)), 1.7);
+        Q.sombraEyes(tl, sb, 0.2, "narrow", 0.3); Q.sombraEyes(tl, sb, L3.t + 2.6, "open", 0.3);
+        var chan = S.chr(room.actors, "chan", 620, 1090, 390);
+        S.breathe(tl, chan, 0, W, 0.9);
+        C.talkBounce(tl, chan.b, L3, 6); C.talkChar(tl, chan, L3);
+        var aL = chan.svg.querySelector(".c-armL"), aR = chan.svg.querySelector(".c-armR"), wNo = C.wordT(PLAN, 3, 1, 1);
+        tl.to(aL, { rotation: 140, svgOrigin: "142 306", duration: 0.3, ease: "back.out(1.6)" }, wNo - 0.1);
+        tl.to(aR, { rotation: -140, svgOrigin: "258 306", duration: 0.3, ease: "back.out(1.6)" }, wNo - 0.1);
+        tl.to([aL, aR], { rotation: "+=10", duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 5 }, wNo + 0.35);
+        S.hop(tl, chan, wNo + 0.05, 30);
+        Q.charEmote(tl, chan.svg, wNo, "worry", 0.25);
+        tl.to(aL, { rotation: 0, svgOrigin: "142 306", duration: 0.5, ease: "power2.inOut" }, L3.t + L3.d - 0.3);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, L3.t + L3.d - 0.3);
+        S.camSet(room, 1250, 640, 0.96);
+        S.cam(tl, room, 1180, 640, 1.1, 0, W - 0.1, "sine.inOut");
+        // ---------- plan 4 : le cenote, le Quetzal montre l'eau ----------
+        var set2 = Q.cenote({ uid: "cn" });
+        var room2 = S.set($("#stage2"), set2, { below: "#083F55", motes: 12, moteColors: ["#BFF3EC", "#FFF3B0", "#FFFFFF"] });
+        S.drift(tl, room2, T - W, W);
+        var mar = S.chr(room2.actors, "marina", 310, 1010, 340), ale = S.chr(room2.actors, "viajero", 520, 1030, 345), itz = S.chr(room2.actors, "itzel", 730, 1020, 345);
+        [mar, ale, itz].forEach(function (c, i) { S.breathe(tl, c, W + i * 0.1, T - W, 0.8); });
+        var qz = S.quetzal(room2.actors, 405, 700, 210, "perched", false, "qh6");
+        Q.quetzalPoseTo(tl, qz, "talk", L4.t - 0.1, 0.35);
+        C.talkQuetzal(tl, qz, L4);
+        // le reflet vert au fond de l'eau
+        var gl = mkp(room2.qlayer, "glw", '<svg width="420" height="260" viewBox="-210 -130 420 260"><defs><radialGradient id="g6"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".9"/><stop offset=".45" stop-color="#42E0A0" stop-opacity=".45"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs><ellipse rx="200" ry="120" fill="url(#g6)"/></svg>', set2.glow.x - 210, set2.glow.y - 130);
+        var fe = mkp(room2.qlayer, "glw", Q.featherSvg({ uid: "fe6", width: 40, height: 120 }), set2.glow.x - 20, set2.glow.y - 60);
+        fe.firstChild.style.overflow = "visible"; gsap.set(fe, { rotation: 70 });
+        var wAg = C.wordT(PLAN, 4, 1, 6);
+        tl.set([gl, fe], { opacity: 0 }, 0);
+        tl.fromTo([gl, fe], { opacity: 0 }, { opacity: 0.85, duration: 0.9, ease: "sine.inOut", immediateRender: false }, wAg - 0.2);
+        tl.to(gl, { scale: 1.08, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: 1 }, wAg + 0.7);
+        set2 && room2.back.querySelectorAll(".yu-rip").forEach(function (r, i) { tl.to(r, { x: 24, duration: 1.6 + (i % 3) * 0.3, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((T - W) / (1.6 + (i % 3) * 0.3))) }, W); });
+        S.camSet(room2, 900, 640, 0.95);
+        S.cam(tl, room2, 1000, 700, 1.02, W, T - W, "sine.inOut");
+        // ---------- fondu enchaine entre les deux plans ----------
+        tl.set("#stB", { visibility: "visible", opacity: 0 }, W - 0.3);
+        tl.to("#stB", { opacity: 1, duration: 0.3, ease: "sine.inOut" }, W - 0.3);
+        tl.set("#stA", { visibility: "hidden" }, W + 0.02);
+        C.frame(tl, root, PLAN, { seed: 26, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-historia-6"] = tl;
+      })();
+    </script>
+  </body>
+</html>

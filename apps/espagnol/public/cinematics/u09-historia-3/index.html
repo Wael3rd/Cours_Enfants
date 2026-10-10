@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw { position: absolute; left: 0; top: 0; }
+      .smk { border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .cutlayer { position: absolute; inset: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="8.2">
+
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.2" data-media-start="16.247" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.9,"v":1},{"t":8.2,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/chan.b8a79ce57b.mp3" data-start="0.8" data-duration="6.45" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-00.mp3" data-start="0.2" data-duration="0.233" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.75" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="7.9" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-historia-3","cinematica":"u09-historia","part":3,"parts":7,"total":8.2,"meta":{"cinematica":"u09-historia","titulo":"Las piedras mudas","tipo":"historia","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":7.95,"vista":"Au pied d’El Castillo, la grande pyramide : les murs de pierre sont lisses, sans aucun dessin. Don Chan, le guide, un chapeau de paille sur la tête, passe la main sur la pierre vide.","camara":"travelling le long du mur lisse","rotulo":"","personajes":["chan","itzel"],"lines":[{"who":"chan","es":"Las piedras hablaban, pero ahora están mudas. Los dibujos de los mayas han desaparecido.","key":"chan.b8a79ce57b","t":0.8,"d":6.45,"words":[{"w":"Las","t":0.8,"d":0.23},{"w":"piedras","t":1.03,"d":0.44},{"w":"hablaban,","t":1.47,"d":0.492},{"w":"pero","t":2.305,"d":0.287},{"w":"ahora","t":2.591,"d":0.34},{"w":"están","t":2.931,"d":0.34},{"w":"mudas.","t":3.271,"d":0.34},{"w":"Los","t":4.661,"d":0.24},{"w":"dibujos","t":4.9,"d":0.457},{"w":"de","t":5.358,"d":0.185},{"w":"los","t":5.543,"d":0.24},{"w":"mayas","t":5.783,"d":0.349},{"w":"han","t":6.131,"d":0.24},{"w":"desaparecido.","t":6.371,"d":0.73}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/step-00"},{"t":0.75,"f":"ui/pop"},{"t":7.9,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 2), L = P.lines[0];
+        var set = Q.elCastillo({ uid: "ec" });
+        var room = S.set($("#stage"), set, { below: "#E4D9B6", motes: 14 });
+        S.drift(tl, room, T);
+        // les pierres sont LISSES : seuls restent, tres pales, les fantomes des glyphes effaces
+        var ghosts = set.slots.map(function (s, i) { var g = mkp(room.qlayer, "gl", Q.yuGlyph({ v: i, width: s.w, ink: "#6F634B" }), s.x, s.y); gsap.set(g, { opacity: 0.13 }); return g; });
+        var ale = S.chr(room.actors, "viajero", 540, 1405, 330), mar = S.chr(room.actors, "marina", 720, 1395, 322), chan = S.chr(room.actors, "chan", 1000, 1385, 345), itz = S.chr(room.actors, "itzel", 1290, 1415, 335);
+        [ale, mar, chan, itz].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.3); Q.charBlink(tl, mar.svg, 3.9); Q.charBlink(tl, itz.svg, 5.2); Q.charBlink(tl, chan.svg, 4.4);
+        C.talkBounce(tl, chan.b, L, 5); C.talkChar(tl, chan, L);
+        // Don Chan passe la main sur la pierre vide (le bras balaie le mur)
+        var aL = chan.svg.querySelector(".c-armL"), tH = C.wordT(PLAN, 2, 1, 1) - 0.1;
+        tl.to(aL, { rotation: 98, svgOrigin: "142 306", duration: 0.45, ease: "back.out(1.4)" }, tH);
+        tl.fromTo(aL, { rotation: 98 }, { rotation: 118, svgOrigin: "142 306", duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 5, immediateRender: false }, tH + 0.45);
+        tl.to(aL, { rotation: 0, svgOrigin: "142 306", duration: 0.5, ease: "power2.inOut" }, tH + 6.3);
+        Q.charEmote(tl, chan.svg, C.wordT(PLAN, 2, 1, 6), "worry", 0.3);
+        // « Los dibujos... han desaparecido » : les glyphes fantomes palpitent une fois
+        var wDib = C.wordT(PLAN, 2, 1, 10);
+        ghosts.forEach(function (g, i) { tl.to(g, { opacity: 0.34, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1 }, wDib + (i % 6) * 0.07); });
+        [ale, mar, itz].forEach(function (c, i) { Q.charEmote(tl, c.svg, C.wordT(PLAN, 2, 1, 6), "worry", 0.3); Q.charNod(tl, c.svg, C.wordT(PLAN, 2, 1, 8) + i * 0.1, 3, 0.2); });
+        // camera : plan large de la pyramide -> pousse vers Don Chan et les pierres vides
+        S.camSet(room, 1600, 820, 0.58);
+        S.cam(tl, room, 1050, 1040, 0.92, 0.1, 3.2, "sine.inOut");
+        S.cam(tl, room, 1080, 1080, 1.06, 3.4, T - 3.6, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 23, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

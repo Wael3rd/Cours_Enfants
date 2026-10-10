@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #zoom { position: absolute; inset: 0; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      #qL { position: absolute; left: 0; top: 0; width: 1920px; height: 1200px; z-index: 6; }
+      .spk { position: absolute; left: 0; top: 0; z-index: 9; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.401">
+
+      <div id="zoom" data-layout-allow-overflow>
+        <div id="skyL" class="lay" data-layout-allow-overflow></div>
+        <div id="sunL" class="lay" data-layout-allow-overflow></div>
+        <div id="farL" class="lay" data-layout-allow-overflow></div>
+        <div id="midL" class="lay" data-layout-allow-overflow></div>
+        <div id="qL" data-layout-allow-overflow></div>
+        <div id="nearL" class="lay" data-layout-allow-overflow></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.401" data-media-start="5.815" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.101,"v":1},{"t":6.401,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.35797cc258.mp3" data-start="0.6" data-duration="4.651" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.3" data-duration="0.465" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="4.351" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-pluma-2","cinematica":"u09-pluma","part":2,"parts":3,"total":6.401,"meta":{"cinematica":"u09-pluma","titulo":"Novena pluma","tipo":"pluma","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":6.151,"vista":"Le Quetzal survole la forêt, la queue très longue et brillante, pour la première fois presque entier.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Nueve plumas. ¡Con una más, vuelvo a ser el gran Quetzal!","key":"quetzal.35797cc258","t":0.6,"d":4.651,"words":[{"w":"Nueve","t":0.6,"d":0.432},{"w":"plumas.","t":1.032,"d":0.499},{"w":"¡Con","t":2.591,"d":0.231},{"w":"una","t":2.821,"d":0.231},{"w":"más,","t":3.052,"d":0.231},{"w":"vuelvo","t":3.454,"d":0.388},{"w":"a","t":3.842,"d":0.126},{"w":"ser","t":3.968,"d":0.231},{"w":"el","t":4.199,"d":0.178},{"w":"gran","t":4.377,"d":0.283},{"w":"Quetzal!","t":4.661,"d":0.441}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-cast"},{"t":4.351,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 2), L = P.lines[0];
+        var sk = Q.yucatanSkyline({ uid: "yk" });
+        $("#skyL").innerHTML = sk.sky; $("#sunL").innerHTML = sk.sun; $("#farL").innerHTML = sk.far; $("#midL").innerHTML = sk.mid; $("#nearL").innerHTML = sk.near;
+        gsap.set("#skyL", { x: -100 }); gsap.set("#sunL", { x: -140 }); gsap.set("#farL", { x: -300 }); gsap.set("#midL", { x: -700 }); gsap.set("#nearL", { x: -1280 });
+        tl.to("#skyL", { x: -170, duration: T, ease: "none" }, 0); tl.to("#sunL", { x: -230, duration: T, ease: "none" }, 0);
+        tl.to("#farL", { x: -420, duration: T, ease: "none" }, 0); tl.to("#midL", { x: -1100, duration: T, ease: "none" }, 0);
+        gsap.set("#zoom", { transformOrigin: "50% 60%" });
+        tl.fromTo("#zoom", { scale: 1.0 }, { scale: 1.1, duration: T, ease: "sine.inOut", immediateRender: false }, 0);
+        var rays2 = $("#sunL .sk-rays");
+        tl.fromTo(rays2, { rotation: 0, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py }, { rotation: 20, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py, duration: T, ease: "none" }, 0);
+        document.querySelectorAll("#skyL .m-cloud").forEach(function (c, i) { tl.to(c, { x: 50 + (i % 3) * 40, duration: T, ease: "none" }, 0); });
+        // le Quetzal : queue tres longue, presque entiere (il manque encore une plume)
+        var qz = S.quetzal($("#qL"), 300, 760, 440, "fly", false, "qp2");
+        var tails = qz.querySelectorAll(".q-tail");
+        gsap.set(tails[tails.length - 1], { scale: 0.3, svgOrigin: tails[tails.length - 1].dataset.px + " " + tails[tails.length - 1].dataset.py });
+        Q.quetzalFlap(tl, qz, 0.1, Math.floor((T - 1.3) / 0.46), 0.46, 0.9);
+        var path = [{ x: 0, y: 40 }, { x: 420, y: -60 }, { x: 860, y: -10 }, { x: 1180, y: -130 }, { x: 1380, y: -60 }];
+        tl.to(qz, { motionPath: { path: path, curviness: 1.2 }, duration: T - 0.8, ease: "sine.inOut" }, 0.1);
+        Q.quetzalPoseTo(tl, qz, "glide", L.t + L.d - 1.2, 0.5);
+        C.talkQuetzal(tl, qz, L);
+        Q.quetzalSway(tl, qz, 0.6, 1.6, 1); Q.quetzalSway(tl, qz, 2.6, 1.6, 1); Q.quetzalSway(tl, qz, 4.4, 1.6, 1);
+        // etincelles vertes dans son sillage
+        var spr = Q.rng(3);
+        for (var k = 0; k < 12; k++) {
+          var ts = 0.5 + k * ((T - 1.6) / 12), px = 300 + (ts / T) * 1300 - 140 - spr() * 80, py = 740 - 60 + spr() * 160;
+          var sp = mk($("#qL"), "spk", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>');
+          gsap.set(sp, { x: px, y: py });
+          tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.4, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(sp, { y: "+=70", scale: 0, opacity: 0, duration: 0.6, ease: "power2.in" }, ts + 0.45);
+        }
+        C.frame(tl, root, PLAN, { seed: 42, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

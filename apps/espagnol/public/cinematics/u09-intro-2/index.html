@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-intro-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      #zoom { position: absolute; inset: 0; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      .flam { position: absolute; left: 0; top: 0; }
+      #motes { position: absolute; left: 0; top: 0; z-index: 7; }
+      #chip { position: absolute; left: 96px; top: 230px; display: flex; align-items: center; gap: 18px; padding: 12px 34px 14px 18px; border-radius: 999px; background: rgba(20,23,63,.92); border: 4px solid #ffc83d; box-shadow: 0 6px 0 rgba(0,0,0,.3); z-index: 25; }
+      #chip b { font: 400 44px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #f5e6c8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-intro-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.162">
+
+      <div id="p2" class="plan" data-layout-allow-overflow>
+        <div id="zoom" data-layout-allow-overflow>
+          <div id="skyL" class="lay" data-layout-allow-overflow></div>
+          <div id="sunL" class="lay" data-layout-allow-overflow></div>
+          <div id="farL" class="lay" data-layout-allow-overflow></div>
+          <div id="midL" class="lay" data-layout-allow-overflow></div>
+          <div id="flamL" class="lay" data-layout-allow-overflow></div>
+          <div id="nearL" class="lay" data-layout-allow-overflow></div>
+        </div>
+        <div id="motes" data-layout-allow-overflow></div>
+        <div id="chip"></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.162" data-media-start="7.006" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":4.962,"v":1},{"t":6.162,"v":0}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.b14280bfb0.mp3" data-start="0.5" data-duration="4.612" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/bell.mp3" data-start="1.6" data-duration="1.741" data-track-index="4" data-volume="0.18"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="2.9" data-duration="0.121" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="5.862" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-intro-2","cinematica":"u09-intro","part":2,"parts":2,"total":6.162,"meta":{"cinematica":"u09-intro","titulo":"Capítulo 9 · ¡Viva México! · Yucatán","tipo":"intro","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"Capítulo 9 · ¡Viva México! · Yucatán","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":5.912,"vista":"Vue aérienne de la forêt tropicale du Yucatán : la canopée verte, la pyramide de pierre qui sort des arbres, un cénote turquoise et, au bord d’une lagune, des flamants roses qui s’envolent.","camara":"survol lent en drone, puis descente vers la pyramide","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Selva, cenotes y pirámides: aquí viven los mayas desde hace miles de años.","key":"narrador.b14280bfb0","t":0.5,"d":4.612,"words":[{"w":"Selva,","t":0.5,"d":0.337},{"w":"cenotes","t":1.061,"d":0.442},{"w":"y","t":1.502,"d":0.126},{"w":"pirámides:","t":1.629,"d":0.547},{"w":"aquí","t":2.432,"d":0.275},{"w":"viven","t":2.707,"d":0.326},{"w":"los","t":3.034,"d":0.224},{"w":"mayas","t":3.258,"d":0.326},{"w":"desde","t":3.585,"d":0.326},{"w":"hace","t":3.911,"d":0.275},{"w":"miles","t":4.186,"d":0.326},{"w":"de","t":4.513,"d":0.173},{"w":"años.","t":4.686,"d":0.275}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.6,"f":"rpg/bell"},{"t":2.9,"f":"ui/star"},{"t":5.862,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P2 = C.planOf(PLAN, 2), L = P2.lines[0];
+        var sk = Q.yucatanSkyline({ uid: "yk" });
+        $("#skyL").innerHTML = sk.sky; $("#sunL").innerHTML = sk.sun; $("#farL").innerHTML = sk.far; $("#midL").innerHTML = sk.mid; $("#nearL").innerHTML = sk.near;
+        var flock = function (n, x0, y0, tStart, dx, dy, dur, w) {
+          var out = [];
+          for (var i = 0; i < n; i++) {
+            var f = mk($("#flamL"), "flam", Q.yuFlamingo({ width: w - (i % 3) * 18 }));
+            var sx = x0 + (i % 4) * 64 - (i % 2) * 20, sy = y0 - (i % 3) * 36 + (i >> 2) * 30, t1 = tStart + i * 0.14;
+            gsap.set(f, { x: sx, y: sy, rotation: -10 });
+            tl.set(f, { opacity: 0 }, 0);
+            tl.set(f, { opacity: 1 }, t1);
+            tl.to(f, { x: sx + dx - (i % 4) * 36, y: sy + dy - (i % 3) * 40, rotation: -2 + (i % 3) * 3, duration: dur, ease: "power1.out" }, t1);
+            var wing = f.querySelector(".fl-wing"), per = 0.26 + (i % 3) * 0.03;
+            tl.fromTo(wing, { rotation: 26, svgOrigin: "100 66" }, { rotation: -38, svgOrigin: "100 66", duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(dur / per)) }, t1);
+            out.push(f);
+          }
+          return out;
+        };
+        var X = { sky: -80, sun: -100, far: -280, mid: -1040, near: -1280 };
+        gsap.set("#skyL", { x: X.sky }); gsap.set("#sunL", { x: X.sun }); gsap.set("#farL", { x: X.far }); gsap.set(["#midL", "#flamL"], { x: X.mid }); gsap.set("#nearL", { x: X.near });
+        // la derive continue de la partie 1, puis descente : zoom sur la pyramide (centre ecran ~ 1100, 560)
+        tl.to("#midL", { x: X.mid - 60, duration: T, ease: "none" }, 0);
+        tl.to("#flamL", { x: X.mid - 60, duration: T, ease: "none" }, 0);
+        tl.to("#farL", { x: X.far - 30, duration: T, ease: "none" }, 0);
+        gsap.set("#zoom", { transformOrigin: "1100px 600px" });
+        tl.fromTo("#zoom", { scale: 1.0 }, { scale: 2.5, duration: T - 0.2, ease: "power1.inOut", immediateRender: false }, 0.2);
+        var rays2 = $("#sunL .sk-rays");
+        tl.fromTo(rays2, { rotation: 22, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py }, { rotation: 36, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py, duration: T, ease: "none" }, 0);
+        document.querySelectorAll("#skyL .m-cloud").forEach(function (c, i) { tl.to(c, { x: 50 + (i % 3) * 40, duration: T, ease: "none" }, 0); });
+        tl.fromTo("#midL .yk-cenote", { opacity: 0.88 }, { opacity: 1, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 0.9) }, 0);
+        // les flamants traversent le ciel (arrivee de la lagune a droite)
+        flock(7, 2740, 470, 0.0, -1500, -200, 3.6, 130);
+        $("#motes").innerHTML = Q.moteField({ n: 26, w: 2400, h: 1200, seed: 14, rmin: 2, rmax: 5, colors: ["#FFF3B0", "#FFE9A8", "#FFFFFF"] });
+        document.querySelectorAll("#motes .k-mote").forEach(function (m, i) {
+          var x = +m.dataset.x, y = +m.dataset.y;
+          tl.fromTo(m, { x: x, y: y, opacity: 0 }, { x: x + 40 - (i % 5) * 20, y: y - 140 - (i % 7) * 26, opacity: 0.85, duration: T * 0.5, ease: "sine.out" }, (i % 9) * 0.1);
+          tl.to(m, { opacity: 0, duration: T * 0.5, ease: "sine.in" }, T * 0.5 + (i % 9) * 0.1);
+        });
+        var chip = $("#chip");
+        chip.innerHTML = '<svg width="46" height="58" viewBox="0 0 46 58"><path d="M23 56C6 36 4 28 4 22a19 19 0 1 1 38 0c0 6-2 14-19 34Z" fill="#c9573b" stroke="#fff3d1" stroke-width="4"/><circle cx="23" cy="22" r="7" fill="#fff3d1"/></svg><b>CHICHÉN ITZÁ</b>';
+        tl.fromTo(chip, { x: -760, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, L.t + 0.9);
+        tl.to(chip, { x: -760, opacity: 0, duration: 0.4, ease: "power3.in" }, T - 0.8);
+
+        C.frame(tl, root, PLAN, { seed: 12, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-intro-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

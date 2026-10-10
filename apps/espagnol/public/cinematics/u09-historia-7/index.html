@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-historia-7</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw { position: absolute; left: 0; top: 0; }
+      .smk { border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .cutlayer { position: absolute; inset: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-historia-7" data-start="0" data-width="1920" data-height="1200" data-duration="9.567">
+
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.567" data-media-start="45.168" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.367,"v":1},{"t":9.567,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/itzel.b93bb3d976.mp3" data-start="0.7" data-duration="7.717" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.65" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1.9" data-duration="0.121" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/level-up.mp3" data-start="8.067" data-duration="0.37" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-historia-7","cinematica":"u09-historia","part":7,"parts":7,"total":9.567,"meta":{"cinematica":"u09-historia","titulo":"Las piedras mudas","tipo":"historia","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":4,"t0":0,"t1":9.317,"vista":"Dans la forêt, un puits de lumière : un cénote turquoise où brille un reflet vert tout au fond. Le Quetzal le montre du bec.","camara":"","rotulo":"","personajes":["quetzal","itzel","marina","viajero"],"lines":[{"who":"itzel","es":"Es el cenote sagrado. Para devolver la memoria a las piedras, tienen que conocer la historia de México. ¡Vamos!","key":"itzel.b93bb3d976","t":0.7,"d":7.717,"words":[{"w":"Es","t":0.7,"d":0.179},{"w":"el","t":0.879,"d":0.179},{"w":"cenote","t":1.059,"d":0.39},{"w":"sagrado.","t":1.449,"d":0.443},{"w":"Para","t":2.794,"d":0.234},{"w":"devolver","t":3.027,"d":0.407},{"w":"la","t":3.434,"d":0.147},{"w":"memoria","t":3.581,"d":0.363},{"w":"a","t":3.945,"d":0.104},{"w":"las","t":4.048,"d":0.19},{"w":"piedras,","t":4.239,"d":0.363},{"w":"tienen","t":4.945,"d":0.437},{"w":"que","t":5.382,"d":0.26},{"w":"conocer","t":5.642,"d":0.496},{"w":"la","t":6.138,"d":0.201},{"w":"historia","t":6.339,"d":0.555},{"w":"de","t":6.894,"d":0.201},{"w":"México.","t":7.095,"d":0.437},{"w":"¡Vamos!","t":7.889,"d":0.378}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.65,"f":"ui/pop"},{"t":1.9,"f":"ui/star"},{"t":8.067,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 4), L = P.lines[0];
+        var set = Q.cenote({ uid: "cn" });
+        var room = S.set($("#stage"), set, { below: "#083F55", motes: 14, moteColors: ["#BFF3EC", "#FFF3B0", "#FFFFFF"] });
+        S.drift(tl, room, T);
+        var mar = S.chr(room.actors, "marina", 310, 1010, 340), ale = S.chr(room.actors, "viajero", 520, 1030, 345), itz = S.chr(room.actors, "itzel", 730, 1020, 345);
+        [mar, ale, itz].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 3.6); Q.charBlink(tl, itz.svg, 5.1);
+        var qz = S.quetzal(room.actors, 405, 700, 210, "talk", false, "qh7");
+        Q.quetzalBlink(tl, qz, 2.8);
+        // le reflet vert (la plume) palpite doucement au fond de l'eau
+        var gl = mkp(room.qlayer, "glw", '<svg width="420" height="260" viewBox="-210 -130 420 260"><defs><radialGradient id="g7"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".9"/><stop offset=".45" stop-color="#42E0A0" stop-opacity=".45"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs><ellipse rx="200" ry="120" fill="url(#g7)"/></svg>', set.glow.x - 210, set.glow.y - 130);
+        var fe = mkp(room.qlayer, "glw", Q.featherSvg({ uid: "fe7", width: 40, height: 120 }), set.glow.x - 20, set.glow.y - 60);
+        fe.firstChild.style.overflow = "visible"; gsap.set(fe, { rotation: 70 }); gsap.set(gl, { opacity: 0.85 }); gsap.set(fe, { opacity: 0.85 });
+        tl.to(gl, { scale: 1.08, opacity: 0.6, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.4) + 1 }, 0);
+        room.back.querySelectorAll(".yu-rip").forEach(function (r, i) { tl.to(r, { x: 24, duration: 1.6 + (i % 3) * 0.3, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (1.6 + (i % 3) * 0.3))) }, 0); });
+        // Itzel parle : bras tendu vers le cenote, puis vers les pierres
+        C.talkBounce(tl, itz.b, L, 5); C.talkChar(tl, itz, L);
+        var aL = itz.svg.querySelector(".c-armL"), wCe = C.wordT(PLAN, 4, 1, 3), wPi = C.wordT(PLAN, 4, 1, 12);
+        tl.to(aL, { rotation: 100, svgOrigin: "142 306", duration: 0.4, ease: "back.out(1.5)" }, wCe - 0.1);
+        tl.to(aL, { rotation: 0, svgOrigin: "142 306", duration: 0.5, ease: "power2.inOut" }, wCe + 1.4);
+        Q.charEmote(tl, itz.svg, L.t, "happy", 0.3);
+        Q.charNod(tl, ale.svg, wPi, 4, 0.2); Q.charNod(tl, mar.svg, wPi + 0.15, 4, 0.2);
+        // « ¡Vamos! » : le groupe bondit, le Quetzal s'envole vers l'eau
+        var wVa = C.wordT(PLAN, 4, 1, L.words.length);
+        S.hop(tl, ale, wVa, 46); S.hop(tl, mar, wVa + 0.1, 40); S.hop(tl, itz, wVa + 0.2, 40);
+        Q.quetzalPoseTo(tl, qz, "fly", wVa, 0.3);
+        Q.quetzalFlap(tl, qz, wVa + 0.1, 3, 0.4, 0.9);
+        tl.to(qz, { x: 360, y: -150, duration: 1.3, ease: "sine.inOut" }, wVa + 0.1);
+        S.camSet(room, 900, 640, 0.95);
+        S.cam(tl, room, 1060, 700, 1.04, 0, T - 2.4, "sine.inOut");
+        S.cam(tl, room, 1160, 760, 1.0, T - 2.2, 1.9, "power2.inOut");
+        C.frame(tl, root, PLAN, { seed: 27, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-historia-7"] = tl;
+      })();
+    </script>
+  </body>
+</html>

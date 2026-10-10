@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-capsula-mayas-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #p1 { position: absolute; inset: 0; }
+      .fac { position: absolute; left: 0; top: 0; z-index: 5; }
+      .mcard { position: absolute; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .mbox { position: absolute; }
+      .zone { position: absolute; left: 0; top: 0; border-radius: 50%; z-index: 7; }
+      .ring { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; z-index: 9; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 10; font: 400 104px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 8px 0 #c9573b, 0 14px 0 rgba(0,0,0,.35); white-space: nowrap; }
+      .eq span { display: inline-block; }
+      .badge { position: absolute; left: 0; top: 0; z-index: 12; min-width: 96px; padding: 6px 20px 10px; text-align: center; border-radius: 999px; background: #ffc83d; color: #14173f; font: 400 56px/1 "Alfa Slab One", serif; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      .item { position: absolute; left: 0; top: 0; z-index: 8; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 8; }
+      .teeth path { }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-capsula-mayas-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.918">
+
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.918" data-media-start="8.445" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.618,"v":1},{"t":6.918,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.075f7b4c62.mp3" data-start="0.6" data-duration="5.268" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/tick.mp3" data-start="1.2" data-duration="0.045" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/coins.mp3" data-start="1.6" data-duration="0.796" data-track-index="5" data-volume="0.2"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="4.868" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-capsula-mayas-2","cinematica":"u09-capsula-mayas","part":2,"parts":5,"total":6.918,"meta":{"cinematica":"u09-capsula-mayas","titulo":"Mayas y aztecas","tipo":"capsula","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":6.668,"vista":"La pyramide d’El Castillo vue de face ; quatre escaliers s’illuminent, un compteur affiche « 91 × 4 + 1 = 365 ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"La pirámide de Chichén Itzá tiene trescientos sesenta y cinco escalones, como los días del año.","key":"narrador.075f7b4c62","t":0.6,"d":5.268,"words":[{"w":"La","t":0.6,"d":0.17},{"w":"pirámide","t":0.77,"d":0.469},{"w":"de","t":1.239,"d":0.17},{"w":"Chichén","t":1.409,"d":0.419},{"w":"Itzá","t":1.828,"d":0.27},{"w":"tiene","t":2.098,"d":0.32},{"w":"trescientos","t":2.417,"d":0.619},{"w":"sesenta","t":3.037,"d":0.419},{"w":"y","t":3.456,"d":0.12},{"w":"cinco","t":3.576,"d":0.32},{"w":"escalones,","t":3.895,"d":0.519},{"w":"como","t":4.616,"d":0.248},{"w":"los","t":4.864,"d":0.202},{"w":"días","t":5.066,"d":0.248},{"w":"del","t":5.314,"d":0.202},{"w":"año.","t":5.516,"d":0.202}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.2,"f":"ui/tick"},{"t":1.6,"f":"rpg/coins"},{"t":4.868,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var T1 = C.planOf(PLAN, PLAN.plans[0].n), L = T1.lines[0], W = T;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Mayas y aztecas", 0.15);
+        var N = PLAN.plans[0].n;
+        var wt = function (k) { return C.wordT(PLAN, N, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paperIn = function (el, y0, at, rot) { tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + 160, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y0, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, at); };
+        var pw = 560, px0 = 1230, py0 = 270;
+        var pyr = mk(p1, "fac cap-paper", Q.yuPyramidPlan({ width: pw })); gsap.set(pyr, { x: px0, y: py0 });
+        paperIn(pyr, py0, 0.3, -4);
+        var tTr = wt(7), tSe = wt(8), tY = wt(9), tCi = wt(10), tEs = wt(11), tDia = wt(14);
+        // les 4 escaliers s'allument un a un (dore), avec leur etiquette « 91 »
+        var sts = [["n", 0, -1], ["e", 1, 0], ["s", 2, 1], ["w", 3, 0]], bad = [[px0 + pw / 2 - 52, py0 - 40], [px0 + pw - 20, py0 + pw / 2 - 40], [px0 + pw / 2 - 52, py0 + pw - 20], [px0 - 100, py0 + pw / 2 - 40]];
+        var tS = wt(6) + 0.1, gapS = (wt(11) - tS) / 4.2;
+        sts.forEach(function (s, i) {
+          var t = tS + i * gapS, st = pyr.querySelector(".yu-st-" + s[0] + " .yu-st-lit");
+          tl.fromTo(st, { opacity: 0 }, { opacity: 0.85, duration: 0.5, ease: "sine.inOut", immediateRender: false }, t);
+          var b = mk(p1, "badge", "91"); gsap.set(b, { x: bad[i][0], y: bad[i][1] }); popS(b, t + 0.1, i % 2 ? 4 : -4);
+        });
+        // la plateforme du temple : « + 1 »
+        var tpl = pyr.querySelector("rect[width='56']");
+        tl.fromTo(tpl, { fill: "#6F5A3F" }, { fill: "#FFC83D", duration: 0.5, ease: "sine.inOut", immediateRender: false }, wt(10) - 0.1);
+        // l'operation s'ecrit : 91 x 4 + 1 = 365
+        var eq = mk(p1, "eq", '<span id="e1">91</span> <span id="e2">× 4</span> <span id="e3">+ 1</span> <span id="e4">= 365</span>'); gsap.set(eq, { x: 96, y: 500 });
+        tl.set(["#e1", "#e2", "#e3", "#e4"], { opacity: 0 }, 0);
+        [["#e1", tTr], ["#e2", tSe], ["#e3", tY], ["#e4", tCi]].forEach(function (q, i) { tl.set(q[0], { opacity: 1 }, q[1] - 0.05); tl.fromTo(q[0], { scale: 0.4, y: 40 }, { scale: 1, y: 0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, q[1] - 0.05); });
+        var chD = Cap.chip(p1, "365 días", 96, 690, "gold"); popS(chD, tDia - 0.1, -3);
+        var chE = Cap.chip(p1, "escalones", 96, 790, "pink"); popS(chE, tEs, 3);
+        Cap.sparks(tl, p1, px0 + pw / 2, py0 + pw / 2, tCi, 10, "#ffe9a8");
+        tl.to(pyr, { rotation: 1.6, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(W, 1.5) }, 1.0);
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, W - 0.55);
+        C.frame(tl, root, PLAN, { seed: 31, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-capsula-mayas-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

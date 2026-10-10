@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-capsula-mayas-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #p1 { position: absolute; inset: 0; }
+      .fac { position: absolute; left: 0; top: 0; z-index: 5; }
+      .mcard { position: absolute; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .mbox { position: absolute; }
+      .zone { position: absolute; left: 0; top: 0; border-radius: 50%; z-index: 7; }
+      .ring { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; z-index: 9; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 10; font: 400 104px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 8px 0 #c9573b, 0 14px 0 rgba(0,0,0,.35); white-space: nowrap; }
+      .eq span { display: inline-block; }
+      .badge { position: absolute; left: 0; top: 0; z-index: 12; min-width: 96px; padding: 6px 20px 10px; text-align: center; border-radius: 999px; background: #ffc83d; color: #14173f; font: 400 56px/1 "Alfa Slab One", serif; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      .item { position: absolute; left: 0; top: 0; z-index: 8; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 8; }
+      .teeth path { }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-capsula-mayas-1" data-start="0" data-width="1920" data-height="1200" data-duration="8.445">
+
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.445" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.145,"v":1},{"t":8.445,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.21b4e7a74c.mp3" data-start="0.6" data-duration="6.795" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="4.349" data-duration="0.1" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="5.738" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-capsula-mayas-1","cinematica":"u09-capsula-mayas","part":1,"parts":5,"total":8.445,"meta":{"cinematica":"u09-capsula-mayas","titulo":"Mayas y aztecas","tipo":"capsula","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":1,"t0":0,"t1":8.195,"vista":"Style explainer, papier découpé : une carte du Mexique, le sud-est en vert pour les Mayas, le centre en orange pour les Aztèques.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Mayas y aztecas son dos pueblos de México. Los mayas viven en el sureste y los aztecas en el centro.","key":"narrador.21b4e7a74c","t":0.6,"d":6.795,"words":[{"w":"Mayas","t":0.6,"d":0.362},{"w":"y","t":0.962,"d":0.136},{"w":"aztecas","t":1.097,"d":0.475},{"w":"son","t":1.572,"d":0.249},{"w":"dos","t":1.82,"d":0.249},{"w":"pueblos","t":2.069,"d":0.475},{"w":"de","t":2.544,"d":0.192},{"w":"México.","t":2.736,"d":0.418},{"w":"Los","t":4.181,"d":0.218},{"w":"mayas","t":4.399,"d":0.317},{"w":"viven","t":4.717,"d":0.317},{"w":"en","t":5.034,"d":0.169},{"w":"el","t":5.203,"d":0.169},{"w":"sureste","t":5.371,"d":0.416},{"w":"y","t":5.788,"d":0.119},{"w":"los","t":5.906,"d":0.218},{"w":"aztecas","t":6.125,"d":0.416},{"w":"en","t":6.541,"d":0.169},{"w":"el","t":6.71,"d":0.169},{"w":"centro.","t":6.878,"d":0.367}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/pop"},{"t":4.349,"f":"ui/pop"},{"t":5.738,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var T1 = C.planOf(PLAN, PLAN.plans[0].n), L = T1.lines[0], W = T;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Mayas y aztecas", 0.15);
+        var N = PLAN.plans[0].n;
+        var wt = function (k) { return C.wordT(PLAN, N, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paperIn = function (el, y0, at, rot) { tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + 160, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y0, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, at); };
+        // carte explainer recadree sur le Mexique dans une carte de papier
+        var cw = 1020, ch = 700, S0 = 1.55, cx0 = 800, cy0 = 250;
+        var card = mk(p1, "mcard"); card.style.cssText += ";left:0;top:0;width:" + cw + "px;height:" + ch + "px"; gsap.set(card, { x: cx0, y: cy0 });
+        var mb = mk(card, "mbox"); mb.innerHTML = Q.explainerMap({ uid: "mm1", width: 1600 * S0, height: 1200 * S0 });
+        var c0 = Q.mapProj(-98, 19.2);
+        mb.style.cssText += ";left:" + (cw / 2 - c0[0] * S0) + "px;top:" + (ch / 2 - c0[1] * S0) + "px;width:" + (1600 * S0) + "px;height:" + (1200 * S0) + "px";
+        mb.firstChild.setAttribute("data-layout-allow-overflow", "");
+        tl.fromTo(mb.querySelectorAll(".x-hi-mx"), { opacity: 0 }, { opacity: 0.4, duration: 0.8, ease: "sine.inOut", immediateRender: false }, 0.4);
+        var pos = function (lon, lat) { var p = Q.mapProj(lon, lat); return [cw / 2 - c0[0] * S0 + p[0] * S0, ch / 2 - c0[1] * S0 + p[1] * S0]; };
+        paperIn(card, cy0, 0.3, -3);
+        // zones : sud-est (Mayas, vert) et centre (Aztèques, orange)
+        var zone = function (lon, lat, rx, ry, col, rot) { var p = pos(lon, lat), z = mk(card, "zone"); z.style.cssText += ";width:" + rx * 2 + "px;height:" + ry * 2 + "px;background:" + col + ";border:6px solid #fff3d1;margin:" + (-ry) + "px 0 0 " + (-rx) + "px"; gsap.set(z, { x: p[0], y: p[1], rotation: rot || 0, opacity: 0 }); return z; };
+        var zM = zone(-90.4, 18.1, 118, 74, "rgba(67,165,90,.72)", -18), zA = zone(-99.0, 19.5, 76, 54, "rgba(255,159,28,.7)", 0);
+        var tM = wt(1), tA = wt(3), tSE = wt(14), tCe = wt(20);
+        tl.fromTo(zM, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, tM - 0.05);
+        tl.fromTo(zA, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, tA - 0.05);
+        var pM = pos(-90.4, 18.1), pA = pos(-99.0, 19.5);
+        var chM = Cap.chip(p1, "Mayas", cx0 + pM[0] - 20, cy0 + pM[1] + 90, ""); popS(chM, tM, 3);
+        var chA = Cap.chip(p1, "Aztecas", cx0 + pA[0] - 150, cy0 + pA[1] - 150, "gold"); popS(chA, tA, -3);
+        var chS = Cap.chip(p1, "sureste", cx0 + pM[0] - 60, cy0 + pM[1] + 160, "terra"); popS(chS, tSE, 2);
+        var chC = Cap.chip(p1, "centro", cx0 + pA[0] - 120, cy0 + pA[1] + 80, "pink"); popS(chC, tCe, -2);
+        // anneaux qui pulsent (doux, >= 0,5 s)
+        [[pM, tSE], [pA, tCe]].forEach(function (q) { var r = mk(p1, "ring"); gsap.set(r, { x: cx0 + q[0][0], y: cy0 + q[0][1] }); tl.fromTo(r, { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 2.4, duration: 0.8, ease: "power2.out", immediateRender: false }, q[1]); });
+        Cap.sparks(tl, p1, cx0 + pM[0], cy0 + pM[1], tM, 8, "#9bffd6"); Cap.sparks(tl, p1, cx0 + pA[0], cy0 + pA[1], tA, 8, "#ffe9a8");
+        tl.to(card, { y: "-=10", duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(W, 1.4) }, 1.0);
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, W - 0.55);
+        C.frame(tl, root, PLAN, { seed: 31, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-capsula-mayas-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-historia-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .leaf, .smk, .dot, .gl, .glw { position: absolute; left: 0; top: 0; }
+      .smk { border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+      .cutlayer { position: absolute; inset: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-historia-4" data-start="0" data-width="1920" data-height="1200" data-duration="5.657">
+
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.657" data-media-start="24.447" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.357,"v":1},{"t":5.657,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/itzel.32be336be6.mp3" data-start="0.6" data-duration="3.207" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="4.107" data-duration="1.104" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="5.357" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-historia-4","cinematica":"u09-historia","part":4,"parts":7,"total":5.657,"meta":{"cinematica":"u09-historia","titulo":"Las piedras mudas","tipo":"historia","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":2,"t0":0,"t1":5.407,"vista":"Au pied d’El Castillo, la grande pyramide : les murs de pierre sont lisses, sans aucun dessin. Don Chan, le guide, un chapeau de paille sur la tête, passe la main sur la pierre vide.","camara":"travelling le long du mur lisse","rotulo":"","personajes":["chan","itzel"],"lines":[{"who":"itzel","es":"Es la Sombra. Se lleva las historias.","key":"itzel.32be336be6","t":0.6,"d":3.207,"words":[{"w":"Es","t":0.6,"d":0.183},{"w":"la","t":0.783,"d":0.183},{"w":"Sombra.","t":0.966,"d":0.398},{"w":"Se","t":2.257,"d":0.194},{"w":"lleva","t":2.451,"d":0.364},{"w":"las","t":2.815,"d":0.25},{"w":"historias.","t":3.065,"d":0.592}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/pop"},{"t":4.107,"f":"rpg/spell-magic"},{"t":5.357,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var P = C.planOf(PLAN, 2), L = P.lines[0];
+        var set = Q.elCastillo({ uid: "ec" });
+        var room = S.set($("#stage"), set, { below: "#E4D9B6", motes: 14 });
+        S.drift(tl, room, T);
+        // les pierres sont LISSES : seuls restent, tres pales, les fantomes des glyphes effaces
+        var ghosts = set.slots.map(function (s, i) { var g = mkp(room.qlayer, "gl", Q.yuGlyph({ v: i, width: s.w, ink: "#6F634B" }), s.x, s.y); gsap.set(g, { opacity: 0.13 }); return g; });
+        var ale = S.chr(room.actors, "viajero", 540, 1405, 330), mar = S.chr(room.actors, "marina", 720, 1395, 322), chan = S.chr(room.actors, "chan", 1000, 1385, 345), itz = S.chr(room.actors, "itzel", 1290, 1415, 335);
+        [ale, mar, chan, itz].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); Q.charEmote(tl, c.svg, 0, "worry", 0.2); });
+        Q.charBlink(tl, ale.svg, 1.6); Q.charBlink(tl, itz.svg, 3.4);
+        C.talkBounce(tl, itz.b, L, 5); C.talkChar(tl, itz, L);
+        // Itzel leve le bras vers le sommet sur « Sombra »
+        var aL = itz.svg.querySelector(".c-armL"), wS = C.wordT(PLAN, 2, 1, 3);
+        tl.to(aL, { rotation: 150, svgOrigin: "142 306", duration: 0.4, ease: "back.out(1.5)" }, wS - 0.15);
+        tl.to(aL, { rotation: 0, svgOrigin: "142 306", duration: 0.5, ease: "power2.inOut" }, T - 1.0);
+        [ale, mar, chan].forEach(function (c, i) { Q.charNod(tl, c.svg, wS + i * 0.08, -5, 0.25); });
+        // la Sombra apparait au sommet : fumee, puis deux yeux
+        var tS = L.t + 1.0;
+        var sm = S.mk(room.qlayer, "smk"); sm.setAttribute("data-layout-allow-overflow", ""); sm.style.cssText = "position:absolute;left:1280px;top:20px;width:640px;height:560px";
+        var sb = S.mk(room.actors, "sombra"); sb.setAttribute("data-layout-allow-overflow", ""); sb.style.cssText = "position:absolute;left:0;top:0;width:340px;height:408px";
+        sb.innerHTML = Q.sombra({ uid: "sb4", width: 340, height: 408, arm: true }); sb.firstChild.style.overflow = "visible";
+        gsap.set(sb, { x: 1430, y: 90, opacity: 0, transformOrigin: "50% 50%" });
+        tl.fromTo(sm, { opacity: 0, scale: 0.6 }, { opacity: 0.85, scale: 1, duration: 1.0, ease: "power2.out", immediateRender: false }, tS);
+        tl.fromTo(sb, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1.0, ease: "power3.out", immediateRender: false }, tS + 0.1);
+        Q.sombraFloat(tl, sb, tS + 1.0, Math.max(1, Math.floor((T - tS) / 1.6)), 1.6);
+        tl.fromTo(sb.querySelectorAll(".s-eye"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false }, tS + 0.6);
+        for (var k = 0; k < 10; k++) {
+          var d = S.mk(room.actors, "dot"); d.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 10) * 6.283, x0 = 1600 + Math.cos(ang) * 40, y0 = 260 + Math.sin(ang) * 40;
+          tl.fromTo(d, { x: x0, y: y0, scale: 0.3, opacity: 0.9 }, { x: x0 + Math.cos(ang) * (160 + (k % 4) * 40), y: y0 + Math.sin(ang) * (120 + (k % 3) * 40) + 40, scale: 1.2, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, tS + 0.2 + k * 0.03);
+        }
+        // la lumiere du jour baisse un peu
+        tl.to("#dim", { opacity: 0.22, duration: 1.4, ease: "sine.inOut" }, tS);
+        // camera : de Don Chan et Itzel vers le sommet de la pyramide
+        S.camSet(room, 1080, 1080, 1.06);
+        S.cam(tl, room, 1500, 760, 0.95, 0.5, 1.4, "power2.inOut");
+        S.cam(tl, room, 1600, 370, 1.3, tS - 0.6, 1.8, "power2.inOut");
+        C.frame(tl, root, PLAN, { seed: 24, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-historia-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

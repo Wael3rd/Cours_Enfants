@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u09-capsula-mayas-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #p1 { position: absolute; inset: 0; }
+      .fac { position: absolute; left: 0; top: 0; z-index: 5; }
+      .mcard { position: absolute; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .mbox { position: absolute; }
+      .zone { position: absolute; left: 0; top: 0; border-radius: 50%; z-index: 7; }
+      .ring { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; z-index: 9; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 10; font: 400 104px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 8px 0 #c9573b, 0 14px 0 rgba(0,0,0,.35); white-space: nowrap; }
+      .eq span { display: inline-block; }
+      .badge { position: absolute; left: 0; top: 0; z-index: 12; min-width: 96px; padding: 6px 20px 10px; text-align: center; border-radius: 999px; background: #ffc83d; color: #14173f; font: 400 56px/1 "Alfa Slab One", serif; box-shadow: 0 6px 0 rgba(0,0,0,.35); }
+      .item { position: absolute; left: 0; top: 0; z-index: 8; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 8; }
+      .teeth path { }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u09-capsula-mayas-3" data-start="0" data-width="1920" data-height="1200" data-duration="7.04">
+
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.04" data-media-start="15.363" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.74,"v":1},{"t":7.04,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.808fc64441.mp3" data-start="0.6" data-duration="5.29" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="2.8" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="4.99" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u09-capsula-mayas-3","cinematica":"u09-capsula-mayas","part":3,"parts":5,"total":7.04,"meta":{"cinematica":"u09-capsula-mayas","titulo":"Mayas y aztecas","tipo":"capsula","unidad":"¡Viva México!","numero":9,"lugar":"Yucatán","pluma":"Pluma de la Memoria","plumaNum":9,"rotulo":"","region":"mexico"},"plans":[{"n":3,"t0":0,"t1":6.79,"vista":"À l’équinoxe de printemps ou d’automne, une ombre en dents de scie descend l’escalier nord de la pyramide et rejoint la tête de serpent en pierre au pied de l’escalier.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En primavera y en otoño, la sombra de una serpiente baja por la pirámide: es Kukulcán.","key":"narrador.808fc64441","t":0.6,"d":5.29,"words":[{"w":"En","t":0.6,"d":0.177},{"w":"primavera","t":0.777,"d":0.542},{"w":"y","t":1.319,"d":0.125},{"w":"en","t":1.444,"d":0.177},{"w":"otoño,","t":1.621,"d":0.333},{"w":"la","t":2.273,"d":0.163},{"w":"sombra","t":2.436,"d":0.354},{"w":"de","t":2.789,"d":0.163},{"w":"una","t":2.952,"d":0.21},{"w":"serpiente","t":3.162,"d":0.497},{"w":"baja","t":3.66,"d":0.258},{"w":"por","t":3.918,"d":0.21},{"w":"la","t":4.129,"d":0.163},{"w":"pirámide:","t":4.291,"d":0.45},{"w":"es","t":4.988,"d":0.2},{"w":"Kukulcán.","t":5.188,"d":0.553}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":2.8,"f":"rpg/spell-magic"},{"t":4.99,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); if (Cap) Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        var T1 = C.planOf(PLAN, PLAN.plans[0].n), L = T1.lines[0], W = T;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Mayas y aztecas", 0.15);
+        var N = PLAN.plans[0].n;
+        var wt = function (k) { return C.wordT(PLAN, N, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paperIn = function (el, y0, at, rot) { tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + 160, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y0, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, at); };
+        var pw = 900, px0 = 880, py0 = 270;
+        var pyr = mk(p1, "fac cap-paper", Q.yuPyramidSide({ width: pw })); gsap.set(pyr, { x: px0, y: py0 });
+        paperIn(pyr, py0, 0.3, -2);
+        // le soleil (disque + rayons doux) a gauche de la pyramide
+        var sun = mk(p1, "sun", '<svg width="260" height="260" viewBox="-130 -130 260 260"><g id="srays" fill="#FFE9A8" opacity=".8">' + [0, 1, 2, 3, 4, 5, 6, 7].map(function (i) { return '<path d="M-10 -120L10 -120L0 -78Z" transform="rotate(' + i * 45 + ')"/>'; }).join("") + '</g><circle r="62" fill="#FFC83D"/><circle r="62" fill="none" stroke="#FFF3B0" stroke-width="8"/></svg>'); gsap.set(sun, { x: 520, y: 380 });
+        paperIn(sun, 380, 0.5, -10);
+        tl.to("#srays", { rotation: 45, svgOrigin: "0 0", duration: W, ease: "none" }, 0.5);
+        var tPr = wt(2), tOt = wt(5), tSom = wt(7), tSer = wt(10), tBaja = wt(11), tKu = wt(16);
+        var chP = Cap.chip(p1, "primavera", 96, 560, "pink"); popS(chP, tPr - 0.05, -3);
+        var chO = Cap.chip(p1, "otoño", 96, 660, "terra"); popS(chO, tOt - 0.05, 3);
+        // l'ombre en dents de scie descend, du sommet vers le serpent de pierre
+        var zz = pyr.querySelectorAll(".yu-zz"), tZ0 = tBaja - 0.1, tZ1 = tKu - 0.5;
+        tl.set(zz, { opacity: 0 }, 0);
+        zz.forEach(function (z, i) { tl.fromTo(z, { opacity: 0, scale: 0.2, svgOrigin: "340 " + (140 + i * 58) }, { opacity: 0.82, scale: 1, svgOrigin: "340 " + (140 + i * 58), duration: 0.35, ease: "back.out(1.6)", immediateRender: false }, tZ0 + (i / (zz.length - 1)) * (tZ1 - tZ0)); });
+        var chS = Cap.chip(p1, "sombra", 520, 760, "gold"); popS(chS, tSom - 0.05, -2);
+        var chSe = Cap.chip(p1, "serpiente", 520, 860, "terra"); popS(chSe, tSer - 0.05, 2);
+        // la tete de pierre s'eveille : anneau doux + chip Kukulcan + plume
+        var hd = pyr.querySelector(".yu-head");
+        tl.fromTo(hd, { y: 0 }, { y: -10, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 1, immediateRender: false }, tKu);
+        var ring = mk(p1, "ring"); gsap.set(ring, { x: px0 + 290 * (pw / 800), y: py0 + 490 * (pw / 800) }); tl.fromTo(ring, { opacity: 0.9, scale: 0.6 }, { opacity: 0, scale: 2.6, duration: 0.9, ease: "power2.out", immediateRender: false }, tKu);
+        var chK = Cap.chip(p1, "Kukulcán", 1520, 330, "gold"); popS(chK, tKu - 0.05, -3);
+        var fe = mk(p1, "item", Q.featherSvg({ uid: "fk", width: 56, height: 168 })); gsap.set(fe, { x: 1760, y: 300, rotation: 24 }); popS(fe, tKu + 0.1, 8);
+        Cap.sparks(tl, p1, 1640, 370, tKu, 10, "#9bffd6");
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, W - 0.55);
+        C.frame(tl, root, PLAN, { seed: 31, fadeOut: 0.3 });
+        fitSubs(tl, root, PLAN, {});
+        window.__timelines["u09-capsula-mayas-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>
