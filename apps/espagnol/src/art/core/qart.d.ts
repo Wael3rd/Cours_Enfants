@@ -48,6 +48,8 @@ export const MAP_W: any;
 export function mapProj(...a: any[]): any;
 export const MAP_REGIONS: any;
 export const MAP_ROUTE: any;
+export const MAP_SPUR: any;
+export const MAP_SEGMENTS: any;
 export function mapRegion(...a: any[]): any;
 export function mapFogHtml(...a: any[]): any;
 export function cloudSvg(...a: any[]): any;

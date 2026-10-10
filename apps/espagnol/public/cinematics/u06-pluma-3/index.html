@@ -58,10 +58,7 @@
         C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
         var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
         firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("baires"));
-        // segment Madrid -> Buenos Aires (absent de la route de la carte)
         var A = Q.mapRegion("madrid"), B = Q.mapRegion("baires"), dx = B.x - A.x, dy = B.y - A.y, ln = Math.hypot(dx, dy), hh = ln * 0.22 * 0.9;
-        var sd = "M" + A.x + " " + A.y + "Q" + ((A.x + B.x) / 2 + (-dy / ln) * hh).toFixed(1) + " " + ((A.y + B.y) / 2 + (dx / ln) * hh).toFixed(1) + " " + B.x + " " + B.y;
-        sv.querySelector(".m-token").insertAdjacentHTML("beforebegin", '<g class="m-seg" data-from="madrid" data-to="baires"><path class="m-seg-path" d="' + sd + '" fill="none" stroke="none"/><path class="m-seg-dots" d="' + sd + '" fill="none" stroke="#FFF3D1" stroke-width="7" stroke-dasharray="0.1 17" stroke-linecap="round" opacity="0.9"/></g>');
         var mid = { x: (A.x + B.x) / 2 + 10, y: (A.y + B.y) / 2 };
         // camera : sur Madrid, recul, la carte « bascule » vers le sud (leger roulis) jusqu'a Buenos Aires
         Q.mapCamSet(gsap, mapbox, { x: A.x, y: A.y }, 3.0);

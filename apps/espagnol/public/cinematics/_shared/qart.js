@@ -647,8 +647,12 @@ const MAP_REGIONS = [
   { id: 'yucatan', n: 9, name: 'Yucatán', lon: -89.6, lat: 20.7, icon: 'piramide', color: PAL.quetzal2, label: 'top', r: 38 },
   { id: 'cusco', n: 10, name: 'Cusco', lon: -71.97, lat: -13.52, icon: 'machu', color: PAL.sol2, label: 'left', r: 40 },
 ];
-/** Ordre du voyage (la Nochebuena de la u06 = Madrid, deja presente). */
-const MAP_ROUTE = ['madrid', 'salamanca', 'sevilla', 'cdmx', 'oaxaca', 'valencia', 'baires', 'bogota', 'yucatan', 'cusco'];
+/** Ordre du voyage des unites principales u01-u10 (la Nochebuena de la u06 = retour a Madrid : meme medaillon, madrid y figure 2 fois). */
+const MAP_ROUTE = ['madrid', 'salamanca', 'sevilla', 'cdmx', 'valencia', 'madrid', 'baires', 'bogota', 'yucatan', 'cusco'];
+/** Branche de l'evenement (Oaxaca, hors route principale) : cdmx -> oaxaca -> valencia. */
+const MAP_SPUR = [['cdmx', 'oaxaca'], ['oaxaca', 'valencia']];
+/** Tous les segments tracables : [from, to] (route principale puis branche). */
+const MAP_SEGMENTS = MAP_ROUTE.slice(1).map((id, i) => [MAP_ROUTE[i], id]).concat(MAP_SPUR);
 function mapRegion(id) {
   const r = MAP_REGIONS.find((x) => x.id === id);
   if (!r) return null;
@@ -717,8 +721,8 @@ function worldMap(opts) {
   const landEdge = `<g fill="none" stroke="#9C4A2C" stroke-width="3.2" stroke-linejoin="round" opacity=".9">${allLand}</g>`;
   const hatch = `<g fill="url(#${g('hatch')})" opacity=".5">${allLand}</g>`;
   const segs = [];
-  for (let i = 0; i < MAP_ROUTE.length - 1; i++) {
-    const a = mapRegion(MAP_ROUTE[i]), b = mapRegion(MAP_ROUTE[i + 1]);
+  for (let i = 0; i < MAP_SEGMENTS.length; i++) {
+    const a = mapRegion(MAP_SEGMENTS[i][0]), b = mapRegion(MAP_SEGMENTS[i][1]);
     const d = segPath(a, b, i % 2 ? -1 : 1), lit = st(a) !== 'locked' && st(b) !== 'locked';
     segs.push(`<g class="m-seg" data-from="${a.id}" data-to="${b.id}"><path class="m-seg-path" d="${d}" fill="none" stroke="none"/>
 <path class="m-seg-dots" d="${d}" fill="none" stroke="#FFF3D1" stroke-width="7" stroke-dasharray="0.1 17" stroke-linecap="round" opacity="${lit ? 0.9 : 0.28}"/></g>`);
@@ -4127,5 +4131,5 @@ function cuProp(key, opts) {
   }
 }
 
-window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,FILETE_PAL,fileteFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,COLOMBIA_PAL,ANDES_PAL,chakanaPath,colombiaFrieze,andesFrieze,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica,coyoacanSkyline,PLAZA,plazaHidalgo,casaAzulFachada,mxBalloonSvg,CASAP,casaAzulPatio,autorretrato,mxProp,ofrendaSvg,oxProp,oxSeal,OAXACA_SKY,oaxacaSkyline,oaxacaStall,OX_PATIO,patioOfrenda,oaxacaPetalPath,bogotaSkyline,CALLE,calleCandelaria,bgSignPost,bgCityMap,bgLetterSvg,bgColombiaMap,bgOroVitrina,bgTeleferico,bgPlazaCard,bgStreetCard,bgCyclist,bgWalker,bgCiclovia,vlDigital,vlAlarm,vlClock,vlPaella,vlSkyline,VLPLAZA,vlPlaza,vlProp,vlCrowd,MN_PLAZA,mnPlaza,mnSkyline,mnProp,yucatanSkyline,SELVA,selvaSentier,yuGlyph,CASTILLO,elCastillo,CIMA,templeCima,CENOTE,cenote,yuFlamingo,yuPyramidPlan,yuPyramidSide,yuTenochtitlan,yuCiudad,yuFood,baSkyline,BA_CAM,baCaminito,BA_TEL,baSanTelmo,baPareja,baProp,baArgentina,cuLlama,cuCondor,CUSCO,cuscoSkyline,PLAZA_ARMAS,plazaDeArmas,ESCAL,escalinata,MUROS,murosIncas,VISTA,andesVista,MACHU,machuPicchu,PERU_VIEW,peruProj,peruMap,cuProp};
+window.QArt = {PAL,RARITY,clamp,esc,uid,rng,hex2rgb,rgb2hex,mix,shade,r1,smooth,azulejoPattern,azulejoDataUri,papelPicado,FRIEZE_PAL,azulejoFrieze,FILETE_PAL,fileteFrieze,bunting,paperGrainFilter,cornerOrnament,QUETZAL_PIVOT,quetzal,QUETZAL_POSES,quetzalSet,quetzalPoseTo,quetzalFlap,quetzalTalk,quetzalBlink,quetzalSway,quetzalRegrow,COLOMBIA_PAL,ANDES_PAL,chakanaPath,colombiaFrieze,andesFrieze,SOMBRA_PIVOT,sombra,sombraFloat,sombraEyes,sombraDissolve,MONUMENTS,monument,monumentSvg,MAP_W,mapProj,MAP_REGIONS,MAP_ROUTE,MAP_SPUR,MAP_SEGMENTS,mapRegion,mapFogHtml,cloudSvg,worldMap,mapCam,mapCamTo,mapCamMove,mapCamSet,mapFogClear,mapFogDrift,mapPulse,mapTravel,explainerMap,explainerReveal,sparklePath,SKY,madridSkyline,ROOM,academiaRoom,featherSvg,flagSvg,moteField,CHAR_PIVOT,CHARS,character,charTalk,charBlink,charIdle,charWalk,charWave,charEmote,charNod,prop,storkSvg,frozenKid,fachadaUniversidad,salamancaSkyline,PATIO,colegioPatio,AULA,aula,sevillaSkyline,CALLEJON,callejonTriana,PATIOA,patioAndaluz,TALLER,tallerCeramica,coyoacanSkyline,PLAZA,plazaHidalgo,casaAzulFachada,mxBalloonSvg,CASAP,casaAzulPatio,autorretrato,mxProp,ofrendaSvg,oxProp,oxSeal,OAXACA_SKY,oaxacaSkyline,oaxacaStall,OX_PATIO,patioOfrenda,oaxacaPetalPath,bogotaSkyline,CALLE,calleCandelaria,bgSignPost,bgCityMap,bgLetterSvg,bgColombiaMap,bgOroVitrina,bgTeleferico,bgPlazaCard,bgStreetCard,bgCyclist,bgWalker,bgCiclovia,vlDigital,vlAlarm,vlClock,vlPaella,vlSkyline,VLPLAZA,vlPlaza,vlProp,vlCrowd,MN_PLAZA,mnPlaza,mnSkyline,mnProp,yucatanSkyline,SELVA,selvaSentier,yuGlyph,CASTILLO,elCastillo,CIMA,templeCima,CENOTE,cenote,yuFlamingo,yuPyramidPlan,yuPyramidSide,yuTenochtitlan,yuCiudad,yuFood,baSkyline,BA_CAM,baCaminito,BA_TEL,baSanTelmo,baPareja,baProp,baArgentina,cuLlama,cuCondor,CUSCO,cuscoSkyline,PLAZA_ARMAS,plazaDeArmas,ESCAL,escalinata,MUROS,murosIncas,VISTA,andesVista,MACHU,machuPicchu,PERU_VIEW,peruProj,peruMap,cuProp};
 })();
