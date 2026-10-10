@@ -50,6 +50,14 @@
         <em>Partir</em>
       </div>
     </a>
+
+    <a class="card calcul" href="{base}calcul/" style="--i:2">
+      <div class="text">
+        <strong>Calcul — Entraînement</strong>
+        <span>Additions et soustractions, sans histoire ni décor</span>
+        <em>S'entraîner</em>
+      </div>
+    </a>
   </nav>
 
   <aside class="install">
@@ -83,7 +91,7 @@
   h1 { margin: 0; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 3.1rem); letter-spacing: 0.01em; }
   header p { margin: 4px 0 0; font-size: clamp(1rem, 2vw, 1.3rem); opacity: 0.8; }
 
-  .cards { width: 100%; max-width: 1180px; flex: 1 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2.4vw, 30px); min-height: min(52vh, 520px); }
+  .cards { width: 100%; max-width: 1180px; flex: 1 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; gap: clamp(14px, 2.4vw, 30px); min-height: min(52vh, 520px); }
   .card {
     position: relative; overflow: hidden; isolation: isolate; display: block;
     min-height: 300px; border-radius: 32px; color: #fff; text-decoration: none;
@@ -127,6 +135,14 @@
   .frieze :global(svg) { width: 100%; height: auto; display: block; }
   .espagnol .hero { width: 40%; height: 86%; right: 3%; bottom: 8%; }
 
+  /* Entraînement simple : carte sobre, sans décor */
+  .calcul { grid-column: 1 / -1; min-height: 0; background: #F6F3EA; color: #1B2430; box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3); }
+  .calcul .text { position: static; padding: clamp(16px, 2.2vw, 26px); }
+  .calcul .text strong { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: clamp(1.5rem, 3vw, 2.2rem); color: #1D4ED8; text-shadow: none; }
+  .calcul .text span { max-width: none; color: #55606E; opacity: 1; }
+  .calcul .text em { background: #2563EB; color: #fff; box-shadow: none; font-family: 'Fredoka', sans-serif; font-weight: 600; }
+  .calcul:active { box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
+
   .install {
     width: 100%; max-width: 1180px; padding: 14px clamp(16px, 2.4vw, 28px); border-radius: 24px;
     background: rgba(255, 255, 255, 0.08); border: 2px dashed rgba(255, 255, 255, 0.28);
@@ -140,7 +156,7 @@
 
   /* Portrait / petit écran : cartes empilées */
   @media (max-aspect-ratio: 1/1), (max-width: 720px) {
-    .cards { grid-template-columns: 1fr; min-height: 0; }
+    .cards { grid-template-columns: 1fr; grid-template-rows: none; min-height: 0; }
     .card { min-height: clamp(250px, 34vh, 380px); }
     .maths .hero { width: 30%; height: 80%; }
     .espagnol .hero { width: 32%; }

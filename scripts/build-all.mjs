@@ -1,4 +1,4 @@
-// Construit les 3 apps dans UN site statique : dist/ = hub, dist/maths/, dist/espagnol/.
+// Construit les 4 apps dans UN site statique : dist/ = hub, dist/maths/, dist/espagnol/, dist/calcul/.
 import { rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -18,6 +18,7 @@ const targets = [
   { app: 'hub', out: dist },
   { app: 'maths', out: join(dist, 'maths') },
   { app: 'espagnol', out: join(dist, 'espagnol') },
+  { app: 'calcul', out: join(dist, 'calcul') },
 ];
 for (const { app, out } of targets) {
   console.log(`\n=== build ${app} -> ${out}`);
