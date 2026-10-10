@@ -9,7 +9,7 @@ import { dirname } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 mkdirSync(UNITS_DIR, { recursive: true });
-const names = readdirSync(dirname(fileURLToPath(import.meta.url))).filter((f) => /^[ue]\d\d\.mjs$/.test(f)).map((f) => f.slice(0, 3)).sort();
+const names = readdirSync(dirname(fileURLToPath(import.meta.url))).filter((f) => /^[ue]\d\d\.mjs$/.test(f)).map((f) => f.slice(0, 3)).sort((a, b) => (a[0] === b[0] ? a.localeCompare(b) : a[0] === 'u' ? -1 : 1)); // evenements apres les unites (ils reutilisent leur vocabulaire)
 for (const n of names) {
   const f = join(here, `${n}.mjs`);
   if (!existsSync(f)) continue;
