@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-pluma-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-madrid):not(.m-med-baires) { display: none; }
+      #mapbox .m-med text, #mapbox .m-compass { display: none; }
+      .holo { position: absolute; left: 0; top: 0; z-index: 8; width: 300px; height: 330px; opacity: 0; }
+      .holo .hb { position: absolute; left: 0; top: 0; width: 300px; height: 280px; opacity: .82; }
+      .holo .hg { position: absolute; left: -20px; top: 230px; width: 340px; height: 90px; border-radius: 50%; background: radial-gradient(closest-side, rgba(111,231,220,.8), rgba(111,231,220,0)); }
+      .holo .hl { position: absolute; left: 0; top: 0; width: 300px; height: 280px; background: repeating-linear-gradient(0deg, rgba(20,60,90,.18) 0 3px, rgba(20,60,90,0) 3px 9px); }
+      .para { position: absolute; left: 0; top: 0; z-index: 9; width: 420px; height: 220px; opacity: 0; }
+      .mar { position: absolute; left: 0; top: 0; z-index: 8; width: 300px; height: 280px; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-pluma-3" data-start="0" data-width="1920" data-height="1200" data-duration="7.789">
+      <div id="p3" style="position:absolute;inset:0;overflow:hidden"><div id="mapbox" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.789" data-media-start="12.167" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.589,"v":1},{"t":7.789,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/ignacio.aa544d6427.mp3" data-start="0.6" data-duration="5.639" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.8" data-duration="0.465" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="6.339" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-pluma-3","cinematica":"u06-pluma","part":3,"parts":3,"total":7.789,"meta":{"cinematica":"u06-pluma","titulo":"Sexta pluma","tipo":"pluma","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":3,"t0":0,"t1":7.539,"vista":"Don Ignacio en hologramme, en short et sous un parasol, ce qui fait rire Marina ; la carte bascule vers l’hémisphère sud.","camara":"","rotulo":"","personajes":["ignacio"],"lines":[{"who":"ignacio","es":"La siguiente pluma está en Buenos Aires. Allí, en enero, ¡es verano!","key":"ignacio.aa544d6427","t":0.6,"d":5.639,"words":[{"w":"La","t":0.6,"d":0.233},{"w":"siguiente","t":0.833,"d":0.712},{"w":"pluma","t":1.545,"d":0.438},{"w":"está","t":1.984,"d":0.37},{"w":"en","t":2.354,"d":0.233},{"w":"Buenos","t":2.587,"d":0.507},{"w":"Aires.","t":3.093,"d":0.438},{"w":"Allí,","t":3.883,"d":0.37},{"w":"en","t":4.582,"d":0.197},{"w":"enero,","t":4.779,"d":0.371},{"w":"¡es","t":5.47,"d":0.195},{"w":"verano!","t":5.665,"d":0.424}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.8,"f":"rpg/spell-cast"},{"t":6.339,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var w = function (k) { return C.wordT(PLAN, 3, 1, k); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "current", salamanca: "done", sevilla: "done", cdmx: "done", oaxaca: "done", valencia: "done", baires: "open" }, player: "madrid", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("baires"));
+        // segment Madrid -> Buenos Aires (absent de la route de la carte)
+        var A = Q.mapRegion("madrid"), B = Q.mapRegion("baires"), dx = B.x - A.x, dy = B.y - A.y, ln = Math.hypot(dx, dy), hh = ln * 0.22 * 0.9;
+        var sd = "M" + A.x + " " + A.y + "Q" + ((A.x + B.x) / 2 + (-dy / ln) * hh).toFixed(1) + " " + ((A.y + B.y) / 2 + (dx / ln) * hh).toFixed(1) + " " + B.x + " " + B.y;
+        sv.querySelector(".m-token").insertAdjacentHTML("beforebegin", '<g class="m-seg" data-from="madrid" data-to="baires"><path class="m-seg-path" d="' + sd + '" fill="none" stroke="none"/><path class="m-seg-dots" d="' + sd + '" fill="none" stroke="#FFF3D1" stroke-width="7" stroke-dasharray="0.1 17" stroke-linecap="round" opacity="0.9"/></g>');
+        var mid = { x: (A.x + B.x) / 2 + 10, y: (A.y + B.y) / 2 };
+        // camera : sur Madrid, recul, la carte « bascule » vers le sud (leger roulis) jusqu'a Buenos Aires
+        Q.mapCamSet(gsap, mapbox, { x: A.x, y: A.y }, 3.0);
+        Q.mapCamMove(tl, mapbox, mid, 0.95, P.t0 + 0.1, 1.8, "power2.inOut");
+        tl.fromTo(mapbox, { rotation: 0, transformOrigin: "50% 50%" }, { rotation: -4, duration: 2.4, ease: "sine.inOut" }, L.t + 1.2);
+        Q.mapFogDrift(tl, mapbox, 0, T);
+        Q.mapPulse(tl, mapbox, 0, 3, 0.9);
+        var tT = L.t + 2.4, dT = Math.max(1.8, T - tT - 1.9);
+        Q.mapTravel(tl, mapbox, "madrid", "baires", tT, dT, gsap);
+        Q.mapCamMove(tl, mapbox, { x: B.x - 60, y: B.y - 40 }, 1.8, tT + dT * 0.35, dT * 0.65 + 0.5, "power1.inOut");
+        Q.mapFogClear(tl, mapbox, "baires", tT + dT - 0.2, 1.2);
+        // Don Ignacio en hologramme : lunettes de soleil, parasol
+        var ho = mk($("#p3"), "holo", '<div class="hb">' + Q.character("ignacio", { view: "bust", width: 300, uid: "hg" }) + '</div><div class="hl"></div><div class="hg"></div>'); ho.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        var head = ho.querySelector(".c-head");
+        head.insertAdjacentHTML("beforeend", '<g><rect x="116" y="176" width="74" height="42" rx="16" fill="#14173F"/><rect x="210" y="176" width="74" height="42" rx="16" fill="#14173F"/><path d="M190 190H210" stroke="#14173F" stroke-width="6"/><path d="M126 186l22 -6M220 186l22 -6" stroke="#6FE7DC" stroke-width="5" stroke-linecap="round" opacity=".8"/></g>');
+        gsap.set(ho, { x: 1440, y: 400 });
+        var pa = mk($("#p3"), "para", '<svg width="420" height="220" viewBox="0 0 420 220" style="overflow:visible"><path d="M210 214V60" stroke="#E6CE9F" stroke-width="8"/>' + [0, 1, 2, 3, 4, 5].map(function (i) { var a0 = Math.PI + i * (Math.PI / 6), a1 = a0 + Math.PI / 6; return '<path d="M210 76L' + (210 + Math.cos(a0) * 200).toFixed(1) + " " + (76 + Math.sin(a0) * 76).toFixed(1) + "Q" + (210 + Math.cos((a0 + a1) / 2) * 214).toFixed(1) + " " + (76 + Math.sin((a0 + a1) / 2) * 98).toFixed(1) + " " + (210 + Math.cos(a1) * 200).toFixed(1) + " " + (76 + Math.sin(a1) * 76).toFixed(1) + 'Z" fill="' + (i % 2 ? "#FFFDF4" : "#D81E3A") + '"/>'; }).join("") + '<circle cx="210" cy="-4" r="8" fill="#E6CE9F"/></svg>');
+        gsap.set(pa, { x: 1380, y: 290 });
+        tl.set([ho, pa], { opacity: 0 }, 0);
+        tl.fromTo(ho, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, L.t - 0.1);
+        tl.fromTo(pa, { opacity: 0, scale: 0.5, transformOrigin: "50% 100%" }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)", immediateRender: false }, w(8) - 0.3);
+        tl.to([ho, pa], { y: "-=10", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L.t, 1.1) + 1 }, L.t + 0.5);
+        C.talkBounce(tl, ho.querySelector(".hb"), L, 3);
+        tl.to([ho, pa], { opacity: 0, duration: 0.45, ease: "sine.in" }, T - 0.6);
+        // Marina eclate de rire (buste, en bas a gauche)
+        var ma = mk($("#p3"), "mar", '<div style="width:300px;height:280px">' + Q.character("marina", { view: "bust", width: 300, uid: "mb" }) + "</div>"); ma.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        gsap.set(ma, { x: 150, y: 560 });
+        var tM = w(10) - 0.1;
+        tl.set(ma, { opacity: 0 }, 0);
+        tl.fromTo(ma, { opacity: 0, scale: 0.6, y: 640 }, { opacity: 1, scale: 1, y: 560, duration: 0.5, ease: "back.out(1.7)", immediateRender: false }, tM);
+        Q.charEmote(tl, ma.querySelector("svg"), tM, "happy", 0.3);
+        Q.charTalk(tl, ma.querySelector("svg"), tM + 0.3, 1.6, 7);
+        tl.to(ma, { y: 548, duration: 0.2, ease: "sine.inOut", yoyo: true, repeat: 5 }, tM + 0.5);
+        tl.to(ma, { opacity: 0, duration: 0.4, ease: "sine.in" }, T - 0.6);
+        C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-pluma-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

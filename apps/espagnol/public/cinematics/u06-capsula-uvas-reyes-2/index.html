@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-capsula-uvas-reyes-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 8; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 60%); opacity: 0; z-index: 20; }
+      #subs .sub-txt { font-size: 44px; max-width: 1640px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-capsula-uvas-reyes-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.821">
+      <div id="p1" data-layout-allow-overflow></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.821" data-media-start="8.77" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.521,"v":1},{"t":8.821,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.9c0765d866.mp3" data-start="0.4" data-duration="7.771" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/bell.mp3" data-start="2.002" data-duration="1.741" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="4.946" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="5.566" data-duration="0.1" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="7.405" data-duration="0.121" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-capsula-uvas-reyes-2","cinematica":"u06-capsula-uvas-reyes","part":2,"parts":5,"total":8.821,"meta":{"cinematica":"u06-capsula-uvas-reyes","titulo":"Las doce uvas y los Reyes Magos","tipo":"capsula","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":2,"t0":0,"t1":8.571,"vista":"Douze raisins dans un gobelet ; l’horloge sonne : un raisin disparaît à chaque coup, un compteur de 1 à 12 et douze mois du calendrier.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"A medianoche suenan doce campanadas. Con cada campanada, se come una uva: doce uvas, doce meses de suerte.","key":"narrador.9c0765d866","t":0.4,"d":7.771,"words":[{"w":"A","t":0.4,"d":0.149},{"w":"medianoche","t":0.549,"d":0.708},{"w":"suenan","t":1.257,"d":0.46},{"w":"doce","t":1.717,"d":0.335},{"w":"campanadas.","t":2.052,"d":0.708},{"w":"Con","t":3.735,"d":0.223},{"w":"cada","t":3.959,"d":0.274},{"w":"campanada,","t":4.233,"d":0.528},{"w":"se","t":4.946,"d":0.173},{"w":"come","t":5.119,"d":0.274},{"w":"una","t":5.393,"d":0.223},{"w":"uva:","t":5.616,"d":0.223},{"w":"doce","t":6.078,"d":0.283},{"w":"uvas,","t":6.361,"d":0.283},{"w":"doce","t":6.836,"d":0.283},{"w":"meses","t":7.119,"d":0.336},{"w":"de","t":7.455,"d":0.178},{"w":"suerte.","t":7.633,"d":0.388}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":2.002,"f":"rpg/bell"},{"t":4.946,"f":"ui/tick"},{"t":5.566,"f":"ui/pop"},{"t":7.405,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, P = PLAN.plans[0], L = P.lines[0], p1 = $("#p1");
+        var w = function (k) { return C.wordT(PLAN, P.n, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 40 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        // objet de papier decoupe : place en (x, y), apparition par ressort
+        var paper = function (html, x, y, cls) { var d = mk(p1, "prop cap-paper" + (cls ? " " + cls : ""), html); var sv = d.querySelector("svg"); if (sv) sv.setAttribute("data-layout-allow-overflow", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var appear = function (el, at, from) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + (from == null ? 90 : from), rotation: -2, scale: 0.92 }, { opacity: 1, y: y0, rotation: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, at); };
+        Cap.bg(root, p1);
+
+        Cap.title(tl, root, "MEDIANOCHE", "Las doce uvas", 0.25);
+        var months = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
+        // horloge + cloche (la cloche se balance a chaque coup)
+        var clk = paper(Q.mnProp("reloj", { width: 360, uid: "rj" }), 1040, 250); appear(clk, 0.3);
+        var bellW = paper(Q.prop("campana", { width: 210, uid: "bl" }), 1560, 250); appear(bellW, 0.4);
+        var hand = clk.querySelector(".mn-mh");
+        tl.fromTo(hand, { rotation: -18, svgOrigin: "150 150" }, { rotation: 0, svgOrigin: "150 150", duration: 2.4, ease: "none" }, 0.4);
+        // gobelet + douze raisins en tas
+        var cup = paper(Q.mnProp("vaso", { width: 200, uid: "vs" }), 130, 640); appear(cup, 0.5);
+        var rows = [[4, 560], [4, 512], [3, 464], [1, 416]], gr = [], gi = 0;
+        rows.forEach(function (r) { for (var k = 0; k < r[0]; k++) { var gx = 230 - (r[0] - 1) * 26 + k * 52 - 28; var g = paper(Q.mnProp("uva", { width: 56, uid: "uv" + gi }), gx, r[1] + 0); gr.push(g); appear(g, 0.7 + gi * 0.04, 40); gi++; } });
+        // compteur 1 -> 12 : un chiffre par coup (empiles, par transform / opacity)
+        var nums = [];
+        for (var n = 1; n <= 12; n++) { var d = mk(p1, "", String(n)); d.style.cssText = "position:absolute;left:520px;top:400px;width:380px;text-align:center;font:400 250px/1 'Alfa Slab One',serif;color:#f5e6c8;text-shadow:0 10px 0 #d81e3a,0 18px 0 rgba(0,0,0,.35);z-index:10"; d.removeAttribute("data-layout-ignore"); d.setAttribute("data-layout-allow-overlap", ""); nums.push(d); tl.set(d, { opacity: 0, scale: 0.6 }, 0); }
+        // douze mois
+        var tiles = [];
+        for (var m = 0; m < 12; m++) { var t = mk(p1, "", months[m]); t.removeAttribute("data-layout-ignore"); t.style.cssText = "position:absolute;left:0;top:0;width:112px;height:80px;border-radius:18px;background:#1d2160;border:5px solid #5a62b8;color:#f5e6c8;font:900 36px/70px Nunito,sans-serif;text-align:center;z-index:10;box-shadow:0 6px 0 rgba(0,0,0,.35)"; gsap.set(t, { x: 440 + m * 118, y: 790 }); tiles.push(t); }
+        // les douze coups, espaces de 0.52 s
+        var t0 = w(6) - 0.4, gap = 0.52;
+        for (var i = 0; i < 12; i++) {
+          var at = t0 + i * gap;
+          tl.to(bellW.querySelector(".pr-bell"), { rotation: i % 2 ? -9 : 9, svgOrigin: "150 34", duration: gap * 0.9, ease: "sine.inOut" }, at);
+          tl.to(gr[i], { scale: 0, opacity: 0, duration: 0.3, ease: "back.in(1.6)" }, at + 0.06);
+          tl.to(nums[i], { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, at + 0.02);
+          if (i < 11) tl.to(nums[i], { opacity: 0, scale: 0.8, duration: 0.2, ease: "power1.in" }, at + gap - 0.05);
+          tl.to(tiles[i], { backgroundColor: "#ffc83d", borderColor: "#fff3d1", color: "#14173f", scale: 1.1, duration: 0.3, ease: "back.out(2)" }, at + 0.08);
+          if (i % 3 === 0) C.bloom(tl, "#bloom", at, 0.14, 0.3, 0.3);
+        }
+        Cap.sparks(tl, p1, 1230, 400, w(18), 8, "#ffe9a8");
+        var cc = Cap.chip(p1, "doce meses de suerte", 520, 690, "gold"); popS(cc, w(15) + 0.0, -2);
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-capsula-uvas-reyes-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="10.44">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.44" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":10.14,"v":1},{"t":10.44,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/nacho.ebf4f0da01.mp3" data-start="0.5" data-duration="6.29" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-1-2" src="./assets/voz/marina.6ddbeef6e1.mp3" data-start="7.09" data-duration="2.7" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-00.mp3" data-start="0.1" data-duration="0.233" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.4" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="7.04" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="10.14" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-historia-1","cinematica":"u06-historia","part":1,"parts":6,"total":10.44,"meta":{"cinematica":"u06-historia","titulo":"Madrid a oscuras","tipo":"historia","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":1,"t0":0,"t1":10.19,"vista":"Plaza Mayor, marché de Noël : les lumières sont éteintes, les stands à peine éclairés par des bougies. Nacho arrive en trottinette devant Álex, Marina et le Quetzal.","camara":"plan large puis champ / contre-champ","rotulo":"","personajes":["nacho","marina","quetzal","viajero"],"lines":[{"who":"nacho","es":"¡Hola otra vez, viajeros! ¡Madrid está a oscuras! Las luces de Navidad están apagadas.","key":"nacho.ebf4f0da01","t":0.5,"d":6.29,"words":[{"w":"¡Hola","t":0.5,"d":0.242},{"w":"otra","t":0.742,"d":0.242},{"w":"vez,","t":0.984,"d":0.197},{"w":"viajeros!","t":1.36,"d":0.569},{"w":"¡Madrid","t":2.851,"d":0.329},{"w":"está","t":3.179,"d":0.24},{"w":"a","t":3.419,"d":0.107},{"w":"oscuras!","t":3.526,"d":0.373},{"w":"Las","t":4.871,"d":0.203},{"w":"luces","t":5.073,"d":0.295},{"w":"de","t":5.368,"d":0.157},{"w":"Navidad","t":5.525,"d":0.387},{"w":"están","t":5.912,"d":0.295},{"w":"apagadas.","t":6.207,"d":0.433}]},{"who":"marina","es":"¿A oscuras? ¡Pero si es Navidad!","key":"marina.6ddbeef6e1","t":7.09,"d":2.7,"words":[{"w":"¿A","t":7.09,"d":0.162},{"w":"oscuras?","t":7.252,"d":0.565},{"w":"¡Pero","t":8.705,"d":0.245},{"w":"si","t":8.95,"d":0.154},{"w":"es","t":9.104,"d":0.154},{"w":"Navidad!","t":9.259,"d":0.381}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/step-00"},{"t":0.4,"f":"ui/pop"},{"t":7.04,"f":"ui/pop"},{"t":10.14,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        tl.set(LIGHTS.concat(TREE, STAR), { opacity: 0 }, 0);
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0], L2 = P.lines[1];
+        var ale = S.chr(room.actors, "viajero", 760, 1040, 330), mar = S.chr(room.actors, "marina", 940, 1030, 322);
+        S.breathe(tl, ale, 0, T, 0.8); S.breathe(tl, mar, 0.2, T, 0.8);
+        Q.charBlink(tl, ale.svg, 2.4); Q.charBlink(tl, mar.svg, 4.1);
+        // le Quetzal sur l'epaule de Marina, penche (il a froid), clignements
+        var qz = S.quetzal(room.actors, 1010, 800, 190, "perched", false, "qh1");
+        Q.quetzalSway(tl, qz, 0.3, T - 0.5, 1);
+        Q.quetzalBlink(tl, qz, 1.8); Q.quetzalBlink(tl, qz, 5.4);
+        // Nacho arrive en trottinette par la droite (la trottinette glisse sous ses pieds)
+        var nac = S.chr(room.actors, "nacho", 3100, 1045, 330);
+        var sc = S.mk(nac.el, "", '<svg width="440" height="110" viewBox="0 0 440 110" style="overflow:visible"><rect x="20" y="8" width="400" height="22" rx="11" fill="#C9573B"/><rect x="20" y="8" width="400" height="7" rx="3" fill="#FFC83D" opacity=".8"/><circle cx="76" cy="66" r="34" fill="#2A2358"/><circle cx="76" cy="66" r="13" fill="#C9C5C0"/><circle cx="364" cy="66" r="34" fill="#2A2358"/><circle cx="364" cy="66" r="13" fill="#C9C5C0"/><path d="M360 40L392 -290" stroke="#9AA3C7" stroke-width="14" stroke-linecap="round"/><path d="M366 -292h66" stroke="#2A2358" stroke-width="16" stroke-linecap="round"/></svg>');
+        sc.setAttribute("data-layout-allow-overflow", ""); sc.style.cssText = "position:absolute;left:-52px;top:" + Math.round(330 * 1.65 * 0.93) + "px;width:440px;height:110px";
+        var xN = 1330;
+        tl.fromTo(nac.el, { x: 3100 - nac.cx }, { x: xN - nac.cx, duration: 1.5, ease: "power2.out" }, 0);
+        tl.fromTo(nac.b, { rotation: -7, transformOrigin: "50% 100%" }, { rotation: 0, duration: 1.5, ease: "power2.out" }, 0);
+        S.breathe(tl, nac, 1.6, T - 1.6, 0.8); Q.charBlink(tl, nac.svg, 3.0);
+        C.talkChar(tl, nac, L1); Q.charWave(tl, nac.svg, L1.t + 0.4, 1.0, "L"); Q.charEmote(tl, nac.svg, L1.t, "happy", 0.3);
+        S.hop(tl, ale, 1.7, 22); S.hop(tl, mar, 1.8, 22);
+        // Marina : « ¿A oscuras ? ¡Pero si es Navidad! » (surprise puis inquietude)
+        C.talkChar(tl, mar, L2); Q.charEmote(tl, mar.svg, L2.t - 0.1, "worry", 0.3); Q.charEmote(tl, ale.svg, L2.t, "worry", 0.3);
+        Q.charNod(tl, nac.svg, L2.t + 1.2, 5, 0.2);
+        // camera : plan large de la place sombre -> pousse vers le groupe -> contre-champ sur Marina
+        S.camSet(room, 1700, 640, 0.66);
+        S.cam(tl, room, 1180, 780, 0.96, 0, 1.7, "sine.inOut");
+        S.cam(tl, room, 1000, 800, 1.12, L2.t - 0.3, 1.0, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

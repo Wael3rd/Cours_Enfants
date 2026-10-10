@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-capsula-uvas-reyes-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 8; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 60%); opacity: 0; z-index: 20; }
+      #subs .sub-txt { font-size: 44px; max-width: 1640px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-capsula-uvas-reyes-4" data-start="0" data-width="1920" data-height="1200" data-duration="9.361">
+      <div id="p1" data-layout-allow-overflow></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.361" data-media-start="28.664" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.061,"v":1},{"t":9.361,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.637edfb768.mp3" data-start="0.4" data-duration="8.311" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.413" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="6.072" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="6.488" data-duration="0.1" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="7.326" data-duration="0.1" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-capsula-uvas-reyes-4","cinematica":"u06-capsula-uvas-reyes","part":4,"parts":5,"total":9.361,"meta":{"cinematica":"u06-capsula-uvas-reyes","titulo":"Las doce uvas y los Reyes Magos","tipo":"capsula","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":4,"t0":0,"t1":9.111,"vista":"Une cabalgata dans la nuit : trois rois sur des chars, chameaux en carton, bonbons lancés à la foule ; calendrier « 5 de enero ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El cinco de enero hay cabalgatas en muchas ciudades. Los Reyes Magos, Melchor, Gaspar y Baltasar, llegan con regalos.","key":"narrador.637edfb768","t":0.4,"d":8.311,"words":[{"w":"El","t":0.4,"d":0.184},{"w":"cinco","t":0.584,"d":0.347},{"w":"de","t":0.931,"d":0.184},{"w":"enero","t":1.116,"d":0.347},{"w":"hay","t":1.463,"d":0.239},{"w":"cabalgatas","t":1.701,"d":0.618},{"w":"en","t":2.319,"d":0.184},{"w":"muchas","t":2.503,"d":0.401},{"w":"ciudades.","t":2.904,"d":0.51},{"w":"Los","t":4.413,"d":0.237},{"w":"Reyes","t":4.65,"d":0.345},{"w":"Magos,","t":4.995,"d":0.345},{"w":"Melchor,","t":5.54,"d":0.453},{"w":"Gaspar","t":6.122,"d":0.415},{"w":"y","t":6.538,"d":0.135},{"w":"Baltasar,","t":6.673,"d":0.528},{"w":"llegan","t":7.376,"d":0.434},{"w":"con","t":7.81,"d":0.258},{"w":"regalos.","t":8.068,"d":0.493}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.413,"f":"ui/pop"},{"t":6.072,"f":"ui/pop"},{"t":6.488,"f":"ui/pop"},{"t":7.326,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, P = PLAN.plans[0], L = P.lines[0], p1 = $("#p1");
+        var w = function (k) { return C.wordT(PLAN, P.n, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 40 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        // objet de papier decoupe : place en (x, y), apparition par ressort
+        var paper = function (html, x, y, cls) { var d = mk(p1, "prop cap-paper" + (cls ? " " + cls : ""), html); var sv = d.querySelector("svg"); if (sv) sv.setAttribute("data-layout-allow-overflow", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var appear = function (el, at, from) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + (from == null ? 90 : from), rotation: -2, scale: 0.92 }, { opacity: 1, y: y0, rotation: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, at); };
+        Cap.bg(root, p1);
+
+        Cap.title(tl, root, "5 DE ENERO", "La cabalgata", 0.25);
+        // foule en silhouettes au premier plan (bonnets, echarpes)
+        var crowd = paper(Q.mnProp("multitud", { width: 1920, n: 24, seed: 9, uid: "cr4" }), 0, 735);
+        crowd.style.zIndex = 9;
+        tl.fromTo(crowd, { y: 735 + 120, opacity: 0 }, { y: 735, opacity: 1, duration: 0.7, ease: "back.out(1.3)", immediateRender: false }, 0.2);
+        // le defile : 3 chars (un roi chacun) + 2 chameaux en carton, qui glissent lentement vers la gauche
+        var row = mk(p1, "prop", ""); row.style.zIndex = 8; gsap.set(row, { x: 0, y: 0 });
+        var place = function (html, x, y) { var d = mk(row, "prop cap-paper", html); var sv = d.querySelector("svg"); if (sv) sv.setAttribute("data-layout-allow-overflow", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var fl = [], kg = [], FX = [130, 790, 1450], fy = 480;
+        FX.forEach(function (x, i) { fl.push(place(Q.mnProp("carroza", { width: 440, uid: "fl" + i }), x, fy)); kg.push(place(Q.mnProp("rey", { width: 92, v: i, uid: "rg" + i }), x + 174, fy - 14)); });
+        var cm = [place(Q.mnProp("camello", { width: 210, uid: "cm0" }), 560, fy + 100), place(Q.mnProp("camello", { width: 210, uid: "cm1" }), 1220, fy + 100)];
+        tl.set(row, { opacity: 0 }, 0);
+        tl.fromTo(row, { x: 260, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: "sine.out", immediateRender: false }, 0.4);
+        tl.to(row, { x: -150, duration: T - 1.3, ease: "none" }, 1.3);
+        fl.forEach(function (f, i) { tl.to([f, kg[i]], { y: "+=6", duration: 1.3 + i * 0.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.3 + i * 0.1) + 1 }, 0.5 + i * 0.2); });
+        // noms des rois : pastilles au-dessus des chars, a chaque nom prononce
+        [["Melchor", 13, "pink"], ["Gaspar", 14, "terra"], ["Baltasar", 16, ""]].forEach(function (r, i) {
+          var c = Cap.chip(p1, r[0], FX[i] + 110, 410, r[2]); c.style.zIndex = 12; popS(c, w(r[1]) - 0.05, i % 2 ? 3 : -3);
+          tl.fromTo(kg[i], { scale: 1 }, { scale: 1.08, duration: 0.25, ease: "back.out(2)", transformOrigin: "50% 100%", yoyo: true, repeat: 1, immediateRender: false }, w(r[1]));
+        });
+        var cdd = Cap.chip(p1, "5 de enero", 1500, 236, "gold"); popS(cdd, w(4) + 0.05, -2);
+        // bonbons lances a la foule (arcs, apparition >= 0.4 s)
+        var cols = ["#D93472", "#FFC83D", "#19B7AA", "#D81E3A", "#2F6FD0"];
+        for (var k = 0; k < 14; k++) {
+          var cd = mk(p1, "prop q-fx", Q.mnProp("caramelo", { width: 34, c: cols[k % 5], uid: "cd" + k })); var sx = 300 + (k % 3) * 640 + (k % 2) * 80, st = w(5) + k * 0.45;
+          tl.fromTo(cd, { x: sx, y: 560, opacity: 0, scale: 0.5, rotation: 0 }, { x: sx + 150 + (k % 4) * 40, y: 640 + (k % 3) * 40, opacity: 1, scale: 1, rotation: 200, duration: 0.8, ease: "power1.out", immediateRender: false }, st);
+          tl.to(cd, { x: sx + 230 + (k % 4) * 40, y: 800, opacity: 0, duration: 0.5, ease: "power1.in" }, st + 0.8);
+        }
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-capsula-uvas-reyes-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

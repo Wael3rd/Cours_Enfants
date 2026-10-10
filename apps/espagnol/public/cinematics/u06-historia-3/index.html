@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="5.569">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.569" data-media-start="19.03" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.269,"v":1},{"t":5.569,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/nacho.5d6ff2e483.mp3" data-start="0.5" data-duration="4.319" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="5.269" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-historia-3","cinematica":"u06-historia","part":3,"parts":6,"total":5.569,"meta":{"cinematica":"u06-historia","titulo":"Madrid a oscuras","tipo":"historia","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":2,"t0":0,"t1":5.319,"vista":"Le stand de Rosa, la churrera : de la vapeur, des churros dorés, personne dans la file. Rosa tend des tasses de chocolat chaud.","camara":"plan moyen sur le stand, buée des tasses","rotulo":"","personajes":["rosa","nacho"],"lines":[{"who":"nacho","es":"Y las campanadas no suenan. ¡Sin campanadas, no hay Nochevieja!","key":"nacho.5d6ff2e483","t":0.5,"d":4.319,"words":[{"w":"Y","t":0.5,"d":0.108},{"w":"las","t":0.608,"d":0.198},{"w":"campanadas","t":0.806,"d":0.514},{"w":"no","t":1.32,"d":0.153},{"w":"suenan.","t":1.473,"d":0.333},{"w":"¡Sin","t":2.805,"d":0.236},{"w":"campanadas,","t":3.041,"d":0.612},{"w":"no","t":3.847,"d":0.145},{"w":"hay","t":3.993,"d":0.188},{"w":"Nochevieja!","t":4.181,"d":0.488}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":5.269,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        tl.set(LIGHTS.concat(TREE, STAR), { opacity: 0 }, 0);
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0];
+        var nac = S.chr(room.actors, "nacho", 1900, 1035, 345), ale = S.chr(room.actors, "viajero", 1690, 1050, 320), mar = S.chr(room.actors, "marina", 2070, 1040, 318);
+        [nac, ale, mar].forEach(function (c, i) { S.breathe(tl, c, 0.1 * i, T, 0.7); Q.charBlink(tl, c.svg, 1.4 + i * 1.1); });
+        // la cloche muette de la tour de la Plaza Mayor : se balance sans sonner
+        var bell = mkp(room.qlayer, "", Q.prop("campana", { width: 170, tone: "muda", uid: "bm" }), 2815 - 85, 250);
+        var bg = bell.querySelector(".pr-bell");
+        tl.fromTo(bg, { rotation: -4, svgOrigin: "150 34" }, { rotation: 4, svgOrigin: "150 34", duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.6) + 1 }, 0);
+        // Nacho montre la tour du doigt, puis hausse les epaules
+        C.talkChar(tl, nac, L1); Q.charEmote(tl, nac.svg, L1.t, "worry", 0.3);
+        var wC = C.wordT(PLAN, 2, 1, 3), armR = nac.svg.querySelector(".c-armR");
+        tl.to(armR, { rotation: -150, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.4)" }, wC - 0.25);
+        tl.to(armR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, wC + 1.2);
+        var wS = C.wordT(PLAN, 2, 1, 5);
+        S.hop(tl, nac, wS + 0.1, 16);
+        Q.charNod(tl, mar.svg, wS + 0.4, 5, 0.2); Q.charEmote(tl, ale.svg, wS, "worry", 0.3);
+        // quelques notes de cloche fantomes (grises) qui montent sans bruit
+        var noteSvg = function (c) { return '<svg width="52" height="72" viewBox="0 0 52 72"><ellipse cx="14" cy="58" rx="13" ry="9" fill="' + c + '"/><rect x="23" y="8" width="5" height="50" fill="' + c + '"/><path d="M28 8Q50 16 45 38Q40 26 28 24Z" fill="' + c + '"/></svg>'; };
+        for (var n = 0; n < 4; n++) {
+          var nt = mkp(room.qlayer, "note", noteSvg("#8F93C7"), 2780 + n * 36, 430);
+          tl.fromTo(nt, { x: 2780 + n * 36, y: 440, opacity: 0 }, { x: 2740 + n * 70, y: 300 - n * 20, opacity: 0.55, duration: 0.9, ease: "sine.out", immediateRender: false }, wC + 0.5 + n * 0.45);
+          tl.to(nt, { opacity: 0, duration: 0.6 }, wC + 1.5 + n * 0.45);
+        }
+        S.camSet(room, 2080, 640, 0.9);
+        S.cam(tl, room, 2180, 620, 0.97, 0, T - 0.3, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 7, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

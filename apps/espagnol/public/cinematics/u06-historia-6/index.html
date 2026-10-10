@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-historia-6</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-historia-6" data-start="0" data-width="1920" data-height="1200" data-duration="8.846">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.846" data-media-start="40.025" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.646,"v":1},{"t":8.846,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.5e91d23079.mp3" data-start="0.5" data-duration="2.472" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/paloma.952da33227.mp3" data-start="3.272" data-duration="4.724" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="0.7" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.272" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="7.646" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-historia-6","cinematica":"u06-historia","part":6,"parts":6,"total":8.846,"meta":{"cinematica":"u06-historia","titulo":"Madrid a oscuras","tipo":"historia","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":4,"t0":0,"t1":8.596,"vista":"En haut du sapin, l’étoile est éteinte : un reflet vert y brille. Le Quetzal la montre du bec.","camara":"","rotulo":"","personajes":["quetzal","paloma"],"lines":[{"who":"quetzal","es":"La pluma está en la estrella del gran árbol.","key":"quetzal.5e91d23079","t":0.5,"d":2.472,"words":[{"w":"La","t":0.5,"d":0.166},{"w":"pluma","t":0.666,"d":0.312},{"w":"está","t":0.978,"d":0.263},{"w":"en","t":1.241,"d":0.166},{"w":"la","t":1.407,"d":0.166},{"w":"estrella","t":1.573,"d":0.459},{"w":"del","t":2.032,"d":0.215},{"w":"gran","t":2.246,"d":0.263},{"w":"árbol.","t":2.51,"d":0.312}]},{"who":"paloma","es":"Entonces, ¡ayudadnos! Tenemos que encender todas las luces.","key":"paloma.952da33227","t":3.272,"d":4.724,"words":[{"w":"Entonces,","t":3.272,"d":0.636},{"w":"¡ayudadnos!","t":4.12,"d":0.704},{"w":"Tenemos","t":5.736,"d":0.45},{"w":"que","t":6.186,"d":0.236},{"w":"encender","t":6.422,"d":0.503},{"w":"todas","t":6.925,"d":0.343},{"w":"las","t":7.268,"d":0.236},{"w":"luces.","t":7.503,"d":0.343}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/spell-magic"},{"t":0.7,"f":"ui/star"},{"t":3.272,"f":"ui/pop"},{"t":7.646,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        tl.set(LIGHTS.concat(TREE, STAR), { opacity: 0 }, 0);
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1];
+        var ale = S.chr(room.actors, "viajero", 1180, 1055, 322), mar = S.chr(room.actors, "marina", 1350, 1045, 318);
+        var pal = S.chr(room.actors, "paloma", 2060, 1045, 340), nac = S.chr(room.actors, "nacho", 1040, 1050, 326);
+        [ale, mar, pal, nac].forEach(function (c, i) { S.breathe(tl, c, 0.1 * i, T, 0.7); Q.charBlink(tl, c.svg, 1.3 + i * 1.0); });
+        // reflet vert dans l'etoile : halo doux qui respire (cycles >= 1.4 s, opacite <= .5)
+        var X = set.star.x, Y = set.star.y;
+        var gl = mkp(room.qlayer, "", '<svg width="420" height="420" viewBox="-210 -210 420 420"><defs><radialGradient id="gs"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".9"/><stop offset=".45" stop-color="#42E0A0" stop-opacity=".35"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs><circle r="210" fill="url(#gs)"/></svg>', X - 210, Y - 210);
+        tl.set(gl, { opacity: 0 }, 0);
+        tl.fromTo(gl, { opacity: 0, scale: 0.7 }, { opacity: 0.5, scale: 1, duration: 0.9, ease: "sine.inOut", immediateRender: false }, L1.t + 0.3);
+        tl.to(gl, { opacity: 0.2, scale: 0.92, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L1.t, 1.4) }, L1.t + 1.3);
+        // le Quetzal quitte l'epaule de Marina, monte vers l'etoile, la montre du bec
+        var qz = S.quetzal(room.actors, 1405, 800, 190, "perched", false, "qh4");
+        var tF = L1.t - 0.1;
+        Q.quetzalPoseTo(tl, qz, "fly", tF, 0.35);
+        Q.quetzalFlap(tl, qz, tF + 0.2, 8, 0.4, 0.9);
+        tl.to(qz, { x: X - 1405 - 90, y: Y + 150 - 800, duration: 1.5, ease: "power2.inOut" }, tF);
+        C.talkQuetzal(tl, qz, L1);
+        var tBack = L2.t - 0.1;
+        tl.to(qz, { x: 40, y: -40, duration: 1.1, ease: "power2.inOut" }, tBack);
+        Q.quetzalPoseTo(tl, qz, "perched", tBack + 0.6, 0.5);
+        // Paloma : « Entonces, ¡ayudadnos! » (les mains jointes puis le poing leve)
+        C.talkChar(tl, pal, L2); Q.charEmote(tl, pal.svg, L2.t, "happy", 0.3);
+        Q.charWave(tl, pal.svg, L2.t + 2.2, 0.9, "R");
+        Q.charNod(tl, ale.svg, L2.t + 3.0, 5, 0.2); S.hop(tl, mar, L2.t + 3.4, 18); Q.charEmote(tl, nac.svg, L2.t + 3.0, "happy", 0.3);
+        // camera : groupe -> monte vers l'etoile (tilt) -> redescend vers Paloma
+        S.camSet(room, 1400, 760, 0.82);
+        S.cam(tl, room, X, Y + 230, 0.92, L1.t - 0.1, 1.4, "power2.inOut");
+        S.cam(tl, room, 1680, 760, 0.9, L2.t - 0.15, 1.2, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 10, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-historia-6"] = tl;
+      })();
+    </script>
+  </body>
+</html>

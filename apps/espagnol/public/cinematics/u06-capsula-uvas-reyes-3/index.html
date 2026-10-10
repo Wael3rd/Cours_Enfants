@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-capsula-uvas-reyes-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 8; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 60%); opacity: 0; z-index: 20; }
+      #subs .sub-txt { font-size: 42px; max-width: 1640px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-capsula-uvas-reyes-3" data-start="0" data-width="1920" data-height="1200" data-duration="11.073">
+      <div id="p1" data-layout-allow-overflow></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="11.073" data-media-start="17.591" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":10.773,"v":1},{"t":11.073,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.f9461d05af.mp3" data-start="0.4" data-duration="10.123" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.607" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="4.84" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="9.983" data-duration="0.121" data-track-index="6" data-volume="0.45"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-capsula-uvas-reyes-3","cinematica":"u06-capsula-uvas-reyes","part":3,"parts":5,"total":11.073,"meta":{"cinematica":"u06-capsula-uvas-reyes","titulo":"Las doce uvas y los Reyes Magos","tipo":"capsula","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":3,"t0":0,"t1":10.823,"vista":"Un grand théâtre et des enfants en uniforme qui chantent des chiffres ; boules de loterie qui tournent ; affiche « 22 de diciembre ».","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El 22 de diciembre es el sorteo de la Lotería de Navidad. Unos niños cantan los números y los premios. El primer premio se llama «el Gordo».","key":"narrador.f9461d05af","t":0.4,"d":10.123,"words":[{"w":"El","t":0.4,"d":0.208},{"w":"22","t":0.608,"d":0.208},{"w":"de","t":0.815,"d":0.208},{"w":"diciembre","t":1.023,"d":0.635},{"w":"es","t":1.657,"d":0.208},{"w":"el","t":1.865,"d":0.208},{"w":"sorteo","t":2.073,"d":0.452},{"w":"de","t":2.524,"d":0.208},{"w":"la","t":2.732,"d":0.208},{"w":"Lotería","t":2.939,"d":0.513},{"w":"de","t":3.452,"d":0.208},{"w":"Navidad.","t":3.66,"d":0.513},{"w":"Unos","t":4.511,"d":0.33},{"w":"niños","t":4.84,"d":0.391},{"w":"cantan","t":5.231,"d":0.452},{"w":"los","t":5.683,"d":0.269},{"w":"números","t":5.951,"d":0.513},{"w":"y","t":6.464,"d":0.146},{"w":"los","t":6.61,"d":0.269},{"w":"premios.","t":6.879,"d":0.513},{"w":"El","t":8.363,"d":0.181},{"w":"primer","t":8.544,"d":0.393},{"w":"premio","t":8.938,"d":0.393},{"w":"se","t":9.331,"d":0.181},{"w":"llama","t":9.512,"d":0.34},{"w":"«el","t":9.852,"d":0.181},{"w":"Gordo».","t":10.033,"d":0.34}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.607,"f":"ui/pop"},{"t":4.84,"f":"ui/tick"},{"t":9.983,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, P = PLAN.plans[0], L = P.lines[0], p1 = $("#p1");
+        var w = function (k) { return C.wordT(PLAN, P.n, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 40 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        // objet de papier decoupe : place en (x, y), apparition par ressort
+        var paper = function (html, x, y, cls) { var d = mk(p1, "prop cap-paper" + (cls ? " " + cls : ""), html); var sv = d.querySelector("svg"); if (sv) sv.setAttribute("data-layout-allow-overflow", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var appear = function (el, at, from) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + (from == null ? 90 : from), rotation: -2, scale: 0.92 }, { opacity: 1, y: y0, rotation: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, at); };
+        Cap.bg(root, p1);
+
+        Cap.title(tl, root, "22 DE DICIEMBRE", "Lotería de Navidad", 0.25);
+        var th = paper(Q.mnProp("teatro", { width: 700, uid: "th" }), 90, 480); appear(th, 0.3);
+        // enfants en uniforme qui chantent (devant le theatre) : bouche = ellipse qui s'ouvre sur chaque mot
+        var kidsX = [120, 250, 380, 510, 640], hairs = ["#2A1A12", "#6B3E26", "#1E120C", "#C98A52", "#2A1A12"], kids = [];
+        kidsX.forEach(function (x, i) { var k = paper(Q.mnProp("coro", { width: 108, uid: "kd" + i, hair: hairs[i], skin: ["#E3AE86", "#D2956B", "#C98A5E", "#E3AE86", "#B9764A"][i], mouth: 4 }), x, 700 + (i % 2) * 14); appear(k, 0.7 + i * 0.1, 60); kids.push(k); });
+        for (var wi = 15; wi <= 20; wi++) kids.forEach(function (k, i) { var m = k.querySelector(".mn-mouth"); var tt = w(wi) + i * 0.02; tl.to(m, { scaleY: 1.9, svgOrigin: "50 66", duration: 0.12, ease: "sine.out" }, tt); tl.to(m, { scaleY: 1, svgOrigin: "50 66", duration: 0.14, ease: "sine.in" }, tt + 0.15); });
+        // bombo qui tourne + boules
+        var bo = paper(Q.mnProp("bombo", { width: 360, uid: "bb" }), 1180, 440); appear(bo, 0.6);
+        var dr = bo.querySelector(".mn-drum");
+        tl.to(dr, { rotation: 1080, svgOrigin: "180 170", duration: 7.2, ease: "none" }, w(7) - 0.3);
+        // pastilles : date, chiffres chantes, « el Gordo »
+        var cd = Cap.chip(p1, "22 de diciembre", 1250, 236, "gold"); popS(cd, w(1) + 0.05, -2);
+        var nums = ["07", "48", "13", "92"];
+        nums.forEach(function (n, i) { var c = Cap.chip(p1, n, 470 + i * 120, 600 - (i % 2) * 40, i % 2 ? "pink" : ""); c.style.fontSize = "46px"; popS(c, w(17) + i * 0.2, i % 2 ? 3 : -3); tl.to(c, { opacity: 0, scale: 0.6, duration: 0.3, ease: "back.in(1.5)" }, w(21) + 0.1); });
+        var g = paper(Q.mnProp("bolaLoteria", { width: 150, c: "#FFC83D", uid: "gb" }), 1620, 600);
+        tl.set(g, { opacity: 0 }, 0);
+        tl.fromTo(g, { opacity: 0, scale: 0.2, x: 1500, y: 560 }, { opacity: 1, scale: 1, x: 1620, y: 620, duration: 0.6, ease: "back.out(1.8)", immediateRender: false }, w(26) - 0.1);
+        tl.to(g, { y: 600, duration: 1.0, ease: "sine.inOut", yoyo: true, repeat: 2 }, w(26) + 0.6);
+        var cg = Cap.chip(p1, "el Gordo", 1560, 790, "gold"); popS(cg, w(26) + 0.1, 3);
+        Cap.sparks(tl, p1, 1695, 675, w(26), 10, "#ffe9a8");
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-capsula-uvas-reyes-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

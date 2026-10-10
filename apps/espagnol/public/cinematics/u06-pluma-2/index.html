@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="5.43">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.43" data-media-start="6.737" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.13,"v":1},{"t":5.43,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.2781c54cdc.mp3" data-start="0.5" data-duration="4.08" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.7" data-duration="0.465" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1.7" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="5.13" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-pluma-2","cinematica":"u06-pluma","part":2,"parts":3,"total":5.43,"meta":{"cinematica":"u06-pluma","titulo":"Sexta pluma","tipo":"pluma","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":2,"t0":0,"t1":5.18,"vista":"Le Quetzal volète autour du sapin, ses plumes brillent comme des guirlandes.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Seis plumas. ¡Mis alas brillan como las luces!","key":"quetzal.2781c54cdc","t":0.5,"d":4.08,"words":[{"w":"Seis","t":0.5,"d":0.426},{"w":"plumas.","t":0.926,"d":0.584},{"w":"¡Mis","t":2.553,"d":0.24},{"w":"alas","t":2.793,"d":0.295},{"w":"brillan","t":3.087,"d":0.458},{"w":"como","t":3.546,"d":0.295},{"w":"las","t":3.84,"d":0.24},{"w":"luces!","t":4.081,"d":0.349}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.7,"f":"rpg/spell-cast"},{"t":1.7,"f":"ui/star"},{"t":5.13,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0];
+        var X = set.star.x, DIM = room.back.querySelector(".mn-dim");
+        tl.set(DIM, { opacity: 0.08 }, 0);
+        var ale = S.chr(room.actors, "viajero", 1400, 1055, 330), mar = S.chr(room.actors, "marina", 1560, 1045, 326), pal = S.chr(room.actors, "paloma", 1900, 1040, 340);
+        [ale, mar, pal].forEach(function (c, i) { S.breathe(tl, c, 0.1 * i, T, 0.7); Q.charBlink(tl, c.svg, 1.4 + i * 0.9); Q.charEmote(tl, c.svg, 0, "happy", 0.3); });
+        // le Quetzal : boucle autour du sapin, plumes qui brillent comme des guirlandes (halo vert doux)
+        var BX = 1640, BY = 760;
+        var qz = S.quetzal(room.actors, BX, BY, 220, "fly", false, "qp2");
+        var hg = S.mk(qz, "", '<svg width="420" height="420" viewBox="-210 -210 420 420" style="overflow:visible"><defs><radialGradient id="gq"><stop offset="0" stop-color="#9BFFD6" stop-opacity=".7"/><stop offset=".5" stop-color="#42E0A0" stop-opacity=".25"/><stop offset="1" stop-color="#42E0A0" stop-opacity="0"/></radialGradient></defs><circle r="210" fill="url(#gq)"/></svg>');
+        hg.setAttribute("data-layout-allow-overflow", ""); hg.style.cssText = "position:absolute;left:-100px;top:-40px;width:420px;height:420px;z-index:-1;pointer-events:none";
+        tl.fromTo(hg, { opacity: 0.2 }, { opacity: 0.55, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.2) + 1 }, 0);
+        var pts = [[-360, -160], [-130, -450], [250, -360], [370, -60], [80, 100], [-230, 10], [0, -40]];
+        var t0 = 0.2, seg = (T - 0.6) / pts.length;
+        Q.quetzalFlap(tl, qz, 0.2, Math.floor(T / 0.42), 0.42, 0.8);
+        tl.to(qz, { keyframes: pts.map(function (p) { return { x: p[0], y: p[1], duration: seg, ease: "sine.inOut" }; }) }, t0);
+        C.talkQuetzal(tl, qz, L1);
+        // etincelles qui restent accrochees au sapin (apparition >= 0.4 s)
+        pts.forEach(function (p, i) {
+          var sp = mkp(room.qlayer, "", '<svg width="64" height="64" viewBox="-32 -32 64 64"><path d="' + Q.sparklePath(0, 0, 26, 6) + '" fill="#9BFFD6"/></svg>', BX + p[0] * 0.8 - 32, BY + p[1] * 0.8 - 100);
+          sp.className += " q-fx"; var ts = t0 + i * seg;
+          tl.fromTo(sp, { scale: 0, opacity: 0, rotation: 0 }, { scale: 0.9, opacity: 1, rotation: 40, duration: 0.45, ease: "sine.out", immediateRender: false }, ts + 0.2);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.5, ease: "sine.in" }, ts + 0.8);
+        });
+        S.hop(tl, ale, 2.2, 20); S.hop(tl, mar, 2.5, 20); Q.charWave(tl, pal.svg, 1.2, 1.2, "R");
+        S.camSet(room, 1620, 560, 0.8);
+        S.cam(tl, room, 1640, 540, 0.9, 0, T - 0.3, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 13, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

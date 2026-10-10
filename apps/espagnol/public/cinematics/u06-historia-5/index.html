@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="6.807">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.807" data-media-start="33.218" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.507,"v":1},{"t":6.807,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/paloma.8acab5433c.mp3" data-start="0.5" data-duration="5.557" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="6.507" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-historia-5","cinematica":"u06-historia","part":5,"parts":6,"total":6.807,"meta":{"cinematica":"u06-historia","titulo":"Madrid a oscuras","tipo":"historia","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":3,"t0":0,"t1":6.557,"vista":"Au centre de la place, un immense sapin éteint. Une ombre noire éteint une à une les dernières guirlandes. Paloma, la vendeuse de loterie, serre ses billets contre elle.","camara":"","rotulo":"","personajes":["sombra","paloma"],"lines":[{"who":"paloma","es":"¡Esa Sombra se lleva hasta mis villancicos! Chicos, hay que encender las luces.","key":"paloma.8acab5433c","t":0.5,"d":5.557,"words":[{"w":"¡Esa","t":0.5,"d":0.23},{"w":"Sombra","t":0.73,"d":0.387},{"w":"se","t":1.117,"d":0.178},{"w":"lleva","t":1.295,"d":0.335},{"w":"hasta","t":1.629,"d":0.335},{"w":"mis","t":1.964,"d":0.23},{"w":"villancicos!","t":2.194,"d":0.648},{"w":"Chicos,","t":3.753,"d":0.479},{"w":"hay","t":4.404,"d":0.228},{"w":"que","t":4.632,"d":0.228},{"w":"encender","t":4.86,"d":0.487},{"w":"las","t":5.347,"d":0.228},{"w":"luces.","t":5.575,"d":0.332}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":6.507,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        tl.set(LIGHTS.concat(TREE, STAR), { opacity: 0 }, 0);
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 3), L1 = P.lines[0];
+        var pal = S.chr(room.actors, "paloma", 2010, 1040, 360);
+        var ale = S.chr(room.actors, "viajero", 1500, 1055, 320), mar = S.chr(room.actors, "marina", 1660, 1045, 316), nac = S.chr(room.actors, "nacho", 1340, 1050, 326);
+        [pal, ale, mar, nac].forEach(function (c, i) { S.breathe(tl, c, 0.1 * i, T, 0.7); Q.charBlink(tl, c.svg, 1.3 + i * 1.0); });
+        tl.to(pal.svg.querySelector(".c-armL"), { rotation: -34, svgOrigin: "142 306", duration: 0.4, ease: "power2.out" }, 0.2);
+        C.talkChar(tl, pal, L1); Q.charEmote(tl, pal.svg, L1.t, "worry", 0.3);
+        // la Sombra, petite, flotte au fond et « emporte » les villancicos : les notes filent vers elle
+        var sb = S.mk(room.actors, "sombra"); sb.setAttribute("data-layout-allow-overflow", ""); sb.style.cssText = "position:absolute;left:0;top:0;width:340px;height:408px";
+        sb.innerHTML = Q.sombra({ uid: "sb7", width: 340, height: 408 }); sb.firstChild.style.overflow = "visible";
+        gsap.set(sb, { x: 1000, y: 260, opacity: 0 });
+        tl.fromTo(sb, { opacity: 0, scale: 0.5 }, { opacity: 0.95, scale: 1, duration: 0.8, ease: "power2.out", immediateRender: false }, L1.t - 0.3);
+        Q.sombraFloat(tl, sb, L1.t + 0.5, Math.max(1, Math.floor(T / 1.6)), 1.6); Q.sombraEyes(tl, sb, L1.t - 0.2, "open", 0.4);
+        var noteSvg = function (c) { return '<svg width="52" height="72" viewBox="0 0 52 72"><ellipse cx="14" cy="58" rx="13" ry="9" fill="' + c + '"/><rect x="23" y="8" width="5" height="50" fill="' + c + '"/><path d="M28 8Q50 16 45 38Q40 26 28 24Z" fill="' + c + '"/></svg>'; };
+        var wV = C.wordT(PLAN, 3, 1, 4);
+        for (var n = 0; n < 7; n++) {
+          var nt = mkp(room.qlayer, "note", noteSvg(["#FFD98A", "#FF9F6B", "#8FE3D6"][n % 3]), 2060, 640);
+          var t0 = wV - 0.2 + n * 0.5, xe = 1180 + (n % 3) * 20, ye = 380 + (n % 4) * 18;
+          tl.fromTo(nt, { x: 2040 + (n % 3) * 30, y: 650, opacity: 0, scale: 1 }, { x: 1930 - n * 14, y: 520 - (n % 3) * 40, opacity: 0.95, duration: 0.5, ease: "sine.out", immediateRender: false }, t0);
+          tl.to(nt, { x: xe, y: ye, scale: 0.35, duration: 1.1, ease: "sine.in" }, t0 + 0.55);
+          tl.to(nt, { opacity: 0, duration: 0.4 }, t0 + 1.3);
+        }
+        // « Chicos, hay que encender las luces » : Paloma se tourne vers les enfants, geste du bras
+        var wCh = C.wordT(PLAN, 3, 1, 12);
+        Q.charWave(tl, pal.svg, wCh - 0.1, 0.8, "R");
+        Q.charNod(tl, ale.svg, wCh + 0.5, 5, 0.2); Q.charNod(tl, mar.svg, wCh + 0.7, 5, 0.2); Q.charEmote(tl, nac.svg, wCh, "happy", 0.3);
+        S.camSet(room, 1600, 720, 0.92);
+        S.cam(tl, room, 1780, 740, 1.12, 0, T - 0.3, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

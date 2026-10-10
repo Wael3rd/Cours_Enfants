@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 62%); opacity: 0; z-index: 20; }
+      .puff { position: absolute; left: 0; top: 0; }
+      .note { position: absolute; left: 0; top: 0; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.59">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.59" data-media-start="10.44" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.29,"v":1},{"t":8.59,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/rosa.69b837386c.mp3" data-start="0.6" data-duration="7.34" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="8.29" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-historia-2","cinematica":"u06-historia","part":2,"parts":6,"total":8.59,"meta":{"cinematica":"u06-historia","titulo":"Madrid a oscuras","tipo":"historia","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":2,"t0":0,"t1":8.34,"vista":"Le stand de Rosa, la churrera : de la vapeur, des churros dorés, personne dans la file. Rosa tend des tasses de chocolat chaud.","camara":"plan moyen sur le stand, buée des tasses","rotulo":"","personajes":["rosa","nacho"],"lines":[{"who":"rosa","es":"Hace mucho frío y no hay luces. Mis churros no se venden. Tomad un chocolate caliente.","key":"rosa.69b837386c","t":0.6,"d":7.34,"words":[{"w":"Hace","t":0.6,"d":0.316},{"w":"mucho","t":0.916,"d":0.375},{"w":"frío","t":1.291,"d":0.316},{"w":"y","t":1.608,"d":0.141},{"w":"no","t":1.748,"d":0.199},{"w":"hay","t":1.948,"d":0.258},{"w":"luces.","t":2.205,"d":0.375},{"w":"Mis","t":3.563,"d":0.256},{"w":"churros","t":3.819,"d":0.488},{"w":"no","t":4.307,"d":0.198},{"w":"se","t":4.504,"d":0.198},{"w":"venden.","t":4.702,"d":0.43},{"w":"Tomad","t":6.121,"d":0.361},{"w":"un","t":6.482,"d":0.192},{"w":"chocolate","t":6.674,"d":0.587},{"w":"caliente.","t":7.26,"d":0.53}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.55,"f":"ui/pop"},{"t":8.29,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.mnPlaza({ uid: "mp" });
+        var room = S.set($("#stage"), set, { below: "#1F1B45", motes: 14 });
+        S.drift(tl, room, T);
+        // lumieres : par defaut ETEINTES (la ville est a oscuras) ; seules les bougies des etals respirent (cycles >= 1 s)
+        var LIGHTS = Array.from(room.back.querySelectorAll(".mn-lights")), TREE = Array.from(room.back.querySelectorAll(".mn-treelights")), STAR = Array.from(room.back.querySelectorAll(".mn-star-lit"));
+        tl.set(LIGHTS.concat(TREE, STAR), { opacity: 0 }, 0);
+        room.back.querySelectorAll(".mn-candle").forEach(function (c, i) { var per = 1.2 + (i % 3) * 0.25; tl.to(c, { opacity: 0.55, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.1); });
+        // vapeur : petites bouffees qui montent (opacite <= .4, cycles finis)
+        var steam = function (x, y, n, t0, span, w) {
+          for (var i = 0; i < n; i++) {
+            var p = mkp(room.qlayer, "puff", '<svg width="' + (w || 60) + '" height="' + (w || 60) + '" viewBox="-30 -30 60 60"><circle r="26" fill="#EAF0FF" opacity=".55"/></svg>', x + (i % 3) * 14 - 14, y);
+            var per = 1.8 + (i % 3) * 0.3, st = t0 + i * (per / n);
+            tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st);
+            tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + per * 0.6);
+            for (var k = 1; k * per < span; k++) {
+              tl.fromTo(p, { y: y, opacity: 0, scale: 0.5 }, { y: y - 150 - (i % 2) * 30, opacity: 0.4, scale: 1.4, duration: per * 0.6, ease: "sine.out", immediateRender: false }, st + k * per);
+              tl.to(p, { opacity: 0, duration: per * 0.4 - 0.01, ease: "sine.in" }, st + k * per + per * 0.6);
+            }
+          }
+        };
+
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0];
+        var ros = S.chr(room.actors, "rosa", 2390, 1000, 340);
+        var nac = S.chr(room.actors, "nacho", 1790, 1050, 330), ale = S.chr(room.actors, "viajero", 1965, 1055, 320), mar = S.chr(room.actors, "marina", 2120, 1045, 316);
+        [ros, nac, ale, mar].forEach(function (c, i) { S.breathe(tl, c, 0.1 * i, T, 0.7); Q.charBlink(tl, c.svg, 1.6 + i * 0.9); });
+        // vapeur des tasses et des churros (la file est vide)
+        steam(2470, 790, 3, 0.2, T, 56); steam(2560, 790, 3, 0.5, T, 56); steam(2340, 760, 3, 0.9, T, 64);
+        // Rosa : plainte (frio, pas de luces, churros...) puis tend une tasse de chocolat
+        C.talkChar(tl, ros, L1); Q.charEmote(tl, ros.svg, L1.t, "worry", 0.3);
+        var wT = C.wordT(PLAN, 2, 1, 13);
+        var armL = ros.svg.querySelector(".c-armL");
+        tl.to(armL, { rotation: 62, svgOrigin: "142 306", duration: 0.45, ease: "back.out(1.4)" }, wT - 0.15);
+        var cup = mkp(room.qlayer, "", Q.mnProp("taza", { width: 100, uid: "tz" }), 2330, 700);
+        tl.set(cup, { opacity: 0 }, 0);
+        tl.fromTo(cup, { opacity: 0, scale: 0.4, x: 2395, y: 770 }, { opacity: 1, scale: 1, x: 2205, y: 740, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, wT - 0.05);
+        steam(2250, 740, 2, wT + 0.2, T - wT, 40);
+        Q.charEmote(tl, ros.svg, wT, "happy", 0.3);
+        S.hop(tl, mar, wT + 0.5, 20); Q.charNod(tl, ale.svg, wT + 0.6, 5, 0.18);
+        // les autres regardent la place vide, haussent les epaules
+        Q.charEmote(tl, nac.svg, 0, "worry", 0.3);
+        S.camSet(room, 2080, 700, 0.95);
+        S.cam(tl, room, 2250, 740, 1.12, 0, T - 0.2, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

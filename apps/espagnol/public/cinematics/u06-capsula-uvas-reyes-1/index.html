@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u06-capsula-uvas-reyes-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 8; }
+      #bloom { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(255,214,130,.9), rgba(255,214,130,0) 60%); opacity: 0; z-index: 20; }
+      #subs .sub-txt { font-size: 44px; max-width: 1640px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u06-capsula-uvas-reyes-1" data-start="0" data-width="1920" data-height="1200" data-duration="8.77">
+      <div id="p1" data-layout-allow-overflow></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.77" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.47,"v":1},{"t":8.77,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.912a32876d.mp3" data-start="0.5" data-duration="7.52" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="4.023" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="6.529" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u06-capsula-uvas-reyes-1","cinematica":"u06-capsula-uvas-reyes","part":1,"parts":5,"total":8.77,"meta":{"cinematica":"u06-capsula-uvas-reyes","titulo":"Las doce uvas y los Reyes Magos","tipo":"capsula","unidad":"¡Feliz Navidad!","numero":6,"lugar":"Madrid de noche","pluma":"Pluma de las Luces","plumaNum":6,"rotulo":"","region":"madridnoche"},"plans":[{"n":1,"t0":0,"t1":8.52,"vista":"Style explainer, papier découpé : la Puerta del Sol de nuit, l’horloge de la Real Casa de Correos éclairée, la foule en bonnets et écharpes.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Nochevieja, 31 de diciembre. En la Puerta del Sol de Madrid, miles de personas esperan las campanadas.","key":"narrador.912a32876d","t":0.5,"d":7.52,"words":[{"w":"Nochevieja,","t":0.5,"d":0.793},{"w":"31","t":1.539,"d":0.237},{"w":"de","t":1.776,"d":0.237},{"w":"diciembre.","t":2.013,"d":0.724},{"w":"En","t":3.764,"d":0.155},{"w":"la","t":3.918,"d":0.155},{"w":"Puerta","t":4.073,"d":0.337},{"w":"del","t":4.41,"d":0.2},{"w":"Sol","t":4.61,"d":0.2},{"w":"de","t":4.81,"d":0.155},{"w":"Madrid,","t":4.965,"d":0.337},{"w":"miles","t":5.555,"d":0.341},{"w":"de","t":5.896,"d":0.181},{"w":"personas","t":6.077,"d":0.501},{"w":"esperan","t":6.579,"d":0.448},{"w":"las","t":7.027,"d":0.235},{"w":"campanadas.","t":7.261,"d":0.608}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":4.023,"f":"ui/pop"},{"t":6.529,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, P = PLAN.plans[0], L = P.lines[0], p1 = $("#p1");
+        var w = function (k) { return C.wordT(PLAN, P.n, 1, k); };
+        // pastille : apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot || 0, y: y0 + 40 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        // objet de papier decoupe : place en (x, y), apparition par ressort
+        var paper = function (html, x, y, cls) { var d = mk(p1, "prop cap-paper" + (cls ? " " + cls : ""), html); var sv = d.querySelector("svg"); if (sv) sv.setAttribute("data-layout-allow-overflow", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var appear = function (el, at, from) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y0 + (from == null ? 90 : from), rotation: -2, scale: 0.92 }, { opacity: 1, y: y0, rotation: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, at); };
+        Cap.bg(root, p1);
+
+        var ttl = Cap.title(tl, root, "NOCHEVIEJA", "Puerta del Sol", 0.25);
+        // la Real Casa de Correos de nuit : horloge a 11 h 59, boule qui s'apprete a descendre
+        var pS = paper(Q.mnProp("puertaSol", { width: 960, uid: "ps" }), 900, 262);
+        appear(pS, 0.3);
+        var mh = pS.querySelector(".mn-mh"), hh = pS.querySelector(".mn-hh");
+        tl.fromTo(mh, { rotation: -22, svgOrigin: "450 206" }, { rotation: 0, svgOrigin: "450 206", duration: T - 1.2, ease: "none" }, 0.6);
+        tl.to(pS.querySelector(".mn-ball"), { y: 36, duration: 1.4, ease: "sine.inOut" }, w(11));
+        // la foule se remplit : bonnets, echarpes (apparition par l'echelle, persone par persone)
+        var crowd = paper(Q.mnProp("multitud", { width: 1150, n: 16, seed: 4, uid: "cr" }), 60, 690);
+        tl.set(crowd, { opacity: 1 }, 0);
+        var ppl = crowd.querySelectorAll(".mn-person");
+        gsap.set(ppl, { scale: 0, transformOrigin: "50% 100%" });
+        ppl.forEach(function (g, i) { tl.fromTo(g, { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: 0.45, ease: "back.out(1.6)", immediateRender: false }, w(12) - 0.2 + i * 0.1); });
+        // pastilles
+        var c1 = Cap.chip(p1, "31 de diciembre", 96, 450, "gold"); popS(c1, w(1) + 0.05, -2);
+        var c2 = Cap.chip(p1, "miles de personas", 96, 540, "pink"); popS(c2, w(12) - 0.05, 2);
+        var c3 = Cap.chip(p1, "las campanadas", 96, 630, "terra"); popS(c3, w(16) - 0.05, -2);
+        tl.fromTo(pS, { scale: 1, transformOrigin: "50% 60%" }, { scale: 1.04, duration: T - 0.6, ease: "sine.inOut", immediateRender: false }, 0.9);
+        Cap.sparks(tl, p1, 1380, 330, w(17), 8, "#ffe9a8");
+
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u06-capsula-uvas-reyes-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>
