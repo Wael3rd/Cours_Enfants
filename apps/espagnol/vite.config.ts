@@ -3,7 +3,7 @@ import { writeIndex } from '../../tools/content/build-units-index.mjs';
 
 const cfg = appConfig({
   dir: import.meta.dirname,
-  base: '/espagnol/',
+  base: '/quetzal/',
   manifestId: 'leyenda-del-quetzal', // nouvel id : contourne un etat "deja installee" bloque sur la tablette
   name: 'La Leyenda del Quetzal',
   shortName: 'Quetzal',
@@ -16,7 +16,7 @@ const cfg = appConfig({
   precacheIgnore: ['audio/**'],
   runtimeCaching: [
     {
-      urlPattern: ({ url }: { url: URL }) => url.pathname.startsWith('/espagnol/audio/') && url.pathname.endsWith('.mp3'),
+      urlPattern: ({ url }: { url: URL }) => url.pathname.includes('/quetzal/audio/') && url.pathname.endsWith('.mp3'),
       handler: 'CacheFirst',
       options: {
         cacheName: 'espagnol-audio-v1',

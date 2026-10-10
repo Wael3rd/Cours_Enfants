@@ -8,5 +8,5 @@ export default appConfig({
   description: "Accueil des applications d'apprentissage",
   themeColor: '#0b1b3a',
   backgroundColor: '#0b1b3a',
-  foreignScopes: ['/maths/', '/espagnol/', '/calcul/'],
+  foreignScopes: ['/maths/', '/espagnol/', '/quetzal/', '/calcul/'],
 });

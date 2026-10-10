@@ -67,7 +67,7 @@ export function appConfig(o: AppOptions): UserConfig {
         workbox: {
           // TOUT en precache : app, polices, images, audio, cinematiques (html/js/woff2...).
           globPatterns: ['**/*.{js,css,html,json,svg,png,jpg,jpeg,webp,gif,ico,woff,woff2,ttf,mp3,ogg,wav,m4a,mp4,webm,webmanifest}'],
-          globIgnores: [...(isHub ? ['maths/**', 'espagnol/**', 'calcul/**'] : []), ...(o.precacheIgnore ?? [])],
+          globIgnores: [...(isHub ? ['maths/**', 'espagnol/**', 'quetzal/**', 'calcul/**'] : []), ...(o.precacheIgnore ?? [])],
           runtimeCaching: o.runtimeCaching,
           maximumFileSizeToCacheInBytes: 30 * 1024 * 1024, // defaut workbox = 2 Mo : le runtime HyperFrames fait 500 Ko, une voix/musique plus
           navigateFallback: `${o.base}index.html`,

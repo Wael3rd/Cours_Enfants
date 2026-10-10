@@ -36,7 +36,7 @@
       </div>
     </a>
 
-    <a class="card espagnol" href="{base}espagnol/" style="--i:1">
+    <a class="card espagnol" href="{base}quetzal/" style="--i:1">
       <div class="bg dusk" aria-hidden="true"></div>
       <div class="bunting" aria-hidden="true">{@html bunting}</div>
       <svg class="trail" viewBox="0 0 400 200" aria-hidden="true" preserveAspectRatio="none">
