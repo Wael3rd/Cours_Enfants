@@ -1,0 +1,5188 @@
+{
+  "id": "u05",
+  "numero": 5,
+  "titulo": "¿Qué hora es?",
+  "lugar": "Valencia",
+  "emoji": "🕒",
+  "ejes": [
+    2
+  ],
+  "periodo": "nov-dic",
+  "objetivos": [
+    {
+      "es": "Preguntar y decir la hora: es la una, son las dos y media, menos cuarto.",
+      "fr": "Demander et dire l’heure : es la una, son las dos y media, menos cuarto."
+    },
+    {
+      "es": "Contar mi rutina y mis comidas con las horas: me levanto, desayuno, ceno.",
+      "fr": "Raconter ma routine et mes repas avec les heures : me levanto, desayuno, ceno."
+    },
+    {
+      "es": "Usar el verbo ir y la estructura ir a + infinitivo.",
+      "fr": "Utiliser le verbe ir et la structure ir a + infinitif."
+    },
+    {
+      "es": "Usar querer y poder (e→ie, o→ue) para pedir y proponer.",
+      "fr": "Utiliser querer et poder (e→ie, o→ue) pour demander et proposer."
+    },
+    {
+      "es": "Decir lo que hago ahora con estar + gerundio.",
+      "fr": "Dire ce que je fais en ce moment avec estar + gérondif."
+    },
+    {
+      "es": "Conocer los horarios españoles, la paella y las Fallas de Valencia.",
+      "fr": "Connaître les horaires espagnols, la paella et les Fallas de Valence."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "hora",
+      "es": "hora",
+      "fr": "heure (¿qué hora es? = quelle heure est-il ?) ; aussi : moment",
+      "genero": "f",
+      "plural": "horas",
+      "emoji": "🕒",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "¿A qué hora es la comida?",
+        "fr": "À quelle heure est le déjeuner ?",
+        "voz": "narrador",
+        "audio": "narrador.621101b261"
+      },
+      "audio": "narrador.623aeb8c53"
+    },
+    {
+      "id": "reloj",
+      "es": "reloj",
+      "fr": "horloge, montre (tout ce qui donne l’heure)",
+      "genero": "m",
+      "plural": "relojes",
+      "emoji": "🕰️",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "El reloj de Neus está parado.",
+        "fr": "La montre de Neus est arrêtée.",
+        "voz": "neus",
+        "audio": "neus.5064cf7ad0"
+      },
+      "audio": "narrador.2e490be4ff"
+    },
+    {
+      "id": "minuto",
+      "es": "minuto",
+      "fr": "minute",
+      "genero": "m",
+      "plural": "minutos",
+      "emoji": "⏱️",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Faltan cinco minutos para las dos.",
+        "fr": "Il manque cinq minutes avant deux heures.",
+        "voz": "narrador",
+        "audio": "narrador.094467ea77"
+      },
+      "audio": "narrador.e53435e667"
+    },
+    {
+      "id": "en_punto",
+      "es": "en punto",
+      "fr": "pile (les trois heures pile)",
+      "emoji": "📌",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Son las seis en punto.",
+        "fr": "Il est six heures pile.",
+        "voz": "narrador",
+        "audio": "narrador.def07999d0"
+      },
+      "audio": "narrador.9b16682d31"
+    },
+    {
+      "id": "y_media",
+      "es": "y media",
+      "fr": "et demie (son las tres y media = 3 h 30)",
+      "emoji": "🌓",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Son las cuatro y media.",
+        "fr": "Il est quatre heures et demie.",
+        "voz": "narrador",
+        "audio": "narrador.960e8f3259"
+      },
+      "audio": "narrador.5c1c80096e"
+    },
+    {
+      "id": "cuarto",
+      "es": "cuarto",
+      "fr": "quart (y cuarto = et quart ; menos cuarto = moins le quart)",
+      "genero": "m",
+      "plural": "cuartos",
+      "emoji": "🍰",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Es la una y cuarto.",
+        "fr": "Il est une heure et quart.",
+        "voz": "narrador",
+        "audio": "narrador.a7a80319cb"
+      },
+      "audio": "narrador.e8c9c84d86"
+    },
+    {
+      "id": "menos_h",
+      "es": "menos",
+      "fr": "moins (son las dos menos diez = 1 h 50)",
+      "emoji": "➖",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Son las dos menos diez.",
+        "fr": "Il est deux heures moins dix.",
+        "voz": "narrador",
+        "audio": "narrador.20bf39688e"
+      },
+      "audio": "narrador.4e16c8aa2c"
+    },
+    {
+      "id": "veinticinco",
+      "es": "veinticinco",
+      "fr": "vingt-cinq (de 21 à 29, un seul mot : veintiuno, veintidós… veinticinco)",
+      "emoji": "🔢",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Son las cinco y veinticinco.",
+        "fr": "Il est cinq heures vingt-cinq.",
+        "voz": "narrador",
+        "audio": "narrador.02e4bc56fc"
+      },
+      "audio": "narrador.3c9d501d2f"
+    },
+    {
+      "id": "mediodia",
+      "es": "mediodía",
+      "fr": "midi (12 h) ; « al mediodía » = vers midi",
+      "genero": "m",
+      "emoji": "☀️",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Al mediodía comemos paella.",
+        "fr": "À midi, nous mangeons de la paella.",
+        "voz": "narrador",
+        "audio": "narrador.3ebe7f6e77"
+      },
+      "audio": "narrador.6d288666ff"
+    },
+    {
+      "id": "medianoche",
+      "es": "medianoche",
+      "fr": "minuit (24 h)",
+      "genero": "f",
+      "emoji": "🌑",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "A medianoche todos duermen.",
+        "fr": "À minuit, tout le monde dort.",
+        "voz": "narrador",
+        "audio": "narrador.178a88363c"
+      },
+      "audio": "narrador.f89e5c643f"
+    },
+    {
+      "id": "manana",
+      "es": "mañana",
+      "fr": "matin (la mañana) ; aussi : demain (adverbe)",
+      "genero": "f",
+      "emoji": "🌅",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Por la mañana desayuno leche.",
+        "fr": "Le matin, je prends du lait au petit-déjeuner.",
+        "voz": "narrador",
+        "audio": "narrador.e0349a6470"
+      },
+      "audio": "narrador.8727ae6503"
+    },
+    {
+      "id": "tarde",
+      "es": "tarde",
+      "fr": "après-midi (la tarde) ; aussi : tard. En Espagne, la tarde dure jusqu’à environ 20 h-21 h",
+      "genero": "f",
+      "emoji": "🌇",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Por la tarde estudio con Marina.",
+        "fr": "L’après-midi, j’étudie avec Marina.",
+        "voz": "narrador",
+        "audio": "narrador.16bc28aef8"
+      },
+      "audio": "narrador.8693c78aea"
+    },
+    {
+      "id": "noche",
+      "es": "noche",
+      "fr": "nuit, soir (quand il fait nuit)",
+      "genero": "f",
+      "plural": "noches",
+      "emoji": "🌙",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Por la noche cenamos en casa.",
+        "fr": "Le soir, nous dînons à la maison.",
+        "voz": "narrador",
+        "audio": "narrador.88093501fc"
+      },
+      "audio": "narrador.fdadc53ed4"
+    },
+    {
+      "id": "temprano",
+      "es": "temprano",
+      "fr": "tôt",
+      "emoji": "🐓",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Me levanto temprano.",
+        "fr": "Je me lève tôt.",
+        "voz": "narrador",
+        "audio": "narrador.5b5c614a9c"
+      },
+      "audio": "narrador.fb69c43fff"
+    },
+    {
+      "id": "siempre",
+      "es": "siempre",
+      "fr": "toujours",
+      "emoji": "♾️",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Siempre desayuno a las ocho.",
+        "fr": "Je prends toujours mon petit-déjeuner à huit heures.",
+        "voz": "narrador",
+        "audio": "narrador.e1f86f63e8"
+      },
+      "audio": "narrador.c29b887305"
+    },
+    {
+      "id": "despues",
+      "es": "después",
+      "fr": "après, ensuite",
+      "emoji": "➡️",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Después del colegio, juego en el patio.",
+        "fr": "Après l’école, je joue dans la cour.",
+        "voz": "narrador",
+        "audio": "narrador.da85e4ddde"
+      },
+      "audio": "narrador.985c4d4268"
+    },
+    {
+      "id": "ahora",
+      "es": "ahora",
+      "fr": "maintenant",
+      "emoji": "📍",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "Ahora estoy comiendo.",
+        "fr": "En ce moment, je suis en train de manger.",
+        "voz": "narrador",
+        "audio": "narrador.14f17ea129"
+      },
+      "audio": "narrador.317914bb85"
+    },
+    {
+      "id": "que_hora_es",
+      "es": "¿qué hora es?",
+      "fr": "quelle heure est-il ?",
+      "emoji": "🕐",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "—¿Qué hora es? —Son las tres.",
+        "fr": "— Quelle heure est-il ? — Il est trois heures.",
+        "voz": "narrador",
+        "audio": "narrador.11d0c73ca4"
+      },
+      "audio": "narrador.fd1f7f944b"
+    },
+    {
+      "id": "a_que_hora",
+      "es": "¿a qué hora?",
+      "fr": "à quelle heure ?",
+      "emoji": "🕑",
+      "tags": [
+        "hora"
+      ],
+      "ejemplo": {
+        "es": "¿A qué hora empieza la clase?",
+        "fr": "À quelle heure commence le cours ?",
+        "voz": "narrador",
+        "audio": "narrador.575a88ab08"
+      },
+      "audio": "narrador.d50d2bb3b3"
+    },
+    {
+      "id": "levantarse",
+      "es": "levantarse",
+      "fr": "se lever (me levanto = je me lève)",
+      "emoji": "🌄",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Me levanto a las siete y media.",
+        "fr": "Je me lève à sept heures et demie.",
+        "voz": "narrador",
+        "audio": "narrador.3f22f1885e"
+      },
+      "audio": "narrador.2e1b710d69"
+    },
+    {
+      "id": "acostarse",
+      "es": "acostarse",
+      "fr": "se coucher (me acuesto = je me couche)",
+      "emoji": "🛌",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Me acuesto a las diez.",
+        "fr": "Je me couche à dix heures.",
+        "voz": "narrador",
+        "audio": "narrador.2661bc556c"
+      },
+      "audio": "narrador.60e11db3ed"
+    },
+    {
+      "id": "desayunar",
+      "es": "desayunar",
+      "fr": "prendre le petit-déjeuner",
+      "emoji": "🥐",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Desayuno leche y una tostada.",
+        "fr": "Je prends du lait et une tartine au petit-déjeuner.",
+        "voz": "narrador",
+        "audio": "narrador.c419ab0edd"
+      },
+      "audio": "narrador.3d3e1f17d6"
+    },
+    {
+      "id": "cenar",
+      "es": "cenar",
+      "fr": "dîner",
+      "emoji": "🍴",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Cenamos a las nueve.",
+        "fr": "Nous dînons à neuf heures.",
+        "voz": "narrador",
+        "audio": "narrador.1aa8fcd666"
+      },
+      "audio": "narrador.0e095b2848"
+    },
+    {
+      "id": "dormir",
+      "es": "dormir",
+      "fr": "dormir (duermo = je dors)",
+      "emoji": "😴",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Duermo nueve horas.",
+        "fr": "Je dors neuf heures.",
+        "voz": "narrador",
+        "audio": "narrador.b471473907"
+      },
+      "audio": "narrador.fc5ed9f5c6"
+    },
+    {
+      "id": "empezar",
+      "es": "empezar",
+      "fr": "commencer (empieza = il commence)",
+      "emoji": "▶️",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "La clase empieza a las nueve.",
+        "fr": "Le cours commence à neuf heures.",
+        "voz": "narrador",
+        "audio": "narrador.7aae360bfe"
+      },
+      "audio": "narrador.7f5a9bed5d"
+    },
+    {
+      "id": "terminar",
+      "es": "terminar",
+      "fr": "finir, terminer",
+      "emoji": "🏁",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "El cole termina a las dos.",
+        "fr": "L’école finit à deux heures.",
+        "voz": "narrador",
+        "audio": "narrador.98424a1c2b"
+      },
+      "audio": "narrador.0eee41895f"
+    },
+    {
+      "id": "llegar",
+      "es": "llegar",
+      "fr": "arriver",
+      "emoji": "🏃",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Llego al cole a las nueve menos diez.",
+        "fr": "J’arrive à l’école à moins dix.",
+        "voz": "narrador",
+        "audio": "narrador.2fe12748a1"
+      },
+      "audio": "narrador.ec24f23b3a"
+    },
+    {
+      "id": "ir",
+      "es": "ir",
+      "fr": "aller (voy, vas, va, vamos, vais, van)",
+      "emoji": "🚶",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Voy al cole a las ocho y media.",
+        "fr": "Je vais à l’école à huit heures et demie.",
+        "voz": "narrador",
+        "audio": "narrador.128bd2482d"
+      },
+      "audio": "narrador.aa1553beed"
+    },
+    {
+      "id": "querer",
+      "es": "querer",
+      "fr": "vouloir ; aimer bien (quiero = je veux)",
+      "emoji": "💛",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Quiero una horchata, por favor.",
+        "fr": "Je veux une horchata, s’il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.de383e09de"
+      },
+      "audio": "narrador.e4fc0cb818"
+    },
+    {
+      "id": "poder",
+      "es": "poder",
+      "fr": "pouvoir (puedo = je peux)",
+      "emoji": "💪",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "¿Puedo comer ahora?",
+        "fr": "Je peux manger maintenant ?",
+        "voz": "narrador",
+        "audio": "narrador.7e2d031c48"
+      },
+      "audio": "narrador.b1b3592ddf"
+    },
+    {
+      "id": "siesta",
+      "es": "siesta",
+      "fr": "sieste",
+      "genero": "f",
+      "plural": "siestas",
+      "emoji": "😪",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Mi abuelo duerme la siesta.",
+        "fr": "Mon grand-père fait la sieste.",
+        "voz": "neus",
+        "audio": "neus.0c2a4ff928"
+      },
+      "audio": "narrador.bbac097e94"
+    },
+    {
+      "id": "estudiar",
+      "es": "estudiar",
+      "fr": "étudier, réviser",
+      "emoji": "📚",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Por la tarde estudio con Neus.",
+        "fr": "L’après-midi, j’étudie avec Neus.",
+        "voz": "narrador",
+        "audio": "narrador.1d268c4838"
+      },
+      "audio": "narrador.1d4d6c819a"
+    },
+    {
+      "id": "preparar",
+      "es": "preparar",
+      "fr": "préparer",
+      "emoji": "🧑‍🍳",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Vicent prepara la paella.",
+        "fr": "Vicent prépare la paella.",
+        "voz": "vicent",
+        "audio": "vicent.89a3b0d880"
+      },
+      "audio": "narrador.f72fc67512"
+    },
+    {
+      "id": "esperar",
+      "es": "esperar",
+      "fr": "attendre ; aussi : espérer",
+      "emoji": "⏳",
+      "tags": [
+        "rutina"
+      ],
+      "ejemplo": {
+        "es": "Esperamos la cena.",
+        "fr": "Nous attendons le dîner.",
+        "voz": "narrador",
+        "audio": "narrador.127da9c0bc"
+      },
+      "audio": "narrador.3d38c5b644"
+    },
+    {
+      "id": "desayuno",
+      "es": "desayuno",
+      "fr": "petit-déjeuner",
+      "genero": "m",
+      "plural": "desayunos",
+      "emoji": "🍞",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "El desayuno es a las ocho.",
+        "fr": "Le petit-déjeuner est à huit heures.",
+        "voz": "narrador",
+        "audio": "narrador.00e90eea39"
+      },
+      "audio": "narrador.6987adf004"
+    },
+    {
+      "id": "merienda",
+      "es": "merienda",
+      "fr": "goûter (vers 17 h)",
+      "genero": "f",
+      "plural": "meriendas",
+      "emoji": "🍪",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La merienda es a las cinco.",
+        "fr": "Le goûter est à cinq heures.",
+        "voz": "narrador",
+        "audio": "narrador.5a18818b7b"
+      },
+      "audio": "narrador.b6f60d8804"
+    },
+    {
+      "id": "cena",
+      "es": "cena",
+      "fr": "dîner (repas du soir)",
+      "genero": "f",
+      "plural": "cenas",
+      "emoji": "🌃",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La cena es a las nueve.",
+        "fr": "Le dîner est à neuf heures.",
+        "voz": "narrador",
+        "audio": "narrador.35f13fe6b3"
+      },
+      "audio": "narrador.62e5582aac"
+    },
+    {
+      "id": "leche",
+      "es": "leche",
+      "fr": "lait",
+      "genero": "f",
+      "emoji": "🥛",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Bebo leche por la mañana.",
+        "fr": "Je bois du lait le matin.",
+        "voz": "narrador",
+        "audio": "narrador.9b7d8e5442"
+      },
+      "audio": "narrador.3c60405a25"
+    },
+    {
+      "id": "tostada",
+      "es": "tostada",
+      "fr": "tartine grillée (en Espagne, souvent avec huile d’olive et tomate)",
+      "genero": "f",
+      "plural": "tostadas",
+      "emoji": "🍞",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Desayuno una tostada con tomate.",
+        "fr": "Au petit-déjeuner, je mange une tartine à la tomate.",
+        "voz": "narrador",
+        "audio": "narrador.1d4c84d085"
+      },
+      "audio": "narrador.cbb175232b"
+    },
+    {
+      "id": "zumo",
+      "es": "zumo",
+      "fr": "jus de fruit (au Mexique : « jugo »)",
+      "genero": "m",
+      "plural": "zumos",
+      "emoji": "🧃",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Un zumo de naranja, por favor.",
+        "fr": "Un jus d’orange, s’il vous plaît.",
+        "voz": "narrador",
+        "audio": "narrador.57a6b14891"
+      },
+      "audio": "narrador.a3436ff1d6"
+    },
+    {
+      "id": "fruta",
+      "es": "fruta",
+      "fr": "fruit(s)",
+      "genero": "f",
+      "plural": "frutas",
+      "emoji": "🍎",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "De postre, fruta.",
+        "fr": "En dessert, des fruits.",
+        "voz": "narrador",
+        "audio": "narrador.ceb09f40a6"
+      },
+      "audio": "narrador.1ea8c03fd2"
+    },
+    {
+      "id": "bocadillo",
+      "es": "bocadillo",
+      "fr": "sandwich (dans une demi-baguette), souvent à la récré",
+      "genero": "m",
+      "plural": "bocadillos",
+      "emoji": "🥖",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "A las once, como un bocadillo.",
+        "fr": "À onze heures, je mange un sandwich.",
+        "voz": "narrador",
+        "audio": "narrador.d1a30829c4"
+      },
+      "audio": "narrador.636909bb46"
+    },
+    {
+      "id": "ensalada",
+      "es": "ensalada",
+      "fr": "salade",
+      "genero": "f",
+      "plural": "ensaladas",
+      "emoji": "🥗",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Una ensalada para empezar.",
+        "fr": "Une salade pour commencer.",
+        "voz": "narrador",
+        "audio": "narrador.cedca769ce"
+      },
+      "audio": "narrador.047762ccc0"
+    },
+    {
+      "id": "arroz",
+      "es": "arroz",
+      "fr": "riz",
+      "genero": "m",
+      "emoji": "🍚",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "El arroz es de Valencia.",
+        "fr": "Le riz vient de Valence (région).",
+        "voz": "narrador",
+        "audio": "narrador.a962a88314"
+      },
+      "audio": "narrador.fa9db510a2"
+    },
+    {
+      "id": "pollo",
+      "es": "pollo",
+      "fr": "poulet",
+      "genero": "m",
+      "emoji": "🍗",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La paella lleva pollo.",
+        "fr": "La paella contient du poulet.",
+        "voz": "narrador",
+        "audio": "narrador.402d2d0903"
+      },
+      "audio": "narrador.0db6b74aff"
+    },
+    {
+      "id": "paella",
+      "es": "paella",
+      "fr": "paella : plat de riz de Valence, cuit dans une grande poêle",
+      "genero": "f",
+      "plural": "paellas",
+      "emoji": "🥘",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La paella es de Valencia.",
+        "fr": "La paella vient de Valence.",
+        "voz": "vicent",
+        "audio": "vicent.34860bb5aa"
+      },
+      "audio": "narrador.b94c0f1cff"
+    },
+    {
+      "id": "horchata",
+      "es": "horchata",
+      "fr": "horchata : boisson fraîche et sucrée, à base de chufas (souchet), spécialité de Valence",
+      "genero": "f",
+      "ilustracion": "Un grand verre d’horchata blanche et glacée, avec des fartons (petits gâteaux allongés) à côté",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La horchata está muy fría.",
+        "fr": "L’horchata est très fraîche.",
+        "voz": "amparo",
+        "audio": "amparo.4726341ea8"
+      },
+      "audio": "amparo.ea4828a4d5",
+      "voz": "amparo"
+    },
+    {
+      "id": "tortilla",
+      "es": "tortilla",
+      "fr": "omelette (tortilla de patatas = omelette aux pommes de terre). Attention : au Mexique, « tortilla » = galette de maïs",
+      "genero": "f",
+      "plural": "tortillas",
+      "emoji": "🍳",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "La tortilla de patatas es muy española.",
+        "fr": "La tortilla de pommes de terre est très espagnole.",
+        "voz": "narrador",
+        "audio": "narrador.27dda17c2f"
+      },
+      "audio": "narrador.9d14874e48"
+    },
+    {
+      "id": "hambre",
+      "es": "hambre",
+      "fr": "faim (tener hambre = avoir faim)",
+      "genero": "f",
+      "emoji": "🤤",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Tengo mucha hambre.",
+        "fr": "J’ai très faim.",
+        "voz": "narrador",
+        "audio": "narrador.5f5c441b38"
+      },
+      "audio": "narrador.17ab8387a9"
+    },
+    {
+      "id": "sed",
+      "es": "sed",
+      "fr": "soif (tener sed = avoir soif)",
+      "genero": "f",
+      "emoji": "🥵",
+      "tags": [
+        "comidas"
+      ],
+      "ejemplo": {
+        "es": "Tengo sed: quiero agua.",
+        "fr": "J’ai soif : je veux de l’eau.",
+        "voz": "narrador",
+        "audio": "narrador.0da6b4ba76"
+      },
+      "audio": "narrador.c15b7b735c"
+    },
+    {
+      "id": "falla",
+      "es": "falla",
+      "fr": "falla : monument géant en carton-pâte et en bois, brûlé à la fin de la fête (les Fallas)",
+      "genero": "f",
+      "plural": "fallas",
+      "ilustracion": "Un monument géant très coloré, avec des personnages caricaturaux en carton-pâte, au milieu d’une place",
+      "tags": [
+        "valencia"
+      ],
+      "ejemplo": {
+        "es": "Las fallas son monumentos enormes.",
+        "fr": "Les fallas sont des monuments énormes.",
+        "voz": "narrador",
+        "audio": "narrador.bbb031bf31"
+      },
+      "audio": "narrador.b03e0b5521"
+    },
+    {
+      "id": "mascleta",
+      "es": "mascletà",
+      "fr": "mascletà : concert de pétards qui retentit à 14 h pendant les Fallas (mot valencien)",
+      "genero": "f",
+      "emoji": "🎆",
+      "tags": [
+        "valencia"
+      ],
+      "ejemplo": {
+        "es": "La mascletà suena a las dos de la tarde.",
+        "fr": "La mascletà retentit à deux heures de l’après-midi.",
+        "voz": "neus",
+        "audio": "neus.23e6b7a42a"
+      },
+      "audio": "narrador.b31967449e"
+    },
+    {
+      "id": "fuego",
+      "es": "fuego",
+      "fr": "feu",
+      "genero": "m",
+      "plural": "fuegos",
+      "emoji": "🔥",
+      "tags": [
+        "valencia"
+      ],
+      "ejemplo": {
+        "es": "La paella se hace con fuego de leña.",
+        "fr": "La paella se prépare sur un feu de bois.",
+        "voz": "narrador",
+        "audio": "narrador.2b108bbf1f"
+      },
+      "audio": "narrador.29a2923a32"
+    },
+    {
+      "id": "acuario",
+      "es": "acuario",
+      "fr": "aquarium",
+      "genero": "m",
+      "plural": "acuarios",
+      "emoji": "🐠",
+      "tags": [
+        "valencia"
+      ],
+      "ejemplo": {
+        "es": "El Oceanogràfic es un acuario muy grande.",
+        "fr": "L’Oceanogràfic est un très grand aquarium.",
+        "voz": "narrador",
+        "audio": "narrador.5b5c983e39"
+      },
+      "audio": "narrador.2cf435eee9"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_hora",
+      "titulo": {
+        "es": "Son las tres y media",
+        "fr": "Dire l’heure : ser + las…"
+      },
+      "ejemplos": [
+        {
+          "es": "Es la una.",
+          "fr": "Il est une heure.",
+          "voz": "neus",
+          "audio": "neus.69efe9aa9b",
+          "resaltar": [
+            "Es la una"
+          ]
+        },
+        {
+          "es": "Son las dos y cuarto.",
+          "fr": "Il est deux heures et quart.",
+          "voz": "neus",
+          "audio": "neus.0f511743e1",
+          "resaltar": [
+            "Son las dos",
+            "y cuarto"
+          ]
+        },
+        {
+          "es": "Son las ocho menos diez.",
+          "fr": "Il est huit heures moins dix.",
+          "voz": "marina",
+          "audio": "marina.c862a227df",
+          "resaltar": [
+            "menos diez"
+          ]
+        },
+        {
+          "es": "Son las doce en punto.",
+          "fr": "Il est douze heures pile.",
+          "voz": "viajero",
+          "audio": "viajero.92d936665d",
+          "resaltar": [
+            "en punto"
+          ]
+        },
+        {
+          "es": "—¿A qué hora es la comida? —A las dos.",
+          "fr": "— À quelle heure est le déjeuner ? — À deux heures.",
+          "voz": "amparo",
+          "audio": "amparo.d179486d23",
+          "resaltar": [
+            "¿A qué hora",
+            "A las dos"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para decir la hora usamos «ser»: Es la una. Son las dos, las tres… Después añadimos y cuarto, y media, menos cuarto, menos diez. Para preguntar a qué hora pasa algo: ¿a qué hora? — A las dos.",
+        "fr": "Pour dire l’heure, on utilise « ser » : Es la una. Son las dos, las tres… Puis on ajoute y cuarto, y media, menos cuarto, menos diez. Pour demander à quelle heure quelque chose a lieu : ¿a qué hora ? — A las dos.",
+        "voz": "narrador",
+        "audio": "narrador.199564c167"
+      },
+      "pista": "On dit l'heure avec SER (jamais « tener » ni « estar »). Une seule heure : « Es la una » (singulier, féminin). À partir de deux : « Son las dos, las tres… » (pluriel). Les minutes se disent avec « y » après l'heure jusqu'à la demie (y cinco, y diez, y cuarto, y veinte, y veinticinco, y media) et avec « menos » ensuite, en comptant ce qu'il reste avant l'heure suivante (las tres menos veinte = 2 h 40 ; las seis menos cuarto = 5 h 45). « En punto » = pile. Pour préciser le moment de la journée, on ajoute « de la mañana / de la tarde / de la noche » (on n'utilise presque jamais les heures de 13 à 24 à l'oral : 15 h = las tres de la tarde). Midi et minuit ont leur nom : mediodía, medianoche. Pour demander l'heure : « ¿Qué hora es? ». Pour demander quand a lieu un événement : « ¿A qué hora…? » et on répond « a la una / a las dos… » (avec « a » devant l'heure).",
+      "tabla": {
+        "encabezado": [
+          "Hora",
+          "Se dice"
+        ],
+        "filas": [
+          [
+            "1:00",
+            "Es la una"
+          ],
+          [
+            "2:00",
+            "Son las dos"
+          ],
+          [
+            "3:15",
+            "Son las tres y cuarto"
+          ],
+          [
+            "4:30",
+            "Son las cuatro y media"
+          ],
+          [
+            "5:45",
+            "Son las seis menos cuarto"
+          ],
+          [
+            "7:10",
+            "Son las siete y diez"
+          ],
+          [
+            "8:50",
+            "Son las nueve menos diez"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_rutina",
+      "titulo": {
+        "es": "Me levanto a las siete",
+        "fr": "Ma routine : me levanto, me acuesto…"
+      },
+      "ejemplos": [
+        {
+          "es": "Me levanto a las siete y media.",
+          "fr": "Je me lève à sept heures et demie.",
+          "voz": "viajero",
+          "audio": "viajero.3f22f1885e",
+          "resaltar": [
+            "Me levanto"
+          ]
+        },
+        {
+          "es": "Neus se levanta temprano.",
+          "fr": "Neus se lève tôt.",
+          "voz": "neus",
+          "audio": "neus.7dec486b21",
+          "resaltar": [
+            "se levanta"
+          ]
+        },
+        {
+          "es": "Mis padres se acuestan a las once.",
+          "fr": "Mes parents se couchent à onze heures.",
+          "voz": "marina",
+          "audio": "marina.5e8664efdd",
+          "resaltar": [
+            "se acuestan"
+          ]
+        },
+        {
+          "es": "Desayuno leche, como a las dos y ceno a las nueve.",
+          "fr": "Je prends du lait au petit-déjeuner, je déjeune à deux heures et je dîne à neuf heures.",
+          "voz": "neus",
+          "audio": "neus.f272646d54",
+          "resaltar": [
+            "Desayuno",
+            "como",
+            "ceno"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con levantarse y acostarse usamos me, te, se… delante del verbo: me levanto, te levantas, se levanta. Con desayunar, comer y cenar no hay «me»: desayuno, como, ceno.",
+        "fr": "Avec levantarse et acostarse, on met me, te, se… devant le verbe : me levanto, te levantas, se levanta. Avec desayunar, comer et cenar, il n’y a pas de « me » : desayuno, como, ceno.",
+        "voz": "narrador",
+        "audio": "narrador.64514be010"
+      },
+      "pista": "Levantarse (se lever) et acostarse (se coucher) sont des verbes pronominaux, comme en français (je me lève) : le pronom vient avant le verbe et change avec la personne (me, te, se, nos, os, se). Les terminaisons sont celles des verbes en -ar que tu connais (levanto, levantas, levanta…). Attention : acostarse change de voyelle (me acuesto, te acuestas, se acuesta, nos acostamos : voir la carte sur la diphtongue). Pour les repas, les verbes ne sont pas pronominaux : desayunar, comer (= déjeuner, le repas de midi en Espagne : « comer » et « la comida »), cenar. Heures de la routine : « a las siete » = à sept heures ; « por la mañana / por la tarde / por la noche » = le matin / l'après-midi / le soir.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "levantarse",
+          "acostarse"
+        ],
+        "filas": [
+          [
+            "yo",
+            "me levanto",
+            "me acuesto"
+          ],
+          [
+            "tú",
+            "te levantas",
+            "te acuestas"
+          ],
+          [
+            "él / ella",
+            "se levanta",
+            "se acuesta"
+          ],
+          [
+            "nosotros",
+            "nos levantamos",
+            "nos acostamos"
+          ],
+          [
+            "vosotros",
+            "os levantáis",
+            "os acostáis"
+          ],
+          [
+            "ellos / ellas",
+            "se levantan",
+            "se acuestan"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_ir",
+      "titulo": {
+        "es": "Voy, vas, va…",
+        "fr": "Le verbe aller : ir"
+      },
+      "ejemplos": [
+        {
+          "es": "Voy al cole a las ocho y media.",
+          "fr": "Je vais à l’école à huit heures et demie.",
+          "voz": "viajero",
+          "audio": "viajero.128bd2482d",
+          "resaltar": [
+            "Voy al"
+          ]
+        },
+        {
+          "es": "¿Adónde vas, Neus?",
+          "fr": "Où vas-tu, Neus ?",
+          "voz": "marina",
+          "audio": "marina.3df39bb60e",
+          "resaltar": [
+            "vas"
+          ]
+        },
+        {
+          "es": "Marina va a casa de su abuela.",
+          "fr": "Marina va chez sa grand-mère.",
+          "voz": "neus",
+          "audio": "neus.52a8f4dfe5",
+          "resaltar": [
+            "va"
+          ]
+        },
+        {
+          "es": "Vamos al museo de las ciencias.",
+          "fr": "Nous allons au musée des sciences.",
+          "voz": "neus",
+          "audio": "neus.23cf842680",
+          "resaltar": [
+            "Vamos al"
+          ]
+        },
+        {
+          "es": "Los valencianos van a la playa en verano.",
+          "fr": "Les Valenciens vont à la plage en été.",
+          "voz": "vicent",
+          "audio": "vicent.5009c53d04",
+          "resaltar": [
+            "van"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "El verbo «ir» es irregular: voy, vas, va, vamos, vais, van. Después de «ir» ponemos «a»: voy a casa. Con «el» decimos «al»: voy al cole. Para preguntar el lugar: ¿adónde?",
+        "fr": "Le verbe « ir » est irrégulier : voy, vas, va, vamos, vais, van. Après « ir », on met « a » : voy a casa. Avec « el », on dit « al » : voy al cole. Pour demander le lieu : ¿adónde ?",
+        "voz": "narrador",
+        "audio": "narrador.edb7681c7a"
+      },
+      "pista": "« Ir » (aller) est très irrégulier : il faut l'apprendre par cœur (voy, vas, va, vamos, vais, van). Il est toujours suivi de la préposition « a » : voy a Madrid, vamos a casa. A + el = AL (voy al cole), mais a + la reste « a la » (voy a la playa). Pour demander la destination : « ¿Adónde vas? » (où vas-tu ?). Pour demander l'origine on dirait « ¿de dónde vienes? ». Ne pas confondre avec « estar » : « estoy en Valencia » (je suis à Valence) / « voy a Valencia » (je vais à Valence). Prononciation : le v espagnol se prononce comme un b (« boy »).",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "ir"
+        ],
+        "filas": [
+          [
+            "yo",
+            "voy"
+          ],
+          [
+            "tú",
+            "vas"
+          ],
+          [
+            "él / ella",
+            "va"
+          ],
+          [
+            "nosotros",
+            "vamos"
+          ],
+          [
+            "vosotros",
+            "vais"
+          ],
+          [
+            "ellos / ellas",
+            "van"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_ir_a",
+      "titulo": {
+        "es": "Voy a comer paella",
+        "fr": "Le futur proche : ir a + infinitif"
+      },
+      "ejemplos": [
+        {
+          "es": "Voy a comer paella.",
+          "fr": "Je vais manger de la paella.",
+          "voz": "viajero",
+          "audio": "viajero.af432748fc",
+          "resaltar": [
+            "Voy a comer"
+          ]
+        },
+        {
+          "es": "Esta tarde vamos a cenar con Vicent.",
+          "fr": "Cet après-midi, nous allons dîner avec Vicent.",
+          "voz": "neus",
+          "audio": "neus.d91b5442ed",
+          "resaltar": [
+            "vamos a cenar"
+          ]
+        },
+        {
+          "es": "¿Qué vas a beber?",
+          "fr": "Qu’est-ce que tu vas boire ?",
+          "voz": "amparo",
+          "audio": "amparo.fc32f74076",
+          "resaltar": [
+            "vas a beber"
+          ]
+        },
+        {
+          "es": "Neus va a estudiar después de la comida.",
+          "fr": "Neus va étudier après le déjeuner.",
+          "voz": "marina",
+          "audio": "marina.1d3299fc4d",
+          "resaltar": [
+            "va a estudiar"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para hablar del futuro cercano usamos ir + a + infinitivo: voy a comer, vas a beber, va a estudiar. Es como «aller + infinitif» en francés.",
+        "fr": "Pour parler du futur proche, on utilise ir + a + infinitif : voy a comer, vas a beber, va a estudiar. C’est exactement comme « aller + infinitif » en français.",
+        "voz": "narrador",
+        "audio": "narrador.a7f2d816bb"
+      },
+      "pista": "Ir a + infinitif = aller + infinitif : c'est le futur proche, le plus utilisé à l'oral pour parler de ce qu'on va faire (voy a cenar = je vais dîner). Le verbe « ir » se conjugue (voy, vas, va, vamos, vais, van), le « a » ne change jamais, et le deuxième verbe reste à l'infinitif (voy a comer, jamais « voy a como »). Des mots utiles pour le futur : hoy (aujourd'hui), mañana (demain), esta tarde (cet après-midi), esta noche (ce soir), después (après). Pour la négation, « no » se place avant « ir » : no voy a cenar.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "ir a + comer"
+        ],
+        "filas": [
+          [
+            "yo",
+            "voy a comer"
+          ],
+          [
+            "tú",
+            "vas a comer"
+          ],
+          [
+            "él / ella",
+            "va a comer"
+          ],
+          [
+            "nosotros",
+            "vamos a comer"
+          ],
+          [
+            "vosotros",
+            "vais a comer"
+          ],
+          [
+            "ellos / ellas",
+            "van a comer"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_diptongo",
+      "titulo": {
+        "es": "Quiero, puedo, empiezo",
+        "fr": "Quand la voyelle change : e→ie, o→ue"
+      },
+      "ejemplos": [
+        {
+          "es": "Quiero una horchata, por favor.",
+          "fr": "Je veux une horchata, s’il vous plaît.",
+          "voz": "viajero",
+          "audio": "viajero.de383e09de",
+          "resaltar": [
+            "Quiero"
+          ]
+        },
+        {
+          "es": "¿Puedes esperar cinco minutos?",
+          "fr": "Peux-tu attendre cinq minutes ?",
+          "voz": "neus",
+          "audio": "neus.dd4676af38",
+          "resaltar": [
+            "Puedes"
+          ]
+        },
+        {
+          "es": "La mascletà empieza a las dos.",
+          "fr": "La mascletà commence à deux heures.",
+          "voz": "neus",
+          "audio": "neus.bc2f6f3ec5",
+          "resaltar": [
+            "empieza"
+          ]
+        },
+        {
+          "es": "Queremos comer ahora, pero no podemos.",
+          "fr": "Nous voulons manger maintenant, mais nous ne pouvons pas.",
+          "voz": "vicent",
+          "audio": "vicent.328279fd6e",
+          "resaltar": [
+            "Queremos",
+            "podemos"
+          ]
+        },
+        {
+          "es": "Mi abuelo duerme la siesta.",
+          "fr": "Mon grand-père fait la sieste.",
+          "voz": "neus",
+          "audio": "neus.0c2a4ff928",
+          "resaltar": [
+            "duerme"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "En algunos verbos, la vocal de la raíz cambia: querer → quiero, poder → puedo, empezar → empiezo, dormir → duermo. Cambia con yo, tú, él y ellos. Con nosotros y vosotros, no cambia: queremos, podemos.",
+        "fr": "Dans certains verbes, la voyelle du radical change : querer → quiero, poder → puedo, empezar → empiezo, dormir → duermo. Elle change avec yo, tú, él et ellos. Avec nosotros et vosotros, elle ne change pas : queremos, podemos.",
+        "voz": "narrador",
+        "audio": "narrador.bc6c7e53e0"
+      },
+      "pista": "Certains verbes diphtonguent : la voyelle accentuée du radical devient ie (e → ie : querer → quiero, empezar → empiezo, preferir, tener → tengo/tienes…) ou ue (o → ue : poder → puedo, dormir → duermo, acostarse → me acuesto). On parle de « verbes à botte » : si on entoure sur un tableau les formes qui changent (yo, tú, él, ellos), on dessine une botte. Nosotros et vosotros gardent le radical car l'accent tombe sur la terminaison (que-RE-mos, po-DÉ-is) : pas de diphtongue. Les terminaisons restent régulières. Querer + infinitif = vouloir faire (quiero comer) ; poder + infinitif = pouvoir (¿puedo comer?) ; « ¿puedo…? » sert aussi à demander la permission, en français « je peux… ? ». Attention : « querer » à lui seul peut aussi vouloir dire « aimer » (quiero a mi abuela = j'aime ma grand-mère).",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "querer (e→ie)",
+          "poder (o→ue)"
+        ],
+        "filas": [
+          [
+            "yo",
+            "quiero",
+            "puedo"
+          ],
+          [
+            "tú",
+            "quieres",
+            "puedes"
+          ],
+          [
+            "él / ella",
+            "quiere",
+            "puede"
+          ],
+          [
+            "nosotros",
+            "queremos",
+            "podemos"
+          ],
+          [
+            "vosotros",
+            "queréis",
+            "podéis"
+          ],
+          [
+            "ellos / ellas",
+            "quieren",
+            "pueden"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_gerundio",
+      "titulo": {
+        "es": "Estoy comiendo",
+        "fr": "Ce que je fais en ce moment : estar + gérondif"
+      },
+      "ejemplos": [
+        {
+          "es": "Vicent está preparando la paella.",
+          "fr": "Vicent est en train de préparer la paella.",
+          "voz": "neus",
+          "audio": "neus.dff24e13d1",
+          "resaltar": [
+            "está preparando"
+          ]
+        },
+        {
+          "es": "Ahora estoy comiendo, no puedo hablar.",
+          "fr": "En ce moment, je suis en train de manger, je ne peux pas parler.",
+          "voz": "viajero",
+          "audio": "viajero.740a79fe7c",
+          "resaltar": [
+            "estoy comiendo"
+          ]
+        },
+        {
+          "es": "¿Qué estás leyendo?",
+          "fr": "Qu’est-ce que tu es en train de lire ?",
+          "voz": "marina",
+          "audio": "marina.424f85d21d",
+          "resaltar": [
+            "estás leyendo"
+          ]
+        },
+        {
+          "es": "Estamos esperando la cena.",
+          "fr": "Nous attendons le dîner (en ce moment).",
+          "voz": "amparo",
+          "audio": "amparo.3f044521b4",
+          "resaltar": [
+            "Estamos esperando"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para decir lo que hago ahora mismo: estar + gerundio. Verbos en -ar: -ando (hablando). Verbos en -er / -ir: -iendo (comiendo, viviendo). Leer → leyendo.",
+        "fr": "Pour dire ce que je fais en ce moment : estar + gérondif. Verbes en -ar : -ando (hablando). Verbes en -er / -ir : -iendo (comiendo, viviendo). Leer → leyendo.",
+        "voz": "narrador",
+        "audio": "narrador.2bc3a54a51"
+      },
+      "pista": "Estar + gerundio = être en train de + infinitif : l'action se passe MAINTENANT (estoy comiendo = je suis en train de manger). Le gérondif se forme avec le radical + -ando (verbes en -ar : hablar → hablando) ou -iendo (verbes en -er et en -ir : comer → comiendo, vivir → viviendo, escribir → escribiendo). Quand le radical se termine par une voyelle, le i devient y : leer → leyendo. Quelques verbes sont irréguliers (dormir → durmiendo, pedir → pidiendo) mais on ne les étudie pas encore. Pour une habitude, on garde le présent simple : « como a las dos » (je déjeune toujours à 2 h) ; « estoy comiendo » = en ce moment précis. Estar se conjugue (estoy, estás, está, estamos, estáis, están), le gérondif ne change jamais (pas de -s, pas d'accord).",
+      "tabla": {
+        "encabezado": [
+          "Infinitivo",
+          "Gerundio"
+        ],
+        "filas": [
+          [
+            "hablar",
+            "hablando"
+          ],
+          [
+            "esperar",
+            "esperando"
+          ],
+          [
+            "comer",
+            "comiendo"
+          ],
+          [
+            "escribir",
+            "escribiendo"
+          ],
+          [
+            "leer",
+            "leyendo"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u05-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Valencia",
+      "emoji": "🏙️",
+      "intro": {
+        "es": "¡Bienvenidos a Valencia! Soy Neus. Aquí todo tiene su hora.",
+        "fr": "Bienvenue à Valence ! Je suis Neus. Ici, tout a son heure.",
+        "voz": "neus",
+        "audio": "neus.a7059a3b77"
+      },
+      "pista": "Arrivée à Valence : tu rencontres Neus et Vicent, et tu découvres le problème des horloges arrêtées. Les PNJ parlent espagnol d’Espagne.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u05-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u05-intro",
+          "escena": {
+            "id": "u05-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 5 · ¿Qué hora es? · Valencia",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée quitte le Mexique, traverse l’océan et se pose sur la côte est de l’Espagne, zoom sur Valencia ; carte-titre « Capítulo 5 · ¿Qué hora es? · Valencia ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 5 · ¿Qué hora es? · Valencia",
+                "lineas": [
+                  {
+                    "es": "Capítulo cinco: ¿qué hora es?",
+                    "fr": "Chapitre cinq : quelle heure est-il ?",
+                    "voz": "narrador",
+                    "audio": "narrador.eb8e069c51"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Valencia en plein soleil : les arches blanches de la Ciudad de las Artes y las Ciencias se reflètent dans les bassins turquoise, le dôme en forme d’œil de l’Hemisfèric, le Palau de les Arts, des oranges sur un étal au premier plan.",
+                "camara": "travelling lent le long des bassins",
+                "lineas": [
+                  {
+                    "es": "Valencia. Una ciudad con mar, sol y mucha luz.",
+                    "fr": "Valence. Une ville avec la mer, du soleil et beaucoup de lumière.",
+                    "voz": "narrador",
+                    "audio": "narrador.e43de50a03"
+                  },
+                  {
+                    "es": "Aquí la comida es a las dos y la cena es a las nueve.",
+                    "fr": "Ici, le déjeuner est à deux heures et le dîner à neuf heures.",
+                    "voz": "narrador",
+                    "audio": "narrador.e1a7be354c"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u05-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Valencia está en España.",
+            "fr": "Valence est en Espagne.",
+            "voz": "narrador",
+            "audio": "narrador.9c5a23aef1"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u05-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Valencia está en México.",
+            "fr": "Valence est au Mexique.",
+            "voz": "narrador",
+            "audio": "narrador.f61651d04e"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u05-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u05-historia",
+          "escena": {
+            "id": "u05-historia",
+            "tipo": "historia",
+            "titulo": "Los relojes parados",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Esplanade de la Ciudad de las Artes à midi, bassins et arches blanches. Álex, Marina et le Quetzal arrivent. Neus, 12 ans, un réveil digital au poignet, court vers eux.",
+                "camara": "plan large puis champ / contre-champ",
+                "personajes": [
+                  "neus",
+                  "marina",
+                  "quetzal",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Hola! Me llamo Neus. ¡Necesito ayuda! Todos los relojes de Valencia están parados.",
+                    "fr": "Salut ! Je m’appelle Neus. J’ai besoin d’aide ! Toutes les horloges de Valence sont arrêtées.",
+                    "voz": "neus",
+                    "audio": "neus.2719091491"
+                  },
+                  {
+                    "es": "¿Parados? ¿Y qué hora es?",
+                    "fr": "Arrêtées ? Et quelle heure est-il ?",
+                    "voz": "marina",
+                    "audio": "marina.2997d30235"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Neus montre son réveil digital qui affiche 12:05, puis une grande horloge dont les aiguilles ne bougent plus. Vicent, le paellero, remue en vain une immense poêle sur son feu de bois.",
+                "camara": "plan moyen sur la poêle de paella, fumée immobile",
+                "personajes": [
+                  "neus",
+                  "vicent"
+                ],
+                "lineas": [
+                  {
+                    "es": "Mi reloj dice las doce y cinco. Siempre las doce y cinco.",
+                    "fr": "Ma montre indique midi cinq. Toujours midi cinq.",
+                    "voz": "neus",
+                    "audio": "neus.890c82c280"
+                  },
+                  {
+                    "es": "Mi paella no termina nunca. Son las doce y cinco… ¡desde ayer!",
+                    "fr": "Ma paella ne finit jamais. Il est midi cinq… depuis hier !",
+                    "voz": "vicent",
+                    "audio": "vicent.ccab5b5523"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "La grande horloge : une ombre noire s’étire sur son cadran. Tous les passants sont figés, la fumée de la paella est suspendue.",
+                "personajes": [
+                  "sombra",
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin horas no hay rutina. Sin rutina no hay palabras.",
+                    "fr": "Sans heures, pas de routine. Sans routine, pas de mots.",
+                    "voz": "sombra",
+                    "audio": "sombra.86fd2f5054"
+                  },
+                  {
+                    "es": "La Sombra. Siento una pluma dentro del reloj.",
+                    "fr": "La Sombra. Je sens une plume à l’intérieur de l’horloge.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.2c7dfd99ee"
+                  }
+                ],
+                "musica": "tension douce, tic-tac lent et guitare"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Gros plan sur le cadran : un reflet vert derrière le verre. Neus tend son réveil à Álex.",
+                "personajes": [
+                  "neus",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Para mover las agujas, tenemos que decir bien la hora. ¿Me ayudáis?",
+                    "fr": "Pour faire bouger les aiguilles, nous devons dire correctement l’heure. Vous m’aidez ? (« ayudáis » : vous aidez, forme « vosotros » d’Espagne)",
+                    "voz": "neus",
+                    "audio": "neus.a53c7790e4"
+                  },
+                  {
+                    "es": "¡Claro! ¡Vamos!",
+                    "fr": "Bien sûr ! Allons-y !",
+                    "voz": "viajero",
+                    "audio": "viajero.be44f346ef"
+                  }
+                ],
+                "musica": "thème d’aventure, guitare et castagnettes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u05-q01-s05",
+          "tipo": "flashcard",
+          "vocab": [
+            "que_hora_es",
+            "veinticinco"
+          ]
+        },
+        {
+          "id": "u05-q01-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Todos los relojes de Valencia están parados desde esta mañana.",
+            "voz": "neus",
+            "audio": "neus.4e81005118"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Neus tiene un reloj nuevo y muy bonito.",
+              "correcta": false
+            },
+            {
+              "texto": "Hay un problema con la hora en la ciudad.",
+              "correcta": true
+            },
+            {
+              "texto": "Los relojes funcionan muy bien hoy.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q01-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi paella no está lista. Siempre son las doce y cinco.",
+            "voz": "vicent",
+            "audio": "vicent.91844bf35e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El paellero cena a las doce y cinco.",
+              "correcta": false
+            },
+            {
+              "texto": "La comida de Vicent ya está en la mesa.",
+              "correcta": false
+            },
+            {
+              "texto": "El paellero no puede terminar su plato.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u05-q01-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Neus dice: «Todos los relojes están parados».",
+            "fr": "Neus dit : « Toutes les horloges sont arrêtées ».",
+            "voz": "narrador",
+            "audio": "narrador.3ded2aa573"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u05-q01-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "neus",
+          "replica": {
+            "es": "¡Hola! Soy Neus. ¿Vosotros sois los viajeros?",
+            "fr": "Salut ! Je suis Neus. Vous êtes les voyageurs ? (« vosotros » = vous, en Espagne)",
+            "voz": "neus",
+            "audio": "neus.3c347ccfad"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, yo soy Álex y ella es Marina.",
+                "voz": "viajero",
+                "audio": "viajero.085ed47409"
+              },
+              "fr": "Oui, moi c’est Álex et elle, c’est Marina.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Mucho gusto.",
+                "fr": "Super ! Enchantée.",
+                "voz": "neus",
+                "audio": "neus.a311a4a4cd",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las doce y cinco.",
+                "voz": "viajero",
+                "audio": "viajero.c61121bf32"
+              },
+              "fr": "Il est midi cinq.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Sí, siempre las doce y cinco… pero yo pregunto quiénes sois.",
+                "fr": "Oui, toujours midi cinq… mais je demande qui vous êtes.",
+                "voz": "neus",
+                "audio": "neus.8a55dfe990",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo Valencia.",
+                "voz": "viajero",
+                "audio": "viajero.2c8cb06a58"
+              },
+              "fr": "Je m’appelle Valence.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas Valencia? ¡Como mi ciudad!",
+                "fr": "Tu t’appelles Valence ? Comme ma ville !",
+                "voz": "neus",
+                "audio": "neus.95a3dad616",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q01-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "vicent",
+          "replica": {
+            "es": "Buenas tardes, chicos. ¿De dónde sois?",
+            "fr": "Bonjour (l’après-midi), les jeunes. D’où êtes-vous ?",
+            "voz": "vicent",
+            "audio": "vicent.715a4e7a02"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Yo soy de París y Marina es de Sevilla.",
+                "voz": "viajero",
+                "audio": "viajero.b4c388ffbb"
+              },
+              "fr": "Moi, je suis de Paris et Marina est de Séville.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Caramba! Venís de lejos. Aquí en Valencia hay buena paella.",
+                "fr": "Mince alors ! Vous venez de loin. Ici à Valence, il y a de la bonne paella.",
+                "voz": "vicent",
+                "audio": "vicent.555ac803a3",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años y un reloj.",
+                "voz": "viajero",
+                "audio": "viajero.604341ad2c"
+              },
+              "fr": "J’ai douze ans et une montre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Muy bien, pero ¿de dónde sois?",
+                "fr": "Très bien, mais d’où êtes-vous ?",
+                "voz": "vicent",
+                "audio": "vicent.c555a8641f",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy una paella.",
+                "voz": "viajero",
+                "audio": "viajero.1fc3985832"
+              },
+              "fr": "Je suis une paella.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. ¡Y yo soy un arroz!",
+                "fr": "Ha, ha. Et moi, je suis un riz !",
+                "voz": "vicent",
+                "audio": "vicent.cb1dc3ad24",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q01-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Todos",
+            "los",
+            "relojes",
+            "están",
+            "parados."
+          ],
+          "habla": {
+            "es": "Todos los relojes están parados.",
+            "voz": "neus",
+            "audio": "neus.7397b2d44a"
+          },
+          "fr": "Toutes les horloges sont arrêtées."
+        },
+        {
+          "id": "u05-q01-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, Neus. Me llamo Álex y estoy en Valencia.",
+            "fr": "Salut, Neus. Je m’appelle Álex et je suis à Valence. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.3e1b2bfbed"
+          },
+          "aceptadas": [
+            "hola neus me llamo álex y estoy en valencia"
+          ],
+          "patrones": [
+            "hola neus me llamo {nombre} y estoy en valencia"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la llegada",
+            "efecto": "Las agujas de todos los relojes tiemblan"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u05-q02",
+      "tipo": "vocabulario",
+      "titulo": "¿Qué hora es?",
+      "emoji": "🕒",
+      "intro": {
+        "es": "Mira mi reloj. ¿Sabes decir la hora?",
+        "fr": "Regarde ma montre. Sais-tu dire l’heure ?",
+        "voz": "neus",
+        "audio": "neus.a17c0a86a8"
+      },
+      "pista": "Dire l’heure avec ser : es la una, son las dos, y cuarto, y media, menos cuarto. À quelle heure ? → ¿a qué hora ? — a las…",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u05-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "hora",
+            "reloj",
+            "minuto",
+            "en_punto",
+            "y_media",
+            "cuarto",
+            "menos_h"
+          ]
+        },
+        {
+          "id": "u05-q02-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "reloj",
+            "voz": "narrador",
+            "audio": "narrador.2e490be4ff"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "hora",
+              "correcta": false
+            },
+            {
+              "vocab": "reloj",
+              "correcta": true
+            },
+            {
+              "vocab": "minuto",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "mediodia",
+            "medianoche",
+            "manana",
+            "tarde",
+            "noche",
+            "temprano",
+            "a_que_hora"
+          ]
+        },
+        {
+          "id": "u05-q02-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "mediodia"
+            },
+            {
+              "vocab": "medianoche"
+            },
+            {
+              "vocab": "manana"
+            },
+            {
+              "vocab": "tarde"
+            },
+            {
+              "vocab": "noche"
+            },
+            {
+              "vocab": "reloj"
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s05",
+          "tipo": "grammar_card",
+          "ref": "g_hora"
+        },
+        {
+          "id": "u05-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las cuatro y media.",
+            "voz": "neus",
+            "audio": "neus.960e8f3259"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "4:30",
+              "correcta": true
+            },
+            {
+              "texto": "4:15",
+              "correcta": false
+            },
+            {
+              "texto": "3:30",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Es la una menos cuarto.",
+            "voz": "amparo",
+            "audio": "amparo.cf59c94bc8"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "1:15",
+              "correcta": false
+            },
+            {
+              "texto": "12:45",
+              "correcta": true
+            },
+            {
+              "texto": "1:45",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las ocho y diez de la tarde.",
+            "voz": "neus",
+            "audio": "neus.452a8cffac"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "8:10 por la mañana",
+              "correcta": false
+            },
+            {
+              "texto": "8:50 por la tarde",
+              "correcta": false
+            },
+            {
+              "texto": "8:10 por la tarde",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Son las tres ___.",
+          "respuesta": "y media",
+          "opciones": [
+            "y media",
+            "y medio",
+            "menos media"
+          ],
+          "habla": {
+            "es": "Son las tres y media.",
+            "voz": "neus",
+            "audio": "neus.600582e3e3"
+          },
+          "fr": "Il est trois heures et demie."
+        },
+        {
+          "id": "u05-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ la una y cuarto.",
+          "respuesta": "Es",
+          "opciones": [
+            "Es",
+            "Son",
+            "Está"
+          ],
+          "habla": {
+            "es": "Es la una y cuarto.",
+            "voz": "amparo",
+            "audio": "amparo.a7a80319cb"
+          },
+          "fr": "Il est une heure et quart. (une seule heure → singulier)"
+        },
+        {
+          "id": "u05-q02-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Son las cinco ___ diez.",
+          "respuesta": "menos",
+          "opciones": [
+            "y",
+            "menos",
+            "en"
+          ],
+          "habla": {
+            "es": "Son las cinco menos diez.",
+            "voz": "neus",
+            "audio": "neus.95d120bcfe"
+          },
+          "fr": "Il est cinq heures moins dix."
+        },
+        {
+          "id": "u05-q02-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Son",
+            "las",
+            "dos",
+            "y",
+            "cuarto",
+            "de",
+            "la",
+            "tarde."
+          ],
+          "habla": {
+            "es": "Son las dos y cuarto de la tarde.",
+            "voz": "neus",
+            "audio": "neus.0149abc5ac"
+          },
+          "fr": "Il est deux heures et quart de l’après-midi."
+        },
+        {
+          "id": "u05-q02-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "neus",
+          "replica": {
+            "es": "Mi reloj digital dice 4:45. ¿Qué hora es?",
+            "fr": "Ma montre digitale indique 4:45. Quelle heure est-il ?",
+            "voz": "neus",
+            "audio": "neus.5e719d586e"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Son las cinco menos cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.08b062c33d"
+              },
+              "fr": "Il est cinq heures moins le quart.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! ¡Las agujas se mueven un poco!",
+                "fr": "Parfait ! Les aiguilles… bougent un peu !",
+                "voz": "neus",
+                "audio": "neus.9e0a76795a",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las cuatro y cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.a6a9a62439"
+              },
+              "fr": "Il est quatre heures et quart.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm, y cuarto es 4:15. Piensa en «menos cuarto».",
+                "fr": "Mmm, « y cuarto » c’est 4:15. Pense à « menos cuarto ».",
+                "voz": "neus",
+                "audio": "neus.cc99742fe6",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es la una y media.",
+                "voz": "viajero",
+                "audio": "viajero.bdbc0c05e2"
+              },
+              "fr": "Il est une heure et demie.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No: mi reloj dice casi las cinco.",
+                "fr": "Non : ma montre indique presque cinq heures.",
+                "voz": "neus",
+                "audio": "neus.b7838ab97f",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q02-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di una hora a tu gusto.",
+            "fr": "Écoute et dis l’heure de ton choix : change « cuatro » (par exemple « son las siete y cuarto »).",
+            "voz": "narrador",
+            "audio": "narrador.7c122d07ca"
+          },
+          "objetivo": {
+            "es": "Son las cuatro y cuarto.",
+            "fr": "Il est quatre heures et quart. (change l’heure)",
+            "voz": "viajero",
+            "audio": "viajero.a6a9a62439"
+          },
+          "aceptadas": [
+            "son las cuatro y cuarto"
+          ],
+          "patrones": [
+            "son las {nombre} y cuarto"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de las agujas",
+            "efecto": "Las agujas del gran reloj se mueven un minuto"
+          }
+        },
+        {
+          "id": "u05-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Son las ocho menos diez.",
+            "voz": "neus",
+            "audio": "neus.c862a227df"
+          },
+          "respuesta": "Son las ocho menos diez.",
+          "aceptadas": [
+            "son las ocho menos diez"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u05-q03",
+      "tipo": "lectura",
+      "titulo": "Mi rutina",
+      "emoji": "🌄",
+      "intro": {
+        "es": "Te cuento mi día. Primero me levanto, luego desayuno… ¿y tú?",
+        "fr": "Je te raconte ma journée. D’abord je me lève, puis je prends mon petit-déjeuner… et toi ?",
+        "voz": "neus",
+        "audio": "neus.1454b92be7"
+      },
+      "pista": "La routine du jour : se lever, déjeuner, aller à l’école, se coucher. Verbes pronominaux (me levanto), repas espagnols, et tu écris ta propre routine.",
+      "stats": [
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u05-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "levantarse",
+            "acostarse",
+            "desayunar",
+            "cenar",
+            "dormir",
+            "empezar",
+            "terminar"
+          ]
+        },
+        {
+          "id": "u05-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "llegar",
+            "siesta",
+            "desayuno",
+            "merienda",
+            "cena",
+            "siempre",
+            "despues"
+          ]
+        },
+        {
+          "id": "u05-q03-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "desayuno"
+            },
+            {
+              "vocab": "merienda"
+            },
+            {
+              "vocab": "cena"
+            },
+            {
+              "vocab": "levantarse"
+            },
+            {
+              "vocab": "acostarse"
+            },
+            {
+              "vocab": "dormir"
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s04",
+          "tipo": "grammar_card",
+          "ref": "g_rutina"
+        },
+        {
+          "id": "u05-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Me acuesto a las diez.",
+            "voz": "marina",
+            "audio": "marina.2661bc556c"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "levantarse",
+              "correcta": false
+            },
+            {
+              "vocab": "acostarse",
+              "correcta": true
+            },
+            {
+              "vocab": "desayunar",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Me levanto temprano y desayuno tostadas con zumo.",
+            "voz": "neus",
+            "audio": "neus.feff9cbda0"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Neus come tostadas al empezar el día.",
+              "correcta": true
+            },
+            {
+              "texto": "Neus se acuesta a las diez.",
+              "correcta": false
+            },
+            {
+              "texto": "Neus bebe leche por la noche.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Me llamo Neus. Por la mañana me levanto a las siete y media. Desayuno leche y una tostada. El colegio empieza a las nueve y termina a las dos. Como en casa a las dos y media. Por la tarde estudio y juego. Ceno a las nueve y me acuesto a las diez.",
+            "fr": "Je m’appelle Neus. Le matin, je me lève à sept heures et demie. Je prends du lait et une tartine au petit-déjeuner. L’école commence à neuf heures et finit à deux heures. Je déjeune à la maison à deux heures et demie. L’après-midi, j’étudie et je joue. Je dîne à neuf heures et je me couche à dix heures.",
+            "voz": "neus",
+            "audio": "neus.f4f95286f0"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿A qué hora se levanta Neus?",
+                "fr": "À quelle heure Neus se lève-t-elle ?",
+                "voz": "narrador",
+                "audio": "narrador.b034b4c832"
+              },
+              "opciones": [
+                {
+                  "texto": "A las nueve.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A las siete y media.",
+                  "correcta": true
+                },
+                {
+                  "texto": "A las dos.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo termina el colegio?",
+                "fr": "Quand l’école finit-elle ?",
+                "voz": "narrador",
+                "audio": "narrador.0ee1977383"
+              },
+              "opciones": [
+                {
+                  "texto": "A las nueve.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A las diez.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A las dos.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo cena Neus?",
+                "fr": "Quand Neus dîne-t-elle ?",
+                "voz": "narrador",
+                "audio": "narrador.e9cc1ece21"
+              },
+              "opciones": [
+                {
+                  "texto": "A las nueve.",
+                  "correcta": true
+                },
+                {
+                  "texto": "A las dos y media.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A las diez.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Por la mañana yo ___ a las ocho.",
+          "respuesta": "me levanto",
+          "opciones": [
+            "me levanto",
+            "se levanta",
+            "me levantas"
+          ],
+          "habla": {
+            "es": "Por la mañana yo me levanto a las ocho.",
+            "voz": "viajero",
+            "audio": "viajero.b708ce2c6c"
+          },
+          "fr": "Le matin, je me lève à huit heures."
+        },
+        {
+          "id": "u05-q03-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi hermana ___ a las diez de la noche.",
+          "respuesta": "se acuesta",
+          "opciones": [
+            "se acuesta",
+            "me acuesto",
+            "se acostan"
+          ],
+          "habla": {
+            "es": "Mi hermana se acuesta a las diez de la noche.",
+            "voz": "marina",
+            "audio": "marina.f6f1d17675"
+          },
+          "fr": "Ma sœur se couche à dix heures du soir."
+        },
+        {
+          "id": "u05-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El colegio ___ a las nueve.",
+          "respuesta": "empieza",
+          "opciones": [
+            "empieza",
+            "empiezo",
+            "empezamos"
+          ],
+          "habla": {
+            "es": "El colegio empieza a las nueve.",
+            "voz": "neus",
+            "audio": "neus.ccb1565780"
+          },
+          "fr": "L’école commence à neuf heures."
+        },
+        {
+          "id": "u05-q03-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "familia",
+            "cena",
+            "a",
+            "las",
+            "nueve",
+            "y",
+            "media."
+          ],
+          "habla": {
+            "es": "Mi familia cena a las nueve y media.",
+            "voz": "neus",
+            "audio": "neus.c6c459172d"
+          },
+          "fr": "Ma famille dîne à neuf heures et demie."
+        },
+        {
+          "id": "u05-q03-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "neus",
+          "replica": {
+            "es": "¿A qué hora te levantas tú?",
+            "fr": "À quelle heure te lèves-tu, toi ?",
+            "voz": "neus",
+            "audio": "neus.c42ce30930"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me levanto a las siete y cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.b8cfe3ead3"
+              },
+              "fr": "Je me lève à sept heures et quart.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué temprano! Yo me levanto un poco más tarde.",
+                "fr": "Quelle heure matinale ! Moi, je me lève un peu plus tard.",
+                "voz": "neus",
+                "audio": "neus.faa8beacc2",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las siete y cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.a2312a339d"
+              },
+              "fr": "Il est sept heures et quart.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Yo te pregunto a qué hora te levantas tú.",
+                "fr": "Moi, je te demande à quelle heure tu te lèves, toi.",
+                "voz": "neus",
+                "audio": "neus.26128f1f0d",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me levanto el reloj.",
+                "voz": "viajero",
+                "audio": "viajero.b9713156fa"
+              },
+              "fr": "Je me lève l’horloge.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te levantas el reloj? ¡Qué cosa más rara!",
+                "fr": "Tu te lèves l’horloge ? Quelle drôle de chose !",
+                "voz": "neus",
+                "audio": "neus.640f0495fc",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "amparo",
+          "replica": {
+            "es": "Hola, cariño. ¿Qué desayunas por la mañana?",
+            "fr": "Salut, mon chou. Que prends-tu au petit-déjeuner le matin ?",
+            "voz": "amparo",
+            "audio": "amparo.ce6635b3bd"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Desayuno leche y una tostada.",
+                "voz": "viajero",
+                "audio": "viajero.c419ab0edd"
+              },
+              "fr": "Je prends du lait et une tartine.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Muy bien! Un buen desayuno es importante.",
+                "fr": "Très bien ! Un bon petit-déjeuner est important.",
+                "voz": "amparo",
+                "audio": "amparo.a6b5c3994a",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Desayuno a las diez de la noche.",
+                "voz": "viajero",
+                "audio": "viajero.a2209fdf84"
+              },
+              "fr": "Je prends mon petit-déjeuner à dix heures du soir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "A las diez de la noche se cena, ¡no se desayuna!",
+                "fr": "À dix heures du soir, on dîne, on ne prend pas le petit-déjeuner !",
+                "voz": "amparo",
+                "audio": "amparo.4d943f4201",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Desayuno una paella con el reloj.",
+                "voz": "viajero",
+                "audio": "viajero.8590c1d8e3"
+              },
+              "fr": "Je prends une paella avec l’horloge au petit-déjeuner.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Con el reloj? Pobre reloj…",
+                "fr": "Avec l’horloge ? Pauvre horloge…",
+                "voz": "amparo",
+                "audio": "amparo.eb683ac09e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q03-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di a qué hora TE levantas.",
+            "fr": "Écoute et dis à quelle heure TU te lèves (a las seis y media, a las ocho menos cuarto…). Change seulement « siete ».",
+            "voz": "narrador",
+            "audio": "narrador.3fcadb22de"
+          },
+          "objetivo": {
+            "es": "Me levanto a las siete.",
+            "fr": "Je me lève à sept heures. (dis ton heure)",
+            "voz": "viajero",
+            "audio": "viajero.6b0e4a1849"
+          },
+          "aceptadas": [
+            "me levanto a las siete"
+          ],
+          "patrones": [
+            "me levanto a las {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del despertar",
+            "efecto": "Un rayo de sol atraviesa la plaza"
+          }
+        },
+        {
+          "id": "u05-q03-s15",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu rutina.",
+            "fr": "Écris ta routine.",
+            "voz": "narrador",
+            "audio": "narrador.99c2a46adf"
+          },
+          "plantilla": "Me levanto a las ___. Desayuno ___. Me acuesto a las ___.",
+          "campos": [
+            {
+              "id": "hora1",
+              "pista": "À quelle heure te lèves-tu ? (siete, siete y media, ocho menos cuarto…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "desayuno",
+              "pista": "Que prends-tu au petit-déjeuner ? (leche, cereales, una tostada, zumo…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "hora2",
+              "pista": "À quelle heure te couches-tu ? (nueve y media, diez…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Me levanto a las siete y media. Desayuno leche y una tostada. Me acuesto a las diez.",
+            "fr": "Je me lève à sept heures et demie. Je prends du lait et une tartine. Je me couche à dix heures.",
+            "voz": "viajero",
+            "audio": "viajero.5ef88170bc"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u05-q04",
+      "tipo": "forja",
+      "titulo": "La Forja: ir e ir a",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Ir. Voy, vas, va. ¡Forja conmigo!",
+        "fr": "Ir. Voy, vas, va. Forge avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.a90628eb2d"
+      },
+      "pista": "Le verbe irrégulier ir, puis le futur proche ir a + infinitif (voy a comer, vamos a cenar).",
+      "stats": [
+        "escribir",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u05-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "ir"
+          ]
+        },
+        {
+          "id": "u05-q04-s02",
+          "tipo": "grammar_card",
+          "ref": "g_ir"
+        },
+        {
+          "id": "u05-q04-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "yo",
+          "radical": "v",
+          "terminacion": "oy",
+          "terminaciones": [
+            "oy",
+            "as",
+            "a"
+          ],
+          "forma": "voy",
+          "habla": {
+            "es": "yo voy",
+            "voz": "viajero",
+            "audio": "viajero.dfb07c2a0e"
+          },
+          "fr": "Moi, je vais…"
+        },
+        {
+          "id": "u05-q04-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "tú",
+          "radical": "v",
+          "terminacion": "as",
+          "terminaciones": [
+            "oy",
+            "as",
+            "a"
+          ],
+          "forma": "vas",
+          "habla": {
+            "es": "tú vas",
+            "voz": "marina",
+            "audio": "marina.bb16d191f2"
+          },
+          "fr": "Toi, tu vas…"
+        },
+        {
+          "id": "u05-q04-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "ella",
+          "radical": "v",
+          "terminacion": "a",
+          "terminaciones": [
+            "oy",
+            "as",
+            "a"
+          ],
+          "forma": "va",
+          "habla": {
+            "es": "ella va",
+            "voz": "neus",
+            "audio": "neus.8325d51ffc"
+          },
+          "fr": "Elle va…"
+        },
+        {
+          "id": "u05-q04-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "nosotros",
+          "radical": "v",
+          "terminacion": "amos",
+          "terminaciones": [
+            "amos",
+            "ais",
+            "an"
+          ],
+          "forma": "vamos",
+          "habla": {
+            "es": "nosotros vamos",
+            "voz": "vicent",
+            "audio": "vicent.25b2bd5f70"
+          },
+          "fr": "Nous, nous allons…"
+        },
+        {
+          "id": "u05-q04-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "ellos",
+          "radical": "v",
+          "terminacion": "an",
+          "terminaciones": [
+            "amos",
+            "ais",
+            "an"
+          ],
+          "forma": "van",
+          "habla": {
+            "es": "ellos van",
+            "voz": "neus",
+            "audio": "neus.0940d9c1d5"
+          },
+          "fr": "Eux, ils vont…"
+        },
+        {
+          "id": "u05-q04-s08",
+          "tipo": "grammar_card",
+          "ref": "g_ir_a"
+        },
+        {
+          "id": "u05-q04-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Esta tarde ___ a comer paella.",
+          "respuesta": "voy",
+          "opciones": [
+            "voy",
+            "va",
+            "vas"
+          ],
+          "habla": {
+            "es": "Esta tarde voy a comer paella.",
+            "voz": "viajero",
+            "audio": "viajero.738082bfc0"
+          },
+          "fr": "Cet après-midi, je vais manger de la paella."
+        },
+        {
+          "id": "u05-q04-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina y Álex ___ al museo.",
+          "respuesta": "van",
+          "opciones": [
+            "va",
+            "van",
+            "vamos"
+          ],
+          "habla": {
+            "es": "Marina y Álex van al museo.",
+            "voz": "neus",
+            "audio": "neus.f923f3329d"
+          },
+          "fr": "Marina et Álex vont au musée."
+        },
+        {
+          "id": "u05-q04-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Vamos ___ cenar a las nueve.",
+          "respuesta": "a",
+          "opciones": [
+            "a",
+            "al",
+            "en"
+          ],
+          "habla": {
+            "es": "Vamos a cenar a las nueve.",
+            "voz": "vicent",
+            "audio": "vicent.18dd49bd0d"
+          },
+          "fr": "Nous allons dîner à neuf heures. (ir + a + infinitif)"
+        },
+        {
+          "id": "u05-q04-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Esta noche vamos a cenar paella en casa de Vicent.",
+            "voz": "marina",
+            "audio": "marina.246647d85d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Vicent va a su casa muy tarde.",
+              "correcta": false
+            },
+            {
+              "texto": "Van a comer en casa de Vicent por la noche.",
+              "correcta": true
+            },
+            {
+              "texto": "Vicent prepara una cena para sus amigos de París.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q04-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "neus",
+          "replica": {
+            "es": "¿Adónde vas esta tarde?",
+            "fr": "Où vas-tu cet après-midi ?",
+            "voz": "neus",
+            "audio": "neus.10c2649ae7"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Voy a la Ciudad de las Artes.",
+                "voz": "viajero",
+                "audio": "viajero.aafcbf3f71"
+              },
+              "fr": "Je vais à la Ciudad de las Artes.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Genial! Yo voy contigo.",
+                "fr": "Génial ! J’y vais avec toi.",
+                "voz": "neus",
+                "audio": "neus.bd3bbb6406",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Estoy a las cuatro.",
+                "voz": "viajero",
+                "audio": "viajero.1fb8642231"
+              },
+              "fr": "Je suis à quatre heures.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Yo te pregunto adónde vas.",
+                "fr": "Moi, je te demande où tu vas.",
+                "voz": "neus",
+                "audio": "neus.0a727bf0b3",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Voy a ir yo.",
+                "voz": "viajero",
+                "audio": "viajero.8eb7dc0dd5"
+              },
+              "fr": "Je vais aller moi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú vas a ir… adónde?",
+                "fr": "Tu vas aller… où ?",
+                "voz": "neus",
+                "audio": "neus.160442e79c",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q04-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué vas a comer TÚ.",
+            "fr": "Écoute et dis ce que TU vas manger (una tortilla, una ensalada, fruta…). Change seulement « paella ».",
+            "voz": "narrador",
+            "audio": "narrador.f7aa086397"
+          },
+          "objetivo": {
+            "es": "Voy a comer paella.",
+            "fr": "Je vais manger de la paella. (dis ce que tu vas manger)",
+            "voz": "viajero",
+            "audio": "viajero.af432748fc"
+          },
+          "aceptadas": [
+            "voy a comer paella"
+          ],
+          "patrones": [
+            "voy a comer {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del futuro",
+            "efecto": "Una paella gigante aparece en la plaza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u05-q05",
+      "tipo": "forja",
+      "titulo": "La Forja: querer, poder y estar + gerundio",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Quiero. Puedo. ¡Estoy forjando!",
+        "fr": "Je veux. Je peux. Je suis en train de forger !",
+        "voz": "quetzal",
+        "audio": "quetzal.b047432b16"
+      },
+      "pista": "Les verbes qui diphtonguent (e→ie, o→ue : quiero, puedo, empieza), puis estar + gérondif pour dire ce qu’on fait en ce moment.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u05-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "querer",
+            "poder",
+            "estudiar",
+            "preparar",
+            "esperar",
+            "ahora"
+          ]
+        },
+        {
+          "id": "u05-q05-s02",
+          "tipo": "grammar_card",
+          "ref": "g_diptongo"
+        },
+        {
+          "id": "u05-q05-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "querer",
+          "sujeto": "yo",
+          "radical": "quier",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "quiero",
+          "habla": {
+            "es": "yo quiero",
+            "voz": "viajero",
+            "audio": "viajero.450993718c"
+          },
+          "fr": "Moi, je veux…"
+        },
+        {
+          "id": "u05-q05-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "poder",
+          "sujeto": "tú",
+          "radical": "pued",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "puedes",
+          "habla": {
+            "es": "tú puedes",
+            "voz": "marina",
+            "audio": "marina.8754818c25"
+          },
+          "fr": "Toi, tu peux…"
+        },
+        {
+          "id": "u05-q05-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "querer",
+          "sujeto": "nosotros",
+          "radical": "quer",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "éis",
+            "en"
+          ],
+          "forma": "queremos",
+          "habla": {
+            "es": "nosotros queremos",
+            "voz": "neus",
+            "audio": "neus.a3a51f9410"
+          },
+          "fr": "Nous, nous voulons… (pas de diphtongue !)"
+        },
+        {
+          "id": "u05-q05-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "poder",
+          "sujeto": "ellos",
+          "radical": "pued",
+          "terminacion": "en",
+          "terminaciones": [
+            "emos",
+            "éis",
+            "en"
+          ],
+          "forma": "pueden",
+          "habla": {
+            "es": "ellos pueden",
+            "voz": "vicent",
+            "audio": "vicent.a9a67cad79"
+          },
+          "fr": "Eux, ils peuvent…"
+        },
+        {
+          "id": "u05-q05-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "empezar",
+          "sujeto": "él",
+          "radical": "empiez",
+          "terminacion": "a",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "empieza",
+          "habla": {
+            "es": "él empieza",
+            "voz": "neus",
+            "audio": "neus.c2d058b288"
+          },
+          "fr": "Lui, il commence…"
+        },
+        {
+          "id": "u05-q05-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Yo ___ una horchata, por favor.",
+          "respuesta": "quiero",
+          "opciones": [
+            "quiero",
+            "quero",
+            "quieres"
+          ],
+          "habla": {
+            "es": "Yo quiero una horchata, por favor.",
+            "voz": "viajero",
+            "audio": "viajero.bb91784853"
+          },
+          "fr": "Je veux une horchata, s’il vous plaît."
+        },
+        {
+          "id": "u05-q05-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿___ comer ahora? Tengo hambre.",
+          "respuesta": "Puedo",
+          "opciones": [
+            "Puedo",
+            "Podo",
+            "Podemos"
+          ],
+          "habla": {
+            "es": "¿Puedo comer ahora? Tengo hambre.",
+            "voz": "viajero",
+            "audio": "viajero.08b3d45bb3"
+          },
+          "fr": "Je peux manger maintenant ? J’ai faim."
+        },
+        {
+          "id": "u05-q05-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Nosotros ___ comer a las dos.",
+          "respuesta": "queremos",
+          "opciones": [
+            "quieremos",
+            "queremos",
+            "quieren"
+          ],
+          "habla": {
+            "es": "Nosotros queremos comer a las dos.",
+            "voz": "neus",
+            "audio": "neus.6075f5205d"
+          },
+          "fr": "Nous voulons manger à deux heures. (nosotros : pas de diphtongue)"
+        },
+        {
+          "id": "u05-q05-s11",
+          "tipo": "grammar_card",
+          "ref": "g_gerundio"
+        },
+        {
+          "id": "u05-q05-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Ahora Vicent está ___ la paella.",
+          "respuesta": "preparando",
+          "opciones": [
+            "preparar",
+            "preparando",
+            "preparado"
+          ],
+          "habla": {
+            "es": "Ahora Vicent está preparando la paella.",
+            "voz": "neus",
+            "audio": "neus.920297ef87"
+          },
+          "fr": "En ce moment, Vicent est en train de préparer la paella."
+        },
+        {
+          "id": "u05-q05-s13",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina está ___ un bocadillo.",
+          "respuesta": "comiendo",
+          "opciones": [
+            "comendo",
+            "comiendo",
+            "comer"
+          ],
+          "habla": {
+            "es": "Marina está comiendo un bocadillo.",
+            "voz": "marina",
+            "audio": "marina.3263ff78f8"
+          },
+          "fr": "Marina est en train de manger un sandwich."
+        },
+        {
+          "id": "u05-q05-s14",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Estoy ___ un libro.",
+          "respuesta": "leyendo",
+          "opciones": [
+            "leiendo",
+            "leyendo",
+            "leendo"
+          ],
+          "habla": {
+            "es": "Estoy leyendo un libro.",
+            "voz": "viajero",
+            "audio": "viajero.d4b4e76cd9"
+          },
+          "fr": "Je suis en train de lire un livre. (leer → leyendo)"
+        },
+        {
+          "id": "u05-q05-s15",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Vicent está preparando una paella enorme.",
+            "voz": "neus",
+            "audio": "neus.7931ea7417"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Vicent compra arroz en el mercado.",
+              "correcta": false
+            },
+            {
+              "texto": "La paella de Vicent ya está en la mesa.",
+              "correcta": false
+            },
+            {
+              "texto": "Ahora Vicent cocina un plato de arroz muy grande.",
+              "correcta": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u05-q06",
+      "tipo": "dialogo",
+      "titulo": "La paella de Vicent",
+      "emoji": "🥘",
+      "intro": {
+        "es": "¡Tengo hambre! Y vosotros también, ¿no? Pasad, pasad.",
+        "fr": "J’ai faim ! Et vous aussi, non ? Entrez, entrez.",
+        "voz": "vicent",
+        "audio": "vicent.9b66b6b039"
+      },
+      "pista": "Les repas et la nourriture : demander, commander (quiero, ¿puedo…?), parler de la faim et de la soif. Mini-lecture sur la paella valencienne.",
+      "stats": [
+        "hablar",
+        "leer",
+        "escuchar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u05-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "leche",
+            "tostada",
+            "zumo",
+            "fruta",
+            "bocadillo",
+            "ensalada",
+            "arroz"
+          ]
+        },
+        {
+          "id": "u05-q06-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "pollo",
+            "paella",
+            "horchata",
+            "tortilla",
+            "hambre",
+            "sed"
+          ]
+        },
+        {
+          "id": "u05-q06-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "leche"
+            },
+            {
+              "vocab": "tostada"
+            },
+            {
+              "vocab": "zumo"
+            },
+            {
+              "vocab": "fruta"
+            },
+            {
+              "vocab": "bocadillo"
+            },
+            {
+              "vocab": "ensalada"
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "paella",
+            "voz": "narrador",
+            "audio": "narrador.b94c0f1cff"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "paella",
+              "correcta": true
+            },
+            {
+              "vocab": "ensalada",
+              "correcta": false
+            },
+            {
+              "vocab": "tortilla",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s05",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "vicent",
+          "replica": {
+            "es": "Buenas tardes. ¿Tenéis hambre?",
+            "fr": "Bonjour (l’après-midi). Vous avez faim ?",
+            "voz": "vicent",
+            "audio": "vicent.9b60d1834a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, tenemos mucha hambre.",
+                "voz": "viajero",
+                "audio": "viajero.ff24b56527"
+              },
+              "fr": "Oui, nous avons très faim.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Estupendo! La paella ya casi está.",
+                "fr": "Parfait ! La paella est presque prête.",
+                "voz": "vicent",
+                "audio": "vicent.03c451b7b1",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, somos hambre.",
+                "voz": "viajero",
+                "audio": "viajero.547a909e06"
+              },
+              "fr": "Oui, nous sommes faim.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «hambre» usamos «tener»: «tenemos hambre».",
+                "fr": "Avec « hambre », on utilise « tener » : « tenemos hambre ».",
+                "voz": "vicent",
+                "audio": "vicent.8064fef271",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.b213506359"
+              },
+              "fr": "Non, j’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. Pero la edad no quita el hambre.",
+                "fr": "Ha, ha. Mais l’âge ne coupe pas la faim.",
+                "voz": "vicent",
+                "audio": "vicent.bd9ebad004",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s06",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "amparo",
+          "replica": {
+            "es": "¿Quieres una horchata? Es una bebida fría de Valencia.",
+            "fr": "Tu veux une horchata ? C’est une boisson fraîche de Valence.",
+            "voz": "amparo",
+            "audio": "amparo.7da0890a65"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, por favor. Quiero una horchata.",
+                "voz": "viajero",
+                "audio": "viajero.5439a8880d"
+              },
+              "fr": "Oui, s’il vous plaît. Je veux une horchata.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aquí tienes, cariño! Con unos fartons.",
+                "fr": "Voilà, mon chou ! Avec des fartons (petits gâteaux à tremper dedans).",
+                "voz": "amparo",
+                "audio": "amparo.8fc90cda7a",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, puedo una horchata.",
+                "voz": "viajero",
+                "audio": "viajero.6db3541ebb"
+              },
+              "fr": "Oui, je peux une horchata.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «puedo» necesitamos otro verbo: «puedo beber»… Mejor: «quiero una horchata».",
+                "fr": "Avec « puedo », il faut un autre verbe : « puedo beber »… Mieux : « quiero una horchata ».",
+                "voz": "amparo",
+                "audio": "amparo.32c9a26d71",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, gracias. Soy una horchata.",
+                "voz": "viajero",
+                "audio": "viajero.a1e45361e9"
+              },
+              "fr": "Non, merci. Je suis une horchata.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. ¡Qué gracioso! Toma una horchata de verdad.",
+                "fr": "Ha, ha. Que tu es drôle ! Tiens, une vraie horchata.",
+                "voz": "amparo",
+                "audio": "amparo.717dfc0eba",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La paella valenciana lleva arroz, pollo, judías verdes y tomate. Se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.",
+            "fr": "La paella valencienne contient du riz, du poulet, des haricots verts et de la tomate. On la cuit sur un feu de bois, lentement. À Valence, on la mange à midi, à deux ou trois heures, souvent en famille, le dimanche. La paella est un plat pour le déjeuner, pas pour le dîner. (« lleva » = contient ; « llevar » veut aussi dire porter)",
+            "voz": "vicent",
+            "audio": "vicent.73e8cc3e36"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué lleva la paella valenciana?",
+                "fr": "Que contient la paella valencienne ?",
+                "voz": "narrador",
+                "audio": "narrador.5f7447d95c"
+              },
+              "opciones": [
+                {
+                  "texto": "Arroz, pollo, judías verdes y tomate.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo pan y leche.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Pescado y chocolate.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo comen paella normalmente?",
+                "fr": "Quand mange-t-on la paella normalement ?",
+                "voz": "narrador",
+                "audio": "narrador.e2fbe4b237"
+              },
+              "opciones": [
+                {
+                  "texto": "Por la noche.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A mediodía.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En el desayuno.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Con quién la comen muchas veces?",
+                "fr": "Avec qui la mange-t-on souvent ?",
+                "voz": "narrador",
+                "audio": "narrador.87893b81ee"
+              },
+              "opciones": [
+                {
+                  "texto": "Con un reloj.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Sola.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Con la familia.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tengo ___: quiero beber agua.",
+          "respuesta": "sed",
+          "opciones": [
+            "sed",
+            "hambre",
+            "sueño"
+          ],
+          "habla": {
+            "es": "Tengo sed: quiero beber agua.",
+            "voz": "vicent",
+            "audio": "vicent.3354f2ad86"
+          },
+          "fr": "J’ai soif : je veux boire de l’eau."
+        },
+        {
+          "id": "u05-q06-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Para desayunar, quiero leche y una ___.",
+          "respuesta": "tostada",
+          "opciones": [
+            "tostada",
+            "paella",
+            "cena"
+          ],
+          "habla": {
+            "es": "Para desayunar, quiero leche y una tostada.",
+            "voz": "amparo",
+            "audio": "amparo.01fa22c9dc"
+          },
+          "fr": "Pour le petit-déjeuner, je veux du lait et une tartine."
+        },
+        {
+          "id": "u05-q06-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy vamos a comer ___ y arroz.",
+          "respuesta": "pollo",
+          "opciones": [
+            "pollo",
+            "zumo",
+            "leche"
+          ],
+          "habla": {
+            "es": "Hoy vamos a comer pollo y arroz.",
+            "voz": "vicent",
+            "audio": "vicent.8bfaf1864e"
+          },
+          "fr": "Aujourd’hui, nous allons manger du poulet et du riz."
+        },
+        {
+          "id": "u05-q06-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En México, «tortilla» significa lo mismo que en España.",
+            "fr": "Au Mexique, « tortilla » ne veut pas dire la même chose qu’en Espagne.",
+            "voz": "narrador",
+            "audio": "narrador.e5bd75c58c"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "En España es una tortilla de huevos y patatas; en México es una tortilla de maíz.",
+            "fr": "En Espagne, c’est une omelette aux œufs et aux pommes de terre ; au Mexique, c’est une galette de maïs.",
+            "voz": "narrador",
+            "audio": "narrador.c17452196f"
+          }
+        },
+        {
+          "id": "u05-q06-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hoy, para la comida, tengo paella, ensalada y fruta.",
+            "voz": "vicent",
+            "audio": "vicent.5cc58a3aed"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Vicent ofrece tres cosas para comer al mediodía.",
+              "correcta": true
+            },
+            {
+              "texto": "Vicent solo tiene bebidas frías.",
+              "correcta": false
+            },
+            {
+              "texto": "Vicent cierra hoy su puesto.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q06-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y pide algo de comer o beber.",
+            "fr": "Écoute et demande ce que TU veux (un zumo, una tortilla, un bocadillo…). Change seulement « horchata » (ajoute « un / una »).",
+            "voz": "narrador",
+            "audio": "narrador.abd11ca78a"
+          },
+          "objetivo": {
+            "es": "Quiero una horchata, por favor.",
+            "fr": "Je veux une horchata, s’il vous plaît. (change le mot)",
+            "voz": "viajero",
+            "audio": "viajero.de383e09de"
+          },
+          "aceptadas": [
+            "quiero una horchata por favor"
+          ],
+          "patrones": [
+            "quiero una {nombre} por favor"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del apetito",
+            "efecto": "Un aroma de azafrán llena la plaza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u05-q07",
+      "tipo": "cultura",
+      "titulo": "Horarios, fallas y paella",
+      "emoji": "🔥",
+      "intro": {
+        "es": "En España, la vida tiene otros horarios. ¡Y Valencia tiene fuego!",
+        "fr": "En Espagne, la vie a d’autres horaires. Et Valence a du feu !",
+        "voz": "neus",
+        "audio": "neus.6759f7f4a9"
+      },
+      "pista": "Les horaires espagnols (repas tardifs, sieste), la Ciudad de las Artes y las Ciencias et les Fallas de Valence (15-19 mars) ; puis tu écris TES horaires de repas.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u05-q07-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "falla",
+            "mascleta",
+            "fuego",
+            "acuario"
+          ]
+        },
+        {
+          "id": "u05-q07-s02",
+          "tipo": "cinematic_ref",
+          "cinematica": "u05-capsula-horarios",
+          "escena": {
+            "id": "u05-capsula-horarios",
+            "tipo": "capsula",
+            "titulo": "Los horarios españoles y Valencia",
+            "duracion": 29,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : une carte de l’Europe avec l’Espagne et la France ; deux horloges affichent la même heure, une flèche rappelle que l’Espagne est plus à l’ouest.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "España está más al oeste que Francia, pero tiene la misma hora.",
+                    "fr": "L’Espagne est plus à l’ouest que la France, mais elle a la même heure. (Le soleil se couche donc plus tard en Espagne : c’est une des raisons des horaires tardifs.)",
+                    "voz": "narrador",
+                    "audio": "narrador.9c75ebdbf5"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Une frise d’une journée avec quatre assiettes qui s’allument : 8 h, 14 h, 17 h, 21 h.",
+                "lineas": [
+                  {
+                    "es": "El desayuno es a las ocho, la comida a las dos o las tres, la merienda a las cinco y la cena a las nueve o más tarde.",
+                    "fr": "Le petit-déjeuner est à huit heures, le déjeuner à deux ou trois heures, le goûter à cinq heures et le dîner à neuf heures ou plus tard.",
+                    "voz": "narrador",
+                    "audio": "narrador.73cdb31fba"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Un cartable et une horloge : une petite scène d’école, des élèves qui sortent à 14 h ; plus loin, un grand-père qui s’endort dans un fauteuil.",
+                "lineas": [
+                  {
+                    "es": "Muchos alumnos terminan las clases a las dos. La siesta existe, pero hoy muchos españoles no duermen la siesta todos los días.",
+                    "fr": "Beaucoup d’élèves finissent les cours à deux heures. La sieste existe, mais aujourd’hui beaucoup d’Espagnols ne font pas la sieste tous les jours.",
+                    "voz": "narrador",
+                    "audio": "narrador.981f0a115c"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "La paella dorée dans sa grande poêle sur un feu de bois : riz, poulet, haricots verts, tomate. Un cadran indique 14:00.",
+                "lineas": [
+                  {
+                    "es": "En Valencia, la paella es un plato de mediodía. Lleva arroz, pollo, judías verdes y tomate.",
+                    "fr": "À Valence, la paella est un plat du midi. Elle contient du riz, du poulet, des haricots verts et de la tomate.",
+                    "voz": "narrador",
+                    "audio": "narrador.e7c1ec861d"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 5,
+                "vista": "Place de l’Ayuntamiento en fête : monuments colorés de papier mâché, nuages de fumée de la mascletà, le cadran de 14:00 clignote ; calendrier 15-19 de marzo.",
+                "lineas": [
+                  {
+                    "es": "Y en marzo, del quince al diecinueve, son las fallas. Cada día, a las dos de la tarde, suena la mascletà.",
+                    "fr": "Et en mars, du 15 au 19, ce sont les Fallas. Chaque jour, à deux heures de l’après-midi, retentit la mascletà.",
+                    "voz": "narrador",
+                    "audio": "narrador.c453a690e0"
+                  }
+                ]
+              },
+              {
+                "n": 6,
+                "duracion": 5,
+                "vista": "La dernière nuit, le 19 mars : les grands monuments s’embrasent dans la nuit, des milliers de personnes les regardent.",
+                "lineas": [
+                  {
+                    "es": "La noche del diecinueve, las fallas se queman. ¡Hay mucho fuego!",
+                    "fr": "La nuit du 19, les fallas sont brûlées. Il y a beaucoup de feu ! (la « cremà », la fin de la fête)",
+                    "voz": "narrador",
+                    "audio": "narrador.1a69637aa2"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u05-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En España, la cena es a las siete de la tarde.",
+            "fr": "En Espagne, le dîner est à sept heures de l’après-midi.",
+            "voz": "narrador",
+            "audio": "narrador.694ff29411"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Normalmente la cena es a las nueve o más tarde.",
+            "fr": "Normalement, le dîner est à neuf heures ou plus tard.",
+            "voz": "narrador",
+            "audio": "narrador.09c076dac9"
+          }
+        },
+        {
+          "id": "u05-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "España y Francia tienen la misma hora.",
+            "fr": "L’Espagne et la France ont la même heure.",
+            "voz": "narrador",
+            "audio": "narrador.dda249a7f0"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u05-q07-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La mascletà suena a las dos de la tarde.",
+            "fr": "La mascletà retentit à deux heures de l’après-midi.",
+            "voz": "narrador",
+            "audio": "narrador.23e6b7a42a"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u05-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Las fallas son la gran fiesta de Valencia. Se celebran en marzo, del quince al diecinueve. Hay monumentos enormes de cartón y madera, con figuras graciosas. Cada día, a las dos de la tarde, suena la mascletà. La noche del diecinueve de marzo, las fallas se queman. ¡Hay mucho fuego!",
+            "fr": "Les Fallas sont la grande fête de Valence. Elles ont lieu en mars, du quinze au dix-neuf. Il y a des monuments énormes en carton et en bois, avec des personnages amusants. Chaque jour, à deux heures de l’après-midi, retentit la mascletà. La nuit du dix-neuf mars, les fallas sont brûlées. Il y a beaucoup de feu !",
+            "voz": "neus",
+            "audio": "neus.f627496524"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuándo se celebran las fallas?",
+                "fr": "Quand ont lieu les Fallas ?",
+                "voz": "narrador",
+                "audio": "narrador.c692c410f0"
+              },
+              "opciones": [
+                {
+                  "texto": "En agosto.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En marzo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En diciembre.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo son los monumentos?",
+                "fr": "Comment sont les monuments ?",
+                "voz": "narrador",
+                "audio": "narrador.98a113693b"
+              },
+              "opciones": [
+                {
+                  "texto": "Pequeños y de azúcar.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Azules y de metal.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Enormes, de cartón y madera.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué pasa la noche del diecinueve?",
+                "fr": "Que se passe-t-il la nuit du dix-neuf ?",
+                "voz": "narrador",
+                "audio": "narrador.a3e296f9bf"
+              },
+              "opciones": [
+                {
+                  "texto": "Las fallas se queman.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Las fallas empiezan.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Todos duermen la siesta.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u05-q07-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto es Santiago Calatrava, un valenciano.",
+            "fr": "La Ciudad de las Artes y las Ciencias est à Valence. Elle a un musée des sciences, un cinéma avec un écran géant, un palais pour l’opéra et l’Oceanogràfic, un très grand aquarium. Les bâtiments sont blancs et très modernes. L’architecte est Santiago Calatrava, un Valencien.",
+            "voz": "neus",
+            "audio": "neus.50ee1c0bb8"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué es el Oceanogràfic?",
+                "fr": "Qu’est-ce que l’Oceanogràfic ?",
+                "voz": "narrador",
+                "audio": "narrador.9e175c0c20"
+              },
+              "opciones": [
+                {
+                  "texto": "Un museo de arte.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un acuario.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un colegio.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo son los edificios?",
+                "fr": "Comment sont les bâtiments ?",
+                "voz": "narrador",
+                "audio": "narrador.8d2141deb7"
+              },
+              "opciones": [
+                {
+                  "texto": "Rojos y viejos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Pequeños y negros.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Blancos y modernos.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quién es Santiago Calatrava?",
+                "fr": "Qui est Santiago Calatrava ?",
+                "voz": "narrador",
+                "audio": "narrador.dbf9c6ddaf"
+              },
+              "opciones": [
+                {
+                  "texto": "El arquitecto.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El paellero.",
+                  "correcta": false
+                },
+                {
+                  "texto": "El profesor de Neus.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u05-q07-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En mi casa comemos a las tres y cenamos muy tarde, a las diez.",
+            "voz": "neus",
+            "audio": "neus.28ebf08ef4"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Neus come a las doce y cena a las siete.",
+              "correcta": false
+            },
+            {
+              "texto": "Neus come a las tres de la tarde y cena a las diez de la noche.",
+              "correcta": true
+            },
+            {
+              "texto": "Neus come a las tres y cena a las nueve.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "neus",
+          "replica": {
+            "es": "¿Y en tu país? ¿A qué hora cenáis?",
+            "fr": "Et dans ton pays ? À quelle heure dînez-vous ?",
+            "voz": "neus",
+            "audio": "neus.55f8cfd6c1"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "En Francia cenamos a las siete y media o a las ocho.",
+                "voz": "viajero",
+                "audio": "viajero.55bb3952bb"
+              },
+              "fr": "En France, nous dînons à sept heures et demie ou huit heures.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué temprano! Aquí la cena es mucho más tarde.",
+                "fr": "Quelle heure matinale pour dîner ! Ici, le dîner est beaucoup plus tard.",
+                "voz": "neus",
+                "audio": "neus.4ec3645844",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "En Francia cenamos a las tres de la mañana.",
+                "voz": "viajero",
+                "audio": "viajero.2dce008d0e"
+              },
+              "fr": "En France, nous dînons à trois heures du matin.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡A las tres de la mañana! Eso es muy tarde, incluso para España.",
+                "fr": "À trois heures du matin ! C’est très tard, même pour l’Espagne.",
+                "voz": "neus",
+                "audio": "neus.5d7a4f276c",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Cenamos el reloj.",
+                "voz": "viajero",
+                "audio": "viajero.826c825f7d"
+              },
+              "fr": "Nous dînons l’horloge.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿El reloj? Mejor una tortilla.",
+                "fr": "L’horloge ? Mieux vaut une omelette.",
+                "voz": "neus",
+                "audio": "neus.cbef8bdc81",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q07-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En España, la ___ es a las dos o a las tres.",
+          "respuesta": "comida",
+          "opciones": [
+            "comida",
+            "cena",
+            "merienda"
+          ],
+          "habla": {
+            "es": "En España, la comida es a las dos o a las tres.",
+            "voz": "neus",
+            "audio": "neus.3c75fbe881"
+          },
+          "fr": "En Espagne, le déjeuner est à deux ou trois heures."
+        },
+        {
+          "id": "u05-q07-s11",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tus horarios de comida.",
+            "fr": "Écris tes horaires de repas.",
+            "voz": "narrador",
+            "audio": "narrador.83828d2cc3"
+          },
+          "plantilla": "Mi comida es a las ___ y mi cena es a las ___. Mi comida favorita es ___.",
+          "campos": [
+            {
+              "id": "comida",
+              "pista": "À quelle heure déjeunes-tu ? (doce y media, una…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "cena",
+              "pista": "À quelle heure dînes-tu ? (siete y media, ocho…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "favorita",
+              "pista": "Ton plat préféré ? (la pizza, la pasta, el pollo…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi comida es a las doce y media y mi cena es a las ocho. Mi comida favorita es la pizza.",
+            "fr": "Mon déjeuner est à midi et demi et mon dîner est à huit heures. Mon plat préféré est la pizza.",
+            "voz": "viajero",
+            "audio": "viajero.2ed9e03f1d"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u05-q07-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di a qué hora cenas TÚ.",
+            "fr": "Écoute et dis à quelle heure TU dînes. Change seulement « ocho » (a las siete y media = « siete y media »).",
+            "voz": "narrador",
+            "audio": "narrador.d9a0c96640"
+          },
+          "objetivo": {
+            "es": "Mi cena es a las ocho.",
+            "fr": "Mon dîner est à huit heures. (dis ton heure)",
+            "voz": "viajero",
+            "audio": "viajero.a273b9af91"
+          },
+          "aceptadas": [
+            "mi cena es a las ocho"
+          ],
+          "patrones": [
+            "mi cena es a las {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la cena",
+            "efecto": "Las campanas de la ciudad suenan al unísono"
+          }
+        },
+        {
+          "id": "u05-q07-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Las fallas son en marzo.",
+            "voz": "neus",
+            "audio": "neus.dec447099d"
+          },
+          "respuesta": "Las fallas son en marzo.",
+          "aceptadas": [
+            "las fallas son en marzo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u05-q08",
+      "tipo": "desafio",
+      "titulo": "El reloj de la Sombra",
+      "emoji": "⏰",
+      "intro": {
+        "es": "Sin horas no hay rutina. Sin rutina no hay palabras. Yo paro el tiempo.",
+        "fr": "Sans heures, pas de routine. Sans routine, pas de mots. Moi, j’arrête le temps.",
+        "voz": "sombra",
+        "audio": "sombra.1681108b42"
+      },
+      "pista": "Boss de Valence : révision mixte des unités 1 à 5 (présentation, école, famille, description, heure, routine, ir, querer / poder) pour remettre les horloges en marche.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 10
+      },
+      "steps": [
+        {
+          "id": "u05-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Mi reloj dice 6:45. ¿Qué hora es?",
+            "fr": "Ma montre indique 6:45. Quelle heure est-il ?",
+            "voz": "sombra",
+            "audio": "sombra.ae2c098e5d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Son las siete menos cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.904a65f32e"
+              },
+              "fr": "Il est sept heures moins le quart.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Una hora más que vuelve…",
+                "fr": "Grr ! Encore une heure qui revient…",
+                "voz": "sombra",
+                "audio": "sombra.11a0350b5e",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las seis y cuarto.",
+                "voz": "viajero",
+                "audio": "viajero.5f5d70049e"
+              },
+              "fr": "Il est six heures et quart.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso es 6:15. ¡Otra vez!",
+                "fr": "Ça, c’est 6:15. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.ff030261fc",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es la una y media.",
+                "voz": "viajero",
+                "audio": "viajero.bdbc0c05e2"
+              },
+              "fr": "Il est une heure et demie.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mi reloj no dice eso.",
+                "fr": "Ma montre ne dit pas ça.",
+                "voz": "sombra",
+                "audio": "sombra.bcf152ea80",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Sin rutina no hay nada. ¿A qué hora te levantas tú?",
+            "fr": "Sans routine, il n’y a rien. À quelle heure te lèves-tu, toi ?",
+            "voz": "sombra",
+            "audio": "sombra.6b47761e0b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me levanto a las siete.",
+                "voz": "viajero",
+                "audio": "viajero.6b0e4a1849"
+              },
+              "fr": "Je me lève à sept heures.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Aaah… otra rutina que vuelve.",
+                "fr": "Aaah… encore une routine qui revient.",
+                "voz": "sombra",
+                "audio": "sombra.ec553c95fa",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy a las siete.",
+                "voz": "viajero",
+                "audio": "viajero.a0c5c5cac5"
+              },
+              "fr": "Je suis à sept heures.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.02503ba455"
+              },
+              "fr": "Je m’appelle Álex.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te pregunto tu nombre.",
+                "fr": "Je ne te demande pas ton prénom.",
+                "voz": "sombra",
+                "audio": "sombra.e30dfbd717",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las siete y cuarto.",
+            "voz": "sombra",
+            "audio": "sombra.a2312a339d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "6:15",
+              "correcta": false
+            },
+            {
+              "texto": "7:45",
+              "correcta": false
+            },
+            {
+              "texto": "7:15",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi abuela tiene el pelo gris y lleva gafas.",
+            "voz": "neus",
+            "audio": "neus.f2d4f3c984"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "La abuela lleva gafas y su pelo no es negro.",
+              "correcta": true
+            },
+            {
+              "texto": "La abuela tiene el pelo corto y rizado.",
+              "correcta": false
+            },
+            {
+              "texto": "La abuela no lleva gafas ni sombrero.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "rojo"
+            },
+            {
+              "vocab": "azul"
+            },
+            {
+              "vocab": "verde"
+            },
+            {
+              "vocab": "amarillo"
+            },
+            {
+              "vocab": "negro"
+            },
+            {
+              "vocab": "blanco"
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi padre ___ médico y mi madre es ingeniera.",
+          "respuesta": "es",
+          "opciones": [
+            "es",
+            "está",
+            "soy"
+          ],
+          "habla": {
+            "es": "Mi padre es médico y mi madre es ingeniera.",
+            "voz": "marina",
+            "audio": "marina.d2437037cd"
+          },
+          "fr": "Mon père est médecin et ma mère est ingénieure."
+        },
+        {
+          "id": "u05-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy yo ___ muy cansado.",
+          "respuesta": "estoy",
+          "opciones": [
+            "soy",
+            "estoy",
+            "estás"
+          ],
+          "habla": {
+            "es": "Hoy yo estoy muy cansado.",
+            "voz": "viajero",
+            "audio": "viajero.603dde1986"
+          },
+          "fr": "Aujourd’hui, je suis très fatigué."
+        },
+        {
+          "id": "u05-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Esta noche ___ a cenar a las nueve.",
+          "respuesta": "vamos",
+          "opciones": [
+            "vamos",
+            "van",
+            "voy"
+          ],
+          "habla": {
+            "es": "Esta noche vamos a cenar a las nueve.",
+            "voz": "neus",
+            "audio": "neus.3e60a9522f"
+          },
+          "fr": "Ce soir, nous allons dîner à neuf heures."
+        },
+        {
+          "id": "u05-q08-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "querer",
+          "sujeto": "yo",
+          "radical": "quier",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "quiero",
+          "habla": {
+            "es": "yo quiero",
+            "voz": "viajero",
+            "audio": "viajero.450993718c"
+          },
+          "fr": "Moi, je veux…"
+        },
+        {
+          "id": "u05-q08-s10",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Marina",
+            "lleva",
+            "una",
+            "falda",
+            "azul",
+            "y",
+            "zapatos",
+            "negros."
+          ],
+          "habla": {
+            "es": "Marina lleva una falda azul y zapatos negros.",
+            "voz": "marina",
+            "audio": "marina.6c6d95aa46"
+          },
+          "fr": "Marina porte une jupe bleue et des chaussures noires."
+        },
+        {
+          "id": "u05-q08-s11",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Por la tarde voy a comer paella con mis nuevos amigos.",
+            "fr": "Salut, c’est Neus. J’ai douze ans et j’habite à Valence. Ma mère est médecin et mon père est cuisinier. Je suis grande et mince, et je porte toujours une montre. Aujourd’hui, je suis contente parce que les horloges fonctionnent. L’après-midi, je vais manger de la paella avec mes nouveaux amis.",
+            "voz": "neus",
+            "audio": "neus.9ccd61989c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué hace el padre de Neus?",
+                "fr": "Quel est le métier du père de Neus ?",
+                "voz": "narrador",
+                "audio": "narrador.68a6bcc632"
+              },
+              "opciones": [
+                {
+                  "texto": "Es médico.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Es cocinero.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Es profesor.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué lleva Neus siempre?",
+                "fr": "Que porte toujours Neus ?",
+                "voz": "narrador",
+                "audio": "narrador.16c52d4763"
+              },
+              "opciones": [
+                {
+                  "texto": "Una gorra.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un vestido rojo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un reloj.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué va a hacer por la tarde?",
+                "fr": "Que va-t-elle faire l’après-midi ?",
+                "voz": "narrador",
+                "audio": "narrador.888285fbed"
+              },
+              "opciones": [
+                {
+                  "texto": "Va a comer paella con amigos.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Va a estudiar en el colegio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Va a dormir la siesta.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u05-q08-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex y me levanto a las siete.",
+            "fr": "Salut, je m’appelle Álex et je me lève à sept heures. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.1116c1b60c"
+          },
+          "aceptadas": [
+            "hola me llamo álex y me levanto a las siete"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} y me levanto a las siete"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Las agujas del gran reloj vuelven a moverse!"
+          }
+        },
+        {
+          "id": "u05-q08-s13",
+          "tipo": "cinematic_ref",
+          "cinematica": "u05-pluma",
+          "escena": {
+            "id": "u05-pluma",
+            "tipo": "pluma",
+            "titulo": "Quinta pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Les aiguilles de l’horloge se remettent en marche, la fumée de la paella monte, les passants repartent ; une plume verte tombe du cadran dans la main d’Álex.",
+                "personajes": [
+                  "neus",
+                  "vicent"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Los relojes funcionan otra vez! ¡Gracias!",
+                    "fr": "Les horloges fonctionnent de nouveau ! Merci !",
+                    "voz": "neus",
+                    "audio": "neus.ab306de9b4"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal fait une boucle au-dessus des bassins, ses plumes brillent comme des vitraux.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Cinco plumas. ¡Ahora vuelo y hablo más!",
+                    "fr": "Cinq plumes. Maintenant je vole et je parle plus !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.167e871b8b"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio apparaît en hologramme, couvert d’une écharpe ; sur la carte, des étoiles dorées s’allument sur Madrid.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La siguiente pluma está en Madrid, de noche. ¡Es Navidad!",
+                    "fr": "La prochaine plume est à Madrid, de nuit. C’est Noël !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.1d4ba8fe04"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 5,
+    "nombre": "Pluma del Reloj",
+    "descripcion": {
+      "es": "Cinco plumas. El tiempo vuelve a correr… ¡y yo hablo más!",
+      "fr": "Cinq plumes. Le temps recommence à couler… et je parle plus !",
+      "voz": "quetzal",
+      "audio": "quetzal.91ba8e72bb"
+    }
+  }
+}

@@ -868,5 +868,1155 @@
     "nSteps": 14
    }
   ]
+ },
+ {
+  "id": "u05",
+  "numero": 5,
+  "titulo": "¿Qué hora es?",
+  "lugar": "Valencia",
+  "emoji": "🕒",
+  "ejes": [
+   2
+  ],
+  "periodo": "nov-dic",
+  "pluma": {
+   "numero": 5,
+   "nombre": "Pluma del Reloj",
+   "descripcion": {
+    "es": "Cinco plumas. El tiempo vuelve a correr… ¡y yo hablo más!",
+    "fr": "Cinq plumes. Le temps recommence à couler… et je parle plus !",
+    "voz": "quetzal",
+    "audio": "quetzal.91ba8e72bb"
+   }
+  },
+  "nVocab": 54,
+  "quests": [
+   {
+    "id": "u05-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Valencia",
+    "emoji": "🏙️",
+    "intro": {
+     "es": "¡Bienvenidos a Valencia! Soy Neus. Aquí todo tiene su hora.",
+     "fr": "Bienvenue à Valence ! Je suis Neus. Ici, tout a son heure.",
+     "voz": "neus",
+     "audio": "neus.a7059a3b77"
+    },
+    "pista": "Arrivée à Valence : tu rencontres Neus et Vicent, et tu découvres le problème des horloges arrêtées. Les PNJ parlent espagnol d’Espagne.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 12
+   },
+   {
+    "id": "u05-q02",
+    "tipo": "vocabulario",
+    "titulo": "¿Qué hora es?",
+    "emoji": "🕒",
+    "intro": {
+     "es": "Mira mi reloj. ¿Sabes decir la hora?",
+     "fr": "Regarde ma montre. Sais-tu dire l’heure ?",
+     "voz": "neus",
+     "audio": "neus.a17c0a86a8"
+    },
+    "pista": "Dire l’heure avec ser : es la una, son las dos, y cuarto, y media, menos cuarto. À quelle heure ? → ¿a qué hora ? — a las…",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u05-q03",
+    "tipo": "lectura",
+    "titulo": "Mi rutina",
+    "emoji": "🌄",
+    "intro": {
+     "es": "Te cuento mi día. Primero me levanto, luego desayuno… ¿y tú?",
+     "fr": "Je te raconte ma journée. D’abord je me lève, puis je prends mon petit-déjeuner… et toi ?",
+     "voz": "neus",
+     "audio": "neus.1454b92be7"
+    },
+    "pista": "La routine du jour : se lever, déjeuner, aller à l’école, se coucher. Verbes pronominaux (me levanto), repas espagnols, et tu écris ta propre routine.",
+    "stats": [
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u05-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: ir e ir a",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Ir. Voy, vas, va. ¡Forja conmigo!",
+     "fr": "Ir. Voy, vas, va. Forge avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.a90628eb2d"
+    },
+    "pista": "Le verbe irrégulier ir, puis le futur proche ir a + infinitif (voy a comer, vamos a cenar).",
+    "stats": [
+     "escribir",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u05-q05",
+    "tipo": "forja",
+    "titulo": "La Forja: querer, poder y estar + gerundio",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Quiero. Puedo. ¡Estoy forjando!",
+     "fr": "Je veux. Je peux. Je suis en train de forger !",
+     "voz": "quetzal",
+     "audio": "quetzal.b047432b16"
+    },
+    "pista": "Les verbes qui diphtonguent (e→ie, o→ue : quiero, puedo, empieza), puis estar + gérondif pour dire ce qu’on fait en ce moment.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u05-q06",
+    "tipo": "dialogo",
+    "titulo": "La paella de Vicent",
+    "emoji": "🥘",
+    "intro": {
+     "es": "¡Tengo hambre! Y vosotros también, ¿no? Pasad, pasad.",
+     "fr": "J’ai faim ! Et vous aussi, non ? Entrez, entrez.",
+     "voz": "vicent",
+     "audio": "vicent.9b66b6b039"
+    },
+    "pista": "Les repas et la nourriture : demander, commander (quiero, ¿puedo…?), parler de la faim et de la soif. Mini-lecture sur la paella valencienne.",
+    "stats": [
+     "hablar",
+     "leer",
+     "escuchar"
+    ],
+    "minutos": 15,
+    "nSteps": 13
+   },
+   {
+    "id": "u05-q07",
+    "tipo": "cultura",
+    "titulo": "Horarios, fallas y paella",
+    "emoji": "🔥",
+    "intro": {
+     "es": "En España, la vida tiene otros horarios. ¡Y Valencia tiene fuego!",
+     "fr": "En Espagne, la vie a d’autres horaires. Et Valence a du feu !",
+     "voz": "neus",
+     "audio": "neus.6759f7f4a9"
+    },
+    "pista": "Les horaires espagnols (repas tardifs, sieste), la Ciudad de las Artes y las Ciencias et les Fallas de Valence (15-19 mars) ; puis tu écris TES horaires de repas.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 13
+   },
+   {
+    "id": "u05-q08",
+    "tipo": "desafio",
+    "titulo": "El reloj de la Sombra",
+    "emoji": "⏰",
+    "intro": {
+     "es": "Sin horas no hay rutina. Sin rutina no hay palabras. Yo paro el tiempo.",
+     "fr": "Sans heures, pas de routine. Sans routine, pas de mots. Moi, j’arrête le temps.",
+     "voz": "sombra",
+     "audio": "sombra.1681108b42"
+    },
+    "pista": "Boss de Valence : révision mixte des unités 1 à 5 (présentation, école, famille, description, heure, routine, ir, querer / poder) pour remettre les horloges en marche.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 10
+    },
+    "nSteps": 13
+   }
+  ]
+ },
+ {
+  "id": "u06",
+  "numero": 6,
+  "titulo": "¡Feliz Navidad!",
+  "lugar": "Madrid de noche",
+  "emoji": "🎄",
+  "ejes": [
+   4
+  ],
+  "periodo": "dic-ene",
+  "pluma": {
+   "numero": 6,
+   "nombre": "Pluma de las Luces",
+   "descripcion": {
+    "es": "Seis plumas. Las luces vuelven… ¡y mis alas brillan!",
+    "fr": "Six plumes. Les lumières reviennent… et mes ailes brillent !",
+    "voz": "quetzal",
+    "audio": "quetzal.b384764a71"
+   }
+  },
+  "nVocab": 46,
+  "quests": [
+   {
+    "id": "u06-q01",
+    "tipo": "cinematica",
+    "titulo": "Madrid a oscuras",
+    "emoji": "🌃",
+    "intro": {
+     "es": "¡Bienvenidos otra vez a Madrid! Pero esta noche… no hay luces.",
+     "fr": "Bienvenue encore à Madrid ! Mais cette nuit… il n’y a pas de lumières.",
+     "voz": "nacho",
+     "audio": "nacho.3cad652158"
+    },
+    "pista": "Retour à Madrid, de nuit et en hiver : tu retrouves Nacho et Rosa, et tu découvres que la Sombra a éteint les lumières de Noël.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 13
+   },
+   {
+    "id": "u06-q02",
+    "tipo": "vocabulario",
+    "titulo": "Las fiestas de invierno",
+    "emoji": "🎄",
+    "intro": {
+     "es": "¡Feliz Navidad, chicos! Aquí hay muchas fiestas en pocas semanas.",
+     "fr": "Joyeux Noël, les enfants ! Ici, il y a beaucoup de fêtes en quelques semaines.",
+     "voz": "paloma",
+     "audio": "paloma.0422236a4b"
+    },
+    "pista": "Les fêtes d’hiver en Espagne (Navidad, Nochebuena, Nochevieja, Reyes) et leur vocabulaire ; les dates de décembre-janvier ; tu parles de TES fêtes.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u06-q03",
+    "tipo": "dialogo",
+    "titulo": "La pastelería de Chema",
+    "emoji": "🥐",
+    "intro": {
+     "es": "Buenas noches. En diciembre trabajo de noche: tengo roscones, turrones y mucho chocolate.",
+     "fr": "Bonsoir. En décembre, je travaille de nuit : j’ai des roscones, des turrones et beaucoup de chocolat.",
+     "voz": "chema",
+     "audio": "chema.ba65b72c9e"
+    },
+    "pista": "Les douceurs et plats de Noël (turrón, roscón, marisco, churros, chocolate), et « hace frío / tengo frío » ; tu commandes et tu comprends un menu de Nochebuena.",
+    "stats": [
+     "hablar",
+     "leer",
+     "escuchar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u06-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: el imperativo",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "¡Mira! ¡Abre! ¡Canta! Ordenes. ¡Forja conmigo!",
+     "fr": "Regarde ! Ouvre ! Chante ! Des ordres. Forge avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.55b0a27843"
+    },
+    "pista": "L’impératif affirmatif : la forme « él » pour tú (mira, come, abre), -d pour vosotros (mirad), et les irréguliers à connaître (ven, pon, di, ve, enciende, prueba).",
+    "stats": [
+     "escribir",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u06-q05",
+    "tipo": "forja",
+    "titulo": "La Forja: hay que y tener que",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Hay que encender. Tengo que ayudar. ¡Forja!",
+     "fr": "Il faut allumer. Je dois aider. Forge !",
+     "voz": "quetzal",
+     "audio": "quetzal.fffc1a253e"
+    },
+    "pista": "Deux façons de dire une obligation : hay que + infinitif (général : « il faut ») et tener que + infinitif (personnel : « je dois ») ; conjugaison de tener (tengo, tienes, tiene…).",
+    "stats": [
+     "escribir",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u06-q06",
+    "tipo": "lectura",
+    "titulo": "Cartas, regalos y lotería",
+    "emoji": "🎁",
+    "intro": {
+     "es": "Los niños escriben cartas a los Reyes Magos. ¡Y yo vendo lotería para tener suerte!",
+     "fr": "Les enfants écrivent des lettres aux Rois mages. Et moi, je vends de la loterie pour avoir de la chance !",
+     "voz": "paloma",
+     "audio": "paloma.e85fe4b6b3"
+    },
+    "pista": "Les cadeaux, la lettre aux Rois mages, la loterie de Noël ; compréhension d’une lettre, et tu écris TA lettre aux Rois.",
+    "stats": [
+     "leer",
+     "escribir",
+     "hablar",
+     "escuchar"
+    ],
+    "minutos": 13,
+    "nSteps": 13
+   },
+   {
+    "id": "u06-q07",
+    "tipo": "cultura",
+    "titulo": "Nochevieja y Reyes Magos",
+    "emoji": "🍇",
+    "intro": {
+     "es": "En Madrid, en Nochevieja, ¡hay que comer rápido las doce uvas!",
+     "fr": "À Madrid, à Nochevieja, il faut manger vite les douze raisins !",
+     "voz": "paloma",
+     "audio": "paloma.5b5680c581"
+    },
+    "pista": "Les traditions espagnoles de fin d’année : les douze raisins à la Puerta del Sol, la Loterie de Noël du 22 décembre, la cabalgata et les Reyes Magos du 6 janvier, le roscón ; puis tu parles de TA fête préférée.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u06-q08",
+    "tipo": "desafio",
+    "titulo": "Las luces de la Sombra",
+    "emoji": "🌟",
+    "intro": {
+     "es": "Sin luces, no hay fiesta. Sin fiesta, no hay palabras. Yo apago Madrid.",
+     "fr": "Sans lumières, pas de fête. Sans fête, pas de mots. Moi, j’éteins Madrid.",
+     "voz": "sombra",
+     "audio": "sombra.a8fe4361f9"
+    },
+    "pista": "Boss de Madrid : révision mixte des unités 1 à 6 (présentation, famille, description, heure, ir a, impératif, hay que / tener que, fêtes) pour rallumer les lumières de Noël.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 10
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u07",
+  "numero": 7,
+  "titulo": "Me gusta…",
+  "lugar": "Buenos Aires",
+  "emoji": "⚽",
+  "ejes": [
+   3
+  ],
+  "periodo": "ene-feb",
+  "pluma": {
+   "numero": 7,
+   "nombre": "Pluma de la Música",
+   "descripcion": {
+    "es": "Siete plumas. La música vuelve… ¡y yo canto!",
+    "fr": "Sept plumes. La musique revient… et moi je chante !",
+    "voz": "quetzal",
+    "audio": "quetzal.c29fd81feb"
+   }
+  },
+  "nVocab": 50,
+  "quests": [
+   {
+    "id": "u07-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Buenos Aires",
+    "emoji": "⚽",
+    "intro": {
+     "es": "¡Che, bienvenidos a Buenos Aires! Acá todo es fútbol, tango y mate.",
+     "fr": "Hé, bienvenue à Buenos Aires ! Ici, tout est foot, tango et maté. (« acá » = ici, en Amérique latine ; en Espagne : « aquí »)",
+     "voz": "facu",
+     "audio": "facu.1f7f5bf70a"
+    },
+    "pista": "Arrivée à Buenos Aires, en été : tu rencontres Facu, Sol et Don Aníbal, et tu découvres le problème de la ville silencieuse. Les PNJ parlent espagnol d’Argentine : leurs mots qui diffèrent sont signalés en français.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 12
+   },
+   {
+    "id": "u07-q02",
+    "tipo": "vocabulario",
+    "titulo": "Deportes en La Boca",
+    "emoji": "🏟️",
+    "intro": {
+     "es": "Mirá, esta es mi cancha. ¿Qué deportes te gustan?",
+     "fr": "Regarde, voilà mon terrain. Quels sports aimes-tu ? (« mirá » = « mira » en voseo)",
+     "voz": "facu",
+     "audio": "facu.1ba511c664"
+    },
+    "pista": "Les sports et le foot (equipo, partido, gol, hincha) ; découverte de gustar : me gusta + singulier ou infinitif, me gustan + pluriel.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u07-q03",
+    "tipo": "vocabulario",
+    "titulo": "Mi tiempo libre",
+    "emoji": "🎮",
+    "intro": {
+     "es": "Che, ¿qué hacés en tu tiempo libre? A mí me encanta bailar.",
+     "fr": "Dis donc, que fais-tu pendant ton temps libre ? Moi, j’adore danser. (« hacés » = « haces » en voseo)",
+     "voz": "sol",
+     "audio": "sol.e723cc3343"
+    },
+    "pista": "Les loisirs (bailar, dibujar, jugar, ver películas…) ; me encanta, me gusta mucho, no me gusta nada ; « a mí también / a mí tampoco ». Tu écris TES goûts.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u07-q04",
+    "tipo": "lectura",
+    "titulo": "Música en San Telmo",
+    "emoji": "🎸",
+    "intro": {
+     "es": "Buenas, muchachos. Yo toco el bandoneón desde los diez años. ¿Y ustedes, qué instrumento tocan?",
+     "fr": "Salut, les jeunes. Je joue du bandonéon depuis mes dix ans. Et vous, de quel instrument jouez-vous ? (« ustedes » : en Argentine, comme au Mexique, on dit « ustedes » à la place de « vosotros »)",
+     "voz": "anibal",
+     "audio": "anibal.1e7a696193"
+    },
+    "pista": "Les instruments de musique, le bandonéon et le tango ; jugar a + sport et tocar + instrument ; compréhension d’un petit texte sur Don Aníbal.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "cultura"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u07-q05",
+    "tipo": "forja",
+    "titulo": "La Forja: preferir y jugar",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Prefiero. Juego. Dos verbos con cambio. ¡Forja!",
+     "fr": "Je préfère. Je joue. Deux verbes qui changent de voyelle. Forge !",
+     "voz": "quetzal",
+     "audio": "quetzal.580c134273"
+    },
+    "pista": "Deux verbes à diphtongue : preferir (e→ie : prefiero) et jugar (u→ue : juego). Rappel : nosotros et vosotros ne diphtonguent pas.",
+    "stats": [
+     "escribir",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u07-q06",
+    "tipo": "dialogo",
+    "titulo": "¿Por qué te gusta?",
+    "emoji": "💬",
+    "intro": {
+     "es": "Dime una cosa que te gusta… ¡y explícame por qué!",
+     "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi !",
+     "voz": "sol",
+     "audio": "sol.66a3fc79e8"
+    },
+    "pista": "Donner son avis et le justifier : ¿por qué ? / porque ; parler des goûts des autres (a Facu le gusta…) ; tu écris et tu dis TES goûts avec une raison.",
+    "stats": [
+     "hablar",
+     "escribir",
+     "escuchar",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u07-q07",
+    "tipo": "cultura",
+    "titulo": "Fútbol, tango y mate",
+    "emoji": "🧉",
+    "intro": {
+     "es": "Buenos Aires tiene mucha cultura: fútbol, tango, asado, mate… ¡y una manera de hablar muy suya!",
+     "fr": "Buenos Aires a beaucoup de culture : foot, tango, asado, maté… et une façon de parler bien à elle !",
+     "voz": "sol",
+     "audio": "sol.ff6351687c"
+    },
+    "pista": "Le foot (Boca, River, la Bombonera, champions du monde), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u07-q08",
+    "tipo": "desafio",
+    "titulo": "El silencio de la Sombra",
+    "emoji": "🎵",
+    "intro": {
+     "es": "Todo da igual. Sin gustos no hay personas. Yo apago la música.",
+     "fr": "Tout est égal. Sans goûts, pas de personnes. Moi, j’éteins la musique.",
+     "voz": "sombra",
+     "audio": "sombra.48aeb72b16"
+    },
+    "pista": "Boss de Buenos Aires : révision mixte des unités 1 à 7 (présentation, description, heure, fêtes, ir a, gustar, preferir, porque) pour rendre sa voix à la musique.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 10
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u08",
+  "numero": 8,
+  "titulo": "Mi casa y mi barrio",
+  "lugar": "Bogotá",
+  "emoji": "🏙️",
+  "ejes": [
+   2
+  ],
+  "periodo": "fév-mars",
+  "pluma": {
+   "numero": 8,
+   "nombre": "Pluma del Mapa",
+   "descripcion": {
+    "es": "Ocho plumas. Las calles tienen nombre… ¡y mis alas tienen fuerza!",
+    "fr": "Huit plumes. Les rues ont un nom… et mes ailes ont de la force !",
+    "voz": "quetzal",
+    "audio": "quetzal.3fc98a44cf"
+   }
+  },
+  "nVocab": 55,
+  "quests": [
+   {
+    "id": "u08-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Bogotá",
+    "emoji": "🏔️",
+    "intro": {
+     "es": "¡Bienvenidos a Bogotá! Yo soy Camila y esta es mi calle.",
+     "fr": "Bienvenue à Bogotá ! Moi, c’est Camila et voici ma rue. (Les PNJ de cette unité parlent espagnol de Colombie : ils disent « ustedes » pour « vous » au pluriel ; leurs mots qui diffèrent de l’Espagne sont signalés.)",
+     "voz": "camila",
+     "audio": "camila.568124294c"
+    },
+    "pista": "Arrivée à Bogotá : tu rencontres Camila et tu découvres le problème des rues sans nom. Les PNJ parlent espagnol de Colombie.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 10
+   },
+   {
+    "id": "u08-q02",
+    "tipo": "vocabulario",
+    "titulo": "La casa de Doña Marta",
+    "emoji": "🏠",
+    "intro": {
+     "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.",
+     "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, deux chambres et un balcon.",
+     "voz": "marta",
+     "audio": "marta.43ade8abbb"
+    },
+    "pista": "Les pièces et les objets de la maison, avec Doña Marta : tu décris ta propre maison à l’oral et à l’écrit.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u08-q03",
+    "tipo": "escucha",
+    "titulo": "La ciudad de Camila",
+    "emoji": "🏙️",
+    "intro": {
+     "es": "Mi barrio tiene de todo: parques, tiendas, iglesias… ¿Quieren verlo?",
+     "fr": "Mon quartier a de tout : des parcs, des magasins, des églises… Vous voulez le voir ?",
+     "voz": "camila",
+     "audio": "camila.34eb047caf"
+    },
+    "pista": "Le vocabulaire de la ville : lieux, magasins et transports. Tu écoutes Camila décrire son quartier, puis tu décris le tien.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u08-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: hay y está",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Hay. Está. Están. ¡Forja conmigo!",
+     "fr": "Hay. Est. Sont. Forge avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.b40396af19"
+    },
+    "pista": "Estar pour situer (¿dónde está?) et la différence entre hay (il y a) et está(n) (il est / ils sont).",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u08-q05",
+    "tipo": "lectura",
+    "titulo": "¿Dónde está todo?",
+    "emoji": "📍",
+    "intro": {
+     "es": "Buenos días. Soy Hernán, conductor del teleférico. Les enseño dónde está todo.",
+     "fr": "Bonjour. Je suis Hernán, conducteur du téléphérique. Je vous montre où se trouve chaque chose.",
+     "voz": "hernan",
+     "audio": "hernan.7460f89710"
+    },
+    "pista": "Les prépositions de lieu (cerca de, detrás de, a la derecha de…) : tu lis et tu écoutes des descriptions d’une place, puis tu situes ta maison.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u08-q06",
+    "tipo": "dialogo",
+    "titulo": "Más grande que…",
+    "emoji": "⚖️",
+    "intro": {
+     "es": "En Bogotá hay barrios antiguos y barrios modernos. ¿Comparamos?",
+     "fr": "À Bogotá, il y a des quartiers anciens et des quartiers modernes. On compare ?",
+     "voz": "camila",
+     "audio": "camila.e4b71770a4"
+    },
+    "pista": "Le comparatif simple (más… que, menos… que, tan… como, mejor) : tu compares des villes et des quartiers, puis ton propre quartier.",
+    "stats": [
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u08-q07",
+    "tipo": "cultura",
+    "titulo": "La Candelaria y Monserrate",
+    "emoji": "⛰️",
+    "intro": {
+     "es": "Esta es La Candelaria, el corazón histórico de Bogotá. Hoy vamos a subir a Monserrate.",
+     "fr": "Voici La Candelaria, le cœur historique de Bogotá. Aujourd’hui, nous allons monter à Monserrate.",
+     "voz": "camila",
+     "audio": "camila.8eac9fb7fe"
+    },
+    "pista": "La Candelaria, Monserrate, la Ciclovía ; puis un tour des villes hispaniques (Madrid, Bogotá, Buenos Aires) et ta propre fiche de quartier.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 13
+   },
+   {
+    "id": "u08-q08",
+    "tipo": "desafio",
+    "titulo": "El mapa de la Sombra",
+    "emoji": "🗺️",
+    "intro": {
+     "es": "Sin mapa, nadie sabe dónde está. Yo borro las calles, los nombres y las palabras.",
+     "fr": "Sans plan, personne ne sait où il est. J’efface les rues, les noms et les mots.",
+     "voz": "sombra",
+     "audio": "sombra.2da3ace681"
+    },
+    "pista": "Boss de Bogotá : révision mixte des unités 1 à 8 (présentation, école, famille, description, ser / estar, maison, lieux, comparatif) pour rendre leurs noms aux rues.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 9
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u09",
+  "numero": 9,
+  "titulo": "¡Viva México!",
+  "lugar": "Yucatán",
+  "emoji": "🌴",
+  "ejes": [
+   6
+  ],
+  "periodo": "mars-avr",
+  "pluma": {
+   "numero": 9,
+   "nombre": "Pluma de la Memoria",
+   "descripcion": {
+    "es": "Nueve plumas. Las piedras hablan… ¡y yo recuerdo mi casa!",
+    "fr": "Neuf plumes. Les pierres parlent… et je me souviens de ma maison !",
+    "voz": "quetzal",
+    "audio": "quetzal.e9b7378596"
+   }
+  },
+  "nVocab": 45,
+  "quests": [
+   {
+    "id": "u09-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Yucatán",
+    "emoji": "🌴",
+    "intro": {
+     "es": "¡Bienvenidos a Yucatán! Yo soy Itzel. Estamos en la selva maya.",
+     "fr": "Bienvenue au Yucatán ! Moi, c’est Itzel. Nous sommes dans la forêt tropicale maya. (Au Mexique, on dit « ustedes » pour « vous » au pluriel.)",
+     "voz": "itzel",
+     "audio": "itzel.fef77f26c4"
+    },
+    "pista": "Arrivée au Yucatán, chez le Quetzal : tu rencontres Itzel et Don Chan, et tu découvres le problème des pierres sans dessins. Les PNJ parlent espagnol du Mexique.",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 10
+   },
+   {
+    "id": "u09-q02",
+    "tipo": "vocabulario",
+    "titulo": "Selva y cenotes",
+    "emoji": "🦩",
+    "intro": {
+     "es": "Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.",
+     "fr": "Regarde la forêt tropicale : il y a des jaguars, des flamants, des tortues… et des milliers de cénotes.",
+     "voz": "itzel",
+     "audio": "itzel.3042c94106"
+    },
+    "pista": "La nature du Yucatán : forêt, mer, animaux et cénotes. Tu lis, tu écoutes et tu parles de ta nature à toi.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u09-q03",
+    "tipo": "escucha",
+    "titulo": "Mayas y aztecas",
+    "emoji": "🏛️",
+    "intro": {
+     "es": "Soy Don Chan, guía de Chichén Itzá. Esta ciudad es de los mayas. Es muy, muy antigua.",
+     "fr": "Je suis Don Chan, guide de Chichén Itzá. Cette ville est maya. Elle est très, très ancienne.",
+     "voz": "chan",
+     "audio": "chan.720404e94a"
+    },
+    "pista": "Mayas et Aztèques : pyramides, temples, calendrier, empire. Tu écoutes le guide, tu lis une histoire courte, puis tu dis quel endroit TOI tu veux visiter.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u09-q04",
+    "tipo": "vocabulario",
+    "titulo": "Maíz, cacao y chile",
+    "emoji": "🌽",
+    "intro": {
+     "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.",
+     "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a mille ans.",
+     "voz": "chabela",
+     "audio": "chabela.9da5457cd3"
+    },
+    "pista": "Les saveurs du Mexique : maïs, tortillas, cacao, piment, cochinita pibil. Tu lis, tu goûtes (en mots) et tu dis ce que TOI tu aimes manger.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "escribir",
+     "cultura"
+    ],
+    "minutos": 15,
+    "nSteps": 13
+   },
+   {
+    "id": "u09-q05",
+    "tipo": "forja",
+    "titulo": "La Forja: el presente",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Hablo. Como. Vivo. ¡Forja el presente conmigo!",
+     "fr": "Je parle. Je mange. J’habite. Forge le présent avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.1486cd14b9"
+    },
+    "pista": "Révision du présent (-ar, -er, -ir) et trois verbes irréguliers seulement à « yo » : hago, veo, conozco.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u09-q06",
+    "tipo": "lectura",
+    "titulo": "¿Has probado…?",
+    "emoji": "🧩",
+    "intro": {
+     "es": "¿Has visto un jaguar? ¿Has probado la cochinita pibil? ¡Cuéntame!",
+     "fr": "Tu as déjà vu un jaguar ? Tu as déjà goûté la cochinita pibil ? Raconte-moi !",
+     "voz": "itzel",
+     "audio": "itzel.ee1d4407f8"
+    },
+    "pista": "Première découverte du passé composé (he visitado, has probado, ha nadado) : tu reconnais la forme, tu lis un petit récit et tu dis ce que TOI tu as fait. Aucune exigence de maîtrise.",
+    "stats": [
+     "leer",
+     "hablar",
+     "escribir"
+    ],
+    "minutos": 15,
+    "nSteps": 14
+   },
+   {
+    "id": "u09-q07",
+    "tipo": "cultura",
+    "titulo": "Chichén Itzá y los cenotes",
+    "emoji": "🔺",
+    "intro": {
+     "es": "Esta es la pirámide de Kukulcán, la serpiente con plumas. ¡Como el Quetzal!",
+     "fr": "Voici la pyramide de Kukulcán, le serpent à plumes. Comme le Quetzal !",
+     "voz": "chan",
+     "audio": "chan.7b2ea06666"
+    },
+    "pista": "Chichén Itzá (patrimoine mondial), Kukulcán, les cénotes, les Mayas d’aujourd’hui ; puis tu décris un lieu de TON pays avec es, está et hay.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 13
+   },
+   {
+    "id": "u09-q08",
+    "tipo": "desafio",
+    "titulo": "El silencio de las piedras",
+    "emoji": "🗿",
+    "intro": {
+     "es": "Sin historia, nadie habla. Yo guardo las piedras mudas.",
+     "fr": "Sans histoire, personne ne parle. Je garde les pierres muettes.",
+     "voz": "sombra",
+     "audio": "sombra.69c48e578e"
+    },
+    "pista": "Boss du Yucatán : révision mixte des unités 1 à 9 (présentation, description, maison, présent, nature, gastronomie, premier passé composé) pour rendre la parole aux pierres.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 10
+    },
+    "nSteps": 15
+   }
+  ]
+ },
+ {
+  "id": "u10",
+  "numero": 10,
+  "titulo": "Leyendas y héroes",
+  "lugar": "Cusco",
+  "emoji": "🦙",
+  "ejes": [
+   4,
+   5
+  ],
+  "periodo": "mai-juin",
+  "pluma": {
+   "numero": 10,
+   "nombre": "Pluma del Eco",
+   "descripcion": {
+    "es": "Diez plumas. Ya tengo mi voz, mis alas… y muchos amigos.",
+    "fr": "Dix plumes. J’ai ma voix, mes ailes… et beaucoup d’amis.",
+    "voz": "quetzal",
+    "audio": "quetzal.5363565f70"
+   }
+  },
+  "nVocab": 48,
+  "quests": [
+   {
+    "id": "u10-q01",
+    "tipo": "cinematica",
+    "titulo": "Llegada a Cusco",
+    "emoji": "🦙",
+    "intro": {
+     "es": "¡Bienvenidos al Cusco! Yo soy Killa. Mi nombre significa «luna» en quechua.",
+     "fr": "Bienvenue à Cusco ! Moi, c’est Killa. Mon nom veut dire « lune » en quechua. (Les PNJ de cette unité parlent espagnol du Pérou ; ils disent « ustedes » pour « vous » au pluriel.)",
+     "voz": "killa",
+     "audio": "killa.bc42fedf85"
+    },
+    "pista": "Arrivée à Cusco, dans les Andes : tu rencontres Killa et Don Huamán, un conteur qui a perdu sa voix. La dernière plume est tout près !",
+    "stats": [
+     "escuchar",
+     "cultura",
+     "hablar"
+    ],
+    "minutos": 10,
+    "nSteps": 10
+   },
+   {
+    "id": "u10-q02",
+    "tipo": "vocabulario",
+    "titulo": "Palabras de leyenda",
+    "emoji": "📜",
+    "intro": {
+     "es": "Había una vez… Así empiezan las leyendas de los Andes. Aprendan las palabras de los cuentos.",
+     "fr": "Il était une fois… Ainsi commencent les légendes des Andes. Apprenez les mots des contes.",
+     "voz": "huaman",
+     "audio": "huaman.b1866115b1"
+    },
+    "pista": "Le vocabulaire des contes et de la nature des Andes : héros, trésor, soleil, condor, puma, lama… Tu lis, tu écoutes et tu parles de TON héros préféré.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u10-q03",
+    "tipo": "escucha",
+    "titulo": "La leyenda de Manco Cápac",
+    "emoji": "🌞",
+    "intro": {
+     "es": "Escuchen esta leyenda de los incas: la leyenda de la fundación de Cusco.",
+     "fr": "Écoutez cette légende des Incas : la légende de la fondation de Cusco.",
+     "voz": "huaman",
+     "audio": "huaman.bfe2dcba2f"
+    },
+    "pista": "Les verbes et les connecteurs du récit, puis une légende inca racontée par morceaux : tu écoutes et tu comprends l’histoire de la fondation de Cusco.",
+    "stats": [
+     "escuchar",
+     "leer",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 14
+   },
+   {
+    "id": "u10-q04",
+    "tipo": "forja",
+    "titulo": "La Forja: el cuento",
+    "emoji": "⚒️",
+    "intro": {
+     "es": "Pero. Además. Porque. Entonces. ¡Forja el cuento conmigo!",
+     "fr": "Mais. En plus. Parce que. Alors. Forge le conte avec moi !",
+     "voz": "quetzal",
+     "audio": "quetzal.954639edb4"
+    },
+    "pista": "Les connecteurs pero / además / porque / entonces et la structure d’un récit simple (había una vez, un día, primero, luego, al final). Verbes à diphtongue : cuento, encuentro.",
+    "stats": [
+     "escribir",
+     "leer"
+    ],
+    "minutos": 15,
+    "nSteps": 15
+   },
+   {
+    "id": "u10-q05",
+    "tipo": "lectura",
+    "titulo": "Machu Picchu",
+    "emoji": "🏔️",
+    "intro": {
+     "es": "Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!",
+     "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici l’air est très rare. Allons doucement !",
+     "voz": "huaman",
+     "audio": "huaman.b63ca5ed4c"
+    },
+    "pista": "Lecture sur Machu Picchu et sur Cusco, découverte des grands nombres (mil, quinientos, millón) à reconnaître, puis tu dis quel endroit TOI tu aimerais visiter.",
+    "stats": [
+     "leer",
+     "escuchar",
+     "hablar",
+     "cultura"
+    ],
+    "minutos": 14,
+    "nSteps": 13
+   },
+   {
+    "id": "u10-q06",
+    "tipo": "dialogo",
+    "titulo": "El español en el mundo",
+    "emoji": "🌍",
+    "intro": {
+     "es": "En mi casa hablamos quechua, pero en el colegio hablamos español. ¿Y tú, qué idiomas hablas?",
+     "fr": "À la maison, nous parlons quechua, mais au collège nous parlons espagnol. Et toi, quelles langues parles-tu ?",
+     "voz": "killa",
+     "audio": "killa.c5e8d17f8f"
+    },
+    "pista": "L’espagnol dans le monde (se habla, vingt pays, plus de cinq cents millions de locuteurs), le quechua et ses mots dans nos langues ; puis tu parles de TES langues.",
+    "stats": [
+     "hablar",
+     "leer",
+     "escribir",
+     "cultura"
+    ],
+    "minutos": 15,
+    "nSteps": 13
+   },
+   {
+    "id": "u10-q07",
+    "tipo": "cultura",
+    "titulo": "Contar una leyenda",
+    "emoji": "🔥",
+    "intro": {
+     "es": "Mis tejidos cuentan historias: cada dibujo tiene un significado. ¿Y tú, qué historia cuentas?",
+     "fr": "Mes tissages racontent des histoires : chaque dessin a un sens. Et toi, quelle histoire racontes-tu ?",
+     "voz": "paulina",
+     "audio": "paulina.8a1fab50da"
+    },
+    "pista": "Machu Picchu et le quechua en images ; la légende du quetzal au Guatemala (Tecún Umán) ; puis TOI, tu inventes et tu racontes ta propre légende.",
+    "stats": [
+     "cultura",
+     "leer",
+     "escribir",
+     "hablar"
+    ],
+    "minutos": 14,
+    "nSteps": 13
+   },
+   {
+    "id": "u10-q08",
+    "tipo": "desafio",
+    "titulo": "La Sombra del Silencio",
+    "emoji": "👤",
+    "intro": {
+     "es": "Sin cuentos, nadie recuerda. Sin palabras, nadie me molesta. Este es mi último silencio.",
+     "fr": "Sans contes, personne ne se souvient. Sans mots, personne ne me dérange. Voici mon dernier silence.",
+     "voz": "sombra",
+     "audio": "sombra.f1ce3424d6"
+    },
+    "pista": "Boss final de la légende : révision mixte des unités 1 à 10 (présentation, description, maison, présent, goûts, lieux, légendes) pour affronter la Sombra du Silence… et l’écouter.",
+    "stats": [
+     "escuchar",
+     "hablar",
+     "leer",
+     "escribir"
+    ],
+    "minutos": 15,
+    "jefe": {
+     "personaje": "sombra",
+     "vidas": 12
+    },
+    "nSteps": 15
+   }
+  ]
  }
 ]

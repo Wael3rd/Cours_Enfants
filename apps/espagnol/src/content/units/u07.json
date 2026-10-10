@@ -1,0 +1,5310 @@
+{
+  "id": "u07",
+  "numero": 7,
+  "titulo": "Me gusta…",
+  "lugar": "Buenos Aires",
+  "emoji": "⚽",
+  "ejes": [
+    3
+  ],
+  "periodo": "ene-feb",
+  "objetivos": [
+    {
+      "es": "Decir qué deportes, actividades e instrumentos me gustan: me gusta, me gustan, me encanta.",
+      "fr": "Dire quels sports, activités et instruments j’aime : me gusta, me gustan, me encanta."
+    },
+    {
+      "es": "Hablar de los gustos de otras personas: a Facu le gusta, a mis amigos les gusta.",
+      "fr": "Parler des goûts des autres : a Facu le gusta, a mis amigos les gusta."
+    },
+    {
+      "es": "Decir lo que prefiero y explicarlo con porque.",
+      "fr": "Dire ce que je préfère et l’expliquer avec porque."
+    },
+    {
+      "es": "Usar jugar a + deporte y tocar + instrumento.",
+      "fr": "Utiliser jugar a + sport et tocar + instrument."
+    },
+    {
+      "es": "Escribir y decir mis gustos, mis cosas favoritas y mi tiempo libre.",
+      "fr": "Écrire et dire mes goûts, mes choses préférées et mon temps libre."
+    },
+    {
+      "es": "Conocer Buenos Aires: el fútbol, el tango, el mate, y reconocer «vos» y «che».",
+      "fr": "Connaître Buenos Aires : le foot, le tango, le maté, et reconnaître « vos » et « che »."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "deporte",
+      "es": "deporte",
+      "fr": "sport",
+      "genero": "m",
+      "plural": "deportes",
+      "emoji": "🏅",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Mi deporte favorito es el baloncesto.",
+        "fr": "Mon sport préféré est le basket.",
+        "voz": "narrador",
+        "audio": "narrador.2f3f9b0fab"
+      },
+      "audio": "narrador.76d4d92194"
+    },
+    {
+      "id": "futbol",
+      "es": "fútbol",
+      "fr": "football (en Argentine et en Espagne, le sport roi)",
+      "genero": "m",
+      "emoji": "⚽",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Me gusta el fútbol.",
+        "fr": "J’aime le foot.",
+        "voz": "narrador",
+        "audio": "narrador.0c4c41d5d1"
+      },
+      "audio": "narrador.c943c04fe8"
+    },
+    {
+      "id": "baloncesto",
+      "es": "baloncesto",
+      "fr": "basket-ball (en Argentine : « básquet » ; au Mexique : « basquetbol »)",
+      "genero": "m",
+      "emoji": "🏀",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Mi hermano juega al baloncesto.",
+        "fr": "Mon frère joue au basket.",
+        "voz": "narrador",
+        "audio": "narrador.384663c48d"
+      },
+      "audio": "narrador.7e61aceae1"
+    },
+    {
+      "id": "tenis",
+      "es": "tenis",
+      "fr": "tennis",
+      "genero": "m",
+      "emoji": "🎾",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Prefiero el tenis.",
+        "fr": "Je préfère le tennis.",
+        "voz": "narrador",
+        "audio": "narrador.01999bc5d0"
+      },
+      "audio": "narrador.3ca43e4160"
+    },
+    {
+      "id": "natacion",
+      "es": "natación",
+      "fr": "natation",
+      "genero": "f",
+      "emoji": "🏊",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "La natación es un deporte de agua.",
+        "fr": "La natation est un sport d’eau.",
+        "voz": "narrador",
+        "audio": "narrador.e8754236be"
+      },
+      "audio": "narrador.73196b1d4f"
+    },
+    {
+      "id": "rugby",
+      "es": "rugby",
+      "fr": "rugby (très populaire en Argentine : l’équipe nationale s’appelle « Los Pumas »)",
+      "genero": "m",
+      "emoji": "🏉",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "En Argentina también hay rugby.",
+        "fr": "En Argentine aussi, il y a du rugby.",
+        "voz": "narrador",
+        "audio": "narrador.a1ab1d41b4"
+      },
+      "audio": "narrador.68208df650"
+    },
+    {
+      "id": "bici",
+      "es": "bici",
+      "fr": "vélo (abréviation de « bicicleta »)",
+      "genero": "f",
+      "plural": "bicis",
+      "emoji": "🚲",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Voy al cole en bici.",
+        "fr": "Je vais à l’école à vélo.",
+        "voz": "narrador",
+        "audio": "narrador.38b3ad9cc3"
+      },
+      "audio": "narrador.83355782af"
+    },
+    {
+      "id": "equipo",
+      "es": "equipo",
+      "fr": "équipe",
+      "genero": "m",
+      "plural": "equipos",
+      "emoji": "👥",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Boca es un equipo de fútbol.",
+        "fr": "Boca est une équipe de foot.",
+        "voz": "facu",
+        "audio": "facu.2fd5dadd37"
+      },
+      "audio": "narrador.5ff5c512c2"
+    },
+    {
+      "id": "partido",
+      "es": "partido",
+      "fr": "match",
+      "genero": "m",
+      "plural": "partidos",
+      "emoji": "🆚",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Hoy hay un partido de fútbol.",
+        "fr": "Aujourd’hui, il y a un match de foot.",
+        "voz": "narrador",
+        "audio": "narrador.316101b48e"
+      },
+      "audio": "narrador.235f1449e6"
+    },
+    {
+      "id": "gol",
+      "es": "gol",
+      "fr": "but (au foot)",
+      "genero": "m",
+      "plural": "goles",
+      "emoji": "🥅",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "¡Gol de Argentina!",
+        "fr": "But pour l’Argentine !",
+        "voz": "facu",
+        "audio": "facu.524e55c435"
+      },
+      "audio": "narrador.c33dc8d208"
+    },
+    {
+      "id": "jugador",
+      "es": "jugador",
+      "fr": "joueur",
+      "genero": "m",
+      "plural": "jugadores",
+      "femenino": "jugadora",
+      "emoji": "🏃",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Messi es un gran jugador.",
+        "fr": "Messi est un grand joueur.",
+        "voz": "narrador",
+        "audio": "narrador.eff5f85490"
+      },
+      "audio": "narrador.c2486699fd"
+    },
+    {
+      "id": "estadio",
+      "es": "estadio",
+      "fr": "stade",
+      "genero": "m",
+      "plural": "estadios",
+      "emoji": "🏟️",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "El estadio de Boca es muy famoso.",
+        "fr": "Le stade de Boca est très célèbre.",
+        "voz": "narrador",
+        "audio": "narrador.8300b70bdc"
+      },
+      "audio": "narrador.e3666bf240"
+    },
+    {
+      "id": "cancha",
+      "es": "cancha",
+      "fr": "terrain de sport (en Argentine et en Amérique latine ; en Espagne : « campo » ou « pista »)",
+      "genero": "f",
+      "plural": "canchas",
+      "ilustracion": "Un terrain de foot de quartier avec deux buts, de l’herbe usée et des enfants qui jouent",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Jugamos en la cancha del barrio.",
+        "fr": "Nous jouons sur le terrain du quartier.",
+        "voz": "facu",
+        "audio": "facu.e2392b3638"
+      },
+      "audio": "facu.c6443ac41e",
+      "voz": "facu"
+    },
+    {
+      "id": "hincha",
+      "es": "hincha",
+      "fr": "supporter, fan d’une équipe",
+      "genero": "mf",
+      "plural": "hinchas",
+      "emoji": "📣",
+      "tags": [
+        "deportes"
+      ],
+      "ejemplo": {
+        "es": "Soy hincha de Boca.",
+        "fr": "Je suis supporter de Boca.",
+        "voz": "facu",
+        "audio": "facu.2c49e021ed"
+      },
+      "audio": "narrador.c631caa3eb"
+    },
+    {
+      "id": "bailar",
+      "es": "bailar",
+      "fr": "danser",
+      "emoji": "💃",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "A Sol le encanta bailar.",
+        "fr": "Sol adore danser.",
+        "voz": "sol",
+        "audio": "sol.d055ef4c7a"
+      },
+      "audio": "narrador.cebdd0c7f1"
+    },
+    {
+      "id": "dibujar",
+      "es": "dibujar",
+      "fr": "dessiner",
+      "emoji": "✏️",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me gusta dibujar animales.",
+        "fr": "J’aime dessiner des animaux.",
+        "voz": "narrador",
+        "audio": "narrador.3c5bddba4d"
+      },
+      "audio": "narrador.f5ee40a8e8"
+    },
+    {
+      "id": "nadar_dep",
+      "es": "nadar",
+      "fr": "nager",
+      "emoji": "🏊‍♂️",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me gusta nadar en verano.",
+        "fr": "J’aime nager en été.",
+        "voz": "narrador",
+        "audio": "narrador.f0f7d0fe6b"
+      },
+      "audio": "narrador.b6e1a00ea4"
+    },
+    {
+      "id": "correr",
+      "es": "correr",
+      "fr": "courir",
+      "emoji": "🏃‍♀️",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Corro por el parque los domingos.",
+        "fr": "Je cours dans le parc le dimanche.",
+        "voz": "narrador",
+        "audio": "narrador.077f63deea"
+      },
+      "audio": "narrador.43e97870fe"
+    },
+    {
+      "id": "jugar",
+      "es": "jugar",
+      "fr": "jouer (à un jeu ou un sport : jugar al fútbol) ; juego = je joue",
+      "emoji": "🎲",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Jugamos al fútbol en la cancha.",
+        "fr": "Nous jouons au foot sur le terrain.",
+        "voz": "facu",
+        "audio": "facu.493d82013b"
+      },
+      "audio": "narrador.ff1d117945"
+    },
+    {
+      "id": "tocar",
+      "es": "tocar",
+      "fr": "jouer d’un instrument (toco la guitarra) ; aussi : toucher",
+      "emoji": "🎶",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Sol toca la guitarra.",
+        "fr": "Sol joue de la guitare.",
+        "voz": "sol",
+        "audio": "sol.b05daf53a6"
+      },
+      "audio": "narrador.ede7404021"
+    },
+    {
+      "id": "videojuegos",
+      "es": "videojuegos",
+      "fr": "jeux vidéo",
+      "genero": "m",
+      "soloPlural": true,
+      "emoji": "🎮",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me gustan los videojuegos.",
+        "fr": "J’aime les jeux vidéo.",
+        "voz": "narrador",
+        "audio": "narrador.e690166779"
+      },
+      "audio": "narrador.4b050f2822"
+    },
+    {
+      "id": "pelicula",
+      "es": "película",
+      "fr": "film",
+      "genero": "f",
+      "plural": "películas",
+      "emoji": "🎬",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me encantan las películas de animales.",
+        "fr": "J’adore les films d’animaux.",
+        "voz": "narrador",
+        "audio": "narrador.301f0982cc"
+      },
+      "audio": "narrador.84b698cc69"
+    },
+    {
+      "id": "pasear",
+      "es": "pasear",
+      "fr": "se promener",
+      "emoji": "🚶‍♀️",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me gusta pasear por la ciudad.",
+        "fr": "J’aime me promener dans la ville.",
+        "voz": "narrador",
+        "audio": "narrador.72735add0e"
+      },
+      "audio": "narrador.b3fb18dfca"
+    },
+    {
+      "id": "tiempo_libre",
+      "es": "tiempo libre",
+      "fr": "temps libre, loisirs",
+      "genero": "m",
+      "emoji": "🕹️",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "En mi tiempo libre toco la guitarra.",
+        "fr": "Pendant mon temps libre, je joue de la guitare.",
+        "voz": "narrador",
+        "audio": "narrador.c58437609c"
+      },
+      "audio": "narrador.e49dafc8a7"
+    },
+    {
+      "id": "ver_tv",
+      "es": "ver",
+      "fr": "voir, regarder (ver la tele, ver una película)",
+      "emoji": "📺",
+      "tags": [
+        "ocio"
+      ],
+      "ejemplo": {
+        "es": "Me gusta ver películas con mi familia.",
+        "fr": "J’aime regarder des films avec ma famille.",
+        "voz": "narrador",
+        "audio": "narrador.198a6e41f8"
+      },
+      "audio": "narrador.5e0b8aa15a"
+    },
+    {
+      "id": "guitarra",
+      "es": "guitarra",
+      "fr": "guitare",
+      "genero": "f",
+      "plural": "guitarras",
+      "emoji": "🎸",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "Sol toca la guitarra muy bien.",
+        "fr": "Sol joue très bien de la guitare.",
+        "voz": "sol",
+        "audio": "sol.eefef1dd1f"
+      },
+      "audio": "narrador.4436a76d1c"
+    },
+    {
+      "id": "piano",
+      "es": "piano",
+      "fr": "piano",
+      "genero": "m",
+      "plural": "pianos",
+      "emoji": "🎹",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "Mi abuela toca el piano.",
+        "fr": "Ma grand-mère joue du piano.",
+        "voz": "narrador",
+        "audio": "narrador.60941f3989"
+      },
+      "audio": "narrador.5c07d1e47b"
+    },
+    {
+      "id": "violin",
+      "es": "violín",
+      "fr": "violon",
+      "genero": "m",
+      "plural": "violines",
+      "emoji": "🎻",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "El violín suena muy bonito.",
+        "fr": "Le violon sonne très bien.",
+        "voz": "narrador",
+        "audio": "narrador.c6e29de13c"
+      },
+      "audio": "narrador.591646a6a0"
+    },
+    {
+      "id": "bateria",
+      "es": "batería",
+      "fr": "batterie (instrument)",
+      "genero": "f",
+      "emoji": "🥁",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "Mi primo toca la batería.",
+        "fr": "Mon cousin joue de la batterie.",
+        "voz": "narrador",
+        "audio": "narrador.dd1896bb77"
+      },
+      "audio": "narrador.2f758280dd"
+    },
+    {
+      "id": "trompeta",
+      "es": "trompeta",
+      "fr": "trompette",
+      "genero": "f",
+      "plural": "trompetas",
+      "emoji": "🎺",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "La trompeta suena muy fuerte.",
+        "fr": "La trompette sonne très fort.",
+        "voz": "narrador",
+        "audio": "narrador.a7d0e65261"
+      },
+      "audio": "narrador.69bf76a9e4"
+    },
+    {
+      "id": "bandoneon",
+      "es": "bandoneón",
+      "fr": "bandonéon : instrument à soufflet, proche de l’accordéon, instrument typique du tango",
+      "genero": "m",
+      "plural": "bandoneones",
+      "ilustracion": "Un bandonéon : petit instrument à soufflet noir et carré, avec des boutons sur les deux côtés",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "Don Aníbal toca el bandoneón.",
+        "fr": "Don Aníbal joue du bandonéon.",
+        "voz": "anibal",
+        "audio": "anibal.36919db680"
+      },
+      "audio": "anibal.327df745fb",
+      "voz": "anibal"
+    },
+    {
+      "id": "flauta",
+      "es": "flauta",
+      "fr": "flûte",
+      "genero": "f",
+      "plural": "flautas",
+      "ilustracion": "Une flûte traversière argentée avec ses clés",
+      "tags": [
+        "instrumentos"
+      ],
+      "ejemplo": {
+        "es": "Mi hermana toca la flauta.",
+        "fr": "Ma sœur joue de la flûte.",
+        "voz": "narrador",
+        "audio": "narrador.5b82463d34"
+      },
+      "audio": "narrador.b6b9d0f846"
+    },
+    {
+      "id": "gustar",
+      "es": "gustar",
+      "fr": "plaire (me gusta = ça me plaît = j’aime)",
+      "emoji": "👍",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Me gusta el tango.",
+        "fr": "J’aime le tango.",
+        "voz": "narrador",
+        "audio": "narrador.7158380b16"
+      },
+      "audio": "narrador.bb2e73ca71"
+    },
+    {
+      "id": "encantar",
+      "es": "encantar",
+      "fr": "adorer, enchanter (me encanta = j’adore)",
+      "emoji": "😍",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Me encanta bailar.",
+        "fr": "J’adore danser.",
+        "voz": "narrador",
+        "audio": "narrador.8497ed7739"
+      },
+      "audio": "narrador.69715cf2ce"
+    },
+    {
+      "id": "preferir",
+      "es": "preferir",
+      "fr": "préférer (prefiero = je préfère)",
+      "emoji": "🥇",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Prefiero el tenis al fútbol.",
+        "fr": "Je préfère le tennis au foot.",
+        "voz": "narrador",
+        "audio": "narrador.ee10760fa8"
+      },
+      "audio": "narrador.cd6d483552"
+    },
+    {
+      "id": "porque",
+      "es": "porque",
+      "fr": "parce que (en un seul mot, sans accent)",
+      "emoji": "💬",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Me gusta porque es divertido.",
+        "fr": "J’aime ça parce que c’est amusant.",
+        "voz": "narrador",
+        "audio": "narrador.11ff7d8ad6"
+      },
+      "audio": "narrador.a6d1c03761"
+    },
+    {
+      "id": "por_que",
+      "es": "¿por qué?",
+      "fr": "pourquoi ? (en deux mots, avec accent)",
+      "emoji": "❓",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "¿Por qué te gusta el tango?",
+        "fr": "Pourquoi aimes-tu le tango ?",
+        "voz": "narrador",
+        "audio": "narrador.0be74b6f1d"
+      },
+      "audio": "narrador.19c60b0dab"
+    },
+    {
+      "id": "mucho",
+      "es": "mucho",
+      "fr": "beaucoup",
+      "emoji": "➕",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Me gusta mucho el mate.",
+        "fr": "J’aime beaucoup le maté.",
+        "voz": "narrador",
+        "audio": "narrador.fe0f7aba26"
+      },
+      "audio": "narrador.5629cc17d5"
+    },
+    {
+      "id": "nada",
+      "es": "nada",
+      "fr": "rien ; pas du tout (no me gusta nada = je n’aime pas du tout)",
+      "emoji": "🚫",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "No me gusta nada el rugby.",
+        "fr": "Je n’aime pas du tout le rugby.",
+        "voz": "narrador",
+        "audio": "narrador.710e62fd39"
+      },
+      "audio": "narrador.a3fcfe3a3b"
+    },
+    {
+      "id": "tampoco",
+      "es": "tampoco",
+      "fr": "non plus (a mí tampoco = moi non plus)",
+      "emoji": "🙅",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "—No me gusta el tenis. —A mí tampoco.",
+        "fr": "— Je n’aime pas le tennis. — Moi non plus.",
+        "voz": "narrador",
+        "audio": "narrador.14ae3bc6cc"
+      },
+      "audio": "narrador.fafa7aec2f"
+    },
+    {
+      "id": "favorito",
+      "es": "favorito",
+      "fr": "préféré (favorito, favorita)",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "favorita",
+      "emoji": "⭐",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Mi deporte favorito es el fútbol.",
+        "fr": "Mon sport préféré est le foot.",
+        "voz": "narrador",
+        "audio": "narrador.ca097fb3c8"
+      },
+      "audio": "narrador.bc912ba04f"
+    },
+    {
+      "id": "aburrido",
+      "es": "aburrido",
+      "fr": "ennuyeux (ser aburrido) ; aussi : ennuyé (estar aburrido)",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "aburrida",
+      "emoji": "🥱",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "Para mí, los videojuegos son aburridos.",
+        "fr": "Pour moi, les jeux vidéo sont ennuyeux.",
+        "voz": "narrador",
+        "audio": "narrador.7773736c24"
+      },
+      "audio": "narrador.8470d35841"
+    },
+    {
+      "id": "genial",
+      "es": "genial",
+      "fr": "génial",
+      "genero": "mf",
+      "plural": "geniales",
+      "clase": "adj",
+      "emoji": "🤩",
+      "tags": [
+        "gustos"
+      ],
+      "ejemplo": {
+        "es": "El tango es genial.",
+        "fr": "Le tango est génial.",
+        "voz": "narrador",
+        "audio": "narrador.7490f3419b"
+      },
+      "audio": "narrador.060e5a6214"
+    },
+    {
+      "id": "tango",
+      "es": "tango",
+      "fr": "tango : musique et danse en couple née à Buenos Aires et à Montevideo",
+      "genero": "m",
+      "plural": "tangos",
+      "emoji": "🕺",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "El tango se baila en pareja.",
+        "fr": "Le tango se danse à deux.",
+        "voz": "sol",
+        "audio": "sol.d43fb3d9cd"
+      },
+      "audio": "narrador.de852dff30"
+    },
+    {
+      "id": "mate",
+      "es": "mate",
+      "fr": "maté : infusion chaude de yerba mate, qu’on partage avec une paille en métal (la bombilla)",
+      "genero": "m",
+      "plural": "mates",
+      "emoji": "🧉",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Los amigos comparten el mate.",
+        "fr": "Les amis partagent le maté.",
+        "voz": "facu",
+        "audio": "facu.40c05d0c7e"
+      },
+      "audio": "narrador.e1a465e4d3"
+    },
+    {
+      "id": "asado",
+      "es": "asado",
+      "fr": "asado : barbecue argentin (viande grillée), un repas en famille ou entre amis",
+      "genero": "m",
+      "plural": "asados",
+      "emoji": "🥩",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "El domingo comemos asado en familia.",
+        "fr": "Le dimanche, nous mangeons un asado en famille.",
+        "voz": "facu",
+        "audio": "facu.05d3c2dc4b"
+      },
+      "audio": "narrador.e0dbe89b82"
+    },
+    {
+      "id": "dulce_de_leche",
+      "es": "dulce de leche",
+      "fr": "confiture de lait (très aimée en Argentine)",
+      "genero": "m",
+      "emoji": "🍯",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Me encanta el dulce de leche.",
+        "fr": "J’adore la confiture de lait.",
+        "voz": "sol",
+        "audio": "sol.e84e36cbdc"
+      },
+      "audio": "narrador.83db3a295a"
+    },
+    {
+      "id": "che",
+      "es": "che",
+      "fr": "che : interjection argentine pour appeler quelqu’un (« hé ! », « dis donc »)",
+      "emoji": "🇦🇷",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "¡Che, vamos a jugar al fútbol!",
+        "fr": "Hé, allons jouer au foot !",
+        "voz": "facu",
+        "audio": "facu.503d20359d"
+      },
+      "audio": "facu.69f14405f3",
+      "voz": "facu"
+    },
+    {
+      "id": "hace_calor",
+      "es": "hace calor",
+      "fr": "il fait chaud (météo) ; pour une personne : tengo calor = j’ai chaud",
+      "emoji": "🥵",
+      "tags": [
+        "tiempo"
+      ],
+      "ejemplo": {
+        "es": "En enero hace calor en Buenos Aires.",
+        "fr": "En janvier, il fait chaud à Buenos Aires.",
+        "voz": "narrador",
+        "audio": "narrador.edce842155"
+      },
+      "audio": "narrador.41582c3e97"
+    },
+    {
+      "id": "verano",
+      "es": "verano",
+      "fr": "été (en Argentine, l’été va de décembre à mars : hémisphère sud)",
+      "genero": "m",
+      "plural": "veranos",
+      "emoji": "🌞",
+      "tags": [
+        "tiempo"
+      ],
+      "ejemplo": {
+        "es": "En Argentina, enero es verano.",
+        "fr": "En Argentine, janvier est l’été.",
+        "voz": "narrador",
+        "audio": "narrador.aacac85650"
+      },
+      "audio": "narrador.952fa74954"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_gustar",
+      "titulo": {
+        "es": "Me gusta el fútbol, me gustan los videojuegos",
+        "fr": "Aimer : gustar au singulier et au pluriel"
+      },
+      "ejemplos": [
+        {
+          "es": "Me gusta el fútbol.",
+          "fr": "J’aime le foot (le foot me plaît).",
+          "voz": "facu",
+          "audio": "facu.0c4c41d5d1",
+          "resaltar": [
+            "Me gusta"
+          ]
+        },
+        {
+          "es": "Me gustan los videojuegos.",
+          "fr": "J’aime les jeux vidéo (les jeux vidéo me plaisent).",
+          "voz": "sol",
+          "audio": "sol.e690166779",
+          "resaltar": [
+            "Me gustan"
+          ]
+        },
+        {
+          "es": "Me gusta bailar.",
+          "fr": "J’aime danser.",
+          "voz": "sol",
+          "audio": "sol.4aec35800e",
+          "resaltar": [
+            "Me gusta bailar"
+          ]
+        },
+        {
+          "es": "No me gusta la natación.",
+          "fr": "Je n’aime pas la natation.",
+          "voz": "viajero",
+          "audio": "viajero.d88f804be1",
+          "resaltar": [
+            "No me gusta"
+          ]
+        },
+        {
+          "es": "¿Te gustan las películas?",
+          "fr": "Tu aimes les films ?",
+          "voz": "marina",
+          "audio": "marina.bb8dc6635c",
+          "resaltar": [
+            "¿Te gustan"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «gustar», lo que me gusta es el sujeto: si es una cosa (el fútbol) o un verbo (bailar), decimos «gusta»; si son varias cosas (los videojuegos), decimos «gustan». Delante va me, te, le…",
+        "fr": "Avec « gustar », ce qui me plaît est le sujet : si c’est une seule chose (el fútbol) ou un verbe (bailar), on dit « gusta » ; si ce sont plusieurs choses (los videojuegos), on dit « gustan ». Devant, on met me, te, le…",
+        "voz": "narrador",
+        "audio": "narrador.15a808b799"
+      },
+      "pista": "Gustar ne veut pas exactement dire « aimer » mais « plaire » : « me gusta el fútbol » = le foot me plaît. Comme en français, la chose qui plaît est le sujet du verbe, donc c'est elle qui décide de la terminaison : une chose singulière (me gusta el tango) ou un verbe à l'infinitif (me gusta bailar, toujours « gusta ») → « gusta » ; plusieurs choses (me gustan los videojuegos, me gustan el fútbol y el tenis) → « gustan ». Le petit mot avant le verbe indique à qui ça plaît : me (à moi), te (à toi), le (à lui, à elle), nos (à nous), os (à vous, en Espagne), les (à eux). Ces mots se mettent AVANT le verbe, et « no » se met avant eux : « no me gusta ». Dans une réponse courte, on ne répète pas le mot « yo » : « —¿Te gusta el tango? —Sí, me gusta. » Piège classique : ne pas dire « yo gusto el fútbol ». Pas de « de » devant le nom : me gusta el fútbol (pas « me gusta de le foot »). Les articles el / la / los / las sont obligatoires devant le nom.",
+      "tabla": {
+        "encabezado": [
+          "A quién",
+          "+ singular / infinitivo",
+          "+ plural"
+        ],
+        "filas": [
+          [
+            "(a mí)",
+            "me gusta el tango",
+            "me gustan los videojuegos"
+          ],
+          [
+            "(a ti)",
+            "te gusta el tango",
+            "te gustan los videojuegos"
+          ],
+          [
+            "(a él / ella)",
+            "le gusta el tango",
+            "le gustan los videojuegos"
+          ],
+          [
+            "(a nosotros)",
+            "nos gusta el tango",
+            "nos gustan los videojuegos"
+          ],
+          [
+            "(a vosotros)",
+            "os gusta el tango",
+            "os gustan los videojuegos"
+          ],
+          [
+            "(a ellos / ellas)",
+            "les gusta el tango",
+            "les gustan los videojuegos"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_escala",
+      "titulo": {
+        "es": "Me encanta, me gusta mucho, no me gusta nada",
+        "fr": "Dire à quel point on aime ; « moi aussi » et « moi non plus »"
+      },
+      "ejemplos": [
+        {
+          "es": "Me encanta el tango.",
+          "fr": "J’adore le tango.",
+          "voz": "sol",
+          "audio": "sol.0a51b089da",
+          "resaltar": [
+            "Me encanta"
+          ]
+        },
+        {
+          "es": "Me gusta mucho el mate.",
+          "fr": "J’aime beaucoup le maté.",
+          "voz": "facu",
+          "audio": "facu.fe0f7aba26",
+          "resaltar": [
+            "mucho"
+          ]
+        },
+        {
+          "es": "No me gusta nada el rugby.",
+          "fr": "Je n’aime pas du tout le rugby.",
+          "voz": "facu",
+          "audio": "facu.710e62fd39",
+          "resaltar": [
+            "nada"
+          ]
+        },
+        {
+          "es": "—Me gusta bailar. —A mí también.",
+          "fr": "— J’aime danser. — Moi aussi.",
+          "voz": "sol",
+          "audio": "sol.d5dd591bc2",
+          "resaltar": [
+            "A mí también"
+          ]
+        },
+        {
+          "es": "—No me gusta el tenis. —A mí tampoco.",
+          "fr": "— Je n’aime pas le tennis. — Moi non plus.",
+          "voz": "marina",
+          "audio": "marina.14ae3bc6cc",
+          "resaltar": [
+            "A mí tampoco"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Hay una escala: me encanta (¡me gusta muchísimo!) > me gusta mucho > me gusta > no me gusta mucho > no me gusta nada. Para estar de acuerdo: «a mí también» (si es sí) y «a mí tampoco» (si es no).",
+        "fr": "Il y a une échelle : me encanta (j’adore !) > me gusta mucho > me gusta > no me gusta mucho > no me gusta nada. Pour être d’accord : « a mí también » (si c’est oui) et « a mí tampoco » (si c’est non).",
+        "voz": "narrador",
+        "audio": "narrador.7fb32a3276"
+      },
+      "pista": "« Encantar » se construit exactement comme « gustar » : me encanta el tango (singulier), me encantan las películas (pluriel), me encanta bailar (infinitif). Pour nuancer, on ajoute « mucho » après le verbe (me gusta mucho) ou « nada » (no me gusta nada). Pour répondre « moi aussi » à une phrase positive, on dit « a mí también » ; pour répondre « moi non plus » à une phrase négative, on dit « a mí tampoco ». Si on n'est PAS d'accord, on dit « a mí sí » (moi si) après un « no me gusta », et « a mí no » (moi non) après un « me gusta ». Attention : après « tampoco », on ne remet pas de « no » : « a mí tampoco » (pas « a mí no tampoco »). Ne pas confondre « también » (aussi, affirmatif) et « tampoco » (non plus, négatif).",
+      "tabla": {
+        "encabezado": [
+          "Nivel",
+          "Se dice"
+        ],
+        "filas": [
+          [
+            "😍",
+            "me encanta(n)"
+          ],
+          [
+            "🙂",
+            "me gusta(n) mucho"
+          ],
+          [
+            "😐",
+            "me gusta(n)"
+          ],
+          [
+            "🙁",
+            "no me gusta(n) mucho"
+          ],
+          [
+            "😖",
+            "no me gusta(n) nada"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_a_mi",
+      "titulo": {
+        "es": "A Sol le gusta el tango",
+        "fr": "Parler des autres : a mí, a ti, a Facu le…"
+      },
+      "ejemplos": [
+        {
+          "es": "A mí me gusta el fútbol.",
+          "fr": "Moi, j’aime le foot.",
+          "voz": "facu",
+          "audio": "facu.4a14bd21cc",
+          "resaltar": [
+            "A mí me"
+          ]
+        },
+        {
+          "es": "A ti te gustan los videojuegos, ¿verdad?",
+          "fr": "Toi, tu aimes les jeux vidéo, n’est-ce pas ?",
+          "voz": "marina",
+          "audio": "marina.06d80ca8d1",
+          "resaltar": [
+            "A ti te"
+          ]
+        },
+        {
+          "es": "A Facu le gusta el fútbol.",
+          "fr": "Facu aime le foot.",
+          "voz": "sol",
+          "audio": "sol.d66b8b2b5d",
+          "resaltar": [
+            "A Facu le"
+          ]
+        },
+        {
+          "es": "A mis amigos les gusta el tango.",
+          "fr": "Mes amis aiment le tango.",
+          "voz": "sol",
+          "audio": "sol.0b614189cb",
+          "resaltar": [
+            "A mis amigos les"
+          ]
+        },
+        {
+          "es": "A nosotros nos encanta el mate.",
+          "fr": "Nous, nous adorons le maté.",
+          "voz": "facu",
+          "audio": "facu.2ba9a9025e",
+          "resaltar": [
+            "A nosotros nos"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para hablar de otra persona, ponemos «a + nombre» y «le» o «les» delante del verbo: A Facu le gusta el fútbol. A mis amigos les gusta el tango. «A mí» y «a ti» sirven para insistir.",
+        "fr": "Pour parler d’une autre personne, on met « a + nom » et « le » ou « les » devant le verbe : A Facu le gusta el fútbol. A mis amigos les gusta el tango. « A mí » et « a ti » servent à insister.",
+        "voz": "narrador",
+        "audio": "narrador.8cac8d26e1"
+      },
+      "pista": "Pour dire ce que plaît à QUELQU'UN D'AUTRE, on met toujours « a + la personne » en début de phrase ET le petit mot (le / les) devant le verbe : « A Sol le gusta el tango » (jamais « A Sol gusta… »). Le = une seule personne (él, ella, usted, Sol, mi hermano), les = plusieurs personnes (mis amigos, ellos, Facu y Sol). « Le » ne change pas pour un garçon ou une fille. « A mí me », « a ti te », « a nosotros nos » servent à insister ou à comparer (« A mí me gusta el fútbol, pero a ti te gusta el tenis »), et sont facultatifs (« me gusta el fútbol » suffit). Le verbe s'accorde toujours avec ce qui plaît : « A Sol le gustan los pianos ». Piège : on ne répète pas : pas de « a Facu le gusta él » ni de « a mí me gusto ».",
+      "tabla": {
+        "encabezado": [
+          "Persona",
+          "Se dice"
+        ],
+        "filas": [
+          [
+            "a mí",
+            "me gusta"
+          ],
+          [
+            "a ti",
+            "te gusta"
+          ],
+          [
+            "a él / ella / Facu",
+            "le gusta"
+          ],
+          [
+            "a nosotros",
+            "nos gusta"
+          ],
+          [
+            "a vosotros",
+            "os gusta"
+          ],
+          [
+            "a ellos / mis amigos",
+            "les gusta"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_preferir",
+      "titulo": {
+        "es": "Prefiero el tenis al fútbol",
+        "fr": "Préférer : preferir"
+      },
+      "ejemplos": [
+        {
+          "es": "Prefiero el tenis al fútbol.",
+          "fr": "Je préfère le tennis au foot.",
+          "voz": "viajero",
+          "audio": "viajero.ee10760fa8",
+          "resaltar": [
+            "Prefiero",
+            "al"
+          ]
+        },
+        {
+          "es": "¿Qué prefieres, bailar o cantar?",
+          "fr": "Que préfères-tu, danser ou chanter ?",
+          "voz": "sol",
+          "audio": "sol.3f726c3a9a",
+          "resaltar": [
+            "prefieres"
+          ]
+        },
+        {
+          "es": "Sol prefiere la guitarra.",
+          "fr": "Sol préfère la guitare.",
+          "voz": "facu",
+          "audio": "facu.8463f8fe2e",
+          "resaltar": [
+            "prefiere"
+          ]
+        },
+        {
+          "es": "Preferimos jugar en la cancha.",
+          "fr": "Nous préférons jouer sur le terrain.",
+          "voz": "facu",
+          "audio": "facu.d7abce1f32",
+          "resaltar": [
+            "Preferimos"
+          ]
+        },
+        {
+          "es": "Mis padres prefieren el tango.",
+          "fr": "Mes parents préfèrent le tango.",
+          "voz": "sol",
+          "audio": "sol.63c48bfef1",
+          "resaltar": [
+            "prefieren"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Preferir es como querer: la e cambia a ie (prefiero, prefieres, prefiere), pero no con nosotros y vosotros (preferimos, preferís). Decimos «prefiero X a Y» (con «a» + «el» = «al»).",
+        "fr": "Preferir fonctionne comme querer : le e devient ie (prefiero, prefieres, prefiere), mais pas avec nosotros et vosotros (preferimos, preferís). On dit « prefiero X a Y » (avec « a » + « el » = « al »).",
+        "voz": "narrador",
+        "audio": "narrador.db5fe32d40"
+      },
+      "pista": "« Preferir » est un verbe à diphtongue (e → ie) comme « querer » : prefiero, prefieres, prefiere, preferimos, preferís, prefieren (nosotros et vosotros ne diphtonguent pas). Il se construit avec un nom ou un infinitif : « prefiero el tenis », « prefiero bailar ». Pour comparer, on met « a » devant la chose moins aimée : « prefiero el tenis AL fútbol » (a + el = al), « prefiero bailar A cantar » (jamais « que » ici). Ce n'est PAS comme « gustar » : ici le verbe s'accorde avec la personne qui préfère (yo prefiero, tú prefieres), pas avec la chose. Pour demander : « ¿Qué prefieres, X o Y? ». En Argentine, on entendra « ¿qué preferís? » (voseo : « vos preferís ») – pour toi, « ¿qué prefieres? » est toujours correct.",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "preferir"
+        ],
+        "filas": [
+          [
+            "yo",
+            "prefiero"
+          ],
+          [
+            "tú",
+            "prefieres"
+          ],
+          [
+            "él / ella",
+            "prefiere"
+          ],
+          [
+            "nosotros",
+            "preferimos"
+          ],
+          [
+            "vosotros",
+            "preferís"
+          ],
+          [
+            "ellos / ellas",
+            "prefieren"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_porque",
+      "titulo": {
+        "es": "¿Por qué…? Porque…",
+        "fr": "Pourquoi et parce que"
+      },
+      "ejemplos": [
+        {
+          "es": "—¿Por qué te gusta el tango? —Porque es muy bonito.",
+          "fr": "— Pourquoi aimes-tu le tango ? — Parce qu’il est très beau.",
+          "voz": "sol",
+          "audio": "sol.50a03fea6e",
+          "resaltar": [
+            "¿Por qué",
+            "Porque"
+          ]
+        },
+        {
+          "es": "Me gusta el fútbol porque es divertido.",
+          "fr": "J’aime le foot parce que c’est amusant.",
+          "voz": "facu",
+          "audio": "facu.6945abc445",
+          "resaltar": [
+            "porque"
+          ]
+        },
+        {
+          "es": "No me gustan los videojuegos porque son aburridos.",
+          "fr": "Je n’aime pas les jeux vidéo parce qu’ils sont ennuyeux.",
+          "voz": "marina",
+          "audio": "marina.f8a5a8ed2d",
+          "resaltar": [
+            "porque"
+          ]
+        },
+        {
+          "es": "¿Por qué prefieres la guitarra?",
+          "fr": "Pourquoi préfères-tu la guitare ?",
+          "voz": "sol",
+          "audio": "sol.60b4ecc2eb",
+          "resaltar": [
+            "¿Por qué"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para preguntar, escribimos «¿por qué?» en dos palabras y con acento. Para responder, escribimos «porque» en una sola palabra y sin acento.",
+        "fr": "Pour poser la question, on écrit « ¿por qué ? » en deux mots et avec accent. Pour répondre, on écrit « porque » en un seul mot et sans accent.",
+        "voz": "narrador",
+        "audio": "narrador.d93617303e"
+      },
+      "pista": "¿Por qué? (deux mots, accent sur le é, avec ¿ ?) = pourquoi ? ; porque (un mot, sans accent) = parce que. C'est un piège d'orthographe, comme « pourquoi / parce que » en français. La réponse commence souvent par « porque » : —¿Por qué te gusta el fútbol? —Porque es divertido. On peut aussi mettre « porque » au milieu d'une phrase : me gusta el tango porque es bonito. Après « porque » on conjugue un verbe : porque es genial, porque son aburridos. Les adjectifs utiles pour justifier : divertido, aburrido, genial, bonito, difícil, fácil. À l'oral, l'intonation de « ¿por qué? » monte à la fin. Attention : le « qué » de ¿por qué? garde l'accent comme tous les mots interrogatifs (qué, cómo, dónde, cuándo).",
+      "tabla": {
+        "encabezado": [
+          "Forma",
+          "Significado"
+        ],
+        "filas": [
+          [
+            "¿por qué?",
+            "pourquoi ? (question)"
+          ],
+          [
+            "porque",
+            "parce que (réponse)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_jugar_tocar",
+      "titulo": {
+        "es": "Juego al fútbol, toco la guitarra",
+        "fr": "Jouer à un sport, jouer d’un instrument"
+      },
+      "ejemplos": [
+        {
+          "es": "Juego al fútbol con mis amigos.",
+          "fr": "Je joue au foot avec mes amis.",
+          "voz": "facu",
+          "audio": "facu.00991a9600",
+          "resaltar": [
+            "Juego al"
+          ]
+        },
+        {
+          "es": "Facu juega al baloncesto los sábados.",
+          "fr": "Facu joue au basket le samedi.",
+          "voz": "sol",
+          "audio": "sol.f0083a077c",
+          "resaltar": [
+            "juega al"
+          ]
+        },
+        {
+          "es": "Sol toca la guitarra.",
+          "fr": "Sol joue de la guitare.",
+          "voz": "facu",
+          "audio": "facu.b05daf53a6",
+          "resaltar": [
+            "toca la"
+          ]
+        },
+        {
+          "es": "¿Tocas el piano?",
+          "fr": "Tu joues du piano ?",
+          "voz": "anibal",
+          "audio": "anibal.fae9baa92e",
+          "resaltar": [
+            "Tocas el"
+          ]
+        },
+        {
+          "es": "Jugamos al tenis en el parque.",
+          "fr": "Nous jouons au tennis au parc.",
+          "voz": "marina",
+          "audio": "marina.c347e232f0",
+          "resaltar": [
+            "Jugamos al"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para un deporte decimos jugar a + el deporte: juego al fútbol («a» + «el» = «al»). Para un instrumento decimos tocar + el instrumento: toco la guitarra. Jugar cambia la u en ue: juego, juegas, juega, juegan.",
+        "fr": "Pour un sport, on dit jugar a + le sport : juego al fútbol (« a » + « el » = « al »). Pour un instrument, on dit tocar + l’instrument : toco la guitarra. Jugar change le u en ue : juego, juegas, juega, juegan.",
+        "voz": "narrador",
+        "audio": "narrador.bfeccbbfc7"
+      },
+      "pista": "En français on dit « jouer AU foot » et « jouer DU piano », et en espagnol aussi, mais avec d'autres mots : « jugar A + sport » (juego al fútbol, juego al tenis ; a + el = al) et « tocar + instrument » (toco el piano, toco la guitarra) – sans préposition. Ne dis jamais « juego la guitarra » ni « toco al fútbol ». Jugar est un verbe à diphtongue unique (u → ue, comme poder pour o → ue) : juego, juegas, juega, jugamos, jugáis, juegan (nosotros et vosotros ne diphtonguent pas). « Tocar » est régulier : toco, tocas, toca, tocamos, tocáis, tocan. Tocar veut aussi dire « toucher » dans d'autres contextes. En Argentine, le sport se dit pareil ; on y ajoute parfois « vos jugás » (voseo) à la place de « tú juegas ».",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "jugar (u→ue)",
+          "tocar"
+        ],
+        "filas": [
+          [
+            "yo",
+            "juego",
+            "toco"
+          ],
+          [
+            "tú",
+            "juegas",
+            "tocas"
+          ],
+          [
+            "él / ella",
+            "juega",
+            "toca"
+          ],
+          [
+            "nosotros",
+            "jugamos",
+            "tocamos"
+          ],
+          [
+            "vosotros",
+            "jugáis",
+            "tocáis"
+          ],
+          [
+            "ellos / ellas",
+            "juegan",
+            "tocan"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u07-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Buenos Aires",
+      "emoji": "⚽",
+      "intro": {
+        "es": "¡Che, bienvenidos a Buenos Aires! Acá todo es fútbol, tango y mate.",
+        "fr": "Hé, bienvenue à Buenos Aires ! Ici, tout est foot, tango et maté. (« acá » = ici, en Amérique latine ; en Espagne : « aquí »)",
+        "voz": "facu",
+        "audio": "facu.1f7f5bf70a"
+      },
+      "pista": "Arrivée à Buenos Aires, en été : tu rencontres Facu, Sol et Don Aníbal, et tu découvres le problème de la ville silencieuse. Les PNJ parlent espagnol d’Argentine : leurs mots qui diffèrent sont signalés en français.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u07-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u07-intro",
+          "escena": {
+            "id": "u07-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 7 · Me gusta… · Buenos Aires",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée quitte Madrid, traverse l’Atlantique vers l’Amérique du Sud et descend jusqu’à l’estuaire du Río de la Plata ; carte-titre « Capítulo 7 · Me gusta… · Buenos Aires ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 7 · Me gusta… · Buenos Aires",
+                "lineas": [
+                  {
+                    "es": "Capítulo siete: me gusta…",
+                    "fr": "Chapitre sept : j’aime…",
+                    "voz": "narrador",
+                    "audio": "narrador.4b537604a0"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Buenos Aires en plein été : l’Obélisque au bout de l’avenue 9 de Julio, la Casa Rosada, les maisons peintes de Caminito à La Boca, des ballons de foot, des couples qui dansent, le Río de la Plata couleur café au lait.",
+                "camara": "travelling aérien puis rue de Caminito",
+                "lineas": [
+                  {
+                    "es": "Buenos Aires. Fútbol, tango y mate.",
+                    "fr": "Buenos Aires. Foot, tango et maté.",
+                    "voz": "narrador",
+                    "audio": "narrador.19b2bdcd65"
+                  },
+                  {
+                    "es": "Aquí, en enero, ¡es verano!",
+                    "fr": "Ici, en janvier, c’est l’été !",
+                    "voz": "narrador",
+                    "audio": "narrador.74b482777d"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u07-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Buenos Aires está en Argentina.",
+            "fr": "Buenos Aires est en Argentine.",
+            "voz": "narrador",
+            "audio": "narrador.306e60fb30"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u07-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Buenos Aires está en Europa.",
+            "fr": "Buenos Aires est en Europe.",
+            "voz": "narrador",
+            "audio": "narrador.9ab08a6438"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u07-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u07-historia",
+          "escena": {
+            "id": "u07-historia",
+            "tipo": "historia",
+            "titulo": "El silencio de Buenos Aires",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Caminito, à La Boca : maisons rouges, bleues, jaunes, vertes, sous un soleil d’été. Facu, 13 ans, maillot bleu et jaune, ballon sous le bras, court vers Álex, Marina et le Quetzal.",
+                "camara": "plan large puis champ / contre-champ",
+                "personajes": [
+                  "facu",
+                  "marina",
+                  "quetzal",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Che, viajeros! Soy Facu, de La Boca. ¿Vos jugás al fútbol?",
+                    "fr": "Hé, voyageurs ! Moi, c’est Facu, de La Boca. Tu joues au foot ? (« che » = hé ! ; en Argentine on dit « vos jugás » à la place de « tú juegas » : c’est le « voseo » ; tu n’as pas besoin de le dire, seulement de le comprendre)",
+                    "voz": "facu",
+                    "audio": "facu.a79acfd223"
+                  },
+                  {
+                    "es": "Un poco. Pero hoy hace mucho calor.",
+                    "fr": "Un peu. Mais aujourd’hui, il fait très chaud.",
+                    "voz": "marina",
+                    "audio": "marina.de2da56898"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "La feria de San Telmo : des couples dansent le tango dans un silence étrange ; Sol, 12 ans, serre sa guitare sans qu’aucune note ne sorte.",
+                "camara": "plan moyen sur les danseurs, son coupé",
+                "personajes": [
+                  "sol",
+                  "marina"
+                ],
+                "lineas": [
+                  {
+                    "es": "Hola, soy Sol. Me encanta la música, pero hoy no suena nada. ¡Todo está en silencio!",
+                    "fr": "Salut, c’est Sol. J’adore la musique, mais aujourd’hui rien ne sonne. Tout est silencieux !",
+                    "voz": "sol",
+                    "audio": "sol.1e99bbdc63"
+                  },
+                  {
+                    "es": "¿Silencio? ¡Pero si la música es lo mejor de Buenos Aires!",
+                    "fr": "Du silence ? Mais la musique, c’est ce qu’il y a de mieux à Buenos Aires !",
+                    "voz": "marina",
+                    "audio": "marina.558dfdb647"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Don Aníbal, sombrero, tient son bandonéon sur les genoux et l’ouvre : aucun son. Une ombre noire glisse sur les instruments ; la foule hausse les épaules.",
+                "personajes": [
+                  "anibal",
+                  "sombra"
+                ],
+                "lineas": [
+                  {
+                    "es": "Mi bandoneón ya no suena. Y la gente dice: «me da igual».",
+                    "fr": "Mon bandonéon ne sonne plus. Et les gens disent : « ça m’est égal ».",
+                    "voz": "anibal",
+                    "audio": "anibal.a9d38fc23d"
+                  },
+                  {
+                    "es": "Sin gustos, no hay personas. Todo da igual… Silencio.",
+                    "fr": "Sans goûts, pas de personnes. Tout est égal… Silence.",
+                    "voz": "sombra",
+                    "audio": "sombra.2cb290e8e2"
+                  }
+                ],
+                "musica": "tension douce, accord de bandonéon étouffé"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Gros plan sur le soufflet du bandonéon : un reflet vert brille entre les plis. Le Quetzal s’approche, Sol serre sa guitare.",
+                "personajes": [
+                  "quetzal",
+                  "sol"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma está dentro del bandoneón.",
+                    "fr": "La plume est dans le bandonéon.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.abd6c2ad60"
+                  },
+                  {
+                    "es": "Para devolver la música, tienen que decir lo que les gusta. ¡Vamos!",
+                    "fr": "Pour rendre la musique, vous devez dire ce que vous aimez. Allons-y ! (en Argentine, on dit « ustedes » : « tienen », « les » ; en Espagne on dirait « tenéis », « os »)",
+                    "voz": "sol",
+                    "audio": "sol.90605545bb"
+                  }
+                ],
+                "musica": "thème d’aventure, guitare et bandonéon"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u07-q01-s05",
+          "tipo": "flashcard",
+          "vocab": [
+            "verano",
+            "hace_calor",
+            "che"
+          ]
+        },
+        {
+          "id": "u07-q01-s06",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En enero, en Buenos Aires, hace calor.",
+            "fr": "En janvier, à Buenos Aires, il fait chaud.",
+            "voz": "narrador",
+            "audio": "narrador.9732692cf0"
+          },
+          "correcta": true,
+          "imagen": "hace_calor",
+          "explicacion": {
+            "es": "En el hemisferio sur, enero es verano.",
+            "fr": "Dans l’hémisphère sud, janvier est l’été.",
+            "voz": "narrador",
+            "audio": "narrador.0395777281"
+          }
+        },
+        {
+          "id": "u07-q01-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Yo soy de La Boca y soy hincha de Boca. ¡Me encanta el fútbol!",
+            "voz": "facu",
+            "audio": "facu.716ee86ee6"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "A Facu le gusta mucho un deporte.",
+              "correcta": true
+            },
+            {
+              "texto": "Facu es de México y no juega al fútbol.",
+              "correcta": false
+            },
+            {
+              "texto": "Facu odia los equipos de su barrio.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q01-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hoy no puedo tocar la guitarra. ¡No hay sonido en la feria!",
+            "voz": "sol",
+            "audio": "sol.4179d9b47e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Sol no sabe dónde está su guitarra.",
+              "correcta": false
+            },
+            {
+              "texto": "Sol tiene un problema con la música.",
+              "correcta": true
+            },
+            {
+              "texto": "Hoy hay un concierto muy grande.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q01-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "facu",
+          "replica": {
+            "es": "¡Che, viajeros! Soy Facu. ¿Vos jugás al fútbol?",
+            "fr": "Hé, voyageurs ! Moi, c’est Facu. Tu joues au foot ? (« vos jugás » = « tú juegas » : voseo argentin)",
+            "voz": "facu",
+            "audio": "facu.ec213dba88"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, juego al fútbol con mis amigos.",
+                "voz": "viajero",
+                "audio": "viajero.c7b7a9ef9f"
+              },
+              "fr": "Oui, je joue au foot avec mes amis.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Bárbaro! Entonces somos del mismo equipo.",
+                "fr": "Génial ! (« bárbaro » = super, en Argentine). Alors on est dans la même équipe.",
+                "voz": "facu",
+                "audio": "facu.fd1a5de5d8",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, soy un balón.",
+                "voz": "viajero",
+                "audio": "viajero.889d3ec57a"
+              },
+              "fr": "Oui, je suis un ballon.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. ¡Pues yo te pateo!",
+                "fr": "Ha, ha. Alors je te tape dedans ! (« patear » = taper dans un ballon)",
+                "voz": "facu",
+                "audio": "facu.c5bc971acd",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Juego la guitarra.",
+                "voz": "viajero",
+                "audio": "viajero.5645a3f902"
+              },
+              "fr": "Je joue la guitare.",
+              "correcta": false,
+              "reaccion": {
+                "es": "La guitarra no se juega, se toca. Pero me gusta tu idea.",
+                "fr": "La guitare, on n’en « joue » pas avec « jugar » : on dit « tocar ». Mais j’aime ton idée.",
+                "voz": "facu",
+                "audio": "facu.96a1df8d2f",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q01-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sol",
+          "replica": {
+            "es": "¡Hola! Soy Sol. ¿Cómo te llamás?",
+            "fr": "Salut ! Je suis Sol. Comment tu t’appelles ? (« te llamás » = « te llamas » en voseo)",
+            "voz": "sol",
+            "audio": "sol.eec9f0260c"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex. Mucho gusto.",
+                "voz": "viajero",
+                "audio": "viajero.90307e787e"
+              },
+              "fr": "Je m’appelle Álex. Enchanté.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Mucho gusto, Álex! Bienvenido a Buenos Aires.",
+                "fr": "Enchantée, Álex ! Bienvenue à Buenos Aires.",
+                "voz": "sol",
+                "audio": "sol.e84b7fab45",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy Sol también.",
+                "voz": "viajero",
+                "audio": "viajero.e87fc8ecb0"
+              },
+              "fr": "Moi aussi, je suis Sol.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Vos también sos Sol? ¡Qué lío!",
+                "fr": "Toi aussi, tu es Sol ? Quel bazar ! (« vos sos » = tú eres)",
+                "voz": "sol",
+                "audio": "sol.06274ded5b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las doce en punto.",
+                "voz": "viajero",
+                "audio": "viajero.92d936665d"
+              },
+              "fr": "Il est douze heures pile.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Yo te pregunto cómo te llamás.",
+                "fr": "Moi, je te demande comment tu t’appelles.",
+                "voz": "sol",
+                "audio": "sol.02abd145c6",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q01-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Hola,",
+            "Sol.",
+            "Me",
+            "llamo",
+            "Álex",
+            "y",
+            "estoy",
+            "en",
+            "Buenos",
+            "Aires."
+          ],
+          "habla": {
+            "es": "Hola, Sol. Me llamo Álex y estoy en Buenos Aires.",
+            "voz": "viajero",
+            "audio": "viajero.3bec7efcaa"
+          },
+          "fr": "Salut, Sol. Je m’appelle Álex et je suis à Buenos Aires."
+        },
+        {
+          "id": "u07-q01-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. ¡Mucho gusto en Buenos Aires!",
+            "fr": "Salut, je m’appelle Álex. Enchanté de découvrir Buenos Aires ! (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.b4a0d5df8d"
+          },
+          "aceptadas": [
+            "hola me llamo álex mucho gusto en buenos aires"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} mucho gusto en buenos aires"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la bienvenida",
+            "efecto": "Un balón de colores gira sobre la plaza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u07-q02",
+      "tipo": "vocabulario",
+      "titulo": "Deportes en La Boca",
+      "emoji": "🏟️",
+      "intro": {
+        "es": "Mirá, esta es mi cancha. ¿Qué deportes te gustan?",
+        "fr": "Regarde, voilà mon terrain. Quels sports aimes-tu ? (« mirá » = « mira » en voseo)",
+        "voz": "facu",
+        "audio": "facu.1ba511c664"
+      },
+      "pista": "Les sports et le foot (equipo, partido, gol, hincha) ; découverte de gustar : me gusta + singulier ou infinitif, me gustan + pluriel.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "deporte",
+            "futbol",
+            "baloncesto",
+            "tenis",
+            "natacion",
+            "rugby",
+            "bici"
+          ]
+        },
+        {
+          "id": "u07-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "equipo",
+            "partido",
+            "gol",
+            "jugador",
+            "estadio",
+            "cancha",
+            "hincha"
+          ]
+        },
+        {
+          "id": "u07-q02-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "futbol"
+            },
+            {
+              "vocab": "baloncesto"
+            },
+            {
+              "vocab": "tenis"
+            },
+            {
+              "vocab": "natacion"
+            },
+            {
+              "vocab": "rugby"
+            },
+            {
+              "vocab": "bici"
+            }
+          ]
+        },
+        {
+          "id": "u07-q02-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "tenis",
+            "voz": "narrador",
+            "audio": "narrador.3ca43e4160"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "baloncesto",
+              "correcta": false
+            },
+            {
+              "vocab": "tenis",
+              "correcta": true
+            },
+            {
+              "vocab": "rugby",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q02-s05",
+          "tipo": "grammar_card",
+          "ref": "g_gustar"
+        },
+        {
+          "id": "u07-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Mi deporte favorito es el baloncesto.",
+            "voz": "facu",
+            "audio": "facu.2f3f9b0fab"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "futbol",
+              "correcta": false
+            },
+            {
+              "vocab": "baloncesto",
+              "correcta": true
+            },
+            {
+              "vocab": "tenis",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Me gustan el fútbol y el tenis, pero no me gusta nada la natación.",
+            "voz": "facu",
+            "audio": "facu.4e063cb7c5"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los tres deportes le gustan mucho.",
+              "correcta": false
+            },
+            {
+              "texto": "Ningún deporte le gusta.",
+              "correcta": false
+            },
+            {
+              "texto": "Dos deportes le gustan y uno no.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u07-q02-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me ___ el fútbol.",
+          "respuesta": "gusta",
+          "opciones": [
+            "gusta",
+            "gustan",
+            "gusto"
+          ],
+          "habla": {
+            "es": "Me gusta el fútbol.",
+            "voz": "facu",
+            "audio": "facu.0c4c41d5d1"
+          },
+          "fr": "J’aime le foot. (une seule chose → gusta)"
+        },
+        {
+          "id": "u07-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me ___ los deportes de equipo.",
+          "respuesta": "gustan",
+          "opciones": [
+            "gusta",
+            "gustan",
+            "gusto"
+          ],
+          "habla": {
+            "es": "Me gustan los deportes de equipo.",
+            "voz": "sol",
+            "audio": "sol.b9f931606e"
+          },
+          "fr": "J’aime les sports d’équipe. (plusieurs choses → gustan)"
+        },
+        {
+          "id": "u07-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Te ___ el tenis?",
+          "respuesta": "gusta",
+          "opciones": [
+            "gusta",
+            "gustan",
+            "gustas"
+          ],
+          "habla": {
+            "es": "¿Te gusta el tenis?",
+            "voz": "marina",
+            "audio": "marina.c8ec4325ac"
+          },
+          "fr": "Tu aimes le tennis ?"
+        },
+        {
+          "id": "u07-q02-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "No me gusta ___ la natación.",
+          "respuesta": "nada",
+          "opciones": [
+            "nada",
+            "nadie",
+            "siempre"
+          ],
+          "habla": {
+            "es": "No me gusta nada la natación.",
+            "voz": "facu",
+            "audio": "facu.12e3d844ff"
+          },
+          "fr": "Je n’aime pas du tout la natation."
+        },
+        {
+          "id": "u07-q02-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Me",
+            "gustan",
+            "los",
+            "partidos",
+            "de",
+            "fútbol."
+          ],
+          "habla": {
+            "es": "Me gustan los partidos de fútbol.",
+            "voz": "facu",
+            "audio": "facu.f703bcefbf"
+          },
+          "fr": "J’aime les matchs de foot."
+        },
+        {
+          "id": "u07-q02-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "facu",
+          "replica": {
+            "es": "¿Qué deporte te gusta a vos?",
+            "fr": "Quel sport aimes-tu, toi ? (« a vos » = « a ti » en voseo)",
+            "voz": "facu",
+            "audio": "facu.fbc67b0638"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me gusta el baloncesto.",
+                "voz": "viajero",
+                "audio": "viajero.9af139d864"
+              },
+              "fr": "J’aime le basket.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bueno! Un día jugamos un partido.",
+                "fr": "Super ! Un jour on jouera un match. (« ¡qué bueno! » : très courant en Argentine)",
+                "voz": "facu",
+                "audio": "facu.cd552bcce0",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me gustan baloncesto.",
+                "voz": "viajero",
+                "audio": "viajero.e963f93f6f"
+              },
+              "fr": "J’aime basket.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «baloncesto» decimos «me gusta», en singular.",
+                "fr": "Avec « baloncesto », on dit « me gusta », au singulier.",
+                "voz": "facu",
+                "audio": "facu.2eb6b63240",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Gusto el baloncesto.",
+                "voz": "viajero",
+                "audio": "viajero.8c738faa1f"
+              },
+              "fr": "Je plais le basket.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No decimos «gusto». Decimos «me gusta».",
+                "fr": "On ne dit pas « gusto ». On dit « me gusta ».",
+                "voz": "facu",
+                "audio": "facu.31e133741e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q02-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué deporte te gusta a ti.",
+            "fr": "Écoute et dis quel sport TU aimes (el baloncesto, el tenis, la natación…). Change « fútbol » (avec son article si tu changes pour un féminin : « la natación »).",
+            "voz": "narrador",
+            "audio": "narrador.e0c39cc5b9"
+          },
+          "objetivo": {
+            "es": "Me gusta el fútbol.",
+            "fr": "J’aime le foot. (dis ton sport)",
+            "voz": "viajero",
+            "audio": "viajero.0c4c41d5d1"
+          },
+          "aceptadas": [
+            "me gusta el fútbol"
+          ],
+          "patrones": [
+            "me gusta el {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del deporte",
+            "efecto": "Un balón dorado sale disparado hacia el cielo"
+          }
+        },
+        {
+          "id": "u07-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Me gustan los partidos de fútbol.",
+            "voz": "facu",
+            "audio": "facu.f703bcefbf"
+          },
+          "respuesta": "Me gustan los partidos de fútbol.",
+          "aceptadas": [
+            "me gustan los partidos de fútbol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u07-q03",
+      "tipo": "vocabulario",
+      "titulo": "Mi tiempo libre",
+      "emoji": "🎮",
+      "intro": {
+        "es": "Che, ¿qué hacés en tu tiempo libre? A mí me encanta bailar.",
+        "fr": "Dis donc, que fais-tu pendant ton temps libre ? Moi, j’adore danser. (« hacés » = « haces » en voseo)",
+        "voz": "sol",
+        "audio": "sol.e723cc3343"
+      },
+      "pista": "Les loisirs (bailar, dibujar, jugar, ver películas…) ; me encanta, me gusta mucho, no me gusta nada ; « a mí también / a mí tampoco ». Tu écris TES goûts.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "bailar",
+            "dibujar",
+            "nadar_dep",
+            "correr",
+            "jugar",
+            "tocar",
+            "videojuegos"
+          ]
+        },
+        {
+          "id": "u07-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "pelicula",
+            "pasear",
+            "tiempo_libre",
+            "ver_tv",
+            "gustar",
+            "encantar",
+            "mucho"
+          ]
+        },
+        {
+          "id": "u07-q03-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "bailar"
+            },
+            {
+              "vocab": "dibujar"
+            },
+            {
+              "vocab": "nadar_dep"
+            },
+            {
+              "vocab": "correr"
+            },
+            {
+              "vocab": "tocar"
+            },
+            {
+              "vocab": "pelicula"
+            }
+          ]
+        },
+        {
+          "id": "u07-q03-s04",
+          "tipo": "grammar_card",
+          "ref": "g_escala"
+        },
+        {
+          "id": "u07-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "bailar",
+            "voz": "narrador",
+            "audio": "narrador.cebdd0c7f1"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "correr",
+              "correcta": false
+            },
+            {
+              "vocab": "bailar",
+              "correcta": true
+            },
+            {
+              "vocab": "dibujar",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los sábados toco la guitarra y bailo tango con mis amigos.",
+            "voz": "sol",
+            "audio": "sol.fdd702d502"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El sábado Sol se divierte con música y baile.",
+              "correcta": true
+            },
+            {
+              "texto": "El sábado Sol no sale de casa.",
+              "correcta": false
+            },
+            {
+              "texto": "Sol prefiere jugar al fútbol los sábados.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q03-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Después del colegio, juego al fútbol con mis amigos en la cancha.",
+            "voz": "facu",
+            "audio": "facu.8ddaeb8830"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Facu estudia solo en su casa.",
+              "correcta": false
+            },
+            {
+              "texto": "Facu hace deporte por la tarde con sus amigos.",
+              "correcta": true
+            },
+            {
+              "texto": "Facu nada en la piscina cada día.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q03-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me ___ el tango: ¡es genial!",
+          "respuesta": "encanta",
+          "opciones": [
+            "encanta",
+            "encantan",
+            "encanto"
+          ],
+          "habla": {
+            "es": "Me encanta el tango: ¡es genial!",
+            "voz": "sol",
+            "audio": "sol.fdfde8f5b7"
+          },
+          "fr": "J’adore le tango : c’est génial !"
+        },
+        {
+          "id": "u07-q03-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me gusta ___ el mate.",
+          "respuesta": "mucho",
+          "opciones": [
+            "mucho",
+            "muchos",
+            "muchas"
+          ],
+          "habla": {
+            "es": "Me gusta mucho el mate.",
+            "voz": "facu",
+            "audio": "facu.fe0f7aba26"
+          },
+          "fr": "J’aime beaucoup le maté."
+        },
+        {
+          "id": "u07-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "—Me gusta bailar. —A mí ___.",
+          "respuesta": "también",
+          "opciones": [
+            "también",
+            "tampoco",
+            "nada"
+          ],
+          "habla": {
+            "es": "—Me gusta bailar. —A mí también.",
+            "voz": "sol",
+            "audio": "sol.d5dd591bc2"
+          },
+          "fr": "— J’aime danser. — Moi aussi."
+        },
+        {
+          "id": "u07-q03-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "«Me encanta el tango» es lo mismo que «me gusta muchísimo el tango».",
+            "fr": "« Me encanta el tango » veut dire la même chose que « j’aime énormément le tango ».",
+            "voz": "narrador",
+            "audio": "narrador.27aea69d55"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u07-q03-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sol",
+          "replica": {
+            "es": "¿Qué te gusta en tu tiempo libre?",
+            "fr": "Qu’aimes-tu pendant ton temps libre ?",
+            "voz": "sol",
+            "audio": "sol.2c99fd9b9b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me gusta bailar y dibujar.",
+                "voz": "viajero",
+                "audio": "viajero.e76c74b7d1"
+              },
+              "fr": "J’aime danser et dessiner.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué lindo! A mí también me gusta dibujar.",
+                "fr": "Que c’est chouette ! (« lindo » = joli, en Argentine ; en Espagne : « bonito »). Moi aussi j’aime dessiner.",
+                "voz": "sol",
+                "audio": "sol.a722a0dc80",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me gustan bailar y dibujar.",
+                "voz": "viajero",
+                "audio": "viajero.e6013cacf2"
+              },
+              "fr": "J’aime (pluriel) danser et dessiner.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con verbos, siempre «gusta»: «me gusta bailar y dibujar».",
+                "fr": "Avec des verbes, toujours « gusta » : « me gusta bailar y dibujar ».",
+                "voz": "sol",
+                "audio": "sol.b91565d5f6",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy bailar.",
+                "voz": "viajero",
+                "audio": "viajero.db6e4545e6"
+              },
+              "fr": "Je suis danser.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no. Mejor: «me gusta bailar».",
+                "fr": "Mmm… non. Mieux : « me gusta bailar ».",
+                "voz": "sol",
+                "audio": "sol.66a5ca1477",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q03-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué te gusta hacer a ti.",
+            "fr": "Écoute et dis ce que TU aimes faire (dibujar, correr, ver películas, tocar el piano…). Change seulement « bailar ».",
+            "voz": "narrador",
+            "audio": "narrador.1ad014ba52"
+          },
+          "objetivo": {
+            "es": "Me gusta bailar.",
+            "fr": "J’aime danser. (dis ce que tu aimes faire)",
+            "voz": "viajero",
+            "audio": "viajero.4aec35800e"
+          },
+          "aceptadas": [
+            "me gusta bailar"
+          ],
+          "patrones": [
+            "me gusta {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del baile",
+            "efecto": "Tus pies empiezan a bailar solos"
+          }
+        },
+        {
+          "id": "u07-q03-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe lo que te gusta y lo que no te gusta.",
+            "fr": "Écris ce que tu aimes et ce que tu n’aimes pas.",
+            "voz": "narrador",
+            "audio": "narrador.e48e4b3a74"
+          },
+          "plantilla": "Me gusta ___. Me encanta ___. No me gusta nada ___.",
+          "campos": [
+            {
+              "id": "gusta",
+              "pista": "Une chose que tu aimes (un verbe : leer, correr… ou un nom avec son article : la música…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "encanta",
+              "pista": "Une chose que tu adores (jugar al fútbol, el cine, el chocolate…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "nada",
+              "pista": "Une chose que tu n’aimes pas du tout (la natación, el rugby, madrugar…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Me gusta leer. Me encanta el fútbol. No me gusta nada la natación.",
+            "fr": "J’aime lire. J’adore le foot. Je n’aime pas du tout la natation.",
+            "voz": "viajero",
+            "audio": "viajero.bebc756639"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u07-q03-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Me encanta el tango.",
+            "voz": "sol",
+            "audio": "sol.0a51b089da"
+          },
+          "respuesta": "Me encanta el tango.",
+          "aceptadas": [
+            "me encanta el tango"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u07-q04",
+      "tipo": "lectura",
+      "titulo": "Música en San Telmo",
+      "emoji": "🎸",
+      "intro": {
+        "es": "Buenas, muchachos. Yo toco el bandoneón desde los diez años. ¿Y ustedes, qué instrumento tocan?",
+        "fr": "Salut, les jeunes. Je joue du bandonéon depuis mes dix ans. Et vous, de quel instrument jouez-vous ? (« ustedes » : en Argentine, comme au Mexique, on dit « ustedes » à la place de « vosotros »)",
+        "voz": "anibal",
+        "audio": "anibal.1e7a696193"
+      },
+      "pista": "Les instruments de musique, le bandonéon et le tango ; jugar a + sport et tocar + instrument ; compréhension d’un petit texte sur Don Aníbal.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "cultura"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "guitarra",
+            "piano",
+            "violin",
+            "bateria",
+            "trompeta",
+            "bandoneon",
+            "flauta"
+          ]
+        },
+        {
+          "id": "u07-q04-s02",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "guitarra"
+            },
+            {
+              "vocab": "piano"
+            },
+            {
+              "vocab": "violin"
+            },
+            {
+              "vocab": "bateria"
+            },
+            {
+              "vocab": "trompeta"
+            },
+            {
+              "vocab": "musica"
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Toco el piano todos los días.",
+            "voz": "anibal",
+            "audio": "anibal.aae1b152d6"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "violin",
+              "correcta": false
+            },
+            {
+              "vocab": "piano",
+              "correcta": true
+            },
+            {
+              "vocab": "flauta",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s04",
+          "tipo": "grammar_card",
+          "ref": "g_jugar_tocar"
+        },
+        {
+          "id": "u07-q04-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Facu ___ al fútbol los sábados.",
+          "respuesta": "juega",
+          "opciones": [
+            "juega",
+            "toca",
+            "juego"
+          ],
+          "habla": {
+            "es": "Facu juega al fútbol los sábados.",
+            "voz": "sol",
+            "audio": "sol.9f7d277c9c"
+          },
+          "fr": "Facu joue au foot le samedi."
+        },
+        {
+          "id": "u07-q04-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Sol ___ la guitarra muy bien.",
+          "respuesta": "toca",
+          "opciones": [
+            "toca",
+            "juega",
+            "tocas"
+          ],
+          "habla": {
+            "es": "Sol toca la guitarra muy bien.",
+            "voz": "facu",
+            "audio": "facu.eefef1dd1f"
+          },
+          "fr": "Sol joue très bien de la guitare."
+        },
+        {
+          "id": "u07-q04-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Juego ___ baloncesto con mis amigos.",
+          "respuesta": "al",
+          "opciones": [
+            "al",
+            "el",
+            "la"
+          ],
+          "habla": {
+            "es": "Juego al baloncesto con mis amigos.",
+            "voz": "facu",
+            "audio": "facu.1676424983"
+          },
+          "fr": "Je joue au basket avec mes amis. (jugar a + el = al)"
+        },
+        {
+          "id": "u07-q04-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Toco ___ piano en la escuela.",
+          "respuesta": "el",
+          "opciones": [
+            "al",
+            "el",
+            "de"
+          ],
+          "habla": {
+            "es": "Toco el piano en la escuela.",
+            "voz": "anibal",
+            "audio": "anibal.1155561fb6"
+          },
+          "fr": "Je joue du piano à l’école. (tocar + l’instrument, sans préposition)"
+        },
+        {
+          "id": "u07-q04-s09",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Don Aníbal es músico. Toca el bandoneón en San Telmo desde los diez años. El bandoneón es un instrumento parecido a un acordeón y es el instrumento típico del tango. Sol toca la guitarra con él en la feria. A Sol le encanta la música, y a Don Aníbal también.",
+            "fr": "Don Aníbal est musicien. Il joue du bandonéon à San Telmo depuis ses dix ans. Le bandonéon est un instrument semblable à un accordéon, et c’est l’instrument typique du tango. Sol joue de la guitare avec lui à la feria. Sol adore la musique, et Don Aníbal aussi.",
+            "voz": "anibal",
+            "audio": "anibal.0e2b190080"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde toca Don Aníbal?",
+                "fr": "Où joue Don Aníbal ?",
+                "voz": "narrador",
+                "audio": "narrador.b9c851e320"
+              },
+              "opciones": [
+                {
+                  "texto": "En el colegio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En un estadio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En San Telmo.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué instrumento toca?",
+                "fr": "De quel instrument joue-t-il ?",
+                "voz": "narrador",
+                "audio": "narrador.ad7ed3a5f8"
+              },
+              "opciones": [
+                {
+                  "texto": "El bandoneón.",
+                  "correcta": true
+                },
+                {
+                  "texto": "La flauta.",
+                  "correcta": false
+                },
+                {
+                  "texto": "La batería.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué le encanta a Sol?",
+                "fr": "Qu’est-ce que Sol adore ?",
+                "voz": "narrador",
+                "audio": "narrador.49729801b7"
+              },
+              "opciones": [
+                {
+                  "texto": "El rugby.",
+                  "correcta": false
+                },
+                {
+                  "texto": "La música.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El asado.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s10",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Toco el bandoneón desde los diez años. Hoy tengo sesenta.",
+            "voz": "anibal",
+            "audio": "anibal.5aa47a3d6a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Don Aníbal es un niño de diez años.",
+              "correcta": false
+            },
+            {
+              "texto": "Don Aníbal empieza hoy a tocar.",
+              "correcta": false
+            },
+            {
+              "texto": "Don Aníbal es un músico muy mayor con mucha experiencia.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sol",
+          "replica": {
+            "es": "¿Tocás algún instrumento?",
+            "fr": "Tu joues d’un instrument ? (« tocás » = « tocas » en voseo)",
+            "voz": "sol",
+            "audio": "sol.3689759ca8"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, toco el piano.",
+                "voz": "viajero",
+                "audio": "viajero.5539857b02"
+              },
+              "fr": "Oui, je joue du piano.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué lindo! Un día tocamos juntos.",
+                "fr": "Que c’est chouette ! Un jour, on jouera ensemble.",
+                "voz": "sol",
+                "audio": "sol.893b679542",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, juego el piano.",
+                "voz": "viajero",
+                "audio": "viajero.3fd43c5989"
+              },
+              "fr": "Oui, je joue (au sens de « jugar ») le piano.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con los instrumentos decimos «tocar», no «jugar».",
+                "fr": "Avec les instruments, on dit « tocar », pas « jugar ».",
+                "voz": "sol",
+                "audio": "sol.f2727b01b8",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, soy piano.",
+                "voz": "viajero",
+                "audio": "viajero.57b89b08b5"
+              },
+              "fr": "Oui, je suis piano.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Vos sos un piano? ¡Qué grande!",
+                "fr": "Toi, tu es un piano ? Quelle taille !",
+                "voz": "sol",
+                "audio": "sol.5a0e4d29c1",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "anibal",
+          "replica": {
+            "es": "¿Quieres escuchar el bandoneón, muchacho?",
+            "fr": "Tu veux écouter le bandonéon, mon garçon ?",
+            "voz": "anibal",
+            "audio": "anibal.94a80cac41"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, toca algo, por favor.",
+                "voz": "viajero",
+                "audio": "viajero.59e3d4ccca"
+              },
+              "fr": "Oui, joue quelque chose, s’il te plaît.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Claro que sí. Escucha bien.",
+                "fr": "Bien sûr. Écoute bien.",
+                "voz": "anibal",
+                "audio": "anibal.3e27371961",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, soy un bandoneón.",
+                "voz": "viajero",
+                "audio": "viajero.097558c5dc"
+              },
+              "fr": "Oui, je suis un bandonéon.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Un bandoneón? ¡Entonces toca tú!",
+                "fr": "Un bandonéon ? Alors joue, toi !",
+                "voz": "anibal",
+                "audio": "anibal.8f11e97a5e",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, gracias. Prefiero el silencio.",
+                "voz": "viajero",
+                "audio": "viajero.0931963c4d"
+              },
+              "fr": "Non, merci. Je préfère le silence.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿El silencio? ¡Eso es lo que quiere la Sombra!",
+                "fr": "Le silence ? C’est justement ce que veut la Sombra !",
+                "voz": "anibal",
+                "audio": "anibal.586b6311a3",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q04-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué instrumento tocas tú.",
+            "fr": "Écoute et dis de quel instrument TU joues (el piano, el violín, la flauta…). Si tu n’en joues pas, choisis-en un quand même. Change « la guitarra » (avec son article).",
+            "voz": "narrador",
+            "audio": "narrador.46c7fc8a7d"
+          },
+          "objetivo": {
+            "es": "Toco la guitarra.",
+            "fr": "Je joue de la guitare. (dis ton instrument)",
+            "voz": "viajero",
+            "audio": "viajero.d690293914"
+          },
+          "aceptadas": [
+            "toco la guitarra"
+          ],
+          "patrones": [
+            "toco {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la música",
+            "efecto": "Las cuerdas de tu guitarra brillan"
+          }
+        },
+        {
+          "id": "u07-q04-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di a qué deporte juegas tú.",
+            "fr": "Écoute et dis à quel sport TU joues. Change « tenis » (fútbol, baloncesto, rugby… ; « al » devant un nom masculin).",
+            "voz": "narrador",
+            "audio": "narrador.04b54caeba"
+          },
+          "objetivo": {
+            "es": "Juego al tenis.",
+            "fr": "Je joue au tennis. (dis ton sport)",
+            "voz": "viajero",
+            "audio": "viajero.9e82274e12"
+          },
+          "aceptadas": [
+            "juego al tenis"
+          ],
+          "patrones": [
+            "juego al {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del juego",
+            "efecto": "Una pelota de colores rebota por toda la feria"
+          }
+        },
+        {
+          "id": "u07-q04-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Don Aníbal toca el bandoneón.",
+            "voz": "anibal",
+            "audio": "anibal.36919db680"
+          },
+          "respuesta": "Don Aníbal toca el bandoneón.",
+          "aceptadas": [
+            "don aníbal toca el bandoneón"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u07-q05",
+      "tipo": "forja",
+      "titulo": "La Forja: preferir y jugar",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Prefiero. Juego. Dos verbos con cambio. ¡Forja!",
+        "fr": "Je préfère. Je joue. Deux verbes qui changent de voyelle. Forge !",
+        "voz": "quetzal",
+        "audio": "quetzal.580c134273"
+      },
+      "pista": "Deux verbes à diphtongue : preferir (e→ie : prefiero) et jugar (u→ue : juego). Rappel : nosotros et vosotros ne diphtonguent pas.",
+      "stats": [
+        "escribir",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "preferir"
+          ]
+        },
+        {
+          "id": "u07-q05-s02",
+          "tipo": "grammar_card",
+          "ref": "g_preferir"
+        },
+        {
+          "id": "u07-q05-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "preferir",
+          "sujeto": "yo",
+          "radical": "prefier",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "prefiero",
+          "habla": {
+            "es": "yo prefiero",
+            "voz": "viajero",
+            "audio": "viajero.84aeaa1c0c"
+          },
+          "fr": "Moi, je préfère…"
+        },
+        {
+          "id": "u07-q05-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "preferir",
+          "sujeto": "tú",
+          "radical": "prefier",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "prefieres",
+          "habla": {
+            "es": "tú prefieres",
+            "voz": "sol",
+            "audio": "sol.4fe79b684f"
+          },
+          "fr": "Toi, tu préfères…"
+        },
+        {
+          "id": "u07-q05-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "preferir",
+          "sujeto": "nosotros",
+          "radical": "prefer",
+          "terminacion": "imos",
+          "terminaciones": [
+            "imos",
+            "ís",
+            "en"
+          ],
+          "forma": "preferimos",
+          "habla": {
+            "es": "nosotros preferimos",
+            "voz": "facu",
+            "audio": "facu.64dbb32abb"
+          },
+          "fr": "Nous, nous préférons… (pas de diphtongue !)"
+        },
+        {
+          "id": "u07-q05-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "preferir",
+          "sujeto": "ellos",
+          "radical": "prefier",
+          "terminacion": "en",
+          "terminaciones": [
+            "imos",
+            "ís",
+            "en"
+          ],
+          "forma": "prefieren",
+          "habla": {
+            "es": "ellos prefieren",
+            "voz": "marina",
+            "audio": "marina.6b562f8ca5"
+          },
+          "fr": "Eux, ils préfèrent…"
+        },
+        {
+          "id": "u07-q05-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "jugar",
+          "sujeto": "yo",
+          "radical": "jueg",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "a",
+            "amos"
+          ],
+          "forma": "juego",
+          "habla": {
+            "es": "yo juego",
+            "voz": "viajero",
+            "audio": "viajero.b006155ab9"
+          },
+          "fr": "Moi, je joue…"
+        },
+        {
+          "id": "u07-q05-s08",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "jugar",
+          "sujeto": "nosotros",
+          "radical": "jug",
+          "terminacion": "amos",
+          "terminaciones": [
+            "o",
+            "a",
+            "amos"
+          ],
+          "forma": "jugamos",
+          "habla": {
+            "es": "nosotros jugamos",
+            "voz": "facu",
+            "audio": "facu.e65fc3dd60"
+          },
+          "fr": "Nous, nous jouons… (pas de diphtongue !)"
+        },
+        {
+          "id": "u07-q05-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Prefiero el tenis ___ fútbol.",
+          "respuesta": "al",
+          "opciones": [
+            "al",
+            "que",
+            "de"
+          ],
+          "habla": {
+            "es": "Prefiero el tenis al fútbol.",
+            "voz": "viajero",
+            "audio": "viajero.ee10760fa8"
+          },
+          "fr": "Je préfère le tennis au foot. (a + el = al)"
+        },
+        {
+          "id": "u07-q05-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Qué ___, bailar o cantar?",
+          "respuesta": "prefieres",
+          "opciones": [
+            "prefieres",
+            "prefieren",
+            "preferimos"
+          ],
+          "habla": {
+            "es": "¿Qué prefieres, bailar o cantar?",
+            "voz": "sol",
+            "audio": "sol.3f726c3a9a"
+          },
+          "fr": "Que préfères-tu, danser ou chanter ?"
+        },
+        {
+          "id": "u07-q05-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis padres ___ el tango.",
+          "respuesta": "prefieren",
+          "opciones": [
+            "prefiere",
+            "prefieren",
+            "preferimos"
+          ],
+          "habla": {
+            "es": "Mis padres prefieren el tango.",
+            "voz": "sol",
+            "audio": "sol.63c48bfef1"
+          },
+          "fr": "Mes parents préfèrent le tango."
+        },
+        {
+          "id": "u07-q05-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Prefiero el fútbol, pero mi hermano prefiere el rugby.",
+            "voz": "facu",
+            "audio": "facu.0c0e408293"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los dos hermanos tienen gustos diferentes.",
+              "correcta": true
+            },
+            {
+              "texto": "Los dos hermanos aman el rugby.",
+              "correcta": false
+            },
+            {
+              "texto": "El hermano no hace deporte.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q05-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "facu",
+          "replica": {
+            "es": "Yo prefiero el fútbol al baloncesto. ¿Y vos?",
+            "fr": "Moi, je préfère le foot au basket. Et toi ? (« ¿y vos? » = « ¿y tú? »)",
+            "voz": "facu",
+            "audio": "facu.2fbd951c42"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Yo prefiero el tenis al fútbol.",
+                "voz": "viajero",
+                "audio": "viajero.ee71d7103a"
+              },
+              "fr": "Moi, je préfère le tennis au foot.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Bien! Cada uno con su deporte.",
+                "fr": "Bien ! Chacun son sport.",
+                "voz": "facu",
+                "audio": "facu.1ed5be7292",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Yo prefiero tenis fútbol.",
+                "voz": "viajero",
+                "audio": "viajero.b6b5655cb5"
+              },
+              "fr": "Moi, je préfère tennis foot.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Falta algo: «prefiero el tenis AL fútbol».",
+                "fr": "Il manque quelque chose : « prefiero el tenis AL fútbol ».",
+                "voz": "facu",
+                "audio": "facu.a2aa8bc02b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Yo prefiero soy el tenis.",
+                "voz": "viajero",
+                "audio": "viajero.cb359def14"
+              },
+              "fr": "Moi, je préfère je suis le tennis.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Dos verbos juntos no funcionan. «Prefiero el tenis».",
+                "fr": "Deux verbes à la suite ne marchent pas. « Prefiero el tenis ».",
+                "voz": "facu",
+                "audio": "facu.1401c332d3",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q05-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué prefieres tú.",
+            "fr": "Écoute et dis ce que TU préfères (cantar, dibujar, el fútbol, jugar con amigos…). Change seulement « bailar ».",
+            "voz": "narrador",
+            "audio": "narrador.691ea4709a"
+          },
+          "objetivo": {
+            "es": "Prefiero bailar.",
+            "fr": "Je préfère danser. (dis ta préférence)",
+            "voz": "viajero",
+            "audio": "viajero.bf1deadaaa"
+          },
+          "aceptadas": [
+            "prefiero bailar"
+          ],
+          "patrones": [
+            "prefiero {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la preferencia",
+            "efecto": "Tu opción favorita brilla con una luz dorada"
+          }
+        },
+        {
+          "id": "u07-q05-s15",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe lo que prefieres.",
+            "fr": "Écris ce que tu préfères.",
+            "voz": "narrador",
+            "audio": "narrador.1511f1e27b"
+          },
+          "plantilla": "Prefiero ___ a ___.",
+          "campos": [
+            {
+              "id": "prefiero",
+              "pista": "Ce que tu préfères, à l’infinitif (bailar, leer, jugar al fútbol…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "antes",
+              "pista": "Ce que tu aimes moins, à l’infinitif (cantar, dibujar, nadar…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Prefiero bailar a cantar.",
+            "fr": "Je préfère danser à chanter.",
+            "voz": "viajero",
+            "audio": "viajero.257dfcbffa"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u07-q06",
+      "tipo": "dialogo",
+      "titulo": "¿Por qué te gusta?",
+      "emoji": "💬",
+      "intro": {
+        "es": "Dime una cosa que te gusta… ¡y explícame por qué!",
+        "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi !",
+        "voz": "sol",
+        "audio": "sol.66a3fc79e8"
+      },
+      "pista": "Donner son avis et le justifier : ¿por qué ? / porque ; parler des goûts des autres (a Facu le gusta…) ; tu écris et tu dis TES goûts avec une raison.",
+      "stats": [
+        "hablar",
+        "escribir",
+        "escuchar",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "favorito",
+            "aburrido",
+            "genial",
+            "nada",
+            "tampoco",
+            "porque",
+            "por_que"
+          ]
+        },
+        {
+          "id": "u07-q06-s02",
+          "tipo": "grammar_card",
+          "ref": "g_porque"
+        },
+        {
+          "id": "u07-q06-s03",
+          "tipo": "grammar_card",
+          "ref": "g_a_mi"
+        },
+        {
+          "id": "u07-q06-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Me gusta el fútbol porque es divertido y puedo jugar con mis amigos.",
+            "voz": "facu",
+            "audio": "facu.78c02c05b4"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Facu no quiere jugar con sus amigos.",
+              "correcta": false
+            },
+            {
+              "texto": "Facu explica por qué le gusta un deporte.",
+              "correcta": true
+            },
+            {
+              "texto": "Facu pregunta a sus amigos qué día juegan.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q06-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "No me gustan los videojuegos porque son aburridos.",
+            "voz": "sol",
+            "audio": "sol.f8a5a8ed2d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "A Sol le encantan los videojuegos.",
+              "correcta": false
+            },
+            {
+              "texto": "Sol juega a los videojuegos todos los días.",
+              "correcta": false
+            },
+            {
+              "texto": "Para Sol, los videojuegos no son divertidos.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u07-q06-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿___ te gusta el tango? Porque es bonito.",
+          "respuesta": "Por qué",
+          "opciones": [
+            "Por qué",
+            "Porque",
+            "Porqué"
+          ],
+          "habla": {
+            "es": "¿Por qué te gusta el tango? Porque es bonito.",
+            "voz": "sol",
+            "audio": "sol.dff31d42ec"
+          },
+          "fr": "Pourquoi aimes-tu le tango ? Parce que c’est joli."
+        },
+        {
+          "id": "u07-q06-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me gusta la música ___ es muy bonita.",
+          "respuesta": "porque",
+          "opciones": [
+            "porque",
+            "por qué",
+            "porqué"
+          ],
+          "habla": {
+            "es": "Me gusta la música porque es muy bonita.",
+            "voz": "sol",
+            "audio": "sol.6ff79938d1"
+          },
+          "fr": "J’aime la musique parce qu’elle est très belle."
+        },
+        {
+          "id": "u07-q06-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "A Facu ___ gusta el fútbol.",
+          "respuesta": "le",
+          "opciones": [
+            "le",
+            "les",
+            "me"
+          ],
+          "habla": {
+            "es": "A Facu le gusta el fútbol.",
+            "voz": "sol",
+            "audio": "sol.d66b8b2b5d"
+          },
+          "fr": "Facu aime le foot. (une seule personne → le)"
+        },
+        {
+          "id": "u07-q06-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "A mis amigos ___ encanta el mate.",
+          "respuesta": "les",
+          "opciones": [
+            "le",
+            "les",
+            "nos"
+          ],
+          "habla": {
+            "es": "A mis amigos les encanta el mate.",
+            "voz": "facu",
+            "audio": "facu.ac2b1c3561"
+          },
+          "fr": "Mes amis adorent le maté. (plusieurs personnes → les)"
+        },
+        {
+          "id": "u07-q06-s10",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Se dice: «A mis amigos le gusta el mate».",
+            "fr": "On dit : « A mis amigos le gusta el mate ».",
+            "voz": "narrador",
+            "audio": "narrador.4a60f4d14f"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Con «mis amigos» (varias personas) decimos «les».",
+            "fr": "Avec « mis amigos » (plusieurs personnes), on dit « les ».",
+            "voz": "narrador",
+            "audio": "narrador.666a32e633"
+          }
+        },
+        {
+          "id": "u07-q06-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "facu",
+          "replica": {
+            "es": "¿Por qué te gusta el fútbol?",
+            "fr": "Pourquoi aimes-tu le foot ?",
+            "voz": "facu",
+            "audio": "facu.c8488120d9"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Porque es divertido.",
+                "voz": "viajero",
+                "audio": "viajero.9fb6a44491"
+              },
+              "fr": "Parce que c’est amusant.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Bárbaro! Yo pienso lo mismo.",
+                "fr": "Génial ! Moi, je pense pareil.",
+                "voz": "facu",
+                "audio": "facu.a9327629d0",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Por qué es divertido.",
+                "voz": "viajero",
+                "audio": "viajero.9aa03d2a85"
+              },
+              "fr": "Pourquoi c’est amusant. (question)",
+              "correcta": false,
+              "reaccion": {
+                "es": "Para responder usamos «porque», todo junto y sin acento.",
+                "fr": "Pour répondre, on utilise « porque », en un seul mot et sans accent.",
+                "voz": "facu",
+                "audio": "facu.8bbe5da420",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Porque me llamo Álex.",
+                "voz": "viajero",
+                "audio": "viajero.36481d9ec6"
+              },
+              "fr": "Parce que je m’appelle Álex.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no explica nada. ¿Por qué te gusta?",
+                "fr": "Ça n’explique rien. Pourquoi tu aimes ça ?",
+                "voz": "facu",
+                "audio": "facu.db798b0798",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q06-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sol",
+          "replica": {
+            "es": "Che, ¿te gusta el tango?",
+            "fr": "Dis donc, tu aimes le tango ?",
+            "voz": "sol",
+            "audio": "sol.a19cd8f884"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, me gusta mucho. ¡Es genial!",
+                "voz": "viajero",
+                "audio": "viajero.6286870310"
+              },
+              "fr": "Oui, j’aime beaucoup. C’est génial !",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bueno! Entonces te voy a enseñar un paso.",
+                "fr": "Super ! Alors je vais t’apprendre un pas. (« voy a enseñar » : futur proche, vu à Valence)",
+                "voz": "sol",
+                "audio": "sol.78e76a73c7",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, me gustan tango.",
+                "voz": "viajero",
+                "audio": "viajero.fe2b701944"
+              },
+              "fr": "Oui, j’aime (pluriel) tango.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «tango» decimos «me gusta»: es singular.",
+                "fr": "Avec « tango », on dit « me gusta » : c’est singulier.",
+                "voz": "sol",
+                "audio": "sol.a535379761",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, mi tango es azul.",
+                "voz": "viajero",
+                "audio": "viajero.acb83fe8a4"
+              },
+              "fr": "Non, mon tango est bleu.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tu tango es azul? ¡Qué raro!",
+                "fr": "Ton tango est bleu ? Comme c’est bizarre !",
+                "voz": "sol",
+                "audio": "sol.e878a1e895",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q06-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di por qué te gusta algo a ti.",
+            "fr": "Écoute et donne TA raison (genial, difícil, rápido, bonito…). Change seulement « divertido ».",
+            "voz": "narrador",
+            "audio": "narrador.556c9b764f"
+          },
+          "objetivo": {
+            "es": "Me gusta el tenis porque es divertido.",
+            "fr": "J’aime le tennis parce que c’est amusant. (change la raison)",
+            "voz": "viajero",
+            "audio": "viajero.e0b7eb24cb"
+          },
+          "aceptadas": [
+            "me gusta el tenis porque es divertido"
+          ],
+          "patrones": [
+            "me gusta el tenis porque es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la razón",
+            "efecto": "Una chispa verde confirma tu respuesta"
+          }
+        },
+        {
+          "id": "u07-q06-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe lo que te gusta y por qué.",
+            "fr": "Écris ce que tu aimes et pourquoi.",
+            "voz": "narrador",
+            "audio": "narrador.18700dcb1c"
+          },
+          "plantilla": "Me gusta ___ porque ___. No me gusta ___ porque ___.",
+          "campos": [
+            {
+              "id": "gusta",
+              "pista": "Une chose que tu aimes (el fútbol, bailar, la música…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "razon1",
+              "pista": "Pourquoi ? (es divertido, es genial, es rápido…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "nogusta",
+              "pista": "Une chose que tu n’aimes pas (el rugby, madrugar, la natación…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "razon2",
+              "pista": "Pourquoi ? (es aburrido, es difícil, es muy largo…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Me gusta el fútbol porque es divertido. No me gusta el rugby porque es difícil.",
+            "fr": "J’aime le foot parce que c’est amusant. Je n’aime pas le rugby parce que c’est difficile.",
+            "voz": "viajero",
+            "audio": "viajero.a2a552d06b"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u07-q07",
+      "tipo": "cultura",
+      "titulo": "Fútbol, tango y mate",
+      "emoji": "🧉",
+      "intro": {
+        "es": "Buenos Aires tiene mucha cultura: fútbol, tango, asado, mate… ¡y una manera de hablar muy suya!",
+        "fr": "Buenos Aires a beaucoup de culture : foot, tango, asado, maté… et une façon de parler bien à elle !",
+        "voz": "sol",
+        "audio": "sol.ff6351687c"
+      },
+      "pista": "Le foot (Boca, River, la Bombonera, champions du monde), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u07-q07-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "tango",
+            "mate",
+            "asado",
+            "dulce_de_leche"
+          ]
+        },
+        {
+          "id": "u07-q07-s02",
+          "tipo": "cinematic_ref",
+          "cinematica": "u07-capsula-buenosaires",
+          "escena": {
+            "id": "u07-capsula-buenosaires",
+            "tipo": "capsula",
+            "titulo": "Fútbol, tango, mate… y vos",
+            "duracion": 26,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : une carte de l’Argentine, Buenos Aires s’allume au bord de l’estuaire du Río de la Plata.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Buenos Aires es la capital de Argentina. Está en la orilla del Río de la Plata.",
+                    "fr": "Buenos Aires est la capitale de l’Argentine. Elle est au bord du Río de la Plata.",
+                    "voz": "narrador",
+                    "audio": "narrador.a11788e22e"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Deux maillots, bleu et jaune contre rouge et blanc, se font face ; le stade de la Bombonera ; une coupe dorée avec trois dates qui s’allument : 1978, 1986, 2022.",
+                "lineas": [
+                  {
+                    "es": "Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina es campeona del mundo: ganó en 1978, 1986 y 2022.",
+                    "fr": "Boca et River sont les deux grandes équipes. Leur match s’appelle le Superclásico. L’Argentine est championne du monde : elle a gagné en 1978, 1986 et 2022.",
+                    "voz": "narrador",
+                    "audio": "narrador.42bf623940"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 6,
+                "vista": "Un couple danse, un bandonéon joue ; un petit sceau « UNESCO 2009 » apparaît à côté d’une carte du Río de la Plata (Buenos Aires et Montevideo).",
+                "lineas": [
+                  {
+                    "es": "El tango nace en Buenos Aires y Montevideo a finales del siglo diecinueve. Se baila en pareja. En 2009, la UNESCO lo declara Patrimonio Cultural Inmaterial de la Humanidad.",
+                    "fr": "Le tango naît à Buenos Aires et à Montevideo à la fin du XIXe siècle. Il se danse à deux. En 2009, l’UNESCO le déclare Patrimoine culturel immatériel de l’humanité.",
+                    "voz": "narrador",
+                    "audio": "narrador.c8ea6d9097"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Un maté en calebasse passe de main en main entre des amis assis sur un banc ; une bombilla en métal et un thermos d’eau chaude.",
+                "lineas": [
+                  {
+                    "es": "El mate es una bebida caliente. Se toma con una bombilla y se comparte con los amigos: pasa de mano en mano.",
+                    "fr": "Le maté est une boisson chaude. On le boit avec une paille en métal (bombilla) et on le partage avec les amis : il passe de main en main.",
+                    "voz": "narrador",
+                    "audio": "narrador.26d35ec9b0"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 6,
+                "vista": "Des bulles de dialogue : « vos sos », « vos querés », « che ». Un mot « me llamo » dont le « ll » se transforme en « sh ».",
+                "lineas": [
+                  {
+                    "es": "En Argentina no dicen «tú», dicen «vos»: «vos sos», «vos querés». Para llamar a un amigo dicen «che». Y la «ll» suena casi «sh»: «me llamo» suena «me shamo».",
+                    "fr": "En Argentine, on ne dit pas « tú », on dit « vos » : « vos sos », « vos querés ». Pour appeler un ami, on dit « che ». Et le « ll » sonne presque « ch » : « me llamo » sonne « me chamo ». (Tu n’as pas besoin de parler comme ça : tu dois seulement le comprendre.)",
+                    "voz": "narrador",
+                    "audio": "narrador.79627543a1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u07-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Argentina es campeona del mundo de fútbol.",
+            "fr": "L’Argentine est championne du monde de football.",
+            "voz": "narrador",
+            "audio": "narrador.7da2b4a654"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u07-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El mate es una bebida fría que se bebe sola.",
+            "fr": "Le maté est une boisson froide qu’on boit seul.",
+            "voz": "narrador",
+            "audio": "narrador.f21cb2b7d7"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "El mate es caliente y se comparte con amigos.",
+            "fr": "Le maté est chaud et se partage entre amis.",
+            "voz": "narrador",
+            "audio": "narrador.bd5a10b365"
+          }
+        },
+        {
+          "id": "u07-q07-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En Argentina muchas personas dicen «vos» en vez de «tú».",
+            "fr": "En Argentine, beaucoup de gens disent « vos » à la place de « tú ».",
+            "voz": "narrador",
+            "audio": "narrador.6be16fdcc7"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u07-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina es campeona del mundo: ganó la Copa del Mundo en 1978, en 1986 y en 2022.",
+            "fr": "Boca Juniors et River Plate sont les deux équipes les plus célèbres de Buenos Aires. Quand elles jouent l’une contre l’autre, le match s’appelle le Superclásico. Le stade de Boca s’appelle la Bombonera, dans le quartier de La Boca. Les couleurs de Boca sont le bleu et le jaune. L’Argentine est championne du monde : elle a gagné la Coupe du monde en 1978, en 1986 et en 2022.",
+            "voz": "facu",
+            "audio": "facu.f9fe085b5c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo se llama el partido entre Boca y River?",
+                "fr": "Comment s’appelle le match entre Boca et River ?",
+                "voz": "narrador",
+                "audio": "narrador.c758961b19"
+              },
+              "opciones": [
+                {
+                  "texto": "El Superclásico.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El Gordo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "La Bombonera.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué colores tiene Boca?",
+                "fr": "Quelles couleurs a Boca ?",
+                "voz": "narrador",
+                "audio": "narrador.7cc7a9dcfd"
+              },
+              "opciones": [
+                {
+                  "texto": "Rojo y blanco.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Azul y amarillo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Verde y negro.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántas veces ganó Argentina la Copa del Mundo, según el texto?",
+                "fr": "Combien de fois l’Argentine a-t-elle gagné la Coupe du monde, d’après le texte ?",
+                "voz": "narrador",
+                "audio": "narrador.344b32c693"
+              },
+              "opciones": [
+                {
+                  "texto": "Una vez.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Diez veces.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Tres veces.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u07-q07-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "El tango es la música y el baile del Río de la Plata. Nace en Buenos Aires y Montevideo y se baila en pareja. El instrumento típico es el bandoneón. La UNESCO declaró el tango Patrimonio Cultural Inmaterial de la Humanidad en 2009. El mate es una bebida caliente. Se prepara con yerba mate y agua caliente. Los amigos comparten el mate: pasa de mano en mano.",
+            "fr": "Le tango est la musique et la danse du Río de la Plata. Il naît à Buenos Aires et à Montevideo et se danse à deux. L’instrument typique est le bandonéon. L’UNESCO a déclaré le tango Patrimoine culturel immatériel de l’humanité en 2009. Le maté est une boisson chaude. On le prépare avec de la yerba mate et de l’eau chaude. Les amis partagent le maté : il passe de main en main.",
+            "voz": "sol",
+            "audio": "sol.cd99a0e95b"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo se baila el tango?",
+                "fr": "Comment se danse le tango ?",
+                "voz": "narrador",
+                "audio": "narrador.d3fb33f27f"
+              },
+              "opciones": [
+                {
+                  "texto": "En pareja.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En un círculo de cien personas.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo declaró la UNESCO el tango patrimonio?",
+                "fr": "Quand l’UNESCO a-t-elle déclaré le tango patrimoine ?",
+                "voz": "narrador",
+                "audio": "narrador.629353a05b"
+              },
+              "opciones": [
+                {
+                  "texto": "En 1978.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En 2009.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En 2022.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es el mate?",
+                "fr": "Qu’est-ce que le maté ?",
+                "voz": "narrador",
+                "audio": "narrador.fd1b973382"
+              },
+              "opciones": [
+                {
+                  "texto": "Un deporte.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un instrumento.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una bebida caliente.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u07-q07-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi abuelo toma mate todas las tardes y mira el fútbol.",
+            "voz": "facu",
+            "audio": "facu.07e613f740"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Por las tardes, el abuelo de Facu bebe algo caliente.",
+              "correcta": true
+            },
+            {
+              "texto": "El abuelo de Facu juega al fútbol cada mañana.",
+              "correcta": false
+            },
+            {
+              "texto": "El abuelo de Facu no bebe nunca nada.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sol",
+          "replica": {
+            "es": "¿Querés un mate? Es una tradición compartirlo.",
+            "fr": "Tu veux un maté ? C’est une tradition de le partager. (« querés » = « quieres » en voseo)",
+            "voz": "sol",
+            "audio": "sol.72bbb3c8ce"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, gracias. Voy a probarlo.",
+                "voz": "viajero",
+                "audio": "viajero.fc8975eb05"
+              },
+              "fr": "Oui, merci. Je vais le goûter.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Cuidado, que está caliente! Se toma despacito.",
+                "fr": "Attention, il est chaud ! Ça se boit doucement. (« despacito » = tout doucement)",
+                "voz": "sol",
+                "audio": "sol.7cce371f01",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, lo bebo con tenedor.",
+                "voz": "viajero",
+                "audio": "viajero.61b10bd674"
+              },
+              "fr": "Oui, je le bois avec une fourchette.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Con tenedor? ¡Qué cosa más rara!",
+                "fr": "Avec une fourchette ? Quelle drôle de chose !",
+                "voz": "sol",
+                "audio": "sol.a5c7b166c4",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy un mate caliente.",
+                "voz": "viajero",
+                "audio": "viajero.8830061156"
+              },
+              "fr": "Je suis un maté chaud.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. ¡Y yo soy una bombilla!",
+                "fr": "Ha, ha. Et moi, je suis une bombilla (la paille du maté) !",
+                "voz": "sol",
+                "audio": "sol.cf62d58725",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q07-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "anibal",
+          "replica": {
+            "es": "¿Te gusta el tango, muchacho?",
+            "fr": "Tu aimes le tango, mon garçon ?",
+            "voz": "anibal",
+            "audio": "anibal.5162b940da"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, me encanta el tango.",
+                "voz": "viajero",
+                "audio": "viajero.30a0dbff5d"
+              },
+              "fr": "Oui, j’adore le tango.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Entonces tienes buen oído.",
+                "fr": "Alors tu as bonne oreille.",
+                "voz": "anibal",
+                "audio": "anibal.c1c50cef02",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, me encantan tango.",
+                "voz": "viajero",
+                "audio": "viajero.62d64c84ab"
+              },
+              "fr": "Oui, j’adore (pluriel) tango.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «tango» decimos «me encanta», singular.",
+                "fr": "Avec « tango », on dit « me encanta », au singulier.",
+                "voz": "anibal",
+                "audio": "anibal.35de469fa5",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, mi tango es un sombrero.",
+                "voz": "viajero",
+                "audio": "viajero.015d30abe0"
+              },
+              "fr": "Non, mon tango est un chapeau.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Mi sombrero no baila!",
+                "fr": "Mon chapeau ne danse pas !",
+                "voz": "anibal",
+                "audio": "anibal.72192ffe25",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q07-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El estadio de Boca se llama la ___.",
+          "respuesta": "Bombonera",
+          "opciones": [
+            "Bombonera",
+            "Casa Rosada",
+            "Obelisco"
+          ],
+          "habla": {
+            "es": "El estadio de Boca se llama la Bombonera.",
+            "voz": "facu",
+            "audio": "facu.9717e32ee1"
+          },
+          "fr": "Le stade de Boca s’appelle la Bombonera."
+        },
+        {
+          "id": "u07-q07-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tus cosas favoritas.",
+            "fr": "Écris tes choses préférées.",
+            "voz": "narrador",
+            "audio": "narrador.446901a2f2"
+          },
+          "plantilla": "Mi deporte favorito es ___. Mi música favorita es ___. Mi comida favorita es ___.",
+          "campos": [
+            {
+              "id": "deporte",
+              "pista": "Ton sport préféré avec son article (el fútbol, el tenis, la natación…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "musica",
+              "pista": "Ta musique préférée (el rock, el pop, el rap, la música clásica…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "comida",
+              "pista": "Ton plat préféré (la pizza, la pasta, el asado, el chocolate…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi deporte favorito es el fútbol. Mi música favorita es el rock. Mi comida favorita es la pizza.",
+            "fr": "Mon sport préféré est le foot. Ma musique préférée est le rock. Mon plat préféré est la pizza.",
+            "voz": "viajero",
+            "audio": "viajero.39d66264e4"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u07-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué te encanta a ti.",
+            "fr": "Écoute et dis ce que TU adores (el dulce de leche, la música, jugar al fútbol…). Change « el tango » (avec son article ; s’il est pluriel, dis « me encantan »).",
+            "voz": "narrador",
+            "audio": "narrador.890d8c2737"
+          },
+          "objetivo": {
+            "es": "Me encanta el tango.",
+            "fr": "J’adore le tango. (dis ce que tu adores)",
+            "voz": "viajero",
+            "audio": "viajero.0a51b089da"
+          },
+          "aceptadas": [
+            "me encanta el tango"
+          ],
+          "patrones": [
+            "me encanta {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la pasión",
+            "efecto": "Un corazón verde late en el aire"
+          }
+        },
+        {
+          "id": "u07-q07-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Me gusta el mate caliente.",
+            "voz": "sol",
+            "audio": "sol.27936b65f7"
+          },
+          "respuesta": "Me gusta el mate caliente.",
+          "aceptadas": [
+            "me gusta el mate caliente"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u07-q08",
+      "tipo": "desafio",
+      "titulo": "El silencio de la Sombra",
+      "emoji": "🎵",
+      "intro": {
+        "es": "Todo da igual. Sin gustos no hay personas. Yo apago la música.",
+        "fr": "Tout est égal. Sans goûts, pas de personnes. Moi, j’éteins la musique.",
+        "voz": "sombra",
+        "audio": "sombra.48aeb72b16"
+      },
+      "pista": "Boss de Buenos Aires : révision mixte des unités 1 à 7 (présentation, description, heure, fêtes, ir a, gustar, preferir, porque) pour rendre sa voix à la musique.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 10
+      },
+      "steps": [
+        {
+          "id": "u07-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Todo me da igual. ¿Qué te gusta a ti?",
+            "fr": "Tout m’est égal. Qu’est-ce qui te plaît, à toi ?",
+            "voz": "sombra",
+            "audio": "sombra.4be13175c7"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me gusta el fútbol y me encanta la música.",
+                "voz": "viajero",
+                "audio": "viajero.39bbf57533"
+              },
+              "fr": "J’aime le foot et j’adore la musique.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Dos gustos que vuelven…",
+                "fr": "Grr ! Deux goûts qui reviennent…",
+                "voz": "sombra",
+                "audio": "sombra.f2ba0b5f62",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me gustan fútbol y música.",
+                "voz": "viajero",
+                "audio": "viajero.6a7ba8c4f8"
+              },
+              "fr": "J’aime foot et musique.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no suena bien. ¡Otra vez!",
+                "fr": "Ça ne sonne pas bien. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.a4ce1676e2",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me gusta soy Álex.",
+                "voz": "viajero",
+                "audio": "viajero.09eff1ae81"
+              },
+              "fr": "J’aime je suis Álex.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido.",
+                "fr": "Ça n’a aucun sens.",
+                "voz": "sombra",
+                "audio": "sombra.e26f7e93da",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Por qué te gusta?",
+            "fr": "Pourquoi tu aimes ça ?",
+            "voz": "sombra",
+            "audio": "sombra.8a12a4044e"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Porque es divertido y genial.",
+                "voz": "viajero",
+                "audio": "viajero.13d0455d51"
+              },
+              "fr": "Parce que c’est amusant et génial.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Otra razón que vuelve…",
+                "fr": "Aaah ! Une autre raison qui revient…",
+                "voz": "sombra",
+                "audio": "sombra.1c07ede810",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Por qué es divertido.",
+                "voz": "viajero",
+                "audio": "viajero.9aa03d2a85"
+              },
+              "fr": "Pourquoi c’est amusant.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mal escrito: para responder, «porque».",
+                "fr": "Mal écrit : pour répondre, « porque ».",
+                "voz": "sombra",
+                "audio": "sombra.af9867b215",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Porque yo tengo doce años de azul.",
+                "voz": "viajero",
+                "audio": "viajero.05b41f5bc7"
+              },
+              "fr": "Parce que j’ai douze ans de bleu.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no explica nada.",
+                "fr": "Ça n’explique rien.",
+                "voz": "sombra",
+                "audio": "sombra.48fec9fb85",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "A mi hermano le encantan los deportes, pero a mí me gusta más la música.",
+            "voz": "sol",
+            "audio": "sol.012a625eb1"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los dos hermanos aman el mismo deporte.",
+              "correcta": false
+            },
+            {
+              "texto": "Los dos hermanos tienen gustos distintos.",
+              "correcta": true
+            },
+            {
+              "texto": "A nadie le gusta la música.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las cinco y veinticinco de la tarde.",
+            "voz": "sombra",
+            "audio": "sombra.cf08eedfc5"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "4:35 de la tarde",
+              "correcta": false
+            },
+            {
+              "texto": "5:25 de la mañana",
+              "correcta": false
+            },
+            {
+              "texto": "5:25 de la tarde",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hay que encender las luces del árbol de Navidad.",
+            "voz": "paloma",
+            "audio": "paloma.86a76e5471"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Es necesario dar luz a un árbol de fiesta.",
+              "correcta": true
+            },
+            {
+              "texto": "Hay que apagar todas las luces.",
+              "correcta": false
+            },
+            {
+              "texto": "Los regalos están en el árbol.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mañana voy a ver un partido en la Bombonera con mi padre.",
+            "voz": "facu",
+            "audio": "facu.ef3485e91a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Facu juega mañana al tenis con su madre.",
+              "correcta": false
+            },
+            {
+              "texto": "Facu y su padre van a un estadio de fútbol.",
+              "correcta": true
+            },
+            {
+              "texto": "Ayer fue un partido muy largo.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s07",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "futbol"
+            },
+            {
+              "vocab": "guitarra"
+            },
+            {
+              "vocab": "mate"
+            },
+            {
+              "vocab": "tenis"
+            },
+            {
+              "vocab": "piano"
+            },
+            {
+              "vocab": "bici"
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Me ___ los videojuegos.",
+          "respuesta": "gustan",
+          "opciones": [
+            "gusta",
+            "gustan",
+            "gusto"
+          ],
+          "habla": {
+            "es": "Me gustan los videojuegos.",
+            "voz": "viajero",
+            "audio": "viajero.e690166779"
+          },
+          "fr": "J’aime les jeux vidéo."
+        },
+        {
+          "id": "u07-q08-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "A mi madre le ___ la música.",
+          "respuesta": "encanta",
+          "opciones": [
+            "encanta",
+            "encantan",
+            "encanto"
+          ],
+          "habla": {
+            "es": "A mi madre le encanta la música.",
+            "voz": "marina",
+            "audio": "marina.3aeb59120f"
+          },
+          "fr": "Ma mère adore la musique."
+        },
+        {
+          "id": "u07-q08-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Sol ___ la guitarra.",
+          "respuesta": "toca",
+          "opciones": [
+            "toca",
+            "juega",
+            "tocan"
+          ],
+          "habla": {
+            "es": "Sol toca la guitarra.",
+            "voz": "facu",
+            "audio": "facu.b05daf53a6"
+          },
+          "fr": "Sol joue de la guitare."
+        },
+        {
+          "id": "u07-q08-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Por ___ te gusta el tango?",
+          "respuesta": "qué",
+          "opciones": [
+            "qué",
+            "que",
+            "porque"
+          ],
+          "habla": {
+            "es": "¿Por qué te gusta el tango?",
+            "voz": "sol",
+            "audio": "sol.0be74b6f1d"
+          },
+          "fr": "Pourquoi aimes-tu le tango ?"
+        },
+        {
+          "id": "u07-q08-s12",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Facu. Tengo trece años y vivo en La Boca. Me encanta el fútbol y soy hincha de Boca. Mi hermana prefiere la música: toca la guitarra. Los sábados juego al fútbol con mis amigos y después tomamos mate. Mañana voy a ir a la Bombonera.",
+            "fr": "Salut, c’est Facu. J’ai treize ans et j’habite à La Boca. J’adore le foot et je suis supporter de Boca. Ma sœur préfère la musique : elle joue de la guitare. Le samedi, je joue au foot avec mes amis et après nous buvons du maté. Demain, je vais aller à la Bombonera.",
+            "voz": "facu",
+            "audio": "facu.6d243a7281"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿De qué equipo es hincha Facu?",
+                "fr": "De quelle équipe Facu est-il supporter ?",
+                "voz": "narrador",
+                "audio": "narrador.8787114ae7"
+              },
+              "opciones": [
+                {
+                  "texto": "De River.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De Sevilla.",
+                  "correcta": false
+                },
+                {
+                  "texto": "De Boca.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué prefiere su hermana?",
+                "fr": "Que préfère sa sœur ?",
+                "voz": "narrador",
+                "audio": "narrador.cf6838a8ee"
+              },
+              "opciones": [
+                {
+                  "texto": "La música.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El rugby.",
+                  "correcta": false
+                },
+                {
+                  "texto": "El tenis.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hacen después del fútbol?",
+                "fr": "Que font-ils après le foot ?",
+                "voz": "narrador",
+                "audio": "narrador.6e3a2fe555"
+              },
+              "opciones": [
+                {
+                  "texto": "Duermen la siesta.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Toman mate.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Van al colegio.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u07-q08-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "A",
+            "Sol",
+            "le",
+            "gusta",
+            "bailar",
+            "tango",
+            "con",
+            "sus",
+            "amigos."
+          ],
+          "habla": {
+            "es": "A Sol le gusta bailar tango con sus amigos.",
+            "voz": "sol",
+            "audio": "sol.1ffc3b59eb"
+          },
+          "fr": "Sol aime danser le tango avec ses amis."
+        },
+        {
+          "id": "u07-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex y me gusta la música.",
+            "fr": "Salut, je m’appelle Álex et j’aime la musique. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.c130854c7c"
+          },
+          "aceptadas": [
+            "hola me llamo álex y me gusta la música"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} y me gusta la música"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Buenos Aires recupera toda su música!"
+          }
+        },
+        {
+          "id": "u07-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u07-pluma",
+          "escena": {
+            "id": "u07-pluma",
+            "tipo": "pluma",
+            "titulo": "Séptima pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Le bandonéon se remplit d’air et chante ; la musique remplit la rue, les passants dansent ; une plume verte glisse du soufflet dans la main d’Álex.",
+                "personajes": [
+                  "sol",
+                  "anibal",
+                  "facu"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Suena! ¡La música vuelve! ¡Gracias, viajeros!",
+                    "fr": "Ça sonne ! La musique revient ! Merci, voyageurs !",
+                    "voz": "sol",
+                    "audio": "sol.c835aaa6d3"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal fait une pirouette au-dessus de la place, ses plumes vibrent comme des cordes de guitare.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Siete plumas. ¡Ahora vuelo y canto!",
+                    "fr": "Sept plumes. Maintenant je vole et je chante !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.ba5dc4ae2c"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio en hologramme ; sur la carte, une lumière monte vers les Andes colombiennes.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La siguiente pluma está en Bogotá, en Colombia. ¡Está muy alto, en las montañas!",
+                    "fr": "La prochaine plume est à Bogotá, en Colombie. Elle est très haut, dans les montagnes !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.b876a6036e"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 7,
+    "nombre": "Pluma de la Música",
+    "descripcion": {
+      "es": "Siete plumas. La música vuelve… ¡y yo canto!",
+      "fr": "Sept plumes. La musique revient… et moi je chante !",
+      "voz": "quetzal",
+      "audio": "quetzal.c29fd81feb"
+    }
+  }
+}

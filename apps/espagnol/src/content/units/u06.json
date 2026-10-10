@@ -1,0 +1,5034 @@
+{
+  "id": "u06",
+  "numero": 6,
+  "titulo": "¡Feliz Navidad!",
+  "lugar": "Madrid de noche",
+  "emoji": "🎄",
+  "ejes": [
+    4
+  ],
+  "periodo": "dic-ene",
+  "objetivos": [
+    {
+      "es": "Conocer las fiestas de invierno: Navidad, Nochebuena, Nochevieja, Reyes Magos.",
+      "fr": "Connaître les fêtes d’hiver : Noël, Nochebuena, Nochevieja, les Rois mages."
+    },
+    {
+      "es": "Dar órdenes sencillas con el imperativo: mira, abre, ven, pon, di.",
+      "fr": "Donner des ordres simples avec l’impératif : mira, abre, ven, pon, di."
+    },
+    {
+      "es": "Decir lo que hay que hacer (hay que) y lo que tengo que hacer (tener que).",
+      "fr": "Dire ce qu’il faut faire (hay que) et ce que je dois faire (tener que)."
+    },
+    {
+      "es": "Hablar de comida y de regalos de Navidad, y escribir una carta a los Reyes Magos.",
+      "fr": "Parler de nourriture et de cadeaux de Noël, et écrire une lettre aux Rois mages."
+    },
+    {
+      "es": "Desear felices fiestas y hablar de mi fiesta favorita.",
+      "fr": "Souhaiter de bonnes fêtes et parler de ma fête préférée."
+    },
+    {
+      "es": "Conocer las doce uvas, la Lotería de Navidad, la cabalgata y el roscón.",
+      "fr": "Connaître les douze raisins, la Loterie de Noël, la cabalgata et le roscón."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "navidad",
+      "es": "Navidad",
+      "fr": "Noël (le 25 décembre ; on dit aussi « las Navidades » pour toute la période des fêtes)",
+      "genero": "f",
+      "emoji": "🎄",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "En Navidad vamos a casa de los abuelos.",
+        "fr": "À Noël, nous allons chez les grands-parents.",
+        "voz": "narrador",
+        "audio": "narrador.1d8f7a95a2"
+      },
+      "audio": "narrador.e0da344987"
+    },
+    {
+      "id": "nochebuena",
+      "es": "Nochebuena",
+      "fr": "veille de Noël : le soir du 24 décembre, grand dîner en famille",
+      "genero": "f",
+      "emoji": "🌟",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "La cena de Nochebuena es el veinticuatro de diciembre.",
+        "fr": "Le dîner de Nochebuena est le vingt-quatre décembre.",
+        "voz": "narrador",
+        "audio": "narrador.56850a5bb3"
+      },
+      "audio": "narrador.bfaf5fab3b"
+    },
+    {
+      "id": "nochevieja",
+      "es": "Nochevieja",
+      "fr": "réveillon du Nouvel An (le soir du 31 décembre)",
+      "genero": "f",
+      "emoji": "🎆",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "En Nochevieja comemos doce uvas.",
+        "fr": "Le soir du 31, nous mangeons douze raisins.",
+        "voz": "narrador",
+        "audio": "narrador.c104c04631"
+      },
+      "audio": "narrador.7ed5b85d02"
+    },
+    {
+      "id": "ano_nuevo",
+      "es": "Año Nuevo",
+      "fr": "Nouvel An (le 1er janvier)",
+      "genero": "m",
+      "emoji": "🎇",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "¡Feliz Año Nuevo!",
+        "fr": "Bonne année !",
+        "voz": "narrador",
+        "audio": "narrador.422174f82a"
+      },
+      "audio": "narrador.5f9d9871b0"
+    },
+    {
+      "id": "reyes_magos",
+      "es": "Reyes Magos",
+      "fr": "Rois mages : Melchor, Gaspar et Baltasar, qui apportent les cadeaux le 6 janvier",
+      "genero": "m",
+      "soloPlural": true,
+      "emoji": "👑",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "Los Reyes Magos llegan el seis de enero.",
+        "fr": "Les Rois mages arrivent le six janvier.",
+        "voz": "narrador",
+        "audio": "narrador.a1d5119715"
+      },
+      "audio": "narrador.cb76d3d99e"
+    },
+    {
+      "id": "cabalgata",
+      "es": "cabalgata",
+      "fr": "défilé (la cabalgata de Reyes : le défilé des Rois mages, le soir du 5 janvier)",
+      "genero": "f",
+      "plural": "cabalgatas",
+      "emoji": "🐪",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "La cabalgata de Reyes es el cinco de enero.",
+        "fr": "Le défilé des Rois est le cinq janvier.",
+        "voz": "narrador",
+        "audio": "narrador.7a4440428a"
+      },
+      "audio": "narrador.beaeb6fcf6"
+    },
+    {
+      "id": "feliz",
+      "es": "feliz",
+      "fr": "heureux, joyeux (¡Feliz Navidad ! = Joyeux Noël)",
+      "genero": "mf",
+      "plural": "felices",
+      "clase": "adj",
+      "emoji": "😊",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "¡Feliz Navidad, Marina!",
+        "fr": "Joyeux Noël, Marina !",
+        "voz": "narrador",
+        "audio": "narrador.fa55618966"
+      },
+      "audio": "narrador.b9081c99fc"
+    },
+    {
+      "id": "arbol_navidad",
+      "es": "árbol de Navidad",
+      "fr": "sapin de Noël",
+      "genero": "m",
+      "plural": "árboles de Navidad",
+      "emoji": "🎄",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "El árbol de Navidad tiene luces y una estrella.",
+        "fr": "Le sapin de Noël a des lumières et une étoile.",
+        "voz": "narrador",
+        "audio": "narrador.6946c20555"
+      },
+      "audio": "narrador.80daad37a8"
+    },
+    {
+      "id": "estrella",
+      "es": "estrella",
+      "fr": "étoile",
+      "genero": "f",
+      "plural": "estrellas",
+      "emoji": "⭐",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "La estrella brilla en lo alto del árbol.",
+        "fr": "L’étoile brille tout en haut du sapin.",
+        "voz": "narrador",
+        "audio": "narrador.01dde12b7e"
+      },
+      "audio": "narrador.e0cab40783"
+    },
+    {
+      "id": "luces",
+      "es": "luces",
+      "fr": "lumières, guirlandes lumineuses (singulier : la luz)",
+      "genero": "f",
+      "soloPlural": true,
+      "emoji": "💡",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "Las luces de Navidad iluminan la calle.",
+        "fr": "Les lumières de Noël éclairent la rue.",
+        "voz": "narrador",
+        "audio": "narrador.aabf9c6873"
+      },
+      "audio": "narrador.30fff6b661"
+    },
+    {
+      "id": "villancico",
+      "es": "villancico",
+      "fr": "chant de Noël",
+      "genero": "m",
+      "plural": "villancicos",
+      "emoji": "🎶",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "Cantamos un villancico en Nochebuena.",
+        "fr": "Nous chantons un chant de Noël à Nochebuena.",
+        "voz": "narrador",
+        "audio": "narrador.a84407ad78"
+      },
+      "audio": "narrador.d0200e093c"
+    },
+    {
+      "id": "campanadas",
+      "es": "campanadas",
+      "fr": "coups de cloche (les douze coups de minuit de Nochevieja)",
+      "genero": "f",
+      "soloPlural": true,
+      "emoji": "🔔",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "Las campanadas suenan a medianoche.",
+        "fr": "Les coups de cloche sonnent à minuit.",
+        "voz": "narrador",
+        "audio": "narrador.4a55c9737e"
+      },
+      "audio": "narrador.840f46ae2f"
+    },
+    {
+      "id": "uva",
+      "es": "uva",
+      "fr": "raisin (en Nochevieja : douze raisins, un par coup de cloche)",
+      "genero": "f",
+      "plural": "uvas",
+      "emoji": "🍇",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "Comemos una uva con cada campanada.",
+        "fr": "Nous mangeons un raisin à chaque coup de cloche.",
+        "voz": "narrador",
+        "audio": "narrador.d95d3e436d"
+      },
+      "audio": "narrador.2d2c2a1400"
+    },
+    {
+      "id": "belen",
+      "es": "belén",
+      "fr": "crèche de Noël (le « belén » : la scène de la Nativité en figurines)",
+      "genero": "m",
+      "plural": "belenes",
+      "ilustracion": "Une crèche de Noël en figurines : la Vierge, Joseph, l’enfant Jésus dans la paille, un âne, un bœuf et une étoile au-dessus de l’étable",
+      "tags": [
+        "fiestas"
+      ],
+      "ejemplo": {
+        "es": "En la plaza hay un belén enorme.",
+        "fr": "Sur la place, il y a une énorme crèche.",
+        "voz": "narrador",
+        "audio": "narrador.ade616b1eb"
+      },
+      "audio": "narrador.1f334a7bfa"
+    },
+    {
+      "id": "regalo",
+      "es": "regalo",
+      "fr": "cadeau",
+      "genero": "m",
+      "plural": "regalos",
+      "emoji": "🎁",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "Mi regalo favorito es un libro.",
+        "fr": "Mon cadeau préféré est un livre.",
+        "voz": "narrador",
+        "audio": "narrador.b05b84fa55"
+      },
+      "audio": "narrador.721e8c821c"
+    },
+    {
+      "id": "carta",
+      "es": "carta",
+      "fr": "lettre (courrier)",
+      "genero": "f",
+      "plural": "cartas",
+      "emoji": "✉️",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "Escribo una carta a los Reyes Magos.",
+        "fr": "J’écris une lettre aux Rois mages.",
+        "voz": "narrador",
+        "audio": "narrador.c3cceec825"
+      },
+      "audio": "narrador.b0f8e771d8"
+    },
+    {
+      "id": "loteria",
+      "es": "lotería",
+      "fr": "loterie (la Lotería de Navidad, le 22 décembre)",
+      "genero": "f",
+      "emoji": "🎟️",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "La Lotería de Navidad es el veintidós de diciembre.",
+        "fr": "La Loterie de Noël a lieu le vingt-deux décembre.",
+        "voz": "paloma",
+        "audio": "paloma.6feac66dd0"
+      },
+      "audio": "narrador.dd6645e770"
+    },
+    {
+      "id": "premio",
+      "es": "premio",
+      "fr": "prix, lot",
+      "genero": "m",
+      "plural": "premios",
+      "emoji": "🏆",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "El primer premio se llama el Gordo.",
+        "fr": "Le premier prix s’appelle le Gordo (« le Gros »).",
+        "voz": "paloma",
+        "audio": "paloma.247a7f641f"
+      },
+      "audio": "narrador.a4a8d2d55a"
+    },
+    {
+      "id": "numero",
+      "es": "número",
+      "fr": "numéro, nombre",
+      "genero": "m",
+      "plural": "números",
+      "emoji": "🔢",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "Mi número favorito es el siete.",
+        "fr": "Mon numéro préféré est le sept.",
+        "voz": "narrador",
+        "audio": "narrador.b963e9c458"
+      },
+      "audio": "narrador.413b54cff6"
+    },
+    {
+      "id": "comprar",
+      "es": "comprar",
+      "fr": "acheter",
+      "emoji": "🛒",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Tengo que comprar los regalos.",
+        "fr": "Je dois acheter les cadeaux.",
+        "voz": "narrador",
+        "audio": "narrador.8a829d5d90"
+      },
+      "audio": "narrador.a2039cb46d"
+    },
+    {
+      "id": "todos",
+      "es": "todos",
+      "fr": "tous, tout le monde (todos = masculin pluriel ; todas = féminin)",
+      "genero": "m",
+      "soloPlural": true,
+      "emoji": "👥",
+      "tags": [
+        "regalos"
+      ],
+      "ejemplo": {
+        "es": "Todos cantan villancicos.",
+        "fr": "Tout le monde chante des chants de Noël.",
+        "voz": "narrador",
+        "audio": "narrador.fc64d82a7a"
+      },
+      "audio": "narrador.a901080785"
+    },
+    {
+      "id": "roscon",
+      "es": "roscón",
+      "fr": "roscón : grande brioche en couronne, avec fruits confits, mangée le 6 janvier (roscón de Reyes)",
+      "genero": "m",
+      "plural": "roscones",
+      "ilustracion": "Un roscón de Reyes : une grande brioche en forme de couronne, décorée de fruits confits colorés et de sucre",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "El roscón de Reyes tiene una sorpresa dentro.",
+        "fr": "Le roscón des Rois a une surprise à l’intérieur.",
+        "voz": "chema",
+        "audio": "chema.8baea25e9a"
+      },
+      "audio": "chema.65ff717cc5",
+      "voz": "chema"
+    },
+    {
+      "id": "turron",
+      "es": "turrón",
+      "fr": "turrón : nougat de Noël aux amandes et au miel",
+      "genero": "m",
+      "plural": "turrones",
+      "ilustracion": "Des tablettes de turrón : un nougat blanc aux amandes et un nougat brun, posés sur une assiette",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "El turrón es un dulce de almendras y miel.",
+        "fr": "Le turrón est une sucrerie aux amandes et au miel.",
+        "voz": "chema",
+        "audio": "chema.6a4651aafc"
+      },
+      "audio": "narrador.ea4810d8cc"
+    },
+    {
+      "id": "marisco",
+      "es": "marisco",
+      "fr": "fruits de mer (plat typique de Nochebuena)",
+      "genero": "m",
+      "plural": "mariscos",
+      "emoji": "🦐",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "En Nochebuena muchas familias cenan marisco.",
+        "fr": "À Nochebuena, beaucoup de familles dînent de fruits de mer.",
+        "voz": "narrador",
+        "audio": "narrador.1d6071905a"
+      },
+      "audio": "narrador.fd5b826ba7"
+    },
+    {
+      "id": "churros",
+      "es": "churros",
+      "fr": "churros : beignets allongés, qu’on trempe dans du chocolat chaud",
+      "genero": "m",
+      "soloPlural": true,
+      "ilustracion": "Une assiette de churros dorés, longs et striés, avec une tasse de chocolat chaud épais à côté",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "Rosa vende los mejores churros de Madrid.",
+        "fr": "Rosa vend les meilleurs churros de Madrid.",
+        "voz": "rosa",
+        "audio": "rosa.d399f7d171"
+      },
+      "audio": "rosa.da687fa2af",
+      "voz": "rosa"
+    },
+    {
+      "id": "chocolate_nav",
+      "es": "chocolate",
+      "fr": "chocolat (chocolate caliente : chocolat chaud épais, pour tremper les churros)",
+      "genero": "m",
+      "plural": "chocolates",
+      "emoji": "🍫",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "Tomo chocolate caliente con churros.",
+        "fr": "Je prends un chocolat chaud avec des churros.",
+        "voz": "narrador",
+        "audio": "narrador.63d0153bf1"
+      },
+      "audio": "narrador.891c5feef1"
+    },
+    {
+      "id": "dulce_nav",
+      "es": "dulce",
+      "fr": "sucrerie, gâteau sucré (un dulce) ; aussi : sucré",
+      "genero": "m",
+      "plural": "dulces",
+      "emoji": "🍬",
+      "tags": [
+        "comida"
+      ],
+      "ejemplo": {
+        "es": "En Navidad comemos muchos dulces.",
+        "fr": "À Noël, nous mangeons beaucoup de sucreries.",
+        "voz": "narrador",
+        "audio": "narrador.0bcb92d87f"
+      },
+      "audio": "narrador.29e35acc60"
+    },
+    {
+      "id": "hace_frio",
+      "es": "hace frío",
+      "fr": "il fait froid (météo) ; pour une personne : tengo frío = j’ai froid",
+      "emoji": "🥶",
+      "tags": [
+        "tiempo"
+      ],
+      "ejemplo": {
+        "es": "En diciembre hace frío en Madrid.",
+        "fr": "En décembre, il fait froid à Madrid.",
+        "voz": "narrador",
+        "audio": "narrador.32db347c2d"
+      },
+      "audio": "narrador.a606e0e6df"
+    },
+    {
+      "id": "abrigo",
+      "es": "abrigo",
+      "fr": "manteau",
+      "genero": "m",
+      "plural": "abrigos",
+      "emoji": "🧥",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "Llevo un abrigo negro y una bufanda.",
+        "fr": "Je porte un manteau noir et une écharpe.",
+        "voz": "narrador",
+        "audio": "narrador.011f4f6e63"
+      },
+      "audio": "narrador.03d09fa5c5"
+    },
+    {
+      "id": "bufanda",
+      "es": "bufanda",
+      "fr": "écharpe",
+      "genero": "f",
+      "plural": "bufandas",
+      "emoji": "🧣",
+      "tags": [
+        "ropa"
+      ],
+      "ejemplo": {
+        "es": "La bufanda de Marina es roja.",
+        "fr": "L’écharpe de Marina est rouge.",
+        "voz": "narrador",
+        "audio": "narrador.a60ae4a3ca"
+      },
+      "audio": "narrador.8c1a851eaa"
+    },
+    {
+      "id": "mirar",
+      "es": "mirar",
+      "fr": "regarder (mira ! = regarde !)",
+      "emoji": "👀",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Mira las luces de Madrid.",
+        "fr": "Regarde les lumières de Madrid.",
+        "voz": "narrador",
+        "audio": "narrador.6c1069e889"
+      },
+      "audio": "narrador.b70d2de753"
+    },
+    {
+      "id": "cantar",
+      "es": "cantar",
+      "fr": "chanter (canta ! = chante !)",
+      "emoji": "🎤",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Canta con nosotros.",
+        "fr": "Chante avec nous.",
+        "voz": "narrador",
+        "audio": "narrador.ee75607cfe"
+      },
+      "audio": "narrador.ad900d7b11"
+    },
+    {
+      "id": "poner",
+      "es": "poner",
+      "fr": "mettre, poser (pon ! = mets !)",
+      "emoji": "📌",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Pon la mesa para la cena.",
+        "fr": "Mets la table pour le dîner.",
+        "voz": "narrador",
+        "audio": "narrador.8615ab8aeb"
+      },
+      "audio": "narrador.ae45bdcac9"
+    },
+    {
+      "id": "venir",
+      "es": "venir",
+      "fr": "venir (ven ! = viens !)",
+      "emoji": "🙋",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Ven aquí, Nacho.",
+        "fr": "Viens ici, Nacho.",
+        "voz": "narrador",
+        "audio": "narrador.97b13878bd"
+      },
+      "audio": "narrador.2b89b88600"
+    },
+    {
+      "id": "decir",
+      "es": "decir",
+      "fr": "dire (di ! = dis !)",
+      "emoji": "🗣️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Di «feliz Navidad».",
+        "fr": "Dis « joyeux Noël ».",
+        "voz": "narrador",
+        "audio": "narrador.9cf1f5d2a3"
+      },
+      "audio": "narrador.8e5550d4d9"
+    },
+    {
+      "id": "abrir",
+      "es": "abrir",
+      "fr": "ouvrir (abre ! = ouvre !)",
+      "emoji": "📭",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Abre tu regalo.",
+        "fr": "Ouvre ton cadeau.",
+        "voz": "narrador",
+        "audio": "narrador.f786838b7a"
+      },
+      "audio": "narrador.50d3cb2156"
+    },
+    {
+      "id": "probar_nav",
+      "es": "probar",
+      "fr": "goûter, essayer (prueba ! = goûte !)",
+      "emoji": "😋",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Prueba el turrón de Chema.",
+        "fr": "Goûte le turrón de Chema.",
+        "voz": "narrador",
+        "audio": "narrador.aad094caf3"
+      },
+      "audio": "narrador.a9bda7be49"
+    },
+    {
+      "id": "encender",
+      "es": "encender",
+      "fr": "allumer (enciende ! = allume !)",
+      "emoji": "🔆",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Enciende las luces, por favor.",
+        "fr": "Allume les lumières, s’il te plaît.",
+        "voz": "narrador",
+        "audio": "narrador.013f901521"
+      },
+      "audio": "narrador.6919800420"
+    },
+    {
+      "id": "apagar",
+      "es": "apagar",
+      "fr": "éteindre",
+      "emoji": "🔌",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "La Sombra apaga las luces.",
+        "fr": "La Sombra éteint les lumières.",
+        "voz": "narrador",
+        "audio": "narrador.9861fe62dd"
+      },
+      "audio": "narrador.8763aced7b"
+    },
+    {
+      "id": "ayudar",
+      "es": "ayudar",
+      "fr": "aider (ayuda ! = aide !)",
+      "emoji": "🤝",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Marina ayuda a Chema.",
+        "fr": "Marina aide Chema.",
+        "voz": "narrador",
+        "audio": "narrador.3baa13c5bc"
+      },
+      "audio": "narrador.120b591649"
+    },
+    {
+      "id": "cortar",
+      "es": "cortar",
+      "fr": "couper",
+      "emoji": "✂️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Corta el roscón con cuidado.",
+        "fr": "Coupe le roscón avec précaution.",
+        "voz": "chema",
+        "audio": "chema.0192f90700"
+      },
+      "audio": "narrador.d9866204fc"
+    },
+    {
+      "id": "tomar",
+      "es": "tomar",
+      "fr": "prendre ; boire ou manger (tomar chocolate)",
+      "emoji": "☕",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Tomo un chocolate caliente.",
+        "fr": "Je prends un chocolat chaud.",
+        "voz": "narrador",
+        "audio": "narrador.1f9b09bff5"
+      },
+      "audio": "narrador.026a022257"
+    },
+    {
+      "id": "rapido",
+      "es": "rápido",
+      "fr": "vite, rapide (¡rápido ! = vite !)",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "rápida",
+      "emoji": "⚡",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "¡Rápido, que son las doce menos cinco!",
+        "fr": "Vite, il est midi moins cinq !",
+        "voz": "narrador",
+        "audio": "narrador.6fd31eda95"
+      },
+      "audio": "narrador.28216bb78b"
+    },
+    {
+      "id": "cuidado",
+      "es": "cuidado",
+      "fr": "attention ! (¡cuidado! = fais attention !)",
+      "genero": "m",
+      "emoji": "⚠️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "¡Cuidado, que quema!",
+        "fr": "Attention, ça brûle !",
+        "voz": "narrador",
+        "audio": "narrador.0d4eb4fef4"
+      },
+      "audio": "narrador.ff6aa34304"
+    },
+    {
+      "id": "hay_que",
+      "es": "hay que",
+      "fr": "il faut + infinitif (obligation pour tout le monde)",
+      "emoji": "👉",
+      "tags": [
+        "obligacion"
+      ],
+      "ejemplo": {
+        "es": "Hay que encender las luces.",
+        "fr": "Il faut allumer les lumières.",
+        "voz": "narrador",
+        "audio": "narrador.0df213c8a0"
+      },
+      "audio": "narrador.60576816cd"
+    },
+    {
+      "id": "tener_que",
+      "es": "tener que",
+      "fr": "devoir + infinitif (obligation personnelle : tengo que, tienes que…)",
+      "emoji": "📋",
+      "tags": [
+        "obligacion"
+      ],
+      "ejemplo": {
+        "es": "Tengo que comprar los regalos.",
+        "fr": "Je dois acheter les cadeaux.",
+        "voz": "narrador",
+        "audio": "narrador.8a829d5d90"
+      },
+      "audio": "narrador.a418d90998"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_imperativo",
+      "titulo": {
+        "es": "Mira, come, abre",
+        "fr": "L’impératif : donner un ordre à « tú »"
+      },
+      "ejemplos": [
+        {
+          "es": "Mira las luces de Madrid.",
+          "fr": "Regarde les lumières de Madrid.",
+          "voz": "paloma",
+          "audio": "paloma.6c1069e889",
+          "resaltar": [
+            "Mira"
+          ]
+        },
+        {
+          "es": "Come las doce uvas.",
+          "fr": "Mange les douze raisins.",
+          "voz": "chema",
+          "audio": "chema.ff785a2b3a",
+          "resaltar": [
+            "Come"
+          ]
+        },
+        {
+          "es": "Abre tu regalo.",
+          "fr": "Ouvre ton cadeau.",
+          "voz": "nacho",
+          "audio": "nacho.f786838b7a",
+          "resaltar": [
+            "Abre"
+          ]
+        },
+        {
+          "es": "Escucha el villancico y canta con nosotros.",
+          "fr": "Écoute le chant de Noël et chante avec nous.",
+          "voz": "rosa",
+          "audio": "rosa.6a42c407df",
+          "resaltar": [
+            "Escucha",
+            "canta"
+          ]
+        },
+        {
+          "es": "Chicos, esperad aquí, por favor.",
+          "fr": "Les enfants, attendez ici, s’il vous plaît.",
+          "voz": "paloma",
+          "audio": "paloma.ba021f2f78",
+          "resaltar": [
+            "esperad"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para dar una orden a «tú», usamos la forma de «él» del presente: él mira → ¡mira!; él come → ¡come!; él abre → ¡abre! Para «vosotros»: la r del infinitivo cambia por d: mirad, comed, abrid.",
+        "fr": "Pour donner un ordre à « tú », on utilise la forme « él » du présent : él mira → ¡mira ! ; él come → ¡come ! ; él abre → ¡abre ! Pour « vosotros » : le r de l’infinitif devient d : mirad, comed, abrid.",
+        "voz": "narrador",
+        "audio": "narrador.410276ce72"
+      },
+      "pista": "L'impératif affirmatif sert à donner un ordre, un conseil ou une consigne (tu en connais déjà plusieurs de l'école : escucha, lee, abre, repite). Pour « tú » (une seule personne que tu tutoies), la forme est identique à la troisième personne du singulier du présent : él habla → ¡habla!, él come → ¡come!, él escribe → ¡escribe! Pour « vosotros » (plusieurs personnes que tu tutoies, en Espagne), on remplace le -r final de l'infinitif par -d : hablad, comed, escribid. Il n'y a pas de pronom sujet (on ne dit pas « tú mira »). Le « por favor » adoucit l'ordre. Pour dire « ne fais pas… », la forme change complètement (no mires, no comas…) : on la verra plus tard. Au Mexique et en Amérique latine, on dit « ustedes » (¡miren!) à la place de vosotros ; en Argentine, le « vos » donne ¡mirá!, ¡comé! (tu entendras ça à Buenos Aires).",
+      "tabla": {
+        "encabezado": [
+          "Infinitivo",
+          "tú",
+          "vosotros"
+        ],
+        "filas": [
+          [
+            "mirar",
+            "mira",
+            "mirad"
+          ],
+          [
+            "cantar",
+            "canta",
+            "cantad"
+          ],
+          [
+            "comer",
+            "come",
+            "comed"
+          ],
+          [
+            "abrir",
+            "abre",
+            "abrid"
+          ],
+          [
+            "esperar",
+            "espera",
+            "esperad"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_imperativo_irr",
+      "titulo": {
+        "es": "Ven, pon, di, enciende",
+        "fr": "Les impératifs irréguliers à connaître"
+      },
+      "ejemplos": [
+        {
+          "es": "Ven aquí, Nacho.",
+          "fr": "Viens ici, Nacho.",
+          "voz": "paloma",
+          "audio": "paloma.97b13878bd",
+          "resaltar": [
+            "Ven"
+          ]
+        },
+        {
+          "es": "Pon el regalo en la mesa.",
+          "fr": "Mets le cadeau sur la table.",
+          "voz": "chema",
+          "audio": "chema.55e08786f4",
+          "resaltar": [
+            "Pon"
+          ]
+        },
+        {
+          "es": "Di «feliz Navidad».",
+          "fr": "Dis « joyeux Noël ».",
+          "voz": "rosa",
+          "audio": "rosa.9cf1f5d2a3",
+          "resaltar": [
+            "Di"
+          ]
+        },
+        {
+          "es": "Enciende las luces, por favor.",
+          "fr": "Allume les lumières, s’il te plaît.",
+          "voz": "nacho",
+          "audio": "nacho.013f901521",
+          "resaltar": [
+            "Enciende"
+          ]
+        },
+        {
+          "es": "Prueba el turrón, está muy rico.",
+          "fr": "Goûte le turrón, il est très bon.",
+          "voz": "chema",
+          "audio": "chema.050c7beccc",
+          "resaltar": [
+            "Prueba"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Algunos verbos tienen un imperativo especial: venir → ven, poner → pon, decir → di, ir → ve. Y los verbos con cambio de vocal lo mantienen: encender → enciende, probar → prueba.",
+        "fr": "Certains verbes ont un impératif spécial : venir → ven, poner → pon, decir → di, ir → ve. Et les verbes qui changent de voyelle la gardent : encender → enciende, probar → prueba.",
+        "voz": "narrador",
+        "audio": "narrador.5cf1b9dbac"
+      },
+      "pista": "Huit verbes courants ont un impératif « tú » irrégulier : venir → ven, poner → pon, decir → di, ir → ve, hacer → haz, salir → sal, ser → sé, tener → ten. Apprends-les par cœur (tu en as besoin tous les jours : « ven aquí », « di la verdad », « ten cuidado »). Les verbes à diphtongue (e→ie, o→ue) gardent la diphtongue à l'impératif tú, puisque la forme est celle de « él » : encender → enciende, probar → prueba, contar → cuenta, empezar → empieza. Attention : pour « vosotros », ces verbes sont réguliers : venid, poned, decid, id (et encended, probad : pas de diphtongue, comme nosotros). Les accents d'orthographe : « di » et « ve » n'ont pas d'accent ; « sé » (verbe ser) en a un pour le distinguer de « se ».",
+      "tabla": {
+        "encabezado": [
+          "Infinitivo",
+          "tú",
+          "vosotros"
+        ],
+        "filas": [
+          [
+            "venir",
+            "ven",
+            "venid"
+          ],
+          [
+            "poner",
+            "pon",
+            "poned"
+          ],
+          [
+            "decir",
+            "di",
+            "decid"
+          ],
+          [
+            "ir",
+            "ve",
+            "id"
+          ],
+          [
+            "encender",
+            "enciende",
+            "encended"
+          ],
+          [
+            "probar",
+            "prueba",
+            "probad"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_hay_que",
+      "titulo": {
+        "es": "Hay que encender las luces",
+        "fr": "Il faut… : hay que + infinitif"
+      },
+      "ejemplos": [
+        {
+          "es": "Hay que encender las luces.",
+          "fr": "Il faut allumer les lumières.",
+          "voz": "paloma",
+          "audio": "paloma.0df213c8a0",
+          "resaltar": [
+            "Hay que encender"
+          ]
+        },
+        {
+          "es": "En Nochevieja hay que comer doce uvas.",
+          "fr": "Le soir du 31, il faut manger douze raisins.",
+          "voz": "nacho",
+          "audio": "nacho.857bbe8704",
+          "resaltar": [
+            "hay que comer"
+          ]
+        },
+        {
+          "es": "Hay que esperar las campanadas.",
+          "fr": "Il faut attendre les coups de cloche.",
+          "voz": "rosa",
+          "audio": "rosa.8c8100ab32",
+          "resaltar": [
+            "Hay que esperar"
+          ]
+        },
+        {
+          "es": "Para ganar un premio, hay que comprar un número.",
+          "fr": "Pour gagner un prix, il faut acheter un numéro.",
+          "voz": "paloma",
+          "audio": "paloma.6f20c1d498",
+          "resaltar": [
+            "hay que comprar"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para decir que algo es necesario para todos, usamos hay que + infinitivo: hay que encender, hay que esperar. «Hay que» no cambia nunca.",
+        "fr": "Pour dire que quelque chose est nécessaire pour tout le monde, on utilise hay que + infinitif : hay que encender, hay que esperar. « Hay que » ne change jamais.",
+        "voz": "narrador",
+        "audio": "narrador.546f44dbc4"
+      },
+      "pista": "« Hay que + infinitif » = il faut + infinitif. C'est une obligation générale, impersonnelle, pour tout le monde (il n'y a pas de personne précise). Cette expression ne se conjugue pas : on dit toujours « hay que », jamais « tengo que » dans ce sens-là. C'est le « hay » de « hay un libro » (il y a) suivi de « que » + infinitif. Exemples : « Hay que ser puntual » (il faut être ponctuel), « Hay que comer doce uvas ». Pour une obligation qui concerne une personne précise (moi, toi, elle), on utilise « tener que » (carte suivante). Pour la négation : « no hay que » = il ne faut pas.",
+      "tabla": {
+        "encabezado": [
+          "Expresión",
+          "Significado"
+        ],
+        "filas": [
+          [
+            "hay que comer",
+            "il faut manger"
+          ],
+          [
+            "hay que esperar",
+            "il faut attendre"
+          ],
+          [
+            "no hay que gritar",
+            "il ne faut pas crier"
+          ],
+          [
+            "hay que ayudar",
+            "il faut aider"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_tener_que",
+      "titulo": {
+        "es": "Tengo que comprar regalos",
+        "fr": "Je dois… : tener que + infinitif"
+      },
+      "ejemplos": [
+        {
+          "es": "Tengo que comprar los regalos.",
+          "fr": "Je dois acheter les cadeaux.",
+          "voz": "viajero",
+          "audio": "viajero.8a829d5d90",
+          "resaltar": [
+            "Tengo que comprar"
+          ]
+        },
+        {
+          "es": "Tienes que probar el turrón.",
+          "fr": "Tu dois goûter le turrón.",
+          "voz": "chema",
+          "audio": "chema.afc66ebc83",
+          "resaltar": [
+            "Tienes que probar"
+          ]
+        },
+        {
+          "es": "Marina tiene que ayudar a Chema.",
+          "fr": "Marina doit aider Chema.",
+          "voz": "nacho",
+          "audio": "nacho.20ffd31303",
+          "resaltar": [
+            "tiene que ayudar"
+          ]
+        },
+        {
+          "es": "Tenemos que estar en la Puerta del Sol a las doce.",
+          "fr": "Nous devons être à la Puerta del Sol à midi (à minuit : « a medianoche »).",
+          "voz": "paloma",
+          "audio": "paloma.81ca925acf",
+          "resaltar": [
+            "Tenemos que estar"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para una obligación personal usamos tener que + infinitivo: tengo que, tienes que, tiene que, tenemos que… El verbo «tener» cambia (tengo, tienes, tiene), «que» no.",
+        "fr": "Pour une obligation personnelle, on utilise tener que + infinitif : tengo que, tienes que, tiene que, tenemos que… Le verbe « tener » change (tengo, tienes, tiene), « que » ne change pas.",
+        "voz": "narrador",
+        "audio": "narrador.77a7ff5007"
+      },
+      "pista": "« Tener que + infinitif » = devoir + infinitif, pour une personne précise : tengo que estudiar (je dois étudier), Marina tiene que ayudar (Marina doit aider). On conjugue « tener » (c'est un verbe à diphtongue irrégulier : tengo, tienes, tiene, tenemos, tenéis, tienen) et « que » + infinitif restent. Tu connais déjà « tener » pour l'âge (tengo doce años) ; ne confonds pas « tengo que ir » (je dois y aller) et « voy a ir » (je vais y aller). Différence avec « hay que » : « hay que » est général (il faut, pour tout le monde), « tener que » concerne une personne (je dois, tu dois). Le « que » est obligatoire : « tengo estudiar » est faux. Au futur proche, on peut les combiner : « mañana tengo que comprar un regalo ».",
+      "tabla": {
+        "encabezado": [
+          "Pronombre",
+          "tener que + comprar"
+        ],
+        "filas": [
+          [
+            "yo",
+            "tengo que comprar"
+          ],
+          [
+            "tú",
+            "tienes que comprar"
+          ],
+          [
+            "él / ella",
+            "tiene que comprar"
+          ],
+          [
+            "nosotros",
+            "tenemos que comprar"
+          ],
+          [
+            "vosotros",
+            "tenéis que comprar"
+          ],
+          [
+            "ellos / ellas",
+            "tienen que comprar"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u06-q01",
+      "tipo": "cinematica",
+      "titulo": "Madrid a oscuras",
+      "emoji": "🌃",
+      "intro": {
+        "es": "¡Bienvenidos otra vez a Madrid! Pero esta noche… no hay luces.",
+        "fr": "Bienvenue encore à Madrid ! Mais cette nuit… il n’y a pas de lumières.",
+        "voz": "nacho",
+        "audio": "nacho.3cad652158"
+      },
+      "pista": "Retour à Madrid, de nuit et en hiver : tu retrouves Nacho et Rosa, et tu découvres que la Sombra a éteint les lumières de Noël.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u06-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u06-intro",
+          "escena": {
+            "id": "u06-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 6 · ¡Feliz Navidad! · Madrid",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée remonte la côte espagnole et rejoint Madrid, zoom sur la ville de nuit ; carte-titre « Capítulo 6 · ¡Feliz Navidad! · Madrid ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 6 · ¡Feliz Navidad! · Madrid",
+                "lineas": [
+                  {
+                    "es": "Capítulo seis: ¡feliz Navidad!",
+                    "fr": "Chapitre six : joyeux Noël !",
+                    "voz": "narrador",
+                    "audio": "narrador.d42375639d"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Madrid de nuit en décembre : la Gran Vía illuminée, la Puerta del Sol et son sapin, le marché de Noël de la Plaza Mayor avec ses stands de crèches, des enfants en écharpe, une brume de froid.",
+                "camara": "travelling lent dans la rue illuminée",
+                "lineas": [
+                  {
+                    "es": "Madrid de noche. En diciembre, la ciudad brilla con miles de luces.",
+                    "fr": "Madrid de nuit. En décembre, la ville brille de milliers de lumières.",
+                    "voz": "narrador",
+                    "audio": "narrador.1ee47d28fb"
+                  },
+                  {
+                    "es": "Pero esta noche… algo no funciona.",
+                    "fr": "Mais cette nuit… quelque chose ne va pas.",
+                    "voz": "narrador",
+                    "audio": "narrador.84fd423779"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u06-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Madrid es la capital de España.",
+            "fr": "Madrid est la capitale de l’Espagne.",
+            "voz": "narrador",
+            "audio": "narrador.6916d74dbd"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u06-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En Madrid hace mucho calor en diciembre.",
+            "fr": "À Madrid, il fait très chaud en décembre.",
+            "voz": "narrador",
+            "audio": "narrador.a616f1104c"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u06-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u06-historia",
+          "escena": {
+            "id": "u06-historia",
+            "tipo": "historia",
+            "titulo": "Madrid a oscuras",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Plaza Mayor, marché de Noël : les lumières sont éteintes, les stands à peine éclairés par des bougies. Nacho arrive en trottinette devant Álex, Marina et le Quetzal.",
+                "camara": "plan large puis champ / contre-champ",
+                "personajes": [
+                  "nacho",
+                  "marina",
+                  "quetzal",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Hola otra vez, viajeros! ¡Madrid está a oscuras! Las luces de Navidad están apagadas.",
+                    "fr": "Salut encore, voyageurs ! Madrid est dans le noir ! Les lumières de Noël sont éteintes.",
+                    "voz": "nacho",
+                    "audio": "nacho.ebf4f0da01"
+                  },
+                  {
+                    "es": "¿A oscuras? ¡Pero si es Navidad!",
+                    "fr": "Dans le noir ? Mais c’est Noël !",
+                    "voz": "marina",
+                    "audio": "marina.6ddbeef6e1"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Le stand de Rosa, la churrera : de la vapeur, des churros dorés, personne dans la file. Rosa tend des tasses de chocolat chaud.",
+                "camara": "plan moyen sur le stand, buée des tasses",
+                "personajes": [
+                  "rosa",
+                  "nacho"
+                ],
+                "lineas": [
+                  {
+                    "es": "Hace mucho frío y no hay luces. Mis churros no se venden. Tomad un chocolate caliente.",
+                    "fr": "Il fait très froid et il n’y a pas de lumières. Mes churros ne se vendent pas. Prenez un chocolat chaud.",
+                    "voz": "rosa",
+                    "audio": "rosa.69b837386c"
+                  },
+                  {
+                    "es": "Y las campanadas no suenan. ¡Sin campanadas, no hay Nochevieja!",
+                    "fr": "Et les coups de cloche ne sonnent pas. Sans coups de cloche, pas de Nochevieja !",
+                    "voz": "nacho",
+                    "audio": "nacho.5d6ff2e483"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Au centre de la place, un immense sapin éteint. Une ombre noire éteint une à une les dernières guirlandes. Paloma, la vendeuse de loterie, serre ses billets contre elle.",
+                "personajes": [
+                  "sombra",
+                  "paloma"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin luces, no hay fiesta. Sin ruido, no hay Navidad. Silencio…",
+                    "fr": "Sans lumières, pas de fête. Sans bruit, pas de Noël. Silence…",
+                    "voz": "sombra",
+                    "audio": "sombra.481d5f9d93"
+                  },
+                  {
+                    "es": "¡Esa Sombra se lleva hasta mis villancicos! Chicos, hay que encender las luces.",
+                    "fr": "Cette Sombra emporte même mes chants de Noël ! Les enfants, il faut allumer les lumières.",
+                    "voz": "paloma",
+                    "audio": "paloma.8acab5433c"
+                  }
+                ],
+                "musica": "tension douce, boîte à musique et guitare"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "En haut du sapin, l’étoile est éteinte : un reflet vert y brille. Le Quetzal la montre du bec.",
+                "personajes": [
+                  "quetzal",
+                  "paloma"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma está en la estrella del gran árbol.",
+                    "fr": "La plume est dans l’étoile du grand sapin.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.5e91d23079"
+                  },
+                  {
+                    "es": "Entonces, ¡ayudadnos! Tenemos que encender todas las luces.",
+                    "fr": "Alors, aidez-nous ! Nous devons allumer toutes les lumières.",
+                    "voz": "paloma",
+                    "audio": "paloma.952da33227"
+                  }
+                ],
+                "musica": "thème d’aventure, clochettes"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u06-q01-s05",
+          "tipo": "flashcard",
+          "vocab": [
+            "abrigo",
+            "bufanda"
+          ]
+        },
+        {
+          "id": "u06-q01-s06",
+          "tipo": "flashcard",
+          "vocab": [
+            "encender",
+            "apagar",
+            "ayudar",
+            "cortar",
+            "tomar",
+            "rapido",
+            "cuidado"
+          ]
+        },
+        {
+          "id": "u06-q01-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "¡Madrid está a oscuras! Las luces de Navidad están apagadas.",
+            "voz": "nacho",
+            "audio": "nacho.11e405b577"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Las luces están más bonitas que nunca.",
+              "correcta": false
+            },
+            {
+              "texto": "Nacho tiene frío y necesita una bufanda.",
+              "correcta": false
+            },
+            {
+              "texto": "La ciudad no tiene luz esta noche.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u06-q01-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hace mucho frío y no hay luces. Mis churros no se venden.",
+            "voz": "rosa",
+            "audio": "rosa.f69509bdab"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Rosa tiene problemas con su negocio esta noche.",
+              "correcta": true
+            },
+            {
+              "texto": "Rosa tiene mucho calor y muchos clientes.",
+              "correcta": false
+            },
+            {
+              "texto": "Rosa vende zapatos de Navidad.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q01-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Rosa vende churros en Madrid.",
+            "fr": "Rosa vend des churros à Madrid.",
+            "voz": "narrador",
+            "audio": "narrador.5a7bbfd14a"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u06-q01-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "nacho",
+          "replica": {
+            "es": "¡Hola otra vez, viajeros! ¿Qué tal?",
+            "fr": "Salut encore, voyageurs ! Ça va ?",
+            "voz": "nacho",
+            "audio": "nacho.fcfe21fbd2"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "¡Hola, Nacho! Estoy bien, gracias. ¿Y tú?",
+                "voz": "viajero",
+                "audio": "viajero.d78980844c"
+              },
+              "fr": "Salut, Nacho ! Je vais bien, merci. Et toi ?",
+              "correcta": true,
+              "reaccion": {
+                "es": "Yo, un poco preocupado, pero contento de veros.",
+                "fr": "Moi, un peu inquiet, mais content de vous voir.",
+                "voz": "nacho",
+                "audio": "nacho.02c0ea7494",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Son las doce en punto.",
+                "voz": "viajero",
+                "audio": "viajero.92d936665d"
+              },
+              "fr": "Il est douze heures pile.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ya, pero yo te pregunto qué tal estás.",
+                "fr": "Oui, mais moi je te demande comment tu vas.",
+                "voz": "nacho",
+                "audio": "nacho.7d4a10b044",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo Madrid.",
+                "voz": "viajero",
+                "audio": "viajero.c7c579433c"
+              },
+              "fr": "Je m’appelle Madrid.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú te llamas Madrid? ¡Como mi ciudad!",
+                "fr": "Toi, tu t’appelles Madrid ? Comme ma ville !",
+                "voz": "nacho",
+                "audio": "nacho.5bc546732e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q01-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "¿Tenéis frío, chicos?",
+            "fr": "Vous avez froid, les enfants ?",
+            "voz": "rosa",
+            "audio": "rosa.92de18a608"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, tenemos mucho frío.",
+                "voz": "viajero",
+                "audio": "viajero.fc356df85b"
+              },
+              "fr": "Oui, nous avons très froid.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Pues tomad este chocolate caliente.",
+                "fr": "Alors prenez ce chocolat chaud.",
+                "voz": "rosa",
+                "audio": "rosa.df6f1e69ab",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, somos frío.",
+                "voz": "viajero",
+                "audio": "viajero.5ede5cfdfc"
+              },
+              "fr": "Oui, nous sommes froid.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «frío» usamos «tener»: «tenemos frío».",
+                "fr": "Avec « frío », on utilise « tener » : « tenemos frío ».",
+                "voz": "rosa",
+                "audio": "rosa.e3fb233e3b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, hace sed.",
+                "voz": "viajero",
+                "audio": "viajero.5d42269775"
+              },
+              "fr": "Non, il fait soif.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, hace frío. La sed es otra cosa.",
+                "fr": "Non, il fait froid. La soif, c’est autre chose.",
+                "voz": "rosa",
+                "audio": "rosa.aef311ac64",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q01-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Madrid",
+            "está",
+            "a",
+            "oscuras",
+            "esta",
+            "noche."
+          ],
+          "habla": {
+            "es": "Madrid está a oscuras esta noche.",
+            "voz": "nacho",
+            "audio": "nacho.b39c976e9d"
+          },
+          "fr": "Madrid est dans le noir cette nuit."
+        },
+        {
+          "id": "u06-q01-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, Nacho. Me llamo Álex y tengo frío.",
+            "fr": "Salut, Nacho. Je m’appelle Álex et j’ai froid. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.ee64ba6091"
+          },
+          "aceptadas": [
+            "hola nacho me llamo álex y tengo frío"
+          ],
+          "patrones": [
+            "hola nacho me llamo {nombre} y tengo frío"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del abrigo",
+            "efecto": "Una bufanda caliente aparece alrededor de tu cuello"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u06-q02",
+      "tipo": "vocabulario",
+      "titulo": "Las fiestas de invierno",
+      "emoji": "🎄",
+      "intro": {
+        "es": "¡Feliz Navidad, chicos! Aquí hay muchas fiestas en pocas semanas.",
+        "fr": "Joyeux Noël, les enfants ! Ici, il y a beaucoup de fêtes en quelques semaines.",
+        "voz": "paloma",
+        "audio": "paloma.0422236a4b"
+      },
+      "pista": "Les fêtes d’hiver en Espagne (Navidad, Nochebuena, Nochevieja, Reyes) et leur vocabulaire ; les dates de décembre-janvier ; tu parles de TES fêtes.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u06-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "navidad",
+            "nochebuena",
+            "nochevieja",
+            "ano_nuevo",
+            "reyes_magos",
+            "cabalgata",
+            "feliz"
+          ]
+        },
+        {
+          "id": "u06-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "arbol_navidad",
+            "estrella",
+            "luces",
+            "villancico",
+            "campanadas",
+            "uva",
+            "belen"
+          ]
+        },
+        {
+          "id": "u06-q02-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "arbol_navidad"
+            },
+            {
+              "vocab": "estrella"
+            },
+            {
+              "vocab": "luces"
+            },
+            {
+              "vocab": "campanadas"
+            },
+            {
+              "vocab": "uva"
+            },
+            {
+              "vocab": "villancico"
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "uva",
+            "voz": "narrador",
+            "audio": "narrador.2d2c2a1400"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "uva",
+              "correcta": true
+            },
+            {
+              "vocab": "estrella",
+              "correcta": false
+            },
+            {
+              "vocab": "campanadas",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "La Nochebuena es el veinticuatro de diciembre.",
+            "voz": "paloma",
+            "audio": "paloma.35294fcc52"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "25/12",
+              "correcta": false
+            },
+            {
+              "texto": "24/12",
+              "correcta": true
+            },
+            {
+              "texto": "31/12",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Nochevieja es el treinta y uno de diciembre.",
+            "voz": "chema",
+            "audio": "chema.c291dc6cc6"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "1/1",
+              "correcta": false
+            },
+            {
+              "texto": "24/12",
+              "correcta": false
+            },
+            {
+              "texto": "31/12",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los Reyes Magos llegan el seis de enero.",
+            "voz": "paloma",
+            "audio": "paloma.a1d5119715"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "6/1",
+              "correcta": true
+            },
+            {
+              "texto": "5/12",
+              "correcta": false
+            },
+            {
+              "texto": "1/1",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En ___ comemos doce uvas.",
+          "respuesta": "Nochevieja",
+          "opciones": [
+            "Nochevieja",
+            "Nochebuena",
+            "cabalgata"
+          ],
+          "habla": {
+            "es": "En Nochevieja comemos doce uvas.",
+            "voz": "nacho",
+            "audio": "nacho.c104c04631"
+          },
+          "fr": "Le soir du 31, nous mangeons douze raisins."
+        },
+        {
+          "id": "u06-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El veinticuatro de diciembre es ___.",
+          "respuesta": "Nochebuena",
+          "opciones": [
+            "Nochebuena",
+            "Nochevieja",
+            "Año Nuevo"
+          ],
+          "habla": {
+            "es": "El veinticuatro de diciembre es Nochebuena.",
+            "voz": "paloma",
+            "audio": "paloma.1a0d381e93"
+          },
+          "fr": "Le vingt-quatre décembre, c’est Nochebuena."
+        },
+        {
+          "id": "u06-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¡Feliz ___!",
+          "respuesta": "Navidad",
+          "opciones": [
+            "Navidad",
+            "cabalgata",
+            "estrella"
+          ],
+          "habla": {
+            "es": "¡Feliz Navidad!",
+            "voz": "rosa",
+            "audio": "rosa.e33f6d68b3"
+          },
+          "fr": "Joyeux Noël !"
+        },
+        {
+          "id": "u06-q02-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La cabalgata de Reyes es en agosto.",
+            "fr": "La cabalgata de Reyes est en août.",
+            "voz": "narrador",
+            "audio": "narrador.12fed8df96"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Es el cinco de enero, por la noche.",
+            "fr": "Elle a lieu le cinq janvier, le soir.",
+            "voz": "narrador",
+            "audio": "narrador.2a9470bb4e"
+          }
+        },
+        {
+          "id": "u06-q02-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "paloma",
+          "replica": {
+            "es": "¡Feliz Navidad, chicos! ¿Qué día es Nochebuena?",
+            "fr": "Joyeux Noël, les enfants ! Quel jour est Nochebuena ?",
+            "voz": "paloma",
+            "audio": "paloma.198957e455"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Es el veinticuatro de diciembre.",
+                "voz": "viajero",
+                "audio": "viajero.0f9e97989a"
+              },
+              "fr": "C’est le vingt-quatre décembre.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Esa noche cenamos en familia.",
+                "fr": "Exact ! Ce soir-là, nous dînons en famille.",
+                "voz": "paloma",
+                "audio": "paloma.8f7b5d23dd",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es el treinta y uno de diciembre.",
+                "voz": "viajero",
+                "audio": "viajero.329f7b91ea"
+              },
+              "fr": "C’est le trente et un décembre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ese día es Nochevieja, no Nochebuena.",
+                "fr": "Ce jour-là, c’est Nochevieja, pas Nochebuena.",
+                "voz": "paloma",
+                "audio": "paloma.cce7ea5677",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es el seis de enero.",
+                "voz": "viajero",
+                "audio": "viajero.6dcc2b77fd"
+              },
+              "fr": "C’est le six janvier.",
+              "correcta": false,
+              "reaccion": {
+                "es": "El seis de enero llegan los Reyes Magos.",
+                "fr": "Le six janvier, les Rois mages arrivent.",
+                "voz": "paloma",
+                "audio": "paloma.4f3d21a5df",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q02-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y felicita a alguien.",
+            "fr": "Écoute et félicite : change « Navidad » (por ejemplo « ¡Feliz Año Nuevo! » ou « ¡Feliz cumpleaños! »).",
+            "voz": "narrador",
+            "audio": "narrador.2129cc9ba8"
+          },
+          "objetivo": {
+            "es": "¡Feliz Navidad!",
+            "fr": "Joyeux Noël ! (change la fête)",
+            "voz": "viajero",
+            "audio": "viajero.e33f6d68b3"
+          },
+          "aceptadas": [
+            "feliz navidad"
+          ],
+          "patrones": [
+            "feliz {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del deseo",
+            "efecto": "Luces de colores bailan sobre tu cabeza"
+          }
+        },
+        {
+          "id": "u06-q02-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe cómo celebras la Navidad.",
+            "fr": "Écris comment tu fêtes Noël.",
+            "voz": "narrador",
+            "audio": "narrador.96fb9135d2"
+          },
+          "plantilla": "En Navidad como ___ con ___. Mi regalo favorito es ___.",
+          "campos": [
+            {
+              "id": "comida",
+              "pista": "Que manges-tu à Noël ? (turrón, marisco, pavo, bûche…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "con",
+              "pista": "Avec qui ? (mi familia, mis abuelos, mis amigos…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "regalo",
+              "pista": "Ton cadeau préféré, avec son article (un libro, una guitarra, un balón…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "En Navidad como turrón con mi familia. Mi regalo favorito es un libro.",
+            "fr": "À Noël, je mange du turrón avec ma famille. Mon cadeau préféré est un livre.",
+            "voz": "viajero",
+            "audio": "viajero.c1bb882a8e"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u06-q03",
+      "tipo": "dialogo",
+      "titulo": "La pastelería de Chema",
+      "emoji": "🥐",
+      "intro": {
+        "es": "Buenas noches. En diciembre trabajo de noche: tengo roscones, turrones y mucho chocolate.",
+        "fr": "Bonsoir. En décembre, je travaille de nuit : j’ai des roscones, des turrones et beaucoup de chocolat.",
+        "voz": "chema",
+        "audio": "chema.ba65b72c9e"
+      },
+      "pista": "Les douceurs et plats de Noël (turrón, roscón, marisco, churros, chocolate), et « hace frío / tengo frío » ; tu commandes et tu comprends un menu de Nochebuena.",
+      "stats": [
+        "hablar",
+        "leer",
+        "escuchar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u06-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "roscon",
+            "turron",
+            "marisco",
+            "churros",
+            "chocolate_nav",
+            "dulce_nav",
+            "hace_frio"
+          ]
+        },
+        {
+          "id": "u06-q03-s02",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "roscon"
+            },
+            {
+              "vocab": "turron"
+            },
+            {
+              "vocab": "marisco"
+            },
+            {
+              "vocab": "churros"
+            },
+            {
+              "vocab": "chocolate_nav"
+            },
+            {
+              "vocab": "uva"
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "churros",
+            "voz": "rosa",
+            "audio": "rosa.da687fa2af"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "roscon",
+              "correcta": false
+            },
+            {
+              "vocab": "churros",
+              "correcta": true
+            },
+            {
+              "vocab": "turron",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s04",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chema",
+          "replica": {
+            "es": "Buenas noches. ¿Qué queréis? Tengo roscón, turrón y chocolate caliente.",
+            "fr": "Bonsoir. Que voulez-vous ? J’ai du roscón, du turrón et du chocolat chaud.",
+            "voz": "chema",
+            "audio": "chema.61b2a54e11"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Quiero un chocolate caliente, por favor.",
+                "voz": "viajero",
+                "audio": "viajero.3d54aa014d"
+              },
+              "fr": "Je veux un chocolat chaud, s’il vous plaît.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Marchando! Con este frío, es lo mejor.",
+                "fr": "C’est parti ! Avec ce froid, c’est ce qu’il y a de mieux.",
+                "voz": "chema",
+                "audio": "chema.30a9a863f5",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Quiero una bufanda, por favor.",
+                "voz": "viajero",
+                "audio": "viajero.b2ae0b7bbc"
+              },
+              "fr": "Je veux une écharpe, s’il vous plaît.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Esto es una pastelería, no una tienda de ropa.",
+                "fr": "Ici, c’est une pâtisserie, pas un magasin de vêtements.",
+                "voz": "chema",
+                "audio": "chema.844745dac4",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo turrón de doce años.",
+                "voz": "viajero",
+                "audio": "viajero.896219c6d8"
+              },
+              "fr": "J’ai du turrón de douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ja, ja. Entonces ya está muy duro.",
+                "fr": "Ha, ha. Alors il est déjà très dur.",
+                "voz": "chema",
+                "audio": "chema.bd44271c9a",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s05",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "¿Queréis churros con el chocolate?",
+            "fr": "Vous voulez des churros avec le chocolat ?",
+            "voz": "rosa",
+            "audio": "rosa.a365f23f89"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, queremos churros con chocolate.",
+                "voz": "viajero",
+                "audio": "viajero.375b49e79f"
+              },
+              "fr": "Oui, nous voulons des churros avec du chocolat.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Los churros de Rosa son los mejores.",
+                "fr": "Parfait ! Les churros de Rosa sont les meilleurs.",
+                "voz": "rosa",
+                "audio": "rosa.4922d8afad",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, gracias, hace calor.",
+                "voz": "viajero",
+                "audio": "viajero.4bd9132bec"
+              },
+              "fr": "Non, merci, il fait chaud.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Calor? ¡Si hace mucho frío!",
+                "fr": "Chaud ? Mais il fait très froid !",
+                "voz": "rosa",
+                "audio": "rosa.82c37230d2",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, quiero ir a churros.",
+                "voz": "viajero",
+                "audio": "viajero.13fd3c912b"
+              },
+              "fr": "Oui, je veux aller à churros.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Ir a churros… no. Mejor: «quiero churros».",
+                "fr": "Aller à churros… non. Mieux : « quiero churros ».",
+                "voz": "rosa",
+                "audio": "rosa.07b964bad5",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En Nochebuena mucha gente cena marisco con la familia.",
+            "voz": "chema",
+            "audio": "chema.b129a2cf5a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Es un desayuno de playa con amigos.",
+              "correcta": false
+            },
+            {
+              "texto": "Es una cena especial en casa con platos del mar.",
+              "correcta": true
+            },
+            {
+              "texto": "Es una merienda de turrón y chocolate.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En Navidad, en España, comemos muchos dulces. El turrón es un dulce de almendras y miel. También hay roscón, polvorones y mazapán. En Nochebuena, muchas familias cenan marisco o cordero. Después de la cena, todos cantan villancicos.",
+            "fr": "À Noël, en Espagne, nous mangeons beaucoup de sucreries. Le turrón est une sucrerie aux amandes et au miel. Il y a aussi du roscón, des polvorones (petits sablés) et du mazapán (massepain). À Nochebuena, beaucoup de familles dînent de fruits de mer ou d’agneau. Après le dîner, tout le monde chante des chants de Noël.",
+            "voz": "chema",
+            "audio": "chema.4b1bfc3596"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Con qué se hace el turrón?",
+                "fr": "Avec quoi fait-on le turrón ?",
+                "voz": "narrador",
+                "audio": "narrador.c964a50c76"
+              },
+              "opciones": [
+                {
+                  "texto": "Con arroz y pollo.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Con tomate y pan.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Con almendras y miel.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué cenan muchas familias en Nochebuena?",
+                "fr": "Que dînent beaucoup de familles à Nochebuena ?",
+                "voz": "narrador",
+                "audio": "narrador.3a6f259f74"
+              },
+              "opciones": [
+                {
+                  "texto": "Marisco o cordero.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo ensalada.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Churros con chocolate.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hacen después de la cena?",
+                "fr": "Que font-ils après le dîner ?",
+                "voz": "narrador",
+                "audio": "narrador.e63a7e2cfc"
+              },
+              "opciones": [
+                {
+                  "texto": "Duermen la siesta.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cantan villancicos.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Van al colegio.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u06-q03-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tengo mucho ___: necesito un abrigo.",
+          "respuesta": "frío",
+          "opciones": [
+            "frío",
+            "calor",
+            "hambre"
+          ],
+          "habla": {
+            "es": "Tengo mucho frío: necesito un abrigo.",
+            "voz": "nacho",
+            "audio": "nacho.a77b8391f5"
+          },
+          "fr": "J’ai très froid : j’ai besoin d’un manteau."
+        },
+        {
+          "id": "u06-q03-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy ___ mucho frío en Madrid.",
+          "respuesta": "hace",
+          "opciones": [
+            "hace",
+            "tiene",
+            "está"
+          ],
+          "habla": {
+            "es": "Hoy hace mucho frío en Madrid.",
+            "voz": "rosa",
+            "audio": "rosa.153232d180"
+          },
+          "fr": "Aujourd’hui, il fait très froid à Madrid. (météo → hacer)"
+        },
+        {
+          "id": "u06-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Para beber, un ___ caliente.",
+          "respuesta": "chocolate",
+          "opciones": [
+            "chocolate",
+            "turrón",
+            "roscón"
+          ],
+          "habla": {
+            "es": "Para beber, un chocolate caliente.",
+            "voz": "chema",
+            "audio": "chema.9c80edaaa4"
+          },
+          "fr": "Pour boire, un chocolat chaud."
+        },
+        {
+          "id": "u06-q03-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En España, el roscón de Reyes se come el veinticinco de diciembre.",
+            "fr": "En Espagne, le roscón des Rois se mange le vingt-cinq décembre.",
+            "voz": "narrador",
+            "audio": "narrador.b0fe8f397e"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Se come el seis de enero (y a veces el cinco por la noche).",
+            "fr": "On le mange le six janvier (et parfois le soir du cinq).",
+            "voz": "narrador",
+            "audio": "narrador.86c0376880"
+          }
+        },
+        {
+          "id": "u06-q03-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Quiero",
+            "chocolate",
+            "caliente",
+            "y",
+            "churros."
+          ],
+          "habla": {
+            "es": "Quiero chocolate caliente y churros.",
+            "voz": "viajero",
+            "audio": "viajero.c1cc64e13c"
+          },
+          "fr": "Je veux du chocolat chaud et des churros."
+        },
+        {
+          "id": "u06-q03-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y pide algo en la pastelería.",
+            "fr": "Écoute et demande ce que TU veux (un roscón, un chocolate, un zumo…). Change seulement « turrón » (garde « un »).",
+            "voz": "narrador",
+            "audio": "narrador.dd6a3207df"
+          },
+          "objetivo": {
+            "es": "Quiero un turrón, por favor.",
+            "fr": "Je veux un turrón, s’il vous plaît. (change le mot)",
+            "voz": "viajero",
+            "audio": "viajero.9abd6347d6"
+          },
+          "aceptadas": [
+            "quiero un turrón por favor"
+          ],
+          "patrones": [
+            "quiero un {nombre} por favor"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del dulce",
+            "efecto": "Una lluvia de azúcar cae sobre la pastelería"
+          }
+        },
+        {
+          "id": "u06-q03-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Hace mucho frío esta noche.",
+            "voz": "rosa",
+            "audio": "rosa.761cf09ee0"
+          },
+          "respuesta": "Hace mucho frío esta noche.",
+          "aceptadas": [
+            "hace mucho frío esta noche"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u06-q04",
+      "tipo": "forja",
+      "titulo": "La Forja: el imperativo",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "¡Mira! ¡Abre! ¡Canta! Ordenes. ¡Forja conmigo!",
+        "fr": "Regarde ! Ouvre ! Chante ! Des ordres. Forge avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.55b0a27843"
+      },
+      "pista": "L’impératif affirmatif : la forme « él » pour tú (mira, come, abre), -d pour vosotros (mirad), et les irréguliers à connaître (ven, pon, di, ve, enciende, prueba).",
+      "stats": [
+        "escribir",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u06-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "mirar",
+            "cantar",
+            "poner",
+            "venir",
+            "decir",
+            "abrir",
+            "probar_nav"
+          ]
+        },
+        {
+          "id": "u06-q04-s02",
+          "tipo": "grammar_card",
+          "ref": "g_imperativo"
+        },
+        {
+          "id": "u06-q04-s03",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ las luces, Nacho.",
+          "respuesta": "Mira",
+          "opciones": [
+            "Mira",
+            "Miras",
+            "Mirar"
+          ],
+          "habla": {
+            "es": "Mira las luces, Nacho.",
+            "voz": "paloma",
+            "audio": "paloma.109f73eaed"
+          },
+          "fr": "Regarde les lumières, Nacho."
+        },
+        {
+          "id": "u06-q04-s04",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ tu regalo, por favor.",
+          "respuesta": "Abre",
+          "opciones": [
+            "Abre",
+            "Abres",
+            "Abrir"
+          ],
+          "habla": {
+            "es": "Abre tu regalo, por favor.",
+            "voz": "chema",
+            "audio": "chema.c535ec1c12"
+          },
+          "fr": "Ouvre ton cadeau, s’il te plaît."
+        },
+        {
+          "id": "u06-q04-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Chicos, ___ aquí con nosotros.",
+          "respuesta": "venid",
+          "opciones": [
+            "venid",
+            "vienen",
+            "vengo"
+          ],
+          "habla": {
+            "es": "Chicos, venid aquí con nosotros.",
+            "voz": "paloma",
+            "audio": "paloma.b4a7319fa5"
+          },
+          "fr": "Les enfants, venez ici avec nous. (vosotros : venir → venid)"
+        },
+        {
+          "id": "u06-q04-s06",
+          "tipo": "grammar_card",
+          "ref": "g_imperativo_irr"
+        },
+        {
+          "id": "u06-q04-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ aquí, Marina.",
+          "respuesta": "Ven",
+          "opciones": [
+            "Ven",
+            "Viene",
+            "Venir"
+          ],
+          "habla": {
+            "es": "Ven aquí, Marina.",
+            "voz": "nacho",
+            "audio": "nacho.84ae3172a6"
+          },
+          "fr": "Viens ici, Marina."
+        },
+        {
+          "id": "u06-q04-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ «feliz Navidad», Álex.",
+          "respuesta": "Di",
+          "opciones": [
+            "Di",
+            "Dice",
+            "Decir"
+          ],
+          "habla": {
+            "es": "Di «feliz Navidad», Álex.",
+            "voz": "rosa",
+            "audio": "rosa.6d296f83cd"
+          },
+          "fr": "Dis « joyeux Noël », Álex."
+        },
+        {
+          "id": "u06-q04-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ la mesa para la cena.",
+          "respuesta": "Pon",
+          "opciones": [
+            "Pon",
+            "Pone",
+            "Poner"
+          ],
+          "habla": {
+            "es": "Pon la mesa para la cena.",
+            "voz": "chema",
+            "audio": "chema.8615ab8aeb"
+          },
+          "fr": "Mets la table pour le dîner."
+        },
+        {
+          "id": "u06-q04-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ las luces, por favor.",
+          "respuesta": "Enciende",
+          "opciones": [
+            "Enciende",
+            "Encende",
+            "Encender"
+          ],
+          "habla": {
+            "es": "Enciende las luces, por favor.",
+            "voz": "paloma",
+            "audio": "paloma.013f901521"
+          },
+          "fr": "Allume les lumières, s’il te plaît. (encender → enciende : diphtongue)"
+        },
+        {
+          "id": "u06-q04-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ el turrón, está muy rico.",
+          "respuesta": "Prueba",
+          "opciones": [
+            "Prueba",
+            "Probar",
+            "Pruebo"
+          ],
+          "habla": {
+            "es": "Prueba el turrón, está muy rico.",
+            "voz": "chema",
+            "audio": "chema.050c7beccc"
+          },
+          "fr": "Goûte le turrón, il est très bon. (probar → prueba)"
+        },
+        {
+          "id": "u06-q04-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Chicos, mirad las luces y cantad con nosotros.",
+            "voz": "paloma",
+            "audio": "paloma.6c6733f42e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Paloma hace una pregunta a los chicos.",
+              "correcta": false
+            },
+            {
+              "texto": "Paloma habla de un regalo.",
+              "correcta": false
+            },
+            {
+              "texto": "Paloma da dos órdenes a los chicos.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u06-q04-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chema",
+          "replica": {
+            "es": "Corta el roscón, por favor. Yo tengo las manos ocupadas.",
+            "fr": "Coupe le roscón, s’il te plaît. Moi, j’ai les mains prises.",
+            "voz": "chema",
+            "audio": "chema.137d6f2cbb"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Vale, ahora corto el roscón.",
+                "voz": "viajero",
+                "audio": "viajero.6fa5742ae0"
+              },
+              "fr": "D’accord, je coupe le roscón maintenant.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Gracias! Cuidado con el cuchillo.",
+                "fr": "Merci ! Fais attention au couteau.",
+                "voz": "chema",
+                "audio": "chema.5976e5f163",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Vale, soy un roscón.",
+                "voz": "viajero",
+                "audio": "viajero.a07db1da63"
+              },
+              "fr": "D’accord, je suis un roscón.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Un roscón? Entonces te corto yo a ti.",
+                "fr": "Un roscón ? Alors c’est moi qui te coupe.",
+                "voz": "chema",
+                "audio": "chema.36c489234b",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Vale, el roscón es azul.",
+                "voz": "viajero",
+                "audio": "viajero.5c59dbc2d0"
+              },
+              "fr": "D’accord, le roscón est bleu.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no es azul. Y tienes que cortarlo.",
+                "fr": "Mmm… il n’est pas bleu. Et tu dois le couper.",
+                "voz": "chema",
+                "audio": "chema.84d9425177",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q04-s14",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Enciende",
+            "las",
+            "luces",
+            "del",
+            "árbol",
+            "de",
+            "Navidad."
+          ],
+          "habla": {
+            "es": "Enciende las luces del árbol de Navidad.",
+            "voz": "paloma",
+            "audio": "paloma.71fbe29bbb"
+          },
+          "fr": "Allume les lumières du sapin de Noël."
+        },
+        {
+          "id": "u06-q04-s15",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo.",
+            "fr": "Écoute et répète le sort.",
+            "voz": "narrador",
+            "audio": "narrador.d1cd7484b4"
+          },
+          "objetivo": {
+            "es": "Ven aquí y mira el árbol.",
+            "fr": "Viens ici et regarde le sapin.",
+            "voz": "viajero",
+            "audio": "viajero.2aab8ed2e7"
+          },
+          "aceptadas": [
+            "ven aquí y mira el árbol"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la orden",
+            "efecto": "Las luces del árbol obedecen a tu voz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u06-q05",
+      "tipo": "forja",
+      "titulo": "La Forja: hay que y tener que",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Hay que encender. Tengo que ayudar. ¡Forja!",
+        "fr": "Il faut allumer. Je dois aider. Forge !",
+        "voz": "quetzal",
+        "audio": "quetzal.fffc1a253e"
+      },
+      "pista": "Deux façons de dire une obligation : hay que + infinitif (général : « il faut ») et tener que + infinitif (personnel : « je dois ») ; conjugaison de tener (tengo, tienes, tiene…).",
+      "stats": [
+        "escribir",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u06-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "hay_que",
+            "tener_que"
+          ]
+        },
+        {
+          "id": "u06-q05-s02",
+          "tipo": "grammar_card",
+          "ref": "g_hay_que"
+        },
+        {
+          "id": "u06-q05-s03",
+          "tipo": "grammar_card",
+          "ref": "g_tener_que"
+        },
+        {
+          "id": "u06-q05-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "yo",
+          "radical": "teng",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tengo",
+          "habla": {
+            "es": "yo tengo",
+            "voz": "viajero",
+            "audio": "viajero.710c1fb87a"
+          },
+          "fr": "Moi, j’ai…"
+        },
+        {
+          "id": "u06-q05-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "tú",
+          "radical": "tien",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tienes",
+          "habla": {
+            "es": "tú tienes",
+            "voz": "paloma",
+            "audio": "paloma.49d1b8416a"
+          },
+          "fr": "Toi, tu as…"
+        },
+        {
+          "id": "u06-q05-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "nosotros",
+          "radical": "ten",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "éis",
+            "en"
+          ],
+          "forma": "tenemos",
+          "habla": {
+            "es": "nosotros tenemos",
+            "voz": "marina",
+            "audio": "marina.3d1ef1589c"
+          },
+          "fr": "Nous, nous avons…"
+        },
+        {
+          "id": "u06-q05-s07",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "ellos",
+          "radical": "tien",
+          "terminacion": "en",
+          "terminaciones": [
+            "emos",
+            "éis",
+            "en"
+          ],
+          "forma": "tienen",
+          "habla": {
+            "es": "ellos tienen",
+            "voz": "nacho",
+            "audio": "nacho.401c210efd"
+          },
+          "fr": "Eux, ils ont…"
+        },
+        {
+          "id": "u06-q05-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "___ que encender las luces.",
+          "respuesta": "Hay",
+          "opciones": [
+            "Hay",
+            "Tiene",
+            "Está"
+          ],
+          "habla": {
+            "es": "Hay que encender las luces.",
+            "voz": "paloma",
+            "audio": "paloma.0df213c8a0"
+          },
+          "fr": "Il faut allumer les lumières. (obligation générale)"
+        },
+        {
+          "id": "u06-q05-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tengo que ___ los regalos.",
+          "respuesta": "comprar",
+          "opciones": [
+            "comprar",
+            "compro",
+            "comprando"
+          ],
+          "habla": {
+            "es": "Tengo que comprar los regalos.",
+            "voz": "viajero",
+            "audio": "viajero.8a829d5d90"
+          },
+          "fr": "Je dois acheter les cadeaux. (tener que + infinitif)"
+        },
+        {
+          "id": "u06-q05-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina ___ que ayudar a Chema.",
+          "respuesta": "tiene",
+          "opciones": [
+            "tiene",
+            "tengo",
+            "hay"
+          ],
+          "habla": {
+            "es": "Marina tiene que ayudar a Chema.",
+            "voz": "nacho",
+            "audio": "nacho.20ffd31303"
+          },
+          "fr": "Marina doit aider Chema. (obligation personnelle)"
+        },
+        {
+          "id": "u06-q05-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tenemos que estar en la Puerta del Sol ___ las doce.",
+          "respuesta": "a",
+          "opciones": [
+            "a",
+            "en",
+            "de"
+          ],
+          "habla": {
+            "es": "Tenemos que estar en la Puerta del Sol a las doce.",
+            "voz": "paloma",
+            "audio": "paloma.81ca925acf"
+          },
+          "fr": "Nous devons être à la Puerta del Sol à douze heures."
+        },
+        {
+          "id": "u06-q05-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Para ganar un premio, hay que comprar un número.",
+            "voz": "paloma",
+            "audio": "paloma.6f20c1d498"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Sin número, no hay premio.",
+              "correcta": true
+            },
+            {
+              "texto": "El premio siempre es un regalo gratis.",
+              "correcta": false
+            },
+            {
+              "texto": "Hay muchos premios en la cabalgata.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q05-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chema",
+          "replica": {
+            "es": "¿Podéis ayudarme? Tengo que preparar cien roscones para mañana.",
+            "fr": "Pouvez-vous m’aider ? Je dois préparer cent roscones pour demain.",
+            "voz": "chema",
+            "audio": "chema.235eb045d9"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Claro, vamos a ayudarte.",
+                "voz": "viajero",
+                "audio": "viajero.f56245443f"
+              },
+              "fr": "Bien sûr, nous allons t’aider.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué buenos sois! Tomad un delantal.",
+                "fr": "Que vous êtes gentils ! Prenez un tablier.",
+                "voz": "chema",
+                "audio": "chema.618f0f79e5",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Claro, tengo cien roscones.",
+                "voz": "viajero",
+                "audio": "viajero.dd4d5465f8"
+              },
+              "fr": "Bien sûr, j’ai cent roscones.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú tienes cien roscones? ¡Entonces ayúdame a comerlos!",
+                "fr": "Toi, tu as cent roscones ? Alors aide-moi à les manger !",
+                "voz": "chema",
+                "audio": "chema.2881e43f09",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, soy un roscón.",
+                "voz": "viajero",
+                "audio": "viajero.c8fe0c41e4"
+              },
+              "fr": "Non, je suis un roscón.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Un roscón? Entonces no puedes ayudar.",
+                "fr": "Un roscón ? Alors tu ne peux pas aider.",
+                "voz": "chema",
+                "audio": "chema.296c856210",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q05-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué tienes que hacer TÚ.",
+            "fr": "Écoute et dis ce que TU dois faire (esperar a mi madre, ayudar en casa, estudiar español…). Change seulement « estudiar » (jusqu’à trois mots).",
+            "voz": "narrador",
+            "audio": "narrador.51017118e2"
+          },
+          "objetivo": {
+            "es": "Tengo que estudiar esta tarde.",
+            "fr": "Je dois étudier cet après-midi. (dis ce que tu dois faire)",
+            "voz": "viajero",
+            "audio": "viajero.a23610910d"
+          },
+          "aceptadas": [
+            "tengo que estudiar esta tarde"
+          ],
+          "patrones": [
+            "tengo que {nombre} esta tarde"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del deber",
+            "efecto": "Una lista de tareas flota en el aire y se borra sola"
+          }
+        },
+        {
+          "id": "u06-q05-s15",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe lo que tienes que hacer.",
+            "fr": "Écris ce que tu dois faire.",
+            "voz": "narrador",
+            "audio": "narrador.7d6ae12067"
+          },
+          "plantilla": "Hoy tengo que ___ y mañana tengo que ___.",
+          "campos": [
+            {
+              "id": "hoy",
+              "pista": "Que dois-tu faire aujourd’hui ? Un verbe à l’infinitif (estudiar, ayudar, comprar un regalo…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "manana",
+              "pista": "Que dois-tu faire demain ? Un verbe à l’infinitif (levantarme temprano, ir al colegio…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Hoy tengo que estudiar y mañana tengo que comprar un regalo.",
+            "fr": "Aujourd’hui, je dois étudier et demain, je dois acheter un cadeau.",
+            "voz": "viajero",
+            "audio": "viajero.5f9bf5aad2"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u06-q06",
+      "tipo": "lectura",
+      "titulo": "Cartas, regalos y lotería",
+      "emoji": "🎁",
+      "intro": {
+        "es": "Los niños escriben cartas a los Reyes Magos. ¡Y yo vendo lotería para tener suerte!",
+        "fr": "Les enfants écrivent des lettres aux Rois mages. Et moi, je vends de la loterie pour avoir de la chance !",
+        "voz": "paloma",
+        "audio": "paloma.e85fe4b6b3"
+      },
+      "pista": "Les cadeaux, la lettre aux Rois mages, la loterie de Noël ; compréhension d’une lettre, et tu écris TA lettre aux Rois.",
+      "stats": [
+        "leer",
+        "escribir",
+        "hablar",
+        "escuchar"
+      ],
+      "minutos": 13,
+      "steps": [
+        {
+          "id": "u06-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "regalo",
+            "carta",
+            "loteria",
+            "premio",
+            "numero",
+            "comprar",
+            "todos"
+          ]
+        },
+        {
+          "id": "u06-q06-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "regalo",
+            "voz": "narrador",
+            "audio": "narrador.721e8c821c"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "regalo",
+              "correcta": true
+            },
+            {
+              "vocab": "carta",
+              "correcta": false
+            },
+            {
+              "vocab": "estrella",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q06-s03",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Queridos Reyes Magos: Me llamo Lola y tengo seis años. Quiero una bici rosa, un libro de gatos y un patinete. También quiero un regalo para mi gato Churro. Gracias. Besos. Lola.",
+            "fr": "Chers Rois mages : Je m’appelle Lola et j’ai six ans. Je veux un vélo rose, un livre de chats et une trottinette. Je veux aussi un cadeau pour mon chat Churro. Merci. Bisous. Lola. (« bici » = bicicleta, vélo ; « patinete » = trottinette)",
+            "voz": "paloma",
+            "audio": "paloma.9350c128d9"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántos años tiene Lola?",
+                "fr": "Quel âge a Lola ?",
+                "voz": "narrador",
+                "audio": "narrador.7024270901"
+              },
+              "opciones": [
+                {
+                  "texto": "Doce.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Seis.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Diez.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Para quién quiere Lola otro regalo?",
+                "fr": "Pour qui Lola veut-elle un autre cadeau ?",
+                "voz": "narrador",
+                "audio": "narrador.c58fb27f5d"
+              },
+              "opciones": [
+                {
+                  "texto": "Para su abuela.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Para Nacho.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Para su gato Churro.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿A quién escribe Lola?",
+                "fr": "À qui Lola écrit-elle ?",
+                "voz": "narrador",
+                "audio": "narrador.416f9b0507"
+              },
+              "opciones": [
+                {
+                  "texto": "A los Reyes Magos.",
+                  "correcta": true
+                },
+                {
+                  "texto": "A Papá Noel.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A su profesora.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u06-q06-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mis padres compran los regalos y yo escribo una carta a los Reyes.",
+            "voz": "nacho",
+            "audio": "nacho.df642a7055"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Nacho abre sus regalos el veinticuatro.",
+              "correcta": false
+            },
+            {
+              "texto": "Nacho pide cosas a los Reyes Magos por escrito.",
+              "correcta": true
+            },
+            {
+              "texto": "Nacho no escribe cartas nunca.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q06-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El primer premio de la Lotería de Navidad se llama el Gordo.",
+            "voz": "paloma",
+            "audio": "paloma.6c63c3061d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El premio más pequeño es un turrón.",
+              "correcta": false
+            },
+            {
+              "texto": "No hay premios en la Lotería de Navidad.",
+              "correcta": false
+            },
+            {
+              "texto": "El premio más importante tiene un nombre especial.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u06-q06-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Escribo una ___ a los Reyes Magos.",
+          "respuesta": "carta",
+          "opciones": [
+            "carta",
+            "estrella",
+            "cabalgata"
+          ],
+          "habla": {
+            "es": "Escribo una carta a los Reyes Magos.",
+            "voz": "nacho",
+            "audio": "nacho.c3cceec825"
+          },
+          "fr": "J’écris une lettre aux Rois mages."
+        },
+        {
+          "id": "u06-q06-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Los Reyes Magos traen un ___ para cada niño.",
+          "respuesta": "regalo",
+          "opciones": [
+            "regalo",
+            "villancico",
+            "turrón"
+          ],
+          "habla": {
+            "es": "Los Reyes Magos traen un regalo para cada niño.",
+            "voz": "paloma",
+            "audio": "paloma.5e65bf90e4"
+          },
+          "fr": "Les Rois mages apportent un cadeau pour chaque enfant."
+        },
+        {
+          "id": "u06-q06-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los Reyes Magos llegan el veinticinco de diciembre.",
+            "fr": "Les Rois mages arrivent le vingt-cinq décembre.",
+            "voz": "narrador",
+            "audio": "narrador.02b835ac68"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Llegan el cinco de enero por la noche, y los regalos están el seis por la mañana.",
+            "fr": "Ils arrivent le soir du cinq janvier, et les cadeaux sont là le matin du six.",
+            "voz": "narrador",
+            "audio": "narrador.67e22322b9"
+          }
+        },
+        {
+          "id": "u06-q06-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los niños dejan los zapatos para recibir regalos.",
+            "fr": "Les enfants laissent leurs chaussures pour recevoir des cadeaux.",
+            "voz": "narrador",
+            "audio": "narrador.6dc8135d00"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u06-q06-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "paloma",
+          "replica": {
+            "es": "¿Quieres un número de lotería? ¡Este año toca el Gordo!",
+            "fr": "Tu veux un numéro de loterie ? Cette année, c’est le Gordo qui tombe !",
+            "voz": "paloma",
+            "audio": "paloma.7c8c004f9a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, quiero el número siete.",
+                "voz": "viajero",
+                "audio": "viajero.35c558fbb0"
+              },
+              "fr": "Oui, je veux le numéro sept.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡El siete! Seguro que tienes suerte.",
+                "fr": "Le sept ! Tu vas sûrement avoir de la chance.",
+                "voz": "paloma",
+                "audio": "paloma.5db9b7d641",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, compro la lotería de la cabalgata.",
+                "voz": "viajero",
+                "audio": "viajero.d96b8ca089"
+              },
+              "fr": "Oui, j’achète la loterie du défilé.",
+              "correcta": false,
+              "reaccion": {
+                "es": "La lotería no es de la cabalgata. Pero gracias.",
+                "fr": "La loterie n’est pas celle du défilé. Mais merci.",
+                "voz": "paloma",
+                "audio": "paloma.2e36709d0a",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, soy un número.",
+                "voz": "viajero",
+                "audio": "viajero.670757ff8a"
+              },
+              "fr": "Non, je suis un numéro.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Ja, ja! Entonces tienes premio seguro.",
+                "fr": "Ha, ha ! Alors tu as un lot assuré.",
+                "voz": "paloma",
+                "audio": "paloma.eae7d80835",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q06-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué quieres TÚ para Navidad.",
+            "fr": "Écoute et dis ce que TU veux pour Noël (una guitarra, un balón, unas zapatillas…). Change « un libro » (avec son article).",
+            "voz": "narrador",
+            "audio": "narrador.312fe5244f"
+          },
+          "objetivo": {
+            "es": "Quiero un libro para Navidad.",
+            "fr": "Je veux un livre pour Noël. (dis ton cadeau)",
+            "voz": "viajero",
+            "audio": "viajero.79c6699354"
+          },
+          "aceptadas": [
+            "quiero un libro para navidad"
+          ],
+          "patrones": [
+            "quiero {nombre} para navidad"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del regalo",
+            "efecto": "Un paquete con un lazo dorado aparece a tus pies"
+          }
+        },
+        {
+          "id": "u06-q06-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu carta a los Reyes Magos.",
+            "fr": "Écris ta lettre aux Rois mages.",
+            "voz": "narrador",
+            "audio": "narrador.1700d06b4a"
+          },
+          "plantilla": "Queridos Reyes Magos: Me llamo ___. Quiero ___ y ___. ¡Feliz Navidad!",
+          "campos": [
+            {
+              "id": "nombre",
+              "pista": "Ton prénom",
+              "tipo": "texto"
+            },
+            {
+              "id": "regalo1",
+              "pista": "Un premier cadeau, avec son article (un libro, una guitarra…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "regalo2",
+              "pista": "Un deuxième cadeau, avec son article (un balón, unas zapatillas…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Queridos Reyes Magos: Me llamo Álex. Quiero un libro y una guitarra. ¡Feliz Navidad!",
+            "fr": "Chers Rois mages : Je m’appelle Álex. Je veux un livre et une guitare. Joyeux Noël !",
+            "voz": "viajero",
+            "audio": "viajero.debf9b4f4b"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u06-q06-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Escribo una carta a los Reyes Magos.",
+            "voz": "nacho",
+            "audio": "nacho.c3cceec825"
+          },
+          "respuesta": "Escribo una carta a los Reyes Magos.",
+          "aceptadas": [
+            "escribo una carta a los reyes magos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u06-q07",
+      "tipo": "cultura",
+      "titulo": "Nochevieja y Reyes Magos",
+      "emoji": "🍇",
+      "intro": {
+        "es": "En Madrid, en Nochevieja, ¡hay que comer rápido las doce uvas!",
+        "fr": "À Madrid, à Nochevieja, il faut manger vite les douze raisins !",
+        "voz": "paloma",
+        "audio": "paloma.5b5680c581"
+      },
+      "pista": "Les traditions espagnoles de fin d’année : les douze raisins à la Puerta del Sol, la Loterie de Noël du 22 décembre, la cabalgata et les Reyes Magos du 6 janvier, le roscón ; puis tu parles de TA fête préférée.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u06-q07-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u06-capsula-uvas-reyes",
+          "escena": {
+            "id": "u06-capsula-uvas-reyes",
+            "tipo": "capsula",
+            "titulo": "Las doce uvas y los Reyes Magos",
+            "duracion": 24,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : la Puerta del Sol de nuit, l’horloge de la Real Casa de Correos éclairée, la foule en bonnets et écharpes.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Nochevieja, 31 de diciembre. En la Puerta del Sol de Madrid, miles de personas esperan las campanadas.",
+                    "fr": "Nochevieja, 31 décembre. À la Puerta del Sol de Madrid, des milliers de personnes attendent les coups de cloche.",
+                    "voz": "narrador",
+                    "audio": "narrador.912a32876d"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Douze raisins dans un gobelet ; l’horloge sonne : un raisin disparaît à chaque coup, un compteur de 1 à 12 et douze mois du calendrier.",
+                "lineas": [
+                  {
+                    "es": "A medianoche suenan doce campanadas. Con cada campanada, se come una uva: doce uvas, doce meses de suerte.",
+                    "fr": "À minuit, douze coups de cloche sonnent. À chaque coup, on mange un raisin : douze raisins, douze mois de chance.",
+                    "voz": "narrador",
+                    "audio": "narrador.9c0765d866"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Un grand théâtre et des enfants en uniforme qui chantent des chiffres ; boules de loterie qui tournent ; affiche « 22 de diciembre ».",
+                "lineas": [
+                  {
+                    "es": "El 22 de diciembre es el sorteo de la Lotería de Navidad. Unos niños cantan los números y los premios. El primer premio se llama «el Gordo».",
+                    "fr": "Le 22 décembre a lieu le tirage de la Loterie de Noël. Des enfants chantent les numéros et les prix. Le premier prix s’appelle « el Gordo » (« le Gros »).",
+                    "voz": "narrador",
+                    "audio": "narrador.f9461d05af"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Une cabalgata dans la nuit : trois rois sur des chars, chameaux en carton, bonbons lancés à la foule ; calendrier « 5 de enero ».",
+                "lineas": [
+                  {
+                    "es": "El cinco de enero hay cabalgatas en muchas ciudades. Los Reyes Magos, Melchor, Gaspar y Baltasar, llegan con regalos.",
+                    "fr": "Le cinq janvier, il y a des défilés dans de nombreuses villes. Les Rois mages, Melchor, Gaspar et Baltasar, arrivent avec des cadeaux.",
+                    "voz": "narrador",
+                    "audio": "narrador.637edfb768"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 5,
+                "vista": "Des chaussures alignées devant une porte, des lettres adressées aux Rois, puis un roscón coupé : une petite figurine et une fève sèche apparaissent dans la mie.",
+                "lineas": [
+                  {
+                    "es": "El seis de enero se come el roscón de Reyes. Dentro hay una sorpresa y un haba. ¡Quien encuentra el haba paga el roscón!",
+                    "fr": "Le six janvier, on mange le roscón des Rois. À l’intérieur, il y a une surprise et une fève. Celui qui trouve la fève paie le roscón !",
+                    "voz": "narrador",
+                    "audio": "narrador.a2fd1d39eb"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u06-q07-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En Nochevieja se comen doce uvas con las campanadas.",
+            "fr": "À Nochevieja, on mange douze raisins avec les coups de cloche.",
+            "voz": "narrador",
+            "audio": "narrador.5b3ae734c9"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u06-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La Lotería de Navidad es el seis de enero.",
+            "fr": "La Loterie de Noël est le six janvier.",
+            "voz": "narrador",
+            "audio": "narrador.3a74c7ecae"
+          },
+          "correcta": false,
+          "explicacion": {
+            "es": "Es el veintidós de diciembre.",
+            "fr": "Elle a lieu le vingt-deux décembre.",
+            "voz": "narrador",
+            "audio": "narrador.0706535f5b"
+          }
+        },
+        {
+          "id": "u06-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Quien encuentra el haba paga el roscón.",
+            "fr": "Celui qui trouve la fève paie le roscón.",
+            "voz": "narrador",
+            "audio": "narrador.81f81a64a7"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u06-q07-s05",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En España, la noche del treinta y uno de diciembre, muchas familias comen doce uvas con las doce campanadas de medianoche. Una uva por cada campanada: doce uvas, doce meses de suerte. En Madrid, miles de personas esperan las campanadas en la Puerta del Sol. ¡Hay que comer rápido!",
+            "fr": "En Espagne, la nuit du trente et un décembre, beaucoup de familles mangent douze raisins avec les douze coups de cloche de minuit. Un raisin par coup de cloche : douze raisins, douze mois de chance. À Madrid, des milliers de personnes attendent les coups de cloche à la Puerta del Sol. Il faut manger vite !",
+            "voz": "paloma",
+            "audio": "paloma.eddc88d092"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántas uvas comen las familias?",
+                "fr": "Combien de raisins les familles mangent-elles ?",
+                "voz": "narrador",
+                "audio": "narrador.fe8c1f62e2"
+              },
+              "opciones": [
+                {
+                  "texto": "Doce.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Veinte.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cien.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde esperan las campanadas miles de personas en Madrid?",
+                "fr": "Où des milliers de personnes attendent-elles les coups de cloche à Madrid ?",
+                "voz": "narrador",
+                "audio": "narrador.2d5642d096"
+              },
+              "opciones": [
+                {
+                  "texto": "En el colegio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En la Puerta del Sol.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En un museo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué significan las doce uvas?",
+                "fr": "Que signifient les douze raisins ?",
+                "voz": "narrador",
+                "audio": "narrador.a4280de8d2"
+              },
+              "opciones": [
+                {
+                  "texto": "Doce amigos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Doce regalos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Doce meses de suerte.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u06-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "El cinco de enero hay cabalgatas en muchas ciudades. Los Reyes Magos, Melchor, Gaspar y Baltasar, llegan con regalos para los niños. Por la noche, los niños dejan sus zapatos y se acuestan temprano. El seis de enero por la mañana, ¡hay regalos! Se come el roscón de Reyes. Dentro hay una sorpresa y un haba: quien encuentra el haba paga el roscón.",
+            "fr": "Le cinq janvier, il y a des défilés dans beaucoup de villes. Les Rois mages, Melchor, Gaspar et Baltasar, arrivent avec des cadeaux pour les enfants. Le soir, les enfants laissent leurs chaussures et se couchent tôt. Le matin du six janvier, il y a des cadeaux ! On mange le roscón des Rois. À l’intérieur, il y a une surprise et une fève : celui qui trouve la fève paie le roscón.",
+            "voz": "chema",
+            "audio": "chema.c324892eba"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo se llaman los tres Reyes Magos?",
+                "fr": "Comment s’appellent les trois Rois mages ?",
+                "voz": "narrador",
+                "audio": "narrador.64bf30880f"
+              },
+              "opciones": [
+                {
+                  "texto": "Melchor, Gaspar y Baltasar.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Marcos, Pablo y Pedro.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Nacho, Chema y Rosa.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hacen los niños por la noche?",
+                "fr": "Que font les enfants le soir ?",
+                "voz": "narrador",
+                "audio": "narrador.5cec3c8138"
+              },
+              "opciones": [
+                {
+                  "texto": "Cantan en la Puerta del Sol.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Dejan los zapatos y se acuestan temprano.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Comen doce uvas.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué pasa si encuentras el haba?",
+                "fr": "Que se passe-t-il si tu trouves la fève ?",
+                "voz": "narrador",
+                "audio": "narrador.eaae8a7a9e"
+              },
+              "opciones": [
+                {
+                  "texto": "Ganas la lotería.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Abres los regalos antes.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Pagas el roscón.",
+                  "correcta": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u06-q07-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El veintidós de diciembre, unos niños cantan los números de la lotería.",
+            "voz": "paloma",
+            "audio": "paloma.d3e2dc459b"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hay una fiesta de la suerte en diciembre con voces de niños.",
+              "correcta": true
+            },
+            {
+              "texto": "Los niños venden la lotería en el colegio.",
+              "correcta": false
+            },
+            {
+              "texto": "En diciembre nadie compra lotería.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q07-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chema",
+          "replica": {
+            "es": "¿Cuántas uvas comemos en Nochevieja?",
+            "fr": "Combien de raisins mangeons-nous à Nochevieja ?",
+            "voz": "chema",
+            "audio": "chema.d9f5f404af"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Comemos doce uvas.",
+                "voz": "viajero",
+                "audio": "viajero.6b12b8e531"
+              },
+              "fr": "Nous mangeons douze raisins.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Una con cada campanada.",
+                "fr": "Exact ! Une avec chaque coup de cloche.",
+                "voz": "chema",
+                "audio": "chema.d5d57571d3",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Comemos cien uvas.",
+                "voz": "viajero",
+                "audio": "viajero.473b9b42c0"
+              },
+              "fr": "Nous mangeons cent raisins.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Cien uvas! Te vas a poner malo.",
+                "fr": "Cent raisins ! Tu vas être malade.",
+                "voz": "chema",
+                "audio": "chema.b5d9f8200f",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Comemos una paella.",
+                "voz": "viajero",
+                "audio": "viajero.220597fb19"
+              },
+              "fr": "Nous mangeons une paella.",
+              "correcta": false,
+              "reaccion": {
+                "es": "La paella es de Valencia, no de Nochevieja.",
+                "fr": "La paella est de Valence, pas de Nochevieja.",
+                "voz": "chema",
+                "audio": "chema.15ad95c628",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "rosa",
+          "replica": {
+            "es": "¿Cuándo llegan los Reyes Magos?",
+            "fr": "Quand arrivent les Rois mages ?",
+            "voz": "rosa",
+            "audio": "rosa.d1cb18cf53"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Llegan el cinco de enero, por la noche.",
+                "voz": "viajero",
+                "audio": "viajero.db1a019ec0"
+              },
+              "fr": "Ils arrivent le cinq janvier, le soir.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Eso es! Y el seis hay regalos.",
+                "fr": "Voilà ! Et le six, il y a des cadeaux.",
+                "voz": "rosa",
+                "audio": "rosa.30a48078c9",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Llegan el veinticinco de agosto.",
+                "voz": "viajero",
+                "audio": "viajero.515c7533f6"
+              },
+              "fr": "Ils arrivent le vingt-cinq août.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿En agosto? ¡Con ese calor no hay roscón!",
+                "fr": "En août ? Avec cette chaleur, pas de roscón !",
+                "voz": "rosa",
+                "audio": "rosa.dd80cf3975",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Llegan el treinta y uno de diciembre.",
+                "voz": "viajero",
+                "audio": "viajero.925aec3f41"
+              },
+              "fr": "Ils arrivent le trente et un décembre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Esa noche son las uvas, no los Reyes.",
+                "fr": "Cette nuit-là, ce sont les raisins, pas les Rois.",
+                "voz": "rosa",
+                "audio": "rosa.7eb281cac0",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q07-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Para el desayuno del seis de enero, comemos el ___ de Reyes.",
+          "respuesta": "roscón",
+          "opciones": [
+            "roscón",
+            "árbol",
+            "villancico"
+          ],
+          "habla": {
+            "es": "Para el desayuno del seis de enero, comemos el roscón de Reyes.",
+            "voz": "chema",
+            "audio": "chema.badee6cfd2"
+          },
+          "fr": "Pour le petit-déjeuner du six janvier, nous mangeons le roscón des Rois."
+        },
+        {
+          "id": "u06-q07-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Con cada campanada comemos una ___.",
+          "respuesta": "uva",
+          "opciones": [
+            "uva",
+            "carta",
+            "luz"
+          ],
+          "habla": {
+            "es": "Con cada campanada comemos una uva.",
+            "voz": "paloma",
+            "audio": "paloma.d50595743c"
+          },
+          "fr": "À chaque coup de cloche, nous mangeons un raisin."
+        },
+        {
+          "id": "u06-q07-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe sobre tu fiesta favorita.",
+            "fr": "Écris sur ta fête préférée.",
+            "voz": "narrador",
+            "audio": "narrador.af104f7708"
+          },
+          "plantilla": "Mi fiesta favorita es ___. Celebro con ___. Comemos ___.",
+          "campos": [
+            {
+              "id": "fiesta",
+              "pista": "Ta fête préférée (Navidad, mi cumpleaños, Nochevieja…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "con",
+              "pista": "Avec qui la fêtes-tu ? (mi familia, mis amigos, mis abuelos…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "comida",
+              "pista": "Que manges-tu ? (turrón, pizza, pastel, marisco…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi fiesta favorita es Navidad. Celebro con mi familia. Comemos turrón.",
+            "fr": "Ma fête préférée est Noël. Je la fête avec ma famille. Nous mangeons du turrón.",
+            "voz": "viajero",
+            "audio": "viajero.5580a3b875"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u06-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU fiesta favorita.",
+            "fr": "Écoute et dis quelle est TA fête préférée. Change « Navidad » (mi cumpleaños, Nochevieja…). Garde la structure.",
+            "voz": "narrador",
+            "audio": "narrador.0dce1d6fba"
+          },
+          "objetivo": {
+            "es": "Mi fiesta favorita es la Navidad.",
+            "fr": "Ma fête préférée est Noël. (dis la tienne)",
+            "voz": "viajero",
+            "audio": "viajero.f0320b52ad"
+          },
+          "aceptadas": [
+            "mi fiesta favorita es la navidad"
+          ],
+          "patrones": [
+            "mi fiesta favorita es la {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la fiesta",
+            "efecto": "Confeti de colores cae sobre la Puerta del Sol"
+          }
+        },
+        {
+          "id": "u06-q07-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Hay doce campanadas a medianoche.",
+            "voz": "paloma",
+            "audio": "paloma.b21db235ff"
+          },
+          "respuesta": "Hay doce campanadas a medianoche.",
+          "aceptadas": [
+            "hay doce campanadas a medianoche"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u06-q08",
+      "tipo": "desafio",
+      "titulo": "Las luces de la Sombra",
+      "emoji": "🌟",
+      "intro": {
+        "es": "Sin luces, no hay fiesta. Sin fiesta, no hay palabras. Yo apago Madrid.",
+        "fr": "Sans lumières, pas de fête. Sans fête, pas de mots. Moi, j’éteins Madrid.",
+        "voz": "sombra",
+        "audio": "sombra.a8fe4361f9"
+      },
+      "pista": "Boss de Madrid : révision mixte des unités 1 à 6 (présentation, famille, description, heure, ir a, impératif, hay que / tener que, fêtes) pour rallumer les lumières de Noël.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 10
+      },
+      "steps": [
+        {
+          "id": "u06-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Las luces están apagadas. ¿Qué hay que hacer?",
+            "fr": "Les lumières sont éteintes. Que faut-il faire ?",
+            "voz": "sombra",
+            "audio": "sombra.37f5d45146"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Hay que encender las luces.",
+                "voz": "viajero",
+                "audio": "viajero.0df213c8a0"
+              },
+              "fr": "Il faut allumer les lumières.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Una luz más…",
+                "fr": "Grr ! Une lumière de plus…",
+                "voz": "sombra",
+                "audio": "sombra.630081688e",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Hay que dormir la siesta.",
+                "voz": "viajero",
+                "audio": "viajero.dd67856135"
+              },
+              "fr": "Il faut faire la sieste.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no enciende nada.",
+                "fr": "Ça n’allume rien.",
+                "voz": "sombra",
+                "audio": "sombra.d267c0149f",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo luces de doce años.",
+                "voz": "viajero",
+                "audio": "viajero.b3ad3d22a7"
+              },
+              "fr": "J’ai des lumières de douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No es una respuesta. ¡Otra vez!",
+                "fr": "Ce n’est pas une réponse. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.8b5257d894",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Dime una orden para encender el árbol.",
+            "fr": "Dis-moi un ordre pour allumer le sapin.",
+            "voz": "sombra",
+            "audio": "sombra.31beb2ecaa"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Enciende las luces, por favor.",
+                "voz": "viajero",
+                "audio": "viajero.013f901521"
+              },
+              "fr": "Allume les lumières, s’il te plaît.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! El árbol brilla otra vez…",
+                "fr": "Aaah ! Le sapin brille de nouveau…",
+                "voz": "sombra",
+                "audio": "sombra.34d81a6cde",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Enciendes las luces ahora.",
+                "voz": "viajero",
+                "audio": "viajero.dd71b591ad"
+              },
+              "fr": "Tu allumes les lumières maintenant.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no es una orden, es una afirmación.",
+                "fr": "Ça, ce n’est pas un ordre, c’est une affirmation.",
+                "voz": "sombra",
+                "audio": "sombra.66348b8808",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Encender luces yo.",
+                "voz": "viajero",
+                "audio": "viajero.2270c7c591"
+              },
+              "fr": "Allumer lumières moi.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las doce menos cinco.",
+            "voz": "sombra",
+            "audio": "sombra.d4aeb551f3"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "12:05",
+              "correcta": false
+            },
+            {
+              "texto": "11:55",
+              "correcta": true
+            },
+            {
+              "texto": "12:55",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi tía es alta, rubia y lleva un abrigo rojo.",
+            "voz": "rosa",
+            "audio": "rosa.236cfbdb3b"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "La tía tiene el pelo largo y negro.",
+              "correcta": false
+            },
+            {
+              "texto": "La tía lleva un vestido azul.",
+              "correcta": false
+            },
+            {
+              "texto": "La tía no es baja y su pelo no es oscuro.",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mis abuelos viven en Sevilla y mi tío Rafa es cocinero.",
+            "voz": "marina",
+            "audio": "marina.483d5f5f83"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Un familiar de la persona trabaja con la comida.",
+              "correcta": true
+            },
+            {
+              "texto": "Todos los abuelos son cocineros.",
+              "correcta": false
+            },
+            {
+              "texto": "La familia vive en México.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s06",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "regalo"
+            },
+            {
+              "vocab": "carta"
+            },
+            {
+              "vocab": "chocolate_nav"
+            },
+            {
+              "vocab": "abrigo"
+            },
+            {
+              "vocab": "bufanda"
+            },
+            {
+              "vocab": "marisco"
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Marina ___ que comprar un regalo para su abuela.",
+          "respuesta": "tiene",
+          "opciones": [
+            "tiene",
+            "hay",
+            "va"
+          ],
+          "habla": {
+            "es": "Marina tiene que comprar un regalo para su abuela.",
+            "voz": "viajero",
+            "audio": "viajero.b366f115c2"
+          },
+          "fr": "Marina doit acheter un cadeau pour sa grand-mère."
+        },
+        {
+          "id": "u06-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mañana vamos ___ cenar con los abuelos.",
+          "respuesta": "a",
+          "opciones": [
+            "a",
+            "al",
+            "en"
+          ],
+          "habla": {
+            "es": "Mañana vamos a cenar con los abuelos.",
+            "voz": "marina",
+            "audio": "marina.12fd8ceeb4"
+          },
+          "fr": "Demain, nous allons dîner avec les grands-parents."
+        },
+        {
+          "id": "u06-q08-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi hermano ___ muchos regalos.",
+          "respuesta": "quiere",
+          "opciones": [
+            "quiere",
+            "quieres",
+            "queremos"
+          ],
+          "habla": {
+            "es": "Mi hermano quiere muchos regalos.",
+            "voz": "nacho",
+            "audio": "nacho.d2d5837ae1"
+          },
+          "fr": "Mon frère veut beaucoup de cadeaux."
+        },
+        {
+          "id": "u06-q08-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¡___ aquí, Marina! Mira las luces.",
+          "respuesta": "Ven",
+          "opciones": [
+            "Ven",
+            "Viene",
+            "Vienes"
+          ],
+          "habla": {
+            "es": "¡Ven aquí, Marina! Mira las luces.",
+            "voz": "nacho",
+            "audio": "nacho.261da691d7"
+          },
+          "fr": "Viens ici, Marina ! Regarde les lumières."
+        },
+        {
+          "id": "u06-q08-s11",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "tener",
+          "sujeto": "tú",
+          "radical": "tien",
+          "terminacion": "es",
+          "terminaciones": [
+            "o",
+            "es",
+            "e"
+          ],
+          "forma": "tienes",
+          "habla": {
+            "es": "tú tienes",
+            "voz": "paloma",
+            "audio": "paloma.49d1b8416a"
+          },
+          "fr": "Toi, tu as…"
+        },
+        {
+          "id": "u06-q08-s12",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Nacho. Tengo trece años y vivo en Madrid. En Nochebuena ceno con mi familia a las diez. Después abrimos algunos regalos. En Nochevieja como las doce uvas con las campanadas. El seis de enero me levanto temprano para ver los regalos de los Reyes.",
+            "fr": "Salut, c’est Nacho. J’ai treize ans et j’habite à Madrid. À Nochebuena, je dîne avec ma famille à dix heures. Ensuite, nous ouvrons quelques cadeaux. À Nochevieja, je mange les douze raisins avec les coups de cloche. Le six janvier, je me lève tôt pour voir les cadeaux des Rois.",
+            "voz": "nacho",
+            "audio": "nacho.9ed0af5627"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿A qué hora cena Nacho en Nochebuena?",
+                "fr": "À quelle heure Nacho dîne-t-il à Nochebuena ?",
+                "voz": "narrador",
+                "audio": "narrador.c69ceb5c52"
+              },
+              "opciones": [
+                {
+                  "texto": "A las seis.",
+                  "correcta": false
+                },
+                {
+                  "texto": "A las diez.",
+                  "correcta": true
+                },
+                {
+                  "texto": "A las tres.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué come Nacho en Nochevieja?",
+                "fr": "Que mange Nacho à Nochevieja ?",
+                "voz": "narrador",
+                "audio": "narrador.a3134c173f"
+              },
+              "opciones": [
+                {
+                  "texto": "Paella.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Churros.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Doce uvas.",
+                  "correcta": true
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo se levanta temprano?",
+                "fr": "Quand se lève-t-il tôt ?",
+                "voz": "narrador",
+                "audio": "narrador.b9ff28e8cb"
+              },
+              "opciones": [
+                {
+                  "texto": "El seis de enero.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El veinticinco de agosto.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Todos los domingos.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u06-q08-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Hay",
+            "que",
+            "encender",
+            "las",
+            "luces",
+            "del",
+            "árbol."
+          ],
+          "habla": {
+            "es": "Hay que encender las luces del árbol.",
+            "voz": "paloma",
+            "audio": "paloma.bc7bc0417a"
+          },
+          "fr": "Il faut allumer les lumières du sapin."
+        },
+        {
+          "id": "u06-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. ¡Feliz Navidad!",
+            "fr": "Salut, je m’appelle Álex. Joyeux Noël ! (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.4241146b06"
+          },
+          "aceptadas": [
+            "hola me llamo álex feliz navidad"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} feliz navidad"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Madrid brilla otra vez con todas sus luces!"
+          }
+        },
+        {
+          "id": "u06-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u06-pluma",
+          "escena": {
+            "id": "u06-pluma",
+            "tipo": "pluma",
+            "titulo": "Sexta pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Toutes les lumières de Madrid s’allument d’un coup ; l’étoile du sapin s’ouvre et une plume verte tombe doucement dans la main d’Álex. Les douze coups résonnent.",
+                "personajes": [
+                  "paloma",
+                  "nacho",
+                  "rosa"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Las luces! ¡Las campanadas! ¡Feliz Navidad, viajeros!",
+                    "fr": "Les lumières ! Les coups de cloche ! Joyeux Noël, voyageurs !",
+                    "voz": "paloma",
+                    "audio": "paloma.ab7e7beff4"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal volète autour du sapin, ses plumes brillent comme des guirlandes.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Seis plumas. ¡Mis alas brillan como las luces!",
+                    "fr": "Six plumes. Mes ailes brillent comme les lumières !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.2781c54cdc"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio en hologramme, en short et sous un parasol, ce qui fait rire Marina ; la carte bascule vers l’hémisphère sud.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La siguiente pluma está en Buenos Aires. Allí, en enero, ¡es verano!",
+                    "fr": "La prochaine plume est à Buenos Aires. Là-bas, en janvier, c’est l’été !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.aa544d6427"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 6,
+    "nombre": "Pluma de las Luces",
+    "descripcion": {
+      "es": "Seis plumas. Las luces vuelven… ¡y mis alas brillan!",
+      "fr": "Six plumes. Les lumières reviennent… et mes ailes brillent !",
+      "voz": "quetzal",
+      "audio": "quetzal.b384764a71"
+    }
+  }
+}

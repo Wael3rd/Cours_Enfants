@@ -198,5 +198,175 @@
     "emoji": "👧🏽",
     "descripcion": "Niña de once años, rápida y curiosa. Su nombre significa «flor» en náhuatl. Le encanta la fiesta del Día de Muertos y conoce todas sus tradiciones.",
     "tono": { "rate": "+8%", "pitch": "+30Hz" }
+  },
+  {
+    "id": "neus",
+    "nombre": "Neus Soler",
+    "rol": "Guía de la Ciudad de las Artes y las Ciencias",
+    "region": "Valencia",
+    "voz": "es-ES-XimenaNeural",
+    "emoji": "👧",
+    "descripcion": "Chica valenciana de doce años, muy puntual (casi siempre). Conoce los horarios de todo Valencia y lleva siempre un reloj digital en la muñeca.",
+    "tono": { "rate": "+4%", "pitch": "+10Hz" }
+  },
+  {
+    "id": "vicent",
+    "nombre": "Vicent",
+    "rol": "Paellero de Valencia",
+    "region": "Valencia",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🥘",
+    "descripcion": "Cocina la paella con fuego de leña desde hace treinta años. Habla despacio, sonríe mucho y no soporta que alguien ponga chorizo en su paella.",
+    "tono": { "rate": "-6%", "pitch": "-16Hz" }
+  },
+  {
+    "id": "amparo",
+    "nombre": "Amparo",
+    "rol": "Abuela de Neus, vende horchata",
+    "region": "Valencia",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "👵",
+    "descripcion": "Abuela valenciana de Neus. Prepara la mejor horchata del barrio y siempre pregunta si has comido bien.",
+    "tono": { "rate": "-12%", "pitch": "-22Hz" }
+  },
+  {
+    "id": "paloma",
+    "nombre": "Paloma",
+    "rol": "Vendedora de lotería en el mercado navideño",
+    "region": "Madrid",
+    "voz": "es-ES-ElviraNeural",
+    "emoji": "🎟️",
+    "descripcion": "Vende décimos de lotería desde hace veinte años. Le encanta la Navidad, canta villancicos todo el día y siempre dice que este año toca el Gordo.",
+    "tono": { "rate": "+2%", "pitch": "-8Hz" }
+  },
+  {
+    "id": "chema",
+    "nombre": "Chema",
+    "rol": "Pastelero de Madrid",
+    "region": "Madrid",
+    "voz": "es-ES-AlvaroNeural",
+    "emoji": "🥐",
+    "descripcion": "Pastelero grandote y muy amable. En diciembre trabaja de noche para tener listos los roscones, los turrones y el chocolate caliente.",
+    "tono": { "rate": "-4%", "pitch": "-20Hz" }
+  },
+  {
+    "id": "facu",
+    "nombre": "Facu",
+    "rol": "Chico de La Boca, hincha de Boca",
+    "region": "Buenos Aires",
+    "voz": "es-AR-TomasNeural",
+    "emoji": "⚽",
+    "descripcion": "Facundo tiene trece años, una camiseta azul y amarilla y un balón siempre debajo del brazo. Habla rápido, usa «che» en cada frase y se ríe de todo.",
+    "tono": { "rate": "+6%", "pitch": "+14Hz" }
+  },
+  {
+    "id": "sol",
+    "nombre": "Sol",
+    "rol": "Guitarrista y bailarina de tango",
+    "region": "Buenos Aires",
+    "voz": "es-AR-ElenaNeural",
+    "emoji": "🎸",
+    "descripcion": "Sol tiene doce años y toca la guitarra en la feria de San Telmo. Le encanta la música, el tango y el mate con amigos.",
+    "tono": { "rate": "+2%", "pitch": "+12Hz" }
+  },
+  {
+    "id": "anibal",
+    "nombre": "Don Aníbal",
+    "rol": "Bandoneonista de San Telmo",
+    "region": "Buenos Aires",
+    "voz": "es-AR-TomasNeural",
+    "emoji": "🪗",
+    "descripcion": "Señor mayor con sombrero que toca el bandoneón desde los diez años. Habla despacio y siempre dice que el tango se siente con el corazón.",
+    "tono": { "rate": "-10%", "pitch": "-16Hz" }
+  },
+  {
+    "id": "camila",
+    "nombre": "Camila Torres",
+    "rol": "Guía joven de La Candelaria",
+    "region": "Bogotá (La Candelaria)",
+    "voz": "es-CO-SalomeNeural",
+    "emoji": "🧒🏻",
+    "descripcion": "Niña bogotana de doce años que conoce cada calle de La Candelaria. Lleva una ruana roja, habla con cortesía («ustedes», «con mucho gusto») y dice «¡qué chévere!» a todo.",
+    "tono": { "rate": "+4%", "pitch": "+16Hz" }
+  },
+  {
+    "id": "hernan",
+    "nombre": "Don Hernán",
+    "rol": "Conductor del teleférico de Monserrate",
+    "region": "Bogotá",
+    "voz": "es-CO-GonzaloNeural",
+    "emoji": "🧑🏽‍✈️",
+    "descripcion": "Sube y baja la montaña de Monserrate desde hace veinte años y conoce la ciudad desde arriba. Habla con mucha educación y trata de «usted» hasta a los niños.",
+    "tono": { "rate": "-6%", "pitch": "-10Hz" }
+  },
+  {
+    "id": "marta",
+    "nombre": "Doña Marta",
+    "rol": "Dueña de una casa de colores y de una tienda de chocolate",
+    "region": "Bogotá (La Candelaria)",
+    "voz": "es-CO-SalomeNeural",
+    "emoji": "👩🏼‍🦳",
+    "descripcion": "Vive en una casa pequeña con un balcón lleno de flores. Prepara chocolate caliente con queso y enseña su casa a todos los visitantes.",
+    "tono": { "rate": "-10%", "pitch": "-14Hz" }
+  },
+  {
+    "id": "itzel",
+    "nombre": "Itzel",
+    "rol": "Niña maya de Yucatán, guía de la selva y de los cenotes",
+    "region": "Yucatán",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👧🏽",
+    "descripcion": "Tiene doce años y habla maya con su abuela y español con sus amigos. Conoce todos los cenotes de su pueblo y no le tiene miedo a nada.",
+    "tono": { "rate": "+6%", "pitch": "+24Hz" }
+  },
+  {
+    "id": "chan",
+    "nombre": "Don Chan",
+    "rol": "Guía de Chichén Itzá",
+    "region": "Yucatán",
+    "voz": "es-MX-JorgeNeural",
+    "emoji": "🧓🏽",
+    "descripcion": "Guía de las pirámides desde joven. Habla despacio, con humor, y cuenta la historia de los mayas como si hubiera estado allí.",
+    "tono": { "rate": "-8%", "pitch": "-20Hz" }
+  },
+  {
+    "id": "chabela",
+    "nombre": "Doña Chabela",
+    "rol": "Cocinera de tortillas hechas a mano",
+    "region": "Yucatán (Valladolid)",
+    "voz": "es-MX-DaliaNeural",
+    "emoji": "👩🏽‍🍳",
+    "descripcion": "Hace tortillas de maíz a mano cada mañana, como su abuela. Siempre tiene una sopa o una salsa picante lista para los visitantes.",
+    "tono": { "rate": "-12%", "pitch": "-6Hz" }
+  },
+  {
+    "id": "killa",
+    "nombre": "Killa",
+    "rol": "Niña quechua de Cusco, guía de los Andes",
+    "region": "Cusco",
+    "voz": "es-PE-CamilaNeural",
+    "emoji": "🧒🏽",
+    "descripcion": "Su nombre significa «luna» en quechua. Tiene doce años, habla quechua en casa y español en el colegio, y conoce todas las leyendas de su abuelo.",
+    "tono": { "rate": "+4%", "pitch": "+18Hz" }
+  },
+  {
+    "id": "huaman",
+    "nombre": "Don Huamán",
+    "rol": "Cuentacuentos y guía de Machu Picchu",
+    "region": "Cusco",
+    "voz": "es-PE-AlexNeural",
+    "emoji": "👴🏽",
+    "descripcion": "Cuenta leyendas de los Andes desde hace cincuenta años. Habla despacio, con una voz profunda, y siempre termina sus historias con una sonrisa.",
+    "tono": { "rate": "-8%", "pitch": "-12Hz" }
+  },
+  {
+    "id": "paulina",
+    "nombre": "Doña Paulina",
+    "rol": "Tejedora de Chinchero",
+    "region": "Cusco (Chinchero)",
+    "voz": "es-PE-CamilaNeural",
+    "emoji": "👩🏽‍🦳",
+    "descripcion": "Teje mantas de colores con lana de alpaca y tiñe los hilos con plantas. Habla con dulzura y cuenta que cada dibujo tiene un significado.",
+    "tono": { "rate": "-12%", "pitch": "-14Hz" }
   }
 ]
