@@ -182,7 +182,16 @@
   }
   export function travel(from: string, to: string, dur = 2.2) {
     const tl = gsap.timeline();
-    if (host) Q.mapTravel(tl, host, from, to, 0, dur, gsap);
+    if (host) {
+      Q.mapTravel(tl, host, from, to, 0, dur, gsap);
+      // la camera suit le jeton : recul vers le milieu du segment, puis arrivee sur la region de destination
+      const A = Q.mapRegion(from), B = Q.mapRegion(to);
+      if (A && B) {
+        const far = Math.hypot(B.x - A.x, B.y - A.y) > 260;
+        Q.mapCamMove(tl, host, { x: (A.x + B.x) / 2, y: (A.y + B.y) / 2 }, far ? 0.62 : zoom, 0, dur * 0.5, 'power2.inOut');
+        Q.mapCamMove(tl, host, to, zoom, dur * 0.5, dur * 0.5, 'power2.inOut');
+      }
+    }
     return tl;
   }
   export function clearFog(id: string, dur = 1.6) {
@@ -198,6 +207,8 @@
 <style>
   .wm { width: 100%; height: 100%; display: grid; place-items: center; background: linear-gradient(135deg, #0a4a66, #0e6985 55%, #0b4b73); overflow: hidden; touch-action: none; }
   .wm :global(svg) { width: 100%; height: 100%; display: block; }
+  /* le jeton et les plaques ne volent pas le toucher : la region courante (jeton pose dessus) doit rester cliquable */
+  .wm :global(.m-token), .wm :global(.m-plq) { pointer-events: none; }
   .wm :global(.m-med) { cursor: pointer; }
   .wm :global(.evh) { animation: evpulse 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
   .wm :global(.evr) { animation: evspin 14s linear infinite; }
