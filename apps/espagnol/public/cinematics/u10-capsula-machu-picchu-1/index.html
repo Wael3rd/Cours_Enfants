@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-capsula-machu-picchu-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      .sub-txt { font-size: 47px; max-width: 1680px; }
+      #p1 { position: absolute; inset: 0; }
+      .lay { position: absolute; left: 0; top: 0; z-index: 5; }
+      #cnt { position: absolute; left: 110px; top: 470px; z-index: 10; font: 400 230px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #d93472, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+      #cntl { position: absolute; left: 118px; top: 720px; z-index: 10; font: 900 52px/1 Nunito, sans-serif; color: #f59f00; letter-spacing: .1em; text-transform: uppercase; }
+      .gauge { position: absolute; left: 760px; top: 250px; width: 36px; height: 640px; border-radius: 18px; background: rgba(245,230,200,.14); border: 4px solid #f5e6c8; z-index: 6; opacity: 0; }
+      .gfill { position: absolute; left: 6px; right: 6px; bottom: 6px; height: 0; border-radius: 12px; background: linear-gradient(0deg, #12a594, #f59f00); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-capsula-machu-picchu-1" data-start="0" data-width="1920" data-height="1200" data-duration="7.618">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.618" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":7.318,"v":1},{"t":7.618,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.76b2a3d163.mp3" data-start="0.5" data-duration="6.068" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="3.971" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="6.218" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-capsula-machu-picchu-1","cinematica":"u10-capsula-machu-picchu","part":1,"parts":5,"total":7.618,"meta":{"cinematica":"u10-capsula-machu-picchu","titulo":"Machu Picchu, los incas y el quechua","tipo":"capsula","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":1,"t0":0,"t1":7.368,"vista":"Style explainer, papier découpé : une carte du Pérou, les Andes en relief, deux points : Cusco et Machu Picchu ; un curseur d’altitude affiche « 2 430 m ».","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Machu Picchu es una ciudad inca en las montañas de los Andes, a unos dos mil cuatrocientos metros de altura.","key":"narrador.76b2a3d163","t":0.5,"d":6.068,"words":[{"w":"Machu","t":0.5,"d":0.306},{"w":"Picchu","t":0.806,"d":0.354},{"w":"es","t":1.16,"d":0.163},{"w":"una","t":1.323,"d":0.211},{"w":"ciudad","t":1.534,"d":0.354},{"w":"inca","t":1.888,"d":0.258},{"w":"en","t":2.146,"d":0.163},{"w":"las","t":2.309,"d":0.211},{"w":"montañas","t":2.519,"d":0.45},{"w":"de","t":2.969,"d":0.163},{"w":"los","t":3.132,"d":0.211},{"w":"Andes,","t":3.342,"d":0.306},{"w":"a","t":3.971,"d":0.119},{"w":"unos","t":4.09,"d":0.269},{"w":"dos","t":4.359,"d":0.219},{"w":"mil","t":4.578,"d":0.219},{"w":"cuatrocientos","t":4.797,"d":0.716},{"w":"metros","t":5.513,"d":0.368},{"w":"de","t":5.881,"d":0.169},{"w":"altura.","t":6.05,"d":0.368}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":3.971,"f":"ui/tick"},{"t":6.218,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        Cap.css();
+        var T = PLAN.total, P1 = C.planOf(PLAN, 1);
+        var w = function (k) { return C.wordT(PLAN, 1, 1, k); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var p1 = $("#p1");
+        Cap.bg(root, p1);
+        var ttl = Cap.title(tl, p1, "CULTURA", "Machu Picchu", 0.3);
+
+        // ---------- la carte du Perou en papier decoupe (Andes en relief) ----------
+        var MX = 930, MY = 160, MS = 0.92, MW = 1000 * MS;
+        var map = mk(p1, "lay cap-paper", Q.peruMap({ width: MW, uid: "pm" })); gsap.set(map, { x: MX, y: MY });
+        map.firstChild.setAttribute("data-layout-allow-overflow", "");
+        tl.set(map, { opacity: 0 }, 0);
+        tl.fromTo(map, { opacity: 0, y: MY + 140, rotation: 3 }, { opacity: 1, y: MY, rotation: 0, duration: 0.7, ease: "back.out(1.5)", immediateRender: false }, 0.35);
+        var peaks = map.querySelectorAll(".cu-peak");
+        tl.set(peaks, { opacity: 0 }, 0);
+        peaks.forEach(function (pk, i) { tl.fromTo(pk, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, w(11) - 0.1 + i * 0.07); });
+        var pos = function (lon, lat) { var p = Q.peruProj(lon, lat); return [MX + p[0] * MS, MY + p[1] * MS]; };
+        var pM = pos(-72.55, -13.16), pC = pos(-71.97, -13.52);
+        var pins = map.querySelectorAll(".cu-pin-mp, .cu-pin-cusco");
+        tl.set(pins, { opacity: 0 }, 0);
+        tl.fromTo(map.querySelector(".cu-pin-mp"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(3)", immediateRender: false, transformOrigin: "50% 50%", svgOrigin: Q.peruProj(-72.55, -13.16).join(" ") }, w(1) - 0.05);
+        tl.fromTo(map.querySelector(".cu-pin-cusco"), { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(3)", immediateRender: false, svgOrigin: Q.peruProj(-71.97, -13.52).join(" ") }, w(1) + 0.35);
+        map.querySelectorAll(".cu-pin-ring").forEach(function (rg, i) {
+          var o = Q.peruProj(i ? -71.97 : -72.55, i ? -13.52 : -13.16).join(" ");
+          for (var r = 0; r < 3; r++) tl.fromTo(rg, { scale: 0.5, opacity: 0.9, svgOrigin: o }, { scale: 2.6, opacity: 0, svgOrigin: o, duration: 1.1, ease: "power2.out", immediateRender: false }, w(1) + 0.4 + i * 0.3 + r * 1.3);
+        });
+        tl.fromTo(map.querySelector(".cu-route"), { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, w(1) + 0.7);
+        var chM = Cap.chip(p1, "Machu Picchu", pM[0] - 440, pM[1] - 126, "pink"); Cap.pop(tl, chM, w(1) - 0.05, { from: "down", rot: 2 });
+        var chC = Cap.chip(p1, "Cusco", pC[0] + 70, pC[1] + 26, "gold"); Cap.pop(tl, chC, w(1) + 0.4, { from: "up", rot: -2 });
+        Cap.sparks(tl, p1, pM[0], pM[1], w(1), 8, "#ffb0c8");
+
+        // ---------- le compteur d'altitude 0 -> 2 430 m et la jauge qui monte ----------
+        var cnt = mk(p1, "", '<span id="cv">0</span>'); cnt.id = "cnt";
+        var cl = mk(p1, "", "metros de altura"); cl.id = "cntl";
+        var gg = mk(p1, "gauge", '<div class="gfill"></div>');
+        var tS = w(15) - 0.2, tE = w(18) + 0.45;
+        tl.set([cnt, cl], { opacity: 0 }, 0);
+        tl.fromTo([cnt, cl], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, tS);
+        tl.fromTo(gg, { opacity: 0 }, { opacity: 1, duration: 0.4, immediateRender: false }, tS);
+        tl.fromTo(gg.querySelector(".gfill"), { height: 0 }, { height: "92%", duration: tE - tS, ease: "power1.inOut", immediateRender: false }, tS);
+        var prog = { v: 0 }, cv = $("#cv");
+        var fmt = function (n) { var s = String(Math.round(n)); return s.length > 3 ? s.slice(0, s.length - 3) + " " + s.slice(-3) : s; };
+        tl.to(prog, { v: 2430, duration: tE - tS, ease: "power1.inOut", onUpdate: function () { cv.textContent = fmt(prog.v); } }, tS);
+        Cap.sparks(tl, p1, 560, 560, tE - 0.2, 8, "#ffe9a8");
+        tl.to([ttl, cnt, cl, gg], { opacity: 0, duration: 0.35, ease: "power2.in" }, T - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 21, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-capsula-machu-picchu-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

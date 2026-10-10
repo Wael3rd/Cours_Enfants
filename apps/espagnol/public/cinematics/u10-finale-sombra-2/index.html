@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-finale-sombra-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+      .mp-l { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; }
+      #warm { position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 52%, rgba(255,214,130,.55), rgba(255,214,130,0) 62%); opacity: 0.22; }
+      .aura { position: absolute; left: 0; top: 0; width: 1100px; height: 1100px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,214,130,.95), rgba(255,214,130,0)); opacity: 0; }
+      .echo { position: absolute; left: 0; top: 0; z-index: 12; padding: 10px 40px 14px; border-radius: 999px; background: rgba(31,15,51,.94); border: 5px solid #f59f00; font: 400 64px/1 "Alfa Slab One", serif; color: #f5e6c8; white-space: nowrap; box-shadow: 0 8px 0 rgba(0,0,0,.3); }
+      .ring { position: absolute; left: 0; top: 0; width: 220px; height: 220px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-finale-sombra-2" data-start="0" data-width="1920" data-height="1200" data-duration="5.487">
+      <div id="stage"></div>
+      <div id="warm"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.487" data-media-start="8.16" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":4.287,"v":1},{"t":5.487,"v":0}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/sombra.76c06e70be.mp3" data-start="1" data-duration="1.437" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.1" data-duration="1.104" data-track-index="3" data-volume="0.32"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/bell.mp3" data-start="1.9" data-duration="1.741" data-track-index="4" data-volume="0.22"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/bell.mp3" data-start="2.8" data-duration="1.741" data-track-index="5" data-volume="0.14"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="2" data-duration="0.121" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/bell.mp3" data-start="3.7" data-duration="1.741" data-track-index="7" data-volume="0.09"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-finale-sombra-2","cinematica":"u10-finale-sombra","part":2,"parts":2,"total":5.487,"meta":{"cinematica":"u10-finale-sombra","titulo":"El eco de la Sombra","tipo":"pluma","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":2,"t0":0,"t1":5.237,"vista":"La Sombra se dissout en lumière dorée. Sa voix devient un écho qui traverse la vallée : le premier mot du voyage, « hola », renvoyé par les montagnes.","camara":"","rotulo":"","personajes":["sombra"],"lines":[{"who":"sombra","es":"Gracias… hola…","key":"sombra.76c06e70be","t":1,"d":1.437,"words":[{"w":"Gracias…","t":1,"d":0.646},{"w":"hola…","t":1.967,"d":0.32}]}]}],"sfx":[{"t":0.1,"f":"rpg/spell-magic"},{"t":1.9,"f":"rpg/bell"},{"t":2.8,"f":"rpg/bell"},{"t":2,"f":"ui/star"},{"t":3.7,"f":"rpg/bell"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L = P.lines[0], T = PLAN.total;
+        var w = function (k) { return C.wordT(PLAN, 2, 1, k); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var M = Q.machuPicchu({ uid: "mp" });
+        var wrap = function (h) { return '<div class="mp-l">' + h + "</div>"; };
+        var set = { back: wrap(M.sky) + wrap(M.back) + wrap(M.sea), front: M.front, light: M.light, W: M.W, H: M.H };
+        var room = S.set($("#stage"), set, { below: "#7A6A58", motes: 22, moteColors: ["#FFE9A8", "#FFD76A", "#FFFFFF"] });
+        S.drift(tl, room, T);
+        var FL = 1456;
+        room.back.querySelectorAll(".cu-sea1, .cu-sea2, .cu-sea3").forEach(function (s, i) { tl.fromTo(s, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 0.9 }, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 1.4, duration: T, ease: "sine.inOut" }, 0); });
+        tl.fromTo(room.back.querySelector(".cu-sundisc"), { y: -70 }, { y: -120, duration: T, ease: "sine.inOut" }, 0);
+
+        // ---------- le groupe, comme a la fin de la partie 1 : Alex accroupi, la main tendue ; la Sombra toute proche ----------
+        var mar = S.chr(room.actors, "marina", 1170, FL, 322), ale = S.chr(room.actors, "viajero", 1470, FL + 6, 332);
+        S.breathe(tl, mar, 0, T, 0.6);
+        gsap.set(ale.b, { scaleY: 0.86, scaleX: 1.04, y: 6, transformOrigin: "50% 100%" });
+        gsap.set(ale.svg.querySelector(".c-armR"), { rotation: -82, svgOrigin: "258 306" });
+        gsap.set(ale.svg.querySelector(".c-head"), { rotation: 6, svgOrigin: "200 288" });
+        var qz = S.quetzal(room.actors, 1470 + 96, FL + 6 - 290, 180, "perched", false, "qf2");
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.55, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        gsap.set(qz.querySelectorAll(".q-crest"), { scale: 0.8, svgOrigin: "300 150" });
+        gsap.set(qz.querySelectorAll(".q-dull, .q-dull-h"), { opacity: 0.2 });
+        Q.quetzalPoseTo(tl, qz, "talk", 0.1, 0.4); Q.quetzalBlink(tl, qz, 2.6);
+        Q.charEmote(tl, ale.svg, 0, "neutral", 0.1); Q.charEmote(tl, ale.svg, w(2), "happy", 0.9); Q.charEmote(tl, mar.svg, w(2), "happy", 0.9);
+        Q.charBlink(tl, mar.svg, 1.8); Q.charBlink(tl, ale.svg, 3.4);
+        var SX = 1794, SW = 250, SH = 300, SCY = FL - 150;
+        var sb = mkp(room.actors, "cu-ab", Q.sombra({ uid: "sbf2", width: SW, height: SH, glow: "#C65BFF" }), SX - SW / 2, FL - SH * 0.97);
+        sb.querySelector("svg").style.overflow = "visible";
+        Q.sombraFloat(tl, sb, 0, Math.max(1, Math.floor(T / 3.6)), 3.6);
+
+        // ---------- « Gracias… » : elle se defait en lumiere doree, tres lentement (halo doux <= 0,22, pas d'eclair) ----------
+        var tD = L.t + 0.1, dD = 2.8;
+        tl.to(sb, { opacity: 0, y: "-=60", scale: 1.08, duration: dD, ease: "sine.inOut", transformOrigin: "50% 100%" }, tD);
+        var aura = mkp(room.qlayer, "aura q-fx", "", SX - 550, SCY - 550);
+        tl.set(aura, { opacity: 0 }, 0);
+        tl.fromTo(aura, { opacity: 0, scale: 0.35 }, { opacity: 0.22, scale: 1, duration: 0.9, ease: "sine.out", immediateRender: false }, tD);
+        tl.to(aura, { opacity: 0, scale: 1.3, duration: 2.2, ease: "sine.inOut" }, tD + 1.0);
+        // etincelles et plumes de lumiere qui montent
+        var rnd = Q.rng(61), spk = '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#FFE9A8"/></svg>';
+        var fea = '<svg width="46" height="130" viewBox="0 0 46 130" style="overflow:visible"><path d="M23 4C40 32 42 78 26 126C20 88 6 56 4 40C10 26 16 14 23 4Z" fill="#FFE9A8" stroke="#F5B642" stroke-width="3"/><path d="M23 10Q25 70 24 118" stroke="#F5B642" stroke-width="2.5" fill="none"/></svg>';
+        for (var i = 0; i < 26; i++) {
+          var isF = i % 3 === 0, el = mkp(room.qlayer, "cu-ab q-fx", isF ? fea : spk, SX, SCY);
+          var x0 = SX - 90 + rnd() * 180, y0 = FL - 60 - rnd() * 170, dx = (rnd() - 0.5) * 420, dy = 380 + rnd() * 520, du = 2.2 + rnd() * 1.4, t0 = tD + 0.1 + rnd() * 1.6;
+          var sc = isF ? 0.7 + rnd() * 0.5 : 0.6 + rnd() * 0.9;
+          tl.fromTo(el, { x: x0, y: y0, opacity: 0, scale: 0.2, rotation: isF ? (rnd() - 0.5) * 40 : 0 }, { x: x0 + dx, y: y0 - dy, opacity: 0.95, scale: sc, rotation: isF ? (rnd() - 0.5) * 70 : 90, duration: du, ease: "sine.out", immediateRender: false }, t0);
+          tl.to(el, { opacity: 0, duration: 0.9, ease: "sine.in" }, t0 + du - 0.7);
+        }
+
+        // ---------- « …hola… » : l'echo traverse la vallee (anneaux dores qui s'elargissent, lents) puis les montagnes le renvoient ----------
+        var tH = w(2) - 0.15;
+        for (var r = 0; r < 4; r++) {
+          var rg = mkp(room.qlayer, "ring q-fx", '<svg width="220" height="220" viewBox="0 0 220 220" style="overflow:visible"><circle cx="110" cy="110" r="100" fill="none" stroke="#FFD76A" stroke-width="8" vector-effect="non-scaling-stroke"/></svg>', SX - 110, SCY - 110);
+          tl.fromTo(rg, { scale: 0.25, opacity: 0.0 }, { scale: 9, opacity: 0.55, duration: 0.5, ease: "power1.out", immediateRender: false, transformOrigin: "50% 50%" }, tH + r * 0.62);
+          tl.to(rg, { scale: 15, opacity: 0, duration: 1.7, ease: "power1.out", transformOrigin: "50% 50%" }, tH + r * 0.62 + 0.5);
+        }
+        var echoes = [[2300, 1020, 1.0, 0.55], [1020, 940, 0.82, 1.15], [1650, 800, 0.66, 1.75]];
+        echoes.forEach(function (e, i) {
+          var el = mkp(room.qlayer, "echo", "hola", e[0], e[1]); el.style.fontSize = "64px"; el.setAttribute("data-layout-allow-overflow", "");
+          var tt = tH + e[3];
+          tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, tt);
+          tl.fromTo(el, { scale: 0.3 }, { scale: e[2], duration: 0.5, ease: "back.out(1.8)", immediateRender: false, transformOrigin: "50% 50%" }, tt);
+          tl.to(el, { y: "-=24", duration: 1.6, ease: "sine.inOut" }, tt + 0.5);
+          tl.to(el, { scale: 0, duration: 0.5, ease: "power2.in" }, T - 0.95 + i * 0.1);
+        });
+        // l'aube gagne : la lueur chaude de l'ecran monte tres doucement
+        tl.fromTo("#warm", { opacity: 0.22 }, { opacity: 0.3, duration: T, ease: "sine.inOut" }, 0);
+
+        // ---------- camera : plan sur les deux (comme la partie 1) -> recul et montee sur la vallee que l'echo traverse ----------
+        S.camSet(room, 1500, 1190, 1.12);
+        S.cam(tl, room, 1520, 1180, 1.14, 0, L.t + 0.4, "sine.inOut");
+        S.cam(tl, room, 1640, 960, 0.86, L.t + 0.5, T - L.t - 0.5, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 28, fadeOut: 0.6 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-finale-sombra-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

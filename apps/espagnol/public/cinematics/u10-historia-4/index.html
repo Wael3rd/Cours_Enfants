@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-historia-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-historia-4" data-start="0" data-width="1920" data-height="1200" data-duration="9.92">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.92" data-media-start="22.453" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.62,"v":1},{"t":9.92,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/sombra.667bdb0fe3.mp3" data-start="0.9" data-duration="5.789" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-3-2" src="./assets/voz/sombra.bdb0e18495.mp3" data-start="6.989" data-duration="1.881" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.3" data-duration="1.104" data-track-index="4" data-volume="0.2"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="6.939" data-duration="0.1" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="9.62" data-duration="0.212" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-historia-4","cinematica":"u10-historia","part":4,"parts":5,"total":9.92,"meta":{"cinematica":"u10-historia","titulo":"El cuentacuentos sin voz","tipo":"historia","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":3,"t0":0,"t1":9.67,"vista":"Sur un mur inca, la Sombra : petite, silencieuse, la voix lasse. Elle regarde les enfants sans oser s’approcher.","camara":"","rotulo":"","personajes":["sombra"],"lines":[{"who":"sombra","es":"Sin cuentos, nadie recuerda. Sin recuerdos, nadie habla.","key":"sombra.667bdb0fe3","t":0.9,"d":5.789,"words":[{"w":"Sin","t":0.9,"d":0.318},{"w":"cuentos,","t":1.218,"d":0.607},{"w":"nadie","t":2.085,"d":0.623},{"w":"recuerda.","t":2.708,"d":0.914},{"w":"Sin","t":4.017,"d":0.428},{"w":"recuerdos,","t":4.445,"d":1.012},{"w":"nadie","t":5.769,"d":0.385},{"w":"habla.","t":6.154,"d":0.385}]},{"who":"sombra","es":"Nadie cuenta cuentos para mí.","key":"sombra.bdb0e18495","t":6.989,"d":1.881,"words":[{"w":"Nadie","t":6.989,"d":0.357},{"w":"cuenta","t":7.346,"d":0.413},{"w":"cuentos","t":7.76,"d":0.469},{"w":"para","t":8.229,"d":0.302},{"w":"mí.","t":8.531,"d":0.19}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-magic"},{"t":6.939,"f":"ui/pop"},{"t":9.62,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var w = function (k) { return C.wordT(PLAN, 3, 1, k); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.murosIncas({ uid: "mi" });
+        var room = S.set($("#stage"), set, { below: "#3E2F26", motes: 12, moteColors: ["#FFD9A0", "#FFE9A8", "#FFFFFF"] });
+        S.drift(tl, room, T);
+
+        // ---------- le groupe au pied du mur, la tete levee ----------
+        var kil = S.chr(room.actors, "killa", 420, 1050, 320), mar = S.chr(room.actors, "marina", 620, 1055, 312), ale = S.chr(room.actors, "viajero", 810, 1060, 322);
+        var ll = mkp(room.actors, "cu-ab", Q.cuLlama({ width: 270, body: "#EAD9BC", blanket: "#12A594" }), 200 - 135, 1055 - 0.955 * 297);
+        S.breathe(tl, kil, 0, T, 0.7); S.breathe(tl, mar, 0.1, T, 0.7); S.breathe(tl, ale, 0.2, T, 0.7);
+        var qz = S.quetzal(room.actors, 620 + 92, 1055 - 285, 180, "perched", false, "qh4");
+        Q.quetzalPoseTo(tl, qz, "sad", 0.4, 0.6);
+        Q.charEmote(tl, kil.svg, 0.2, "worry", 0.4); Q.charEmote(tl, mar.svg, 0.2, "worry", 0.4); Q.charEmote(tl, ale.svg, 0.2, "worry", 0.4);
+        [kil, mar, ale].forEach(function (c, i) { Q.charBlink(tl, c.svg, 1.6 + i * 1.3); tl.to(c.svg.querySelector(".c-head"), { rotation: -6, svgOrigin: "200 288", duration: 0.7, ease: "sine.inOut" }, 0.3 + i * 0.1); });
+
+        // ---------- la Sombra, petite et lasse, assise sur le haut du mur : elle apparait doucement (echelle, pas de fondu de texte) ----------
+        var sx = 1560, sy = 478;
+        var sb = mkp(room.qlayer, "cu-ab", Q.sombra({ uid: "sbm", width: 210, height: 252 }), sx - 105, sy - 252 * 0.95);
+        sb.querySelector("svg").style.overflow = "visible";
+        tl.set(sb, { opacity: 0 }, 0);
+        tl.fromTo(sb, { opacity: 0, scale: 0.7, transformOrigin: "50% 100%" }, { opacity: 0.95, scale: 1, duration: 0.9, ease: "sine.out", immediateRender: false }, 0.1);
+        Q.sombraFloat(tl, sb, 0.3, Math.max(1, Math.floor(T / 3.4)), 3.4);
+        Q.sombraEyes(tl, sb, 0.5, "open", 0.5); Q.sombraEyes(tl, sb, L1.t + 1.0, "narrow", 0.8);
+        tl.to(sb, { y: "+=10", duration: 1.4, ease: "sine.inOut" }, w(6));
+        // elle regarde les enfants sans oser s'approcher : un petit recul
+        tl.to(sb, { x: "+=28", duration: 0.9, ease: "sine.inOut" }, L2.t - 0.3);
+        // quelques etoiles clignotent lentement derriere elle
+        document.querySelectorAll("#stage .st-back circle[fill='#FFF6D8'][opacity]").forEach(function (s, i) { if (i % 4 === 0) tl.to(s, { opacity: 0.35, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.4 + i * 0.05); });
+
+        // ---------- reactions : Killa serre son chale, Alex regarde la Sombra autrement ----------
+        tl.to(kil.b, { y: 4, duration: 0.7, ease: "sine.inOut" }, L1.t + 1.5);
+        Q.charNod(tl, ale.svg, L2.t + 0.4, 4, 0.4); Q.charEmote(tl, ale.svg, L2.t, "neutral", 0.6);
+        tl.to(ale.svg.querySelector(".c-head"), { rotation: -9, svgOrigin: "200 288", duration: 0.9, ease: "sine.inOut" }, L2.t + 0.2);
+
+        // ---------- camera : sur le groupe qui regarde en l'air -> basculement vers la Sombra -> plan moyen sur elle ----------
+        S.camSet(room, 760, 700, 0.95);
+        S.cam(tl, room, 1000, 640, 0.95, 0.3, 1.4, "sine.inOut");
+        S.cam(tl, room, 1330, 520, 1.2, L1.t + 0.4, 2.2, "power2.inOut");
+        S.cam(tl, room, 1250, 580, 1.1, L2.t - 0.4, L2.d + 1.0, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-historia-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

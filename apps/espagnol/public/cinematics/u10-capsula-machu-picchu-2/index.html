@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-capsula-machu-picchu-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p2 { position: absolute; inset: 0; }
+      .lay { position: absolute; left: 0; top: 0; z-index: 5; }
+      .card { position: absolute; left: 0; top: 0; z-index: 5; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); background: #1d2160; }
+      .card .inner { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; transform-origin: 0 0; }
+      .card .inner > div { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; }
+      .card .inner svg { display: block; }
+      .frame { position: absolute; left: 0; top: 0; z-index: 9; border-radius: 34px; box-shadow: inset 0 0 0 7px rgba(245,230,200,.9); }
+      #cnt { position: absolute; left: 110px; top: 470px; z-index: 10; font: 400 230px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #d93472, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+      #cntl { position: absolute; left: 118px; top: 720px; z-index: 10; font: 900 52px/1 Nunito, sans-serif; color: #f59f00; letter-spacing: .1em; text-transform: uppercase; }
+      .seal { position: absolute; left: 0; top: 0; z-index: 8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-capsula-machu-picchu-2" data-start="0" data-width="1920" data-height="1200" data-duration="7.873">
+      <div id="p2" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.873" data-media-start="7.618" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.573,"v":1},{"t":7.873,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.d3be7190f0.mp3" data-start="0.5" data-duration="6.323" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/page-1.mp3" data-start="2.6" data-duration="0.699" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="2.81" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-capsula-machu-picchu-2","cinematica":"u10-capsula-machu-picchu","part":2,"parts":5,"total":7.873,"meta":{"cinematica":"u10-capsula-machu-picchu","titulo":"Machu Picchu, los incas y el quechua","tipo":"capsula","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":2,"t0":0,"t1":7.623,"vista":"Les terrasses de Machu Picchu, des lamas qui broutent, des murs de pierre sans mortier ; un calendrier retourne les siècles jusqu’au XVe.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Los incas construyen Machu Picchu hace más de quinientos años. Hoy es patrimonio mundial.","key":"narrador.d3be7190f0","t":0.5,"d":6.323,"words":[{"w":"Los","t":0.5,"d":0.245},{"w":"incas","t":0.745,"d":0.357},{"w":"construyen","t":1.103,"d":0.636},{"w":"Machu","t":1.739,"d":0.357},{"w":"Picchu","t":2.096,"d":0.413},{"w":"hace","t":2.508,"d":0.301},{"w":"más","t":2.81,"d":0.245},{"w":"de","t":3.055,"d":0.19},{"w":"quinientos","t":3.245,"d":0.636},{"w":"años.","t":3.881,"d":0.301},{"w":"Hoy","t":5.156,"d":0.242},{"w":"es","t":5.398,"d":0.187},{"w":"patrimonio","t":5.585,"d":0.627},{"w":"mundial.","t":6.212,"d":0.462}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":2.6,"f":"rpg/page-1"},{"t":2.81,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        Cap.css();
+        var T = PLAN.total, P = C.planOf(PLAN, 2);
+        var w = function (k) { return C.wordT(PLAN, 2, 1, k); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var p2 = $("#p2");
+        Cap.bg(root, p2);
+        var ttl = Cap.title(tl, p2, "HISTORIA", "Los incas", 0.3);
+
+        // ---------- une carte de papier : les terrasses de Machu Picchu a l'aube ----------
+        var CX = 880, CY = 210, CW = 900, CH = 640, ZS = 0.5;
+        var card = mk(p2, "card", ""); gsap.set(card, { x: CX, y: CY }); card.style.width = CW + "px"; card.style.height = CH + "px";
+        var M = Q.machuPicchu({ uid: "mc" });
+        var inner = mk(card, "inner", "");
+        inner.innerHTML = '<div class="l-sky">' + M.sky + '</div><div class="l-back">' + M.back + '</div><div class="l-sea">' + M.sea + '</div><div class="l-front">' + M.front + "</div>";
+        gsap.set(inner, { scale: ZS, x: -250 * ZS, y: -420 * ZS, transformOrigin: "0 0" });
+        var fr = mk(p2, "frame", ""); fr.style.width = CW + "px"; fr.style.height = CH + "px"; gsap.set(fr, { x: CX, y: CY });
+        tl.set([card, fr], { opacity: 0 }, 0);
+        tl.fromTo([card, fr], { opacity: 0, y: CY + 150, rotation: 3 }, { opacity: 1, y: CY, rotation: 0, duration: 0.7, ease: "back.out(1.5)", immediateRender: false }, 0.35);
+        // le banc de nuages glisse doucement, le soleil monte tres lentement
+        inner.querySelectorAll(".cu-sea1, .cu-sea2, .cu-sea3").forEach(function (s, i) { tl.fromTo(s, { x: 0 }, { x: -70 - i * 50, duration: T, ease: "sine.inOut" }, 0); });
+        tl.fromTo(inner.querySelector(".cu-sundisc"), { y: 60 }, { y: -30, duration: T, ease: "sine.out" }, 0);
+        tl.fromTo(inner, { y: -420 * ZS }, { y: -420 * ZS - 16, duration: T, ease: "sine.inOut" }, 0.3);
+        // quelques lamas qui broutent sur la plate-forme
+        var lls = [[1000, 0.9, "#EAD9BC", "#D93472"], [1330, 1.0, "#8A6A4A", "#12A594"], [1660, 0.85, "#EAD9BC", "#F59F00"]];
+        lls.forEach(function (l, i) {
+          var el = mk(inner, "", Q.cuLlama({ width: 330 * l[1], body: l[2], blanket: l[3] })); el.style.cssText += ";position:absolute;left:0;top:0;z-index:4";
+          el.firstChild.style.overflow = "visible"; gsap.set(el, { x: l[0], y: M.floor - 330 * l[1] * 1.05 });
+          tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: M.floor - 330 * l[1] * 1.05 + 40 }, { opacity: 1, y: M.floor - 330 * l[1] * 1.05, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, 0.9 + i * 0.25);
+          tl.to(el.querySelector(".cu-ll-head"), { rotation: 18, svgOrigin: "130 110", duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 5 }, 1.3 + i * 0.3);
+        });
+
+        // ---------- calendrier : le compteur remonte les siecles, +500 anos ----------
+        var cnt = mk(p2, "", '<span id="cv">0</span>'); cnt.id = "cnt";
+        var cl = mk(p2, "", "años"); cl.id = "cntl";
+        var tS = w(6) - 0.2, tE = w(10) + 0.3;
+        tl.set([cnt, cl], { opacity: 0 }, 0);
+        tl.fromTo([cnt, cl], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, tS);
+        var prog = { v: 0 }, cv = $("#cv");
+        tl.to(prog, { v: 500, duration: tE - tS, ease: "power1.inOut", onUpdate: function () { cv.textContent = prog.v >= 499.5 ? "+500" : String(Math.round(prog.v)); } }, tS);
+        var chMas = Cap.chip(p2, "hace más de quinientos años", 110, 840, "gold"); Cap.pop(tl, chMas, w(7) - 0.05, { from: "up", rot: -2 });
+        var chS = Cap.chip(p2, "siglo XV", CX + 30, CY + CH - 100, "terra"); Cap.pop(tl, chS, w(9) - 0.05, { from: "down", rot: 2 });
+        Cap.sparks(tl, p2, 560, 560, tE - 0.1, 8, "#ffe9a8");
+
+        // ---------- « patrimonio mundial » : un sello de laurel (generique) se pose sur la carte ----------
+        var seal = mk(p2, "seal", Q.oxSeal({ width: 230 })); gsap.set(seal, { x: CX + CW - 150, y: CY - 70, transformOrigin: "50% 50%" });
+        tl.set(seal, { opacity: 0 }, 0);
+        tl.fromTo(seal, { opacity: 0, scale: 2.2, rotation: -20 }, { opacity: 1, scale: 1, rotation: 8, duration: 0.45, ease: "back.out(1.7)", immediateRender: false }, w(13) - 0.05);
+        QCine.shake(tl, "#p2", w(13) + 0.3, 6);
+        Cap.sparks(tl, p2, CX + CW - 35, CY + 45, w(13) + 0.3, 10, "#ffe9a8");
+        var chP = Cap.chip(p2, "patrimonio mundial", CX + CW - 360, CY + CH - 100, "gold"); Cap.pop(tl, chP, w(13) - 0.05, { from: "down", rot: -2 });
+        tl.to([ttl, cnt, cl, chMas], { opacity: 0, duration: 0.35, ease: "power2.in" }, T - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 22, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-capsula-machu-picchu-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

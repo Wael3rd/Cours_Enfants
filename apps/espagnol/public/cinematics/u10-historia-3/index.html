@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="8.524">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.524" data-media-start="13.929" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.224,"v":1},{"t":8.524,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/killa.56c2cdb6aa.mp3" data-start="0.7" data-duration="3.529" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/huaman.e6289c1d1b.mp3" data-start="4.529" data-duration="2.945" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.65" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="4.229" data-duration="1.104" data-track-index="5" data-volume="0.12"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="4.629" data-duration="0.1" data-track-index="6" data-volume="0.25"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="8.224" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-historia-3","cinematica":"u10-historia","part":3,"parts":5,"total":8.524,"meta":{"cinematica":"u10-historia","titulo":"El cuentacuentos sin voz","tipo":"historia","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":2,"t0":0,"t1":8.274,"vista":"Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus. Il finit par murmurer, d’une voix presque éteinte.","camara":"plans rapprochés sur les enfants et sur le conteur","rotulo":"","personajes":["killa","huaman"],"lines":[{"who":"killa","es":"Don Huamán es el mejor cuentacuentos de Cusco, pero hoy no tiene voz.","key":"killa.56c2cdb6aa","t":0.7,"d":3.529,"words":[{"w":"Don","t":0.7,"d":0.182},{"w":"Huamán","t":0.882,"d":0.305},{"w":"es","t":1.187,"d":0.14},{"w":"el","t":1.327,"d":0.14},{"w":"mejor","t":1.467,"d":0.264},{"w":"cuentacuentos","t":1.731,"d":0.594},{"w":"de","t":2.326,"d":0.14},{"w":"Cusco,","t":2.466,"d":0.264},{"w":"pero","t":3.048,"d":0.232},{"w":"hoy","t":3.28,"d":0.189},{"w":"no","t":3.469,"d":0.146},{"w":"tiene","t":3.615,"d":0.275},{"w":"voz.","t":3.89,"d":0.189}]},{"who":"huaman","es":"…las leyendas han desaparecido de mi memoria.","key":"huaman.e6289c1d1b","t":4.529,"d":2.945,"words":[{"w":"…","t":4.529,"d":0.08},{"w":"las","t":5.047,"d":0.214},{"w":"leyendas","t":5.261,"d":0.457},{"w":"han","t":5.718,"d":0.214},{"w":"desaparecido","t":5.933,"d":0.652},{"w":"de","t":6.584,"d":0.165},{"w":"mi","t":6.75,"d":0.165},{"w":"memoria.","t":6.915,"d":0.409}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.65,"f":"ui/pop"},{"t":4.229,"f":"rpg/spell-magic"},{"t":4.629,"f":"ui/pop"},{"t":8.224,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.escalinata({ uid: "es" });
+        var room = S.set($("#stage"), set, { below: "#B59471", motes: 12 });
+        S.drift(tl, room, T);
+        var st = set.steps;
+
+        // ---------- Don Huaman en haut des marches, les enfants assis plus bas (ils attendent) ----------
+        var hua = S.chr(room.actors, "huaman", 1600, st[5].y + 14, 270);
+        var kids = [
+          S.chr(room.actors, "lola", 1290, st[3].y + 14, 220), S.chr(room.actors, "diego", 1420, st[2].y + 14, 226),
+          S.chr(room.actors, "xochitl", 1790, st[2].y + 14, 224), S.chr(room.actors, "mateo", 1920, st[3].y + 14, 224)
+        ];
+        // le trio du voyage au pied de l'escalier
+        var kil = S.chr(room.actors, "killa", 560, 1050, 300), ale = S.chr(room.actors, "viajero", 880, 1060, 300), mar = S.chr(room.actors, "marina", 720, 1055, 294);
+        var ll = mkp(room.actors, "cu-ab", Q.cuLlama({ width: 280, body: "#EAD9BC", blanket: "#12A594" }), 330 - 140, 1050 - 0.955 * 308);
+        S.breathe(tl, hua, 0, T, 0.6);
+        kids.forEach(function (k, i) { S.breathe(tl, k, 0.15 * i, T, 0.5); Q.charEmote(tl, k.svg, 0.2, "worry", 0.5); Q.charBlink(tl, k.svg, 1.4 + i * 0.9); });
+        S.breathe(tl, kil, 0, T, 0.8); S.breathe(tl, ale, 0.1, T, 0.8); S.breathe(tl, mar, 0.2, T, 0.8);
+        var qz = S.quetzal(room.actors, 880 + 90, 1060 - 265, 170, "perched", false, "qh3");
+        Q.quetzalPoseTo(tl, qz, "sad", 0.6, 0.6);
+        Q.charEmote(tl, mar.svg, 0.3, "worry", 0.4); Q.charEmote(tl, ale.svg, 0.3, "worry", 0.4);
+
+        // ---------- le conteur ouvre la bouche : aucun son (3 essais muets), puis ses epaules s'affaissent ----------
+        var tm = L1.t + 0.3;
+        for (var m = 0; m < 3; m++) Q.charTalk(tl, hua.svg, tm + m * 0.62, 0.42, 2);
+        tl.to(hua.b, { y: -6, scaleY: 1.02, duration: 0.25, ease: "power2.out" }, tm - 0.1);
+        tl.to(hua.b, { y: 0, scaleY: 1, duration: 0.5, ease: "sine.inOut" }, tm + 1.7);
+        Q.charEmote(tl, hua.svg, tm + 2.0, "worry", 0.6);
+        tl.to(hua.svg.querySelector(".c-head"), { rotation: 7, svgOrigin: "200 288", duration: 0.9, ease: "sine.inOut" }, tm + 2.0);
+        kids.forEach(function (k, i) { tl.to(k.svg.querySelector(".c-head"), { rotation: (i % 2 ? 4 : -4), svgOrigin: "200 288", duration: 0.8, ease: "sine.inOut" }, tm + 1.9 + i * 0.1); });
+        C.talkBounce(tl, kil.b, L1, 5); C.talkChar(tl, kil, L1);
+        tl.to(ll.querySelector(".cu-ll-head"), { rotation: -8, svgOrigin: "130 110", duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.4);
+
+        // ---------- sa reponse, presque inaudible ; de petites etincelles de memoire s'echappent de sa tete ----------
+        C.talkChar(tl, hua, L2, 1.4);
+        tl.to(hua.svg.querySelector(".c-head"), { rotation: 0, svgOrigin: "200 288", duration: 0.5, ease: "sine.inOut" }, L2.t - 0.1);
+        tl.to(hua.svg.querySelector(".c-head"), { rotation: 8, svgOrigin: "200 288", duration: 1.2, ease: "sine.inOut" }, L2.t + 1.6);
+        Q.charNod(tl, kil.svg, L2.t + L2.d + 0.2, 5, 0.3); Q.charEmote(tl, kil.svg, L2.t, "worry", 0.4);
+        var rnd = Q.rng(14);
+        for (var s = 0; s < 9; s++) {
+          var sp = mkp(room.qlayer, "cu-ab", '<svg width="46" height="46" viewBox="-23 -23 46 46"><path d="' + Q.sparklePath(0, 0, 18, 4) + '" fill="' + (s % 2 ? "#FFE9A8" : "#C9A8FF") + '"/></svg>', 1600 - 20, st[5].y - 330);
+          var t0 = L2.t + 0.5 + s * 0.28;
+          tl.fromTo(sp, { x: 1580 + (rnd() - 0.5) * 60, y: st[5].y - 320, opacity: 0, scale: 0.4 }, { x: 1580 + (rnd() - 0.5) * 360, y: st[5].y - 520 - rnd() * 160, opacity: 0.9, scale: 1, duration: 0.9, ease: "power1.out", immediateRender: false }, t0);
+          tl.to(sp, { opacity: 0, scale: 0.2, duration: 0.7, ease: "power1.in" }, t0 + 0.9);
+        }
+
+        // ---------- camera : plan large de l'escalier -> pousse lente vers le conteur ----------
+        S.camSet(room, 1250, 700, 0.88);
+        S.cam(tl, room, 1350, 700, 0.95, 0, L1.t + L1.d - 0.2, "sine.inOut");
+        S.cam(tl, room, 1600, 600, 1.4, L2.t - 0.5, L2.d + 1.2, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

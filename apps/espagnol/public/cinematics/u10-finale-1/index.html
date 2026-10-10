@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-finale-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+      .mp-l { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; }
+      #warm { position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 52%, rgba(255,214,130,.55), rgba(255,214,130,0) 62%); opacity: 0.3; }
+      .aura { position: absolute; left: 0; top: 0; width: 900px; height: 900px; border-radius: 50%; opacity: 0; }
+      .gold { background: radial-gradient(closest-side, rgba(255,214,130,.95), rgba(255,214,130,0)); }
+      .green { background: radial-gradient(closest-side, rgba(66,224,160,.95), rgba(66,224,160,0)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-finale-1" data-start="0" data-width="1920" data-height="1200" data-duration="11.005">
+      <div id="stage"></div>
+      <div id="warm"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="11.005" data-media-start="0" data-track-index="0" data-volume="0.22" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":10.705,"v":1},{"t":11.005,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/quetzal.a2b08a527a.mp3" data-start="2.6" data-duration="6.755" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/star.mp3" data-start="0.45" data-duration="0.121" data-track-index="3" data-volume="0.35"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="1.95" data-duration="0.526" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="2.4" data-duration="1.104" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/level-up-big.mp3" data-start="2.45" data-duration="1.015" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="6.722" data-duration="0.1" data-track-index="7" data-volume="0.25"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="9.105" data-duration="0.212" data-track-index="8" data-volume="0.5"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/bell.mp3" data-start="9.755" data-duration="1.25" data-track-index="9" data-volume="0.2"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-finale-1","cinematica":"u10-finale","part":1,"parts":2,"total":11.005,"meta":{"cinematica":"u10-finale","titulo":"Décima pluma · El final de la leyenda","tipo":"pluma","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":1,"t0":0,"t1":10.755,"vista":"La dixième plume verte tombe dans la main d’Álex, qui la pose sur le Quetzal. Il déploie une longue queue éclatante : il est entier. Il s’envole au-dessus des nuages, la vallée entière ouverte sous lui.","camara":"plan montant avec le Quetzal, vol libre","rotulo":"","personajes":["quetzal","viajero","marina"],"lines":[{"who":"quetzal","es":"Diez plumas. Ya puedo volar, cantar y hablar. Gracias, amigos.","key":"quetzal.a2b08a527a","t":2.6,"d":6.755,"words":[{"w":"Diez","t":2.6,"d":0.411},{"w":"plumas.","t":3.011,"d":0.563},{"w":"Ya","t":4.598,"d":0.178},{"w":"puedo","t":4.775,"d":0.335},{"w":"volar,","t":5.11,"d":0.335},{"w":"cantar","t":5.774,"d":0.64},{"w":"y","t":6.415,"d":0.208},{"w":"hablar.","t":6.622,"d":0.64},{"w":"Gracias,","t":7.606,"d":0.727},{"w":"amigos.","t":8.608,"d":0.597}]}]}],"sfx":[{"t":0.45,"f":"ui/star"},{"t":1.95,"f":"rpg/item-get"},{"t":2.4,"f":"rpg/spell-magic"},{"t":2.45,"f":"rpg/level-up-big"},{"t":6.722,"f":"ui/pop"},{"t":9.105,"f":"ui/swoosh-out"},{"t":9.755,"f":"rpg/bell"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 1), L = P.lines[0], T = PLAN.total;
+        var w = function (k) { return C.wordT(PLAN, 1, 1, k); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var M = Q.machuPicchu({ uid: "mp" });
+        var wrap = function (h) { return '<div class="mp-l">' + h + "</div>"; };
+        var set = { back: wrap(M.sky) + wrap(M.back) + wrap(M.sea), front: M.front, light: M.light, W: M.W, H: M.H };
+        var room = S.set($("#stage"), set, { below: "#7A6A58", motes: 24, moteColors: ["#FFE9A8", "#FFD76A", "#FFFFFF"] });
+        S.drift(tl, room, T);
+        var FL = 1456;
+        room.back.querySelectorAll(".cu-sea1, .cu-sea2, .cu-sea3").forEach(function (s, i) { tl.fromTo(s, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 1.4 }, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 1.9, duration: T, ease: "sine.inOut" }, 0); });
+        tl.fromTo(room.back.querySelector(".cu-sundisc"), { y: -120 }, { y: -190, duration: T, ease: "sine.inOut" }, 0);
+
+        // ---------- Alex (debout, la main tendue), Marina, le Quetzal presque entier sur l'epaule d'Alex ----------
+        var mar = S.chr(room.actors, "marina", 1170, FL, 322), ale = S.chr(room.actors, "viajero", 1470, FL + 6, 332);
+        S.breathe(tl, mar, 0, T, 0.6);
+        gsap.set(ale.b, { scaleY: 0.86, scaleX: 1.04, y: 6, transformOrigin: "50% 100%" });
+        gsap.set(ale.svg.querySelector(".c-armR"), { rotation: -82, svgOrigin: "258 306" });
+        gsap.set(ale.svg.querySelector(".c-head"), { rotation: 6, svgOrigin: "200 288" });
+        // il se releve en regardant tomber la plume
+        tl.to(ale.b, { scaleY: 1, scaleX: 1, y: 0, duration: 1.1, ease: "sine.inOut", transformOrigin: "50% 100%" }, 0.5);
+        tl.to([ale.svg.querySelector(".c-head"), mar.svg.querySelector(".c-head")], { rotation: -9, svgOrigin: "200 288", duration: 1.0, ease: "sine.inOut" }, 0.4);
+        S.breathe(tl, ale, 1.7, T - 1.7, 0.6);
+        var qz = S.quetzal(room.actors, 1470 + 100, FL + 6 - 262, 240, "perched", false, "qf3");
+        qz.querySelectorAll(".q-tail").forEach(function (t) { gsap.set(t, { scale: 0.55, svgOrigin: t.dataset.px + " " + t.dataset.py }); });
+        gsap.set(qz.querySelectorAll(".q-crest"), { scale: 0.8, svgOrigin: "300 150" });
+        gsap.set(qz.querySelectorAll(".q-dull, .q-dull-h"), { opacity: 0.2 });
+        Q.quetzalPoseTo(tl, qz, "talk", 0.05, 0.3); Q.quetzalBlink(tl, qz, 1.4);
+        Q.charBlink(tl, mar.svg, 1.2); Q.charBlink(tl, ale.svg, 3.2); Q.charBlink(tl, mar.svg, 5.1);
+        Q.charEmote(tl, ale.svg, 0.2, "happy", 0.8); Q.charEmote(tl, mar.svg, 0.4, "happy", 0.8);
+
+        // ---------- la dixieme plume : la poussiere doree de la Sombra se rassemble, la plume verte se forme et tombe en tournoyant ----------
+        var rnd = Q.rng(77), spk = '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#FFE9A8"/></svg>';
+        var fx = 1700, fy = 560;
+        for (var i = 0; i < 12; i++) {
+          var sp = mkp(room.front, "cu-ab q-fx", spk, fx, fy), a0 = (i / 12) * Math.PI * 2, rr = 240 + rnd() * 160;
+          tl.fromTo(sp, { x: fx + Math.cos(a0) * rr, y: fy + Math.sin(a0) * rr * 0.8, opacity: 0, scale: 0.6 + rnd() * 0.6 }, { x: fx - 20, y: fy + 40, opacity: 0.95, scale: 0.4, duration: 0.7, ease: "power2.in", immediateRender: false }, 0.05 + rnd() * 0.25);
+          tl.to(sp, { opacity: 0, duration: 0.2 }, 0.8 + rnd() * 0.1);
+        }
+        var fe = S.feather(room.front, 60);
+        fe.setAttribute("data-layout-ignore", "");
+        gsap.set(fe, { x: fx - 30, y: fy - 40, scale: 0, opacity: 0, transformOrigin: "50% 8%" });
+        tl.to(fe, { opacity: 1, scale: 1.2, duration: 0.5, ease: "back.out(2)" }, 0.55);
+        var fpts = [[1560, 700, 24], [1700, 860, -22], [1600, 1000, 20], [1670, 1090, -14], [1625, 1150, 10]], tf = 1.0;
+        fpts.forEach(function (p, i) { tl.to(fe, { x: p[0] - 30, y: p[1] - 40, rotation: p[2], scale: 1.1 - i * 0.04, duration: 0.34, ease: i % 2 ? "sine.out" : "sine.in" }, tf + i * 0.34); });
+        tl.to(fe, { x: 1637 - 22, y: 1200 - 112, rotation: 62, scale: 0.8, duration: 0.3, ease: "sine.out" }, tf + 5 * 0.34);
+        // elle se pose dans la paume : doux halo vert (<= 0,22), etincelles
+        var tL = tf + 5 * 0.34 + 0.3;
+        var g1 = mkp(room.qlayer, "aura green q-fx", "", 1637 - 450, 1215 - 450);
+        tl.set(g1, { opacity: 0 }, 0);
+        tl.fromTo(g1, { opacity: 0, scale: 0.3 }, { opacity: 0.2, scale: 0.7, duration: 0.5, ease: "sine.out", immediateRender: false }, tL - 0.1);
+        tl.to(g1, { opacity: 0, duration: 1.1, ease: "sine.inOut" }, tL + 0.6);
+        // Alex porte la plume vers le Quetzal : la main monte, la plume se pose sur la queue qui repousse
+        var tP = tL + 0.45;
+        tl.to(ale.svg.querySelector(".c-armR"), { rotation: -118, svgOrigin: "258 306", duration: 0.6, ease: "sine.inOut" }, tP);
+        tl.to(fe, { x: 1570 - 30, y: 1235 - 112, rotation: 24, scale: 0.7, duration: 0.6, ease: "sine.inOut" }, tP);
+        tl.to(fe, { scale: 0.1, opacity: 0, duration: 0.5, ease: "power2.in" }, tP + 0.6);
+        tl.to(ale.svg.querySelector(".c-armR"), { rotation: 0, svgOrigin: "258 306", duration: 0.7, ease: "sine.inOut" }, tP + 1.0);
+        var tR = tP + 0.55;
+        Q.quetzalRegrow(tl, qz, tR);
+        Q.quetzalPoseTo(tl, qz, "happy", tR, 0.6);
+        var g2 = mkp(room.qlayer, "aura green q-fx", "", 1570 - 450, 1190 - 450);
+        tl.set(g2, { opacity: 0 }, 0);
+        tl.fromTo(g2, { opacity: 0, scale: 0.3 }, { opacity: 0.22, scale: 0.9, duration: 0.9, ease: "sine.out", immediateRender: false }, tR);
+        tl.to(g2, { opacity: 0.1, duration: 2.0, ease: "sine.inOut" }, tR + 1.0);
+        tl.to(g2, { opacity: 0, duration: 1.2, ease: "sine.inOut" }, tR + 3.2);
+        // etincelles vertes et dorees autour de la queue
+        for (var k = 0; k < 14; k++) {
+          var s2 = mkp(room.front, "cu-ab q-fx", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="' + (k % 2 ? "#9DFFD0" : "#FFE9A8") + '"/></svg>', 1570, 1230);
+          var ang = rnd() * Math.PI * 2, dst = 90 + rnd() * 190, ts = tR + 0.3 + k * 0.12;
+          tl.fromTo(s2, { x: 1570, y: 1230, scale: 0, opacity: 1 }, { x: 1570 + Math.cos(ang) * dst - 80, y: 1230 + Math.sin(ang) * dst * 0.8 - 60, scale: 0.5 + rnd() * 0.6, duration: 0.6, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(s2, { opacity: 0, scale: 0, duration: 0.5, ease: "power2.in" }, ts + 0.55);
+        }
+
+        // ---------- il parle : les ailes s'ouvrent sur « volar », il salue d'une courbette sur « amigos » ----------
+        C.talkQuetzal(tl, qz, L);
+        Q.quetzalFlap(tl, qz, w(5) - 0.1, 2, 0.9, 0.6);
+        tl.to(qz, { y: -22, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, w(5) - 0.1);
+        Q.charNod(tl, ale.svg, w(9), 5, 0.3); Q.charNod(tl, mar.svg, w(10), 5, 0.3);
+        S.hop(tl, mar, w(9) + 0.1, 20);
+        // il s'envoie : ailes grandes ouvertes, il monte au-dessus des nuages (la suite, partie 2)
+        var tT = L.t + L.d - 0.25;
+        Q.quetzalPoseTo(tl, qz, "fly", tT, 0.4);
+        Q.quetzalFlap(tl, qz, tT + 0.15, 4, 0.5, 1.0);
+        tl.to(qz, { x: 300, y: -520, duration: T - tT, ease: "power2.in" }, tT);
+        tl.to(ale.svg.querySelector(".c-armR"), { rotation: -150, svgOrigin: "258 306", duration: 0.6, ease: "sine.out" }, tT);
+        Q.charEmote(tl, ale.svg, tT, "happy", 0.5);
+
+        // ---------- camera : haut (la plume qui tombe) -> descend sur le Quetzal -> remonte avec lui ----------
+        S.camSet(room, 1600, 1000, 0.95);
+        S.cam(tl, room, 1620, 1010, 0.98, 0, tL, "sine.inOut");
+        S.cam(tl, room, 1530, 1120, 1.28, tL + 0.1, L.t - tL - 0.1 + 0.6, "sine.inOut");
+        S.cam(tl, room, 1540, 1120, 1.32, L.t + 0.7, tT - L.t - 1.2, "sine.inOut");
+        S.cam(tl, room, 1700, 950, 0.95, tT - 0.3, T - tT + 0.3, "power2.inOut");
+        tl.fromTo("#warm", { opacity: 0.3 }, { opacity: 0.36, duration: T, ease: "sine.inOut" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 29, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-finale-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

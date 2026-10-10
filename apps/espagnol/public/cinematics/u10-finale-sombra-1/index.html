@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-finale-sombra-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+      .mp-l { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; }
+      #warm { position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 52%, rgba(255,214,130,.55), rgba(255,214,130,0) 62%); opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-finale-sombra-1" data-start="0" data-width="1920" data-height="1200" data-duration="8.16">
+      <div id="stage"></div>
+      <div id="warm"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.16" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":7.86,"v":1},{"t":8.16,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/sombra.9585a5d469.mp3" data-start="1.2" data-duration="3.499" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-1-2" src="./assets/voz/viajero.40edc5a798.mp3" data-start="4.999" data-duration="1.511" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="3" data-volume="0.12"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="4.899" data-duration="0.1" data-track-index="4" data-volume="0.2"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-finale-sombra-1","cinematica":"u10-finale-sombra","part":1,"parts":2,"total":8.16,"meta":{"cinematica":"u10-finale-sombra","titulo":"El eco de la Sombra","tipo":"pluma","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":1,"t0":0,"t1":7.91,"vista":"Au sommet de Machu Picchu, à l’aube, une mer de nuages. La Sombra, toute petite, face à Álex. Elle n’a plus de voix menaçante : seulement une voix très fragile.","camara":"plan serré sur la Sombra, puis plan large","rotulo":"","personajes":["sombra","viajero"],"lines":[{"who":"sombra","es":"Estoy sola. Nadie me escucha.","key":"sombra.9585a5d469","t":1.2,"d":3.499,"words":[{"w":"Estoy","t":1.2,"d":0.465},{"w":"sola.","t":1.665,"d":0.393},{"w":"Nadie","t":3.336,"d":0.427},{"w":"me","t":3.762,"d":0.227},{"w":"escucha.","t":3.989,"d":0.56}]},{"who":"viajero","es":"Nosotros te escuchamos.","key":"viajero.40edc5a798","t":4.999,"d":1.511,"words":[{"w":"Nosotros","t":4.999,"d":0.529},{"w":"te","t":5.528,"d":0.191},{"w":"escuchamos.","t":5.719,"d":0.641}]}]}],"sfx":[{"t":0.2,"f":"rpg/spell-magic"},{"t":4.899,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        // ---------- le sommet de Machu Picchu a l'aube : ciel, pics, mer de nuages, ruines ----------
+        var M = Q.machuPicchu({ uid: "mp" });
+        var wrap = function (h) { return '<div class="mp-l">' + h + "</div>"; };
+        var set = { back: wrap(M.sky) + wrap(M.back) + wrap(M.sea), front: M.front, light: M.light, W: M.W, H: M.H };
+        var room = S.set($("#stage"), set, { below: "#7A6A58", motes: 22, moteColors: ["#FFE9A8", "#FFD76A", "#FFFFFF"] });
+        S.drift(tl, room, T);
+        var FL = 1456;
+        // la mer de nuages respire tres lentement, le soleil monte
+        room.back.querySelectorAll(".cu-sea1, .cu-sea2, .cu-sea3").forEach(function (s, i) { tl.fromTo(s, { x: 0 }, { x: (i % 2 ? 1 : -1) * (60 + i * 30), duration: T, ease: "sine.inOut" }, 0); });
+        tl.fromTo(room.back.querySelector(".cu-sundisc"), { y: 0 }, { y: -70, duration: T, ease: "sine.inOut" }, 0);
+        tl.fromTo(room.back.querySelector(".cu-sunglow"), { opacity: 0.75 }, { opacity: 1, duration: T, ease: "sine.inOut" }, 0);
+
+        // ---------- le groupe : Marina, Alex (le Quetzal sur l'epaule), a gauche ; la Sombra, toute petite, a droite ----------
+        var mar = S.chr(room.actors, "marina", 930, FL, 322), ale = S.chr(room.actors, "viajero", 1200, FL + 6, 332);
+        S.breathe(tl, mar, 0, T, 0.6); S.breathe(tl, ale, 0.1, T, 0.6);
+        var qz = S.quetzal(room.actors, 1200 + 96, FL + 6 - 290, 180, "perched", false, "qf1");
+        Q.quetzalPoseTo(tl, qz, "sad", 0.2, 0.6); Q.quetzalBlink(tl, qz, 2.6); Q.quetzalBlink(tl, qz, 6.3);
+        Q.charEmote(tl, ale.svg, 0.2, "worry", 0.5); Q.charEmote(tl, mar.svg, 0.2, "worry", 0.5);
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 3.7); Q.charBlink(tl, ale.svg, 6.2);
+        var SX = 1780, SW = 250, SH = 300;
+        var sb = mkp(room.actors, "cu-ab", Q.sombra({ uid: "sbf", width: SW, height: SH, glow: "#C65BFF" }), SX - SW / 2, FL - SH * 0.97);
+        sb.querySelector("svg").style.overflow = "visible";
+        tl.set(sb, { opacity: 0 }, 0);
+        tl.fromTo(sb, { opacity: 0, scale: 0.85, transformOrigin: "50% 100%" }, { opacity: 0.95, scale: 1, duration: 1.0, ease: "sine.out", immediateRender: false }, 0.3);
+        Q.sombraFloat(tl, sb, 0.4, Math.max(1, Math.floor(T / 3.6)), 3.6);
+        Q.sombraEyes(tl, sb, 0.6, "open", 0.6);
+        
+        tl.to(sb, { scale: 0.96, duration: 1.8, ease: "sine.inOut", transformOrigin: "50% 100%", yoyo: true, repeat: 1 }, L1.t + 0.5);
+        tl.to(sb, { x: "+=14", duration: 1.6, ease: "sine.inOut" }, L1.t + L1.d - 1.4);   // elle se tasse un peu
+        Q.sombraEyes(tl, sb, L2.t + 0.4, "open", 0.7);                           // « Nosotros te escuchamos » : ses yeux s'ouvrent
+
+        // ---------- Alex s'avance, s'accroupit et tend la main ; Marina le suit d'un pas ----------
+        var tW = L1.t + L1.d + 0.35, dW = 1.4, xA = 1470;
+        S.walk(tl, ale, 1200, xA, tW, dW, 0.42, "sine.inOut");
+        tl.to(qz, { x: xA - 1200, duration: dW, ease: "sine.inOut" }, tW);
+        S.walk(tl, mar, 930, 1170, tW + 0.35, dW, 0.42, "sine.inOut");
+        S.breathe(tl, ale, tW + dW, T - tW - dW, 0.5);
+        var tC = L2.t - 0.15;
+        tl.to(ale.b, { scaleY: 0.86, scaleX: 1.04, y: 6, duration: 0.7, ease: "sine.inOut", transformOrigin: "50% 100%" }, tC);
+        tl.to(ale.svg.querySelector(".c-armR"), { rotation: -82, svgOrigin: "258 306", duration: 0.8, ease: "sine.inOut" }, tC + 0.3);
+        Q.charEmote(tl, ale.svg, L2.t, "neutral", 0.5);
+        tl.to(ale.svg.querySelector(".c-head"), { rotation: 6, svgOrigin: "200 288", duration: 0.8, ease: "sine.inOut" }, tC + 0.2);
+        C.talkChar(tl, ale, L2, 1.5);
+        Q.quetzalPoseTo(tl, qz, "talk", L2.t, 0.5);
+        Q.charNod(tl, mar.svg, L2.t + 1.4, 4, 0.3);
+        // la chaleur de l'aube gagne doucement (halo doux, <= 0,25, montee lente)
+        tl.fromTo("#warm", { opacity: 0 }, { opacity: 0.22, duration: 2.2, ease: "sine.inOut" }, L2.t - 0.2);
+
+        // ---------- camera : plan large -> pousse tres lente sur la Sombra -> recul sur le geste d'Alex ----------
+        S.camSet(room, 1450, 1130, 1.0);
+        S.cam(tl, room, 1650, 1214, 1.35, 0.6, L1.t + L1.d - 0.8, "sine.inOut");
+        S.cam(tl, room, 1500, 1190, 1.12, tW - 0.2, T - tW + 0.2, "sine.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 27, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-finale-sombra-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-intro-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p2 { position: absolute; inset: 0; overflow: hidden; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      #glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 66% 50%, rgba(255,206,110,.3), rgba(255,206,110,0) 55%); }
+      #chip { position: absolute; left: 96px; top: 230px; display: flex; align-items: center; gap: 18px; padding: 12px 34px 14px 18px; border-radius: 999px; background: rgba(31,15,51,.92); border: 4px solid #f59f00; box-shadow: 0 6px 0 rgba(0,0,0,.3); z-index: 25; }
+      #chip b { font: 400 44px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #f5e6c8; }
+      .bird { position: absolute; left: 0; top: 0; z-index: 6; }
+      #motes { position: absolute; left: 0; top: 0; z-index: 7; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-intro-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.075">
+      <div id="p2" data-layout-allow-overflow>
+        <div id="skyL" class="lay" data-layout-allow-overflow></div>
+        <div id="sunL" class="lay" data-layout-allow-overflow></div>
+        <div id="farL" class="lay" data-layout-allow-overflow></div>
+        <div id="midL" class="lay" data-layout-allow-overflow></div>
+        <div id="motes" data-layout-allow-overflow></div>
+        <div id="nearL" class="lay" data-layout-allow-overflow></div>
+        <div id="glow"></div>
+        <div id="chip"></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.075" data-media-start="4.15" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.875,"v":1},{"t":8.075,"v":0}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.55fdea9495.mp3" data-start="0.5" data-duration="3.659" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/narrador.1623ac966e.mp3" data-start="4.459" data-duration="2.666" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/bell.mp3" data-start="1.5" data-duration="1.741" data-track-index="4" data-volume="0.18"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="4.559" data-duration="0.121" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="1.4" data-duration="0.1" data-track-index="6" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-intro-2","cinematica":"u10-intro","part":2,"parts":2,"total":8.075,"meta":{"cinematica":"u10-intro","titulo":"Capítulo 10 · Leyendas y héroes · Cusco","tipo":"intro","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"Capítulo 10 · Leyendas y héroes · Cusco","region":"andes"},"plans":[{"n":2,"t0":0,"t1":7.825,"vista":"Cusco à l’heure dorée : toits de tuiles rouges, Plaza de Armas et sa cathédrale, murs de pierre inca parfaitement ajustés, des lamas sur un sentier, les montagnes violettes au loin et, très haut, un nuage qui cache Machu Picchu.","camara":"panoramique lent puis descente vers la place","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Cusco, en los Andes de Perú, a más de tres mil metros de altura.","key":"narrador.55fdea9495","t":0.5,"d":3.659,"words":[{"w":"Cusco,","t":0.5,"d":0.272},{"w":"en","t":0.979,"d":0.145},{"w":"los","t":1.123,"d":0.187},{"w":"Andes","t":1.31,"d":0.272},{"w":"de","t":1.583,"d":0.145},{"w":"Perú,","t":1.728,"d":0.23},{"w":"a","t":2.211,"d":0.113},{"w":"más","t":2.324,"d":0.207},{"w":"de","t":2.531,"d":0.16},{"w":"tres","t":2.691,"d":0.254},{"w":"mil","t":2.945,"d":0.207},{"w":"metros","t":3.152,"d":0.348},{"w":"de","t":3.501,"d":0.16},{"w":"altura.","t":3.661,"d":0.348}]},{"who":"narrador","es":"Aquí está la antigua capital de los incas.","key":"narrador.1623ac966e","t":4.459,"d":2.666,"words":[{"w":"Aquí","t":4.459,"d":0.301},{"w":"está","t":4.76,"d":0.301},{"w":"la","t":5.06,"d":0.189},{"w":"antigua","t":5.249,"d":0.468},{"w":"capital","t":5.717,"d":0.468},{"w":"de","t":6.185,"d":0.189},{"w":"los","t":6.374,"d":0.245},{"w":"incas.","t":6.619,"d":0.356}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.5,"f":"rpg/bell"},{"t":4.559,"f":"ui/star"},{"t":1.4,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P2 = C.planOf(PLAN, 2), T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        // ============================ panorama de Cusco a l'heure doree ============================
+        var sky = Q.cuscoSkyline({ uid: "cu" });
+        $("#skyL").innerHTML = sky.sky; $("#sunL").innerHTML = sky.sun; $("#farL").innerHTML = sky.far; $("#midL").innerHTML = sky.mid; $("#nearL").innerHTML = sky.near;
+        var span = T, t0 = 0;
+        tl.fromTo("#skyL", { x: 0 }, { x: -300, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#sunL", { x: 0 }, { x: -520, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#farL", { x: 0 }, { x: -660, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#midL", { x: 0 }, { x: -1000, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#nearL", { x: 0 }, { x: -1280, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#motes", { x: 0 }, { x: -520, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#p2", { scale: 1.06, transformOrigin: "50% 60%" }, { scale: 1.0, duration: span, ease: "sine.out" }, t0);
+        var rays2 = $("#sunL .sk-rays");
+        tl.fromTo(rays2, { rotation: 0, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py }, { rotation: 22, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py, duration: span, ease: "none" }, t0);
+        tl.fromTo("#sunL .sk-disc", { scale: 0.97, svgOrigin: sky.sunX + " " + sky.sunY }, { scale: 1.03, svgOrigin: sky.sunX + " " + sky.sunY, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: C.reps(span, 1.8) }, t0);
+        document.querySelectorAll("#skyL .m-cloud").forEach(function (c, i) { tl.to(c, { x: 60 + (i % 3) * 40, duration: span, ease: "none" }, t0); });
+        // le nuage qui cache Machu Picchu respire lentement
+        document.querySelectorAll("#farL .cu-mpcloud").forEach(function (c) { tl.fromTo(c, { x: -20 }, { x: 50, duration: span, ease: "sine.inOut" }, t0); });
+        // fenetres allumees qui scintillent doucement
+        document.querySelectorAll("#midL svg rect[fill='#FFD98A']").forEach(function (r, i) { if (i % 5 === 0) tl.to(r, { opacity: 0.35, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, t0 + 0.4 + (i % 7) * 0.5); });
+        // poussiere doree
+        $("#motes").innerHTML = Q.moteField({ n: 40, w: 2400, h: 1200, seed: 9, rmin: 2, rmax: 6, stars: true });
+        document.querySelectorAll("#motes .k-mote").forEach(function (m, i) {
+          var x = +m.dataset.x, y = +m.dataset.y;
+          tl.fromTo(m, { x: x, y: y, opacity: 0 }, { x: x + 40 - (i % 5) * 20, y: y - 160 - (i % 7) * 30, opacity: 0.9, duration: span * 0.5, ease: "sine.out" }, t0 + (i % 9) * 0.1);
+          tl.to(m, { opacity: 0, duration: span * 0.5, ease: "sine.in" }, t0 + span * 0.5 + (i % 9) * 0.1);
+        });
+        // trois condors qui planent lentement (ailes qui battent ~1,2 s, tres peu)
+        for (var bI = 0; bI < 3; bI++) {
+          var bd = mk($("#p2"), "bird", Q.cuCondor({ width: 330 - bI * 60 })); bd.setAttribute("data-layout-ignore", "");
+          bd.querySelector("svg").style.overflow = "visible";
+          $("#p2").insertBefore(bd, $("#nearL"));
+          var by = 190 + bI * 120, bx0 = 2050 + bI * 760, per = 1.15 + bI * 0.2;
+          tl.fromTo(bd, { x: bx0, y: by }, { x: bx0 - 2900, y: by + 60 - bI * 50, duration: span + 1.0, ease: "none" }, t0 - 0.3);
+          ["L", "R"].forEach(function (sd) {
+            var wg = bd.querySelector(".cu-cd-wing" + sd), sg = sd === "L" ? 1 : -1;
+            tl.fromTo(wg, { rotation: -12 * sg, svgOrigin: "230 78" }, { rotation: 12 * sg, svgOrigin: "230 78", duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(span + 1.0, per) + 1 }, t0 - 0.3);
+          });
+        }
+        // pastille de lieu
+        var chip = $("#chip");
+        chip.innerHTML = '<svg width="46" height="58" viewBox="0 0 46 58"><path d="M23 56C6 36 4 28 4 22a19 19 0 1 1 38 0c0 6-2 14-19 34Z" fill="#d93472" stroke="#fff3d1" stroke-width="4"/><circle cx="23" cy="22" r="7" fill="#fff3d1"/></svg><b>CUSCO, PERÚ</b>';
+        tl.fromTo(chip, { x: -760, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, P2.t0 + 0.35);
+        tl.to(chip, { x: -760, opacity: 0, duration: 0.4, ease: "power3.in" }, P2.t1 - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 19 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-intro-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

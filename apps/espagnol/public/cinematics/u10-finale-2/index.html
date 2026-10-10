@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-finale-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+      .mp-l { position: absolute; left: 0; top: 0; width: 3200px; height: 1700px; }
+      #warm { position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 52%, rgba(255,214,130,.55), rgba(255,214,130,0) 62%); opacity: 0.36; }
+      .aura { position: absolute; left: 0; top: 0; width: 900px; height: 900px; border-radius: 50%; opacity: 0; background: radial-gradient(closest-side, rgba(255,214,130,.95), rgba(255,214,130,0)); }
+      .holo { position: absolute; left: 0; top: 0; z-index: 8; width: 420px; height: 470px; }
+      .holo .hb { position: absolute; left: 0; top: 0; width: 420px; height: 390px; opacity: .86; }
+      .holo .hl { position: absolute; left: 0; top: 0; width: 420px; height: 390px; background: repeating-linear-gradient(0deg, rgba(20,60,90,.16) 0 3px, rgba(20,60,90,0) 3px 9px); }
+      .holo .hg { position: absolute; left: -30px; top: 330px; width: 480px; height: 120px; border-radius: 50%; background: radial-gradient(closest-side, rgba(111,231,220,.8), rgba(111,231,220,0)); }
+      .holo .gf { position: absolute; left: 92px; top: 14px; width: 140px; height: 88px; }
+      .holo .tear { position: absolute; left: 118px; top: 262px; width: 12px; height: 22px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: #bfeaff; box-shadow: 0 0 0 2px rgba(255,255,255,.7); opacity: 0; }
+      #veil { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 60; }
+      #fin { position: absolute; left: 0; top: 0; width: 1920px; height: 1200px; display: flex; align-items: center; justify-content: center; z-index: 70; opacity: 0; }
+      #finbox { position: relative; width: 1240px; padding: 54px 40px 50px; box-sizing: border-box; text-align: center; border-radius: 48px; background: linear-gradient(180deg, #3b1f5a, #1f0f33); border: 8px solid #f5e6c8; box-shadow: 0 0 0 6px #1f0f33, 0 26px 0 -4px rgba(0,0,0,.3), inset 0 0 0 6px rgba(245,159,0,.7); }
+      #finbox .k { font: 400 54px/1 "Alfa Slab One", serif; letter-spacing: .24em; color: #f59f00; text-shadow: 0 4px 0 rgba(0,0,0,.4); }
+      #finbox .t { margin: 14px 0 0; font: 400 150px/1.02 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 9px 0 #d93472, 0 16px 0 rgba(0,0,0,.35); letter-spacing: .02em; }
+      #finbox .f { display: inline-block; margin: 26px 0 0; padding: 12px 74px 16px; font: 400 66px/1 "Alfa Slab One", serif; letter-spacing: .3em; color: #fff3d1; background: linear-gradient(180deg, #e0467f, #d93472); box-shadow: 0 8px 0 #8f1d4e; clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%); }
+      #finbox .ft { position: absolute; left: 50%; top: -118px; margin-left: -42px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-finale-2" data-start="0" data-width="1920" data-height="1200" data-duration="10.994">
+      <div id="stage"></div>
+      <div id="warm"></div>
+      <div id="veil"></div>
+      <div id="fin"><div id="finbox"><div class="k">LA LEYENDA</div><div class="t">DEL QUETZAL</div><div class="f">FIN</div></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.994" data-media-start="11.005" data-track-index="0" data-volume="0.22" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.794,"v":1},{"t":10.994,"v":0}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/ignacio.c8c6531b45.mp3" data-start="0.8" data-duration="4.346" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/marina.7be0883ed5.mp3" data-start="5.446" data-duration="2.198" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-cast.mp3" data-start="0.1" data-duration="0.465" data-track-index="3" data-volume="0.2"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.75" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="5.396" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="6.154" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/bell.mp3" data-start="7.844" data-duration="1.741" data-track-index="7" data-volume="0.25"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="8.244" data-duration="0.121" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-finale-2","cinematica":"u10-finale","part":2,"parts":2,"total":10.994,"meta":{"cinematica":"u10-finale","titulo":"Décima pluma · El final de la leyenda","tipo":"pluma","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":2,"t0":0,"t1":10.744,"vista":"Sur le sommet, Don Ignacio apparaît en hologramme, ému, tandis que Marina et Álex regardent le Quetzal disparaître dans la lumière. Carton final : « La leyenda del Quetzal · Fin ».","camara":"","rotulo":"La leyenda del Quetzal · Fin","personajes":["ignacio","marina","viajero"],"lines":[{"who":"ignacio","es":"¡Bravo, viajeros! Y ahora… ¿dónde están mis gafas?","key":"ignacio.c8c6531b45","t":0.8,"d":4.346,"words":[{"w":"¡Bravo,","t":0.8,"d":0.448},{"w":"viajeros!","t":1.429,"d":0.653},{"w":"Y","t":3.205,"d":0.11},{"w":"ahora…","t":3.315,"d":0.294},{"w":"¿dónde","t":3.91,"d":0.294},{"w":"están","t":4.204,"d":0.294},{"w":"mis","t":4.499,"d":0.202},{"w":"gafas?","t":4.701,"d":0.294}]},{"who":"marina","es":"Encima de tu sombrero, Don Ignacio.","key":"marina.7be0883ed5","t":5.446,"d":2.198,"words":[{"w":"Encima","t":5.446,"d":0.369},{"w":"de","t":5.815,"d":0.17},{"w":"tu","t":5.985,"d":0.17},{"w":"sombrero,","t":6.154,"d":0.469},{"w":"Don","t":6.777,"d":0.246},{"w":"Ignacio.","t":7.024,"d":0.47}]}]}],"sfx":[{"t":0.1,"f":"rpg/spell-cast"},{"t":0.75,"f":"ui/pop"},{"t":5.396,"f":"ui/pop"},{"t":6.154,"f":"ui/star"},{"t":7.844,"f":"rpg/bell"},{"t":8.244,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var w2 = function (k) { return C.wordT(PLAN, 2, 2, k); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var M = Q.machuPicchu({ uid: "mp" });
+        var wrap = function (h) { return '<div class="mp-l">' + h + "</div>"; };
+        var set = { back: wrap(M.sky) + wrap(M.back) + wrap(M.sea), front: M.front, light: M.light, W: M.W, H: M.H };
+        var room = S.set($("#stage"), set, { below: "#7A6A58", motes: 26, moteColors: ["#FFE9A8", "#FFD76A", "#FFFFFF"] });
+        S.drift(tl, room, T);
+        var FL = 1456;
+        room.back.querySelectorAll(".cu-sea1, .cu-sea2, .cu-sea3").forEach(function (s, i) { tl.fromTo(s, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 1.9 }, { x: (i % 2 ? 1 : -1) * (60 + i * 30) * 2.4, duration: T, ease: "sine.inOut" }, 0); });
+        tl.fromTo(room.back.querySelector(".cu-sundisc"), { y: -190 }, { y: -250, duration: T, ease: "sine.inOut" }, 0);
+        var sunX = 1560, sunY = 880 - 230;
+
+        // ---------- Alex et Marina au bord du sommet, la tete levee vers le Quetzal qui s'eloigne ----------
+        var mar = S.chr(room.actors, "marina", 1170, FL, 322), ale = S.chr(room.actors, "viajero", 1470, FL + 6, 332);
+        S.breathe(tl, mar, 0, T, 0.6); S.breathe(tl, ale, 0.1, T, 0.6);
+        gsap.set([ale.svg.querySelector(".c-head"), mar.svg.querySelector(".c-head")], { rotation: -10, svgOrigin: "200 288" });
+        gsap.set(ale.svg.querySelector(".c-armR"), { rotation: -150, svgOrigin: "258 306" });
+        Q.charEmote(tl, ale.svg, 0, "happy", 0.1); Q.charEmote(tl, mar.svg, 0, "happy", 0.1);
+        Q.charWave(tl, ale.svg, 0.0, 1.5, "R");
+        Q.charBlink(tl, mar.svg, 1.4); Q.charBlink(tl, ale.svg, 3.0);
+        // ils se tournent vers l'hologramme quand Don Ignacio parle
+        [ale, mar].forEach(function (c) {
+          tl.to(c.svg.querySelector(".c-head"), { rotation: 5, svgOrigin: "200 288", duration: 0.9, ease: "sine.inOut" }, L1.t - 0.2);
+          Q.charEmote(tl, c.svg, L1.t + 2.0, "happy", 0.6);
+        });
+
+        // ---------- le Quetzal, deja haut dans le ciel, file vers le soleil et disparait dans la lumiere (jamais d'eclair : halo doux <= 0,22) ----------
+        var qz = S.quetzal(room.actors, 1566, FL + 6 - 290, 170, "fly", false, "qf4");
+        gsap.set(qz, { x: 300, y: -520 });
+        Q.quetzalFlap(tl, qz, 0, 16, 0.55, 0.8);
+        tl.to(qz, { x: 150, y: -690, scale: 0.7, duration: 2.6, ease: "sine.inOut", transformOrigin: "50% 50%" }, 0);
+        tl.to(qz, { x: sunX - 1566, y: sunY - 1142 - 20, scale: 0.28, duration: 4.2, ease: "sine.inOut" }, 2.6);
+        tl.to(qz, { opacity: 0, duration: 1.2, ease: "sine.in" }, 6.0);
+        var sg = mkp(room.qlayer, "aura q-fx", "", sunX - 450, sunY - 450);
+        tl.set(sg, { opacity: 0 }, 0);
+        tl.fromTo(sg, { opacity: 0, scale: 0.5 }, { opacity: 0.22, scale: 1, duration: 3.5, ease: "sine.inOut", immediateRender: false }, 3.0);
+        tl.to(sg, { opacity: 0, duration: 2.5, ease: "sine.inOut" }, 7.2);
+
+        // ---------- Don Ignacio en hologramme, emu : « Bravo » (une larme), puis les lunettes introuvables ----------
+        var HX = 1830, HY = 800;
+        var ho = mkp(room.front, "holo", '<div class="hb">' + Q.character("ignacio", { view: "bust", width: 420, uid: "hg" }) + '</div><div class="hl"></div><div class="hg"></div><div class="tear"></div>', HX, HY);
+        ho.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        var hb = ho.querySelector(".hb");
+        tl.set(ho, { opacity: 0 }, 0);
+        tl.fromTo(ho, { opacity: 0, scale: 0.7, transformOrigin: "50% 80%" }, { opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.6)", immediateRender: false }, L1.t - 0.25);
+        tl.to(ho, { y: HY - 12, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L1.t, 1.2) + 1 }, L1.t + 0.4);
+        C.talkBounce(tl, hb, L1, 5);
+        Q.charTalk(tl, hb.querySelector("svg"), L1.t, L1.d, Math.max(4, L1.words.length));
+        Q.charEmote(tl, hb.querySelector("svg"), L1.t, "happy", 0.4);
+        Q.charBlink(tl, hb.querySelector("svg"), L1.t + 1.1);
+        var tear = ho.querySelector(".tear");
+        tl.fromTo(tear, { opacity: 0, y: 0 }, { opacity: 0.95, y: 8, duration: 0.4, ease: "sine.out", immediateRender: false }, L1.t + 0.9);
+        tl.to(tear, { y: 70, opacity: 0, duration: 1.3, ease: "sine.in" }, L1.t + 1.4);
+        // « ¿dónde están mis gafas? » : il se tâte, cherche a gauche et a droite (cycles lents)
+        var wG = C.wordT(PLAN, 2, 1, Math.max(1, L1.words.length - 3));
+        tl.to(hb, { rotation: -3, duration: 0.55, ease: "sine.inOut", yoyo: true, repeat: 5, transformOrigin: "50% 100%" }, wG);
+        // Marina : « Encima de tu sombrero » -> les lunettes apparaissent sur son chapeau
+        var gl = document.createElement("div"); gl.className = "gf"; gl.setAttribute("data-layout-ignore", ""); gl.setAttribute("data-layout-allow-overflow", "");
+        gl.innerHTML = '<svg width="140" height="88" viewBox="0 0 140 88" style="overflow:visible"><ellipse cx="70" cy="44" rx="64" ry="36" fill="none" stroke="#FFD76A" stroke-width="7"/></svg>';
+        hb.appendChild(gl);
+        var tG = w2(4);
+        tl.set(gl, { opacity: 0 }, 0);
+        tl.set(gl, { opacity: 1 }, tG);
+        tl.to(gl, { scale: 0, duration: 0.4, ease: "power2.in" }, tG + 1.6);
+        tl.fromTo(gl, { scale: 0.2, y: -40, transformOrigin: "50% 50%" }, { scale: 1, y: 0, duration: 0.5, ease: "back.out(2.4)", immediateRender: false }, tG);
+        var sp0 = '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#FFF3B0"/></svg>';
+        for (var k = 0; k < 6; k++) {
+          var s2 = mkp(room.front, "cu-ab q-fx", sp0, HX + 162, HY + 58), ang = (k / 6) * Math.PI * 2;
+          tl.fromTo(s2, { x: HX + 162, y: HY + 58, scale: 0, opacity: 1 }, { x: HX + 162 + Math.cos(ang) * 110, y: HY + 58 + Math.sin(ang) * 80, scale: 0.8, duration: 0.5, ease: "power2.out", immediateRender: false }, tG + 0.1 + k * 0.05);
+          tl.to(s2, { opacity: 0, scale: 0, duration: 0.4 }, tG + 0.6 + k * 0.05);
+        }
+        // il se tape le chapeau, rit (rebonds), Marina sourit
+        tl.to(hb, { y: -14, duration: 0.18, ease: "sine.out", yoyo: true, repeat: 5 }, tG + 0.6);
+        Q.charTalk(tl, hb.querySelector("svg"), tG + 0.7, 1.2, 4);
+        C.talkChar(tl, mar, L2, 1.5); C.talkBounce(tl, mar.b, L2, 4);
+        Q.charEmote(tl, mar.svg, L2.t, "happy", 0.3);
+        S.hop(tl, ale, tG + 0.7, 18);
+        // l'hologramme se replie doucement (echelle) quand le carton final arrive
+        var tF = L2.t + L2.d + 0.45;
+        tl.to(ho, { scale: 0, duration: 0.45, ease: "power2.in", transformOrigin: "50% 80%" }, tF - 0.35);
+
+        // ---------- carton final « La leyenda del Quetzal · Fin » ----------
+        var fin = $("#fin"), fb = $("#finbox");
+        fb.insertAdjacentHTML("beforeend", '<div class="ft">' + Q.featherSvg({ width: 84, height: 126, uid: "ff" }) + "</div>");
+        fb.querySelector(".ft svg").style.overflow = "visible"; fb.querySelector(".ft").setAttribute("data-layout-allow-overflow", "");
+        tl.set(fin, { opacity: 0 }, 0);
+        tl.to("#veil", { opacity: 0.5, duration: 0.7, ease: "sine.inOut" }, tF - 0.3);
+        tl.set(fin, { opacity: 1 }, tF);
+        tl.fromTo(fb, { scale: 0.7, y: 40, transformOrigin: "50% 50%" }, { scale: 1, y: 0, duration: 0.8, ease: "back.out(1.4)", immediateRender: false }, tF);
+        tl.fromTo(".k", { scale: 1.2 }, { scale: 1, duration: 0.8, ease: "power3.out", transformOrigin: "50% 50%", immediateRender: false }, tF + 0.05);
+        tl.to(fb, { y: -8, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: 1 }, tF + 0.9);
+        var rn = Q.rng(91);
+        for (var j = 0; j < 8; j++) {
+          var s3 = mkp($("#fin"), "cu-ab q-fx", sp0, 0, 0); s3.style.zIndex = 80;
+          var ex = 380 + rn() * 1160, ey = 230 + rn() * 740, ts = tF + 0.5 + j * 0.28;
+          tl.fromTo(s3, { x: ex, y: ey, scale: 0, opacity: 1 }, { scale: 0.7 + rn() * 0.6, duration: 0.5, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(s3, { scale: 0, opacity: 0, duration: 0.5, ease: "power2.in" }, ts + 0.5);
+        }
+
+        // ---------- camera : elle suit le Quetzal vers le ciel, puis revient sur le trio (hologramme) ----------
+        S.camSet(room, 1650, 940, 0.92);
+        S.cam(tl, room, 1640, 960, 0.9, 0, 2.6, "sine.inOut");
+        S.cam(tl, room, 1700, 990, 0.88, 2.6, T - 2.6, "sine.inOut");
+        tl.fromTo("#warm", { opacity: 0.36 }, { opacity: 0.4, duration: T, ease: "sine.inOut" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 30, fadeOut: 0.8 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-finale-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

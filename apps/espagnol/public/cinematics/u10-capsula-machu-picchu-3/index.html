@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-capsula-machu-picchu-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p3 { position: absolute; inset: 0; }
+      .prop { position: absolute; left: 0; top: 0; z-index: 6; }
+      .sunp { position: absolute; left: 0; top: 0; z-index: 4; }
+      .hill { position: absolute; left: 0; top: 0; z-index: 3; width: 760px; height: 560px; border-radius: 40px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); background: linear-gradient(180deg, #1d2160, #3b1f5a 60%, #6f3a58); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-capsula-machu-picchu-3" data-start="0" data-width="1920" data-height="1200" data-duration="7.34">
+      <div id="p3" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.34" data-media-start="15.491" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.04,"v":1},{"t":7.34,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.0b676f0d32.mp3" data-start="0.5" data-duration="5.69" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/star.mp3" data-start="1.425" data-duration="0.121" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="1.575" data-duration="1.104" data-track-index="5" data-volume="0.2"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="2.801" data-duration="0.1" data-track-index="6" data-volume="0.45"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-capsula-machu-picchu-3","cinematica":"u10-capsula-machu-picchu","part":3,"parts":5,"total":7.34,"meta":{"cinematica":"u10-capsula-machu-picchu","titulo":"Machu Picchu, los incas y el quechua","tipo":"capsula","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":3,"t0":0,"t1":7.09,"vista":"Un soleil doré qui monte derrière une pierre sculptée (l’Intihuatana), puis une terre verte qui pousse : le soleil et la Terre-Mère.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Para los incas, Inti, el sol, es un dios. Y la Pachamama es la madre Tierra.","key":"narrador.0b676f0d32","t":0.5,"d":5.69,"words":[{"w":"Para","t":0.5,"d":0.263},{"w":"los","t":0.763,"d":0.215},{"w":"incas,","t":0.978,"d":0.312},{"w":"Inti,","t":1.475,"d":0.263},{"w":"el","t":1.924,"d":0.166},{"w":"sol,","t":2.09,"d":0.215},{"w":"es","t":2.434,"d":0.209},{"w":"un","t":2.642,"d":0.209},{"w":"dios.","t":2.851,"d":0.331},{"w":"Y","t":4.145,"d":0.124},{"w":"la","t":4.269,"d":0.175},{"w":"Pachamama","t":4.444,"d":0.536},{"w":"es","t":4.98,"d":0.175},{"w":"la","t":5.155,"d":0.175},{"w":"madre","t":5.33,"d":0.33},{"w":"Tierra.","t":5.659,"d":0.381}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.425,"f":"ui/star"},{"t":1.575,"f":"rpg/spell-magic"},{"t":2.801,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        Cap.css();
+        var T = PLAN.total, P = C.planOf(PLAN, 3);
+        var w = function (k) { return C.wordT(PLAN, 3, 1, k); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var p3 = $("#p3");
+        Cap.bg(root, p3);
+        var ttl = Cap.title(tl, p3, "CREENCIAS", "Inti y la Pachamama", 0.3);
+
+        // ---------- a gauche : el sol (Inti) se leve detras de la piedra tallada (Intihuatana) ----------
+        var LX = 120, LY = 410, LW = 760, LH = 520;
+        var lhill = mk(p3, "hill", ""); gsap.set(lhill, { x: LX, y: LY });
+        var rhill = mk(p3, "hill", ""); gsap.set(rhill, { x: 1040, y: LY });
+        tl.set([lhill, rhill], { opacity: 0 }, 0);
+        tl.fromTo(lhill, { opacity: 0, y: LY + 120, rotation: -2 }, { opacity: 1, y: LY, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, 0.4);
+        var sun = mk(lhill, "sunp", Q.cuProp("inti", { width: 440, uid: "sun" })); sun.firstChild.style.overflow = "visible";
+        gsap.set(sun, { x: 160, y: 0 });
+        tl.set(sun, { opacity: 0 }, 0);
+        var tI = w(4) - 0.1;
+        tl.fromTo(sun, { opacity: 0, y: 330, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 1.0, ease: "power2.out", immediateRender: false, transformOrigin: "50% 50%" }, tI);
+                tl.fromTo(sun.querySelector(".cu-rays"), { rotation: 0, svgOrigin: "120 120" }, { rotation: 45, svgOrigin: "120 120", duration: T - tI, ease: "none" }, tI);
+        var stone = mk(lhill, "prop", Q.cuProp("intihuatana", { width: 520, uid: "ih" })); stone.firstChild.style.overflow = "visible";
+        gsap.set(stone, { x: 120, y: 50 });
+        tl.set(stone, { opacity: 0 }, 0);
+        tl.fromTo(stone, { opacity: 0, y: 50 + 80, scale: 0.8 }, { opacity: 1, y: 50, scale: 1, duration: 0.55, ease: "back.out(1.7)", immediateRender: false, transformOrigin: "50% 100%" }, 0.8);
+        var chS = Cap.chip(p3, "Inti: el sol", LX + 190, LY + LH - 70, "gold"); Cap.pop(tl, chS, w(4) - 0.05, { from: "up", rot: -2 });
+        Cap.sparks(tl, p3, LX + 380, LY + 210, tI + 0.5, 10, "#ffe9a8");
+
+        // ---------- a droite : la Pachamama, la tierra madre : brotes et flor qui crecen ----------
+        tl.fromTo(rhill, { opacity: 0, y: LY + 120, rotation: 2 }, { opacity: 1, y: LY, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, w(10) - 0.2);
+        var pacha = mk(rhill, "prop", Q.cuProp("pacha", { width: 640, uid: "pc" })); pacha.firstChild.style.overflow = "visible";
+        gsap.set(pacha, { x: 60, y: -20 });
+        tl.set(pacha, { opacity: 0 }, 0);
+        tl.fromTo(pacha, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.7)", immediateRender: false, transformOrigin: "50% 100%" }, w(11) - 0.2);
+        var sp = pacha.querySelectorAll(".cu-sprout");
+                sp.forEach(function (s, i) { tl.fromTo(s, { scale: 0.001, svgOrigin: s.dataset.px + " " + s.dataset.py }, { scale: 1, svgOrigin: s.dataset.px + " " + s.dataset.py, duration: 0.9, ease: "back.out(1.6)", immediateRender: false }, w(13) + i * 0.25); });
+        tl.fromTo(pacha.querySelector("circle[r='14']"), { scale: 0.001, svgOrigin: "120 52" }, { scale: 1, svgOrigin: "120 52", duration: 0.6, ease: "back.out(3)", immediateRender: false }, w(15) - 0.1);
+        var chP = Cap.chip(p3, "la Pachamama", 1250, LY + LH - 70, "pink"); Cap.pop(tl, chP, w(12) - 0.05, { from: "up", rot: 2 });
+        var chM = Cap.chip(p3, "la madre Tierra", 1490, LY - 40, "terra"); Cap.pop(tl, chM, w(15) - 0.05, { from: "down", rot: -2 });
+        Cap.sparks(tl, p3, 1040 + 380, LY + 160, w(15), 10, "#c8ffd8");
+        tl.to([ttl], { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, T - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 23, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-capsula-machu-picchu-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

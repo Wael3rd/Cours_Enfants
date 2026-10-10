@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="9.916">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.916" data-media-start="32.373" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.716,"v":1},{"t":9.916,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.fd0eb07b4c.mp3" data-start="0.7" data-duration="2.62" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/killa.72b05170d8.mp3" data-start="3.62" data-duration="5.246" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.3" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1.1" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.62" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="8.516" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-historia-5","cinematica":"u10-historia","part":5,"parts":5,"total":9.916,"meta":{"cinematica":"u10-historia","titulo":"El cuentacuentos sin voz","tipo":"historia","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":4,"t0":0,"t1":9.666,"vista":"Les montagnes dans la brume : au loin, au milieu des nuages, un point vert brille sur Machu Picchu. Le Quetzal le montre du bec.","camara":"","rotulo":"","personajes":["quetzal","killa","marina","viajero"],"lines":[{"who":"quetzal","es":"La última pluma… está en Machu Picchu.","key":"quetzal.fd0eb07b4c","t":0.7,"d":2.62,"words":[{"w":"La","t":0.7,"d":0.2},{"w":"última","t":0.9,"d":0.436},{"w":"pluma…","t":1.337,"d":0.377},{"w":"está","t":2.004,"d":0.279},{"w":"en","t":2.283,"d":0.175},{"w":"Machu","t":2.458,"d":0.33},{"w":"Picchu.","t":2.788,"d":0.382}]},{"who":"killa","es":"Para devolver las leyendas a Don Huamán, tienen que contar una historia. ¡Vamos a Machu Picchu!","key":"killa.72b05170d8","t":3.62,"d":5.246,"words":[{"w":"Para","t":3.62,"d":0.22},{"w":"devolver","t":3.84,"d":0.383},{"w":"las","t":4.223,"d":0.179},{"w":"leyendas","t":4.402,"d":0.383},{"w":"a","t":4.785,"d":0.098},{"w":"Don","t":4.883,"d":0.179},{"w":"Huamán,","t":5.062,"d":0.301},{"w":"tienen","t":5.7,"d":0.273},{"w":"que","t":5.973,"d":0.163},{"w":"contar","t":6.135,"d":0.273},{"w":"una","t":6.409,"d":0.163},{"w":"historia.","t":6.571,"d":0.347},{"w":"¡Vamos","t":7.743,"d":0.276},{"w":"a","t":8.019,"d":0.103},{"w":"Machu","t":8.122,"d":0.276},{"w":"Picchu!","t":8.397,"d":0.319}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-magic"},{"t":1.1,"f":"ui/star"},{"t":3.62,"f":"ui/pop"},{"t":8.516,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.andesVista({ uid: "av" });
+        var room = S.set($("#stage"), set, { below: "#4F3F30", motes: 16 });
+        S.drift(tl, room, T);
+        var dot = set.dot;
+
+        // ---------- la brume derive lentement ; le point vert de Machu Picchu respire (halo doux, cycle 1,6 s) ----------
+        room.back.querySelectorAll(".cu-mist").forEach(function (m, i) { tl.fromTo(m, { x: 0 }, { x: (i % 2 ? -1 : 1) * (90 + i * 25), duration: T, ease: "sine.inOut" }, 0); });
+        var glow = room.back.querySelector(".cu-dotglow"), dt = room.back.querySelector(".cu-dot");
+        gsap.set([glow, dt], { opacity: 0 });
+        tl.fromTo([glow, dt], { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.inOut", immediateRender: false }, 0.5);
+        tl.fromTo(glow, { scale: 0.85, svgOrigin: dot.x + " " + dot.y }, { scale: 1.2, svgOrigin: dot.x + " " + dot.y, duration: 1.6, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.6) + 1 }, 0.5);
+
+        // ---------- le groupe sur la terrasse de pierre, face aux montagnes ----------
+        var kil = S.chr(room.actors, "killa", 720, 1050, 330), mar = S.chr(room.actors, "marina", 900, 1056, 322), ale = S.chr(room.actors, "viajero", 1080, 1060, 332);
+        var ll = mkp(room.actors, "cu-ab", Q.cuLlama({ width: 280, body: "#EAD9BC", blanket: "#12A594" }), 520 - 140, 1050 - 0.955 * 308);
+        S.breathe(tl, kil, 0, T, 0.8); S.breathe(tl, mar, 0.1, T, 0.8); S.breathe(tl, ale, 0.2, T, 0.8);
+        Q.charBlink(tl, kil.svg, 2.2); Q.charBlink(tl, ale.svg, 4.4); Q.charBlink(tl, mar.svg, 6.4);
+        // le Quetzal quitte l'epaule de Marina, file vers la montagne et la montre du bec
+        var qz = S.quetzal(room.actors, 900 + 92, 1056 - 285, 180, "perched", false, "qh5");
+        var tF = L1.t - 0.2;
+        Q.quetzalPoseTo(tl, qz, "fly", tF, 0.35);
+        Q.quetzalFlap(tl, qz, tF + 0.2, 6, 0.4, 0.8);
+        tl.to(qz, { x: 520, y: -300, duration: 1.1, ease: "power2.out" }, tF);
+        Q.quetzalPoseTo(tl, qz, "glide", tF + 1.2, 0.5);
+        C.talkQuetzal(tl, qz, L1);
+        // retour sur l'epaule de Marina pendant la reponse de Killa
+        var tB = L2.t - 0.1;
+        tl.to(qz, { x: 0, y: -8, duration: 1.2, ease: "power2.inOut" }, tB);
+        Q.quetzalFlap(tl, qz, tB, 3, 0.4, 0.7);
+        Q.quetzalPoseTo(tl, qz, "perched", tB + 1.2, 0.5);
+        Q.quetzalBlink(tl, qz, tB + 2.2);
+        [kil, mar, ale].forEach(function (c) { tl.to(c.svg.querySelector(".c-head"), { rotation: 7, svgOrigin: "200 288", duration: 0.8, ease: "sine.inOut" }, L1.t - 0.2); });
+        [kil, mar, ale].forEach(function (c) { tl.to(c.svg.querySelector(".c-head"), { rotation: 0, svgOrigin: "200 288", duration: 0.6, ease: "sine.inOut" }, L2.t - 0.2); });
+        C.talkBounce(tl, kil.b, L2, 6); C.talkChar(tl, kil, L2);
+        Q.charEmote(tl, kil.svg, L2.t, "happy", 0.3);
+        Q.charWave(tl, kil.svg, L2.t + L2.d - 1.3, 0.8, "L");
+        S.hop(tl, ale, L2.t + L2.d - 1.0, 30); S.hop(tl, mar, L2.t + L2.d - 0.9, 26);
+        tl.to(ll.querySelector(".cu-ll-head"), { rotation: -8, svgOrigin: "130 110", duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 5 }, 0.5);
+
+        // ---------- camera : plan large -> pousse vers le point vert (Machu Picchu) -> recul sur le groupe ----------
+        S.camSet(room, 1200, 700, 0.9);
+        S.cam(tl, room, 1750, 560, 1.05, 0.2, L1.t + 0.6, "sine.inOut");
+        S.cam(tl, room, dot.x - 60, dot.y + 120, 1.75, L1.t + 0.8, L1.d - 0.5, "power2.inOut");
+        S.cam(tl, room, 1050, 720, 1.0, L2.t - 0.3, 1.6, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 13, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

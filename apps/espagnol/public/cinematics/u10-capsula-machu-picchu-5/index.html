@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-capsula-machu-picchu-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p5 { position: absolute; inset: 0; }
+      .cl { position: absolute; left: 0; top: 0; z-index: 7; width: 300px; height: 120px; border-radius: 60px; background: #f4ebfa; box-shadow: 0 8px 0 rgba(0,0,0,.3), inset 0 -10px 0 rgba(160,140,200,.35); text-align: center; font: 400 50px/120px "Alfa Slab One", serif; color: #3b1f5a; }
+      .cl:before, .cl:after { content: ""; position: absolute; background: #f4ebfa; border-radius: 50%; }
+      .cl:before { width: 130px; height: 110px; left: 40px; top: -48px; }
+      .cl:after { width: 150px; height: 120px; right: 36px; top: -54px; }
+      .cl span { position: relative; z-index: 2; }
+      .wc { position: absolute; left: 0; top: 0; z-index: 6; width: 270px; height: 340px; border-radius: 30px; background: linear-gradient(180deg, #3b1f5a, #1f0f33); box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); text-align: center; overflow: hidden; }
+      .wc .ic { position: absolute; left: 0; right: 0; top: 26px; display: flex; justify-content: center; }
+      .wc .w { position: absolute; left: 0; right: 0; top: 246px; font: 400 56px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 4px 0 rgba(0,0,0,.4); }
+      .fr { position: absolute; left: 0; top: 0; z-index: 8; width: 270px; text-align: center; }
+      .fr b { display: inline-block; padding: 6px 22px 8px; border-radius: 999px; background: rgba(13,16,56,.94); border: 4px solid #9b6ad9; font: 900 38px/1 Nunito, sans-serif; color: #f5e6c8; white-space: nowrap; box-shadow: 0 5px 0 rgba(0,0,0,.35); }
+      .arw { position: absolute; left: 0; top: 0; z-index: 6; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-capsula-machu-picchu-5" data-start="0" data-width="1920" data-height="1200" data-duration="7.127">
+      <div id="p5" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.127" data-media-start="30.176" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.927,"v":1},{"t":7.127,"v":0}]}]}'></audio>
+      <audio id="a-voz-5-1" src="./assets/voz/narrador.6b47e1bfde.mp3" data-start="0.5" data-duration="5.377" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="3.233" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="3.852" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="4.365" data-duration="0.1" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/combo.mp3" data-start="5.368" data-duration="0.352" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/level-up.mp3" data-start="6.227" data-duration="0.37" data-track-index="8" data-volume="0.35"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-capsula-machu-picchu-5","cinematica":"u10-capsula-machu-picchu","part":5,"parts":5,"total":7.127,"meta":{"cinematica":"u10-capsula-machu-picchu","titulo":"Machu Picchu, los incas y el quechua","tipo":"capsula","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":5,"t0":0,"t1":6.877,"vista":"Cinq mots qui voyagent d’un nuage « quechua » vers un nuage « español » puis un nuage « français » : papa, llama, puma, cóndor, quinua.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Muchas palabras españolas vienen del quechua: llama, cóndor, puma, papa, quinua.","key":"narrador.6b47e1bfde","t":0.5,"d":5.377,"words":[{"w":"Muchas","t":0.5,"d":0.389},{"w":"palabras","t":0.889,"d":0.495},{"w":"españolas","t":1.384,"d":0.547},{"w":"vienen","t":1.931,"d":0.389},{"w":"del","t":2.32,"d":0.231},{"w":"quechua:","t":2.552,"d":0.442},{"w":"llama,","t":3.283,"d":0.396},{"w":"cóndor,","t":3.902,"d":0.382},{"w":"puma,","t":4.415,"d":0.323},{"w":"papa,","t":4.892,"d":0.337},{"w":"quinua.","t":5.368,"d":0.359}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":3.233,"f":"ui/pop"},{"t":3.852,"f":"ui/pop"},{"t":4.365,"f":"ui/pop"},{"t":5.368,"f":"ui/combo"},{"t":6.227,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        Cap.css();
+        var T = PLAN.total, P = C.planOf(PLAN, 5);
+        var w = function (k) { return C.wordT(PLAN, 5, 1, k); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var p5 = $("#p5");
+        Cap.bg(root, p5);
+        var ttl = Cap.title(tl, p5, "PALABRAS", "Palabras viajeras", 0.3);
+
+        // ---------- trois nuages de langues : quechua -> español -> francés ----------
+        var cx3 = [880, 1240, 1600], names = ["quechua", "español", "francés"], cls = [];
+        names.forEach(function (n, i) {
+          var c = mk(p5, "cl", "<span>" + n + "</span>"); gsap.set(c, { x: cx3[i], y: 260 });
+          tl.set(c, { opacity: 0 }, 0);
+          tl.fromTo(c, { opacity: 0, scale: 0.4, y: 300 }, { opacity: 1, scale: 1, y: 260, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, (i === 0 ? 0.35 : w(4) - 0.1 + i * 0.25));
+          tl.to(c, { y: 250, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.4) }, 1.0 + i * 0.2);
+          cls.push(c);
+        });
+        [0, 1].forEach(function (i) {
+          var ar = mk(p5, "arw", '<svg width="70" height="50" viewBox="0 0 70 50" style="overflow:visible"><path d="M4 25H56M40 8L58 25L40 42" stroke="#f59f00" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+          gsap.set(ar, { x: cx3[i] + 305, y: 242 });
+          tl.set(ar, { opacity: 0 }, 0);
+          tl.fromTo(ar, { opacity: 0, x: cx3[i] + 285 }, { opacity: 1, x: cx3[i] + 305, duration: 0.45, ease: "power2.out", immediateRender: false }, w(4) + i * 0.3);
+        });
+
+        // ---------- cinq cartes-mots : elles partent du nuage « quechua » et se rangent sur la ligne ----------
+        var items = [
+          { w: "llama", fr: "lama", ic: Q.cuProp("llama", { width: 190, uid: "k1" }), k: 7 },
+          { w: "cóndor", fr: "condor", ic: Q.cuProp("condor", { width: 200, uid: "k2" }), k: 8 },
+          { w: "puma", fr: "puma", ic: Q.cuProp("puma", { width: 190, uid: "k3" }), k: 9 },
+          { w: "papa", fr: "pomme de terre", ic: Q.cuProp("papa", { width: 190, uid: "k4" }), k: 10 },
+          { w: "quinua", fr: "quinoa", ic: Q.cuProp("quinua", { width: 190, uid: "k5" }), k: 11 }
+        ];
+        var SX = [110, 450, 790, 1130, 1470], SY = 470, frs = [];
+        items.forEach(function (it, i) {
+          var el = mk(p5, "wc cap-paper", '<div class="ic">' + it.ic + '</div><div class="w">' + it.w + "</div>");
+          var sv = el.querySelector("svg"); if (sv) sv.style.overflow = "visible";
+          gsap.set(el, { x: SX[i], y: SY });
+          var t0 = w(it.k) - 0.1;
+          tl.set(el, { opacity: 0 }, 0);
+          tl.fromTo(el, { opacity: 0, scale: 0.25, x: cx3[0] + 20, y: 330, rotation: -10 }, { opacity: 1, scale: 1, x: SX[i], y: SY, rotation: (i % 3 - 1) * 1.5, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, t0);
+          tl.to(el, { y: SY - 12, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 1 }, t0 + 0.8);
+          Cap.sparks(tl, p5, SX[i] + 135, SY + 120, t0 + 0.4, 6, "#ffe9a8");
+          var f = mk(p5, "fr", "<b>" + it.fr + "</b>"); gsap.set(f, { x: SX[i], y: SY + 360 });
+          tl.set(f, { opacity: 0 }, 0);
+          frs.push(f);
+        });
+        // ---------- le voyage continue vers le francais : les etiquettes arrivent l'une apres l'autre ----------
+        var tF = Math.min(T - 1.5, w(11) + 0.9);
+        tl.fromTo(cls[2], { scale: 1 }, { scale: 1.12, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 3, transformOrigin: "50% 50%" }, tF - 0.1);
+        frs.forEach(function (f, i) { tl.fromTo(f, { opacity: 0, y: SY + 400 }, { opacity: 1, y: SY + 360, duration: 0.4, ease: "back.out(1.8)", immediateRender: false }, tF + i * 0.16); });
+        tl.to(cls[0], { scale: 1.08, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 1, transformOrigin: "50% 50%" }, w(6) - 0.05);
+        tl.to([ttl], { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, T - 0.45);
+
+        C.frame(tl, root, PLAN, { seed: 25, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-capsula-machu-picchu-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

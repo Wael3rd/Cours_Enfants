@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u10-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cu-ab { position: absolute; left: 0; top: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u10-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="9.095">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.095" data-media-start="4.834" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.795,"v":1},{"t":9.095,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/killa.317dfe53f7.mp3" data-start="0.9" data-duration="7.245" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-00.mp3" data-start="0.1" data-duration="0.233" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-01.mp3" data-start="0.3" data-duration="0.254" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/step-02.mp3" data-start="0.5" data-duration="0.242" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="0.85" data-duration="0.1" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="8.795" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u10-historia-2","cinematica":"u10-historia","part":2,"parts":5,"total":9.095,"meta":{"cinematica":"u10-historia","titulo":"El cuentacuentos sin voz","tipo":"historia","unidad":"Leyendas y héroes","numero":10,"lugar":"Cusco","pluma":"Pluma del Eco","plumaNum":10,"rotulo":"","region":"andes"},"plans":[{"n":1,"t0":0,"t1":8.845,"vista":"La Plaza de Armas de Cusco. Le Quetzal, presque entièrement vert, sort de la poche de Marina. Killa, 12 ans, avec un châle coloré (lliclla) et un petit lama tenu en laisse, vient à leur rencontre.","camara":"plan large puis plan moyen sur Killa","rotulo":"","personajes":["quetzal","killa","marina","viajero"],"lines":[{"who":"killa","es":"¡Hola! Me llamo Killa. En quechua, «killa» significa «luna». ¡Bienvenidos al Cusco!","key":"killa.317dfe53f7","t":0.9,"d":7.245,"words":[{"w":"¡Hola!","t":0.9,"d":0.341},{"w":"Me","t":2.067,"d":0.171},{"w":"llamo","t":2.238,"d":0.322},{"w":"Killa.","t":2.56,"d":0.322},{"w":"En","t":3.722,"d":0.139},{"w":"quechua,","t":3.86,"d":0.343},{"w":"«killa»","t":4.538,"d":0.329},{"w":"significa","t":4.867,"d":0.534},{"w":"«luna».","t":5.401,"d":0.277},{"w":"¡Bienvenidos","t":5.819,"d":1.712},{"w":"al","t":7.53,"d":0.161},{"w":"Cusco!","t":7.692,"d":0.303}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/step-00"},{"t":0.3,"f":"rpg/step-01"},{"t":0.5,"f":"rpg/step-02"},{"t":0.85,"f":"ui/pop"},{"t":8.795,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 1), L = P.lines[0], T = PLAN.total;
+        var w = function (k) { return C.wordT(PLAN, 1, 1, k); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var set = Q.plazaDeArmas({ uid: "pa" });
+        var room = S.set($("#stage"), set, { below: "#B59471", motes: 14 });
+        S.drift(tl, room, T); S.fountain(tl, room, T);
+
+        // ---------- le groupe, comme a la fin de la partie precedente ----------
+        var ale = S.chr(room.actors, "viajero", 700, 1040, 330), mar = S.chr(room.actors, "marina", 880, 1030, 322);
+        S.breathe(tl, ale, 0, T, 0.8); S.breathe(tl, mar, 0.1, T, 0.8);
+        var qz = S.quetzal(room.actors, 975, 770, 200, "perched", false, "qh2");
+        gsap.set(qz, { y: -8 });
+        Q.quetzalBlink(tl, qz, 1.6); Q.quetzalBlink(tl, qz, 6.2);
+        Q.charBlink(tl, ale.svg, 2.6); Q.charBlink(tl, mar.svg, 5.0);
+
+        // ---------- Killa et son lama (a l'endroit ou la partie 1 les a laisses) arrivent jusqu'au groupe ----------
+        var kil = S.chr(room.actors, "killa", 2420, 1040, 330);
+        var ll = mkp(room.actors, "cu-ab", Q.cuLlama({ width: 300, body: "#EAD9BC", blanket: "#12A594" }), 2540 - 150, 1040 - 0.955 * 330);
+        gsap.set(ll.querySelector("svg"), { scaleX: -1, transformOrigin: "50% 50%" });
+        var tW = L.t - 0.5, dW = 2.1;
+        S.walk(tl, kil, 2420, 1380, tW, dW, 0.3, "power1.inOut");
+        tl.to(ll, { x: 1540 - 150, duration: dW + 0.15, ease: "power1.inOut" }, tW + 0.1);
+        for (var b = 0; b < Math.floor(dW / 0.34); b++) tl.to(ll, { y: "-=10", duration: 0.17, ease: "sine.out", yoyo: true, repeat: 1 }, tW + 0.1 + b * 0.34);
+        S.breathe(tl, kil, tW + dW, T - tW - dW, 0.8);
+        C.talkBounce(tl, kil.b, L, 6); C.talkChar(tl, kil, L);
+        Q.charWave(tl, kil.svg, L.t - 0.05, 1.0, "R");                       // « ¡Hola! »
+        Q.charEmote(tl, kil.svg, L.t, "happy", 0.3);
+        tl.to(ll.querySelector(".cu-ll-head"), { rotation: 8, svgOrigin: "130 110", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, tW + dW);
+        Q.charBlink(tl, kil.svg, L.t + 3.2);
+        // Alex et Marina se tournent vers elle : petits rebonds d'attention
+        S.hop(tl, ale, L.t + 0.2, 24); Q.charNod(tl, mar.svg, L.t + 2.4, 4, 0.2);
+        Q.quetzalPoseTo(tl, qz, "happy", L.t + 0.3, 0.4); Q.quetzalPoseTo(tl, qz, "perched", L.t + 1.6, 0.5);
+        S.hop(tl, mar, w(10) - 0.1, 22); S.hop(tl, ale, w(10), 26);                 // « ¡Bienvenidos al Cusco! »
+
+        // ---------- « killa » = luna : une lune de jour se leve dans le ciel au-dessus de la cathedrale ----------
+        var moon = mkp(room.qlayer, "cu-ab", '<svg width="230" height="230" viewBox="-85 -85 170 170"><circle r="80" fill="#FFF6D8" opacity=".28"/><circle r="52" fill="#FFF6D8"/><circle cx="-14" cy="-8" r="7" fill="#E8DCB8"/><circle cx="16" cy="14" r="10" fill="#E8DCB8"/></svg>', 1650, 330);
+        tl.set(moon, { opacity: 0 }, 0);
+        tl.fromTo(moon, { opacity: 0, scale: 0.3, y: 440 }, { opacity: 1, scale: 1, y: 330, duration: 0.9, ease: "power2.out", immediateRender: false }, w(9) - 0.2);
+        tl.to(moon, { y: 310, duration: 2.0, ease: "sine.inOut" }, w(9) + 0.7);
+
+        // ---------- camera : large -> suit Killa -> gros plan -> ciel (la lune) -> retour sur le groupe ----------
+        S.camSet(room, 1560, 720, 0.76);
+        S.cam(tl, room, 1500, 740, 0.9, 0, tW + 0.4, "sine.inOut");
+        S.cam(tl, room, 1230, 760, 1.12, tW + 0.4, dW - 0.2, "power2.inOut");
+        S.cam(tl, room, 1400, 560, 0.85, w(8) - 0.2, 1.1, "sine.inOut");
+        S.cam(tl, room, 1100, 770, 1.0, w(10) - 0.4, 1.2, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u10-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>
