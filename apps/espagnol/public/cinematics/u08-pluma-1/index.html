@@ -78,7 +78,7 @@
         var tFe = 0.3;
         tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, tFe);
         if (dot) tl.to(dot, { opacity: 0, duration: 0.5 }, tFe);
-        tl.to(fe, { motionPath: { path: [{ x: 1486, y: 43 }, { x: 1420, y: 220 }, { x: 1330, y: 360 }, { x: 1300, y: 560 }, { x: 1235, y: 700 }, { x: 1225, y: 770 }].map(function (p) { return { x: p.x - 1486, y: p.y - 43 }; }), curviness: 1.1 }, rotation: -25, duration: 2.1, ease: "sine.inOut" }, tFe + 0.5);
+        tl.to(fe, { motionPath: { path: [{ x: 1486, y: 43 }, { x: 1420, y: 220 }, { x: 1330, y: 360 }, { x: 1300, y: 560 }, { x: 1235, y: 700 }, { x: 1225, y: 770 }], curviness: 1.1 }, rotation: -25, duration: 2.1, ease: "sine.inOut" }, tFe + 0.5);
         C.bloom(tl, "#bloom", tFe + 0.2, 0.18, 0.4, 0.9);
         var aR = ale.svg.querySelector(".c-armR");
         tl.to(aR, { rotation: -105, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tFe + 1.7);

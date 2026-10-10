@@ -83,7 +83,7 @@
         fe.firstChild.style.overflow = "visible";
         var tFe = 1.1;
         tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, tFe);
-        tl.to(fe, { motionPath: { path: [{ x: 1418, y: 330 }, { x: 1340, y: 420 }, { x: 1440, y: 520 }, { x: 1330, y: 640 }, { x: 1300, y: 770 }].map(function (p) { return { x: p.x - 1418, y: p.y - 330 }; }), curviness: 1.1 }, rotation: -25, duration: 1.4, ease: "sine.inOut" }, tFe + 0.4);
+        tl.to(fe, { motionPath: { path: [{ x: 1418, y: 330 }, { x: 1340, y: 420 }, { x: 1440, y: 520 }, { x: 1330, y: 640 }, { x: 1300, y: 770 }], curviness: 1.1 }, rotation: -25, duration: 1.4, ease: "sine.inOut" }, tFe + 0.4);
         // Alex tend la main et rattrape la plume ; Valentina remercie
         var aR = ale.svg.querySelector(".c-armR");
         tl.to(aR, { rotation: -105, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tFe + 0.5);
