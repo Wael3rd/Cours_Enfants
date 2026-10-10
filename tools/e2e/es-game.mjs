@@ -621,6 +621,7 @@ try {
       check('hors fenêtre (10 juin) : ni bannière ni marqueur d\'événement', (await o.p.locator('.map .evento').count()) === 0 && (await o.p.locator('.map .m-evfx').count()) === 0);
       await o.p.evaluate(() => window.__q.nav.go({ name: 'settings' }, { root: true }));
       await o.p.waitForSelector('.set .gate button');
+      await o.p.locator('.set .gate button').scrollIntoViewIfNeeded();
       const gate = await o.p.locator('.set .gate button').boundingBox();
       await o.p.mouse.move(gate.x + gate.width / 2, gate.y + gate.height / 2);
       await o.p.mouse.down();

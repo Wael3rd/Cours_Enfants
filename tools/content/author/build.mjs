@@ -1,6 +1,6 @@
 // Genere apps/espagnol/src/content/units/uNN.json a partir des sources d'ecriture u01.mjs, u02.mjs, ...
 // node tools/content/author/build.mjs
-import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { UNITS_DIR } from '../lib.mjs';
@@ -9,7 +9,8 @@ import { dirname } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 mkdirSync(UNITS_DIR, { recursive: true });
-for (const n of ['u01', 'u02', 'u03', 'u04', 'e01']) {
+const names = readdirSync(dirname(fileURLToPath(import.meta.url))).filter((f) => /^[ue]dd.mjs$/.test(f)).map((f) => f.slice(0, 3)).sort();
+for (const n of names) {
   const f = join(here, `${n}.mjs`);
   if (!existsSync(f)) continue;
   const unit = (await import(pathToFileURL(f).href)).default();

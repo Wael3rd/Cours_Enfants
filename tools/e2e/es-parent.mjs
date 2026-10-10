@@ -105,6 +105,7 @@ try {
   };
   await page.goto(`${ORIGIN}/espagnol/?debug`);
   await toSettings();
+  await page.locator('.set .gate button').scrollIntoViewIfNeeded();
   const gate = await page.locator('.set .gate button').boundingBox();
   await page.mouse.move(gate.x + gate.width / 2, gate.y + gate.height / 2);
   await page.mouse.down();
@@ -166,6 +167,7 @@ try {
   await page.waitForTimeout(700);
   await page.reload();
   await toSettings();
+  await page.locator('.set .gate button').scrollIntoViewIfNeeded();
   const g2 = await page.locator('.set .gate button').boundingBox();
   await page.mouse.move(g2.x + g2.width / 2, g2.y + g2.height / 2);
   await page.mouse.down();
