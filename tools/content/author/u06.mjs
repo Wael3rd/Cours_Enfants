@@ -24,7 +24,7 @@ export default function build() {
     W('nochebuena', 'Nochebuena', 'veille de Noël : le soir du 24 décembre, grand dîner en famille', '🌟', 'fiestas', 'La cena de Nochebuena es el veinticuatro de diciembre.', 'Le dîner de Nochebuena est le vingt-quatre décembre.', { genero: 'f' }),
     W('nochevieja', 'Nochevieja', 'réveillon du Nouvel An (le soir du 31 décembre)', '🎆', 'fiestas', 'En Nochevieja comemos doce uvas.', 'Le soir du 31, nous mangeons douze raisins.', { genero: 'f' }),
     W('ano_nuevo', 'Año Nuevo', 'Nouvel An (le 1er janvier)', '🎇', 'fiestas', '¡Feliz Año Nuevo!', 'Bonne année !', { genero: 'm' }),
-    W('reyes_magos', 'Reyes Magos', 'Rois mages : Melchor, Gaspar et Baltasar, qui apportent les cadeaux le 6 janvier', '👑', 'fiestas', 'Los Reyes Magos llegan el seis de enero.', 'Les Rois mages arrivent le six janvier.', { genero: 'm', soloPlural: true }),
+    W('reyes_magos', 'Reyes Magos', 'Rois mages : Melchor, Gaspar et Baltasar, qui apportent les cadeaux le 6 janvier', '👑', 'fiestas', 'Los Reyes Magos traen los regalos el seis de enero.', 'Les Rois mages apportent les cadeaux le six janvier.', { genero: 'm', soloPlural: true }),
     W('cabalgata', 'cabalgata', 'défilé (la cabalgata de Reyes : le défilé des Rois mages, le soir du 5 janvier)', '🐪', 'fiestas', 'La cabalgata de Reyes es el cinco de enero.', 'Le défilé des Rois est le cinq janvier.', { genero: 'f', plural: 'cabalgatas' }),
     W('feliz', 'feliz', 'heureux, joyeux (¡Feliz Navidad ! = Joyeux Noël)', '😊', 'fiestas', '¡Feliz Navidad, Marina!', 'Joyeux Noël, Marina !', { adj: true, genero: 'mf', plural: 'felices' }),
     W('arbol_navidad', 'árbol de Navidad', 'sapin de Noël', '🎄', 'fiestas', 'El árbol de Navidad tiene luces y una estrella.', 'Le sapin de Noël a des lumières et une étoile.', { genero: 'm', plural: 'árboles de Navidad' }),
@@ -32,7 +32,7 @@ export default function build() {
     W('luces', 'luces', 'lumières, guirlandes lumineuses (singulier : la luz)', '💡', 'fiestas', 'Las luces de Navidad iluminan la calle.', 'Les lumières de Noël éclairent la rue.', { genero: 'f', soloPlural: true }),
     W('villancico', 'villancico', 'chant de Noël', '🎶', 'fiestas', 'Cantamos un villancico en Nochebuena.', 'Nous chantons un chant de Noël à Nochebuena.', { genero: 'm', plural: 'villancicos' }),
     W('campanadas', 'campanadas', 'coups de cloche (les douze coups de minuit de Nochevieja)', '🔔', 'fiestas', 'Las campanadas suenan a medianoche.', 'Les coups de cloche sonnent à minuit.', { genero: 'f', soloPlural: true }),
-    W('uva', 'uva', 'raisin (en Nochevieja : douze raisins, un par coup de cloche)', '🍇', 'fiestas', 'Comemos una uva con cada campanada.', 'Nous mangeons un raisin à chaque coup de cloche.', { genero: 'f', plural: 'uvas' }),
+    W('uva', 'uva', 'grain de raisin (en Nochevieja : douze grains, un par coup de cloche)', '🍇', 'fiestas', 'Comemos una uva con cada campanada.', 'Nous mangeons un raisin à chaque coup de cloche.', { genero: 'f', plural: 'uvas' }),
     W('belen', 'belén', 'crèche de Noël (le « belén » : la scène de la Nativité en figurines)', null, 'fiestas', 'En la plaza hay un belén enorme.', 'Sur la place, il y a une énorme crèche.', { genero: 'm', plural: 'belenes', ilustracion: 'Une crèche de Noël en figurines : la Vierge, Joseph, l’enfant Jésus dans la paille, un âne, un bœuf et une étoile au-dessus de l’étable' }),
     // regalos y lotería
     W('regalo', 'regalo', 'cadeau', '🎁', 'regalos', 'Mi regalo favorito es un libro.', 'Mon cadeau préféré est un livre.', { genero: 'm', plural: 'regalos' }),
@@ -65,7 +65,7 @@ export default function build() {
     W('ayudar', 'ayudar', 'aider (ayuda ! = aide !)', '🤝', 'verbos', 'Marina ayuda a Chema.', 'Marina aide Chema.'),
     W('cortar', 'cortar', 'couper', '✂️', 'verbos', 'Corta el roscón con cuidado.', 'Coupe le roscón avec précaution.', { exVoz: 'chema' }),
     W('tomar', 'tomar', 'prendre ; boire ou manger (tomar chocolate)', '☕', 'verbos', 'Tomo un chocolate caliente.', 'Je prends un chocolat chaud.'),
-    W('rapido', 'rápido', 'vite, rapide (¡rápido ! = vite !)', '⚡', 'verbos', '¡Rápido, que son las doce menos cinco!', 'Vite, il est midi moins cinq !', { adj: true, genero: 'm', femenino: 'rápida' }),
+    W('rapido', 'rápido', 'vite, rapide (¡rápido ! = vite !)', '⚡', 'verbos', '¡Rápido, que son las doce menos cinco!', 'Vite, il est minuit moins cinq !', { adj: true, genero: 'm', femenino: 'rápida' }),
     W('cuidado', 'cuidado', 'attention ! (¡cuidado! = fais attention !)', '⚠️', 'verbos', '¡Cuidado, que quema!', 'Attention, ça brûle !', { genero: 'm' }),
     // obligación
     W('hay_que', 'hay que', 'il faut + infinitif (obligation pour tout le monde)', '👉', 'obligacion', 'Hay que encender las luces.', 'Il faut allumer les lumières.'),
@@ -107,10 +107,10 @@ export default function build() {
       ['Tengo que comprar los regalos.', 'Je dois acheter les cadeaux.', 'viajero', ['Tengo que comprar']],
       ['Tienes que probar el turrón.', 'Tu dois goûter le turrón.', 'chema', ['Tienes que probar']],
       ['Marina tiene que ayudar a Chema.', 'Marina doit aider Chema.', 'nacho', ['tiene que ayudar']],
-      ['Tenemos que estar en la Puerta del Sol a las doce.', 'Nous devons être à la Puerta del Sol à midi (à minuit : « a medianoche »).', 'paloma', ['Tenemos que estar']],
+      ['Tenemos que estar en la Puerta del Sol a medianoche.', 'Nous devons être à la Puerta del Sol à minuit.', 'paloma', ['Tenemos que estar']],
     ], 'Para una obligación personal usamos tener que + infinitivo: tengo que, tienes que, tiene que, tenemos que… El verbo «tener» cambia (tengo, tienes, tiene), «que» no.',
     'Pour une obligation personnelle, on utilise tener que + infinitif : tengo que, tienes que, tiene que, tenemos que… Le verbe « tener » change (tengo, tienes, tiene), « que » ne change pas.',
-    "« Tener que + infinitif » = devoir + infinitif, pour une personne précise : tengo que estudiar (je dois étudier), Marina tiene que ayudar (Marina doit aider). On conjugue « tener » (c'est un verbe à diphtongue irrégulier : tengo, tienes, tiene, tenemos, tenéis, tienen) et « que » + infinitif restent. Tu connais déjà « tener » pour l'âge (tengo doce años) ; ne confonds pas « tengo que ir » (je dois y aller) et « voy a ir » (je vais y aller). Différence avec « hay que » : « hay que » est général (il faut, pour tout le monde), « tener que » concerne une personne (je dois, tu dois). Le « que » est obligatoire : « tengo estudiar » est faux. Au futur proche, on peut les combiner : « mañana tengo que comprar un regalo ».",
+    "« Tener que + infinitif » = devoir + infinitif, pour une personne précise : tengo que estudiar (je dois étudier), Marina tiene que ayudar (Marina doit aider). On conjugue « tener » (c'est un verbe à diphtongue irrégulier : tengo, tienes, tiene, tenemos, tenéis, tienen) et « que » + infinitif restent. Tu connais déjà « tener » pour l'âge (tengo doce años) ; ne confonds pas « tengo que ir » (je dois y aller) et « voy a ir » (je vais y aller). Différence avec « hay que » : « hay que » est général (il faut, pour tout le monde), « tener que » concerne une personne (je dois, tu dois). Le « que » est obligatoire : « tengo estudiar » est faux. Avec « mañana » (demain), on parle d'une obligation à venir : « mañana tengo que comprar un regalo ».",
     { encabezado: ['Pronombre', 'tener que + comprar'], filas: [['yo', 'tengo que comprar'], ['tú', 'tienes que comprar'], ['él / ella', 'tiene que comprar'], ['nosotros', 'tenemos que comprar'], ['vosotros', 'tenéis que comprar'], ['ellos / ellas', 'tienen que comprar']] }),
   ];
 
@@ -190,7 +190,7 @@ export default function build() {
       lcV('uva', ['uva', 'estrella', 'campanadas']),
       lcT('La Nochebuena es el veinticuatro de diciembre.', 'paloma', ['24/12', '25/12', '31/12'], 0),
       lcT('Nochevieja es el treinta y uno de diciembre.', 'chema', ['1/1', '24/12', '31/12'], 2),
-      lcT('Los Reyes Magos llegan el seis de enero.', 'paloma', ['6/1', '5/12', '1/1'], 0),
+      lcT('Los Reyes Magos traen los regalos el seis de enero.', 'paloma', ['6/1', '5/12', '1/1'], 0),
       fill('En ___ comemos doce uvas.', 'Nochevieja', 'nacho', { opts: ['Nochevieja', 'Nochebuena', 'cabalgata'], tr: 'Le soir du 31, nous mangeons douze raisins.' }),
       fill('El veinticuatro de diciembre es ___.', 'Nochebuena', 'paloma', { opts: ['Nochebuena', 'Nochevieja', 'Año Nuevo'], tr: 'Le vingt-quatre décembre, c’est Nochebuena.' }),
       fill('¡Feliz ___!', 'Navidad', 'rosa', { opts: ['Navidad', 'cabalgata', 'estrella'], tr: 'Joyeux Noël !' }),
@@ -198,11 +198,11 @@ export default function build() {
       dlg('paloma', '¡Feliz Navidad, chicos! ¿Qué día es Nochebuena?', 'Joyeux Noël, les enfants ! Quel jour est Nochebuena ?', [
         ['Es el veinticuatro de diciembre.', 1, '¡Exacto! Esa noche cenamos en familia.', 'Exact ! Ce soir-là, nous dînons en famille.', 'C’est le vingt-quatre décembre.'],
         ['Es el treinta y uno de diciembre.', 0, 'Ese día es Nochevieja, no Nochebuena.', 'Ce jour-là, c’est Nochevieja, pas Nochebuena.', 'C’est le trente et un décembre.'],
-        ['Es el seis de enero.', 0, 'El seis de enero llegan los Reyes Magos.', 'Le six janvier, les Rois mages arrivent.', 'C’est le six janvier.'],
+        ['Es el seis de enero.', 0, 'El seis de enero es el día de los Reyes Magos.', 'Le six janvier, c’est le jour des Rois mages.', 'C’est le six janvier.'],
       ]),
       speak('¡Feliz Navidad!', 'viajero', { libre: 'Navidad', es: 'Escucha y felicita a alguien.', fr: 'Écoute et félicite : change « Navidad » (por ejemplo « ¡Feliz Año Nuevo! » ou « ¡Feliz cumpleaños! »).', tr: 'Joyeux Noël ! (change la fête)', hechizo: ['Hechizo del deseo', 'Luces de colores bailan sobre tu cabeza'] }),
       writeFree('En Navidad como ___ con ___. Mi regalo favorito es ___.', [
-        { id: 'comida', pista: 'Que manges-tu à Noël ? (turrón, marisco, pavo, bûche…)', tipo: 'texto' },
+        { id: 'comida', pista: 'Que manges-tu à Noël ? (turrón, marisco, pavo, pollo, chocolate…)', tipo: 'texto' },
         { id: 'con', pista: 'Avec qui ? (mi familia, mis abuelos, mis amigos…)', tipo: 'texto' },
         { id: 'regalo', pista: 'Ton cadeau préféré, avec son article (un libro, una guitarra, un balón…)', tipo: 'texto' },
       ], 'En Navidad como turrón con mi familia. Mi regalo favorito es un libro.', 'À Noël, je mange du turrón avec ma famille. Mon cadeau préféré est un livre.', 'viajero', C('Escribe cómo celebras la Navidad.', 'Écris comment tu fêtes Noël.')),
@@ -277,7 +277,7 @@ export default function build() {
       conj('tener', 'tú', 'tien', 'es', ['o', 'es', 'e'], 'paloma', { tr: 'Toi, tu as…' }),
       conj('tener', 'nosotros', 'ten', 'emos', ['emos', 'éis', 'en'], 'marina', { tr: 'Nous, nous avons…' }),
       conj('tener', 'ellos', 'tien', 'en', ['emos', 'éis', 'en'], 'nacho', { tr: 'Eux, ils ont…' }),
-      fill('___ que encender las luces.', 'Hay', 'paloma', { opts: ['Hay', 'Tiene', 'Está'], tr: 'Il faut allumer les lumières. (obligation générale)' }),
+      fill('___ que encender las luces.', 'Hay', 'paloma', { opts: ['Hay', 'Hace', 'Está'], tr: 'Il faut allumer les lumières. (obligation générale)' }),
       fill('Tengo que ___ los regalos.', 'comprar', 'viajero', { opts: ['comprar', 'compro', 'comprando'], tr: 'Je dois acheter les cadeaux. (tener que + infinitif)' }),
       fill('Marina ___ que ayudar a Chema.', 'tiene', 'nacho', { opts: ['tiene', 'tengo', 'hay'], tr: 'Marina doit aider Chema. (obligation personnelle)' }),
       fill('Tenemos que estar en la Puerta del Sol ___ las doce.', 'a', 'paloma', { opts: ['a', 'en', 'de'], tr: 'Nous devons être à la Puerta del Sol à douze heures.' }),
@@ -312,8 +312,8 @@ export default function build() {
       fill('Los Reyes Magos traen un ___ para cada niño.', 'regalo', 'paloma', { opts: ['regalo', 'villancico', 'turrón'], tr: 'Les Rois mages apportent un cadeau pour chaque enfant.' }),
       tf('Los Reyes Magos llegan el veinticinco de diciembre.', false, N, { tr: 'Les Rois mages arrivent le vingt-cinq décembre.', expl: ['Llegan el cinco de enero por la noche, y los regalos están el seis por la mañana.', 'Ils arrivent le soir du cinq janvier, et les cadeaux sont là le matin du six.'] }),
       tf('Los niños dejan los zapatos para recibir regalos.', true, N, { tr: 'Les enfants laissent leurs chaussures pour recevoir des cadeaux.' }),
-      dlg('paloma', '¿Quieres un número de lotería? ¡Este año toca el Gordo!', 'Tu veux un numéro de loterie ? Cette année, c’est le Gordo qui tombe !', [
-        ['Sí, quiero el número siete.', 1, '¡El siete! Seguro que tienes suerte.', 'Le sept ! Tu vas sûrement avoir de la chance.', 'Oui, je veux le numéro sept.'],
+      dlg('paloma', '¿Quieres un número de lotería? ¡Este año toca el Gordo!', 'Tu veux un numéro de loterie ? Cette année, le Gordo va tomber ici ! (« tocar » = être gagné, à la loterie)', [
+        ['Sí, quiero un número, por favor.', 1, '¡Aquí tienes! Seguro que tienes suerte.', 'Tiens ! Tu vas sûrement avoir de la chance.', 'Oui, je veux un numéro, s’il vous plaît.'],
         ['Sí, compro la lotería de la cabalgata.', 0, 'La lotería no es de la cabalgata. Pero gracias.', 'La loterie n’est pas celle du défilé. Mais merci.', 'Oui, j’achète la loterie du défilé.'],
         ['No, soy un número.', 0, '¡Ja, ja! Entonces tienes premio seguro.', 'Ha, ha ! Alors tu as un lot assuré.', 'Non, je suis un numéro.'],
       ]),

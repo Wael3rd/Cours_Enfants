@@ -114,10 +114,10 @@
         "fiestas"
       ],
       "ejemplo": {
-        "es": "Los Reyes Magos llegan el seis de enero.",
-        "fr": "Les Rois mages arrivent le six janvier.",
+        "es": "Los Reyes Magos traen los regalos el seis de enero.",
+        "fr": "Les Rois mages apportent les cadeaux le six janvier.",
         "voz": "narrador",
-        "audio": "narrador.a1d5119715"
+        "audio": "narrador.223d205ba8"
       },
       "audio": "narrador.cb76d3d99e"
     },
@@ -251,7 +251,7 @@
     {
       "id": "uva",
       "es": "uva",
-      "fr": "raisin (en Nochevieja : douze raisins, un par coup de cloche)",
+      "fr": "grain de raisin (en Nochevieja : douze grains, un par coup de cloche)",
       "genero": "f",
       "plural": "uvas",
       "emoji": "🍇",
@@ -774,7 +774,7 @@
       ],
       "ejemplo": {
         "es": "¡Rápido, que son las doce menos cinco!",
-        "fr": "Vite, il est midi moins cinq !",
+        "fr": "Vite, il est minuit moins cinq !",
         "voz": "narrador",
         "audio": "narrador.6fd31eda95"
       },
@@ -1138,10 +1138,10 @@
           ]
         },
         {
-          "es": "Tenemos que estar en la Puerta del Sol a las doce.",
-          "fr": "Nous devons être à la Puerta del Sol à midi (à minuit : « a medianoche »).",
+          "es": "Tenemos que estar en la Puerta del Sol a medianoche.",
+          "fr": "Nous devons être à la Puerta del Sol à minuit.",
           "voz": "paloma",
-          "audio": "paloma.81ca925acf",
+          "audio": "paloma.6df92a2de7",
           "resaltar": [
             "Tenemos que estar"
           ]
@@ -1153,7 +1153,7 @@
         "voz": "narrador",
         "audio": "narrador.77a7ff5007"
       },
-      "pista": "« Tener que + infinitif » = devoir + infinitif, pour une personne précise : tengo que estudiar (je dois étudier), Marina tiene que ayudar (Marina doit aider). On conjugue « tener » (c'est un verbe à diphtongue irrégulier : tengo, tienes, tiene, tenemos, tenéis, tienen) et « que » + infinitif restent. Tu connais déjà « tener » pour l'âge (tengo doce años) ; ne confonds pas « tengo que ir » (je dois y aller) et « voy a ir » (je vais y aller). Différence avec « hay que » : « hay que » est général (il faut, pour tout le monde), « tener que » concerne une personne (je dois, tu dois). Le « que » est obligatoire : « tengo estudiar » est faux. Au futur proche, on peut les combiner : « mañana tengo que comprar un regalo ».",
+      "pista": "« Tener que + infinitif » = devoir + infinitif, pour une personne précise : tengo que estudiar (je dois étudier), Marina tiene que ayudar (Marina doit aider). On conjugue « tener » (c'est un verbe à diphtongue irrégulier : tengo, tienes, tiene, tenemos, tenéis, tienen) et « que » + infinitif restent. Tu connais déjà « tener » pour l'âge (tengo doce años) ; ne confonds pas « tengo que ir » (je dois y aller) et « voy a ir » (je vais y aller). Différence avec « hay que » : « hay que » est général (il faut, pour tout le monde), « tener que » concerne une personne (je dois, tu dois). Le « que » est obligatoire : « tengo estudiar » est faux. Avec « mañana » (demain), on parle d'une obligation à venir : « mañana tengo que comprar un regalo ».",
       "tabla": {
         "encabezado": [
           "Pronombre",
@@ -1861,9 +1861,9 @@
             "audio": "narrador.fd721521ac"
           },
           "habla": {
-            "es": "Los Reyes Magos llegan el seis de enero.",
+            "es": "Los Reyes Magos traen los regalos el seis de enero.",
             "voz": "paloma",
-            "audio": "paloma.a1d5119715"
+            "audio": "paloma.223d205ba8"
           },
           "modo": "texto",
           "opciones": [
@@ -2031,10 +2031,10 @@
               "fr": "C’est le six janvier.",
               "correcta": false,
               "reaccion": {
-                "es": "El seis de enero llegan los Reyes Magos.",
-                "fr": "Le six janvier, les Rois mages arrivent.",
+                "es": "El seis de enero es el día de los Reyes Magos.",
+                "fr": "Le six janvier, c’est le jour des Rois mages.",
                 "voz": "paloma",
-                "audio": "paloma.4f3d21a5df",
+                "audio": "paloma.56533e1242",
                 "emoji": "🤨"
               }
             }
@@ -2079,7 +2079,7 @@
           "campos": [
             {
               "id": "comida",
-              "pista": "Que manges-tu à Noël ? (turrón, marisco, pavo, bûche…)",
+              "pista": "Que manges-tu à Noël ? (turrón, marisco, pavo, pollo, chocolate…)",
               "tipo": "texto"
             },
             {
@@ -3132,7 +3132,7 @@
           "respuesta": "Hay",
           "opciones": [
             "Hay",
-            "Tiene",
+            "Hace",
             "Está"
           ],
           "habla": {
@@ -3671,24 +3671,24 @@
           "pnj": "paloma",
           "replica": {
             "es": "¿Quieres un número de lotería? ¡Este año toca el Gordo!",
-            "fr": "Tu veux un numéro de loterie ? Cette année, c’est le Gordo qui tombe !",
+            "fr": "Tu veux un numéro de loterie ? Cette année, le Gordo va tomber ici ! (« tocar » = être gagné, à la loterie)",
             "voz": "paloma",
             "audio": "paloma.7c8c004f9a"
           },
           "opciones": [
             {
               "habla": {
-                "es": "Sí, quiero el número siete.",
+                "es": "Sí, quiero un número, por favor.",
                 "voz": "viajero",
-                "audio": "viajero.35c558fbb0"
+                "audio": "viajero.b63922d82a"
               },
-              "fr": "Oui, je veux le numéro sept.",
+              "fr": "Oui, je veux un numéro, s’il vous plaît.",
               "correcta": true,
               "reaccion": {
-                "es": "¡El siete! Seguro que tienes suerte.",
-                "fr": "Le sept ! Tu vas sûrement avoir de la chance.",
+                "es": "¡Aquí tienes! Seguro que tienes suerte.",
+                "fr": "Tiens ! Tu vas sûrement avoir de la chance.",
                 "voz": "paloma",
-                "audio": "paloma.5db9b7d641",
+                "audio": "paloma.7aa6fc4b75",
                 "emoji": "😄"
               }
             },

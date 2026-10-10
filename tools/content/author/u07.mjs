@@ -87,7 +87,7 @@ export default function build() {
       ['¿Te gustan las películas?', 'Tu aimes les films ?', 'marina', ['¿Te gustan']],
     ], 'Con «gustar», lo que me gusta es el sujeto: si es una cosa (el fútbol) o un verbo (bailar), decimos «gusta»; si son varias cosas (los videojuegos), decimos «gustan». Delante va me, te, le…',
     'Avec « gustar », ce qui me plaît est le sujet : si c’est une seule chose (el fútbol) ou un verbe (bailar), on dit « gusta » ; si ce sont plusieurs choses (los videojuegos), on dit « gustan ». Devant, on met me, te, le…',
-    "Gustar ne veut pas exactement dire « aimer » mais « plaire » : « me gusta el fútbol » = le foot me plaît. Comme en français, la chose qui plaît est le sujet du verbe, donc c'est elle qui décide de la terminaison : une chose singulière (me gusta el tango) ou un verbe à l'infinitif (me gusta bailar, toujours « gusta ») → « gusta » ; plusieurs choses (me gustan los videojuegos, me gustan el fútbol y el tenis) → « gustan ». Le petit mot avant le verbe indique à qui ça plaît : me (à moi), te (à toi), le (à lui, à elle), nos (à nous), os (à vous, en Espagne), les (à eux). Ces mots se mettent AVANT le verbe, et « no » se met avant eux : « no me gusta ». Dans une réponse courte, on ne répète pas le mot « yo » : « —¿Te gusta el tango? —Sí, me gusta. » Piège classique : ne pas dire « yo gusto el fútbol ». Pas de « de » devant le nom : me gusta el fútbol (pas « me gusta de le foot »). Les articles el / la / los / las sont obligatoires devant le nom.",
+    "Gustar ne veut pas exactement dire « aimer » mais « plaire » : « me gusta el fútbol » = le foot me plaît. Comme en français, la chose qui plaît est le sujet du verbe, donc c'est elle qui décide de la terminaison : une chose singulière (me gusta el tango) ou un verbe à l'infinitif (me gusta bailar, toujours « gusta ») → « gusta » ; plusieurs choses (me gustan los videojuegos, me gustan el fútbol y el tenis) → « gustan ». Le petit mot avant le verbe indique à qui ça plaît : me (à moi), te (à toi), le (à lui, à elle), nos (à nous), os (à vous, en Espagne), les (à eux). Ces mots se mettent AVANT le verbe, et « no » se met avant eux : « no me gusta ». Dans une réponse courte, on ne répète pas le mot « yo » : « —¿Te gusta el tango? —Sí, me gusta. » Piège classique : ne pas dire « yo gusto el fútbol ». Pas de « de » devant le nom : me gusta el fútbol (pas « me gusta de fútbol »). Les articles el / la / los / las sont obligatoires devant le nom.",
     { encabezado: ['A quién', '+ singular / infinitivo', '+ plural'], filas: [['(a mí)', 'me gusta el tango', 'me gustan los videojuegos'], ['(a ti)', 'te gusta el tango', 'te gustan los videojuegos'], ['(a él / ella)', 'le gusta el tango', 'le gustan los videojuegos'], ['(a nosotros)', 'nos gusta el tango', 'nos gustan los videojuegos'], ['(a vosotros)', 'os gusta el tango', 'os gustan los videojuegos'], ['(a ellos / ellas)', 'les gusta el tango', 'les gustan los videojuegos']] }),
     G('g_escala', 'Me encanta, me gusta mucho, no me gusta nada', 'Dire à quel point on aime ; « moi aussi » et « moi non plus »', [
       ['Me encanta el tango.', 'J’adore le tango.', 'sol', ['Me encanta']],
@@ -107,7 +107,7 @@ export default function build() {
       ['A nosotros nos encanta el mate.', 'Nous, nous adorons le maté.', 'facu', ['A nosotros nos']],
     ], 'Para hablar de otra persona, ponemos «a + nombre» y «le» o «les» delante del verbo: A Facu le gusta el fútbol. A mis amigos les gusta el tango. «A mí» y «a ti» sirven para insistir.',
     'Pour parler d’une autre personne, on met « a + nom » et « le » ou « les » devant le verbe : A Facu le gusta el fútbol. A mis amigos les gusta el tango. « A mí » et « a ti » servent à insister.',
-    "Pour dire ce que plaît à QUELQU'UN D'AUTRE, on met toujours « a + la personne » en début de phrase ET le petit mot (le / les) devant le verbe : « A Sol le gusta el tango » (jamais « A Sol gusta… »). Le = une seule personne (él, ella, usted, Sol, mi hermano), les = plusieurs personnes (mis amigos, ellos, Facu y Sol). « Le » ne change pas pour un garçon ou une fille. « A mí me », « a ti te », « a nosotros nos » servent à insister ou à comparer (« A mí me gusta el fútbol, pero a ti te gusta el tenis »), et sont facultatifs (« me gusta el fútbol » suffit). Le verbe s'accorde toujours avec ce qui plaît : « A Sol le gustan los pianos ». Piège : on ne répète pas : pas de « a Facu le gusta él » ni de « a mí me gusto ».",
+    "Pour dire ce qui plaît à QUELQU'UN D'AUTRE, quand on nomme la personne, on met « a + la personne » (souvent en début de phrase) ET le petit mot (le / les) devant le verbe : « A Sol le gusta el tango » (jamais « A Sol gusta… » ni « Sol le gusta… »). Le = une seule personne (él, ella, usted, Sol, mi hermano), les = plusieurs personnes (mis amigos, ellos, Facu y Sol). « Le » ne change pas pour un garçon ou une fille. « A mí me », « a ti te », « a nosotros nos » servent à insister ou à comparer (« A mí me gusta el fútbol, pero a ti te gusta el tenis »), et sont facultatifs (« me gusta el fútbol » suffit). Le verbe s'accorde toujours avec ce qui plaît : « A Sol le gustan las guitarras ». Piège : on ne répète pas : pas de « a Facu le gusta él » ni de « a mí me gusto ».",
     { encabezado: ['Persona', 'Se dice'], filas: [['a mí', 'me gusta'], ['a ti', 'te gusta'], ['a él / ella / Facu', 'le gusta'], ['a nosotros', 'nos gusta'], ['a vosotros', 'os gusta'], ['a ellos / mis amigos', 'les gusta']] }),
     G('g_preferir', 'Prefiero el tenis al fútbol', 'Préférer : preferir', [
       ['Prefiero el tenis al fútbol.', 'Je préfère le tennis au foot.', 'viajero', ['Prefiero', 'al']],
@@ -117,7 +117,7 @@ export default function build() {
       ['Mis padres prefieren el tango.', 'Mes parents préfèrent le tango.', 'sol', ['prefieren']],
     ], 'Preferir es como querer: la e cambia a ie (prefiero, prefieres, prefiere), pero no con nosotros y vosotros (preferimos, preferís). Decimos «prefiero X a Y» (con «a» + «el» = «al»).',
     'Preferir fonctionne comme querer : le e devient ie (prefiero, prefieres, prefiere), mais pas avec nosotros et vosotros (preferimos, preferís). On dit « prefiero X a Y » (avec « a » + « el » = « al »).',
-    "« Preferir » est un verbe à diphtongue (e → ie) comme « querer » : prefiero, prefieres, prefiere, preferimos, preferís, prefieren (nosotros et vosotros ne diphtonguent pas). Il se construit avec un nom ou un infinitif : « prefiero el tenis », « prefiero bailar ». Pour comparer, on met « a » devant la chose moins aimée : « prefiero el tenis AL fútbol » (a + el = al), « prefiero bailar A cantar » (jamais « que » ici). Ce n'est PAS comme « gustar » : ici le verbe s'accorde avec la personne qui préfère (yo prefiero, tú prefieres), pas avec la chose. Pour demander : « ¿Qué prefieres, X o Y? ». En Argentine, on entendra « ¿qué preferís? » (voseo : « vos preferís ») – pour toi, « ¿qué prefieres? » est toujours correct.",
+    "« Preferir » est un verbe à diphtongue (e → ie) comme « querer » : prefiero, prefieres, prefiere, preferimos, preferís, prefieren (nosotros et vosotros ne diphtonguent pas). Il se construit avec un nom ou un infinitif : « prefiero el tenis », « prefiero bailar ». Pour comparer, on met « a » devant la chose moins aimée : « prefiero el tenis AL fútbol » (a + el = al), « prefiero bailar A cantar » (à l'oral on entend aussi « que », mais apprends la forme avec « a »). Ce n'est PAS comme « gustar » : ici le verbe s'accorde avec la personne qui préfère (yo prefiero, tú prefieres), pas avec la chose. Pour demander : « ¿Qué prefieres, X o Y? ». En Argentine, on entendra « ¿qué preferís? » (voseo : « vos preferís ») – pour toi, « ¿qué prefieres? » est toujours correct.",
     { encabezado: ['Pronombre', 'preferir'], filas: [['yo', 'prefiero'], ['tú', 'prefieres'], ['él / ella', 'prefiere'], ['nosotros', 'preferimos'], ['vosotros', 'preferís'], ['ellos / ellas', 'prefieren']] }),
     G('g_porque', '¿Por qué…? Porque…', 'Pourquoi et parce que', [
       ['—¿Por qué te gusta el tango? —Porque es muy bonito.', '— Pourquoi aimes-tu le tango ? — Parce qu’il est très beau.', 'sol', ['¿Por qué', 'Porque']],
@@ -165,7 +165,7 @@ export default function build() {
   ]);
   const capsula = cine('u07-capsula-buenosaires', 'capsula', 'Fútbol, tango, mate… y vos', [
     P(4, "Style explainer, papier découpé : une carte de l’Argentine, Buenos Aires s’allume au bord de l’estuaire du Río de la Plata.", [L(N, 'Buenos Aires es la capital de Argentina. Está en la orilla del Río de la Plata.', 'Buenos Aires est la capitale de l’Argentine. Elle est au bord du Río de la Plata.')], { camara: 'plan fixe, animations de papier découpé' }),
-    P(5, "Deux maillots, bleu et jaune contre rouge et blanc, se font face ; le stade de la Bombonera ; une coupe dorée avec trois dates qui s’allument : 1978, 1986, 2022.", [L(N, 'Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina es campeona del mundo: ganó en 1978, 1986 y 2022.', 'Boca et River sont les deux grandes équipes. Leur match s’appelle le Superclásico. L’Argentine est championne du monde : elle a gagné en 1978, 1986 et 2022.')]),
+    P(5, "Deux maillots, bleu et jaune contre rouge et blanc, se font face ; le stade de la Bombonera ; une coupe dorée avec trois dates qui s’allument : 1978, 1986, 2022.", [L(N, 'Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina ganó el Mundial en 1978, 1986 y 2022.', 'Boca et River sont les deux grandes équipes. Leur match s’appelle le Superclásico. L’Argentine a gagné la Coupe du monde en 1978, 1986 et 2022.')]),
     P(6, "Un couple danse, un bandonéon joue ; un petit sceau « UNESCO 2009 » apparaît à côté d’une carte du Río de la Plata (Buenos Aires et Montevideo).", [L(N, 'El tango nace en Buenos Aires y Montevideo a finales del siglo diecinueve. Se baila en pareja. En 2009, la UNESCO lo declara Patrimonio Cultural Inmaterial de la Humanidad.', 'Le tango naît à Buenos Aires et à Montevideo à la fin du XIXe siècle. Il se danse à deux. En 2009, l’UNESCO le déclare Patrimoine culturel immatériel de l’humanité.')]),
     P(5, "Un maté en calebasse passe de main en main entre des amis assis sur un banc ; une bombilla en métal et un thermos d’eau chaude.", [L(N, 'El mate es una bebida caliente. Se toma con una bombilla y se comparte con los amigos: pasa de mano en mano.', 'Le maté est une boisson chaude. On le boit avec une paille en métal (bombilla) et on le partage avec les amis : il passe de main en main.')]),
     P(6, "Des bulles de dialogue : « vos sos », « vos querés », « che ». Un mot « me llamo » dont le « ll » se transforme en « sh ».", [L(N, 'En Argentina no dicen «tú», dicen «vos»: «vos sos», «vos querés». Para llamar a un amigo dicen «che». Y la «ll» suena casi «sh»: «me llamo» suena «me shamo».', 'En Argentine, on ne dit pas « tú », on dit « vos » : « vos sos », « vos querés ». Pour appeler un ami, on dit « che ». Et le « ll » sonne presque « ch » : « me llamo » sonne « me chamo ». (Tu n’as pas besoin de parler comme ça : tu dois seulement le comprendre.)')]),
@@ -193,7 +193,7 @@ export default function build() {
       lcT('Hoy no puedo tocar la guitarra. ¡No hay sonido en la feria!', 'sol', ['Sol tiene un problema con la música.', 'Sol no sabe dónde está su guitarra.', 'Hoy hay un concierto muy grande.'], 0),
       dlg('facu', '¡Che, viajeros! Soy Facu. ¿Vos jugás al fútbol?', 'Hé, voyageurs ! Moi, c’est Facu. Tu joues au foot ? (« vos jugás » = « tú juegas » : voseo argentin)', [
         ['Sí, juego al fútbol con mis amigos.', 1, '¡Bárbaro! Entonces somos del mismo equipo.', 'Génial ! (« bárbaro » = super, en Argentine). Alors on est dans la même équipe.', 'Oui, je joue au foot avec mes amis.'],
-        ['Sí, soy un balón.', 0, 'Ja, ja. ¡Pues yo te pateo!', 'Ha, ha. Alors je te tape dedans ! (« patear » = taper dans un ballon)', 'Oui, je suis un ballon.'],
+        ['Sí, soy un balón.', 0, 'Ja, ja. ¡Entonces yo te pateo!', 'Ha, ha. Alors je te tape dedans ! (« patear » = taper dans un ballon)', 'Oui, je suis un ballon.'],
         ['Juego la guitarra.', 0, 'La guitarra no se juega, se toca. Pero me gusta tu idea.', 'La guitare, on n’en « joue » pas avec « jugar » : on dit « tocar ». Mais j’aime ton idée.', 'Je joue la guitare.'],
       ]),
       dlg('sol', '¡Hola! Soy Sol. ¿Cómo te llamás?', 'Salut ! Je suis Sol. Comment tu t’appelles ? (« te llamás » = « te llamas » en voseo)', [
@@ -202,7 +202,7 @@ export default function build() {
         ['Son las doce en punto.', 0, 'Yo te pregunto cómo te llamás.', 'Moi, je te demande comment tu t’appelles.', 'Il est douze heures pile.'],
       ]),
       reord('Hola, Sol. Me llamo Álex y estoy en Buenos Aires.', 'viajero', { tr: 'Salut, Sol. Je m’appelle Álex et je suis à Buenos Aires.' }),
-      speak('Hola, me llamo Álex. ¡Mucho gusto en Buenos Aires!', 'viajero', { tr: 'Salut, je m’appelle Álex. Enchanté de découvrir Buenos Aires ! (dis ton prénom)', nombre: 'Álex', hechizo: ['Hechizo de la bienvenida', 'Un balón de colores gira sobre la plaza'] }),
+      speak('Hola, me llamo Álex y me gusta Buenos Aires.', 'viajero', { tr: 'Salut, je m’appelle Álex et j’aime Buenos Aires. (dis ton prénom)', nombre: 'Álex', hechizo: ['Hechizo de la bienvenida', 'Un balón de colores gira sobre la plaza'] }),
     ]));
 
   // 2 — Deportes
@@ -254,7 +254,7 @@ export default function build() {
       writeFree('Me gusta ___. Me encanta ___. No me gusta nada ___.', [
         { id: 'gusta', pista: 'Une chose que tu aimes (un verbe : leer, correr… ou un nom avec son article : la música…)', tipo: 'texto' },
         { id: 'encanta', pista: 'Une chose que tu adores (jugar al fútbol, el cine, el chocolate…)', tipo: 'texto' },
-        { id: 'nada', pista: 'Une chose que tu n’aimes pas du tout (la natación, el rugby, madrugar…)', tipo: 'texto' },
+        { id: 'nada', pista: 'Une chose que tu n’aimes pas du tout (la natación, el rugby, madrugar = se lever très tôt…)', tipo: 'texto' },
       ], 'Me gusta leer. Me encanta el fútbol. No me gusta nada la natación.', 'J’aime lire. J’adore le foot. Je n’aime pas du tout la natation.', 'viajero', C('Escribe lo que te gusta y lo que no te gusta.', 'Écris ce que tu aimes et ce que tu n’aimes pas.')),
       dict('Me encanta el tango.', 'sol', { acept: ['me encanta el tango'] }),
     ]));
@@ -277,15 +277,15 @@ export default function build() {
           ['¿Qué instrumento toca?', 'De quel instrument joue-t-il ?', ['La flauta.', 'El bandoneón.', 'La batería.'], 1],
           ['¿Qué le encanta a Sol?', 'Qu’est-ce que Sol adore ?', ['La música.', 'El rugby.', 'El asado.'], 0],
         ]),
-      lcT('Toco el bandoneón desde los diez años. Hoy tengo sesenta.', 'anibal', ['Don Aníbal es un músico muy mayor con mucha experiencia.', 'Don Aníbal es un niño de diez años.', 'Don Aníbal empieza hoy a tocar.'], 0),
+      lcT('Toco el bandoneón desde los diez años. Hoy tengo setenta.', 'anibal', ['Don Aníbal es un músico con mucha experiencia.', 'Don Aníbal es un niño de diez años.', 'Don Aníbal empieza hoy a tocar.'], 0),
       dlg('sol', '¿Tocás algún instrumento?', 'Tu joues d’un instrument ? (« tocás » = « tocas » en voseo)', [
         ['Sí, toco el piano.', 1, '¡Qué lindo! Un día tocamos juntos.', 'Que c’est chouette ! Un jour, on jouera ensemble.', 'Oui, je joue du piano.'],
         ['Sí, juego el piano.', 0, 'Con los instrumentos decimos «tocar», no «jugar».', 'Avec les instruments, on dit « tocar », pas « jugar ».', 'Oui, je joue (au sens de « jugar ») le piano.'],
         ['Sí, soy piano.', 0, '¿Vos sos un piano? ¡Qué grande!', 'Toi, tu es un piano ? Quelle taille !', 'Oui, je suis piano.'],
       ]),
-      dlg('anibal', '¿Quieres escuchar el bandoneón, muchacho?', 'Tu veux écouter le bandonéon, mon garçon ?', [
-        ['Sí, toca algo, por favor.', 1, 'Claro que sí. Escucha bien.', 'Bien sûr. Écoute bien.', 'Oui, joue quelque chose, s’il te plaît.'],
-        ['Sí, soy un bandoneón.', 0, '¿Un bandoneón? ¡Entonces toca tú!', 'Un bandonéon ? Alors joue, toi !', 'Oui, je suis un bandonéon.'],
+      dlg('anibal', '¿Querés escuchar el bandoneón, muchacho?', 'Tu veux écouter le bandonéon, mon garçon ? (« querés » = « quieres » en voseo)', [
+        ['Sí, toca algo, por favor.', 1, 'Claro que sí. Escuchá bien.', 'Bien sûr. Écoute bien. (« escuchá » = « escucha » en voseo)', 'Oui, joue quelque chose, s’il te plaît.'],
+        ['Sí, soy un bandoneón.', 0, '¿Un bandoneón? ¡Entonces tocá vos!', 'Un bandonéon ? Alors joue, toi ! (« tocá vos » = « toca tú » en voseo)', 'Oui, je suis un bandonéon.'],
         ['No, gracias. Prefiero el silencio.', 0, '¿El silencio? ¡Eso es lo que quiere la Sombra!', 'Le silence ? C’est justement ce que veut la Sombra !', 'Non, merci. Je préfère le silence.'],
       ]),
       speak('Toco la guitarra.', 'viajero', { libre: 'la guitarra', es: 'Escucha y di qué instrumento tocas tú.', fr: 'Écoute et dis de quel instrument TU joues (el piano, el violín, la flauta…). Si tu n’en joues pas, choisis-en un quand même. Change « la guitarra » (avec son article).', tr: 'Je joue de la guitare. (dis ton instrument)', hechizo: ['Hechizo de la música', 'Las cuerdas de tu guitarra brillan'] }),
@@ -318,12 +318,12 @@ export default function build() {
       writeFree('Prefiero ___ a ___.', [
         { id: 'prefiero', pista: 'Ce que tu préfères, à l’infinitif (bailar, leer, jugar al fútbol…)', tipo: 'texto' },
         { id: 'antes', pista: 'Ce que tu aimes moins, à l’infinitif (cantar, dibujar, nadar…)', tipo: 'texto' },
-      ], 'Prefiero bailar a cantar.', 'Je préfère danser à chanter.', 'viajero', C('Escribe lo que prefieres.', 'Écris ce que tu préfères.')),
+      ], 'Prefiero bailar a cantar.', 'Je préfère danser plutôt que chanter.', 'viajero', C('Escribe lo que prefieres.', 'Écris ce que tu préfères.')),
     ]));
 
   // 6 — Diálogo : ¿por qué?
   quests.push(quest('u07', 6, 'dialogo', '¿Por qué te gusta?', '💬',
-    ['sol', 'Dime una cosa que te gusta… ¡y explícame por qué!', 'Dis-moi une chose que tu aimes… et explique-moi pourquoi !'],
+    ['sol', 'Decime una cosa que te gusta… ¡y explicame por qué!', 'Dis-moi une chose que tu aimes… et explique-moi pourquoi ! (« decime », « explicame » = « dime », « explícame » en voseo)'],
     'Donner son avis et le justifier : ¿por qué ? / porque ; parler des goûts des autres (a Facu le gusta…) ; tu écris et tu dis TES goûts avec une raison.', ['hablar', 'escribir', 'escuchar', 'leer'], 15, [
       flash('favorito', 'aburrido', 'genial', 'nada', 'tampoco', 'porque', 'por_que'),
       gram('g_porque'),
@@ -349,7 +349,7 @@ export default function build() {
       writeFree('Me gusta ___ porque ___. No me gusta ___ porque ___.', [
         { id: 'gusta', pista: 'Une chose que tu aimes (el fútbol, bailar, la música…)', tipo: 'texto' },
         { id: 'razon1', pista: 'Pourquoi ? (es divertido, es genial, es rápido…)', tipo: 'texto' },
-        { id: 'nogusta', pista: 'Une chose que tu n’aimes pas (el rugby, madrugar, la natación…)', tipo: 'texto' },
+        { id: 'nogusta', pista: 'Une chose que tu n’aimes pas (el rugby, madrugar = se lever très tôt, la natación…)', tipo: 'texto' },
         { id: 'razon2', pista: 'Pourquoi ? (es aburrido, es difícil, es muy largo…)', tipo: 'texto' },
       ], 'Me gusta el fútbol porque es divertido. No me gusta el rugby porque es difícil.', 'J’aime le foot parce que c’est amusant. Je n’aime pas le rugby parce que c’est difficile.', 'viajero', C('Escribe lo que te gusta y por qué.', 'Écris ce que tu aimes et pourquoi.')),
     ]));
@@ -357,14 +357,14 @@ export default function build() {
   // 7 — Cultura
   quests.push(quest('u07', 7, 'cultura', 'Fútbol, tango y mate', '🧉',
     ['sol', 'Buenos Aires tiene mucha cultura: fútbol, tango, asado, mate… ¡y una manera de hablar muy suya!', 'Buenos Aires a beaucoup de culture : foot, tango, asado, maté… et une façon de parler bien à elle !'],
-    'Le foot (Boca, River, la Bombonera, champions du monde), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).', ['cultura', 'leer', 'escribir', 'hablar'], 15, [
+    'Le foot (Boca, River, la Bombonera, les Coupes du monde 1978, 1986, 2022), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).', ['cultura', 'leer', 'escribir', 'hablar'], 15, [
       flash('tango', 'mate', 'asado', 'dulce_de_leche'),
       capsula,
-      tf('Argentina es campeona del mundo de fútbol.', true, N, { tr: 'L’Argentine est championne du monde de football.' }),
+      tf('Argentina ganó el Mundial de fútbol en 2022.', true, N, { tr: 'L’Argentine a gagné la Coupe du monde de football en 2022.' }),
       tf('El mate es una bebida fría que se bebe sola.', false, N, { tr: 'Le maté est une boisson froide qu’on boit seul.', expl: ['El mate es caliente y se comparte con amigos.', 'Le maté est chaud et se partage entre amis.'] }),
       tf('En Argentina muchas personas dicen «vos» en vez de «tú».', true, N, { tr: 'En Argentine, beaucoup de gens disent « vos » à la place de « tú ».' }),
-      read('Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina es campeona del mundo: ganó la Copa del Mundo en 1978, en 1986 y en 2022.', 'facu',
-        'Boca Juniors et River Plate sont les deux équipes les plus célèbres de Buenos Aires. Quand elles jouent l’une contre l’autre, le match s’appelle le Superclásico. Le stade de Boca s’appelle la Bombonera, dans le quartier de La Boca. Les couleurs de Boca sont le bleu et le jaune. L’Argentine est championne du monde : elle a gagné la Coupe du monde en 1978, en 1986 et en 2022.', [
+      read('Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina ganó la Copa del Mundo en 1978, en 1986 y en 2022.', 'facu',
+        'Boca Juniors et River Plate sont les deux équipes les plus célèbres de Buenos Aires. Quand elles jouent l’une contre l’autre, le match s’appelle le Superclásico. Le stade de Boca s’appelle la Bombonera, dans le quartier de La Boca. Les couleurs de Boca sont le bleu et le jaune. L’Argentine a gagné la Coupe du monde en 1978, en 1986 et en 2022.', [
           ['¿Cómo se llama el partido entre Boca y River?', 'Comment s’appelle le match entre Boca et River ?', ['El Superclásico.', 'El Gordo.', 'La Bombonera.'], 0],
           ['¿Qué colores tiene Boca?', 'Quelles couleurs a Boca ?', ['Azul y amarillo.', 'Rojo y blanco.', 'Verde y negro.'], 0],
           ['¿Cuántas veces ganó Argentina la Copa del Mundo, según el texto?', 'Combien de fois l’Argentine a-t-elle gagné la Coupe du monde, d’après le texte ?', ['Tres veces.', 'Una vez.', 'Diez veces.'], 0],
@@ -382,7 +382,7 @@ export default function build() {
         ['Soy un mate caliente.', 0, 'Ja, ja. ¡Y yo soy una bombilla!', 'Ha, ha. Et moi, je suis une bombilla (la paille du maté) !', 'Je suis un maté chaud.'],
       ]),
       dlg('anibal', '¿Te gusta el tango, muchacho?', 'Tu aimes le tango, mon garçon ?', [
-        ['Sí, me encanta el tango.', 1, 'Entonces tienes buen oído.', 'Alors tu as bonne oreille.', 'Oui, j’adore le tango.'],
+        ['Sí, me encanta el tango.', 1, 'Entonces tenés buen oído.', 'Alors tu as bonne oreille. (« tenés » = « tienes » en voseo)', 'Oui, j’adore le tango.'],
         ['Sí, me encantan tango.', 0, 'Con «tango» decimos «me encanta», singular.', 'Avec « tango », on dit « me encanta », au singulier.', 'Oui, j’adore (pluriel) tango.'],
         ['No, mi tango es un sombrero.', 0, '¡Mi sombrero no baila!', 'Mon chapeau ne danse pas !', 'Non, mon tango est un chapeau.'],
       ]),
@@ -402,7 +402,7 @@ export default function build() {
     'Boss de Buenos Aires : révision mixte des unités 1 à 7 (présentation, description, heure, fêtes, ir a, gustar, preferir, porque) pour rendre sa voix à la musique.', ['escuchar', 'hablar', 'leer', 'escribir'], 15, [
       dlg('sombra', 'Todo me da igual. ¿Qué te gusta a ti?', 'Tout m’est égal. Qu’est-ce qui te plaît, à toi ?', [
         ['Me gusta el fútbol y me encanta la música.', 1, '¡Grr! Dos gustos que vuelven…', 'Grr ! Deux goûts qui reviennent…', 'J’aime le foot et j’adore la musique.'],
-        ['Me gustan fútbol y música.', 0, 'Eso no suena bien. ¡Otra vez!', 'Ça ne sonne pas bien. Encore une fois !', 'J’aime foot et musique.'],
+        ['Me gustan fútbol y música.', 0, 'Faltan los artículos: «el fútbol», «la música». ¡Otra vez!', 'Il manque les articles : « el fútbol », « la música ». Encore une fois !', 'J’aime foot et musique.'],
         ['Me gusta soy Álex.', 0, 'Eso no tiene sentido.', 'Ça n’a aucun sens.', 'J’aime je suis Álex.'],
       ]),
       dlg('sombra', '¿Por qué te gusta?', 'Pourquoi tu aimes ça ?', [

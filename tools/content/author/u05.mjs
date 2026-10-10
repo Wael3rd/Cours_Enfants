@@ -29,7 +29,7 @@ export default function build() {
     W('cuarto', 'cuarto', 'quart (y cuarto = et quart ; menos cuarto = moins le quart)', '🍰', 'hora', 'Es la una y cuarto.', 'Il est une heure et quart.', { genero: 'm', plural: 'cuartos' }),
     W('menos_h', 'menos', 'moins (son las dos menos diez = 1 h 50)', '➖', 'hora', 'Son las dos menos diez.', 'Il est deux heures moins dix.'),
     W('veinticinco', 'veinticinco', 'vingt-cinq (de 21 à 29, un seul mot : veintiuno, veintidós… veinticinco)', '🔢', 'hora', 'Son las cinco y veinticinco.', 'Il est cinq heures vingt-cinq.'),
-    W('mediodia', 'mediodía', 'midi (12 h) ; « al mediodía » = vers midi', '☀️', 'hora', 'Al mediodía comemos paella.', 'À midi, nous mangeons de la paella.', { genero: 'm' }),
+    W('mediodia', 'mediodía', 'midi ; attention : en Espagne, « a mediodía » désigne souvent l’heure du déjeuner, vers 14 h', '☀️', 'hora', 'A mediodía comemos paella.', 'Au déjeuner (vers 14 h), nous mangeons de la paella.', { genero: 'm' }),
     W('medianoche', 'medianoche', 'minuit (24 h)', '🌑', 'hora', 'A medianoche todos duermen.', 'À minuit, tout le monde dort.', { genero: 'f' }),
     W('manana', 'mañana', 'matin (la mañana) ; aussi : demain (adverbe)', '🌅', 'hora', 'Por la mañana desayuno leche.', 'Le matin, je prends du lait au petit-déjeuner.', { genero: 'f' }),
     W('tarde', 'tarde', 'après-midi (la tarde) ; aussi : tard. En Espagne, la tarde dure jusqu’à environ 20 h-21 h', '🌇', 'hora', 'Por la tarde estudio con Marina.', 'L’après-midi, j’étudie avec Marina.', { genero: 'f' }),
@@ -48,7 +48,7 @@ export default function build() {
     W('dormir', 'dormir', 'dormir (duermo = je dors)', '😴', 'rutina', 'Duermo nueve horas.', 'Je dors neuf heures.'),
     W('empezar', 'empezar', 'commencer (empieza = il commence)', '▶️', 'rutina', 'La clase empieza a las nueve.', 'Le cours commence à neuf heures.'),
     W('terminar', 'terminar', 'finir, terminer', '🏁', 'rutina', 'El cole termina a las dos.', 'L’école finit à deux heures.'),
-    W('llegar', 'llegar', 'arriver', '🏃', 'rutina', 'Llego al cole a las nueve menos diez.', 'J’arrive à l’école à moins dix.'),
+    W('llegar', 'llegar', 'arriver', '🏃', 'rutina', 'Llego al cole a las nueve menos diez.', 'J’arrive à l’école à neuf heures moins dix.'),
     W('ir', 'ir', 'aller (voy, vas, va, vamos, vais, van)', '🚶', 'verbos', 'Voy al cole a las ocho y media.', 'Je vais à l’école à huit heures et demie.'),
     W('querer', 'querer', 'vouloir ; aimer bien (quiero = je veux)', '💛', 'verbos', 'Quiero una horchata, por favor.', 'Je veux une horchata, s’il vous plaît.'),
     W('poder', 'poder', 'pouvoir (puedo = je peux)', '💪', 'verbos', '¿Puedo comer ahora?', 'Je peux manger maintenant ?'),
@@ -62,11 +62,11 @@ export default function build() {
     W('cena', 'cena', 'dîner (repas du soir)', '🌃', 'comidas', 'La cena es a las nueve.', 'Le dîner est à neuf heures.', { genero: 'f', plural: 'cenas' }),
     W('leche', 'leche', 'lait', '🥛', 'comidas', 'Bebo leche por la mañana.', 'Je bois du lait le matin.', { genero: 'f' }),
     W('tostada', 'tostada', 'tartine grillée (en Espagne, souvent avec huile d’olive et tomate)', '🍞', 'comidas', 'Desayuno una tostada con tomate.', 'Au petit-déjeuner, je mange une tartine à la tomate.', { genero: 'f', plural: 'tostadas' }),
-    W('zumo', 'zumo', 'jus de fruit (au Mexique : « jugo »)', '🧃', 'comidas', 'Un zumo de naranja, por favor.', 'Un jus d’orange, s’il vous plaît.', { genero: 'm', plural: 'zumos' }),
+    W('zumo', 'zumo', 'jus de fruit (en Amérique latine : « jugo »)', '🧃', 'comidas', 'Un zumo de naranja, por favor.', 'Un jus d’orange, s’il vous plaît.', { genero: 'm', plural: 'zumos' }),
     W('fruta', 'fruta', 'fruit(s)', '🍎', 'comidas', 'De postre, fruta.', 'En dessert, des fruits.', { genero: 'f', plural: 'frutas' }),
     W('bocadillo', 'bocadillo', 'sandwich (dans une demi-baguette), souvent à la récré', '🥖', 'comidas', 'A las once, como un bocadillo.', 'À onze heures, je mange un sandwich.', { genero: 'm', plural: 'bocadillos' }),
     W('ensalada', 'ensalada', 'salade', '🥗', 'comidas', 'Una ensalada para empezar.', 'Une salade pour commencer.', { genero: 'f', plural: 'ensaladas' }),
-    W('arroz', 'arroz', 'riz', '🍚', 'comidas', 'El arroz es de Valencia.', 'Le riz vient de Valence (région).', { genero: 'm' }),
+    W('arroz', 'arroz', 'riz', '🍚', 'comidas', 'En Valencia hay mucho arroz.', 'À Valence (la région), il y a beaucoup de riz.', { genero: 'm' }),
     W('pollo', 'pollo', 'poulet', '🍗', 'comidas', 'La paella lleva pollo.', 'La paella contient du poulet.', { genero: 'm' }),
     W('paella', 'paella', 'paella : plat de riz de Valence, cuit dans une grande poêle', '🥘', 'comidas', 'La paella es de Valencia.', 'La paella vient de Valence.', { genero: 'f', plural: 'paellas', exVoz: 'vicent' }),
     W('horchata', 'horchata', 'horchata : boisson fraîche et sucrée, à base de chufas (souchet), spécialité de Valence', null, 'comidas', 'La horchata está muy fría.', 'L’horchata est très fraîche.', { genero: 'f', ilustracion: 'Un grand verre d’horchata blanche et glacée, avec des fartons (petits gâteaux allongés) à côté', exVoz: 'amparo', voz: 'amparo' }),
@@ -90,7 +90,7 @@ export default function build() {
       ['—¿A qué hora es la comida? —A las dos.', '— À quelle heure est le déjeuner ? — À deux heures.', 'amparo', ['¿A qué hora', 'A las dos']],
     ], 'Para decir la hora usamos «ser»: Es la una. Son las dos, las tres… Después añadimos y cuarto, y media, menos cuarto, menos diez. Para preguntar a qué hora pasa algo: ¿a qué hora? — A las dos.',
     'Pour dire l’heure, on utilise « ser » : Es la una. Son las dos, las tres… Puis on ajoute y cuarto, y media, menos cuarto, menos diez. Pour demander à quelle heure quelque chose a lieu : ¿a qué hora ? — A las dos.',
-    "On dit l'heure avec SER (jamais « tener » ni « estar »). Une seule heure : « Es la una » (singulier, féminin). À partir de deux : « Son las dos, las tres… » (pluriel). Les minutes se disent avec « y » après l'heure jusqu'à la demie (y cinco, y diez, y cuarto, y veinte, y veinticinco, y media) et avec « menos » ensuite, en comptant ce qu'il reste avant l'heure suivante (las tres menos veinte = 2 h 40 ; las seis menos cuarto = 5 h 45). « En punto » = pile. Pour préciser le moment de la journée, on ajoute « de la mañana / de la tarde / de la noche » (on n'utilise presque jamais les heures de 13 à 24 à l'oral : 15 h = las tres de la tarde). Midi et minuit ont leur nom : mediodía, medianoche. Pour demander l'heure : « ¿Qué hora es? ». Pour demander quand a lieu un événement : « ¿A qué hora…? » et on répond « a la una / a las dos… » (avec « a » devant l'heure).",
+    "On dit l'heure avec SER (jamais « tener » ni « estar »). Une seule heure : « Es la una » (singulier, féminin). À partir de deux : « Son las dos, las tres… » (pluriel). Les minutes se disent avec « y » après l'heure jusqu'à la demie (y cinco, y diez, y cuarto, y veinte, y veinticinco, y media) et avec « menos » ensuite, en comptant ce qu'il reste avant l'heure suivante (las tres menos veinte = 2 h 40 ; las seis menos cuarto = 5 h 45). « En punto » = pile. Pour préciser le moment de la journée, on ajoute « de la mañana / de la tarde / de la noche » (dans la conversation, on utilise surtout les heures de 1 à 12 : 15 h = las tres de la tarde ; les heures de 13 à 24 servent pour les horaires écrits, les trains, la radio). Midi et minuit ont leur nom : mediodía, medianoche. Pour demander l'heure : « ¿Qué hora es? ». Pour demander quand a lieu un événement : « ¿A qué hora…? » et on répond « a la una / a las dos… » (avec « a » devant l'heure).",
     { encabezado: ['Hora', 'Se dice'], filas: [['1:00', 'Es la una'], ['2:00', 'Son las dos'], ['3:15', 'Son las tres y cuarto'], ['4:30', 'Son las cuatro y media'], ['5:45', 'Son las seis menos cuarto'], ['7:10', 'Son las siete y diez'], ['8:50', 'Son las nueve menos diez']] }),
     G('g_rutina', 'Me levanto a las siete', 'Ma routine : me levanto, me acuesto…', [
       ['Me levanto a las siete y media.', 'Je me lève à sept heures et demie.', 'viajero', ['Me levanto']],
@@ -113,7 +113,7 @@ export default function build() {
     { encabezado: ['Pronombre', 'ir'], filas: [['yo', 'voy'], ['tú', 'vas'], ['él / ella', 'va'], ['nosotros', 'vamos'], ['vosotros', 'vais'], ['ellos / ellas', 'van']] }),
     G('g_ir_a', 'Voy a comer paella', 'Le futur proche : ir a + infinitif', [
       ['Voy a comer paella.', 'Je vais manger de la paella.', 'viajero', ['Voy a comer']],
-      ['Esta tarde vamos a cenar con Vicent.', 'Cet après-midi, nous allons dîner avec Vicent.', 'neus', ['vamos a cenar']],
+      ['Esta noche vamos a cenar con Vicent.', 'Ce soir, nous allons dîner avec Vicent.', 'neus', ['vamos a cenar']],
       ['¿Qué vas a beber?', 'Qu’est-ce que tu vas boire ?', 'amparo', ['vas a beber']],
       ['Neus va a estudiar después de la comida.', 'Neus va étudier après le déjeuner.', 'marina', ['va a estudiar']],
     ], 'Para hablar del futuro cercano usamos ir + a + infinitivo: voy a comer, vas a beber, va a estudiar. Es como «aller + infinitif» en francés.',
@@ -128,7 +128,7 @@ export default function build() {
       ['Mi abuelo duerme la siesta.', 'Mon grand-père fait la sieste.', 'neus', ['duerme']],
     ], 'En algunos verbos, la vocal de la raíz cambia: querer → quiero, poder → puedo, empezar → empiezo, dormir → duermo. Cambia con yo, tú, él y ellos. Con nosotros y vosotros, no cambia: queremos, podemos.',
     'Dans certains verbes, la voyelle du radical change : querer → quiero, poder → puedo, empezar → empiezo, dormir → duermo. Elle change avec yo, tú, él et ellos. Avec nosotros et vosotros, elle ne change pas : queremos, podemos.',
-    "Certains verbes diphtonguent : la voyelle accentuée du radical devient ie (e → ie : querer → quiero, empezar → empiezo, preferir, tener → tengo/tienes…) ou ue (o → ue : poder → puedo, dormir → duermo, acostarse → me acuesto). On parle de « verbes à botte » : si on entoure sur un tableau les formes qui changent (yo, tú, él, ellos), on dessine une botte. Nosotros et vosotros gardent le radical car l'accent tombe sur la terminaison (que-RE-mos, po-DÉ-is) : pas de diphtongue. Les terminaisons restent régulières. Querer + infinitif = vouloir faire (quiero comer) ; poder + infinitif = pouvoir (¿puedo comer?) ; « ¿puedo…? » sert aussi à demander la permission, en français « je peux… ? ». Attention : « querer » à lui seul peut aussi vouloir dire « aimer » (quiero a mi abuela = j'aime ma grand-mère).",
+    "Certains verbes diphtonguent : la voyelle accentuée du radical devient ie (e → ie : querer → quiero, empezar → empiezo, preferir → prefiero ; tener → tienes, tiene, mais « yo tengo » est irrégulier) ou ue (o → ue : poder → puedo, dormir → duermo, acostarse → me acuesto). On parle de « verbes à botte » : si on entoure sur un tableau les formes qui changent (yo, tú, él, ellos), on dessine une botte. Nosotros et vosotros gardent le radical car l'accent tombe sur la terminaison (que-RE-mos, po-DÉIS) : pas de diphtongue. Les terminaisons restent régulières. Querer + infinitif = vouloir faire (quiero comer) ; poder + infinitif = pouvoir (¿puedo comer?) ; « ¿puedo…? » sert aussi à demander la permission, en français « je peux… ? ». Attention : « querer » à lui seul peut aussi vouloir dire « aimer » (quiero a mi abuela = j'aime ma grand-mère).",
     { encabezado: ['Pronombre', 'querer (e→ie)', 'poder (o→ue)'], filas: [['yo', 'quiero', 'puedo'], ['tú', 'quieres', 'puedes'], ['él / ella', 'quiere', 'puede'], ['nosotros', 'queremos', 'podemos'], ['vosotros', 'queréis', 'podéis'], ['ellos / ellas', 'quieren', 'pueden']] }),
     G('g_gerundio', 'Estoy comiendo', 'Ce que je fais en ce moment : estar + gérondif', [
       ['Vicent está preparando la paella.', 'Vicent est en train de préparer la paella.', 'neus', ['está preparando']],
@@ -165,7 +165,7 @@ export default function build() {
     ], { personajes: ['neus', 'viajero'], musica: 'thème d’aventure, guitare et castagnettes' }),
   ]);
   const capsula = cine('u05-capsula-horarios', 'capsula', 'Los horarios españoles y Valencia', [
-    P(4, "Style explainer, papier découpé : une carte de l’Europe avec l’Espagne et la France ; deux horloges affichent la même heure, une flèche rappelle que l’Espagne est plus à l’ouest.", [L(N, 'España está más al oeste que Francia, pero tiene la misma hora.', 'L’Espagne est plus à l’ouest que la France, mais elle a la même heure. (Le soleil se couche donc plus tard en Espagne : c’est une des raisons des horaires tardifs.)')], { camara: 'plan fixe, animations de papier découpé' }),
+    P(4, "Style explainer, papier découpé : une carte de l’Europe avec l’Espagne et la France ; deux horloges affichent la même heure, une flèche rappelle que l’Espagne est plus à l’ouest.", [L(N, 'España está más al oeste que Francia, pero tiene la misma hora.', 'L’Espagne est plus à l’ouest que la France, mais elle a la même heure (sauf les îles Canaries : une heure de moins). (Le soleil se couche donc plus tard en Espagne : c’est une des raisons des horaires tardifs.)')], { camara: 'plan fixe, animations de papier découpé' }),
     P(5, "Une frise d’une journée avec quatre assiettes qui s’allument : 8 h, 14 h, 17 h, 21 h.", [L(N, 'El desayuno es a las ocho, la comida a las dos o las tres, la merienda a las cinco y la cena a las nueve o más tarde.', 'Le petit-déjeuner est à huit heures, le déjeuner à deux ou trois heures, le goûter à cinq heures et le dîner à neuf heures ou plus tard.')]),
     P(5, "Un cartable et une horloge : une petite scène d’école, des élèves qui sortent à 14 h ; plus loin, un grand-père qui s’endort dans un fauteuil.", [L(N, 'Muchos alumnos terminan las clases a las dos. La siesta existe, pero hoy muchos españoles no duermen la siesta todos los días.', 'Beaucoup d’élèves finissent les cours à deux heures. La sieste existe, mais aujourd’hui beaucoup d’Espagnols ne font pas la sieste tous les jours.')]),
     P(5, "La paella dorée dans sa grande poêle sur un feu de bois : riz, poulet, haricots verts, tomate. Un cadran indique 14:00.", [L(N, 'En Valencia, la paella es un plato de mediodía. Lleva arroz, pollo, judías verdes y tomate.', 'À Valence, la paella est un plat du midi. Elle contient du riz, du poulet, des haricots verts et de la tomate.')]),
@@ -190,7 +190,7 @@ export default function build() {
       tf('Valencia está en México.', false, N, { tr: 'Valence est au Mexique.' }),
       historia,
       flash('que_hora_es', 'veinticinco'),
-      lcT('Todos los relojes de Valencia están parados desde esta mañana.', 'neus', ['Hay un problema con la hora en la ciudad.', 'Neus tiene un reloj nuevo y muy bonito.', 'Los relojes funcionan muy bien hoy.'], 0),
+      lcT('Todos los relojes de Valencia están parados.', 'neus', ['Hay un problema con la hora en la ciudad.', 'Neus tiene un reloj nuevo y muy bonito.', 'Los relojes funcionan muy bien hoy.'], 0),
       lcT('Mi paella no está lista. Siempre son las doce y cinco.', 'vicent', ['El paellero no puede terminar su plato.', 'El paellero cena a las doce y cinco.', 'La comida de Vicent ya está en la mesa.'], 0),
       tf('Neus dice: «Todos los relojes están parados».', true, N, { tr: 'Neus dit : « Toutes les horloges sont arrêtées ».' }),
       dlg('neus', '¡Hola! Soy Neus. ¿Vosotros sois los viajeros?', 'Salut ! Je suis Neus. Vous êtes les voyageurs ? (« vosotros » = vous, en Espagne)', [
@@ -198,7 +198,7 @@ export default function build() {
         ['Son las doce y cinco.', 0, 'Sí, siempre las doce y cinco… pero yo pregunto quiénes sois.', 'Oui, toujours midi cinq… mais je demande qui vous êtes.', 'Il est midi cinq.'],
         ['Me llamo Valencia.', 0, '¿Te llamas Valencia? ¡Como mi ciudad!', 'Tu t’appelles Valence ? Comme ma ville !', 'Je m’appelle Valence.'],
       ]),
-      dlg('vicent', 'Buenas tardes, chicos. ¿De dónde sois?', 'Bonjour (l’après-midi), les jeunes. D’où êtes-vous ?', [
+      dlg('vicent', 'Buenos días, chicos. ¿De dónde sois?', 'Bonjour, les jeunes. D’où êtes-vous ?', [
         ['Yo soy de París y Marina es de Sevilla.', 1, '¡Caramba! Venís de lejos. Aquí en Valencia hay buena paella.', 'Mince alors ! Vous venez de loin. Ici à Valence, il y a de la bonne paella.', 'Moi, je suis de Paris et Marina est de Séville.'],
         ['Tengo doce años y un reloj.', 0, 'Muy bien, pero ¿de dónde sois?', 'Très bien, mais d’où êtes-vous ?', 'J’ai douze ans et une montre.'],
         ['Soy una paella.', 0, 'Ja, ja. ¡Y yo soy un arroz!', 'Ha, ha. Et moi, je suis un riz !', 'Je suis une paella.'],
@@ -221,7 +221,7 @@ export default function build() {
       lcT('Son las ocho y diez de la tarde.', 'neus', ['8:10 por la mañana', '8:50 por la tarde', '8:10 por la tarde'], 2),
       fill('Son las tres ___.', 'y media', 'neus', { opts: ['y media', 'y medio', 'menos media'], tr: 'Il est trois heures et demie.' }),
       fill('___ la una y cuarto.', 'Es', 'amparo', { opts: ['Es', 'Son', 'Está'], tr: 'Il est une heure et quart. (une seule heure → singulier)' }),
-      fill('Son las cinco ___ diez.', 'menos', 'neus', { opts: ['y', 'menos', 'en'], tr: 'Il est cinq heures moins dix.' }),
+      fill('Son las nueve menos ___.', 'cuarto', 'neus', { opts: ['cuarto', 'media', 'medio'], tr: 'Il est neuf heures moins le quart. (on ne dit jamais « menos media »)' }),
       reord('Son las dos y cuarto de la tarde.', 'neus', { tr: 'Il est deux heures et quart de l’après-midi.' }),
       dlg('neus', 'Mi reloj digital dice 4:45. ¿Qué hora es?', 'Ma montre digitale indique 4:45. Quelle heure est-il ?', [
         ['Son las cinco menos cuarto.', 1, '¡Perfecto! ¡Las agujas se mueven un poco!', 'Parfait ! Les aiguilles… bougent un peu !', 'Il est cinq heures moins le quart.'],
@@ -282,7 +282,7 @@ export default function build() {
       conj('ir', 'nosotros', 'v', 'amos', ['amos', 'ais', 'an'], 'vicent', { tr: 'Nous, nous allons…' }),
       conj('ir', 'ellos', 'v', 'an', ['amos', 'ais', 'an'], 'neus', { tr: 'Eux, ils vont…' }),
       gram('g_ir_a'),
-      fill('Esta tarde ___ a comer paella.', 'voy', 'viajero', { opts: ['voy', 'va', 'vas'], tr: 'Cet après-midi, je vais manger de la paella.' }),
+      fill('Hoy yo ___ a comer paella.', 'voy', 'viajero', { opts: ['voy', 'va', 'vas'], tr: 'Aujourd’hui, je vais manger de la paella.' }),
       fill('Marina y Álex ___ al museo.', 'van', 'neus', { opts: ['va', 'van', 'vamos'], tr: 'Marina et Álex vont au musée.' }),
       fill('Vamos ___ cenar a las nueve.', 'a', 'vicent', { opts: ['a', 'al', 'en'], tr: 'Nous allons dîner à neuf heures. (ir + a + infinitif)' }),
       lcT('Esta noche vamos a cenar paella en casa de Vicent.', 'marina', ['Van a comer en casa de Vicent por la noche.', 'Vicent va a su casa muy tarde.', 'Vicent prepara una cena para sus amigos de París.'], 0),
@@ -333,8 +333,8 @@ export default function build() {
         ['Sí, puedo una horchata.', 0, 'Con «puedo» necesitamos otro verbo: «puedo beber»… Mejor: «quiero una horchata».', 'Avec « puedo », il faut un autre verbe : « puedo beber »… Mieux : « quiero una horchata ».', 'Oui, je peux une horchata.'],
         ['No, gracias. Soy una horchata.', 0, 'Ja, ja. ¡Qué gracioso! Toma una horchata de verdad.', 'Ha, ha. Que tu es drôle ! Tiens, une vraie horchata.', 'Non, merci. Je suis une horchata.'],
       ]),
-      read('La paella valenciana lleva arroz, pollo, judías verdes y tomate. Se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.', 'vicent',
-        'La paella valencienne contient du riz, du poulet, des haricots verts et de la tomate. On la cuit sur un feu de bois, lentement. À Valence, on la mange à midi, à deux ou trois heures, souvent en famille, le dimanche. La paella est un plat pour le déjeuner, pas pour le dîner. (« lleva » = contient ; « llevar » veut aussi dire porter)', [
+      read('La paella valenciana lleva arroz, pollo, judías verdes y tomate. Tradicionalmente, se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.', 'vicent',
+        'La paella valencienne contient du riz, du poulet, des haricots verts et de la tomate. Traditionnellement, on la cuit sur un feu de bois, lentement. À Valence, on la mange à midi, à deux ou trois heures, souvent en famille, le dimanche. La paella est un plat pour le déjeuner, pas pour le dîner. (« lleva » = contient ; « llevar » veut aussi dire porter)', [
           ['¿Qué lleva la paella valenciana?', 'Que contient la paella valencienne ?', ['Arroz, pollo, judías verdes y tomate.', 'Solo pan y leche.', 'Pescado y chocolate.'], 0],
           ['¿Cuándo comen paella normalmente?', 'Quand mange-t-on la paella normalement ?', ['Por la noche.', 'A mediodía.', 'En el desayuno.'], 1],
           ['¿Con quién la comen muchas veces?', 'Avec qui la mange-t-on souvent ?', ['Con la familia.', 'Con un reloj.', 'Sola.'], 0],
@@ -354,7 +354,7 @@ export default function build() {
       flash('falla', 'mascleta', 'fuego', 'acuario'),
       capsula,
       tf('En España, la cena es a las siete de la tarde.', false, N, { tr: 'En Espagne, le dîner est à sept heures de l’après-midi.', expl: ['Normalmente la cena es a las nueve o más tarde.', 'Normalement, le dîner est à neuf heures ou plus tard.'] }),
-      tf('España y Francia tienen la misma hora.', true, N, { tr: 'L’Espagne et la France ont la même heure.' }),
+      tf('En Madrid y en París es la misma hora.', true, N, { tr: 'À Madrid et à Paris, c’est la même heure.', expl: ['Sí, pero en las islas Canarias es una hora menos.', 'Oui, mais aux îles Canaries, il est une heure de moins.'] }),
       tf('La mascletà suena a las dos de la tarde.', true, N, { tr: 'La mascletà retentit à deux heures de l’après-midi.' }),
       read('Las fallas son la gran fiesta de Valencia. Se celebran en marzo, del quince al diecinueve. Hay monumentos enormes de cartón y madera, con figuras graciosas. Cada día, a las dos de la tarde, suena la mascletà. La noche del diecinueve de marzo, las fallas se queman. ¡Hay mucho fuego!', 'neus',
         'Les Fallas sont la grande fête de Valence. Elles ont lieu en mars, du quinze au dix-neuf. Il y a des monuments énormes en carton et en bois, avec des personnages amusants. Chaque jour, à deux heures de l’après-midi, retentit la mascletà. La nuit du dix-neuf mars, les fallas sont brûlées. Il y a beaucoup de feu !', [
@@ -362,8 +362,8 @@ export default function build() {
           ['¿Cómo son los monumentos?', 'Comment sont les monuments ?', ['Pequeños y de azúcar.', 'Enormes, de cartón y madera.', 'Azules y de metal.'], 1],
           ['¿Qué pasa la noche del diecinueve?', 'Que se passe-t-il la nuit du dix-neuf ?', ['Las fallas se queman.', 'Las fallas empiezan.', 'Todos duermen la siesta.'], 0],
         ]),
-      read('La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto es Santiago Calatrava, un valenciano.', 'neus',
-        'La Ciudad de las Artes y las Ciencias est à Valence. Elle a un musée des sciences, un cinéma avec un écran géant, un palais pour l’opéra et l’Oceanogràfic, un très grand aquarium. Les bâtiments sont blancs et très modernes. L’architecte est Santiago Calatrava, un Valencien.', [
+      read('La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto de casi todos es Santiago Calatrava, un valenciano.', 'neus',
+        'La Ciudad de las Artes y las Ciencias est à Valence. Elle a un musée des sciences, un cinéma avec un écran géant, un palais pour l’opéra et l’Oceanogràfic, un très grand aquarium. Les bâtiments sont blancs et très modernes. L’architecte de presque tous est Santiago Calatrava, un Valencien. (L’Oceanogràfic est l’œuvre de Félix Candela.)', [
           ['¿Qué es el Oceanogràfic?', 'Qu’est-ce que l’Oceanogràfic ?', ['Un acuario.', 'Un museo de arte.', 'Un colegio.'], 0],
           ['¿Cómo son los edificios?', 'Comment sont les bâtiments ?', ['Rojos y viejos.', 'Blancos y modernos.', 'Pequeños y negros.'], 1],
           ['¿Quién es Santiago Calatrava?', 'Qui est Santiago Calatrava ?', ['El arquitecto.', 'El paellero.', 'El profesor de Neus.'], 0],
@@ -406,11 +406,11 @@ export default function build() {
       fill('Esta noche ___ a cenar a las nueve.', 'vamos', 'neus', { opts: ['vamos', 'van', 'voy'], tr: 'Ce soir, nous allons dîner à neuf heures.' }),
       conj('querer', 'yo', 'quier', 'o', ['o', 'es', 'e'], 'viajero', { tr: 'Moi, je veux…' }),
       reord('Marina lleva una falda azul y zapatos negros.', 'marina', { tr: 'Marina porte une jupe bleue et des chaussures noires.' }),
-      read('Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Por la tarde voy a comer paella con mis nuevos amigos.', 'neus',
-        'Salut, c’est Neus. J’ai douze ans et j’habite à Valence. Ma mère est médecin et mon père est cuisinier. Je suis grande et mince, et je porte toujours une montre. Aujourd’hui, je suis contente parce que les horloges fonctionnent. L’après-midi, je vais manger de la paella avec mes nouveaux amis.', [
+      read('Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Hoy, a mediodía, voy a comer paella con mis nuevos amigos.', 'neus',
+        'Salut, c’est Neus. J’ai douze ans et j’habite à Valence. Ma mère est médecin et mon père est cuisinier. Je suis grande et mince, et je porte toujours une montre. Aujourd’hui, je suis contente parce que les horloges fonctionnent. Aujourd’hui, au déjeuner, je vais manger de la paella avec mes nouveaux amis.', [
           ['¿Qué hace el padre de Neus?', 'Quel est le métier du père de Neus ?', ['Es médico.', 'Es cocinero.', 'Es profesor.'], 1],
           ['¿Qué lleva Neus siempre?', 'Que porte toujours Neus ?', ['Una gorra.', 'Un reloj.', 'Un vestido rojo.'], 1],
-          ['¿Qué va a hacer por la tarde?', 'Que va-t-elle faire l’après-midi ?', ['Va a estudiar en el colegio.', 'Va a dormir la siesta.', 'Va a comer paella con amigos.'], 2],
+          ['¿Qué va a hacer hoy a mediodía?', 'Que va-t-elle faire aujourd’hui au déjeuner ?', ['Va a estudiar en el colegio.', 'Va a dormir la siesta.', 'Va a comer paella con amigos.'], 2],
         ]),
       speak('Hola, me llamo Álex y me levanto a las siete.', 'viajero', { tr: 'Salut, je m’appelle Álex et je me lève à sept heures. (dis ton prénom)', nombre: 'Álex', hechizo: ['Hechizo final', '¡Las agujas del gran reloj vuelven a moverse!'] }),
       pluma,

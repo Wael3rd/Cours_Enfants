@@ -959,7 +959,7 @@
         "voz": "narrador",
         "audio": "narrador.15a808b799"
       },
-      "pista": "Gustar ne veut pas exactement dire « aimer » mais « plaire » : « me gusta el fútbol » = le foot me plaît. Comme en français, la chose qui plaît est le sujet du verbe, donc c'est elle qui décide de la terminaison : une chose singulière (me gusta el tango) ou un verbe à l'infinitif (me gusta bailar, toujours « gusta ») → « gusta » ; plusieurs choses (me gustan los videojuegos, me gustan el fútbol y el tenis) → « gustan ». Le petit mot avant le verbe indique à qui ça plaît : me (à moi), te (à toi), le (à lui, à elle), nos (à nous), os (à vous, en Espagne), les (à eux). Ces mots se mettent AVANT le verbe, et « no » se met avant eux : « no me gusta ». Dans une réponse courte, on ne répète pas le mot « yo » : « —¿Te gusta el tango? —Sí, me gusta. » Piège classique : ne pas dire « yo gusto el fútbol ». Pas de « de » devant le nom : me gusta el fútbol (pas « me gusta de le foot »). Les articles el / la / los / las sont obligatoires devant le nom.",
+      "pista": "Gustar ne veut pas exactement dire « aimer » mais « plaire » : « me gusta el fútbol » = le foot me plaît. Comme en français, la chose qui plaît est le sujet du verbe, donc c'est elle qui décide de la terminaison : une chose singulière (me gusta el tango) ou un verbe à l'infinitif (me gusta bailar, toujours « gusta ») → « gusta » ; plusieurs choses (me gustan los videojuegos, me gustan el fútbol y el tenis) → « gustan ». Le petit mot avant le verbe indique à qui ça plaît : me (à moi), te (à toi), le (à lui, à elle), nos (à nous), os (à vous, en Espagne), les (à eux). Ces mots se mettent AVANT le verbe, et « no » se met avant eux : « no me gusta ». Dans une réponse courte, on ne répète pas le mot « yo » : « —¿Te gusta el tango? —Sí, me gusta. » Piège classique : ne pas dire « yo gusto el fútbol ». Pas de « de » devant le nom : me gusta el fútbol (pas « me gusta de fútbol »). Les articles el / la / los / las sont obligatoires devant le nom.",
       "tabla": {
         "encabezado": [
           "A quién",
@@ -1148,7 +1148,7 @@
         "voz": "narrador",
         "audio": "narrador.8cac8d26e1"
       },
-      "pista": "Pour dire ce que plaît à QUELQU'UN D'AUTRE, on met toujours « a + la personne » en début de phrase ET le petit mot (le / les) devant le verbe : « A Sol le gusta el tango » (jamais « A Sol gusta… »). Le = une seule personne (él, ella, usted, Sol, mi hermano), les = plusieurs personnes (mis amigos, ellos, Facu y Sol). « Le » ne change pas pour un garçon ou une fille. « A mí me », « a ti te », « a nosotros nos » servent à insister ou à comparer (« A mí me gusta el fútbol, pero a ti te gusta el tenis »), et sont facultatifs (« me gusta el fútbol » suffit). Le verbe s'accorde toujours avec ce qui plaît : « A Sol le gustan los pianos ». Piège : on ne répète pas : pas de « a Facu le gusta él » ni de « a mí me gusto ».",
+      "pista": "Pour dire ce qui plaît à QUELQU'UN D'AUTRE, quand on nomme la personne, on met « a + la personne » (souvent en début de phrase) ET le petit mot (le / les) devant le verbe : « A Sol le gusta el tango » (jamais « A Sol gusta… » ni « Sol le gusta… »). Le = une seule personne (él, ella, usted, Sol, mi hermano), les = plusieurs personnes (mis amigos, ellos, Facu y Sol). « Le » ne change pas pour un garçon ou une fille. « A mí me », « a ti te », « a nosotros nos » servent à insister ou à comparer (« A mí me gusta el fútbol, pero a ti te gusta el tenis »), et sont facultatifs (« me gusta el fútbol » suffit). Le verbe s'accorde toujours avec ce qui plaît : « A Sol le gustan las guitarras ». Piège : on ne répète pas : pas de « a Facu le gusta él » ni de « a mí me gusto ».",
       "tabla": {
         "encabezado": [
           "Persona",
@@ -1242,7 +1242,7 @@
         "voz": "narrador",
         "audio": "narrador.db5fe32d40"
       },
-      "pista": "« Preferir » est un verbe à diphtongue (e → ie) comme « querer » : prefiero, prefieres, prefiere, preferimos, preferís, prefieren (nosotros et vosotros ne diphtonguent pas). Il se construit avec un nom ou un infinitif : « prefiero el tenis », « prefiero bailar ». Pour comparer, on met « a » devant la chose moins aimée : « prefiero el tenis AL fútbol » (a + el = al), « prefiero bailar A cantar » (jamais « que » ici). Ce n'est PAS comme « gustar » : ici le verbe s'accorde avec la personne qui préfère (yo prefiero, tú prefieres), pas avec la chose. Pour demander : « ¿Qué prefieres, X o Y? ». En Argentine, on entendra « ¿qué preferís? » (voseo : « vos preferís ») – pour toi, « ¿qué prefieres? » est toujours correct.",
+      "pista": "« Preferir » est un verbe à diphtongue (e → ie) comme « querer » : prefiero, prefieres, prefiere, preferimos, preferís, prefieren (nosotros et vosotros ne diphtonguent pas). Il se construit avec un nom ou un infinitif : « prefiero el tenis », « prefiero bailar ». Pour comparer, on met « a » devant la chose moins aimée : « prefiero el tenis AL fútbol » (a + el = al), « prefiero bailar A cantar » (à l'oral on entend aussi « que », mais apprends la forme avec « a »). Ce n'est PAS comme « gustar » : ici le verbe s'accorde avec la personne qui préfère (yo prefiero, tú prefieres), pas avec la chose. Pour demander : « ¿Qué prefieres, X o Y? ». En Argentine, on entendra « ¿qué preferís? » (voseo : « vos preferís ») – pour toi, « ¿qué prefieres? » est toujours correct.",
       "tabla": {
         "encabezado": [
           "Pronombre",
@@ -1794,10 +1794,10 @@
               "fr": "Oui, je suis un ballon.",
               "correcta": false,
               "reaccion": {
-                "es": "Ja, ja. ¡Pues yo te pateo!",
+                "es": "Ja, ja. ¡Entonces yo te pateo!",
                 "fr": "Ha, ha. Alors je te tape dedans ! (« patear » = taper dans un ballon)",
                 "voz": "facu",
-                "audio": "facu.c5bc971acd",
+                "audio": "facu.f3ba5a05c4",
                 "emoji": "🤨"
               }
             },
@@ -1924,16 +1924,16 @@
             "audio": "narrador.2a1641197d"
           },
           "objetivo": {
-            "es": "Hola, me llamo Álex. ¡Mucho gusto en Buenos Aires!",
-            "fr": "Salut, je m’appelle Álex. Enchanté de découvrir Buenos Aires ! (dis ton prénom)",
+            "es": "Hola, me llamo Álex y me gusta Buenos Aires.",
+            "fr": "Salut, je m’appelle Álex et j’aime Buenos Aires. (dis ton prénom)",
             "voz": "viajero",
-            "audio": "viajero.b4a0d5df8d"
+            "audio": "viajero.1fd20363aa"
           },
           "aceptadas": [
-            "hola me llamo álex mucho gusto en buenos aires"
+            "hola me llamo álex y me gusta buenos aires"
           ],
           "patrones": [
-            "hola me llamo {nombre} mucho gusto en buenos aires"
+            "hola me llamo {nombre} y me gusta buenos aires"
           ],
           "hechizo": {
             "nombre": "Hechizo de la bienvenida",
@@ -2716,7 +2716,7 @@
             },
             {
               "id": "nada",
-              "pista": "Une chose que tu n’aimes pas du tout (la natación, el rugby, madrugar…)",
+              "pista": "Une chose que tu n’aimes pas du tout (la natación, el rugby, madrugar = se lever très tôt…)",
               "tipo": "texto"
             }
           ],
@@ -3033,9 +3033,9 @@
             "audio": "narrador.fd721521ac"
           },
           "habla": {
-            "es": "Toco el bandoneón desde los diez años. Hoy tengo sesenta.",
+            "es": "Toco el bandoneón desde los diez años. Hoy tengo setenta.",
             "voz": "anibal",
-            "audio": "anibal.5aa47a3d6a"
+            "audio": "anibal.ab405c11f9"
           },
           "modo": "texto",
           "opciones": [
@@ -3048,7 +3048,7 @@
               "correcta": false
             },
             {
-              "texto": "Don Aníbal es un músico muy mayor con mucha experiencia.",
+              "texto": "Don Aníbal es un músico con mucha experiencia.",
               "correcta": true
             }
           ]
@@ -3131,10 +3131,10 @@
           },
           "pnj": "anibal",
           "replica": {
-            "es": "¿Quieres escuchar el bandoneón, muchacho?",
-            "fr": "Tu veux écouter le bandonéon, mon garçon ?",
+            "es": "¿Querés escuchar el bandoneón, muchacho?",
+            "fr": "Tu veux écouter le bandonéon, mon garçon ? (« querés » = « quieres » en voseo)",
             "voz": "anibal",
-            "audio": "anibal.94a80cac41"
+            "audio": "anibal.8cf8707840"
           },
           "opciones": [
             {
@@ -3146,10 +3146,10 @@
               "fr": "Oui, joue quelque chose, s’il te plaît.",
               "correcta": true,
               "reaccion": {
-                "es": "Claro que sí. Escucha bien.",
-                "fr": "Bien sûr. Écoute bien.",
+                "es": "Claro que sí. Escuchá bien.",
+                "fr": "Bien sûr. Écoute bien. (« escuchá » = « escucha » en voseo)",
                 "voz": "anibal",
-                "audio": "anibal.3e27371961",
+                "audio": "anibal.f16241eec7",
                 "emoji": "😄"
               }
             },
@@ -3162,10 +3162,10 @@
               "fr": "Oui, je suis un bandonéon.",
               "correcta": false,
               "reaccion": {
-                "es": "¿Un bandoneón? ¡Entonces toca tú!",
-                "fr": "Un bandonéon ? Alors joue, toi !",
+                "es": "¿Un bandoneón? ¡Entonces tocá vos!",
+                "fr": "Un bandonéon ? Alors joue, toi ! (« tocá vos » = « toca tú » en voseo)",
                 "voz": "anibal",
-                "audio": "anibal.8f11e97a5e",
+                "audio": "anibal.f4c69e8614",
                 "emoji": "🤨"
               }
             },
@@ -3663,7 +3663,7 @@
           ],
           "modelo": {
             "es": "Prefiero bailar a cantar.",
-            "fr": "Je préfère danser à chanter.",
+            "fr": "Je préfère danser plutôt que chanter.",
             "voz": "viajero",
             "audio": "viajero.257dfcbffa"
           },
@@ -3677,10 +3677,10 @@
       "titulo": "¿Por qué te gusta?",
       "emoji": "💬",
       "intro": {
-        "es": "Dime una cosa que te gusta… ¡y explícame por qué!",
-        "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi !",
+        "es": "Decime una cosa que te gusta… ¡y explicame por qué!",
+        "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi ! (« decime », « explicame » = « dime », « explícame » en voseo)",
         "voz": "sol",
-        "audio": "sol.66a3fc79e8"
+        "audio": "sol.3821e2d0d7"
       },
       "pista": "Donner son avis et le justifier : ¿por qué ? / porque ; parler des goûts des autres (a Facu le gusta…) ; tu écris et tu dis TES goûts avec une raison.",
       "stats": [
@@ -4072,7 +4072,7 @@
             },
             {
               "id": "nogusta",
-              "pista": "Une chose que tu n’aimes pas (el rugby, madrugar, la natación…)",
+              "pista": "Une chose que tu n’aimes pas (el rugby, madrugar = se lever très tôt, la natación…)",
               "tipo": "texto"
             },
             {
@@ -4102,7 +4102,7 @@
         "voz": "sol",
         "audio": "sol.ff6351687c"
       },
-      "pista": "Le foot (Boca, River, la Bombonera, champions du monde), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
+      "pista": "Le foot (Boca, River, la Bombonera, les Coupes du monde 1978, 1986, 2022), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
       "stats": [
         "cultura",
         "leer",
@@ -4151,10 +4151,10 @@
                 "vista": "Deux maillots, bleu et jaune contre rouge et blanc, se font face ; le stade de la Bombonera ; une coupe dorée avec trois dates qui s’allument : 1978, 1986, 2022.",
                 "lineas": [
                   {
-                    "es": "Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina es campeona del mundo: ganó en 1978, 1986 y 2022.",
-                    "fr": "Boca et River sont les deux grandes équipes. Leur match s’appelle le Superclásico. L’Argentine est championne du monde : elle a gagné en 1978, 1986 et 2022.",
+                    "es": "Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina ganó el Mundial en 1978, 1986 y 2022.",
+                    "fr": "Boca et River sont les deux grandes équipes. Leur match s’appelle le Superclásico. L’Argentine a gagné la Coupe du monde en 1978, 1986 et 2022.",
                     "voz": "narrador",
-                    "audio": "narrador.42bf623940"
+                    "audio": "narrador.754d89cb37"
                   }
                 ]
               },
@@ -4210,10 +4210,10 @@
             "audio": "narrador.d92741ae05"
           },
           "afirmacion": {
-            "es": "Argentina es campeona del mundo de fútbol.",
-            "fr": "L’Argentine est championne du monde de football.",
+            "es": "Argentina ganó el Mundial de fútbol en 2022.",
+            "fr": "L’Argentine a gagné la Coupe du monde de football en 2022.",
             "voz": "narrador",
-            "audio": "narrador.7da2b4a654"
+            "audio": "narrador.212736b9d1"
           },
           "correcta": true
         },
@@ -4267,10 +4267,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina es campeona del mundo: ganó la Copa del Mundo en 1978, en 1986 y en 2022.",
-            "fr": "Boca Juniors et River Plate sont les deux équipes les plus célèbres de Buenos Aires. Quand elles jouent l’une contre l’autre, le match s’appelle le Superclásico. Le stade de Boca s’appelle la Bombonera, dans le quartier de La Boca. Les couleurs de Boca sont le bleu et le jaune. L’Argentine est championne du monde : elle a gagné la Coupe du monde en 1978, en 1986 et en 2022.",
+            "es": "Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina ganó la Copa del Mundo en 1978, en 1986 y en 2022.",
+            "fr": "Boca Juniors et River Plate sont les deux équipes les plus célèbres de Buenos Aires. Quand elles jouent l’une contre l’autre, le match s’appelle le Superclásico. Le stade de Boca s’appelle la Bombonera, dans le quartier de La Boca. Les couleurs de Boca sont le bleu et le jaune. L’Argentine a gagné la Coupe du monde en 1978, en 1986 et en 2022.",
             "voz": "facu",
-            "audio": "facu.f9fe085b5c"
+            "audio": "facu.375b2c5731"
           },
           "preguntas": [
             {
@@ -4548,10 +4548,10 @@
               "fr": "Oui, j’adore le tango.",
               "correcta": true,
               "reaccion": {
-                "es": "Entonces tienes buen oído.",
-                "fr": "Alors tu as bonne oreille.",
+                "es": "Entonces tenés buen oído.",
+                "fr": "Alors tu as bonne oreille. (« tenés » = « tienes » en voseo)",
                 "voz": "anibal",
-                "audio": "anibal.c1c50cef02",
+                "audio": "anibal.cfd22b4908",
                 "emoji": "😄"
               }
             },
@@ -4760,10 +4760,10 @@
               "fr": "J’aime foot et musique.",
               "correcta": false,
               "reaccion": {
-                "es": "Eso no suena bien. ¡Otra vez!",
-                "fr": "Ça ne sonne pas bien. Encore une fois !",
+                "es": "Faltan los artículos: «el fútbol», «la música». ¡Otra vez!",
+                "fr": "Il manque les articles : « el fútbol », « la música ». Encore une fois !",
                 "voz": "sombra",
-                "audio": "sombra.a4ce1676e2",
+                "audio": "sombra.8f8c4ed5f3",
                 "emoji": "🤨"
               }
             },

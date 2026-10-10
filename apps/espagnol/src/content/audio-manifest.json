@@ -11706,14 +11706,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.3ebe7f6e77",
-    "text": "Al mediodía comemos paella.",
+    "key": "narrador.d177447114",
+    "text": "A mediodía comemos paella.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.3ebe7f6e77.lento",
-    "text": "Al mediodía comemos paella.",
+    "key": "narrador.d177447114.lento",
+    "text": "A mediodía comemos paella.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -12538,14 +12538,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.a962a88314",
-    "text": "El arroz es de Valencia.",
+    "key": "narrador.355f98bf6e",
+    "text": "En Valencia hay mucho arroz.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.a962a88314.lento",
-    "text": "El arroz es de Valencia.",
+    "key": "narrador.355f98bf6e.lento",
+    "text": "En Valencia hay mucho arroz.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -13022,15 +13022,15 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "neus.d91b5442ed",
-    "text": "Esta tarde vamos a cenar con Vicent.",
+    "key": "neus.0772da3cbc",
+    "text": "Esta noche vamos a cenar con Vicent.",
     "voice": "es-ES-XimenaNeural",
     "rate": "+4%",
     "pitch": "+10Hz"
   },
   {
-    "key": "neus.d91b5442ed.lento",
-    "text": "Esta tarde vamos a cenar con Vicent.",
+    "key": "neus.0772da3cbc.lento",
+    "text": "Esta noche vamos a cenar con Vicent.",
     "voice": "es-ES-XimenaNeural",
     "rate": "-21%",
     "pitch": "+10Hz"
@@ -13284,8 +13284,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "neus.4e81005118",
-    "text": "Todos los relojes de Valencia están parados desde esta mañana.",
+    "key": "neus.1da19e628f",
+    "text": "Todos los relojes de Valencia están parados.",
     "voice": "es-ES-XimenaNeural",
     "rate": "+4%",
     "pitch": "+10Hz"
@@ -13350,8 +13350,8 @@
     "pitch": "+10Hz"
   },
   {
-    "key": "vicent.715a4e7a02",
-    "text": "Buenas tardes, chicos. ¿De dónde sois?",
+    "key": "vicent.f0a3722924",
+    "text": "Buenos días, chicos. ¿De dónde sois?",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-6%",
     "pitch": "-16Hz"
@@ -13452,8 +13452,8 @@
     "pitch": "-22Hz"
   },
   {
-    "key": "neus.95d120bcfe",
-    "text": "Son las cinco menos diez.",
+    "key": "neus.75785db68a",
+    "text": "Son las nueve menos cuarto.",
     "voice": "es-ES-XimenaNeural",
     "rate": "+4%",
     "pitch": "+10Hz"
@@ -13776,8 +13776,8 @@
     "pitch": "+10Hz"
   },
   {
-    "key": "viajero.738082bfc0",
-    "text": "Esta tarde voy a comer paella.",
+    "key": "viajero.d397ed6a42",
+    "text": "Hoy yo voy a comer paella.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
@@ -14041,8 +14041,8 @@
     "pitch": "-22Hz"
   },
   {
-    "key": "vicent.73e8cc3e36",
-    "text": "La paella valenciana lleva arroz, pollo, judías verdes y tomate. Se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.",
+    "key": "vicent.9b6e741c1e",
+    "text": "La paella valenciana lleva arroz, pollo, judías verdes y tomate. Tradicionalmente, se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-6%",
     "pitch": "-16Hz"
@@ -14167,8 +14167,14 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.dda249a7f0",
-    "text": "España y Francia tienen la misma hora.",
+    "key": "narrador.33f866633b",
+    "text": "En Madrid y en París es la misma hora.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "-4%"
+  },
+  {
+    "key": "narrador.92b66ea3c0",
+    "text": "Sí, pero en las islas Canarias es una hora menos.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -14204,8 +14210,8 @@
     "rate": "-4%"
   },
   {
-    "key": "neus.50ee1c0bb8",
-    "text": "La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto es Santiago Calatrava, un valenciano.",
+    "key": "neus.91d0b59e64",
+    "text": "La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto de casi todos es Santiago Calatrava, un valenciano.",
     "voice": "es-ES-XimenaNeural",
     "rate": "+4%",
     "pitch": "+10Hz"
@@ -14443,8 +14449,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "neus.9ccd61989c",
-    "text": "Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Por la tarde voy a comer paella con mis nuevos amigos.",
+    "key": "neus.f89dc4698c",
+    "text": "Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Hoy, a mediodía, voy a comer paella con mis nuevos amigos.",
     "voice": "es-ES-XimenaNeural",
     "rate": "+4%",
     "pitch": "+10Hz"
@@ -14462,8 +14468,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.888285fbed",
-    "text": "¿Qué va a hacer por la tarde?",
+    "key": "narrador.0285e76aee",
+    "text": "¿Qué va a hacer hoy a mediodía?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -14610,14 +14616,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.a1d5119715",
-    "text": "Los Reyes Magos llegan el seis de enero.",
+    "key": "narrador.223d205ba8",
+    "text": "Los Reyes Magos traen los regalos el seis de enero.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.a1d5119715.lento",
-    "text": "Los Reyes Magos llegan el seis de enero.",
+    "key": "narrador.223d205ba8.lento",
+    "text": "Los Reyes Magos traen los regalos el seis de enero.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -15865,15 +15871,15 @@
     "pitch": "+32Hz"
   },
   {
-    "key": "paloma.81ca925acf",
-    "text": "Tenemos que estar en la Puerta del Sol a las doce.",
+    "key": "paloma.6df92a2de7",
+    "text": "Tenemos que estar en la Puerta del Sol a medianoche.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+2%",
     "pitch": "-8Hz"
   },
   {
-    "key": "paloma.81ca925acf.lento",
-    "text": "Tenemos que estar en la Puerta del Sol a las doce.",
+    "key": "paloma.6df92a2de7.lento",
+    "text": "Tenemos que estar en la Puerta del Sol a medianoche.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-23%",
     "pitch": "-8Hz"
@@ -16119,8 +16125,8 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "paloma.a1d5119715",
-    "text": "Los Reyes Magos llegan el seis de enero.",
+    "key": "paloma.223d205ba8",
+    "text": "Los Reyes Magos traen los regalos el seis de enero.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+2%",
     "pitch": "-8Hz"
@@ -16198,8 +16204,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "paloma.4f3d21a5df",
-    "text": "El seis de enero llegan los Reyes Magos.",
+    "key": "paloma.56533e1242",
+    "text": "El seis de enero es el día de los Reyes Magos.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+2%",
     "pitch": "-8Hz"
@@ -16596,6 +16602,13 @@
     "pitch": "+32Hz"
   },
   {
+    "key": "paloma.81ca925acf",
+    "text": "Tenemos que estar en la Puerta del Sol a las doce.",
+    "voice": "es-ES-ElviraNeural",
+    "rate": "+2%",
+    "pitch": "-8Hz"
+  },
+  {
     "key": "chema.235eb045d9",
     "text": "¿Podéis ayudarme? Tengo que preparar cien roscones para mañana.",
     "voice": "es-ES-AlvaroNeural",
@@ -16759,14 +16772,14 @@
     "pitch": "-8Hz"
   },
   {
-    "key": "viajero.35c558fbb0",
-    "text": "Sí, quiero el número siete.",
+    "key": "viajero.b63922d82a",
+    "text": "Sí, quiero un número, por favor.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "paloma.5db9b7d641",
-    "text": "¡El siete! Seguro que tienes suerte.",
+    "key": "paloma.7aa6fc4b75",
+    "text": "¡Aquí tienes! Seguro que tienes suerte.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+2%",
     "pitch": "-8Hz"
@@ -19130,8 +19143,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "facu.c5bc971acd",
-    "text": "Ja, ja. ¡Pues yo te pateo!",
+    "key": "facu.f3ba5a05c4",
+    "text": "Ja, ja. ¡Entonces yo te pateo!",
     "voice": "es-AR-TomasNeural",
     "rate": "+6%",
     "pitch": "+14Hz"
@@ -19196,14 +19209,14 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "viajero.b4a0d5df8d",
-    "text": "Hola, me llamo Álex. ¡Mucho gusto en Buenos Aires!",
+    "key": "viajero.1fd20363aa",
+    "text": "Hola, me llamo Álex y me gusta Buenos Aires.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "viajero.b4a0d5df8d.lento",
-    "text": "Hola, me llamo Álex. ¡Mucho gusto en Buenos Aires!",
+    "key": "viajero.1fd20363aa.lento",
+    "text": "Hola, me llamo Álex y me gusta Buenos Aires.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-25%",
     "pitch": "+28Hz"
@@ -19508,8 +19521,8 @@
     "rate": "-4%"
   },
   {
-    "key": "anibal.5aa47a3d6a",
-    "text": "Toco el bandoneón desde los diez años. Hoy tengo sesenta.",
+    "key": "anibal.ab405c11f9",
+    "text": "Toco el bandoneón desde los diez años. Hoy tengo setenta.",
     "voice": "es-AR-TomasNeural",
     "rate": "-10%",
     "pitch": "-16Hz"
@@ -19561,8 +19574,8 @@
     "pitch": "+12Hz"
   },
   {
-    "key": "anibal.94a80cac41",
-    "text": "¿Quieres escuchar el bandoneón, muchacho?",
+    "key": "anibal.8cf8707840",
+    "text": "¿Querés escuchar el bandoneón, muchacho?",
     "voice": "es-AR-TomasNeural",
     "rate": "-10%",
     "pitch": "-16Hz"
@@ -19574,8 +19587,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "anibal.3e27371961",
-    "text": "Claro que sí. Escucha bien.",
+    "key": "anibal.f16241eec7",
+    "text": "Claro que sí. Escuchá bien.",
     "voice": "es-AR-TomasNeural",
     "rate": "-10%",
     "pitch": "-16Hz"
@@ -19587,8 +19600,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "anibal.8f11e97a5e",
-    "text": "¿Un bandoneón? ¡Entonces toca tú!",
+    "key": "anibal.f4c69e8614",
+    "text": "¿Un bandoneón? ¡Entonces tocá vos!",
     "voice": "es-AR-TomasNeural",
     "rate": "-10%",
     "pitch": "-16Hz"
@@ -19783,8 +19796,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "sol.66a3fc79e8",
-    "text": "Dime una cosa que te gusta… ¡y explícame por qué!",
+    "key": "sol.3821e2d0d7",
+    "text": "Decime una cosa que te gusta… ¡y explicame por qué!",
     "voice": "es-AR-ElenaNeural",
     "rate": "+2%",
     "pitch": "+12Hz"
@@ -19980,8 +19993,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.42bf623940",
-    "text": "Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina es campeona del mundo: ganó en 1978, 1986 y 2022.",
+    "key": "narrador.754d89cb37",
+    "text": "Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina ganó el Mundial en 1978, 1986 y 2022.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -20004,8 +20017,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.7da2b4a654",
-    "text": "Argentina es campeona del mundo de fútbol.",
+    "key": "narrador.212736b9d1",
+    "text": "Argentina ganó el Mundial de fútbol en 2022.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -20028,8 +20041,8 @@
     "rate": "-4%"
   },
   {
-    "key": "facu.f9fe085b5c",
-    "text": "Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina es campeona del mundo: ganó la Copa del Mundo en 1978, en 1986 y en 2022.",
+    "key": "facu.375b2c5731",
+    "text": "Boca Juniors y River Plate son los dos equipos más famosos de Buenos Aires. Cuando juegan juntos, el partido se llama el Superclásico. El estadio de Boca se llama la Bombonera, en el barrio de La Boca. Los colores de Boca son el azul y el amarillo. Argentina ganó la Copa del Mundo en 1978, en 1986 y en 2022.",
     "voice": "es-AR-TomasNeural",
     "rate": "+6%",
     "pitch": "+14Hz"
@@ -20144,8 +20157,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "anibal.c1c50cef02",
-    "text": "Entonces tienes buen oído.",
+    "key": "anibal.cfd22b4908",
+    "text": "Entonces tenés buen oído.",
     "voice": "es-AR-TomasNeural",
     "rate": "-10%",
     "pitch": "-16Hz"
@@ -20262,8 +20275,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "sombra.a4ce1676e2",
-    "text": "Eso no suena bien. ¡Otra vez!",
+    "key": "sombra.8f8c4ed5f3",
+    "text": "Faltan los artículos: «el fútbol», «la música». ¡Otra vez!",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-18%",
     "pitch": "-45Hz"

@@ -1381,10 +1381,10 @@
     "titulo": "¿Por qué te gusta?",
     "emoji": "💬",
     "intro": {
-     "es": "Dime una cosa que te gusta… ¡y explícame por qué!",
-     "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi !",
+     "es": "Decime una cosa que te gusta… ¡y explicame por qué!",
+     "fr": "Dis-moi une chose que tu aimes… et explique-moi pourquoi ! (« decime », « explicame » = « dime », « explícame » en voseo)",
      "voz": "sol",
-     "audio": "sol.66a3fc79e8"
+     "audio": "sol.3821e2d0d7"
     },
     "pista": "Donner son avis et le justifier : ¿por qué ? / porque ; parler des goûts des autres (a Facu le gusta…) ; tu écris et tu dis TES goûts avec une raison.",
     "stats": [
@@ -1407,7 +1407,7 @@
      "voz": "sol",
      "audio": "sol.ff6351687c"
     },
-    "pista": "Le foot (Boca, River, la Bombonera, champions du monde), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
+    "pista": "Le foot (Boca, River, la Bombonera, les Coupes du monde 1978, 1986, 2022), le tango (UNESCO 2009), le maté et le voseo (vos, che) ; puis tu dis ce que TOI tu aimes (sport, musique, plat).",
     "stats": [
      "cultura",
      "leer",

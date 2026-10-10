@@ -174,17 +174,17 @@
     {
       "id": "mediodia",
       "es": "mediodía",
-      "fr": "midi (12 h) ; « al mediodía » = vers midi",
+      "fr": "midi ; attention : en Espagne, « a mediodía » désigne souvent l’heure du déjeuner, vers 14 h",
       "genero": "m",
       "emoji": "☀️",
       "tags": [
         "hora"
       ],
       "ejemplo": {
-        "es": "Al mediodía comemos paella.",
-        "fr": "À midi, nous mangeons de la paella.",
+        "es": "A mediodía comemos paella.",
+        "fr": "Au déjeuner (vers 14 h), nous mangeons de la paella.",
         "voz": "narrador",
-        "audio": "narrador.3ebe7f6e77"
+        "audio": "narrador.d177447114"
       },
       "audio": "narrador.6d288666ff"
     },
@@ -475,7 +475,7 @@
       ],
       "ejemplo": {
         "es": "Llego al cole a las nueve menos diez.",
-        "fr": "J’arrive à l’école à moins dix.",
+        "fr": "J’arrive à l’école à neuf heures moins dix.",
         "voz": "narrador",
         "audio": "narrador.2fe12748a1"
       },
@@ -687,7 +687,7 @@
     {
       "id": "zumo",
       "es": "zumo",
-      "fr": "jus de fruit (au Mexique : « jugo »)",
+      "fr": "jus de fruit (en Amérique latine : « jugo »)",
       "genero": "m",
       "plural": "zumos",
       "emoji": "🧃",
@@ -766,10 +766,10 @@
         "comidas"
       ],
       "ejemplo": {
-        "es": "El arroz es de Valencia.",
-        "fr": "Le riz vient de Valence (région).",
+        "es": "En Valencia hay mucho arroz.",
+        "fr": "À Valence (la région), il y a beaucoup de riz.",
         "voz": "narrador",
-        "audio": "narrador.a962a88314"
+        "audio": "narrador.355f98bf6e"
       },
       "audio": "narrador.fa9db510a2"
     },
@@ -1012,7 +1012,7 @@
         "voz": "narrador",
         "audio": "narrador.199564c167"
       },
-      "pista": "On dit l'heure avec SER (jamais « tener » ni « estar »). Une seule heure : « Es la una » (singulier, féminin). À partir de deux : « Son las dos, las tres… » (pluriel). Les minutes se disent avec « y » après l'heure jusqu'à la demie (y cinco, y diez, y cuarto, y veinte, y veinticinco, y media) et avec « menos » ensuite, en comptant ce qu'il reste avant l'heure suivante (las tres menos veinte = 2 h 40 ; las seis menos cuarto = 5 h 45). « En punto » = pile. Pour préciser le moment de la journée, on ajoute « de la mañana / de la tarde / de la noche » (on n'utilise presque jamais les heures de 13 à 24 à l'oral : 15 h = las tres de la tarde). Midi et minuit ont leur nom : mediodía, medianoche. Pour demander l'heure : « ¿Qué hora es? ». Pour demander quand a lieu un événement : « ¿A qué hora…? » et on répond « a la una / a las dos… » (avec « a » devant l'heure).",
+      "pista": "On dit l'heure avec SER (jamais « tener » ni « estar »). Une seule heure : « Es la una » (singulier, féminin). À partir de deux : « Son las dos, las tres… » (pluriel). Les minutes se disent avec « y » après l'heure jusqu'à la demie (y cinco, y diez, y cuarto, y veinte, y veinticinco, y media) et avec « menos » ensuite, en comptant ce qu'il reste avant l'heure suivante (las tres menos veinte = 2 h 40 ; las seis menos cuarto = 5 h 45). « En punto » = pile. Pour préciser le moment de la journée, on ajoute « de la mañana / de la tarde / de la noche » (dans la conversation, on utilise surtout les heures de 1 à 12 : 15 h = las tres de la tarde ; les heures de 13 à 24 servent pour les horaires écrits, les trains, la radio). Midi et minuit ont leur nom : mediodía, medianoche. Pour demander l'heure : « ¿Qué hora es? ». Pour demander quand a lieu un événement : « ¿A qué hora…? » et on répond « a la una / a las dos… » (avec « a » devant l'heure).",
       "tabla": {
         "encabezado": [
           "Hora",
@@ -1253,10 +1253,10 @@
           ]
         },
         {
-          "es": "Esta tarde vamos a cenar con Vicent.",
-          "fr": "Cet après-midi, nous allons dîner avec Vicent.",
+          "es": "Esta noche vamos a cenar con Vicent.",
+          "fr": "Ce soir, nous allons dîner avec Vicent.",
           "voz": "neus",
-          "audio": "neus.d91b5442ed",
+          "audio": "neus.0772da3cbc",
           "resaltar": [
             "vamos a cenar"
           ]
@@ -1380,7 +1380,7 @@
         "voz": "narrador",
         "audio": "narrador.bc6c7e53e0"
       },
-      "pista": "Certains verbes diphtonguent : la voyelle accentuée du radical devient ie (e → ie : querer → quiero, empezar → empiezo, preferir, tener → tengo/tienes…) ou ue (o → ue : poder → puedo, dormir → duermo, acostarse → me acuesto). On parle de « verbes à botte » : si on entoure sur un tableau les formes qui changent (yo, tú, él, ellos), on dessine une botte. Nosotros et vosotros gardent le radical car l'accent tombe sur la terminaison (que-RE-mos, po-DÉ-is) : pas de diphtongue. Les terminaisons restent régulières. Querer + infinitif = vouloir faire (quiero comer) ; poder + infinitif = pouvoir (¿puedo comer?) ; « ¿puedo…? » sert aussi à demander la permission, en français « je peux… ? ». Attention : « querer » à lui seul peut aussi vouloir dire « aimer » (quiero a mi abuela = j'aime ma grand-mère).",
+      "pista": "Certains verbes diphtonguent : la voyelle accentuée du radical devient ie (e → ie : querer → quiero, empezar → empiezo, preferir → prefiero ; tener → tienes, tiene, mais « yo tengo » est irrégulier) ou ue (o → ue : poder → puedo, dormir → duermo, acostarse → me acuesto). On parle de « verbes à botte » : si on entoure sur un tableau les formes qui changent (yo, tú, él, ellos), on dessine une botte. Nosotros et vosotros gardent le radical car l'accent tombe sur la terminaison (que-RE-mos, po-DÉIS) : pas de diphtongue. Les terminaisons restent régulières. Querer + infinitif = vouloir faire (quiero comer) ; poder + infinitif = pouvoir (¿puedo comer?) ; « ¿puedo…? » sert aussi à demander la permission, en français « je peux… ? ». Attention : « querer » à lui seul peut aussi vouloir dire « aimer » (quiero a mi abuela = j'aime ma grand-mère).",
       "tabla": {
         "encabezado": [
           "Pronombre",
@@ -1733,9 +1733,9 @@
             "audio": "narrador.fd721521ac"
           },
           "habla": {
-            "es": "Todos los relojes de Valencia están parados desde esta mañana.",
+            "es": "Todos los relojes de Valencia están parados.",
             "voz": "neus",
-            "audio": "neus.4e81005118"
+            "audio": "neus.1da19e628f"
           },
           "modo": "texto",
           "opciones": [
@@ -1878,10 +1878,10 @@
           },
           "pnj": "vicent",
           "replica": {
-            "es": "Buenas tardes, chicos. ¿De dónde sois?",
-            "fr": "Bonjour (l’après-midi), les jeunes. D’où êtes-vous ?",
+            "es": "Buenos días, chicos. ¿De dónde sois?",
+            "fr": "Bonjour, les jeunes. D’où êtes-vous ?",
             "voz": "vicent",
-            "audio": "vicent.715a4e7a02"
+            "audio": "vicent.f0a3722924"
           },
           "opciones": [
             {
@@ -2240,19 +2240,19 @@
             "voz": "narrador",
             "audio": "narrador.c8dfcbb8f1"
           },
-          "frase": "Son las cinco ___ diez.",
-          "respuesta": "menos",
+          "frase": "Son las nueve menos ___.",
+          "respuesta": "cuarto",
           "opciones": [
-            "y",
-            "menos",
-            "en"
+            "cuarto",
+            "media",
+            "medio"
           ],
           "habla": {
-            "es": "Son las cinco menos diez.",
+            "es": "Son las nueve menos cuarto.",
             "voz": "neus",
-            "audio": "neus.95d120bcfe"
+            "audio": "neus.75785db68a"
           },
-          "fr": "Il est cinq heures moins dix."
+          "fr": "Il est neuf heures moins le quart. (on ne dit jamais « menos media »)"
         },
         {
           "id": "u05-q02-s12",
@@ -3085,7 +3085,7 @@
             "voz": "narrador",
             "audio": "narrador.c8dfcbb8f1"
           },
-          "frase": "Esta tarde ___ a comer paella.",
+          "frase": "Hoy yo ___ a comer paella.",
           "respuesta": "voy",
           "opciones": [
             "voy",
@@ -3093,11 +3093,11 @@
             "vas"
           ],
           "habla": {
-            "es": "Esta tarde voy a comer paella.",
+            "es": "Hoy yo voy a comer paella.",
             "voz": "viajero",
-            "audio": "viajero.738082bfc0"
+            "audio": "viajero.d397ed6a42"
           },
-          "fr": "Cet après-midi, je vais manger de la paella."
+          "fr": "Aujourd’hui, je vais manger de la paella."
         },
         {
           "id": "u05-q04-s10",
@@ -3858,10 +3858,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "La paella valenciana lleva arroz, pollo, judías verdes y tomate. Se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.",
-            "fr": "La paella valencienne contient du riz, du poulet, des haricots verts et de la tomate. On la cuit sur un feu de bois, lentement. À Valence, on la mange à midi, à deux ou trois heures, souvent en famille, le dimanche. La paella est un plat pour le déjeuner, pas pour le dîner. (« lleva » = contient ; « llevar » veut aussi dire porter)",
+            "es": "La paella valenciana lleva arroz, pollo, judías verdes y tomate. Tradicionalmente, se cocina sobre fuego de leña, despacio. En Valencia se come a mediodía, a las dos o a las tres, muchas veces en familia, el domingo. La paella es un plato para la comida, no para la cena.",
+            "fr": "La paella valencienne contient du riz, du poulet, des haricots verts et de la tomate. Traditionnellement, on la cuit sur un feu de bois, lentement. À Valence, on la mange à midi, à deux ou trois heures, souvent en famille, le dimanche. La paella est un plat pour le déjeuner, pas pour le dîner. (« lleva » = contient ; « llevar » veut aussi dire porter)",
             "voz": "vicent",
-            "audio": "vicent.73e8cc3e36"
+            "audio": "vicent.9b6e741c1e"
           },
           "preguntas": [
             {
@@ -4130,7 +4130,7 @@
                 "lineas": [
                   {
                     "es": "España está más al oeste que Francia, pero tiene la misma hora.",
-                    "fr": "L’Espagne est plus à l’ouest que la France, mais elle a la même heure. (Le soleil se couche donc plus tard en Espagne : c’est une des raisons des horaires tardifs.)",
+                    "fr": "L’Espagne est plus à l’ouest que la France, mais elle a la même heure (sauf les îles Canaries : une heure de moins). (Le soleil se couche donc plus tard en Espagne : c’est une des raisons des horaires tardifs.)",
                     "voz": "narrador",
                     "audio": "narrador.9c75ebdbf5"
                   }
@@ -4237,12 +4237,18 @@
             "audio": "narrador.d92741ae05"
           },
           "afirmacion": {
-            "es": "España y Francia tienen la misma hora.",
-            "fr": "L’Espagne et la France ont la même heure.",
+            "es": "En Madrid y en París es la misma hora.",
+            "fr": "À Madrid et à Paris, c’est la même heure.",
             "voz": "narrador",
-            "audio": "narrador.dda249a7f0"
+            "audio": "narrador.33f866633b"
           },
-          "correcta": true
+          "correcta": true,
+          "explicacion": {
+            "es": "Sí, pero en las islas Canarias es una hora menos.",
+            "fr": "Oui, mais aux îles Canaries, il est une heure de moins.",
+            "voz": "narrador",
+            "audio": "narrador.92b66ea3c0"
+          }
         },
         {
           "id": "u05-q07-s05",
@@ -4355,10 +4361,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto es Santiago Calatrava, un valenciano.",
-            "fr": "La Ciudad de las Artes y las Ciencias est à Valence. Elle a un musée des sciences, un cinéma avec un écran géant, un palais pour l’opéra et l’Oceanogràfic, un très grand aquarium. Les bâtiments sont blancs et très modernes. L’architecte est Santiago Calatrava, un Valencien.",
+            "es": "La Ciudad de las Artes y las Ciencias está en Valencia. Tiene un museo de ciencias, un cine con una pantalla gigante, un palacio para la ópera y el Oceanogràfic, un acuario muy grande. Los edificios son blancos y muy modernos. El arquitecto de casi todos es Santiago Calatrava, un valenciano.",
+            "fr": "La Ciudad de las Artes y las Ciencias est à Valence. Elle a un musée des sciences, un cinéma avec un écran géant, un palais pour l’opéra et l’Oceanogràfic, un très grand aquarium. Les bâtiments sont blancs et très modernes. L’architecte de presque tous est Santiago Calatrava, un Valencien. (L’Oceanogràfic est l’œuvre de Félix Candela.)",
             "voz": "neus",
-            "audio": "neus.50ee1c0bb8"
+            "audio": "neus.91d0b59e64"
           },
           "preguntas": [
             {
@@ -5010,10 +5016,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Por la tarde voy a comer paella con mis nuevos amigos.",
-            "fr": "Salut, c’est Neus. J’ai douze ans et j’habite à Valence. Ma mère est médecin et mon père est cuisinier. Je suis grande et mince, et je porte toujours une montre. Aujourd’hui, je suis contente parce que les horloges fonctionnent. L’après-midi, je vais manger de la paella avec mes nouveaux amis.",
+            "es": "Hola, soy Neus. Tengo doce años y vivo en Valencia. Mi madre es médica y mi padre es cocinero. Soy alta y delgada, y llevo siempre un reloj. Hoy estoy contenta porque los relojes funcionan. Hoy, a mediodía, voy a comer paella con mis nuevos amigos.",
+            "fr": "Salut, c’est Neus. J’ai douze ans et j’habite à Valence. Ma mère est médecin et mon père est cuisinier. Je suis grande et mince, et je porte toujours une montre. Aujourd’hui, je suis contente parce que les horloges fonctionnent. Aujourd’hui, au déjeuner, je vais manger de la paella avec mes nouveaux amis.",
             "voz": "neus",
-            "audio": "neus.9ccd61989c"
+            "audio": "neus.f89dc4698c"
           },
           "preguntas": [
             {
@@ -5062,10 +5068,10 @@
             },
             {
               "pregunta": {
-                "es": "¿Qué va a hacer por la tarde?",
-                "fr": "Que va-t-elle faire l’après-midi ?",
+                "es": "¿Qué va a hacer hoy a mediodía?",
+                "fr": "Que va-t-elle faire aujourd’hui au déjeuner ?",
                 "voz": "narrador",
-                "audio": "narrador.888285fbed"
+                "audio": "narrador.0285e76aee"
               },
               "opciones": [
                 {
