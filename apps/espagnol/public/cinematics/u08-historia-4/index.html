@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-historia-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .sl { position: absolute; left: 0; top: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #bloom { position: absolute; inset: 0; z-index: 15; opacity: 0; background: radial-gradient(ellipse at 70% 30%, #fff3d1, rgba(255,243,209,.55) 70%); pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-historia-4" data-start="0" data-width="1920" data-height="1200" data-duration="10.74">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.74" data-media-start="27.655" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.54,"v":1},{"t":10.74,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.4c86057236.mp3" data-start="0.6" data-duration="2.961" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/camila.579b47878b.mp3" data-start="3.861" data-duration="5.929" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.3" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="1" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.861" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="9.44" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-historia-4","cinematica":"u08-historia","part":4,"parts":4,"total":10.74,"meta":{"cinematica":"u08-historia","titulo":"Las calles sin nombre","tipo":"historia","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":4,"t0":0,"t1":10.49,"vista":"Vue vers le haut : la colline de Monserrate dans la brume et, sur le sanctuaire, un point vert qui brille. Le Quetzal le montre du bec.","camara":"","rotulo":"","personajes":["quetzal","camila","marina","viajero"],"lines":[{"who":"quetzal","es":"La pluma… está arriba, en Monserrate.","key":"quetzal.4c86057236","t":0.6,"d":2.961,"words":[{"w":"La","t":0.6,"d":0.216},{"w":"pluma…","t":0.816,"d":0.406},{"w":"está","t":1.518,"d":0.337},{"w":"arriba,","t":1.855,"d":0.462},{"w":"en","t":2.592,"d":0.188},{"w":"Monserrate.","t":2.78,"d":0.631}]},{"who":"camila","es":"Para devolver las palabras a las calles, tienen que decir dónde está cada cosa. ¡Vamos!","key":"camila.579b47878b","t":3.861,"d":5.929,"words":[{"w":"Para","t":3.861,"d":0.283},{"w":"devolver","t":4.144,"d":0.493},{"w":"las","t":4.638,"d":0.231},{"w":"palabras","t":4.869,"d":0.493},{"w":"a","t":5.362,"d":0.126},{"w":"las","t":5.488,"d":0.231},{"w":"calles,","t":5.719,"d":0.388},{"w":"tienen","t":6.476,"d":0.44},{"w":"que","t":6.916,"d":0.262},{"w":"decir","t":7.177,"d":0.38},{"w":"dónde","t":7.557,"d":0.38},{"w":"está","t":7.938,"d":0.321},{"w":"cada","t":8.259,"d":0.321},{"w":"cosa.","t":8.58,"d":0.321},{"w":"¡Vamos!","t":9.26,"d":0.38}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-magic"},{"t":1,"f":"ui/star"},{"t":3.861,"f":"ui/pop"},{"t":9.44,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P = C.planOf(PLAN, 4), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        // décor : le panorama de Bogotá au crépuscule, empilé en calques absolus (le sol pavé est sous les personnages)
+        var sk = Q.bogotaSkyline({ uid: "bg" });
+        var wrap = function (h, c) { return '<div class="sl ' + c + '" data-layout-allow-overflow>' + h + "</div>"; };
+        var set = { back: wrap(sk.sky, "sk-sky") + wrap(sk.sun, "sk-sun") + wrap(sk.far, "sk-far") + wrap(sk.mid, "sk-mid") + wrap(sk.near, "sk-near"), front: "", light: "", W: sk.W, H: sk.H };
+        var room = S.set($("#stage"), set, { below: "#654A33", motes: 18, moteColors: ["#FFE9A8", "#FFD9A0", "#FFFFFF"] });
+        var back = room.back;
+        var rays = back.querySelector(".sk-rays");
+        tl.fromTo(rays, { rotation: 0, svgOrigin: rays.dataset.px + " " + rays.dataset.py }, { rotation: 18, svgOrigin: rays.dataset.px + " " + rays.dataset.py, duration: T, ease: "none" }, 0);
+        tl.fromTo(back.querySelector(".sk-disc"), { scale: 0.97, svgOrigin: sk.sunX + " " + sk.sunY }, { scale: 1.03, svgOrigin: sk.sunX + " " + sk.sunY, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.8) }, 0);
+        back.querySelectorAll(".m-cloud").forEach(function (c, i) { tl.to(c, { x: 60 + (i % 3) * 40, duration: T, ease: "none" }, 0); });
+        back.querySelectorAll(".bg-mist").forEach(function (m, i) { tl.to(m, { x: i % 2 ? -90 : 90, duration: T, ease: "sine.inOut" }, 0); });
+        back.querySelectorAll("rect[fill='#FFD98A']").forEach(function (r, i) { if (i % 6 === 0) tl.to(r, { opacity: 0.4, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.4 + (i % 7) * 0.6); });
+        // le bus rouge traverse la rue, derrière les personnages
+        var bus = back.querySelector(".bg-buswrap");
+        tl.fromTo(bus, { x: -800 }, { x: 3500, duration: T + 3, ease: "none" }, -0.5);
+        // le point vert de la plume, au sommet de Monserrate : halo qui respire (≥ 1,2 s par cycle)
+        var dot = back.querySelector(".bg-pdot");
+        tl.set(dot, { opacity: 0 }, 0);
+        tl.fromTo(dot, { opacity: 0, scale: 0.4, svgOrigin: dot.dataset.px + " " + dot.dataset.py }, { opacity: 1, scale: 1, svgOrigin: dot.dataset.px + " " + dot.dataset.py, duration: 0.7, ease: "back.out(1.8)", immediateRender: false }, L1.t + 1.2);
+        tl.fromTo(dot.querySelector("circle"), { opacity: 0.2 }, { opacity: 0.6, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L1.t, 1.3) + 1 }, L1.t + 1.9);
+        C.bloom(tl, "#bloom", L1.t + 1.2, 0.18, 0.4, 0.9);
+
+        // ---------- les quatre dans la rue, regardant la montagne ----------
+        var ale = S.chr(room.actors, "viajero", 1500, 1070, 340), mar = S.chr(room.actors, "marina", 1670, 1060, 332), cam = S.chr(room.actors, "camila", 1880, 1070, 346);
+        [ale, mar, cam].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); Q.charBlink(tl, c.svg, 2.0 + i * 1.3); });
+        var qz = S.quetzal(room.actors, 1745, 790, 200, "perched", false, "qh4");
+        // le Quetzal s'envole vers le sanctuaire et le montre du bec
+        var tF = L1.t - 0.15;
+        Q.quetzalPoseTo(tl, qz, "fly", tF, 0.3);
+        Q.quetzalFlap(tl, qz, tF + 0.1, 9, 0.38, 0.9);
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: 0 }, { x: 200, y: -260 }, { x: 420, y: -430 }, { x: 560, y: -470 }], curviness: 1.3 }, duration: 1.5, ease: "sine.inOut" }, tF);
+        C.talkQuetzal(tl, qz, L1);
+        tl.to(qz, { y: "-=18", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 3 }, tF + 1.6);
+        var tR = L2.t - 0.4;
+        tl.to(qz, { motionPath: { path: [{ x: 560, y: -470 }, { x: 300, y: -250 }, { x: 40, y: -40 }, { x: 0, y: -8 }], curviness: 1.2 }, duration: 1.1, ease: "sine.inOut" }, tR);
+        Q.quetzalPoseTo(tl, qz, "perched", tR + 1.05, 0.4);
+        Q.quetzalBlink(tl, qz, L2.t + L2.d + 0.2);
+        // regards levés : les trois lèvent le bras vers la montagne ; Camila explique puis « ¡Vamos! »
+        [ale, mar].forEach(function (c) { Q.charEmote(tl, c.svg, L1.t, "happy", 0.3); });
+        var aR = cam.svg.querySelector(".c-armR");
+        tl.to(aR, { rotation: -150, svgOrigin: "258 306", duration: 0.5, ease: "back.out(1.5)" }, L1.t + 1.4);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, L2.t - 0.2);
+        C.talkBounce(tl, cam.b, L2, 6); C.talkChar(tl, cam, L2);
+        Q.charEmote(tl, cam.svg, L2.t, "happy", 0.3);
+        var tV = L2.t + L2.d - 0.7;
+        S.hop(tl, cam, tV, 44); S.hop(tl, mar, tV + 0.15, 34); S.hop(tl, ale, tV + 0.3, 34);
+        // étincelles douces autour du sommet
+        for (var k = 0; k < 8; k++) {
+          var sp = mkp(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>', sk.mont.x - 70 + (k % 4) * 46, sk.mont.y - 50 + Math.floor(k / 4) * 60);
+          var ts = L1.t + 1.4 + k * 0.28;
+          tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.5, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(sp, { y: "+=40", scale: 0, opacity: 0, duration: 0.6, ease: "power2.in" }, ts + 0.5);
+        }
+
+        // ---------- caméra : plan large de la rue -> le sommet de Monserrate (le point vert) -> retour sur le groupe ----------
+        S.camSet(room, 1800, 700, 1.0);
+        S.cam(tl, room, 1950, 640, 0.95, 0, L1.t + 0.4, "sine.inOut");
+        S.cam(tl, room, sk.mont.x - 20, sk.mont.y + 40, 2.1, L1.t + 0.5, 1.7, "power2.inOut");
+        S.cam(tl, room, 1800, 760, 1.0, tR, 1.4, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 8, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-historia-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-capsula-candelaria-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .pcard { position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .pcard svg { display: block; }
+      .gframe { position: absolute; left: 0; top: 0; border: 10px solid #ffc83d; border-radius: 30px; opacity: 0; z-index: 7; }
+      .cnt { position: absolute; left: 96px; top: 470px; z-index: 10; font: 400 190px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #c8283a, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .cntl { position: absolute; left: 104px; top: 700px; z-index: 10; font: 900 46px/1 Nunito, sans-serif; color: #fcc919; letter-spacing: .1em; text-transform: uppercase; }
+      .ab { position: absolute; left: 0; top: 0; }
+      #p1 .cap-ttl { font-size: 46px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-capsula-candelaria-4" data-start="0" data-width="1920" data-height="1200" data-duration="7.103">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.103" data-media-start="25.071" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.903,"v":1},{"t":7.103,"v":0}]}]}'></audio>
+      <audio id="a-voz-5-1" src="./assets/voz/narrador.fb05da86de.mp3" data-start="0.6" data-duration="5.253" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="2.086" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="5.153" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/level-up.mp3" data-start="6.203" data-duration="0.37" data-track-index="6" data-volume="0.35"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-capsula-candelaria-4","cinematica":"u08-capsula-candelaria","part":4,"parts":4,"total":7.103,"meta":{"cinematica":"u08-capsula-candelaria","titulo":"La Candelaria y Monserrate","tipo":"capsula","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":5,"t0":0,"t1":6.853,"vista":"Un dimanche, de grandes avenues fermées aux voitures : des centaines de cyclistes, des familles qui marchent et courent.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Los domingos, más de cien kilómetros de calles están cerradas a los coches: ¡es la Ciclovía!","key":"narrador.fb05da86de","t":0.6,"d":5.253,"words":[{"w":"Los","t":0.6,"d":0.214},{"w":"domingos,","t":0.814,"d":0.458},{"w":"más","t":1.493,"d":0.214},{"w":"de","t":1.707,"d":0.166},{"w":"cien","t":1.873,"d":0.263},{"w":"kilómetros","t":2.136,"d":0.555},{"w":"de","t":2.691,"d":0.166},{"w":"calles","t":2.857,"d":0.361},{"w":"están","t":3.218,"d":0.312},{"w":"cerradas","t":3.529,"d":0.458},{"w":"a","t":3.987,"d":0.117},{"w":"los","t":4.104,"d":0.214},{"w":"coches:","t":4.319,"d":0.361},{"w":"¡es","t":4.809,"d":0.188},{"w":"la","t":4.997,"d":0.188},{"w":"Ciclovía!","t":5.184,"d":0.518}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":2.086,"f":"ui/pop"},{"t":5.153,"f":"ui/star"},{"t":6.203,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var T = PLAN.total;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "La Candelaria y Monserrate", 0.15);
+
+        // ============ Ciclovía : l'avenue fermée aux voitures, cyclistes et familles, +100 km ============
+        var tDom = C.wordT(PLAN, 5, 1, 1), tKm = C.wordT(PLAN, 5, 1, 5), tCoc = C.wordT(PLAN, 5, 1, 13), tCic = C.wordT(PLAN, 5, 1, 16);
+        var card = mk(p1, "pcard"); card.style.cssText += ";width:960px;height:439px"; gsap.set(card, { x: 860, y: 300 });
+        card.innerHTML = Q.bgCiclovia({ width: 960, uid: "cv" });
+        tl.set(card, { opacity: 0 }, 0);
+        tl.fromTo(card, { opacity: 0, y: 300 + 160, rotation: 3 }, { opacity: 1, y: 300, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, 0.3);
+        // cyclistes et piétons : éléments DOM qui traversent la carte (clippés par le cadre)
+        var cols = ["#d8283a", "#2f6fd0", "#fcc919", "#1fa26b", "#e5638a", "#ee8a3c"];
+        for (var i = 0; i < 6; i++) {
+          var lane = 262 + (i % 3) * 46, sz = 110 + (i % 3) * 12;
+          var d = mk(card, "ab", Q.bgCyclist({ width: sz, c: cols[i] })); d.style.zIndex = 3;
+          var x0 = -200 - i * 230, x1 = 1100;
+          tl.fromTo(d, { x: x0, y: lane }, { x: x1, y: lane, duration: Math.max(5.6, T - 0.4) * (0.9 + (i % 3) * 0.1), ease: "none", immediateRender: false }, 0.3 + (i % 2) * 0.2);
+          d.querySelectorAll(".bg-wheel").forEach(function (w) { tl.to(w, { rotation: 360, svgOrigin: w.dataset.px + " " + w.dataset.py, duration: 0.9, ease: "none", repeat: Math.floor(T / 0.9) }, 0.3); });
+          tl.to(d, { y: lane - 5, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: Math.floor(T / 0.45) }, 0.3);
+        }
+        for (var j = 0; j < 4; j++) {
+          var w = mk(card, "ab", Q.bgWalker({ width: 60, c: cols[(j + 2) % 6], p: j % 2 ? "#2f4a86" : "#3d4468" })); w.style.zIndex = 3;
+          var ly = 300 + (j % 2) * 36, xs = 100 + j * 270;
+          tl.fromTo(w, { x: xs, y: ly }, { x: xs + 360, y: ly, duration: T, ease: "none", immediateRender: false }, 0.3);
+          tl.to(w, { y: ly - 8, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: Math.floor(T / 0.3) }, 0.3);
+        }
+        var gf = mk(p1, "gframe"); gf.style.cssText += ";width:984px;height:463px"; gsap.set(gf, { x: 848, y: 288 });
+        tl.fromTo(gf, { opacity: 0, scale: 0.97 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)", immediateRender: false }, tCic - 0.1);
+        tl.to(gf, { opacity: 0, duration: 0.4 }, tCic + 1.4);
+        var cnt = mk(p1, "cnt", '<span id="cv2">0</span>'), cl = mk(p1, "cntl", "kilómetros sin coches");
+        tl.set([cnt, cl], { opacity: 0 }, 0);
+        tl.fromTo([cnt, cl], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, tKm - 0.7);
+        var prog = { v: 0 }, cv = $("#cv2");
+        tl.to(prog, { v: 100, duration: 1.0, ease: "power1.inOut", onUpdate: function () { cv.textContent = prog.v >= 99.5 ? "+100" : String(Math.round(prog.v)); } }, tKm - 0.6);
+        // panneau « sans voiture » : une voiture barrée, qui apparaît par l'échelle
+        var ns = mk(p1, "ab", '<svg width="170" height="170" viewBox="0 0 170 170"><circle cx="85" cy="85" r="76" fill="#fff" stroke="#d8283a" stroke-width="14"/><path d="M42 98h86l-10 -26h-60Z M36 98v22h98v-22Z" fill="#2a2a3a"/><circle cx="62" cy="122" r="11" fill="#2a2a3a"/><circle cx="108" cy="122" r="11" fill="#2a2a3a"/><path d="M34 34L136 136" stroke="#d8283a" stroke-width="14" stroke-linecap="round"/></svg>'); ns.style.zIndex = 12; gsap.set(ns, { x: 1690, y: 205 });
+        popS(ns, tCoc - 0.05, 4);
+        var c1 = Cap.chip(p1, "los domingos", 880, 200, "gold"); popS(c1, tDom - 0.05, 3);
+        var c2 = Cap.chip(p1, "¡Ciclovía!", 1150, 715, "pink"); popS(c2, tCic - 0.05, -2);
+        Cap.sparks(tl, p1, 1340, 520, tCic + 0.1, 10, "#cfe9f5");
+
+        C.frame(tl, root, PLAN, { seed: 16, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-capsula-candelaria-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

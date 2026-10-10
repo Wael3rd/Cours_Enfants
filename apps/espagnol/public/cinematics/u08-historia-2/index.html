@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .bgd { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="7.915">
+      <div id="stage"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.915" data-media-start="10.562" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.615,"v":1},{"t":7.915,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/camila.5a6f2d2592.mp3" data-start="0.7" data-duration="4.465" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/marina.7a52ec38e9.mp3" data-start="5.465" data-duration="1.6" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.65" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="2.3" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="5.415" data-duration="0.1" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="7.615" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-historia-2","cinematica":"u08-historia","part":2,"parts":4,"total":7.915,"meta":{"cinematica":"u08-historia","titulo":"Las calles sin nombre","tipo":"historia","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":2,"t0":0,"t1":7.665,"vista":"Camila montre les panneaux de rue : tout blancs, sans une lettre. Sur une grande carte de la ville, il n’y a plus de noms. Des passants tournent en rond, perdus.","camara":"plans de détail sur les panneaux vides","rotulo":"","personajes":["camila","marina"],"lines":[{"who":"camila","es":"Pero hay un problema: los letreros no tienen letras y los mapas están en blanco.","key":"camila.5a6f2d2592","t":0.7,"d":4.465,"words":[{"w":"Pero","t":0.7,"d":0.251},{"w":"hay","t":0.951,"d":0.205},{"w":"un","t":1.156,"d":0.158},{"w":"problema:","t":1.314,"d":0.438},{"w":"los","t":2.009,"d":0.212},{"w":"letreros","t":2.221,"d":0.453},{"w":"no","t":2.673,"d":0.164},{"w":"tienen","t":2.837,"d":0.356},{"w":"letras","t":3.194,"d":0.356},{"w":"y","t":3.55,"d":0.116},{"w":"los","t":3.666,"d":0.212},{"w":"mapas","t":3.878,"d":0.308},{"w":"están","t":4.186,"d":0.308},{"w":"en","t":4.494,"d":0.164},{"w":"blanco.","t":4.658,"d":0.356}]},{"who":"marina","es":"¿Y quién roba las letras?","key":"marina.7a52ec38e9","t":5.465,"d":1.6,"words":[{"w":"¿Y","t":5.465,"d":0.134},{"w":"quién","t":5.599,"d":0.357},{"w":"roba","t":5.956,"d":0.301},{"w":"las","t":6.257,"d":0.245},{"w":"letras?","t":6.502,"d":0.413}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.65,"f":"ui/pop"},{"t":2.3,"f":"ui/tick"},{"t":5.415,"f":"ui/pop"},{"t":7.615,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], L2 = P.lines[1], T = PLAN.total;
+        var set = Q.calleCandelaria({ uid: "cc" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 12 });
+        S.drift(tl, room, T);
+
+        // ---------- panneaux de rue sans lettres + grand plan de la ville en blanc ----------
+        var posts = set.signs.map(function (s, i) { return mkp(room.qlayer, "bgd", Q.bgSignPost({ width: s.w, uid: "sp" + i, letters: false }), s.x - s.w / 2, set.floor + 30 - Math.round(s.w * 520 / 240)); });
+        var map = mkp(room.qlayer, "bgd", Q.bgCityMap({ width: set.map.w, uid: "cm", names: false }), set.map.x, set.map.y);
+        var rings = [0, 1].map(function (i) { return mkp(room.qlayer, "ring", "", set.signs[i].x, 560); });
+        var ringM = mkp(room.qlayer, "ring", "", set.map.x + set.map.w / 2, set.map.y + set.map.h / 2);
+        var tSign = C.wordT(PLAN, 2, 1, 6), tMap = C.wordT(PLAN, 2, 1, 12);
+        rings.forEach(function (r, i) {
+          tl.fromTo(r, { opacity: 0, scale: 0.4 }, { opacity: 0.95, scale: 1.3, duration: 0.5, ease: "back.out(1.8)", immediateRender: false }, tSign - 0.1 + i * 0.35);
+          tl.to(r, { opacity: 0, scale: 1.7, duration: 0.5, ease: "power2.in" }, tSign + 0.9 + i * 0.35);
+        });
+        tl.fromTo(ringM, { opacity: 0, scale: 0.4 }, { opacity: 0.95, scale: 2.4, duration: 0.5, ease: "back.out(1.8)", immediateRender: false }, tMap - 0.1);
+        tl.to(ringM, { opacity: 0, scale: 3, duration: 0.5, ease: "power2.in" }, tMap + 0.9);
+        tl.to(map, { rotation: 1.4, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 2.2) + 1, transformOrigin: "50% 0%" }, 0);
+
+        // ---------- Alex, Marina (+ Quetzal), Camila ----------
+        var ale = S.chr(room.actors, "viajero", 700, 1040, 330), mar = S.chr(room.actors, "marina", 880, 1030, 322), cam = S.chr(room.actors, "camila", 1400, 1040, 336);
+        [ale, mar, cam].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.4); Q.charBlink(tl, mar.svg, 4.1); Q.charBlink(tl, cam.svg, 3.3);
+        var qz = S.quetzal(room.actors, 975, 770, 190, "perched", false, "qh2");
+        Q.quetzalBlink(tl, qz, 1.9); Q.quetzalBlink(tl, qz, 5.2);
+        C.talkBounce(tl, cam.b, L1, 5); C.talkChar(tl, cam, L1);
+        Q.charEmote(tl, cam.svg, L1.t, "worry", 0.3);
+        // Camila montre les panneaux puis le plan (bras tendu)
+        var aR = cam.svg.querySelector(".c-armR"), aL = cam.svg.querySelector(".c-armL");
+        tl.to(aL, { rotation: 70, svgOrigin: "142 306", duration: 0.45, ease: "back.out(1.6)" }, tSign - 0.1);
+        tl.to(aL, { rotation: 0, svgOrigin: "142 306", duration: 0.5, ease: "power2.inOut" }, tSign + 1.3);
+        tl.to(aR, { rotation: -75, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tMap - 0.1);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, tMap + 1.2);
+        // Marina pose la question
+        C.talkChar(tl, mar, L2); Q.charEmote(tl, mar.svg, L2.t, "worry", 0.25);
+        S.hop(tl, mar, L2.t - 0.15, 22);
+        Q.charNod(tl, ale.svg, L2.t + 0.6, 5, 0.2);
+
+        // ---------- passants perdus : ils tournent en rond (marche, demi-tour) ----------
+        var her = S.chr(room.actors, "hernan", 1760, 1040, 318), mrt = S.chr(room.actors, "marta", 2300, 1040, 306);
+        S.breathe(tl, her, 0, 1, 0.8); S.breathe(tl, mrt, 0, 1, 0.8);
+        Q.charEmote(tl, her.svg, 0, "worry", 0.2); Q.charEmote(tl, mrt.svg, 0, "worry", 0.2);
+        var loop = function (ch, xs, t0, dur) {
+          var t = t0;
+          for (var i = 0; i < xs.length - 1; i++) {
+            tl.set(ch.b, { scaleX: xs[i + 1] < xs[i] ? -1 : 1 }, t);
+            S.walk(tl, ch, xs[i], xs[i + 1], t, dur, 0.3, "sine.inOut");
+            t += dur + 0.35;
+          }
+        };
+        loop(her, [1760, 1980, 1760, 1980, 1800], 0.2, 1.4);
+        loop(mrt, [2300, 2120, 2380, 2120, 2300], 0.6, 1.3);
+
+        // ---------- caméra : sur le groupe -> les panneaux -> le plan -> recul ----------
+        S.camSet(room, 1200, 700, 1.15);
+        S.cam(tl, room, 1230, 650, 1.55, tSign - 0.5, 0.9, "power2.inOut");
+        S.cam(tl, room, 2650, 560, 1.75, tMap - 0.7, 1.0, "power2.inOut");
+        S.cam(tl, room, 1500, 720, 0.98, L2.t - 0.5, 0.9, "power2.inOut");
+        tl.fromTo("#stage", { rotation: 0.6, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.2, ease: "power2.out" }, 0);
+
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

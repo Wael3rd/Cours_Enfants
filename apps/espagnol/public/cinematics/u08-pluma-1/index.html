@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-pluma-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .bgd { position: absolute; left: 0; top: 0; }
+      .fth { position: absolute; left: 0; top: 0; z-index: 12; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #bloom { position: absolute; inset: 0; z-index: 15; opacity: 0; background: radial-gradient(ellipse at 60% 40%, #fff3d1, rgba(255,243,209,.55) 70%); pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-pluma-1" data-start="0" data-width="1920" data-height="1200" data-duration="9.483">
+      <div id="stage"></div>
+      <div id="bloom"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.483" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.183,"v":1},{"t":9.483,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/camila.e2526f1974.mp3" data-start="0.6" data-duration="3.518" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.a39e38d836.mp3" data-start="4.918" data-duration="3.615" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.1" data-duration="1.104" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="0.6" data-duration="0.526" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="0.55" data-duration="0.1" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/level-up-big.mp3" data-start="4.918" data-duration="1.015" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-pluma-1","cinematica":"u08-pluma","part":1,"parts":2,"total":9.483,"meta":{"cinematica":"u08-pluma","titulo":"Octava pluma","tipo":"pluma","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":1,"t0":0,"t1":4.518,"vista":"Au sommet de Monserrate, dans le jardin du sanctuaire, la plume verte brille. En bas, les panneaux de la ville retrouvent leurs lettres, une à une.","camara":"","rotulo":"","personajes":["camila"],"lines":[{"who":"camila","es":"¡Las calles tienen nombre otra vez! ¡Gracias!","key":"camila.e2526f1974","t":0.6,"d":3.518,"words":[{"w":"¡Las","t":0.6,"d":0.311},{"w":"calles","t":0.911,"d":0.523},{"w":"tienen","t":1.434,"d":0.523},{"w":"nombre","t":1.958,"d":0.523},{"w":"otra","t":2.481,"d":0.382},{"w":"vez!","t":2.863,"d":0.311},{"w":"¡Gracias!","t":3.374,"d":0.594}]}]},{"n":2,"t0":4.518,"t1":9.233,"vista":"Le Quetzal s’envole au-dessus des nuages, ses plumes éclatent de vert.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Ocho plumas. ¡Casi vuelo hasta las nubes!","key":"quetzal.a39e38d836","t":4.918,"d":3.615,"words":[{"w":"Ocho","t":4.918,"d":0.387},{"w":"plumas.","t":5.305,"d":0.53},{"w":"¡Casi","t":6.892,"d":0.278},{"w":"vuelo","t":7.17,"d":0.329},{"w":"hasta","t":7.499,"d":0.329},{"w":"las","t":7.828,"d":0.226},{"w":"nubes!","t":8.054,"d":0.329}]}]}],"sfx":[{"t":0.1,"f":"rpg/spell-magic"},{"t":0.6,"f":"rpg/item-get"},{"t":0.55,"f":"ui/pop"},{"t":4.918,"f":"rpg/level-up-big"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var set = Q.calleCandelaria({ uid: "cc" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 16 });
+        S.drift(tl, room, T);
+
+        // ---------- poteaux et plan : les lettres reviennent une à une ----------
+        var posts = set.signs.map(function (s, i) { return mkp(room.qlayer, "bgd", Q.bgSignPost({ width: s.w, uid: "sp" + i, letters: true }), s.x - s.w / 2, set.floor + 30 - Math.round(s.w * 520 / 240)); });
+        var map = mkp(room.qlayer, "bgd", Q.bgCityMap({ width: set.map.w, uid: "cm", names: true }), set.map.x, set.map.y);
+        var lets = [];
+        posts.concat([map]).forEach(function (el) { el.querySelectorAll(".bg-let").forEach(function (g) { lets.push(g); }); });
+        lets.forEach(function (g) { tl.set(g, { opacity: 0 }, 0); });
+        var tLet = 1.7;
+        lets.forEach(function (g, i) {
+          tl.fromTo(g, { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(2)", immediateRender: false }, tLet + (i / lets.length) * (L1.t + L1.d - tLet - 0.6));
+        });
+
+        // ---------- les trois dans la rue ----------
+        var mar = S.chr(room.actors, "marina", 1000, 1040, 322), ale = S.chr(room.actors, "viajero", 1180, 1050, 330), cam = S.chr(room.actors, "camila", 1420, 1050, 336);
+        [mar, ale, cam].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, mar.svg, 2.4); Q.charBlink(tl, ale.svg, 4.0); Q.charBlink(tl, cam.svg, 3.1);
+
+        // ---------- la plume se détache du sanctuaire, tombe en oscillant et finit dans la main d'Álex ----------
+        var dot = room.back.querySelector(".bg-pdot");
+        var fe = mkp(room.qlayer, "fth", Q.featherSvg({ uid: "fe", width: 54, height: 160 }), 1513 - 27, 123 - 80);
+        fe.firstChild.style.overflow = "visible";
+        var tFe = 0.3;
+        tl.fromTo(fe, { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)", immediateRender: false }, tFe);
+        if (dot) tl.to(dot, { opacity: 0, duration: 0.5 }, tFe);
+        tl.to(fe, { motionPath: { path: [{ x: 1486, y: 43 }, { x: 1420, y: 220 }, { x: 1330, y: 360 }, { x: 1300, y: 560 }, { x: 1235, y: 700 }, { x: 1225, y: 770 }].map(function (p) { return { x: p.x - 1486, y: p.y - 43 }; }), curviness: 1.1 }, rotation: -25, duration: 2.1, ease: "sine.inOut" }, tFe + 0.5);
+        C.bloom(tl, "#bloom", tFe + 0.2, 0.18, 0.4, 0.9);
+        var aR = ale.svg.querySelector(".c-armR");
+        tl.to(aR, { rotation: -105, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tFe + 1.7);
+        tl.to(aR, { rotation: -90, svgOrigin: "258 306", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, tFe + 2.2);
+        tl.to(fe, { scale: 0.7, opacity: 0, duration: 0.5, ease: "power2.in" }, W - 0.7);
+        tl.to(aR, { rotation: 0, svgOrigin: "258 306", duration: 0.5, ease: "power2.inOut" }, W - 0.5);
+        // Camila remercie : saut de joie
+        C.talkBounce(tl, cam.b, L1, 5); C.talkChar(tl, cam, L1);
+        Q.charEmote(tl, cam.svg, L1.t, "happy", 0.3);
+        S.hop(tl, cam, L1.t + 0.2, 40); S.hop(tl, mar, L1.t + 0.7, 30);
+        Q.charWave(tl, cam.svg, L1.t + L1.d - 1.5, 1.0, "R");
+
+        // ---------- le Quetzal (huit plumes) s'envole vers les nuages ----------
+        var qz = S.quetzal(room.actors, 1095, 770, 200, "perched", false, "qp1");
+        Q.quetzalBlink(tl, qz, 2.0);
+        var tF = W + 0.05;
+        Q.quetzalPoseTo(tl, qz, "fly", tF, 0.3);
+        Q.quetzalFlap(tl, qz, tF + 0.1, 12, 0.38, 1.0);
+        var path = [{ x: 0, y: 0 }, { x: 110, y: -150 }, { x: 260, y: -300 }, { x: 420, y: -430 }, { x: 560, y: -520 }, { x: 640, y: -540 }];
+        tl.to(qz, { motionPath: { path: path, curviness: 1.3 }, scale: 1.25, duration: Math.max(2.4, L2.t + L2.d - tF - 0.4), ease: "sine.inOut", transformOrigin: "50% 60%" }, tF);
+        C.talkQuetzal(tl, qz, L2);
+        for (var k = 0; k < 12; k++) {
+          var pt = path[Math.min(path.length - 1, 1 + ((k * 5) / 12) | 0)], sp = mkp(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#9bffd6"/></svg>', 1095 + pt.x + (k % 3) * 22, 770 + pt.y + (k % 2) * 30);
+          var ts = tF + 0.3 + (k / 12) * 2.2;
+          tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.5, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(sp, { y: "+=60", scale: 0, opacity: 0, duration: 0.6, ease: "power2.in" }, ts + 0.5);
+        }
+        C.bloom(tl, "#bloom", tF + 1.6, 0.16, 0.5, 1.0);
+        [mar, ale, cam].forEach(function (c, i) { Q.charEmote(tl, c.svg, tF, "happy", 0.3); S.hop(tl, c, tF + 0.2 + i * 0.15, 26); });
+
+        // ---------- caméra : sommet (la plume) -> descente vers les panneaux -> montée avec le Quetzal ----------
+        S.camSet(room, 1500, 420, 1.9);
+        S.cam(tl, room, 1280, 660, 1.0, 0.7, 2.0, "power2.inOut");
+        S.cam(tl, room, 1330, 700, 1.0, 2.7, W - 3.4, "sine.inOut");
+        S.cam(tl, room, 1500, 480, 1.3, W + 0.35, 2.4, "power2.inOut");
+
+        C.frame(tl, root, PLAN, { seed: 10, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-pluma-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

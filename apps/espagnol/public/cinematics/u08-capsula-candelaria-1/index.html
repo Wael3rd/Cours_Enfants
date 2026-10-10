@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-capsula-candelaria-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1, #p2 { position: absolute; inset: 0; }
+      #p2 { visibility: hidden; }
+      .pap { position: absolute; left: 0; top: 0; z-index: 6; }
+      .pcard { position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .pcard svg { display: block; }
+      .gframe { position: absolute; left: 0; top: 0; border: 10px solid #ffc83d; border-radius: 30px; opacity: 0; z-index: 7; }
+      #cnt { position: absolute; left: 96px; top: 470px; z-index: 10; font: 400 230px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #c8283a, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+      #cntl { position: absolute; left: 104px; top: 730px; z-index: 10; font: 900 50px/1 Nunito, sans-serif; color: #fcc919; letter-spacing: .1em; text-transform: uppercase; }
+      .bgl { position: absolute; left: 0; top: 0; z-index: 8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-capsula-candelaria-1" data-start="0" data-width="1920" data-height="1200" data-duration="11.514">
+      <div id="p1" data-layout-allow-overflow></div>
+      <div id="p2" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="11.514" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":11.214,"v":1},{"t":11.514,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.e4d2c60d05.mp3" data-start="0.6" data-duration="4.058" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.363c0a6495.mp3" data-start="5.858" data-duration="4.606" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/star.mp3" data-start="1.424" data-duration="0.121" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.477" data-duration="0.1" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="5.258" data-duration="0.212" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="7.417" data-duration="0.1" data-track-index="7" data-volume="0.45"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/step-00.mp3" data-start="6.258" data-duration="0.233" data-track-index="8" data-volume="0.2"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/pop.mp3" data-start="8.701" data-duration="0.1" data-track-index="9" data-volume="0.45"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-capsula-candelaria-1","cinematica":"u08-capsula-candelaria","part":1,"parts":4,"total":11.514,"meta":{"cinematica":"u08-capsula-candelaria","titulo":"La Candelaria y Monserrate","tipo":"capsula","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":1,"t0":0,"t1":5.358,"vista":"Style explainer, papier découpé : une carte de la Colombie, un point sur Bogotá, l’année « 1538 » s’inscrit en gros chiffres.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Bogotá nace en 1538, en el barrio de La Candelaria.","key":"narrador.e4d2c60d05","t":0.6,"d":4.058,"words":[{"w":"Bogotá","t":0.6,"d":0.505},{"w":"nace","t":1.105,"d":0.369},{"w":"en","t":1.474,"d":0.232},{"w":"1538,","t":1.706,"d":0.369},{"w":"en","t":2.295,"d":0.232},{"w":"el","t":2.527,"d":0.232},{"w":"barrio","t":2.76,"d":0.505},{"w":"de","t":3.265,"d":0.232},{"w":"La","t":3.497,"d":0.232},{"w":"Candelaria.","t":3.729,"d":0.779}]}]},{"n":2,"t0":5.358,"t1":11.264,"vista":"Les rues de La Candelaria : pavés, maisons de couleurs, balcons, graffitis ; puis la Plaza de Bolívar avec la cathédrale et les pigeons.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Es el barrio histórico: tiene calles de piedra, casas de colores y balcones.","key":"narrador.363c0a6495","t":5.858,"d":4.606,"words":[{"w":"Es","t":5.858,"d":0.176},{"w":"el","t":6.034,"d":0.176},{"w":"barrio","t":6.21,"d":0.383},{"w":"histórico:","t":6.593,"d":0.538},{"w":"tiene","t":7.467,"d":0.296},{"w":"calles","t":7.763,"d":0.342},{"w":"de","t":8.106,"d":0.157},{"w":"piedra,","t":8.263,"d":0.342},{"w":"casas","t":8.751,"d":0.333},{"w":"de","t":9.085,"d":0.177},{"w":"colores","t":9.262,"d":0.438},{"w":"y","t":9.699,"d":0.125},{"w":"balcones.","t":9.824,"d":0.49}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.424,"f":"ui/star"},{"t":2.477,"f":"ui/pop"},{"t":5.258,"f":"ui/swoosh-out"},{"t":7.417,"f":"ui/pop"},{"t":6.258,"f":"rpg/step-00"},{"t":8.701,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        // pastille : apparition par l'échelle seule (le contrôle de contraste échantillonne les fondus)
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), W = P2.t0, T = PLAN.total;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1"), p2 = $("#p2");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "La Candelaria y Monserrate", 0.15);
+
+        // ============ PLAN 1 : la Colombie, un point sur Bogotá, 1538 ============
+        var tBog = C.wordT(PLAN, 1, 1, 1), t1538 = C.wordT(PLAN, 1, 1, 4), tCan = C.wordT(PLAN, 1, 1, 9);
+        var card = mk(p1, "pcard"); card.style.cssText += ";width:600px;height:640px"; gsap.set(card, { x: 1100, y: 200 });
+        var mb = mk(card, "bgl"); mb.style.cssText += ";left:80px;top:58px"; mb.innerHTML = Q.bgColombiaMap({ width: 440, uid: "cm" });
+        mb.firstChild.setAttribute("data-layout-allow-overflow", "");
+        tl.set(card, { opacity: 0 }, 0);
+        tl.fromTo(card, { opacity: 0, y: 200 + 160, rotation: 3 }, { opacity: 1, y: 200, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, 0.35);
+        var pin = card.querySelector(".bg-pin"), halo = card.querySelector(".bg-pin-halo");
+        tl.set(pin, { opacity: 0 }, 0);
+        tl.fromTo(pin, { opacity: 0, y: -90, svgOrigin: pin.dataset.px + " " + pin.dataset.py }, { opacity: 1, y: 0, svgOrigin: pin.dataset.px + " " + pin.dataset.py, duration: 0.5, ease: "bounce.out", immediateRender: false }, tBog + 0.2);
+        tl.fromTo(halo, { scale: 0.6, opacity: 0.1, svgOrigin: pin.dataset.px + " " + pin.dataset.py }, { scale: 1.6, opacity: 0.4, svgOrigin: pin.dataset.px + " " + pin.dataset.py, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(W, 1.3) + 1 }, tBog + 0.7);
+        var chB = Cap.chip(p1, "Bogotá", 1440, 150, "terra"); popS(chB, tBog - 0.05, 3);
+        var chC = Cap.chip(p1, "La Candelaria", 1150, 770, "gold"); popS(chC, tCan - 0.05, -2);
+        var gf = mk(p1, "gframe"); gf.style.cssText += ";width:624px;height:664px"; gsap.set(gf, { x: 1088, y: 188 });
+        tl.fromTo(gf, { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)", immediateRender: false }, t1538 - 0.1);
+        tl.to(gf, { opacity: 0, duration: 0.4 }, t1538 + 1.6);
+        // compteur 1400 -> 1538 (piloté par la progression)
+        var cnt = mk(p1, "", '<span id="cv">1400</span>'); cnt.id = "cnt";
+        var cl = mk(p1, "", "año de fundación"); cl.id = "cntl";
+        tl.set([cnt, cl], { opacity: 0 }, 0);
+        tl.fromTo([cnt, cl], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, t1538 - 0.6);
+        var prog = { v: 1400 }, cv = $("#cv");
+        tl.to(prog, { v: 1538, duration: 0.9, ease: "power2.out", onUpdate: function () { cv.textContent = String(Math.round(prog.v)); } }, t1538 - 0.5);
+        Cap.sparks(tl, p1, 1400, 480, t1538, 10, "#ffe9a8");
+        tl.to(card, { y: "-=10", duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(W, 1.3) }, 1.1);
+        // sortie vers la gauche
+        tl.to(p1, { x: -420, opacity: 0, duration: 0.4, ease: "power3.in" }, W - 0.38);
+        tl.set(p1, { visibility: "hidden" }, W + 0.02);
+
+        // ============ PLAN 2 : rues de pierre, maisons de couleurs, balcons ; la Plaza de Bolívar ============
+        tl.set(p2, { visibility: "visible" }, W - 0.25);
+        var tPie = C.wordT(PLAN, 2, 1, 6), tCol = C.wordT(PLAN, 2, 1, 9), tBal = C.wordT(PLAN, 2, 1, 13);
+        var ttl2 = Cap.title(tl, p2, "LA CANDELARIA", "Un barrio con historia", W + 0.1);
+        var sc = mk(p2, "pcard"); sc.style.cssText += ";width:650px;height:404px"; sc.innerHTML = Q.bgStreetCard({ width: 650, uid: "st" }); gsap.set(sc, { x: 96, y: 440 });
+        tl.set(sc, { opacity: 0 }, 0);
+        tl.fromTo(sc, { opacity: 0, x: 96 - 200, rotation: -3 }, { opacity: 1, x: 96, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, W + 0.2);
+        var pc = mk(p2, "pcard"); pc.style.cssText += ";width:650px;height:404px"; pc.innerHTML = Q.bgPlazaCard({ width: 650, uid: "pz" }); gsap.set(pc, { x: 1010, y: 360 });
+        tl.set(pc, { opacity: 0 }, 0);
+        tl.fromTo(pc, { opacity: 0, x: 1010 + 220, rotation: 3 }, { opacity: 1, x: 1010, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, tCol - 0.1);
+        pc.querySelectorAll(".bg-pigeon").forEach(function (g, i) {
+          var px = +g.dataset.px, py = +g.dataset.py;
+          tl.to(g, { y: -10, duration: 0.5 + (i % 3) * 0.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - tCol, 0.6) + 1 }, tCol + 0.6 + i * 0.15);
+        });
+        var c1 = Cap.chip(p2, "calles de piedra", 110, 770, "terra"); popS(c1, tPie - 0.05, -2);
+        var c2 = Cap.chip(p2, "casas de colores", 330, 410, "gold"); popS(c2, tCol - 0.05, 2);
+        var c3 = Cap.chip(p2, "balcones", 470, 770, "pink"); popS(c3, tBal - 0.05, -2);
+        var c4 = Cap.chip(p2, "Plaza de Bolívar", 1080, 760, "gold"); popS(c4, tCol + 0.5, 2);
+        Cap.sparks(tl, p2, 1330, 540, tCol + 0.3, 8, "#cfe9f5");
+        tl.to(ttl, { opacity: 0, x: -60, duration: 0.35, ease: "power2.in" }, W - 0.5);
+
+        C.frame(tl, root, PLAN, { seed: 13, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-capsula-candelaria-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

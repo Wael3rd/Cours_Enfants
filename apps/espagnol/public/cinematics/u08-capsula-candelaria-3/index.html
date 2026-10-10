@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u08-capsula-candelaria-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .pcard { position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 34px; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; background: #0d1038; }
+      .pcard svg { display: block; }
+      .gframe { position: absolute; left: 0; top: 0; border: 10px solid #ffc83d; border-radius: 30px; opacity: 0; z-index: 7; }
+      .cnt { position: absolute; left: 96px; top: 470px; z-index: 10; font: 400 190px/1 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 10px 0 #c8283a, 0 18px 0 rgba(0,0,0,.35); font-variant-numeric: tabular-nums; white-space: nowrap; }
+      .cntl { position: absolute; left: 104px; top: 700px; z-index: 10; font: 900 46px/1 Nunito, sans-serif; color: #fcc919; letter-spacing: .1em; text-transform: uppercase; }
+      .ab { position: absolute; left: 0; top: 0; }
+      #p1 .cap-ttl { font-size: 46px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u08-capsula-candelaria-3" data-start="0" data-width="1920" data-height="1200" data-duration="7.723">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.723" data-media-start="17.348" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.423,"v":1},{"t":7.723,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.cb6cd791ed.mp3" data-start="0.5" data-duration="6.073" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.358" data-duration="0.1" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="3.678" data-duration="0.1" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="5.973" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u08-capsula-candelaria-3","cinematica":"u08-capsula-candelaria","part":3,"parts":4,"total":7.723,"meta":{"cinematica":"u08-capsula-candelaria","titulo":"La Candelaria y Monserrate","tipo":"capsula","unidad":"Mi casa y mi barrio","numero":8,"lugar":"Bogotá","pluma":"Pluma del Mapa","plumaNum":8,"rotulo":"","region":"colombia"},"plans":[{"n":4,"t0":0,"t1":7.473,"vista":"Le téléphérique et le funiculaire montent vers Monserrate, un panneau indique « 3 152 m » ; la ville s’étend en bas.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Monserrate es una montaña con un santuario en la cima. Está a más de tres mil metros.","key":"narrador.cb6cd791ed","t":0.5,"d":6.073,"words":[{"w":"Monserrate","t":0.5,"d":0.7},{"w":"es","t":1.2,"d":0.209},{"w":"una","t":1.408,"d":0.27},{"w":"montaña","t":1.678,"d":0.516},{"w":"con","t":2.194,"d":0.27},{"w":"un","t":2.464,"d":0.209},{"w":"santuario","t":2.673,"d":0.638},{"w":"en","t":3.311,"d":0.209},{"w":"la","t":3.52,"d":0.209},{"w":"cima.","t":3.728,"d":0.331},{"w":"Está","t":4.41,"d":0.331},{"w":"a","t":4.741,"d":0.147},{"w":"más","t":4.889,"d":0.27},{"w":"de","t":5.159,"d":0.209},{"w":"tres","t":5.367,"d":0.331},{"w":"mil","t":5.699,"d":0.27},{"w":"metros.","t":5.969,"d":0.454}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.358,"f":"ui/pop"},{"t":3.678,"f":"ui/pop"},{"t":5.973,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var popS = function (el, at, rot) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot, y: y0 + 50 }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var T = PLAN.total;
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "La Candelaria y Monserrate", 0.15);
+
+        // ============ Monserrate : le téléphérique monte, 3 152 m ============
+        var tMon = C.wordT(PLAN, 4, 1, 1), tSan = C.wordT(PLAN, 4, 1, 7), tMas = C.wordT(PLAN, 4, 1, 13), tMet = C.wordT(PLAN, 4, 1, 17);
+        var card = mk(p1, "pcard"); card.style.cssText += ";width:840px;height:523px"; gsap.set(card, { x: 1000, y: 250 });
+        card.innerHTML = Q.bgTeleferico({ width: 840, uid: "tf" });
+        tl.set(card, { opacity: 0 }, 0);
+        tl.fromTo(card, { opacity: 0, y: 250 + 160, rotation: -3 }, { opacity: 1, y: 250, rotation: 0, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, 0.3);
+        var cab = card.querySelector(".bg-cabin");
+        // la cabine remonte le câble (110,480) -> (780,150) ; elle part en bas à gauche et arrive en haut
+        tl.fromTo(cab, { x: -300, y: 150 }, { x: 330, y: -150, duration: Math.max(3, tMet - tMon + 0.6), ease: "sine.inOut", immediateRender: false }, tMon - 0.2);
+        tl.to(cab, { rotation: 3, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.2) + 1, svgOrigin: "430 268" }, tMon + 0.5);
+        var gf = mk(p1, "gframe"); gf.style.cssText += ";width:864px;height:547px"; gsap.set(gf, { x: 988, y: 238 });
+        tl.fromTo(gf, { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)", immediateRender: false }, tSan - 0.1);
+        tl.to(gf, { opacity: 0, duration: 0.4 }, tSan + 1.2);
+        var cnt = mk(p1, "cnt", '<span id="cv">2 600 m</span>'), cl = mk(p1, "cntl", "de altitud");
+        tl.set([cnt, cl], { opacity: 0 }, 0);
+        tl.fromTo([cnt, cl], { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out", immediateRender: false }, tMas - 0.7);
+        var prog = { v: 2600 }, cv = $("#cv");
+        tl.to(prog, { v: 3152, duration: 1.2, ease: "power2.out", onUpdate: function () { var n = Math.round(prog.v); cv.textContent = String(n).replace(/(\d)(\d{3})$/, "$1 $2") + " m"; } }, tMas - 0.6);
+        var c1 = Cap.chip(p1, "Monserrate", 1020, 160, "terra"); popS(c1, tMon - 0.05, 3);
+        var c2 = Cap.chip(p1, "santuario", 1560, 235, "gold"); popS(c2, tSan - 0.05, -2);
+        var c3 = Cap.chip(p1, "3 152 m", 1030, 710, "pink"); popS(c3, tMet - 0.05, 2);
+        Cap.sparks(tl, p1, 1730, 340, tSan + 0.1, 8, "#ffe9a8");
+        tl.to(card, { y: "-=10", duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.3) }, 1.2);
+
+        C.frame(tl, root, PLAN, { seed: 15, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u08-capsula-candelaria-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>
