@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-capsula-horarios-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .cp { position: absolute; left: 0; top: 0; z-index: 6; }
+      .ring { position: absolute; left: 0; top: 0; border: 8px solid #ffc83d; border-radius: 50%; opacity: 0; z-index: 9; }
+      .lines { position: absolute; left: 0; top: 0; z-index: 7; }
+      .sq { position: absolute; left: 0; top: 0; z-index: 6; width: 112px; height: 124px; border-radius: 22px; background: linear-gradient(180deg, #fff6dc, #f5e6c8); box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 5px #19b7aa; font: 400 66px/124px "Alfa Slab One", serif; color: #14173f; text-align: center; }
+      .sq.gold { box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 6px #ffc83d; background: linear-gradient(180deg, #ffe9a8, #ffc83d); }
+      .day { position: absolute; left: 0; top: 0; z-index: 6; width: 76px; height: 76px; border-radius: 50%; background: #f5e6c8; box-shadow: 0 6px 0 rgba(0,0,0,.35); font: 900 36px/76px Nunito, sans-serif; color: #14173f; text-align: center; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 5; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 8; width: 54px; height: 12px; border-radius: 6px; background: #ffc83d; }
+      .spk { position: absolute; left: 0; top: 0; z-index: 15; }
+      .sub-txt { font-size: 46px !important; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-capsula-horarios-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.322">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.322" data-media-start="5.429" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.022,"v":1},{"t":8.322,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.73cdb31fba.mp3" data-start="0.6" data-duration="6.672" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1.3" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="3" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="4.7" data-duration="0.1" data-track-index="6" data-volume="0.4"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="6.1" data-duration="0.1" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-capsula-horarios-2","cinematica":"u05-capsula-horarios","part":2,"parts":6,"total":8.322,"meta":{"cinematica":"u05-capsula-horarios","titulo":"Los horarios españoles y Valencia","tipo":"capsula","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":2,"t0":0,"t1":8.072,"vista":"Une frise d’une journée avec quatre assiettes qui s’allument : 8 h, 14 h, 17 h, 21 h.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El desayuno es a las ocho, la comida a las dos o las tres, la merienda a las cinco y la cena a las nueve o más tarde.","key":"narrador.73cdb31fba","t":0.6,"d":6.672,"words":[{"w":"El","t":0.6,"d":0.174},{"w":"desayuno","t":0.774,"d":0.481},{"w":"es","t":1.255,"d":0.174},{"w":"a","t":1.428,"d":0.123},{"w":"las","t":1.551,"d":0.225},{"w":"ocho,","t":1.776,"d":0.276},{"w":"la","t":2.165,"d":0.273},{"w":"comida","t":2.438,"d":0.349},{"w":"a","t":2.787,"d":0.113},{"w":"las","t":2.9,"d":0.207},{"w":"dos","t":3.107,"d":0.207},{"w":"o","t":3.315,"d":0.113},{"w":"las","t":3.428,"d":0.207},{"w":"tres,","t":3.635,"d":0.255},{"w":"la","t":4.076,"d":0.32},{"w":"merienda","t":4.395,"d":0.426},{"w":"a","t":4.821,"d":0.109},{"w":"las","t":4.93,"d":0.199},{"w":"cinco","t":5.129,"d":0.29},{"w":"y","t":5.419,"d":0.109},{"w":"la","t":5.528,"d":0.154},{"w":"cena","t":5.682,"d":0.245},{"w":"a","t":5.926,"d":0.109},{"w":"las","t":6.035,"d":0.199},{"w":"nueve","t":6.234,"d":0.29},{"w":"o","t":6.524,"d":0.109},{"w":"más","t":6.633,"d":0.199},{"w":"tarde.","t":6.832,"d":0.29}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1.3,"f":"ui/pop"},{"t":3,"f":"ui/pop"},{"t":4.7,"f":"ui/pop"},{"t":6.1,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        // apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot, y1) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot == null ? -4 : rot, y: y0 + (y1 == null ? 50 : y1) }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paper = function (el, x, y, at, rot) { gsap.set(el, { x: x, y: y, transformOrigin: "50% 50%" }); tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y + 140, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y, rotation: 0, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, at); };
+        var ringAt = function (parent, cx, cy, d, at, n) { var r = mk(parent, "ring"); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < (n || 1); k++) tl.fromTo(r, { scale: 0.6, opacity: 1 }, { scale: 1.5, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var w = function (n, k) { return C.wordT(PLAN, n, 1, k); };
+        var ttl = function (kick, title) { return Cap.title(tl, root, kick, title, 0.2); };
+        var p1 = $("#p1");
+        Cap.bg(root, p1);
+        ttl("CAPÍTULO 5 · VALENCIA", "Las comidas");
+        var keys = ["desayuno", "comida", "merienda", "cena"], names = ["desayuno", "comida", "merienda", "cena"], times = ["8 h", "14 h", "17 h", "21 h"], tl2 = [2, 8, 16, 22], tt = [6, 11, 19, 25], cls = ["gold", "terra", "pink", "gold"];
+        // arc du soleil au-dessus des assiettes : le jour qui avance
+        var arc = mk(p1, "lines", '<svg width="1920" height="1200" viewBox="0 0 1920 1200"><path d="M900 410Q1330 80 1760 410" stroke="#f5e6c8" stroke-width="5" stroke-dasharray="4 18" stroke-linecap="round" fill="none" opacity=".5"/></svg>');
+        var sun = mk(p1, "sun", '<svg width="110" height="110" viewBox="-55 -55 110 110"><g id="sunb"><circle r="36" fill="#ffc83d"/><circle r="26" fill="#ffe27a"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(function (i) { return '<path d="M0 -44L6 -56L-6 -56Z" fill="#ffc83d" transform="rotate(' + i * 45 + ')"/>'; }).join("") + '</g><g id="moonb" opacity="0"><circle r="38" fill="#f5e6c8"/><circle cx="16" cy="-8" r="32" fill="#0d1038"/></g></svg>');
+        var P = [[900, 410], [1115, 290], [1330, 245], [1545, 290], [1760, 410]];
+        gsap.set(sun, { x: P[0][0] - 55, y: P[0][1] - 55 }); tl.set(sun, { opacity: 0 }, 0); tl.set(sun, { opacity: 1 }, 0.5);
+        tl.to(sun, { motionPath: { path: P.map(function (p) { return { x: p[0] - 55, y: p[1] - 55 }; }), curviness: 1.4 }, duration: C.wordT(PLAN, 2, 1, 25) - 0.8, ease: "none" }, 0.6);
+        tl.to("#sunb", { opacity: 0, duration: 0.6 }, C.wordT(PLAN, 2, 1, 22)); tl.to("#moonb", { opacity: 1, duration: 0.6 }, C.wordT(PLAN, 2, 1, 22));
+        keys.forEach(function (k, i) {
+          var x = 130 + i * 430, pl = mk(p1, "cp cap-paper", Q.vlProp(k, { width: 320, uid: "pl" + i }));
+          gsap.set(pl, { x: x, y: 510 }); popS(pl, w(2, tl2[i]) - 0.3, i % 2 ? 4 : -4, 90);
+          var nm = Cap.chip(p1, names[i], x + 60, 440, cls[i]); popS(nm, w(2, tl2[i]) - 0.05, i % 2 ? 2 : -2);
+          var tm = Cap.chip(p1, times[i], x + 100, 850, "gold"); popS(tm, w(2, tt[i]) - 0.05, 0);
+          var gl = pl.querySelector(".vl-glow");
+          tl.fromTo(gl, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "sine.inOut", immediateRender: false }, w(2, tl2[i]));
+          tl.to(gl, { opacity: 0.35, duration: 0.8, ease: "sine.inOut" }, w(2, tl2[i]) + 1.4);
+          tl.to(pl, { scale: 1.07, duration: 0.3, ease: "back.out(2)" }, w(2, tl2[i]) + 0.05); tl.to(pl, { scale: 1, duration: 0.4, ease: "power2.inOut" }, w(2, tl2[i]) + 0.4);
+          Cap.sparks(tl, p1, x + 160, 670, w(2, tl2[i]), 6, "#ffe9a8");
+        });
+        C.frame(tl, root, PLAN, { seed: 14, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-capsula-horarios-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p3 { position: absolute; inset: 0; overflow: hidden; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-valencia):not(.m-med-madrid) { display: none; }
+      #mapbox .m-med text { display: none; }
+      .holo { position: absolute; left: 0; top: 0; z-index: 8; width: 300px; height: 330px; opacity: 0; }
+      .holo .hb { position: absolute; left: 0; top: 0; width: 300px; height: 280px; opacity: .82; }
+      .holo .hs { position: absolute; left: 0; top: 0; width: 300px; height: 280px; opacity: .88; }
+      .holo .hg { position: absolute; left: -20px; top: 230px; width: 340px; height: 90px; border-radius: 50%; background: radial-gradient(closest-side, rgba(111,231,220,.8), rgba(111,231,220,0)); }
+      .holo .hl { position: absolute; left: 0; top: 0; width: 300px; height: 280px; background: repeating-linear-gradient(0deg, rgba(20,60,90,.18) 0 3px, rgba(20,60,90,0) 3px 9px); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="6.302">
+      <div id="p3"><div id="mapbox" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.302" data-media-start="9.109" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":5.102,"v":1},{"t":6.302,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/ignacio.1d4ba8fe04.mp3" data-start="0.6" data-duration="4.252" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.8" data-duration="0.465" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="3.852" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="4.352" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-pluma-2","cinematica":"u05-pluma","part":2,"parts":2,"total":6.302,"meta":{"cinematica":"u05-pluma","titulo":"Quinta pluma","tipo":"pluma","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":3,"t0":0,"t1":6.052,"vista":"Don Ignacio apparaît en hologramme, couvert d’une écharpe ; sur la carte, des étoiles dorées s’allument sur Madrid.","camara":"","rotulo":"","personajes":["ignacio"],"lines":[{"who":"ignacio","es":"La siguiente pluma está en Madrid, de noche. ¡Es Navidad!","key":"ignacio.1d4ba8fe04","t":0.6,"d":4.252,"words":[{"w":"La","t":0.6,"d":0.227},{"w":"siguiente","t":0.827,"d":0.693},{"w":"pluma","t":1.52,"d":0.427},{"w":"está","t":1.947,"d":0.36},{"w":"en","t":2.307,"d":0.227},{"w":"Madrid,","t":2.533,"d":0.493},{"w":"de","t":4.13,"d":0.08},{"w":"noche.","t":4.201,"d":0.134},{"w":"¡Es","t":4.455,"d":0.08},{"w":"Navidad!","t":4.527,"d":0.176}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.8,"f":"rpg/spell-cast"},{"t":3.852,"f":"ui/star"},{"t":4.352,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "current", salamanca: "done", sevilla: "done", cdmx: "done", oaxaca: "done", valencia: "done" }, player: "valencia", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var va = Q.mapRegion("valencia"), ma = Q.mapRegion("madrid"), mid = { x: (va.x + ma.x) / 2, y: (va.y + ma.y) / 2 };
+        var cam = mapbox.querySelector(".m-cam");
+        // trait pointille Valencia -> Madrid + etoiles dorees sur Madrid (dans le groupe de la camera : elles suivent le zoom)
+        var qx = (va.x + ma.x) / 2 - (ma.y - va.y) * 0.18, qy = (va.y + ma.y) / 2 + (ma.x - va.x) * 0.18;
+        cam.insertAdjacentHTML("beforeend", '<path id="vm" d="M' + va.x + " " + va.y + "Q" + qx.toFixed(1) + " " + qy.toFixed(1) + " " + ma.x + " " + ma.y + '" stroke="#ffc83d" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round" fill="none"/>');
+        var stars = [[0, -64, 24], [-60, -32, 15], [60, -36, 17], [-64, 28, 13], [60, 32, 15]];
+        cam.insertAdjacentHTML("beforeend", '<g id="mst">' + stars.map(function (s, i) { return '<path class="mst" data-cx="' + (ma.x + s[0]) + '" data-cy="' + (ma.y + s[1]) + '" d="' + Q.sparklePath(ma.x + s[0], ma.y + s[1], s[2], s[2] * 0.3) + '" fill="#ffc83d" stroke="#fff3d1" stroke-width="1.2"/>'; }).join("") + "</g>");
+        Q.mapCamSet(gsap, mapbox, { x: va.x, y: va.y }, 3.4);
+        Q.mapCamMove(tl, mapbox, mid, 2.6, L.t - 0.3, 1.6, "power2.inOut");
+        Q.mapCamMove(tl, mapbox, { x: ma.x, y: ma.y }, 3.0, L.t + 2.5, 2.2, "sine.inOut");
+        Q.mapFogDrift(tl, mapbox, 0, T);
+        Q.mapPulse(tl, mapbox, 0, 3, 0.9);
+        // le jeton quitte Valencia et rejoint Madrid
+        var path = cam.querySelector("#vm"), len = path.getTotalLength(), token = mapbox.querySelector(".m-token"), prog = { p: 0 };
+        path.style.strokeDasharray = "2 9";
+        var mid2 = document.createElementNS("http://www.w3.org/2000/svg", "path"); mid2.setAttribute("d", path.getAttribute("d"));
+        gsap.set(path, { opacity: 0 });
+        tl.to(path, { opacity: 0.9, duration: 0.5 }, L.t - 0.2);
+        tl.to(prog, { p: 1, duration: 2.2, ease: "power1.inOut", onUpdate: function () { var pt = path.getPointAtLength(prog.p * len); gsap.set(token, { x: pt.x, y: pt.y - 6 }); } }, L.t - 0.1);
+        // les etoiles s'allument une a une (echelle + fondu >= 0,4 s)
+        var st = mapbox.querySelectorAll(".mst");
+        st.forEach(function (s, i) {
+          var o = s.dataset.cx + " " + s.dataset.cy;
+          gsap.set(s, { opacity: 0 });
+          tl.fromTo(s, { opacity: 0, scale: 0.1, svgOrigin: o }, { opacity: 1, scale: 1, svgOrigin: o, duration: 0.5, ease: "back.out(2.2)", immediateRender: false }, L.t + 2.3 + i * 0.25);
+          tl.to(s, { scale: 1.12, svgOrigin: o, duration: 0.8, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((T - L.t - 3.6) / 0.8)) }, L.t + 3.0 + i * 0.25);
+        });
+        // Don Ignacio en hologramme, une echarpe rouge autour du cou
+        var scarf = '<svg class="hs" viewBox="0 0 300 280" width="300" height="280" style="overflow:visible"><path d="M70 222Q150 266 230 222L238 252Q150 298 62 252Z" fill="#D81E3A"/><path d="M92 238Q150 262 208 238" stroke="#fff" stroke-width="7" fill="none" opacity=".8"/><path d="M168 262L206 312L184 320L152 270Z" fill="#B3162E"/><path d="M180 290L196 284M172 276L188 270" stroke="#fff" stroke-width="5" opacity=".8"/></svg>';
+        var ho = mk($("#p3"), "holo", '<div class="hb">' + Q.character("ignacio", { view: "bust", width: 300, uid: "hg" }) + '</div>' + scarf + '<div class="hl"></div><div class="hg"></div>'); ho.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        gsap.set(ho, { x: 1500, y: 240 });
+        tl.set(ho, { opacity: 0 }, 0);
+        tl.fromTo(ho, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, L.t - 0.1);
+        tl.to(ho, { y: "-=10", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L.t, 1.1) + 1 }, L.t + 0.5);
+        C.talkBounce(tl, ho.querySelector(".hb"), L, 3);
+        tl.to(ho, { opacity: 0, duration: 0.4, ease: "sine.in" }, T - 0.6);
+        C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.5 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-capsula-horarios-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .cp { position: absolute; left: 0; top: 0; z-index: 6; }
+      .ring { position: absolute; left: 0; top: 0; border: 8px solid #ffc83d; border-radius: 50%; opacity: 0; z-index: 9; }
+      .lines { position: absolute; left: 0; top: 0; z-index: 7; }
+      .sq { position: absolute; left: 0; top: 0; z-index: 6; width: 112px; height: 124px; border-radius: 22px; background: linear-gradient(180deg, #fff6dc, #f5e6c8); box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 5px #19b7aa; font: 400 66px/124px "Alfa Slab One", serif; color: #14173f; text-align: center; }
+      .sq.gold { box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 6px #ffc83d; background: linear-gradient(180deg, #ffe9a8, #ffc83d); }
+      .day { position: absolute; left: 0; top: 0; z-index: 6; width: 76px; height: 76px; border-radius: 50%; background: #f5e6c8; box-shadow: 0 6px 0 rgba(0,0,0,.35); font: 900 36px/76px Nunito, sans-serif; color: #14173f; text-align: center; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 5; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 8; width: 54px; height: 12px; border-radius: 6px; background: #ffc83d; }
+      .spk { position: absolute; left: 0; top: 0; z-index: 15; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-capsula-horarios-1" data-start="0" data-width="1920" data-height="1200" data-duration="5.429">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="5.429" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":5.129,"v":1},{"t":5.429,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.9c75ebdbf5.mp3" data-start="0.6" data-duration="3.779" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="2.2" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="3" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-capsula-horarios-1","cinematica":"u05-capsula-horarios","part":1,"parts":6,"total":5.429,"meta":{"cinematica":"u05-capsula-horarios","titulo":"Los horarios españoles y Valencia","tipo":"capsula","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":1,"t0":0,"t1":5.179,"vista":"Style explainer, papier découpé : une carte de l’Europe avec l’Espagne et la France ; deux horloges affichent la même heure, une flèche rappelle que l’Espagne est plus à l’ouest.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"España está más al oeste que Francia, pero tiene la misma hora.","key":"narrador.9c75ebdbf5","t":0.6,"d":3.779,"words":[{"w":"España","t":0.6,"d":0.379},{"w":"está","t":0.979,"d":0.277},{"w":"más","t":1.256,"d":0.225},{"w":"al","t":1.481,"d":0.174},{"w":"oeste","t":1.655,"d":0.328},{"w":"que","t":1.983,"d":0.225},{"w":"Francia,","t":2.209,"d":0.43},{"w":"pero","t":2.917,"d":0.263},{"w":"tiene","t":3.179,"d":0.311},{"w":"la","t":3.49,"d":0.165},{"w":"misma","t":3.656,"d":0.311},{"w":"hora.","t":3.967,"d":0.263}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1,"f":"ui/pop"},{"t":2.2,"f":"ui/tick"},{"t":3,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        // apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot, y1) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot == null ? -4 : rot, y: y0 + (y1 == null ? 50 : y1) }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paper = function (el, x, y, at, rot) { gsap.set(el, { x: x, y: y, transformOrigin: "50% 50%" }); tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y + 140, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y, rotation: 0, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, at); };
+        var ringAt = function (parent, cx, cy, d, at, n) { var r = mk(parent, "ring"); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < (n || 1); k++) tl.fromTo(r, { scale: 0.6, opacity: 1 }, { scale: 1.5, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var w = function (n, k) { return C.wordT(PLAN, n, 1, k); };
+        var ttl = function (kick, title) { return Cap.title(tl, root, kick, title, 0.2); };
+        var p1 = $("#p1");
+        Cap.bg(root, p1);
+        ttl("CAPÍTULO 5 · VALENCIA", "La hora");
+        var card = mk(p1, "cp cap-paper", Q.vlProp("europa", { width: 780, uid: "eu" }));
+        paper(card, 1000, 270, 0.3, 3);
+        var es = card.querySelector(".vl-es"), fr = card.querySelector(".vl-fr");
+        tl.set([es, fr], { fill: "#B8C2D8" }, 0);
+        tl.to(es, { fill: "#FFC83D", duration: 0.5, ease: "sine.inOut" }, w(1, 1));
+        tl.to(fr, { fill: "#6FA8DC", duration: 0.5, ease: "sine.inOut" }, w(1, 7));
+        ringAt(p1, 1270, 705, 200, w(1, 1), 1); ringAt(p1, 1345, 520, 200, w(1, 7), 1);
+        // la fleche vers l'ouest : France -> Espagne, sur la mer au-dessus de la carte
+        var ar = mk(p1, "lines", '<svg width="1920" height="1200" viewBox="0 0 1920 1200"><path id="arw" d="M1760 346H1130" stroke="#ffc83d" stroke-width="14" stroke-linecap="round" fill="none"/><path id="arh" d="M1180 308L1120 346L1180 384" stroke="#ffc83d" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>');
+        var tO = w(1, 5);
+        gsap.set("#arw", { strokeDasharray: 640, strokeDashoffset: 640 });
+        gsap.set("#arh", { opacity: 0 });
+        tl.to("#arw", { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, tO - 0.1);
+        tl.to("#arh", { opacity: 1, duration: 0.2 }, tO + 0.55);
+        var c0 = Cap.chip(p1, "oeste", 1330, 266, "gold"); popS(c0, tO - 0.05, 2);
+        // deux horloges identiques : la meme heure
+        var k1 = mk(p1, "cp", Q.vlClock({ width: 230, post: false, hour: 90, min: 0, uid: "c1" })), k2 = mk(p1, "cp", Q.vlClock({ width: 230, post: false, hour: 90, min: 0, uid: "c2" }));
+        gsap.set(k1, { x: 110, y: 540 }); gsap.set(k2, { x: 430, y: 540 }); popS(k1, w(1, 9) - 0.05, -4); popS(k2, w(1, 10) - 0.05, 4);
+        var cE = Cap.chip(p1, "España", 120, 790, "gold"), cF = Cap.chip(p1, "Francia", 440, 790, "pink");
+        popS(cE, w(1, 9) + 0.1, 2); popS(cF, w(1, 10) + 0.1, -2);
+        var e1 = mk(p1, "eq"), e2 = mk(p1, "eq"); gsap.set(e1, { x: 358, y: 626 }); gsap.set(e2, { x: 358, y: 660 });
+        popS(e1, w(1, 11) - 0.05, 0, 20); popS(e2, w(1, 11) + 0.05, 0, 20);
+        tl.to([k1, k2], { y: "-=8", duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - w(1, 11), 1.2) + 1 }, w(1, 11));
+        Cap.sparks(tl, p1, 1270, 705, w(1, 1), 8, "#ffe9a8");
+        C.frame(tl, root, PLAN, { seed: 13, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-capsula-horarios-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

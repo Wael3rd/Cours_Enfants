@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .vl-el, .fk, .spoon, .vl-al, .ar-g { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; border: 9px solid #ffc83d; border-radius: 50%; opacity: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.811">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.811" data-media-start="9.322" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.511,"v":1},{"t":8.811,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/marina.2997d30235.mp3" data-start="0.5" data-duration="2.391" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/neus.890c82c280.mp3" data-start="3.791" data-duration="4.37" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="2.941" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="3.741" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/tick.mp3" data-start="4.691" data-duration="0.045" data-track-index="7" data-volume="0.3"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="8.511" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-historia-2","cinematica":"u05-historia","part":2,"parts":5,"total":8.811,"meta":{"cinematica":"u05-historia","titulo":"Los relojes parados","tipo":"historia","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":1,"t0":0,"t1":3.091,"vista":"Esplanade de la Ciudad de las Artes à midi, bassins et arches blanches. Álex, Marina et le Quetzal arrivent. Neus, 12 ans, un réveil digital au poignet, court vers eux.","camara":"plan large puis champ / contre-champ","rotulo":"","personajes":["neus","marina","quetzal","viajero"],"lines":[{"who":"marina","es":"¿Parados? ¿Y qué hora es?","key":"marina.2997d30235","t":0.5,"d":2.391,"words":[{"w":"¿Parados?","t":0.5,"d":0.57},{"w":"¿Y","t":1.936,"d":0.124},{"w":"qué","t":2.06,"d":0.227},{"w":"hora","t":2.287,"d":0.278},{"w":"es?","t":2.565,"d":0.175}]}]},{"n":2,"t0":3.091,"t1":8.561,"vista":"Neus montre son réveil digital qui affiche 12:05, puis une grande horloge dont les aiguilles ne bougent plus. Vicent, le paellero, remue en vain une immense poêle sur son feu de bois.","camara":"plan moyen sur la poêle de paella, fumée immobile","rotulo":"","personajes":["neus","vicent"],"lines":[{"who":"neus","es":"Mi reloj dice las doce y cinco. Siempre las doce y cinco.","key":"neus.890c82c280","t":3.791,"d":4.37,"words":[{"w":"Mi","t":3.791,"d":0.178},{"w":"reloj","t":3.969,"d":0.336},{"w":"dice","t":4.305,"d":0.283},{"w":"las","t":4.589,"d":0.231},{"w":"doce","t":4.82,"d":0.283},{"w":"y","t":5.103,"d":0.126},{"w":"cinco.","t":5.229,"d":0.336},{"w":"Siempre","t":6.577,"d":0.446},{"w":"las","t":7.023,"d":0.234},{"w":"doce","t":7.257,"d":0.287},{"w":"y","t":7.544,"d":0.127},{"w":"cinco.","t":7.671,"d":0.34}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":2.941,"f":"ui/swoosh-out"},{"t":3.741,"f":"ui/pop"},{"t":4.691,"f":"ui/tick"},{"t":8.511,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        var CLK = 2050, PAE = 2860;
+        var set = Q.vlPlaza({ uid: "vz" });
+        var room = S.set($("#stage"), set, { below: "#CFBB92", motes: 12 });
+        S.drift(tl, room, T);
+        // eau qui scintille doucement (fondus >= 0,7 s)
+        room.back.querySelectorAll(".vl-sh").forEach(function (j, i) { var per = 0.8 + (i % 4) * 0.15; tl.fromTo(j, { opacity: 0.2 }, { opacity: 0.7, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, (i % 9) * 0.1); });
+        var clk = mkp(room.qlayer, "vl-el", Q.vlClock({ width: 380, uid: "ck" }), CLK - 190, 351);
+        var pae = mkp(room.front, "vl-el", Q.vlPaella({ width: 640, uid: "pl" }), PAE - 320, 700);
+        var flames = pae.querySelectorAll(".vl-flame");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.7 + i * 0.12, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.7 + i * 0.12))) }, i * 0.1); });
+        var kid = function (x, pose, color, hair) { return mkp(room.actors, "fk", Q.frozenKid({ width: 190, pose: pose, color: color, hair: hair, uid: "fk" + x }), x - 95, 1012 - 323); };
+        var mkAlarm = function (layer, w, id) { var a = S.mk(layer, "vl-al", Q.vlAlarm("12:05", { width: w, uid: id })); a.setAttribute("data-layout-allow-overflow", ""); a.setAttribute("data-layout-ignore", ""); a.firstChild.style.overflow = "visible"; return a; };
+        var jiggle = function (al, at, span) { al.querySelectorAll(".vl-bellL, .vl-bellR").forEach(function (b, i) { var o = b.dataset.px + " " + b.dataset.py; tl.fromTo(b, { rotation: -7 }, { rotation: 7, svgOrigin: o, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / 0.4)) }, at + i * 0.2); }); };
+        var ring = function (cx, cy, d, at, n) { var r = S.mk(room.qlayer, "ring"); r.setAttribute("data-layout-allow-overflow", ""); r.setAttribute("data-layout-ignore", ""); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < n; k++) tl.fromTo(r, { scale: 0.7, opacity: 0.9 }, { scale: 1.25, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var cast = function (ids) { return ids; };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), LM = P1.lines[0], LN = P2.lines[0];
+        var ale = S.chr(room.actors, "viajero", 840, 1040, 330), mar = S.chr(room.actors, "marina", 1100, 1030, 322), neu = S.chr(room.actors, "neus", 1640, 1040, 330);
+        [ale, mar, neu].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.2); Q.charBlink(tl, mar.svg, 5.2); Q.charBlink(tl, neu.svg, 4.4);
+        var qz = S.quetzal(room.actors, 975, 770, 200, "perched", false, "qh2"); Q.quetzalBlink(tl, qz, 2.8);
+        tl.to(neu.svg.querySelector(".c-armR"), { rotation: -105, svgOrigin: "258 306", duration: 0.01 }, 0);
+        // Marina inquiete : « ¿Parados? ¿Y qué hora es? »
+        C.talkBounce(tl, mar.b, LM, 5); C.talkChar(tl, mar, LM);
+        Q.charEmote(tl, mar.svg, LM.t - 0.1, "worry", 0.3); Q.charEmote(tl, ale.svg, LM.t, "worry", 0.3);
+        S.hop(tl, mar, C.wordT(PLAN, 1, 1, 3), 22);
+        // le reveil de Neus, agrandi : 12:05
+        var al = mkAlarm(room.actors, 190, "al2");
+        gsap.set(al, { x: 1790 - 95, y: 710 - 71, scale: 1, transformOrigin: "50% 50%" });
+        jiggle(al, 0.4, T);
+        var tN = LN.t - 0.1;
+        tl.fromTo(al, { scale: 1 }, { scale: 1.7, x: 1880 - 95, y: 560 - 71, duration: 0.55, ease: "back.out(1.5)", immediateRender: false }, tN);
+        C.talkBounce(tl, neu.b, LN, 5); C.talkChar(tl, neu, LN);
+        Q.charEmote(tl, neu.svg, LN.t, "worry", 0.3);
+        // la grande horloge : toujours 12:05
+        var tC = C.wordT(PLAN, 2, 1, 8);
+        ring(CLK, 541, 420, tC + 0.2, 2);
+        tl.to(al, { scale: 1, x: 1790 - 95, y: 710 - 71, duration: 0.5, ease: "power2.inOut" }, tC - 0.4);
+        // camera : Marina / Alex -> Neus et son reveil -> l'horloge
+        S.camSet(room, 970, 770, 1.45);
+        S.cam(tl, room, 990, 760, 1.5, 0, LN.t - 0.5, "sine.inOut");
+        S.cam(tl, room, 1700, 700, 1.45, LN.t - 0.45, 0.9, "power2.inOut");
+        S.cam(tl, room, 2000, 580, 1.15, tC - 0.3, 1.1, "power2.inOut");
+        C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

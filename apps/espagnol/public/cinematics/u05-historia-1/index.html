@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-historia-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .vl-el, .fk, .spoon, .vl-al, .ar-g { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; border: 9px solid #ffc83d; border-radius: 50%; opacity: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-historia-1" data-start="0" data-width="1920" data-height="1200" data-duration="9.322">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="9.322" data-media-start="0" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.022,"v":1},{"t":9.322,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/neus.2719091491.mp3" data-start="0.9" data-duration="7.672" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/step-00.mp3" data-start="0.1" data-duration="0.233" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/step-01.mp3" data-start="0.3" data-duration="0.254" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/step-02.mp3" data-start="0.5" data-duration="0.242" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/pop.mp3" data-start="0.8" data-duration="0.1" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="9.022" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-historia-1","cinematica":"u05-historia","part":1,"parts":5,"total":9.322,"meta":{"cinematica":"u05-historia","titulo":"Los relojes parados","tipo":"historia","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":1,"t0":0,"t1":9.072,"vista":"Esplanade de la Ciudad de las Artes à midi, bassins et arches blanches. Álex, Marina et le Quetzal arrivent. Neus, 12 ans, un réveil digital au poignet, court vers eux.","camara":"plan large puis champ / contre-champ","rotulo":"","personajes":["neus","marina","quetzal","viajero"],"lines":[{"who":"neus","es":"¡Hola! Me llamo Neus. ¡Necesito ayuda! Todos los relojes de Valencia están parados.","key":"neus.2719091491","t":0.9,"d":7.672,"words":[{"w":"¡Hola!","t":0.9,"d":0.397},{"w":"Me","t":2.275,"d":0.191},{"w":"llamo","t":2.466,"d":0.359},{"w":"Neus.","t":2.825,"d":0.303},{"w":"¡Necesito","t":4.088,"d":0.626},{"w":"ayuda!","t":4.714,"d":0.426},{"w":"Todos","t":5.304,"d":0.426},{"w":"los","t":5.73,"d":0.293},{"w":"relojes","t":6.023,"d":0.56},{"w":"de","t":6.583,"d":0.227},{"w":"Valencia","t":6.81,"d":0.626},{"w":"están","t":7.436,"d":0.426},{"w":"parados.","t":7.862,"d":0.56}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.1,"f":"rpg/step-00"},{"t":0.3,"f":"rpg/step-01"},{"t":0.5,"f":"rpg/step-02"},{"t":0.8,"f":"ui/pop"},{"t":9.022,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        var CLK = 2050, PAE = 2860;
+        var set = Q.vlPlaza({ uid: "vz" });
+        var room = S.set($("#stage"), set, { below: "#CFBB92", motes: 12 });
+        S.drift(tl, room, T);
+        // eau qui scintille doucement (fondus >= 0,7 s)
+        room.back.querySelectorAll(".vl-sh").forEach(function (j, i) { var per = 0.8 + (i % 4) * 0.15; tl.fromTo(j, { opacity: 0.2 }, { opacity: 0.7, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, (i % 9) * 0.1); });
+        var clk = mkp(room.qlayer, "vl-el", Q.vlClock({ width: 380, uid: "ck" }), CLK - 190, 351);
+        var pae = mkp(room.front, "vl-el", Q.vlPaella({ width: 640, uid: "pl" }), PAE - 320, 700);
+        var flames = pae.querySelectorAll(".vl-flame");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.7 + i * 0.12, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.7 + i * 0.12))) }, i * 0.1); });
+        var kid = function (x, pose, color, hair) { return mkp(room.actors, "fk", Q.frozenKid({ width: 190, pose: pose, color: color, hair: hair, uid: "fk" + x }), x - 95, 1012 - 323); };
+        var mkAlarm = function (layer, w, id) { var a = S.mk(layer, "vl-al", Q.vlAlarm("12:05", { width: w, uid: id })); a.setAttribute("data-layout-allow-overflow", ""); a.setAttribute("data-layout-ignore", ""); a.firstChild.style.overflow = "visible"; return a; };
+        var jiggle = function (al, at, span) { al.querySelectorAll(".vl-bellL, .vl-bellR").forEach(function (b, i) { var o = b.dataset.px + " " + b.dataset.py; tl.fromTo(b, { rotation: -7 }, { rotation: 7, svgOrigin: o, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / 0.4)) }, at + i * 0.2); }); };
+        var ring = function (cx, cy, d, at, n) { var r = S.mk(room.qlayer, "ring"); r.setAttribute("data-layout-allow-overflow", ""); r.setAttribute("data-layout-ignore", ""); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < n; k++) tl.fromTo(r, { scale: 0.7, opacity: 0.9 }, { scale: 1.25, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var cast = function (ids) { return ids; };
+        var P = C.planOf(PLAN, 1), L1 = P.lines[0];
+        var ale = S.chr(room.actors, "viajero", 840, 1040, 330), mar = S.chr(room.actors, "marina", 1100, 1030, 322), neu = S.chr(room.actors, "neus", 1640, 1040, 330);
+        [ale, mar, neu].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        S.walk(tl, ale, 240, 840, 0.0, 1.5, 0.3, "power1.out"); S.walk(tl, mar, 60, 1100, 0.0, 1.7, 0.3, "power1.out");
+        Q.charBlink(tl, ale.svg, 2.6); Q.charBlink(tl, mar.svg, 4.0); Q.charBlink(tl, neu.svg, 5.2);
+        // le Quetzal arrive en vol et se pose entre Alex et Marina
+        var qz = S.quetzal(room.actors, 975, 770, 200, "fly", false, "qh1");
+        tl.fromTo(qz, { x: -1300, y: -260 }, { x: 0, y: -90, duration: 1.7, ease: "power2.out", immediateRender: false }, 0);
+        Q.quetzalFlap(tl, qz, 0.0, 5, 0.34, 0.8);
+        tl.to(qz, { y: 0, duration: 0.6, ease: "power2.inOut" }, 1.8);
+        Q.quetzalPoseTo(tl, qz, "perched", 1.9, 0.5);
+        Q.quetzalBlink(tl, qz, 3.4);
+        // Neus arrive en courant par la droite, reveil sous le bras, puis le leve
+        var w = 330, h = Math.round((w * 660) / 400);
+        var al = S.mk(neu.el, "vl-al", Q.vlAlarm("12:05", { width: 190, uid: "al1" })); al.firstChild.style.overflow = "visible"; al.setAttribute("data-layout-allow-overflow", ""); al.setAttribute("data-layout-ignore", "");
+        gsap.set(al, { left: w / 2 - 27, top: Math.round(h * 0.965 - 236), x: 0, y: 0, scale: 0.8, transformOrigin: "50% 50%" });
+        S.walk(tl, neu, 3150, 1640, 0.2, 1.5, 0.22, "power2.out");
+        var tA = 1.8;
+        tl.to(al, { x: 82, y: -165, scale: 1.1, duration: 0.5, ease: "back.out(1.6)" }, tA);
+        tl.to(neu.svg.querySelector(".c-armR"), { rotation: -105, svgOrigin: "258 306", duration: 0.45, ease: "back.out(1.6)" }, tA);
+        jiggle(al, tA + 0.6, T - tA - 0.6);
+        C.talkBounce(tl, neu.b, L1, 5); C.talkChar(tl, neu, L1);
+        Q.charEmote(tl, neu.svg, L1.t, "worry", 0.3);
+        S.hop(tl, neu, C.wordT(PLAN, 1, 1, 5), 34);
+        Q.charEmote(tl, mar.svg, tA + 1.5, "worry", 0.3); Q.charEmote(tl, ale.svg, tA + 1.5, "worry", 0.3);
+        Q.charNod(tl, mar.svg, C.wordT(PLAN, 1, 1, 9), 3, 0.2);
+        // camera : plan large -> travelling vers le groupe
+        S.camSet(room, 1500, 650, 0.66);
+        S.cam(tl, room, 1350, 740, 0.92, 0, 2.2, "sine.inOut");
+        S.cam(tl, room, 1300, 750, 1.1, 2.205, T - 2.3, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 5, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-historia-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

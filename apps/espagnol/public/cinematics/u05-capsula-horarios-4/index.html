@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-capsula-horarios-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .cp { position: absolute; left: 0; top: 0; z-index: 6; }
+      .ring { position: absolute; left: 0; top: 0; border: 8px solid #ffc83d; border-radius: 50%; opacity: 0; z-index: 9; }
+      .lines { position: absolute; left: 0; top: 0; z-index: 7; }
+      .sq { position: absolute; left: 0; top: 0; z-index: 6; width: 112px; height: 124px; border-radius: 22px; background: linear-gradient(180deg, #fff6dc, #f5e6c8); box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 5px #19b7aa; font: 400 66px/124px "Alfa Slab One", serif; color: #14173f; text-align: center; }
+      .sq.gold { box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 6px #ffc83d; background: linear-gradient(180deg, #ffe9a8, #ffc83d); }
+      .day { position: absolute; left: 0; top: 0; z-index: 6; width: 76px; height: 76px; border-radius: 50%; background: #f5e6c8; box-shadow: 0 6px 0 rgba(0,0,0,.35); font: 900 36px/76px Nunito, sans-serif; color: #14173f; text-align: center; }
+      .sun { position: absolute; left: 0; top: 0; z-index: 5; }
+      .eq { position: absolute; left: 0; top: 0; z-index: 8; width: 54px; height: 12px; border-radius: 6px; background: #ffc83d; }
+      .spk { position: absolute; left: 0; top: 0; z-index: 15; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-capsula-horarios-4" data-start="0" data-width="1920" data-height="1200" data-duration="8.425">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.425" data-media-start="23.991" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.125,"v":1},{"t":8.425,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.e7c1ec861d.mp3" data-start="0.6" data-duration="6.575" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="1" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="2.6" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="5.4" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-capsula-horarios-4","cinematica":"u05-capsula-horarios","part":4,"parts":6,"total":8.425,"meta":{"cinematica":"u05-capsula-horarios","titulo":"Los horarios españoles y Valencia","tipo":"capsula","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":4,"t0":0,"t1":8.175,"vista":"La paella dorée dans sa grande poêle sur un feu de bois : riz, poulet, haricots verts, tomate. Un cadran indique 14:00.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"En Valencia, la paella es un plato de mediodía. Lleva arroz, pollo, judías verdes y tomate.","key":"narrador.e7c1ec861d","t":0.6,"d":6.575,"words":[{"w":"En","t":0.6,"d":0.171},{"w":"Valencia,","t":0.771,"d":0.474},{"w":"la","t":1.437,"d":0.171},{"w":"paella","t":1.608,"d":0.373},{"w":"es","t":1.981,"d":0.171},{"w":"un","t":2.152,"d":0.171},{"w":"plato","t":2.324,"d":0.323},{"w":"de","t":2.646,"d":0.171},{"w":"mediodía.","t":2.818,"d":0.474},{"w":"Lleva","t":4.286,"d":0.393},{"w":"arroz,","t":4.678,"d":0.393},{"w":"pollo,","t":5.206,"d":0.335},{"w":"judías","t":5.739,"d":0.387},{"w":"verdes","t":6.126,"d":0.387},{"w":"y","t":6.512,"d":0.125},{"w":"tomate.","t":6.638,"d":0.387}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":1,"f":"ui/pop"},{"t":2.6,"f":"ui/pop"},{"t":5.4,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        // apparition par l'echelle seule (jamais en plein fondu : le controle de contraste echantillonne en cours de fondu)
+        var popS = function (el, at, rot, y1) { var y0 = +gsap.getProperty(el, "y") || 0; tl.set(el, { opacity: 0 }, 0); tl.set(el, { opacity: 1 }, at); tl.fromTo(el, { scale: 0.4, rotation: rot == null ? -4 : rot, y: y0 + (y1 == null ? 50 : y1) }, { scale: 1, rotation: 0, y: y0, duration: 0.5, ease: "back.out(1.9)", immediateRender: false }, at); };
+        var paper = function (el, x, y, at, rot) { gsap.set(el, { x: x, y: y, transformOrigin: "50% 50%" }); tl.set(el, { opacity: 0 }, 0); tl.fromTo(el, { opacity: 0, y: y + 140, rotation: rot == null ? 3 : rot }, { opacity: 1, y: y, rotation: 0, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, at); };
+        var ringAt = function (parent, cx, cy, d, at, n) { var r = mk(parent, "ring"); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < (n || 1); k++) tl.fromTo(r, { scale: 0.6, opacity: 1 }, { scale: 1.5, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var w = function (n, k) { return C.wordT(PLAN, n, 1, k); };
+        var ttl = function (kick, title) { return Cap.title(tl, root, kick, title, 0.2); };
+        var p1 = $("#p1");
+        Cap.bg(root, p1);
+        ttl("CAPÍTULO 5 · VALENCIA", "La paella");
+        var pn = mk(p1, "cp cap-paper", Q.vlPaella({ width: 1000, uid: "pa4" })); paper(pn, 820, 330, w(4, 1) - 0.5, 3);
+        var fl = pn.querySelectorAll(".vl-flame");
+        fl.forEach(function (f, i) { var per = 0.7 + i * 0.12; tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, 0.5 + i * 0.1); });
+        pn.querySelectorAll(".vl-pf").forEach(function (p, i) { var per = 1.4 + (i % 3) * 0.3; tl.fromTo(p, { y: 0, opacity: 0.55 }, { y: -50, opacity: 0.08, duration: per, ease: "sine.out", repeat: Math.max(1, Math.floor(T / per)), immediateRender: false }, 0.6 + i * 0.25); });
+        var dg = mk(p1, "cp cap-paper", Q.vlDigital("14:00", { width: 270, uid: "dg4" })); gsap.set(dg, { x: 110, y: 790 }); popS(dg, w(4, 8) - 0.1, 3);
+        // ingredients : pastilles reliees a la poele
+        var K = 1000 / 560, ox = 820, oy = 330;
+        var tgt = { arroz: [280, 168], pollo: [250, 190], judias: [200, 196], tomate: [310, 176] };
+        var items = [["arroz", "arroz", w(4, 11), 440, "gold"], ["pollo", "pollo", w(4, 12), 530, "terra"], ["judías verdes", "judias", w(4, 13), 620, "gold"], ["tomate", "tomate", w(4, 16), 710, "pink"]];
+        var svg = mk(p1, "lines", '<svg width="1920" height="1200" viewBox="0 0 1920 1200">' + items.map(function (it, i) { var t = tgt[it[1]], X = ox + t[0] * K, Y = oy + t[1] * K; return '<path class="ld" id="ld' + i + '" d="M440 ' + (it[3] + 34) + 'L' + (X - 50) + ' ' + Y + '" stroke="#f5e6c8" stroke-width="5" stroke-dasharray="4 12" stroke-linecap="round" fill="none"/>'; }).join("") + "</svg>");
+        items.forEach(function (it, i) {
+          var c = Cap.chip(p1, it[0], 110, it[3], it[4]); popS(c, it[2] - 0.05, i % 2 ? 2 : -2);
+          var t = tgt[it[1]], X = ox + t[0] * K, Y = oy + t[1] * K;
+          gsap.set("#ld" + i, { opacity: 0 }); tl.to("#ld" + i, { opacity: 0.9, duration: 0.4 }, it[2]);
+          ringAt(p1, X, Y, 140, it[2], 1);
+          Cap.sparks(tl, p1, X, Y, it[2], 5, "#ffe9a8");
+        });
+        C.frame(tl, root, PLAN, { seed: 16, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-capsula-horarios-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

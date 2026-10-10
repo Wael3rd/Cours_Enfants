@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .vl-el, .fk, .spoon, .vl-al, .ar-g { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; border: 9px solid #ffc83d; border-radius: 50%; opacity: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="8.611">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.611" data-media-start="35.192" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.411,"v":1},{"t":8.611,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/neus.a53c7790e4.mp3" data-start="0.6" data-duration="4.638" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/viajero.be44f346ef.mp3" data-start="5.538" data-duration="2.023" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="0.9" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="5.538" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="7.211" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-historia-5","cinematica":"u05-historia","part":5,"parts":5,"total":8.611,"meta":{"cinematica":"u05-historia","titulo":"Los relojes parados","tipo":"historia","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":4,"t0":0,"t1":8.361,"vista":"Gros plan sur le cadran : un reflet vert derrière le verre. Neus tend son réveil à Álex.","camara":"","rotulo":"","personajes":["neus","viajero"],"lines":[{"who":"neus","es":"Para mover las agujas, tenemos que decir bien la hora. ¿Me ayudáis?","key":"neus.a53c7790e4","t":0.6,"d":4.638,"words":[{"w":"Para","t":0.6,"d":0.27},{"w":"mover","t":0.87,"d":0.32},{"w":"las","t":1.189,"d":0.22},{"w":"agujas,","t":1.409,"d":0.37},{"w":"tenemos","t":1.964,"d":0.511},{"w":"que","t":2.475,"d":0.268},{"w":"decir","t":2.743,"d":0.389},{"w":"bien","t":3.132,"d":0.329},{"w":"la","t":3.461,"d":0.207},{"w":"hora.","t":3.668,"d":0.329},{"w":"¿Me","t":4.37,"d":0.207},{"w":"ayudáis?","t":4.577,"d":0.511}]},{"who":"viajero","es":"¡Claro! ¡Vamos!","key":"viajero.be44f346ef","t":5.538,"d":2.023,"words":[{"w":"¡Claro!","t":5.538,"d":0.836},{"w":"¡Vamos!","t":6.574,"d":0.836}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/spell-magic"},{"t":0.9,"f":"ui/star"},{"t":5.538,"f":"ui/pop"},{"t":7.211,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        var CLK = 2050, PAE = 2860;
+        var set = Q.vlPlaza({ uid: "vz" });
+        var room = S.set($("#stage"), set, { below: "#CFBB92", motes: 12 });
+        S.drift(tl, room, T);
+        // eau qui scintille doucement (fondus >= 0,7 s)
+        room.back.querySelectorAll(".vl-sh").forEach(function (j, i) { var per = 0.8 + (i % 4) * 0.15; tl.fromTo(j, { opacity: 0.2 }, { opacity: 0.7, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, (i % 9) * 0.1); });
+        var clk = mkp(room.qlayer, "vl-el", Q.vlClock({ width: 380, uid: "ck" }), CLK - 190, 351);
+        var pae = mkp(room.front, "vl-el", Q.vlPaella({ width: 640, uid: "pl" }), PAE - 320, 700);
+        var flames = pae.querySelectorAll(".vl-flame");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.7 + i * 0.12, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.7 + i * 0.12))) }, i * 0.1); });
+        var kid = function (x, pose, color, hair) { return mkp(room.actors, "fk", Q.frozenKid({ width: 190, pose: pose, color: color, hair: hair, uid: "fk" + x }), x - 95, 1012 - 323); };
+        var mkAlarm = function (layer, w, id) { var a = S.mk(layer, "vl-al", Q.vlAlarm("12:05", { width: w, uid: id })); a.setAttribute("data-layout-allow-overflow", ""); a.setAttribute("data-layout-ignore", ""); a.firstChild.style.overflow = "visible"; return a; };
+        var jiggle = function (al, at, span) { al.querySelectorAll(".vl-bellL, .vl-bellR").forEach(function (b, i) { var o = b.dataset.px + " " + b.dataset.py; tl.fromTo(b, { rotation: -7 }, { rotation: 7, svgOrigin: o, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / 0.4)) }, at + i * 0.2); }); };
+        var ring = function (cx, cy, d, at, n) { var r = S.mk(room.qlayer, "ring"); r.setAttribute("data-layout-allow-overflow", ""); r.setAttribute("data-layout-ignore", ""); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < n; k++) tl.fromTo(r, { scale: 0.7, opacity: 0.9 }, { scale: 1.25, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var cast = function (ids) { return ids; };
+        var P = C.planOf(PLAN, 4), LN = P.lines[0], LA = P.lines[1];
+        var mar = S.chr(room.actors, "marina", 1330, 1030, 322), ale = S.chr(room.actors, "viajero", 1600, 1040, 330), neu = S.chr(room.actors, "neus", 1830, 1045, 330);
+        [ale, mar, neu].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        S.walk(tl, neu, 1150, 1830, 0.2, 1.9, 0.3, "power2.out"); S.walk(tl, ale, 950, 1600, 0.3, 1.8, 0.3, "power2.out"); S.walk(tl, mar, 700, 1330, 0.4, 1.7, 0.3, "power2.out");
+        Q.charBlink(tl, ale.svg, 2.6); Q.charBlink(tl, mar.svg, 4.2); Q.charBlink(tl, neu.svg, 5.0);
+        kid(620, "stand", "#7A85B8", "#3A3F73"); kid(2430, "ball", "#7A85B8", "#3A3F73"); kid(2690, "rope", "#8B93C4", "#3A3F73");
+        tl.set(clk.querySelector(".vl-sh"), { opacity: 0.3 }, 0);
+        tl.set("#dim", { opacity: 0.12 }, 0);
+        var qz = S.quetzal(room.actors, 1460, 760, 200, "perched", false, "qh5"); Q.quetzalBlink(tl, qz, 3.0);
+        tl.fromTo(qz, { x: -520, opacity: 1 }, { x: 0, duration: 1.9, ease: "power2.out", immediateRender: false }, 0.4);
+        // le cadran : reflet vert qui respire derriere le verre
+        var gl = clk.querySelector(".vl-gl");
+        tl.fromTo(gl, { opacity: 0.2 }, { opacity: 0.75, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / 0.9)), immediateRender: false }, 0);
+        // Neus tend son reveil a Alex sur « ¿Me ayudáis? »
+        var al = mkAlarm(room.actors, 170, "al5");
+        gsap.set(al, { x: 1830 + 140 - 85, y: 1045 - 300 - 64, transformOrigin: "50% 50%" }); tl.set(al, { opacity: 0 }, 0); tl.set(al, { opacity: 1 }, 2.2);
+        tl.fromTo(al, { scale: 0.3 }, { scale: 1, duration: 0.4, ease: "back.out(2)", immediateRender: false }, 2.2);
+        var aR = neu.svg.querySelector(".c-armR"), aL = neu.svg.querySelector(".c-armL");
+        tl.to(aL, { rotation: 100, svgOrigin: "142 306", duration: 0.45, ease: "back.out(1.4)" }, LN.t + 0.2);
+        jiggle(al, LN.t + 0.3, 3);
+        var wMe = C.wordT(PLAN, 4, 1, 11);
+        tl.to(al, { x: 1600 + 130 - 85, y: 1040 - 300 - 64 + 20, duration: 0.7, ease: "power2.inOut" }, wMe);
+        C.talkBounce(tl, neu.b, LN, 5); C.talkChar(tl, neu, LN);
+        Q.charEmote(tl, neu.svg, LN.t, "worry", 0.3);
+        // Alex accepte : « ¡Claro! ¡Vamos! »
+        tl.to(ale.svg.querySelector(".c-armR"), { rotation: -100, svgOrigin: "258 306", duration: 0.4, ease: "back.out(1.5)" }, wMe + 0.3);
+        C.talkBounce(tl, ale.b, LA, 6); C.talkChar(tl, ale, LA);
+        Q.charEmote(tl, ale.svg, LA.t - 0.1, "happy", 0.3); Q.charEmote(tl, mar.svg, LA.t, "happy", 0.3); Q.charEmote(tl, neu.svg, LA.t, "happy", 0.3);
+        S.hop(tl, ale, LA.t + 0.9, 50); S.hop(tl, mar, LA.t + 1.1, 36);
+        for (var k = 0; k < 8; k++) {
+          var sp = mkp(room.actors, "star", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 16, 4) + '" fill="#ffe9a8"/></svg>', 1560 + k * 28, 640 - (k % 3) * 30);
+          var ts = LA.t + 0.5 + k * 0.12;
+          tl.fromTo(sp, { scale: 0, opacity: 1 }, { scale: 0.9, duration: 0.45, ease: "power2.out", immediateRender: false }, ts);
+          tl.to(sp, { y: "-=50", scale: 0, opacity: 0, duration: 0.6, ease: "power2.in" }, ts + 0.5);
+        }
+        // camera : gros plan sur le cadran -> recul sur le groupe
+        S.camSet(room, 2050, 560, 2.25);
+        S.cam(tl, room, 2050, 560, 2.25, 0, 0.8, "none");
+        S.cam(tl, room, 1750, 760, 1.05, 0.801, 1.8, "power2.inOut");
+        S.cam(tl, room, 1700, 780, 1.2, 2.605, T - 2.8, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>

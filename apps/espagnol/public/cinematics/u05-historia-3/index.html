@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .vl-el, .fk, .spoon, .vl-al, .ar-g { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; border: 9px solid #ffc83d; border-radius: 50%; opacity: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="6.476">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="6.476" data-media-start="18.133" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.176,"v":1},{"t":6.476,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/vicent.ccab5b5523.mp3" data-start="0.7" data-duration="4.926" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.65" data-duration="0.1" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="6.176" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-historia-3","cinematica":"u05-historia","part":3,"parts":5,"total":6.476,"meta":{"cinematica":"u05-historia","titulo":"Los relojes parados","tipo":"historia","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":2,"t0":0,"t1":6.226,"vista":"Neus montre son réveil digital qui affiche 12:05, puis une grande horloge dont les aiguilles ne bougent plus. Vicent, le paellero, remue en vain une immense poêle sur son feu de bois.","camara":"plan moyen sur la poêle de paella, fumée immobile","rotulo":"","personajes":["neus","vicent"],"lines":[{"who":"vicent","es":"Mi paella no termina nunca. Son las doce y cinco… ¡desde ayer!","key":"vicent.ccab5b5523","t":0.7,"d":4.926,"words":[{"w":"Mi","t":0.7,"d":0.181},{"w":"paella","t":0.881,"d":0.395},{"w":"no","t":1.276,"d":0.181},{"w":"termina","t":1.458,"d":0.448},{"w":"nunca.","t":1.906,"d":0.342},{"w":"Son","t":3.407,"d":0.246},{"w":"las","t":3.653,"d":0.246},{"w":"doce","t":3.899,"d":0.302},{"w":"y","t":4.201,"d":0.134},{"w":"cinco…","t":4.335,"d":0.358},{"w":"¡desde","t":4.903,"d":0.311},{"w":"ayer!","t":5.214,"d":0.262}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.65,"f":"ui/pop"},{"t":6.176,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        var CLK = 2050, PAE = 2860;
+        var set = Q.vlPlaza({ uid: "vz" });
+        var room = S.set($("#stage"), set, { below: "#CFBB92", motes: 12 });
+        S.drift(tl, room, T);
+        // eau qui scintille doucement (fondus >= 0,7 s)
+        room.back.querySelectorAll(".vl-sh").forEach(function (j, i) { var per = 0.8 + (i % 4) * 0.15; tl.fromTo(j, { opacity: 0.2 }, { opacity: 0.7, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, (i % 9) * 0.1); });
+        var clk = mkp(room.qlayer, "vl-el", Q.vlClock({ width: 380, uid: "ck" }), CLK - 190, 351);
+        var pae = mkp(room.front, "vl-el", Q.vlPaella({ width: 640, uid: "pl" }), PAE - 320, 700);
+        var flames = pae.querySelectorAll(".vl-flame");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.7 + i * 0.12, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.7 + i * 0.12))) }, i * 0.1); });
+        var kid = function (x, pose, color, hair) { return mkp(room.actors, "fk", Q.frozenKid({ width: 190, pose: pose, color: color, hair: hair, uid: "fk" + x }), x - 95, 1012 - 323); };
+        var mkAlarm = function (layer, w, id) { var a = S.mk(layer, "vl-al", Q.vlAlarm("12:05", { width: w, uid: id })); a.setAttribute("data-layout-allow-overflow", ""); a.setAttribute("data-layout-ignore", ""); a.firstChild.style.overflow = "visible"; return a; };
+        var jiggle = function (al, at, span) { al.querySelectorAll(".vl-bellL, .vl-bellR").forEach(function (b, i) { var o = b.dataset.px + " " + b.dataset.py; tl.fromTo(b, { rotation: -7 }, { rotation: 7, svgOrigin: o, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / 0.4)) }, at + i * 0.2); }); };
+        var ring = function (cx, cy, d, at, n) { var r = S.mk(room.qlayer, "ring"); r.setAttribute("data-layout-allow-overflow", ""); r.setAttribute("data-layout-ignore", ""); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < n; k++) tl.fromTo(r, { scale: 0.7, opacity: 0.9 }, { scale: 1.25, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var cast = function (ids) { return ids; };
+        var P = C.planOf(PLAN, 2), LV = P.lines[0];
+        var ale = S.chr(room.actors, "viajero", 2200, 1040, 330), neu = S.chr(room.actors, "neus", 2400, 1045, 330), vic = S.chr(room.actors, "vicent", PAE, 1010, 340);
+        [ale, neu, vic].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.charBlink(tl, ale.svg, 2.0); Q.charBlink(tl, neu.svg, 3.6); Q.charBlink(tl, vic.svg, 4.4);
+        Q.charEmote(tl, neu.svg, 0.1, "worry", 0.3); Q.charEmote(tl, ale.svg, 0.1, "worry", 0.3);
+        // la fumee de la paella est suspendue ; Vicent remue la poele pour rien
+        var sp = mkp(room.front, "spoon", '<svg width="420" height="90" viewBox="0 0 420 90" style="overflow:visible"><path d="M0 40L320 40" stroke="#8A5A34" stroke-width="16" stroke-linecap="round"/><ellipse cx="368" cy="40" rx="52" ry="30" fill="#A87244"/><ellipse cx="368" cy="40" rx="36" ry="18" fill="#C48A55"/></svg>', PAE - 150, 800);
+        gsap.set(sp, { rotation: 34, transformOrigin: "10% 50%" });
+        var per = 0.55;
+        tl.to(sp, { x: "+=36", y: "+=14", rotation: 40, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, 0.1);
+        var aR = vic.svg.querySelector(".c-armR");
+        tl.fromTo(aR, { rotation: -62 }, { rotation: -76, svgOrigin: "258 306", duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, 0.1);
+        C.talkBounce(tl, vic.b, LV, 5); C.talkChar(tl, vic, LV);
+        Q.charEmote(tl, vic.svg, LV.t, "worry", 0.3);
+        S.hop(tl, vic, C.wordT(PLAN, 2, 1, 9), 20);
+        Q.charNod(tl, neu.svg, LV.t + 3.0, 4, 0.2);
+        // camera : plan moyen sur la poele
+        S.camSet(room, 2330, 800, 1.1);
+        S.cam(tl, room, 2400, 790, 1.25, 0, T - 0.2, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 7, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

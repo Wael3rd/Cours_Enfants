@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u05-historia-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .vl-el, .fk, .spoon, .vl-al, .ar-g { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; border: 9px solid #ffc83d; border-radius: 50%; opacity: 0; }
+      .smk { position: absolute; left: 0; top: 0; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,36,70,.95), rgba(40,36,70,.6) 65%, rgba(40,36,70,0)); opacity: 0; }
+      .dot { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: #1b1a26; opacity: 0; }
+      .star { position: absolute; left: 0; top: 0; z-index: 12; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u05-historia-4" data-start="0" data-width="1920" data-height="1200" data-duration="10.583">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.583" data-media-start="24.609" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":10.283,"v":1},{"t":10.583,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/sombra.86fd2f5054.mp3" data-start="0.6" data-duration="4.959" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-3-2" src="./assets/voz/quetzal.2c7dfd99ee.mp3" data-start="5.859" data-duration="3.874" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-hit.mp3" data-start="0.3" data-duration="1.159" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-magic.mp3" data-start="0.7" data-duration="1.104" data-track-index="5" data-volume="0.28"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="5.809" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/spell-magic.mp3" data-start="7.059" data-duration="1.104" data-track-index="7" data-volume="0.22"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/swoosh-out.mp3" data-start="10.283" data-duration="0.212" data-track-index="8" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u05-historia-4","cinematica":"u05-historia","part":4,"parts":5,"total":10.583,"meta":{"cinematica":"u05-historia","titulo":"Los relojes parados","tipo":"historia","unidad":"¿Qué hora es?","numero":5,"lugar":"Valencia","pluma":"Pluma del Reloj","plumaNum":5,"rotulo":"","region":"valencia"},"plans":[{"n":3,"t0":0,"t1":10.333,"vista":"La grande horloge : une ombre noire s’étire sur son cadran. Tous les passants sont figés, la fumée de la paella est suspendue.","camara":"","rotulo":"","personajes":["sombra","quetzal"],"lines":[{"who":"sombra","es":"Sin horas no hay rutina. Sin rutina no hay palabras.","key":"sombra.86fd2f5054","t":0.6,"d":4.959,"words":[{"w":"Sin","t":0.6,"d":0.357},{"w":"horas","t":0.957,"d":0.519},{"w":"no","t":1.476,"d":0.276},{"w":"hay","t":1.751,"d":0.357},{"w":"rutina.","t":2.108,"d":0.6},{"w":"Sin","t":3.058,"d":0.357},{"w":"rutina","t":3.414,"d":0.6},{"w":"no","t":4.014,"d":0.276},{"w":"hay","t":4.29,"d":0.357},{"w":"palabras.","t":4.647,"d":0.762}]},{"who":"quetzal","es":"La Sombra. Siento una pluma dentro del reloj.","key":"quetzal.2c7dfd99ee","t":5.859,"d":3.874,"words":[{"w":"La","t":5.859,"d":0.199},{"w":"Sombra.","t":6.058,"d":0.434},{"w":"Siento","t":7.525,"d":0.418},{"w":"una","t":7.944,"d":0.249},{"w":"pluma","t":8.192,"d":0.362},{"w":"dentro","t":8.554,"d":0.418},{"w":"del","t":8.972,"d":0.249},{"w":"reloj.","t":9.221,"d":0.362}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.3,"f":"rpg/spell-hit"},{"t":0.7,"f":"rpg/spell-magic"},{"t":5.809,"f":"ui/pop"},{"t":7.059,"f":"rpg/spell-magic"},{"t":10.283,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var T = PLAN.total;
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); var sv = d.querySelector("svg"); if (sv) sv.style.overflow = "visible"; return d; };
+        var CLK = 2050, PAE = 2860;
+        var set = Q.vlPlaza({ uid: "vz" });
+        var room = S.set($("#stage"), set, { below: "#CFBB92", motes: 12 });
+        S.drift(tl, room, T);
+        // eau qui scintille doucement (fondus >= 0,7 s)
+        room.back.querySelectorAll(".vl-sh").forEach(function (j, i) { var per = 0.8 + (i % 4) * 0.15; tl.fromTo(j, { opacity: 0.2 }, { opacity: 0.7, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / per)) }, (i % 9) * 0.1); });
+        var clk = mkp(room.qlayer, "vl-el", Q.vlClock({ width: 380, uid: "ck" }), CLK - 190, 351);
+        var pae = mkp(room.front, "vl-el", Q.vlPaella({ width: 640, uid: "pl" }), PAE - 320, 700);
+        var flames = pae.querySelectorAll(".vl-flame");
+        flames.forEach(function (f, i) { tl.fromTo(f, { scaleY: 0.92 }, { scaleY: 1.08, svgOrigin: f.dataset.px + " " + f.dataset.py, duration: 0.7 + i * 0.12, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(T / (0.7 + i * 0.12))) }, i * 0.1); });
+        var kid = function (x, pose, color, hair) { return mkp(room.actors, "fk", Q.frozenKid({ width: 190, pose: pose, color: color, hair: hair, uid: "fk" + x }), x - 95, 1012 - 323); };
+        var mkAlarm = function (layer, w, id) { var a = S.mk(layer, "vl-al", Q.vlAlarm("12:05", { width: w, uid: id })); a.setAttribute("data-layout-allow-overflow", ""); a.setAttribute("data-layout-ignore", ""); a.firstChild.style.overflow = "visible"; return a; };
+        var jiggle = function (al, at, span) { al.querySelectorAll(".vl-bellL, .vl-bellR").forEach(function (b, i) { var o = b.dataset.px + " " + b.dataset.py; tl.fromTo(b, { rotation: -7 }, { rotation: 7, svgOrigin: o, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / 0.4)) }, at + i * 0.2); }); };
+        var ring = function (cx, cy, d, at, n) { var r = S.mk(room.qlayer, "ring"); r.setAttribute("data-layout-allow-overflow", ""); r.setAttribute("data-layout-ignore", ""); r.style.width = d + "px"; r.style.height = d + "px"; gsap.set(r, { x: cx - d / 2, y: cy - d / 2 }); for (var k = 0; k < n; k++) tl.fromTo(r, { scale: 0.7, opacity: 0.9 }, { scale: 1.25, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, at + k * 1.1); return r; };
+        var cast = function (ids) { return ids; };
+        var P = C.planOf(PLAN, 3), LS = P.lines[0], LQ = P.lines[1];
+        var mar = S.chr(room.actors, "marina", 1350, 1030, 322), ale = S.chr(room.actors, "viajero", 1180, 1040, 330), neu = S.chr(room.actors, "neus", 1520, 1045, 330);
+        [ale, mar, neu].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); Q.charEmote(tl, c.svg, 0, "worry", 0.2); });
+        Q.charBlink(tl, ale.svg, 2.4); Q.charBlink(tl, mar.svg, 5.0); Q.charBlink(tl, neu.svg, 8.0);
+        // passants figes (silhouettes de papier grises), fumee suspendue
+        kid(620, "stand", "#7A85B8", "#3A3F73"); kid(880, "run", "#8B93C4", "#3A3F73"); kid(2430, "ball", "#7A85B8", "#3A3F73"); kid(2690, "rope", "#8B93C4", "#3A3F73");
+        // la Sombra surgit au-dessus de l'horloge ; son ombre s'etire sur le cadran
+        var sb = S.mk(room.actors, "sombra"); sb.setAttribute("data-layout-allow-overflow", ""); sb.style.cssText = "position:absolute;left:0;top:0;width:560px;height:672px";
+        sb.innerHTML = Q.sombra({ uid: "sb4", width: 560, height: 672, arm: true }); sb.firstChild.style.overflow = "visible";
+        var sm = S.mk(room.qlayer, "smk"); sm.setAttribute("data-layout-allow-overflow", ""); sm.style.cssText = "position:absolute;left:" + (CLK - 900) + "px;top:120px;width:700px;height:600px";
+        var tS = LS.t - 0.5;
+        gsap.set(sb, { x: CLK - 600, y: 130, scale: 0.62, opacity: 0, transformOrigin: "50% 50%" });
+        tl.fromTo(sm, { opacity: 0, scale: 0.6 }, { opacity: 0.9, scale: 1, duration: 0.9, ease: "power2.out", immediateRender: false }, tS);
+        tl.fromTo(sb, { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 0.62, duration: 0.9, ease: "power3.out", immediateRender: false }, tS + 0.1);
+        Q.sombraFloat(tl, sb, tS + 1.0, Math.max(1, Math.floor((T - tS) / 1.6)), 1.6);
+        tl.fromTo(sb.querySelectorAll(".s-eye"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false }, tS + 0.5);
+        for (var k = 0; k < 12; k++) {
+          var d = S.mk(room.actors, "dot"); d.setAttribute("data-layout-allow-overflow", "");
+          var ang = (k / 12) * 6.283, x0 = CLK + Math.cos(ang) * 40, y0 = 470 + Math.sin(ang) * 40;
+          tl.fromTo(d, { x: x0, y: y0, scale: 0.3, opacity: 0.9 }, { x: x0 + Math.cos(ang) * (200 + (k % 4) * 50), y: y0 + Math.sin(ang) * (150 + (k % 3) * 40) - 60, scale: 1.3, opacity: 0, duration: 1.1, ease: "power2.out", immediateRender: false }, tS + 0.2 + k * 0.03);
+        }
+        tl.to(clk.querySelector(".vl-sh"), { opacity: 0.6, duration: 1.4, ease: "sine.inOut" }, tS + 0.4);
+        tl.to(clk.querySelector(".vl-sh"), { opacity: 0.28, duration: 0.9, ease: "sine.inOut" }, LQ.t + 0.2);
+        tl.to("#dim", { opacity: 0.25, duration: 1.4, ease: "sine.inOut" }, tS + 0.4);
+        // le Quetzal sent la plume : il vole jusqu'au cadran, halo vert doux derriere le verre
+        var qz = S.quetzal(room.actors, 1480, 760, 200, "perched", false, "qh4");
+        var tQ = LQ.t - 0.5;
+        Q.quetzalPoseTo(tl, qz, "fly", tQ, 0.3); Q.quetzalFlap(tl, qz, tQ + 0.1, 9, 0.38, 0.8);
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: 0 }, { x: 160, y: -240 }, { x: 330, y: -300 }, { x: 440, y: -250 }], curviness: 1.2 }, duration: 1.3, ease: "sine.inOut" }, tQ);
+        Q.quetzalPoseTo(tl, qz, "talk", tQ + 1.3, 0.3);
+        tl.to(qz, { y: "-=14", duration: 0.7, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((T - tQ - 1.3) / 0.7)) }, tQ + 1.4);
+        C.talkQuetzal(tl, qz, LQ);
+        tl.fromTo(clk.querySelector(".vl-gl"), { opacity: 0 }, { opacity: 0.7, duration: 0.8, ease: "sine.inOut", immediateRender: false }, tQ + 1.0);
+        tl.to(clk.querySelector(".vl-gl"), { opacity: 0.35, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((T - tQ - 2.0) / 0.9)) }, tQ + 1.85);
+        Q.charNod(tl, neu.svg, LQ.t + 1.0, 4, 0.2);
+        // camera : large -> push-in sur l'horloge et la Sombra -> accompagne le Quetzal
+        S.camSet(room, 1800, 720, 0.78);
+        S.cam(tl, room, 1900, 640, 1.05, 0, tS + 1.6, "sine.inOut");
+        S.cam(tl, room, 1800, 620, 1.2, tS + 1.605, LQ.t - tS - 1.7, "sine.inOut");
+        C.frame(tl, root, PLAN, { seed: 8, fadeOut: 0.3 });
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u05-historia-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>
