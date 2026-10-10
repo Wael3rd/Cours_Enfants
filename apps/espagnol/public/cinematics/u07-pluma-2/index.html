@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-pluma-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-baires):not(.m-med-bogota) { display: none; }
+      #mapbox .m-med text { display: none; }
+      .holo { position: absolute; left: 0; top: 0; z-index: 8; width: 300px; height: 330px; opacity: 0; }
+      .holo .hb { position: absolute; left: 0; top: 70px; width: 300px; height: 280px; opacity: .82; }
+      .holo .hp { position: absolute; left: 20px; top: -150px; width: 260px; opacity: .85; }
+      .holo .hg { position: absolute; left: -20px; top: 300px; width: 340px; height: 90px; border-radius: 50%; background: radial-gradient(closest-side, rgba(111,231,220,.8), rgba(111,231,220,0)); }
+      .holo .hl { position: absolute; left: 0; top: 70px; width: 300px; height: 280px; background: repeating-linear-gradient(0deg, rgba(20,60,90,.18) 0 3px, rgba(20,60,90,0) 3px 9px); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-pluma-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.179">
+      <div id="p3" style="position:absolute;inset:0;overflow:hidden"><div id="mapbox" data-layout-allow-overflow></div></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.179" data-media-start="10.133" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":6.979,"v":1},{"t":8.179,"v":0}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/ignacio.b876a6036e.mp3" data-start="0.6" data-duration="6.129" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-cast.mp3" data-start="0.8" data-duration="0.465" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="6.829" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-pluma-2","cinematica":"u07-pluma","part":2,"parts":2,"total":8.179,"meta":{"cinematica":"u07-pluma","titulo":"Séptima pluma","tipo":"pluma","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":3,"t0":0,"t1":7.929,"vista":"Don Ignacio en hologramme ; sur la carte, une lumière monte vers les Andes colombiennes.","camara":"","rotulo":"","personajes":["ignacio"],"lines":[{"who":"ignacio","es":"La siguiente pluma está en Bogotá, en Colombia. ¡Está muy alto, en las montañas!","key":"ignacio.b876a6036e","t":0.6,"d":6.129,"words":[{"w":"La","t":0.6,"d":0.223},{"w":"siguiente","t":0.823,"d":0.681},{"w":"pluma","t":1.504,"d":0.419},{"w":"está","t":1.923,"d":0.354},{"w":"en","t":2.277,"d":0.223},{"w":"Bogotá,","t":2.5,"d":0.485},{"w":"en","t":3.212,"d":0.223},{"w":"Colombia.","t":3.434,"d":0.616},{"w":"¡Está","t":4.411,"d":0.354},{"w":"muy","t":4.765,"d":0.288},{"w":"alto,","t":5.053,"d":0.354},{"w":"en","t":5.617,"d":0.19},{"w":"las","t":5.807,"d":0.246},{"w":"montañas!","t":6.053,"d":0.526}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.8,"f":"rpg/spell-cast"},{"t":6.829,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P = C.planOf(PLAN, 3), L = P.lines[0], T = PLAN.total;
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wp", states: { madrid: "done", salamanca: "done", sevilla: "done", cdmx: "done", oaxaca: "done", valencia: "done", baires: "done", bogota: "open" }, player: "baires", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("bogota"));
+        var ba = Q.mapRegion("baires"), bo = Q.mapRegion("bogota"), mid = { x: (ba.x + bo.x) / 2, y: (ba.y + bo.y) / 2 };
+        // camera : sur Buenos Aires, recul pour embrasser l'Amerique du Sud, puis on accompagne le pion vers les Andes
+        Q.mapCamSet(gsap, mapbox, { x: ba.x, y: ba.y }, 3.2);
+        Q.mapCamMove(tl, mapbox, mid, 1.15, P.t0 + 0.1, 1.8, "power2.inOut");
+        Q.mapFogDrift(tl, mapbox, 0, T);
+        Q.mapPulse(tl, mapbox, 0, 3, 0.9);
+        var tT = P.t0 + 0.55, dT = Math.max(1.6, T - tT - 1.5);
+        Q.mapTravel(tl, mapbox, "baires", "bogota", tT, dT, gsap);
+        Q.mapCamMove(tl, mapbox, { x: bo.x - 60, y: bo.y + 60 }, 1.8, tT + dT * 0.55, dT * 0.45 + 0.5, "power1.inOut");
+        Q.mapFogClear(tl, mapbox, "bogota", tT + dT - 0.2, 1.2);
+        // Don Ignacio en hologramme (short + parasol rose) au-dessus de la carte
+        var ho = mk($("#p3"), "holo", '<div class="hp">' + Q.baProp("paraguas", { width: 260, uid: "pa" }) + '</div><div class="hb">' + Q.character("ignacio", { view: "bust", width: 300, uid: "hg" }) + '</div><div class="hl"></div><div class="hg"></div>');
+        ho.querySelector(".hb svg").setAttribute("data-layout-allow-overflow", ""); ho.querySelector(".hp svg").setAttribute("data-layout-allow-overflow", "");
+        gsap.set(ho, { x: 1480, y: 120 });
+        tl.set(ho, { opacity: 0 }, 0);
+        tl.fromTo(ho, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, L.t - 0.1);
+        tl.to(ho, { y: "-=10", duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L.t, 1.1) + 1 }, L.t + 0.5);
+        tl.to(ho.querySelector(".hp"), { rotation: 5, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - L.t, 1.3) + 1, transformOrigin: "50% 100%" }, L.t + 0.3);
+        C.talkBounce(tl, ho.querySelector(".hb"), L, 3);
+        tl.to(ho, { opacity: 0, duration: 0.4, ease: "sine.in" }, T - 0.6);
+
+        var fr = C.frame(tl, root, PLAN, { seed: 11, fadeOut: 0.5 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-pluma-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

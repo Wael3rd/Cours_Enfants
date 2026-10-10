@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-capsula-buenosaires-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      #subs .sub-txt { font-size: 46px; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .grp { position: absolute; inset: 0; }
+      .it { position: absolute; left: 0; top: 0; z-index: 6; }
+      #vs { position: absolute; left: 0; top: 0; z-index: 8; width: 120px; height: 120px; border-radius: 50%; background: #14173f; border: 6px solid #ffc83d; display: flex; align-items: center; justify-content: center; font: 400 52px/1 "Alfa Slab One", serif; color: #f5e6c8; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+      .medal { position: absolute; left: 0; top: 0; z-index: 8; width: 170px; height: 170px; border-radius: 50%; background: #14173f; border: 8px solid #ffc83d; box-shadow: 0 8px 0 rgba(0,0,0,.35), inset 0 0 0 5px rgba(245,230,200,.55); display: flex; align-items: center; justify-content: center; font: 400 46px/1 "Alfa Slab One", serif; color: #f5e6c8; }
+      .flag { position: absolute; left: 0; top: 0; z-index: 7; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-capsula-buenosaires-2" data-start="0" data-width="1920" data-height="1200" data-duration="14.433">
+      <div id="p1" data-layout-allow-overflow>
+        <div id="gA" class="grp" data-layout-allow-overflow></div>
+        <div id="gB" class="grp" data-layout-allow-overflow></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="14.433" data-media-start="7.186" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":14.133,"v":1},{"t":14.433,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.754d89cb37.mp3" data-start="0.5" data-duration="12.883" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="1.719" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/tick.mp3" data-start="6.158" data-duration="0.045" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="12.003" data-duration="0.121" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/star.mp3" data-start="12.786" data-duration="0.121" data-track-index="8" data-volume="0.4"></audio>
+      <audio id="a-sfx7" src="./_shared/sfx/star.mp3" data-start="13.25" data-duration="0.121" data-track-index="9" data-volume="0.45"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-capsula-buenosaires-2","cinematica":"u07-capsula-buenosaires","part":2,"parts":5,"total":14.433,"meta":{"cinematica":"u07-capsula-buenosaires","titulo":"Fútbol, tango, mate… y vos","tipo":"capsula","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":2,"t0":0,"t1":14.183,"vista":"Deux maillots, bleu et jaune contre rouge et blanc, se font face ; le stade de la Bombonera ; une coupe dorée avec trois dates qui s’allument : 1978, 1986, 2022.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Boca y River son los dos grandes equipos. Su partido se llama el Superclásico. Argentina ganó el Mundial en 1978, 1986 y 2022.","key":"narrador.754d89cb37","t":0.5,"d":12.883,"words":[{"w":"Boca","t":0.5,"d":0.483},{"w":"y","t":0.983,"d":0.214},{"w":"River","t":1.197,"d":0.572},{"w":"son","t":1.769,"d":0.393},{"w":"los","t":2.162,"d":0.393},{"w":"dos","t":2.555,"d":0.393},{"w":"grandes","t":2.948,"d":0.751},{"w":"equipos.","t":3.699,"d":0.751},{"w":"Su","t":4.799,"d":0.304},{"w":"partido","t":5.103,"d":0.751},{"w":"se","t":5.854,"d":0.304},{"w":"llama","t":6.158,"d":0.572},{"w":"el","t":6.729,"d":0.304},{"w":"Superclásico.","t":7.033,"d":1.197},{"w":"Argentina","t":8.581,"d":0.929},{"w":"ganó","t":9.51,"d":0.483},{"w":"el","t":9.992,"d":0.304},{"w":"Mundial","t":10.296,"d":0.751},{"w":"en","t":11.047,"d":0.304},{"w":"1978,","t":11.351,"d":0.483},{"w":"1986","t":12.053,"d":0.483},{"w":"y","t":12.536,"d":0.214},{"w":"2022.","t":12.75,"d":0.483}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":1.719,"f":"ui/pop"},{"t":6.158,"f":"ui/tick"},{"t":12.003,"f":"ui/star"},{"t":12.786,"f":"ui/star"},{"t":13.25,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, w = function (k) { return C.wordT(PLAN, 2, 1, k); };
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1"), gA = $("#gA"), gB = $("#gB");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Fútbol, tango, mate… y vos", 0.15);
+        ttl.style.maxWidth = "700px";
+        var tSw = w(15) - 0.45;     // « Argentina ganó… » : le groupe A sort, le groupe B entre
+
+        // ============ A : Boca - River, le Superclasico ============
+        var jb = mk(gA, "it cap-paper", Q.baProp("camiseta", { width: 340, kind: "boca", uid: "jb" })); gsap.set(jb, { x: 830, y: 260 });
+        var jr = mk(gA, "it cap-paper", Q.baProp("camiseta", { width: 340, kind: "river", uid: "jr" })); gsap.set(jr, { x: 1250, y: 260 });
+        tl.set([jb, jr], { opacity: 0 }, 0);
+        tl.fromTo(jb, { opacity: 0, x: 830 - 300, rotation: -12 }, { opacity: 1, x: 830, rotation: -3, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, w(1) - 0.3);
+        tl.fromTo(jr, { opacity: 0, x: 1250 + 300, rotation: 12 }, { opacity: 1, x: 1250, rotation: 3, duration: 0.6, ease: "back.out(1.5)", immediateRender: false }, w(3) - 0.3);
+        tl.to(jb, { y: "-=12", duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(tSw, 1.5) }, w(1) + 0.5);
+        tl.to(jr, { y: "-=12", duration: 1.7, ease: "sine.inOut", yoyo: true, repeat: C.reps(tSw, 1.7) }, w(3) + 0.5);
+        var cb = Cap.chip(gA, "Boca", 925, 195, "gold"); Cap.pop(tl, cb, w(1) - 0.05, { from: "down", rot: -2 });
+        var cr = Cap.chip(gA, "River", 1345, 195, "terra"); Cap.pop(tl, cr, w(3) - 0.05, { from: "down", rot: 2 });
+        var vs = mk(gA, "", "VS"); vs.id = "vs"; gsap.set(vs, { x: 1130, y: 340 });
+        tl.set(vs, { opacity: 0 }, 0);
+        tl.set(vs, { opacity: 1 }, w(3) + 0.1);
+        tl.fromTo(vs, { scale: 0.2, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.4)", immediateRender: false }, w(3) + 0.1);
+        // le stade (cuvette bleu et jaune, sans ecusson) monte du bas pour « su partido »
+        var st = mk(gA, "it cap-paper", Q.baProp("estadio", { width: 500, uid: "es" })); gsap.set(st, { x: 940, y: 630 });
+        tl.set(st, { opacity: 0 }, 0);
+        tl.fromTo(st, { opacity: 0, y: 630 + 220, rotation: -2 }, { opacity: 1, y: 630, rotation: 0, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, w(9) - 0.15);
+        tl.to(st, { y: "-=8", duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(tSw - w(9), 1.4) }, w(9) + 0.7);
+        var cs = Cap.chip(gA, "el Superclásico", 1470, 700, "gold"); Cap.pop(tl, cs, w(14) - 0.05, { from: "up", rot: -2 });
+        Cap.sparks(tl, gA, 1180, 740, w(14), 10, "#ffe9a8");
+        tl.to(gA, { x: -1500, duration: 0.5, ease: "power3.in" }, tSw);
+        tl.set(gA, { visibility: "hidden" }, tSw + 0.55);
+
+        // ============ B : la Copa del Mundo, 1978 - 1986 - 2022 ============
+        tl.set(gB, { visibility: "hidden" }, 0); tl.set(gB, { visibility: "visible" }, tSw - 0.05);
+        tl.fromTo(gB, { x: 1500 }, { x: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, tSw);
+        var cup = mk(gB, "it cap-paper", Q.baProp("copa", { width: 230, uid: "cp" })); gsap.set(cup, { x: 880, y: 300 });
+        var fl = mk(gB, "flag cap-paper", Q.flagSvg("ar", { width: 190, uid: "ar" })); gsap.set(fl, { x: 1110, y: 250, rotation: 4 });
+        tl.to(cup, { y: "-=14", duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - tSw, 1.5) }, tSw + 0.6);
+        tl.to(fl, { rotation: -3, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - tSw, 1.2) }, tSw + 0.6);
+        var cA = Cap.chip(gB, "Argentina", 1110, 170, "pink"); Cap.pop(tl, cA, w(15) - 0.05, { from: "down", rot: 2 });
+        var cM = Cap.chip(gB, "el Mundial", 880, 760, "gold"); Cap.pop(tl, cM, w(18) - 0.05, { from: "up", rot: -2 });
+        [["1978", 20], ["1986", 21], ["2022", 23]].forEach(function (d, i) {
+          var m = mk(gB, "medal", d[0]); gsap.set(m, { x: i === 2 ? 1345 : 1180 + i * 330, y: i === 2 ? 650 : 430 });
+          tl.set(m, { opacity: 0 }, 0);
+          tl.set(m, { opacity: 1 }, w(d[1]) - 0.05);
+          tl.fromTo(m, { scale: 0.3, rotation: -16 }, { scale: 1, rotation: (i - 1) * 3, duration: 0.55, ease: "back.out(2)", immediateRender: false }, w(d[1]) - 0.05);
+          Cap.sparks(tl, gB, (i === 2 ? 1345 : 1180 + i * 330) + 85, (i === 2 ? 650 : 430) + 85, w(d[1]), 8, "#ffe9a8");
+        });
+
+        var fr = C.frame(tl, root, PLAN, { seed: 22, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-capsula-buenosaires-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

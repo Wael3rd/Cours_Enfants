@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-capsula-buenosaires-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      #subs .sub-txt { font-size: 44px; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .it { position: absolute; left: 0; top: 0; z-index: 6; }
+      #card { position: absolute; left: 0; top: 0; width: 800px; height: 500px; overflow: hidden; border-radius: 34px; background: #17206b; box-shadow: 0 12px 0 rgba(0,0,0,.35), inset 0 0 0 7px rgba(245,230,200,.9); z-index: 6; }
+      #card .mm { position: absolute; left: 0; top: 0; }
+      #link { position: absolute; left: 0; top: 0; z-index: 7; }
+      .ring { position: absolute; left: 0; top: 0; width: 90px; height: 90px; margin: -45px 0 0 -45px; border-radius: 50%; border: 6px solid #ffc83d; opacity: 0; z-index: 9; }
+      .yr { position: absolute; left: 0; top: 0; z-index: 8; padding: 6px 30px 12px; border-radius: 22px; background: #14173f; border: 6px solid #ffc83d; font: 400 84px/1 "Alfa Slab One", serif; color: #f5e6c8; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+      .note { position: absolute; left: 0; top: 0; z-index: 7; width: 60px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-capsula-buenosaires-3" data-start="0" data-width="1920" data-height="1200" data-duration="13.295">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="13.295" data-media-start="21.619" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":12.995,"v":1},{"t":13.295,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/narrador.c8ea6d9097.mp3" data-start="0.5" data-duration="11.745" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/tick.mp3" data-start="5.463" data-duration="0.045" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/star.mp3" data-start="9.245" data-duration="0.121" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-capsula-buenosaires-3","cinematica":"u07-capsula-buenosaires","part":3,"parts":5,"total":13.295,"meta":{"cinematica":"u07-capsula-buenosaires","titulo":"Fútbol, tango, mate… y vos","tipo":"capsula","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":3,"t0":0,"t1":13.045,"vista":"Un couple danse, un bandonéon joue ; un petit sceau « UNESCO 2009 » apparaît à côté d’une carte du Río de la Plata (Buenos Aires et Montevideo).","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El tango nace en Buenos Aires y Montevideo a finales del siglo diecinueve. Se baila en pareja. En 2009, la UNESCO lo declara Patrimonio Cultural Inmaterial de la Humanidad.","key":"narrador.c8ea6d9097","t":0.5,"d":11.745,"words":[{"w":"El","t":0.5,"d":0.198},{"w":"tango","t":0.698,"d":0.373},{"w":"nace","t":1.071,"d":0.315},{"w":"en","t":1.386,"d":0.198},{"w":"Buenos","t":1.584,"d":0.431},{"w":"Aires","t":2.016,"d":0.373},{"w":"y","t":2.389,"d":0.14},{"w":"Montevideo","t":2.529,"d":0.665},{"w":"a","t":3.194,"d":0.14},{"w":"finales","t":3.334,"d":0.49},{"w":"del","t":3.823,"d":0.257},{"w":"siglo","t":4.08,"d":0.373},{"w":"diecinueve.","t":4.453,"d":0.665},{"w":"Se","t":5.463,"d":0.198},{"w":"baila","t":5.661,"d":0.373},{"w":"en","t":6.034,"d":0.198},{"w":"pareja.","t":6.233,"d":0.431},{"w":"En","t":7.652,"d":0.179},{"w":"2009,","t":7.831,"d":0.284},{"w":"la","t":8.311,"d":0.179},{"w":"UNESCO","t":8.489,"d":0.389},{"w":"lo","t":8.878,"d":0.179},{"w":"declara","t":9.057,"d":0.442},{"w":"Patrimonio","t":9.499,"d":0.599},{"w":"Cultural","t":10.098,"d":0.494},{"w":"Inmaterial","t":10.592,"d":0.599},{"w":"de","t":11.191,"d":0.179},{"w":"la","t":11.37,"d":0.179},{"w":"Humanidad.","t":11.549,"d":0.547}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":5.463,"f":"ui/tick"},{"t":9.245,"f":"ui/star"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, w = function (k) { return C.wordT(PLAN, 3, 1, k); };
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Fútbol, tango, mate… y vos", 0.15);
+        ttl.style.maxWidth = "700px";
+
+        // ---------- le couple de tango (papier decoupe) en bas a gauche : il danse pendant toute la capsule ----------
+        var cp = mk(p1, "it cap-paper", Q.baPareja({ width: 290, uid: "cp" })); gsap.set(cp, { x: 270, y: 480 });
+        tl.set(cp, { opacity: 0 }, 0);
+        tl.fromTo(cp, { opacity: 0, y: 480 + 200, rotation: -6 }, { opacity: 1, y: 480, rotation: 0, duration: 0.65, ease: "back.out(1.5)", immediateRender: false }, w(2) - 0.2);
+        var per = 1.6;
+        tl.fromTo(cp, { rotation: -2.5, transformOrigin: "50% 100%" }, { rotation: 2.5, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) }, w(2) + 0.5);
+        tl.fromTo(cp.querySelector(".ba-cp-w"), { x: -5 }, { x: 6, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) }, w(2) + 0.5);
+        tl.to(cp, { scale: 1.08, duration: 0.3, ease: "sine.inOut", yoyo: true, repeat: 1, transformOrigin: "50% 100%" }, w(15));   // « se baila en pareja »
+        var cPar = Cap.chip(p1, "en pareja", 90, 640, "pink"); cPar.style.zIndex = 12; Cap.pop(tl, cPar, w(16) - 0.05, { from: "up", rot: -2 });
+        var cTa = Cap.chip(p1, "tango", 620, 600, "terra"); Cap.pop(tl, cTa, w(2) - 0.05, { from: "down", rot: 2 });
+
+        // ---------- la carte du Rio de la Plata : Buenos Aires et Montevideo s'allument ----------
+        var CX = 930, CY = 215, view = "170 200 260 162.5", k = 800 / 260;
+        var card = mk(p1, "", ""); card.id = "card"; gsap.set(card, { x: CX, y: CY });
+        card.innerHTML = '<div class="mm">' + Q.baArgentina({ width: 800, view: view, uid: "ar3" }) + "</div>";
+        card.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+        var bs = [(265 - 170) * k, (258 - 200) * k], mv = [(302.6 - 170) * k, (264 - 200) * k];
+        var dBA = card.querySelector(".ba-bsas"), dMV = card.querySelector(".ba-mvd");
+        tl.set(card, { opacity: 0 }, 0);
+        tl.fromTo(card, { opacity: 0, y: CY + 200, rotation: 3 }, { opacity: 1, y: CY, rotation: 0, duration: 0.7, ease: "back.out(1.5)", immediateRender: false }, w(4) - 0.3);
+        var grow = function (d, t) { var px = d.dataset.px, py = d.dataset.py; gsap.set(d, { scale: 0, svgOrigin: px + " " + py }); tl.fromTo(d, { scale: 0 }, { scale: 1.4, svgOrigin: px + " " + py, duration: 0.45, ease: "back.out(3)", immediateRender: false }, t); tl.to(d, { scale: 1, svgOrigin: px + " " + py, duration: 0.3 }, t + 0.45); };
+        grow(dBA, w(5) - 0.05); grow(dMV, w(8) - 0.05);
+        var cb = Cap.chip(p1, "Buenos Aires", CX + 40, CY + 20, "gold"); Cap.pop(tl, cb, w(5) - 0.05, { from: "down", rot: 2 });
+        var cm = Cap.chip(p1, "Montevideo", CX + 470, CY + 330, "pink"); Cap.pop(tl, cm, w(8) - 0.05, { from: "up", rot: -2 });
+        var lk = mk(p1, "", '<svg width="800" height="500" viewBox="0 0 800 500" style="overflow:visible"><path d="M' + bs[0] + " " + bs[1] + " Q" + ((bs[0] + mv[0]) / 2) + " " + (bs[1] - 60) + " " + mv[0] + " " + mv[1] + '" stroke="#ffc83d" stroke-width="6" stroke-dasharray="4 14" stroke-linecap="round" fill="none"/></svg>'); lk.id = "link"; gsap.set(lk, { x: CX, y: CY });
+        tl.set(lk, { opacity: 0, transformOrigin: "0 0" }, 0);
+        tl.fromTo(lk, { opacity: 0, scaleX: 0 }, { opacity: 1, scaleX: 1, duration: 0.7, ease: "power2.out", transformOrigin: bs[0] + "px " + bs[1] + "px", immediateRender: false }, w(7) + 0.1);
+        var rg = mk(p1, "ring"); gsap.set(rg, { x: CX + bs[0], y: CY + bs[1] });
+        for (var r = 0; r < 2; r++) tl.fromTo(rg, { scale: 0.4, opacity: 1 }, { scale: 2.4, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, w(5) + r * 1.1);
+        var cs = Cap.chip(p1, "siglo XIX", CX + 40, CY + 540, "gold"); Cap.pop(tl, cs, w(12) - 0.05, { from: "up", rot: -2 });
+        Cap.sparks(tl, p1, CX + 400, CY + 250, w(12), 8, "#ffe9a8");
+
+        // ---------- le bandonéon respire (soufflet), des notes montent ----------
+        var bd = mk(p1, "it cap-paper", Q.baProp("bandoneon", { width: 300, uid: "bn" })); gsap.set(bd, { x: 1420, y: 725 });
+        tl.set(bd, { opacity: 0 }, 0);
+        tl.fromTo(bd, { opacity: 0, y: 725 + 160, rotation: -5 }, { opacity: 1, y: 725, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, w(15) - 0.1);
+        var bel = bd.querySelector(".ba-bellows"), rgt = bd.querySelector(".ba-right");
+        for (var b = 0; b < 4; b++) {
+          tl.to(bel, { scaleX: 1.4, svgOrigin: "100 150", duration: 0.7, ease: "sine.inOut" }, w(15) + 0.4 + b * 1.4);
+          tl.to(rgt, { x: 80, duration: 0.7, ease: "sine.inOut" }, w(15) + 0.4 + b * 1.4);
+          tl.to(bel, { scaleX: 0.85, svgOrigin: "100 150", duration: 0.7, ease: "sine.inOut" }, w(15) + 1.1 + b * 1.4);
+          tl.to(rgt, { x: -30, duration: 0.7, ease: "sine.inOut" }, w(15) + 1.1 + b * 1.4);
+        }
+        for (var n = 0; n < 5; n++) {
+          var nt = mk(p1, "note", Q.baProp("nota", { width: 54, c: ["#ffc83d", "#ff7fb0", "#6fe7dc"][n % 3], uid: "nt" + n })); var nx = 1450 + n * 55;
+          tl.fromTo(nt, { x: nx, y: 720, opacity: 0, scale: 0.5 }, { x: nx + 30 - (n % 2) * 60, y: 620 - (n % 3) * 30, opacity: 0.9, scale: 1, duration: 1.0, ease: "sine.out", immediateRender: false }, w(15) + 0.6 + n * 0.45);
+          tl.to(nt, { opacity: 0, y: "-=60", duration: 0.7, ease: "sine.in" }, w(15) + 1.5 + n * 0.45);
+        }
+
+        // ---------- 2009 : la carte s'efface, le sceau de laurier (generique) et la date prennent la place ----------
+        tl.to([card, lk, cb, cm, cs], { x: "+=1200", duration: 0.5, ease: "power3.in" }, w(18) - 0.4);
+        var sl = mk(p1, "it cap-paper", Q.baProp("sello", { width: 330, uid: "sl" })); gsap.set(sl, { x: 1000, y: 230 });
+        tl.set(sl, { opacity: 0 }, 0);
+        tl.fromTo(sl, { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.7)", immediateRender: false }, w(19) - 0.2);
+        tl.to(sl, { rotation: 4, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - w(19), 1.4) }, w(19) + 0.6);
+        var yr = mk(p1, "yr", "2009"); gsap.set(yr, { x: 1420, y: 330 });
+        tl.set(yr, { opacity: 0 }, 0); tl.set(yr, { opacity: 1 }, w(19) - 0.05);
+        tl.fromTo(yr, { scale: 0.3, rotation: 8 }, { scale: 1, rotation: -3, duration: 0.55, ease: "back.out(2)", immediateRender: false }, w(19) - 0.05);
+        Cap.sparks(tl, p1, 1165, 395, w(19), 10, "#ffe9a8");
+        var cu = Cap.chip(p1, "Patrimonio de la Humanidad", 1000, 610, "terra"); Cap.pop(tl, cu, w(24) - 0.05, { from: "up", rot: -2 });
+
+        var fr = C.frame(tl, root, PLAN, { seed: 23, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-capsula-buenosaires-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

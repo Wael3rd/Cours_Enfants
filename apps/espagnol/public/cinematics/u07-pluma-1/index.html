@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-pluma-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cpl, .band, .ball, .note, .spk { position: absolute; left: 0; top: 0; }
+      #warm { position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 55%, rgba(255,200,90,.5), rgba(255,200,90,0) 60%); opacity: 0; z-index: 19; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-pluma-1" data-start="0" data-width="1920" data-height="1200" data-duration="10.133">
+      <div id="stage"></div>
+      <div id="warm"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.133" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":9.833,"v":1},{"t":10.133,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/sol.c835aaa6d3.mp3" data-start="0.5" data-duration="5.089" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/quetzal.ba5dc4ae2c.mp3" data-start="6.089" data-duration="3.294" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/item-get.mp3" data-start="1.2" data-duration="0.526" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/level-up-big.mp3" data-start="0.5" data-duration="1.015" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="5.589" data-duration="0.212" data-track-index="6" data-volume="0.5"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/spell-cast.mp3" data-start="6.289" data-duration="0.465" data-track-index="7" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-pluma-1","cinematica":"u07-pluma","part":1,"parts":2,"total":10.133,"meta":{"cinematica":"u07-pluma","titulo":"Séptima pluma","tipo":"pluma","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":1,"t0":0,"t1":5.789,"vista":"Le bandonéon se remplit d’air et chante ; la musique remplit la rue, les passants dansent ; une plume verte glisse du soufflet dans la main d’Álex.","camara":"","rotulo":"","personajes":["sol","anibal","facu"],"lines":[{"who":"sol","es":"¡Suena! ¡La música vuelve! ¡Gracias, viajeros!","key":"sol.c835aaa6d3","t":0.5,"d":5.089,"words":[{"w":"¡Suena!","t":0.5,"d":0.509},{"w":"¡La","t":1.937,"d":0.194},{"w":"música","t":2.131,"d":0.423},{"w":"vuelve!","t":2.554,"d":0.423},{"w":"¡Gracias,","t":3.926,"d":0.572},{"w":"viajeros!","t":4.703,"d":0.736}]}]},{"n":2,"t0":5.789,"t1":9.883,"vista":"Le Quetzal fait une pirouette au-dessus de la place, ses plumes vibrent comme des cordes de guitare.","camara":"","rotulo":"","personajes":["quetzal"],"lines":[{"who":"quetzal","es":"Siete plumas. ¡Ahora vuelo y canto!","key":"quetzal.ba5dc4ae2c","t":6.089,"d":3.294,"words":[{"w":"Siete","t":6.089,"d":0.452},{"w":"plumas.","t":6.541,"d":0.523},{"w":"¡Ahora","t":8.118,"d":0.33},{"w":"vuelo","t":8.449,"d":0.33},{"w":"y","t":8.779,"d":0.124},{"w":"canto!","t":8.903,"d":0.33}]}]}],"sfx":[{"t":0.2,"f":"rpg/spell-magic"},{"t":1.2,"f":"rpg/item-get"},{"t":0.5,"f":"rpg/level-up-big"},{"t":5.589,"f":"ui/swoosh-out"},{"t":6.289,"f":"rpg/spell-cast"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), L1 = P1.lines[0], L2 = P2.lines[0], T = PLAN.total, W = P2.t0;
+        var set = Q.baSanTelmo({ uid: "bt" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 18 });
+        S.drift(tl, room, T);
+
+        // ---------- les couples dansent pour de bon : plus vifs, en couleurs ----------
+        [[620, 0], [930, 1]].forEach(function (c, i) {
+          var cp = mkp(room.actors, "cpl", Q.baPareja({ width: 250, uid: "cp" + i, w: ["#D8352A", "#E5638A"][i], m: ["#2A2A3A", "#1E2A3A"][i] }), c[0] - 125, 620);
+          var per = 0.9 + i * 0.12;
+          tl.fromTo(cp, { rotation: -4, transformOrigin: "50% 100%" }, { rotation: 4, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, 0.2);
+          tl.fromTo(cp.querySelector(".ba-cp-w"), { x: -8 }, { x: 9, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) + 1 }, 0.2);
+          tl.fromTo(cp, { y: 620 }, { y: 606, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) + 1 }, 0.2);
+        });
+
+        // ---------- le groupe : Marina (+ Quetzal), Facu qui jongle, Sol, Alex, Don Aníbal ----------
+        var mar = S.chr(room.actors, "marina", 1250, 1035, 322), fac = S.chr(room.actors, "facu", 1480, 1040, 336), sol = S.chr(room.actors, "sol", 1720, 1040, 330);
+        S.prop(room.actors, "guitarra", 1760, 770, 118); var gt = room.actors.lastChild; gsap.set(gt, { rotation: 18, transformOrigin: "50% 50%" });
+        var ale = S.chr(room.actors, "viajero", 2010, 1045, 330), ani = S.chr(room.actors, "anibal", 2430, 1040, 340);
+        var qz = S.quetzal(room.actors, 1345, 770, 190, "perched", false, "qp1");
+        [mar, fac, sol, ale, ani].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 1.4); Q.charEmote(tl, c.svg, 0.3, "happy", 0.3); });
+        Q.quetzalSway(tl, qz, 0.2, W - 0.2, 1.6); Q.charBlink(tl, ale.svg, 2.6); Q.charBlink(tl, sol.svg, 4.4);
+        // Facu jongle avec son ballon
+        var bl = mkp(room.actors, "ball", Q.baProp("balon", { width: 80, uid: "bl7" }), 1560, 900);
+        var jp = 0.9;
+        tl.fromTo(bl, { y: 900 }, { y: 640, duration: jp / 2, ease: "power2.out", yoyo: true, repeat: C.reps(T, jp) + 1 }, 0.1);
+        tl.fromTo(bl, { rotation: 0, transformOrigin: "50% 50%" }, { rotation: 720, duration: jp * 2, ease: "none", repeat: C.reps(T, jp * 2) + 1 }, 0.1);
+        // Sol gratte sa guitare : elle SONNE
+        C.talkChar(tl, sol, L1); C.talkBounce(tl, sol.b, L1, 6);
+        tl.to(gt, { rotation: 26, duration: 0.15, ease: "sine.inOut", yoyo: true, repeat: 15 }, 0.3);
+        S.hop(tl, sol, L1.t + 0.2, 34); S.hop(tl, fac, L1.t + 0.9, 30); S.hop(tl, mar, L1.t + 1.4, 30);
+        Q.charWave(tl, sol.svg, C.wordT(PLAN, 1, 1, 9) - 0.1, 1.2, "R");
+
+        // ---------- le bandonéon se remplit d'air et chante ----------
+        var bd = S.mk(room.actors, "band", Q.baProp("bandoneon", { width: 400, uid: "bn" })); bd.setAttribute("data-layout-allow-overflow", ""); bd.setAttribute("data-layout-ignore", ""); gsap.set(bd, { x: 2230, y: 760, rotation: -4, transformOrigin: "50% 50%" });
+        var bel = bd.querySelector(".ba-bellows"), rgt = bd.querySelector(".ba-right"), glow = bd.querySelector(".ba-glow");
+        for (var k = 0; k < 6; k++) {
+          tl.to(bel, { scaleX: 1.5, svgOrigin: "100 150", duration: 0.5, ease: "sine.inOut" }, 0.2 + k * 1.05);
+          tl.to(rgt, { x: 100, duration: 0.5, ease: "sine.inOut" }, 0.2 + k * 1.05);
+          tl.to(bel, { scaleX: 0.85, svgOrigin: "100 150", duration: 0.5, ease: "sine.inOut" }, 0.72 + k * 1.05);
+          tl.to(rgt, { x: -30, duration: 0.5, ease: "sine.inOut" }, 0.72 + k * 1.05);
+        }
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 0.8, duration: 0.9, ease: "sine.inOut", immediateRender: false }, L1.t + 1.2);
+        tl.to(glow, { opacity: 0, duration: 1.0, ease: "sine.inOut" }, L1.t + 3.6);
+        // notes de musique (papier) qui montent et se repandent dans la rue
+        var cols = ["#ffc83d", "#ff7fb0", "#6fe7dc", "#f5e6c8"];
+        for (var n = 0; n < 16; n++) {
+          var nx = 2260 + (n % 4) * 90 - 320 * (n % 3) * 0.6, ny = 760;
+          var nt = mkp(room.qlayer, "note", Q.baProp("nota", { width: 64, c: cols[n % 4], uid: "nt" + n }), nx, ny);
+          var t0 = 0.5 + n * 0.55;
+          tl.fromTo(nt, { x: nx, y: ny, opacity: 0, scale: 0.5, rotation: 0 }, { x: nx - 120 - (n % 5) * 140, y: ny - 300 - (n % 4) * 70, opacity: 0.95, scale: 1.1, rotation: (n % 2 ? 14 : -14), duration: 1.4, ease: "sine.out", immediateRender: false }, t0);
+          tl.to(nt, { opacity: 0, y: "-=80", duration: 0.7, ease: "sine.in" }, t0 + 1.2);
+        }
+
+        // ---------- la plume verte glisse du soufflet dans la main d'Alex ----------
+        var tF = L1.t + 3.0, ft = S.feather(room.qlayer, 52);
+        tl.set(ft, { opacity: 0, x: 2420, y: 780, rotation: 0 }, 0);
+        tl.fromTo(ft, { opacity: 0, x: 2420, y: 800, rotation: -20 }, { opacity: 1, x: 2400, y: 660, rotation: 25, duration: 0.7, ease: "sine.out", immediateRender: false }, tF);
+        tl.to(ft, { x: 2200, y: 760, rotation: -30, duration: 0.7, ease: "sine.inOut" }, tF + 0.7);
+        tl.to(ft, { x: 2120, y: 890, rotation: 12, duration: 0.7, ease: "sine.inOut" }, tF + 1.4);
+        tl.to(ft, { y: "+=10", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, tF + 2.1);
+        Q.charWave(tl, ale.svg, tF + 1.3, 0.6, "R");
+        for (var s = 0; s < 8; s++) {
+          var sp = mkp(room.actors, "spk q-fx", '<svg width="40" height="40" viewBox="-20 -20 40 40"><path d="' + Q.sparklePath(0, 0, 17, 4) + '" fill="#b6ffd9"/></svg>', 2120, 890);
+          var ang = (s / 8) * 6.283;
+          tl.fromTo(sp, { x: 2120, y: 890, scale: 0, opacity: 0 }, { x: 2120 + Math.cos(ang) * 80, y: 890 + Math.sin(ang) * 80, scale: 0.9, opacity: 0.9, duration: 0.5, ease: "power2.out", immediateRender: false }, tF + 2.0 + s * 0.04);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.45, ease: "power2.in" }, tF + 2.55 + s * 0.04);
+        }
+        // un halo chaud tres doux : toute la rue s'illumine de musique
+        tl.fromTo("#warm", { opacity: 0 }, { opacity: 0.18, duration: 0.9, ease: "sine.inOut", immediateRender: false }, L1.t + 0.6);
+
+        // ---------- plan 2 : pirouette du Quetzal au-dessus de la place ----------
+        var tq = W + 0.05;
+        Q.quetzalPoseTo(tl, qz, "fly", tq, 0.3);
+        Q.quetzalFlap(tl, qz, tq + 0.1, 9, 0.3, 0.85);
+        tl.to(qz, { motionPath: { path: [{ x: 0, y: 0 }, { x: 140, y: -300 }, { x: 420, y: -400 }, { x: 560, y: -230 }, { x: 330, y: -130 }, { x: 170, y: -270 }, { x: 60, y: -120 }], curviness: 1.4 }, duration: L2.d + 0.4, ease: "sine.inOut" }, tq + 0.1);
+        tl.to(qz, { rotation: 360, duration: 0.9, ease: "power2.inOut", transformOrigin: "50% 60%" }, tq + 1.2);
+        Q.quetzalPoseTo(tl, qz, "perched", T - 0.9, 0.4);
+        C.talkQuetzal(tl, qz, L2);
+
+        // ---------- camera : plan large de la rue -> descente vers la main d'Alex -> remontee avec le Quetzal ----------
+        S.camSet(room, 1750, 720, 0.86);
+        S.cam(tl, room, 1900, 760, 1.05, 0, tF + 0.6, "sine.inOut");
+        S.cam(tl, room, 2050, 800, 1.2, tF + 0.6, 1.2, "power2.inOut");
+        S.cam(tl, room, 1650, 540, 0.95, W - 0.1, 1.3, "power2.inOut");
+
+        var fr = C.frame(tl, root, PLAN, { seed: 31, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-pluma-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

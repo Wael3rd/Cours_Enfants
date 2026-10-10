@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-historia-2</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cpl { position: absolute; left: 0; top: 0; }
+      .ring { position: absolute; left: 0; top: 0; width: 200px; height: 200px; margin: -100px 0 0 -100px; border-radius: 50%; border: 6px dashed #b9bfd9; opacity: 0; }
+      #cool { position: absolute; inset: 0; background: #2a3a6a; opacity: 0; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-historia-2" data-start="0" data-width="1920" data-height="1200" data-duration="8.825">
+      <div id="stage"></div>
+      <div id="cool"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.825" data-media-start="9.872" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.525,"v":1},{"t":8.825,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/sol.1e99bbdc63.mp3" data-start="0.8" data-duration="7.275" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.75" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="8.525" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-historia-2","cinematica":"u07-historia","part":2,"parts":5,"total":8.825,"meta":{"cinematica":"u07-historia","titulo":"El silencio de Buenos Aires","tipo":"historia","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":2,"t0":0,"t1":8.575,"vista":"La feria de San Telmo : des couples dansent le tango dans un silence étrange ; Sol, 12 ans, serre sa guitare sans qu’aucune note ne sorte.","camara":"plan moyen sur les danseurs, son coupé","rotulo":"","personajes":["sol","marina"],"lines":[{"who":"sol","es":"Hola, soy Sol. Me encanta la música, pero hoy no suena nada. ¡Todo está en silencio!","key":"sol.1e99bbdc63","t":0.8,"d":7.275,"words":[{"w":"Hola,","t":0.8,"d":0.381},{"w":"soy","t":1.399,"d":0.296},{"w":"Sol.","t":1.695,"d":0.296},{"w":"Me","t":2.978,"d":0.178},{"w":"encanta","t":3.156,"d":0.441},{"w":"la","t":3.597,"d":0.178},{"w":"música,","t":3.775,"d":0.388},{"w":"pero","t":4.413,"d":0.266},{"w":"hoy","t":4.679,"d":0.217},{"w":"no","t":4.896,"d":0.168},{"w":"suena","t":5.064,"d":0.315},{"w":"nada.","t":5.379,"d":0.266},{"w":"¡Todo","t":6.623,"d":0.298},{"w":"está","t":6.921,"d":0.298},{"w":"en","t":7.219,"d":0.188},{"w":"silencio!","t":7.407,"d":0.518}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.75,"f":"ui/pop"},{"t":8.525,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P = C.planOf(PLAN, 2), L1 = P.lines[0], T = PLAN.total;
+        var set = Q.baSanTelmo({ uid: "bt" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 14 });
+        S.drift(tl, room, T);
+
+        // ---------- les couples dansent le tango sans un son : balancement lent ----------
+        [[1560, 0], [1880, 1], [2200, 2]].forEach(function (c, i) {
+          var cp = mkp(room.actors, "cpl", Q.baPareja({ width: 250, uid: "cp" + i, w: ["#D8352A", "#2F6FD0", "#E5638A"][i], m: ["#2A2A3A", "#3A2A2A", "#1E2A3A"][i] }), c[0] - 125, 620);
+          var per = 1.7 + i * 0.3;
+          tl.fromTo(cp, { rotation: -3, transformOrigin: "50% 100%" }, { rotation: 3, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.2);
+          tl.fromTo(cp.querySelector(".ba-cp-w"), { x: -5 }, { x: 6, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) + 1 }, i * 0.2);
+          tl.fromTo(cp.querySelector(".ba-cp-m"), { x: 4 }, { x: -4, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) + 1 }, i * 0.2);
+        });
+
+        // ---------- Sol (guitare), Marina, Alex, le Quetzal ----------
+        var sol = S.chr(room.actors, "sol", 760, 1040, 330);
+        S.prop(room.actors, "guitarra", 800, 770, 118);
+        var gt = room.actors.lastChild; gsap.set(gt, { rotation: 18, transformOrigin: "50% 50%" });
+        var mar = S.chr(room.actors, "marina", 1090, 1035, 322), ale = S.chr(room.actors, "viajero", 960, 1045, 330);
+        var qz = S.quetzal(room.actors, 1185, 770, 190, "perched", false, "qh2");
+        [sol, mar, ale].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); });
+        Q.quetzalSway(tl, qz, 0.2, T - 0.4, 1); Q.quetzalBlink(tl, qz, 3.2);
+        Q.charBlink(tl, sol.svg, 2.0); Q.charBlink(tl, mar.svg, 3.6); Q.charBlink(tl, ale.svg, 5.0);
+        C.talkChar(tl, sol, L1); C.talkBounce(tl, sol.b, L1, 5);
+        Q.charWave(tl, sol.svg, L1.t - 0.1, 0.8, "R");               // « Hola »
+        Q.charEmote(tl, sol.svg, C.wordT(PLAN, 2, 1, 8), "worry", 0.4);
+        Q.charEmote(tl, mar.svg, L1.t + 3.5, "worry", 0.4); Q.charEmote(tl, ale.svg, L1.t + 3.5, "worry", 0.4);
+        // « no suena nada » : elle gratte la guitare, rien ne sort : anneaux de silence (tirets gris) qui s'eteignent
+        var wSu = C.wordT(PLAN, 2, 1, 11), wSi = C.wordT(PLAN, 2, 1, 16);
+        [wSu, wSi].forEach(function (t0, j) {
+          tl.to(gt, { rotation: 24, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 5 }, t0 - 0.05);
+          for (var r = 0; r < 3; r++) {
+            var rg = mkp(room.qlayer, "ring", "", 800, 900);
+            tl.fromTo(rg, { scale: 0.35, opacity: 0.0 }, { scale: 1.9 + r * 0.4, opacity: 0.55, duration: 0.5, ease: "power2.out", immediateRender: false }, t0 + r * 0.32);
+            tl.to(rg, { opacity: 0, duration: 0.5, ease: "sine.in" }, t0 + r * 0.32 + 0.5);
+          }
+        });
+        // le monde se refroidit sur « todo esta en silencio »
+        tl.to("#cool", { opacity: 0.22, duration: 0.9, ease: "sine.inOut" }, wSi - 0.5);
+        tl.to(room.motes, { opacity: 0.4, duration: 0.9, ease: "sine.inOut" }, wSi - 0.5);
+
+        // ---------- camera : plan large de la feria -> pousse vers Sol, puis vers les couples muets ----------
+        S.camSet(room, 1500, 650, 0.72);
+        S.cam(tl, room, 1150, 740, 1.0, 0, L1.t + 1.4, "sine.inOut");
+        S.cam(tl, room, 1400, 730, 1.05, L1.t + 3.4, T - L1.t - 3.6, "power1.inOut");
+        tl.fromTo("#stage", { rotation: -0.8, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.4, ease: "power2.out" }, 0);
+
+        var fr = C.frame(tl, root, PLAN, { seed: 6, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-historia-2"] = tl;
+      })();
+    </script>
+  </body>
+</html>

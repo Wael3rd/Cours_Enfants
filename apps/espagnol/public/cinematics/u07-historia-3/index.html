@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-historia-3</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .cpl, .kid, .band { position: absolute; left: 0; top: 0; }
+      #cool { position: absolute; inset: 0; background: #2a3a6a; opacity: 0.22; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-historia-3" data-start="0" data-width="1920" data-height="1200" data-duration="10.191">
+      <div id="stage"></div>
+      <div id="cool"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.191" data-media-start="18.697" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":9.891,"v":1},{"t":10.191,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/marina.558dfdb647.mp3" data-start="0.4" data-duration="3.862" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-3-1" src="./assets/voz/anibal.a9d38fc23d.mp3" data-start="4.862" data-duration="4.779" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.35" data-duration="0.1" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/swoosh-out.mp3" data-start="4.262" data-duration="0.212" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="4.812" data-duration="0.1" data-track-index="6" data-volume="0.3"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/swoosh-out.mp3" data-start="9.891" data-duration="0.212" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-historia-3","cinematica":"u07-historia","part":3,"parts":5,"total":10.191,"meta":{"cinematica":"u07-historia","titulo":"El silencio de Buenos Aires","tipo":"historia","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":2,"t0":0,"t1":4.462,"vista":"La feria de San Telmo : des couples dansent le tango dans un silence étrange ; Sol, 12 ans, serre sa guitare sans qu’aucune note ne sorte.","camara":"plan moyen sur les danseurs, son coupé","rotulo":"","personajes":["sol","marina"],"lines":[{"who":"marina","es":"¿Silencio? ¡Pero si la música es lo mejor de Buenos Aires!","key":"marina.558dfdb647","t":0.4,"d":3.862,"words":[{"w":"¿Silencio?","t":0.4,"d":0.61},{"w":"¡Pero","t":1.889,"d":0.24},{"w":"si","t":2.129,"d":0.151},{"w":"la","t":2.28,"d":0.151},{"w":"música","t":2.431,"d":0.329},{"w":"es","t":2.76,"d":0.151},{"w":"lo","t":2.912,"d":0.151},{"w":"mejor","t":3.063,"d":0.284},{"w":"de","t":3.347,"d":0.151},{"w":"Buenos","t":3.498,"d":0.329},{"w":"Aires!","t":3.827,"d":0.284}]}]},{"n":3,"t0":4.462,"t1":9.941,"vista":"Don Aníbal, sombrero, tient son bandonéon sur les genoux et l’ouvre : aucun son. Une ombre noire glisse sur les instruments ; la foule hausse les épaules.","camara":"","rotulo":"","personajes":["anibal","sombra"],"lines":[{"who":"anibal","es":"Mi bandoneón ya no suena. Y la gente dice: «me da igual».","key":"anibal.a9d38fc23d","t":4.862,"d":4.779,"words":[{"w":"Mi","t":4.862,"d":0.184},{"w":"bandoneón","t":5.046,"d":0.561},{"w":"ya","t":5.607,"d":0.184},{"w":"no","t":5.791,"d":0.184},{"w":"suena.","t":5.974,"d":0.346},{"w":"Y","t":7.391,"d":0.148},{"w":"la","t":7.538,"d":0.209},{"w":"gente","t":7.747,"d":0.393},{"w":"dice:","t":8.141,"d":0.332},{"w":"«me","t":8.759,"d":0.189},{"w":"da","t":8.947,"d":0.189},{"w":"igual».","t":9.136,"d":0.355}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.35,"f":"ui/pop"},{"t":4.262,"f":"ui/swoosh-out"},{"t":4.812,"f":"ui/pop"},{"t":9.891,"f":"ui/swoosh-out"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var PM = C.planOf(PLAN, 2), LM = PM.lines[0], PA = C.planOf(PLAN, 3), LA = PA.lines[0], T = PLAN.total;
+        var set = Q.baSanTelmo({ uid: "bt" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 12 });
+        S.drift(tl, room, T);
+
+        // ---------- les couples dansent toujours, en silence ----------
+        [[1560, 0], [1880, 1]].forEach(function (c, i) {
+          var cp = mkp(room.actors, "cpl", Q.baPareja({ width: 250, uid: "cp" + i, w: ["#D8352A", "#2F6FD0"][i], m: ["#2A2A3A", "#3A2A2A"][i] }), c[0] - 125, 620);
+          var per = 1.7 + i * 0.3;
+          tl.fromTo(cp, { rotation: -3, transformOrigin: "50% 100%" }, { rotation: 3, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per) + 1 }, i * 0.2);
+          tl.fromTo(cp.querySelector(".ba-cp-w"), { x: -5 }, { x: 6, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, per * 0.5) + 1 }, i * 0.2);
+        });
+
+        // ---------- Sol, Alex, Marina (a gauche) ----------
+        var sol = S.chr(room.actors, "sol", 760, 1040, 330);
+        S.prop(room.actors, "guitarra", 800, 770, 118);
+        var gt = room.actors.lastChild; gsap.set(gt, { rotation: 18, transformOrigin: "50% 50%" });
+        var mar = S.chr(room.actors, "marina", 1090, 1035, 322), ale = S.chr(room.actors, "viajero", 960, 1045, 330);
+        var qz = S.quetzal(room.actors, 1185, 770, 190, "perched", false, "qh3");
+        [sol, mar, ale].forEach(function (c, i) { S.breathe(tl, c, i * 0.1, T, 0.8); Q.charEmote(tl, c.svg, 0, "worry", 0.01); });
+        Q.quetzalSway(tl, qz, 0.2, T - 0.4, 1); Q.quetzalBlink(tl, qz, 3.2);
+        Q.charBlink(tl, sol.svg, 1.4); Q.charBlink(tl, ale.svg, 3.6);
+        // Marina : « ¿Silencio? ¡Pero si la musica es lo mejor de Buenos Aires! »
+        C.talkChar(tl, mar, LM); C.talkBounce(tl, mar.b, LM, 6);
+        Q.charEmote(tl, mar.svg, LM.t, "happy", 0.3);
+        S.hop(tl, mar, C.wordT(PLAN, 2, 1, 6), 30);
+        Q.charNod(tl, sol.svg, LM.t + 2.0, 4, 0.2);
+
+        // ---------- Don Aníbal et son bandoneon muet ; passants gris qui haussent les epaules ----------
+        var ani = S.chr(room.actors, "anibal", 2300, 1040, 340);
+        S.breathe(tl, ani, 0, T, 0.7); Q.charBlink(tl, ani.svg, 2.2); Q.charBlink(tl, ani.svg, 7.0);
+        var bd = S.mk(room.actors, "band", Q.baProp("bandoneon", { width: 400, uid: "bn" })); bd.setAttribute("data-layout-allow-overflow", ""); bd.setAttribute("data-layout-ignore", ""); gsap.set(bd, { x: 2100, y: 760, rotation: -4, transformOrigin: "50% 50%" });
+        var bel = bd.querySelector(".ba-bellows"), rgt = bd.querySelector(".ba-right");
+        var breathe = function (t, s) { tl.to(bel, { scaleX: s, svgOrigin: "100 150", duration: 0.55, ease: "sine.inOut" }, t); tl.to(rgt, { x: 200 * (s - 1), duration: 0.55, ease: "sine.inOut" }, t); };
+        for (var k = 0; k < 3; k++) { breathe(LA.t + 0.2 + k * 1.5, 1.45); breathe(LA.t + 0.95 + k * 1.5, 0.82); }
+        breathe(LA.t + 4.8, 1.0);
+        C.talkChar(tl, ani, LA); C.talkBounce(tl, ani.b, LA, 4);
+        Q.charEmote(tl, ani.svg, LA.t, "worry", 0.3);
+        var kids = [[2650, "stand", 0], [2900, "stand", 1], [3040, "run", 2]];
+        kids.forEach(function (g, i) {
+          var kd = mkp(room.actors, "kid", Q.frozenKid({ width: i === 2 ? 240 : 280, pose: g[1], uid: "fk" + i }), g[0] - 140, i === 2 ? 650 : 560);
+          var w1 = C.wordT(PLAN, 3, 1, 10 + (i % 3));
+          tl.to(kd, { y: "-=18", duration: 0.2, ease: "power2.out" }, w1);
+          tl.to(kd, { y: "+=18", duration: 0.3, ease: "power2.in" }, w1 + 0.2);
+          tl.to(kd, { rotation: i % 2 ? -3 : 3, transformOrigin: "50% 100%", duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: 1 }, w1);
+        });
+
+        // ---------- camera : sur Marina et Sol, puis glissement vers Don Aníbal ----------
+        S.camSet(room, 1150, 740, 1.0);
+        S.cam(tl, room, 1180, 735, 1.04, 0, PA.t0 - 0.3, "sine.inOut");
+        S.cam(tl, room, 2200, 735, 1.05, PA.t0 - 0.3, 1.1, "power2.inOut");
+        S.cam(tl, room, 2250, 730, 1.14, PA.t0 + 0.9, T - PA.t0 - 1.0, "sine.inOut");
+
+        var fr = C.frame(tl, root, PLAN, { seed: 7, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-historia-3"] = tl;
+      })();
+    </script>
+  </body>
+</html>

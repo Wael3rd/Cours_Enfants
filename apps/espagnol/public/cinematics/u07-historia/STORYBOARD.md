@@ -1,0 +1,9 @@
+# u07-historia — « El silencio de Buenos Aires » (5 compositions : 9,9 + 8,8 + 10,2 + 8,2 + 8,4 s)
+
+Région `argentina` (filete porteño). Décors du kit : `baCaminito` (rue de La Boca, 3200×1200) et `baSanTelmo` (feria, 3200×1200). Personnages : Álex, Marina, Quetzal, **Facu**, **Sol**, **Don Aníbal** (`08f-chars-baires.js`), la Sombra. Accessoires : `baProp('bandoneon'|'balon'|'paraguas'…)`, `prop('guitarra')`, `baPareja` (couple de tango), `frozenKid` (passants gris). Mouvement sûr : aucune lueur plus forte que 0,25, assombrissements par fondu ≥ 0,7 s, rien ne clignote.
+
+1. **historia-1 · Caminito (P1, 9,9 s)** — plan large de la rue colorée sous le soleil ; Álex, Marina et le Quetzal à gauche ; Facu (maillot bleu et jaune, ballon) arrive en courant par la droite, freine (squash) et salue ; champ / contre-champ par la caméra qui pousse. Marina s'évente (« hoy hace mucho calor »).
+2. **historia-2 · La feria de San Telmo (P2.1, 8,8 s)** — trois couples dansent le tango **sans un son** (balancement lent) ; Sol serre sa guitare ; anneaux de « silence » (tirets gris qui s'éteignent) quand elle gratte sans rien entendre ; le décor se refroidit en fondu (0,9 s) sur « todo está en silencio ».
+3. **historia-3 · Marina puis Don Aníbal (P2.2 + P3.1, 10,2 s)** — Marina réagit (« la música es lo mejor… ») ; la caméra glisse vers Don Aníbal, bandonéon sur les genoux : le soufflet s'ouvre et se ferme, rien ne sort ; passants gris qui haussent les épaules.
+4. **historia-4 · La Sombra (P3.2, 8,2 s)** — la Sombra sort d'un nuage d'encre au-dessus des instruments, yeux qui s'allument, la scène s'assombrit en fondu ; push-in lent.
+5. **historia-5 · Le reflet vert (P4, 8,4 s)** — gros plan sur le soufflet du bandonéon : reflet vert qui respire entre les plis ; le Quetzal vient se poser, Sol serre sa guitare et hoche la tête.

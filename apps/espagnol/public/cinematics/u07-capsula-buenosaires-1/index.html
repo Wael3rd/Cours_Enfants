@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-capsula-buenosaires-1</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .map, .ico { position: absolute; left: 0; top: 0; z-index: 6; }
+      .ring { position: absolute; left: 0; top: 0; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 7px solid #ffc83d; opacity: 0; z-index: 9; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-capsula-buenosaires-1" data-start="0" data-width="1920" data-height="1200" data-duration="7.186">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="7.186" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":6.886,"v":1},{"t":7.186,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.a11788e22e.mp3" data-start="0.6" data-duration="5.536" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/star.mp3" data-start="2.305" data-duration="0.121" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="4.847" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-capsula-buenosaires-1","cinematica":"u07-capsula-buenosaires","part":1,"parts":5,"total":7.186,"meta":{"cinematica":"u07-capsula-buenosaires","titulo":"Fútbol, tango, mate… y vos","tipo":"capsula","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":1,"t0":0,"t1":6.936,"vista":"Style explainer, papier découpé : une carte de l’Argentine, Buenos Aires s’allume au bord de l’estuaire du Río de la Plata.","camara":"plan fixe, animations de papier découpé","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Buenos Aires es la capital de Argentina. Está en la orilla del Río de la Plata.","key":"narrador.a11788e22e","t":0.6,"d":5.536,"words":[{"w":"Buenos","t":0.6,"d":0.401},{"w":"Aires","t":1.001,"d":0.347},{"w":"es","t":1.348,"d":0.184},{"w":"la","t":1.532,"d":0.184},{"w":"capital","t":1.716,"d":0.455},{"w":"de","t":2.171,"d":0.184},{"w":"Argentina.","t":2.355,"d":0.563},{"w":"Está","t":3.927,"d":0.267},{"w":"en","t":4.194,"d":0.168},{"w":"la","t":4.362,"d":0.168},{"w":"orilla","t":4.531,"d":0.366},{"w":"del","t":4.897,"d":0.218},{"w":"Río","t":5.115,"d":0.218},{"w":"de","t":5.332,"d":0.168},{"w":"la","t":5.501,"d":0.168},{"w":"Plata.","t":5.669,"d":0.317}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":2.305,"f":"ui/star"},{"t":4.847,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, w = function (k) { return C.wordT(PLAN, 1, 1, k); };
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Fútbol, tango, mate… y vos", 0.15);
+        ttl.style.maxWidth = "700px";
+
+        // ---------- la silhouette de l'Argentine (papier decoupe) glisse du bas ----------
+        var MW = 430, MX0 = 1080, MY0 = 205, k = MW / 420;
+        var map = mk(p1, "map cap-paper", Q.baArgentina({ width: MW, uid: "ar1" })); gsap.set(map, { x: MX0, y: MY0 });
+        tl.set(map, { opacity: 0 }, 0);
+        tl.fromTo(map, { opacity: 0, y: MY0 + 220, rotation: 3 }, { opacity: 1, y: MY0, rotation: 0, duration: 0.7, ease: "back.out(1.5)", immediateRender: false }, 0.3);
+        tl.to(map, { y: "-=10", duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.4) }, 1.1);
+        // un Obelisco de papier a gauche, sous le titre
+        var ob = mk(p1, "ico cap-paper", Q.monumentSvg("obelisco", { size: 300, c: "#F5E6C8", a: "#FFC83D" })); gsap.set(ob, { x: 330, y: 560 });
+        tl.set(ob, { opacity: 0 }, 0);
+        tl.fromTo(ob, { opacity: 0, y: 560 + 160, rotation: -4 }, { opacity: 1, y: 560, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, w(1) - 0.1);
+        // Buenos Aires s'allume au bord de l'estuaire : point or + anneaux
+        var bs = [265 * k, 258 * k], dotX = MX0 + bs[0], dotY = MY0 + bs[1];
+        var dot = map.querySelector(".ba-bsas");
+        tl.set(dot, { scale: 0, svgOrigin: "265 258" }, 0);
+        tl.fromTo(dot, { scale: 0 }, { scale: 1.3, svgOrigin: "265 258", duration: 0.45, ease: "back.out(3)", immediateRender: false }, w(1) - 0.05);
+        tl.to(dot, { scale: 1, svgOrigin: "265 258", duration: 0.3 }, w(1) + 0.45);
+        var ring = mk(p1, "ring"); gsap.set(ring, { x: dotX, y: dotY });
+        for (var r = 0; r < 3; r++) tl.fromTo(ring, { scale: 0.4, opacity: 1 }, { scale: 2.6, opacity: 0, duration: 1.0, ease: "power2.out", immediateRender: false }, w(1) + r * 1.05);
+        tl.set(map.querySelector(".ba-mvd"), { opacity: 0 }, 0);
+        var c1 = Cap.chip(p1, "Buenos Aires", dotX + 60, dotY - 90, "gold"); Cap.pop(tl, c1, w(1) - 0.05, { from: "down", rot: 2 });
+        Cap.sparks(tl, p1, dotX, dotY, w(1), 8, "#ffe9a8");
+        // « Rio de la Plata » : l'estuaire (cafe au lait) pulse doucement
+        var rio = map.querySelector(".ba-rio");
+        tl.fromTo(rio, { opacity: 0.5 }, { opacity: 1, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 3, immediateRender: false }, w(13) - 0.1);
+        var c2 = Cap.chip(p1, "Río de la Plata", dotX + 130, dotY + 40, "terra"); Cap.pop(tl, c2, w(13) - 0.05, { from: "up", rot: -2 });
+        Cap.sparks(tl, p1, dotX + 70, dotY + 60, w(13), 6, "#f2d6a8");
+
+        var fr = C.frame(tl, root, PLAN, { seed: 21, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-capsula-buenosaires-1"] = tl;
+      })();
+    </script>
+  </body>
+</html>

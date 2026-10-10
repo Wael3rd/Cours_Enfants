@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-capsula-buenosaires-4</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qcap.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      #subs .sub-txt { font-size: 46px; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #p1 { position: absolute; inset: 0; }
+      .it { position: absolute; left: 0; top: 0; z-index: 6; }
+      .fr { position: absolute; left: 0; top: 0; z-index: 7; }
+      .mate { position: absolute; left: 0; top: 0; z-index: 9; }
+      .steam { position: absolute; left: 0; top: 0; z-index: 8; width: 26px; height: 26px; border-radius: 50%; background: #f5e6c8; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-capsula-buenosaires-4" data-start="0" data-width="1920" data-height="1200" data-duration="8.781">
+      <div id="p1" data-layout-allow-overflow></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.781" data-media-start="34.914" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":8.481,"v":1},{"t":8.781,"v":0.5}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/narrador.26d35ec9b0.mp3" data-start="0.5" data-duration="7.231" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.4"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/pop.mp3" data-start="0.45" data-duration="0.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/pop.mp3" data-start="3.47" data-duration="0.1" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="5.355" data-duration="0.1" data-track-index="6" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-capsula-buenosaires-4","cinematica":"u07-capsula-buenosaires","part":4,"parts":5,"total":8.781,"meta":{"cinematica":"u07-capsula-buenosaires","titulo":"Fútbol, tango, mate… y vos","tipo":"capsula","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":4,"t0":0,"t1":8.531,"vista":"Un maté en calebasse passe de main en main entre des amis assis sur un banc ; une bombilla en métal et un thermos d’eau chaude.","camara":"","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"El mate es una bebida caliente. Se toma con una bombilla y se comparte con los amigos: pasa de mano en mano.","key":"narrador.26d35ec9b0","t":0.5,"d":7.231,"words":[{"w":"El","t":0.5,"d":0.189},{"w":"mate","t":0.689,"d":0.3},{"w":"es","t":0.988,"d":0.189},{"w":"una","t":1.177,"d":0.244},{"w":"bebida","t":1.421,"d":0.411},{"w":"caliente.","t":1.832,"d":0.522},{"w":"Se","t":3.355,"d":0.165},{"w":"toma","t":3.52,"d":0.262},{"w":"con","t":3.783,"d":0.214},{"w":"una","t":3.996,"d":0.214},{"w":"bombilla","t":4.21,"d":0.457},{"w":"y","t":4.667,"d":0.117},{"w":"se","t":4.784,"d":0.165},{"w":"comparte","t":4.949,"d":0.457},{"w":"con","t":5.405,"d":0.214},{"w":"los","t":5.619,"d":0.214},{"w":"amigos:","t":5.833,"d":0.36},{"w":"pasa","t":6.54,"d":0.244},{"w":"de","t":6.785,"d":0.154},{"w":"mano","t":6.939,"d":0.244},{"w":"en","t":7.183,"d":0.154},{"w":"mano.","t":7.337,"d":0.244}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.45,"f":"ui/pop"},{"t":3.47,"f":"ui/pop"},{"t":5.355,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, Cap = window.QCap;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer(); Cap.css();
+        var $ = function (s) { return document.querySelector(s); };
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); if (html != null) d.innerHTML = html; parent.appendChild(d); return d; };
+        var T = PLAN.total, w = function (k) { return C.wordT(PLAN, 4, 1, k); };
+        Cap.bg(root, $("#p1"));
+        var p1 = $("#p1");
+        var ttl = Cap.title(tl, p1, "CÁPSULA CULTURAL", PLAN.meta.titulo || "Fútbol, tango, mate… y vos", 0.15);
+        ttl.style.maxWidth = "700px";
+
+        // ---------- banc + quatre amis (bustes) ----------
+        var bench = mk(p1, "it cap-paper", Q.baProp("banco", { width: 1000, uid: "bc" })); gsap.set(bench, { x: 770, y: 545 });
+        tl.set(bench, { opacity: 0 }, 0);
+        tl.fromTo(bench, { opacity: 0, y: 545 + 200 }, { opacity: 1, y: 545, duration: 0.6, ease: "back.out(1.4)", immediateRender: false }, 0.3);
+        var ppl = [["facu", 770], ["sol", 1010], ["alex", 1250], ["marina", 1490]], fr = [];
+        ppl.forEach(function (p, i) {
+          var f = mk(p1, "fr cap-paper", Q.character(p[0], { view: "bust", width: 300, uid: "bu" + i })); f.querySelector("svg").setAttribute("data-layout-allow-overflow", "");
+          gsap.set(f, { x: p[1], y: 285 });
+          tl.set(f, { opacity: 0 }, 0);
+          tl.fromTo(f, { opacity: 0, y: 285 + 140, scale: 0.7, transformOrigin: "50% 100%" }, { opacity: 1, y: 285, scale: 1, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, 0.55 + i * 0.12);
+          tl.fromTo(f, { rotation: i % 2 ? -2 : 2, transformOrigin: "50% 100%" }, { rotation: i % 2 ? 2 : -2, duration: 1.3 + i * 0.15, ease: "sine.inOut", yoyo: true, repeat: C.reps(T, 1.3 + i * 0.15) + 1 }, 1.2);
+          fr.push(f);
+        });
+        // ---------- le mate (calebasse + bombilla) passe de main en main ----------
+        var MW = 150, mx = function (i) { return ppl[i][1] + 150 - MW / 2 - 40; }, my = 470;
+        var mate = mk(p1, "mate", Q.baProp("mate", { width: MW, uid: "mt" })); gsap.set(mate, { x: mx(0), y: my });
+        tl.set(mate, { opacity: 0 }, 0);
+        tl.fromTo(mate, { opacity: 0, scale: 0.3, rotation: -15 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, w(2) - 0.1);
+        var pass = function (a, b, t0, d) {
+          tl.to(mate, { x: mx(b), duration: d, ease: "sine.inOut" }, t0);
+          tl.to(mate, { y: my - 110, duration: d / 2, ease: "sine.out" }, t0);
+          tl.to(mate, { y: my, duration: d / 2, ease: "sine.in" }, t0 + d / 2);
+          tl.to(mate, { rotation: 14, duration: d / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, t0);
+        };
+        pass(0, 1, w(14), 0.8); pass(1, 2, w(19) - 0.1, 0.65); pass(2, 3, w(21) - 0.05, 0.65);
+        for (var s = 0; s < 6; s++) {      // vapeur de l'eau chaude
+          var st = mk(p1, "steam"); var sx = 860 + (s % 3) * 14;
+          tl.fromTo(st, { x: sx, y: 480, opacity: 0, scale: 0.5 }, { x: sx + 30, y: 390, opacity: 0.55, scale: 1.3, duration: 1.0, ease: "sine.out", immediateRender: false }, w(5) + s * 0.4);
+          tl.to(st, { opacity: 0, duration: 0.5 }, w(5) + 0.9 + s * 0.4);
+        }
+        // thermos d'eau chaude
+        var th = mk(p1, "it cap-paper", Q.baProp("termo", { width: 100, uid: "th" })); gsap.set(th, { x: 650, y: 650 });
+        tl.set(th, { opacity: 0 }, 0);
+        tl.fromTo(th, { opacity: 0, y: 650 + 160, rotation: -8 }, { opacity: 1, y: 650, rotation: 0, duration: 0.55, ease: "back.out(1.7)", immediateRender: false }, w(8) - 0.1);
+        // pastilles
+        var c1 = Cap.chip(p1, "el mate", 830, 215, "gold"); c1.style.zIndex = 12; Cap.pop(tl, c1, w(2) - 0.05, { from: "down", rot: 2 });
+        var c2 = Cap.chip(p1, "una bombilla", 1060, 215, "terra"); c2.style.zIndex = 12; Cap.pop(tl, c2, w(11) - 0.05, { from: "down", rot: -2 });
+        var c3 = Cap.chip(p1, "los amigos", 1440, 215, "pink"); c3.style.zIndex = 12; Cap.pop(tl, c3, w(17) - 0.05, { from: "down", rot: 2 });
+        Cap.sparks(tl, p1, mx(1) + 65, 560, w(18), 8, "#ffe9a8");
+
+        var frm = C.frame(tl, root, PLAN, { seed: 24, fadeOut: 0.3 });
+        if (frm.garland) frm.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-capsula-buenosaires-4"] = tl;
+      })();
+    </script>
+  </body>
+</html>

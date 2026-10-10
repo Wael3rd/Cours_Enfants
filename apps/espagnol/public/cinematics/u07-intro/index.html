@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-intro</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      .plan { position: absolute; inset: 0; overflow: hidden; }
+      #p2 { visibility: hidden; }
+      .lay { position: absolute; left: 0; top: 0; width: 3200px; height: 1200px; }
+      .lay svg { display: block; }
+      #mapbox { position: absolute; left: 0; top: -120px; width: 1920px; height: 1440px; }
+      #mapbox svg { width: 1920px; height: 1440px; }
+      #mapbox .m-plq, #mapbox .m-med:not(.m-med-baires) { display: none; }
+      #mapbox .m-med text { display: none; }
+      #mapdim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0; }
+      #flash { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #fff3d1, rgba(255,243,209,.55) 70%); opacity: 0; z-index: 20; }
+      #rays { position: absolute; left: 260px; top: -90px; width: 1400px; height: 1400px; opacity: 0; }
+      .center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 150px; }
+      #tc { position: relative; width: 1300px; padding: 44px 40px 30px; box-sizing: border-box; text-align: center; }
+      .tcbox { position: absolute; inset: 0; border-radius: 44px; background: linear-gradient(180deg, #1d2160, #14173f); border: 8px solid #f5e6c8; box-shadow: 0 0 0 6px #14173f, 0 26px 0 -4px rgba(0,0,0,.3), inset 0 0 0 6px rgba(255,200,61,.65); }
+      #tc .band { position: absolute; left: 26px; right: 26px; height: 40px; border-radius: 10px; opacity: .95; background-size: auto 40px; }
+      #tc .band.t { top: 18px; } #tc .band.b { bottom: 18px; }
+      .tc-kicker { position: relative; margin-top: 46px; font: 400 52px/1 "Alfa Slab One", serif; letter-spacing: .22em; color: #ffc83d; text-shadow: 0 4px 0 rgba(0,0,0,.4); }
+      .tc-hola { position: relative; margin: 14px 0 0; font: 400 176px/1.02 "Alfa Slab One", serif; color: #f5e6c8; text-shadow: 0 9px 0 #2f6fd0, 0 16px 0 rgba(0,0,0,.35); letter-spacing: .02em; }
+      .tc-hola span { display: block; }
+      .tc-city { position: relative; display: inline-block; margin: 20px 0 40px; padding: 12px 70px 16px; font: 400 72px/1 "Alfa Slab One", serif; letter-spacing: .12em; color: #fff3d1; background: linear-gradient(180deg, #3a8be8, #2f6fd0); box-shadow: 0 8px 0 #1d4fa8; clip-path: polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%); }
+      .cf { position: absolute; left: 0; top: 0; width: 30px; height: 30px; opacity: 0; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+      .spark { position: absolute; left: 0; top: 0; z-index: 9; }
+      #glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 74% 50%, rgba(255,226,140,.3), rgba(255,226,140,0) 55%); }
+      #chip { position: absolute; left: 96px; top: 230px; display: flex; align-items: center; gap: 18px; padding: 12px 34px 14px 18px; border-radius: 999px; background: rgba(20,23,63,.92); border: 4px solid #ffc83d; box-shadow: 0 6px 0 rgba(0,0,0,.3); z-index: 25; }
+      #chip b { font: 400 44px/1 "Alfa Slab One", serif; letter-spacing: .08em; color: #f5e6c8; }
+      .bird { position: absolute; left: 0; top: 0; z-index: 6; }
+      .cpl { position: absolute; left: 0; top: 0; }
+      .ball { position: absolute; left: 0; top: 0; width: 84px; height: 84px; }
+      #motes { position: absolute; left: 0; top: 0; z-index: 7; }
+      .streak { position: absolute; left: 0; height: 6px; width: 700px; border-radius: 3px; background: linear-gradient(90deg, rgba(255,243,209,0), #fff3d1); opacity: 0; z-index: 60; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-intro" data-start="0" data-width="1920" data-height="1200" data-duration="10.169">
+      <div id="p1" class="plan" data-layout-allow-overflow>
+        <div id="mapbox" data-layout-allow-overflow></div>
+        <div id="mapdim"></div>
+        <div id="rays" data-layout-allow-overflow></div>
+        <div class="center"><div id="tc"></div></div>
+        <div id="flash"></div>
+      </div>
+      <div id="p2" class="plan" data-layout-allow-overflow>
+        <div id="skyL" class="lay" data-layout-allow-overflow></div>
+        <div id="sunL" class="lay" data-layout-allow-overflow></div>
+        <div id="farL" class="lay" data-layout-allow-overflow></div>
+        <div id="midL" class="lay" data-layout-allow-overflow></div>
+        <div id="motes" data-layout-allow-overflow></div>
+        <div id="nearL" class="lay" data-layout-allow-overflow></div>
+        <div id="coupL" class="lay" data-layout-allow-overflow></div>
+        <div id="glow"></div>
+        <div id="chip"></div>
+      </div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="10.169" data-media-start="0" data-track-index="0" data-volume="0.2" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.8,"v":1},{"t":8.969,"v":1},{"t":10.169,"v":0}]}]}'></audio>
+      <audio id="a-voz-1-1" src="./assets/voz/narrador.4b537604a0.mp3" data-start="0.4" data-duration="1.862" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-1" src="./assets/voz/narrador.19b2bdcd65.mp3" data-start="3.8" data-duration="3.592" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-2-2" src="./assets/voz/narrador.74b482777d.mp3" data-start="7.692" data-duration="1.927" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0.05" data-duration="0.208" data-track-index="3" data-volume="0.5"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/steel00.mp3" data-start="1.552" data-duration="0.917" data-track-index="4" data-volume="0.5"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/spell-cast.mp3" data-start="1.572" data-duration="0.465" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/swoosh-out.mp3" data-start="3.3" data-duration="0.212" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/star.mp3" data-start="5.7" data-duration="0.121" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="a-sfx6" src="./_shared/sfx/pop.mp3" data-start="8.592" data-duration="0.1" data-track-index="8" data-volume="0.3"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-intro","cinematica":"u07-intro","part":1,"parts":1,"total":10.169,"meta":{"cinematica":"u07-intro","titulo":"Capítulo 7 · Me gusta… · Buenos Aires","tipo":"intro","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"Capítulo 7 · Me gusta… · Buenos Aires","region":"argentina"},"plans":[{"n":1,"t0":0,"t1":3.5,"vista":"La carte du monde en papel picado : la ligne dorée quitte Madrid, traverse l’Atlantique vers l’Amérique du Sud et descend jusqu’à l’estuaire du Río de la Plata ; carte-titre « Capítulo 7 · Me gusta… · Buenos Aires ».","camara":"zoom avant progressif","rotulo":"Capítulo 7 · Me gusta… · Buenos Aires","personajes":[],"lines":[{"who":"narrador","es":"Capítulo siete: me gusta…","key":"narrador.4b537604a0","t":0.4,"d":1.862,"words":[{"w":"Capítulo","t":0.4,"d":0.537},{"w":"siete:","t":0.937,"d":0.366},{"w":"me","t":1.552,"d":0.194},{"w":"gusta…","t":1.747,"d":0.366}]}]},{"n":2,"t0":3.5,"t1":9.919,"vista":"Buenos Aires en plein été : l’Obélisque au bout de l’avenue 9 de Julio, la Casa Rosada, les maisons peintes de Caminito à La Boca, des ballons de foot, des couples qui dansent, le Río de la Plata couleur café au lait.","camara":"travelling aérien puis rue de Caminito","rotulo":"","personajes":[],"lines":[{"who":"narrador","es":"Buenos Aires. Fútbol, tango y mate.","key":"narrador.19b2bdcd65","t":3.8,"d":3.592,"words":[{"w":"Buenos","t":3.8,"d":0.57},{"w":"Aires.","t":4.37,"d":0.493},{"w":"Fútbol,","t":5.871,"d":0.417},{"w":"tango","t":6.441,"d":0.361},{"w":"y","t":6.802,"d":0.135},{"w":"mate.","t":6.938,"d":0.305}]},{"who":"narrador","es":"Aquí, en enero, ¡es verano!","key":"narrador.74b482777d","t":7.692,"d":1.927,"words":[{"w":"Aquí,","t":7.692,"d":0.409},{"w":"en","t":8.232,"d":0.169},{"w":"enero,","t":8.401,"d":0.318},{"w":"¡es","t":8.932,"d":0.169},{"w":"verano!","t":9.101,"d":0.368}]}]}],"sfx":[{"t":0.05,"f":"ui/swoosh-in"},{"t":1.552,"f":"jingles/steel00"},{"t":1.572,"f":"rpg/spell-cast"},{"t":3.3,"f":"ui/swoosh-out"},{"t":5.7,"f":"ui/star"},{"t":8.592,"f":"ui/pop"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var P1 = C.planOf(PLAN, 1), P2 = C.planOf(PLAN, 2), W = P2.t0;
+        var rot = (PLAN.meta.rotulo || "Capítulo 7 · Me gusta… · Buenos Aires").split(" · ");
+        var mk = function (parent, cls, html) { var d = document.createElement("div"); d.className = cls; d.setAttribute("data-layout-allow-overflow", ""); if (html) d.innerHTML = html; parent.appendChild(d); return d; };
+
+        // ============================ PLAN 1 : la carte, de Madrid au Rio de la Plata ============================
+        var mapbox = $("#mapbox");
+        mapbox.innerHTML = Q.worldMap({ uid: "wm", states: { madrid: "done", salamanca: "done", sevilla: "done", cdmx: "done", oaxaca: "done", valencia: "done", baires: "current", bogota: "open" }, player: "madrid", initial: C.player.name.charAt(0).toUpperCase() });
+        C.nameHooks.push(function (n) { var t = mapbox.querySelector(".m-token text"); if (t) t.textContent = n.charAt(0).toUpperCase(); });
+        var sv = mapbox.querySelector("svg"), firstPlq = sv.querySelector(".m-plq");
+        firstPlq.insertAdjacentHTML("beforebegin", Q.mapFogHtml("baires"));
+        var ba = Q.mapRegion("baires"), ma = Q.mapRegion("madrid"), mid = { x: (ba.x + ma.x) / 2, y: (ba.y + ma.y) / 2 };
+        var S1 = 3.2, off = 100 / (1.2 * S1);
+        Q.mapCamSet(gsap, mapbox, mid, 0.62);
+        Q.mapCamMove(tl, mapbox, mid, 0.62, 0.0, 0.01, "none");
+        Q.mapCamMove(tl, mapbox, { x: ba.x + 18, y: ba.y + off }, S1, 0.55, 1.5, "power2.inOut");
+        tl.fromTo(mapbox, { rotation: 2.5, transformOrigin: "50% 50%" }, { rotation: 0, duration: 1.6, ease: "power2.out" }, 0);
+        Q.mapFogDrift(tl, mapbox, 0, W + 0.2);
+        Q.mapPulse(tl, mapbox, 1.3, 3, 0.9);
+        tl.to(mapbox, { scale: 1.05, transformOrigin: "50% 30%", duration: W - 1.3, ease: "sine.inOut" }, 1.3);
+        Q.mapTravel(tl, mapbox, "madrid", "baires", 0.2, 1.25, gsap);
+        Q.mapFogClear(tl, mapbox, "baires", 1.2, 1.5);
+        tl.set(mapbox.querySelector(".m-token"), { opacity: 1 }, 0);
+
+        // carte-titre (affiche de voyage) : bandeaux de fanions de filete
+        var tc = $("#tc");
+        var tile = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40">' + ["#d8352a", "#f4b63a", "#3a9ae0", "#1e9e6a"].map(function (c, i) { return '<path d="M' + (i * 40 + 3) + ' 0h34v28q-17 14 -34 0Z" fill="' + c + '"/><circle cx="' + (i * 40 + 20) + '" cy="12" r="6" fill="#fff1cc"/><circle cx="' + (i * 40 + 20) + '" cy="12" r="3" fill="' + c + '"/>'; }).join("") + "</svg>");
+        var tt = (rot[1] || "Me gusta…").toUpperCase().split(" ");
+        tc.innerHTML = '<div class="tcbox"><div class="band t" style="background-image:url(\'' + tile + '\')"></div><div class="band b" style="background-image:url(\'' + tile + '\')"></div></div>' +
+          '<div class="tc-kicker">' + rot[0].toUpperCase() + '</div><div class="tc-hola"><span>' + tt[0] + '</span>' + (tt[1] ? '<span>' + tt[1] + '</span>' : '') + '</div><div class="tc-city">' + (rot[2] || "Buenos Aires").toUpperCase() + '</div>';
+        var rays = ""; for (var i = 0; i < 16; i++) { var a = (i / 16) * Math.PI * 2, b = a + Math.PI / 20; rays += '<path d="M700 700L' + (700 + Math.cos(a) * 760).toFixed(1) + " " + (700 + Math.sin(a) * 760).toFixed(1) + "L" + (700 + Math.cos(b) * 760).toFixed(1) + " " + (700 + Math.sin(b) * 760).toFixed(1) + 'Z"/>'; }
+        $("#rays").innerHTML = '<svg width="1400" height="1400" viewBox="0 0 1400 1400"><g fill="#ffd76a" opacity=".42">' + rays + "</g></svg>";
+        var rnd = Q.rng(21), cols = ["#d8352a", "#f4b63a", "#3a9ae0", "#1e9e6a", "#fff1cc", "#ff7fb0"], cfs = [];
+        for (var k = 0; k < 30; k++) { var d = document.createElement("div"); d.className = "cf"; d.setAttribute("data-layout-allow-overflow", ""); d.style.background = cols[k % cols.length]; $("#p1").insertBefore(d, $("#flash")); cfs.push(d); }
+
+        var tH = C.wordT(PLAN, 1, 1, 3);
+        tl.to(mapbox.querySelector(".m-token"), { opacity: 0, duration: 0.25 }, tH - 0.45);
+        tl.set(tc, { opacity: 0 }, 0);
+        tl.to("#mapdim", { opacity: 0.55, duration: 0.5, ease: "power2.out" }, tH - 0.35);
+        tl.fromTo(tc, { opacity: 0, y: 90, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, tH - 0.15);
+        tl.set(".tc-hola, .tc-city", { opacity: 0 }, 0);
+        tl.fromTo(".tcbox", { scaleY: 0.05, opacity: 0, transformOrigin: "50% 50%" }, { scaleY: 1, opacity: 1, duration: 0.42, ease: "back.out(1.4)" }, tH - 0.12);
+        tl.fromTo(".tc-kicker", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, tH - 0.1);
+        tl.fromTo(".tc-hola", { opacity: 0, scale: 2.6, rotation: -7, transformOrigin: "50% 60%" }, { opacity: 1, scale: 1, rotation: -2, duration: 0.5, ease: "expo.out" }, tH - 0.02);
+        QCine.bloom(tl, "#flash", tH - 0.3, 0.2, 0.32, 0.7);
+        tl.fromTo("#rays", { opacity: 0, scale: 0.3, rotation: -20 }, { opacity: 0.28, scale: 1, rotation: 0, duration: 0.7, ease: "expo.out" }, tH - 0.02);
+        tl.to("#rays", { rotation: 10, duration: W - tH, ease: "none" }, tH + 0.7);
+        QCine.shake(tl, "#p1", tH, 8);
+        tl.fromTo(".tc-city", { opacity: 0, clipPath: "polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%, 0 50%)", x: -40 }, { opacity: 1, clipPath: "polygon(0 0, 100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%)", x: 0, duration: 0.45, ease: "power3.out" }, tH + 0.32);
+        tl.to("#tc", { y: -10, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 1 }, tH + 0.6);
+        cfs.forEach(function (c) {
+          var ang = rnd() * Math.PI * 2, dist = 380 + rnd() * 560, x1 = 960 + Math.cos(ang) * dist, y1 = 480 + Math.sin(ang) * dist * 0.7;
+          var t0 = tH + 0.04 + rnd() * 0.06;
+          tl.fromTo(c, { x: 960, y: 520, opacity: 1, scale: 0.4 + rnd() * 0.8, rotation: 0 }, { x: x1, y: y1, rotation: (rnd() - 0.5) * 300, duration: 0.7, ease: "expo.out", immediateRender: false }, t0);
+          tl.to(c, { y: y1 + 520 + rnd() * 200, x: x1 + (rnd() - 0.5) * 160, rotation: "+=" + ((rnd() - 0.5) * 360), opacity: 0, duration: 1.5 + rnd() * 0.4, ease: "power1.in" }, t0 + 0.5);
+        });
+        for (var s = 0; s < 8; s++) {
+          var sp = mk($("#p1"), "spark", '<svg width="60" height="60" viewBox="-30 -30 60 60"><path d="' + Q.sparklePath(0, 0, 26, 6) + '" fill="#fff3d1"/></svg>'); $("#p1").insertBefore(sp, $("#flash"));
+          var sx = 220 + rnd() * 1480, sy = 130 + rnd() * 560, st = tH + 0.25 + s * 0.12;
+          tl.fromTo(sp, { x: sx, y: sy, scale: 0, rotation: 0, opacity: 1 }, { scale: 0.6 + rnd() * 0.7, rotation: 60, duration: 0.4, ease: "power2.out", immediateRender: false }, st);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" }, st + 0.35);
+        }
+
+        // ============================ WHIP-PAN vers le plan 2 ============================
+        var streaks = [];
+        for (var q = 0; q < 7; q++) { var sk = document.createElement("div"); sk.className = "streak"; sk.setAttribute("data-layout-allow-overflow", ""); sk.style.top = 260 + q * 130 + (q % 2) * 40 + "px"; root.appendChild(sk); streaks.push(sk); }
+        tl.fromTo("#p1", { x: 0, skewX: 0 }, { x: -2300, skewX: -16, duration: 0.34, ease: "power3.in", immediateRender: false }, W - 0.24);
+        tl.set("#p1", { visibility: "hidden" }, W + 0.2);
+        tl.set("#p2", { visibility: "visible" }, W - 0.2);
+        tl.fromTo("#p2", { x: 2300, skewX: 16 }, { x: 0, skewX: 0, duration: 0.7, ease: "power3.out" }, W - 0.16);
+        tl.set("#p2", { opacity: 0 }, 0);
+        tl.to("#p2", { opacity: 1, duration: 0.45, ease: "sine.inOut" }, W - 0.16);
+        streaks.forEach(function (sk, i) { tl.fromTo(sk, { x: 1700 + i * 90, opacity: 0.9, scaleX: 0.4 }, { x: -900, opacity: 0, scaleX: 1.6, duration: 0.42, ease: "power2.in", immediateRender: false }, W - 0.22 + i * 0.012); });
+
+        // ============================ PLAN 2 : Buenos Aires en ete ============================
+        var sky = Q.baSkyline({ uid: "bs" });
+        $("#skyL").innerHTML = sky.sky; $("#sunL").innerHTML = sky.sun; $("#farL").innerHTML = sky.far; $("#midL").innerHTML = sky.mid; $("#nearL").innerHTML = sky.near;
+        var span = P2.t1 - P2.t0 + 0.3, t0 = P2.t0 - 0.1;
+        tl.fromTo("#skyL", { x: 0 }, { x: -120, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#sunL", { x: 0 }, { x: -160, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#farL", { x: 0 }, { x: -480, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#midL", { x: 0 }, { x: -1050, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#nearL", { x: 0 }, { x: -1250, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#coupL", { x: 0 }, { x: -1250, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#motes", { x: 0 }, { x: -520, duration: span, ease: "power1.inOut" }, t0);
+        tl.fromTo("#p2", { scale: 1.06, transformOrigin: "50% 60%" }, { scale: 1.0, duration: span, ease: "sine.out" }, t0);
+        var rays2 = $("#sunL .sk-rays");
+        tl.fromTo(rays2, { rotation: 0, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py }, { rotation: 22, svgOrigin: rays2.dataset.px + " " + rays2.dataset.py, duration: span, ease: "none" }, t0);
+        tl.fromTo("#sunL .sk-disc", { scale: 0.97, svgOrigin: sky.sunX + " " + sky.sunY }, { scale: 1.03, svgOrigin: sky.sunX + " " + sky.sunY, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: C.reps(span, 1.8) }, t0);
+        document.querySelectorAll("#skyL .m-cloud").forEach(function (c, i) { tl.to(c, { x: 60 + (i % 3) * 40, duration: span, ease: "none" }, t0); });
+        // le fleuve scintille doucement
+        document.querySelectorAll("#farL .ba-glint").forEach(function (j, i) {
+          var per = 0.9 + (i % 4) * 0.2;
+          tl.to(j, { opacity: 0.25, y: 4, duration: per, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor(span / per)) }, t0 + i * 0.07);
+        });
+        // deux couples de tango (papier decoupe) au premier plan : balancement lent
+        [[1500, 770, 0], [2200, 790, 1]].forEach(function (c, i) {
+          var cp = mk($("#coupL"), "cpl", Q.baPareja({ width: 240, uid: "cp" + i, w: i ? "#2F6FD0" : "#D8352A" }));
+          gsap.set(cp, { x: c[0], y: c[1] });
+          var per = 1.5 + i * 0.25;
+          tl.fromTo(cp, { rotation: -2.5, transformOrigin: "50% 100%" }, { rotation: 2.5, duration: per, ease: "sine.inOut", yoyo: true, repeat: C.reps(span, per) + 1 }, t0);
+          tl.fromTo(cp.querySelector(".ba-cp-w"), { x: -4 }, { x: 5, duration: per * 0.5, ease: "sine.inOut", yoyo: true, repeat: C.reps(span, per * 0.5) + 1 }, t0);
+        });
+        // un ballon qui rebondit
+        var ball = mk($("#coupL"), "ball", Q.baProp("balon", { width: 84, uid: "bl" })); ball.setAttribute("data-layout-ignore", ""); gsap.set(ball, { x: 2750, y: 1010 });
+        tl.fromTo(ball, { y: 1010 }, { y: 870, duration: 0.55, ease: "power2.out", yoyo: true, repeat: C.reps(span, 1.1) + 1 }, t0);
+        tl.fromTo(ball, { rotation: 0 }, { rotation: 360, duration: 2.2, ease: "none", repeat: C.reps(span, 2.2) + 1 }, t0);
+        $("#motes").innerHTML = Q.moteField({ n: 36, w: 2400, h: 1200, seed: 9, rmin: 2, rmax: 6, stars: true });
+        document.querySelectorAll("#motes .k-mote").forEach(function (m, i) {
+          var x = +m.dataset.x, y = +m.dataset.y;
+          tl.fromTo(m, { x: x, y: y, opacity: 0 }, { x: x + 40 - (i % 5) * 20, y: y - 160 - (i % 7) * 30, opacity: 0.9, duration: span * 0.5, ease: "sine.out" }, t0 + (i % 9) * 0.1);
+          tl.to(m, { opacity: 0, duration: span * 0.5, ease: "sine.in" }, t0 + span * 0.5 + (i % 9) * 0.1);
+        });
+        // hirondelles
+        for (var bI = 0; bI < 6; bI++) {
+          var bd = mk($("#p2"), "bird", '<svg width="70" height="34" viewBox="-35 -17 70 34"><path class="wing" d="M-30 -2Q-16 -18 0 2Q16 -18 30 -2" stroke="#1d2160" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'); bd.setAttribute("data-layout-ignore", "");
+          $("#p2").insertBefore(bd, $("#nearL"));
+          var by = 190 + bI * 55 + (bI % 2) * 30, bs = 0.7 + (bI % 3) * 0.25, bx0 = 2100 + bI * 150;
+          tl.fromTo(bd, { x: bx0, y: by, scale: bs }, { x: bx0 - 2800, y: by - 80 + (bI % 3) * 40, duration: span + 1.0, ease: "none" }, t0 - 0.3);
+          tl.fromTo(bd.querySelector(".wing"), { scaleY: 1, svgOrigin: "0 0" }, { scaleY: -0.7, svgOrigin: "0 0", duration: 0.32 + bI * 0.03, ease: "sine.inOut", yoyo: true, repeat: C.reps(span + 1.0, 0.32 + bI * 0.03) + 1 }, t0 - 0.3);
+        }
+        // pastille de lieu
+        var chip = $("#chip");
+        chip.innerHTML = '<svg width="46" height="58" viewBox="0 0 46 58"><path d="M23 56C6 36 4 28 4 22a19 19 0 1 1 38 0c0 6-2 14-19 34Z" fill="#d8352a" stroke="#fff3d1" stroke-width="4"/><circle cx="23" cy="22" r="7" fill="#fff3d1"/></svg><b>LA BOCA · BUENOS AIRES</b>';
+        tl.fromTo(chip, { x: -900, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, P2.t0 + 0.35);
+        tl.to(chip, { x: -900, opacity: 0, duration: 0.4, ease: "power3.in" }, P2.t1 - 0.5);
+
+        // ============================ cadre commun + sous-titres ============================
+        var fr = C.frame(tl, root, PLAN, { seed: 11 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+
+        window.__timelines["u07-intro"] = tl;
+      })();
+    </script>
+  </body>
+</html>

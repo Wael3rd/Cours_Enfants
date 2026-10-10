@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es" data-composition-variables='[{"id":"playerName","type":"string","label":"Prénom du joueur","default":"Álex"}]'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1920, height=1200" />
+    <title>u07-historia-5</title>
+    <script src="./_shared/hyperframe.runtime.iife.js"></script>
+    <script src="./_shared/gsap.min.js"></script>
+    <script src="./_shared/MotionPathPlugin.min.js"></script>
+    <script src="./_shared/qart.js"></script>
+    <script src="./_shared/qcine.js"></script>
+    <script src="./_shared/qstage.js"></script>
+    <style>
+      @font-face { font-family: "Alfa Slab One"; src: url("./_shared/AlfaSlabOne-latin.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Nunito"; src: url("./_shared/Nunito-latin.woff2") format("woff2"); font-weight: 200 1000; }
+      html, body { margin: 0; background: #0b0d2a; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0b0d2a; }
+      #stage { position: absolute; inset: 0; }
+      .band, .spk { position: absolute; left: 0; top: 0; }
+      #dim { position: absolute; inset: 0; background: #0b0d2a; opacity: 0.18; z-index: 20; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="u07-historia-5" data-start="0" data-width="1920" data-height="1200" data-duration="8.374">
+      <div id="stage"></div>
+      <div id="dim"></div>
+      <!--GEN:audio-->
+      <audio id="a-music" src="./_shared/music/aventure-douce.mp3" data-start="0" data-duration="8.374" data-media-start="37.095" data-track-index="0" data-volume="0.18" data-automation='{"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":1},{"t":7.174,"v":1},{"t":8.374,"v":0}]}]}'></audio>
+      <audio id="a-voz-4-1" src="./assets/voz/quetzal.abd6c2ad60.mp3" data-start="0.5" data-duration="2.071" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-voz-4-2" src="./assets/voz/sol.90605545bb.mp3" data-start="2.871" data-duration="4.753" data-track-index="1" data-volume="1"></audio>
+      <audio id="a-sfx1" src="./_shared/sfx/swoosh-in.mp3" data-start="0" data-duration="0.208" data-track-index="3" data-volume="0.45"></audio>
+      <audio id="a-sfx2" src="./_shared/sfx/spell-magic.mp3" data-start="0.2" data-duration="1.104" data-track-index="4" data-volume="0.28"></audio>
+      <audio id="a-sfx3" src="./_shared/sfx/star.mp3" data-start="0.8" data-duration="0.121" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="a-sfx4" src="./_shared/sfx/pop.mp3" data-start="2.871" data-duration="0.1" data-track-index="6" data-volume="0.35"></audio>
+      <audio id="a-sfx5" src="./_shared/sfx/level-up.mp3" data-start="7.274" data-duration="0.37" data-track-index="7" data-volume="0.4"></audio>
+      <!--/GEN:audio-->
+    </div>
+    <script>
+      /*GEN:plan*/
+      window.PLAN = {"id":"u07-historia-5","cinematica":"u07-historia","part":5,"parts":5,"total":8.374,"meta":{"cinematica":"u07-historia","titulo":"El silencio de Buenos Aires","tipo":"historia","unidad":"Me gusta…","numero":7,"lugar":"Buenos Aires","pluma":"Pluma de la Música","plumaNum":7,"rotulo":"","region":"argentina"},"plans":[{"n":4,"t0":0,"t1":8.124,"vista":"Gros plan sur le soufflet du bandonéon : un reflet vert brille entre les plis. Le Quetzal s’approche, Sol serre sa guitare.","camara":"","rotulo":"","personajes":["quetzal","sol"],"lines":[{"who":"quetzal","es":"La pluma está dentro del bandoneón.","key":"quetzal.abd6c2ad60","t":0.5,"d":2.071,"words":[{"w":"La","t":0.5,"d":0.175},{"w":"pluma","t":0.675,"d":0.329},{"w":"está","t":1.003,"d":0.277},{"w":"dentro","t":1.281,"d":0.38},{"w":"del","t":1.661,"d":0.226},{"w":"bandoneón.","t":1.887,"d":0.534}]},{"who":"sol","es":"Para devolver la música, tienen que decir lo que les gusta. ¡Vamos!","key":"sol.90605545bb","t":2.871,"d":4.753,"words":[{"w":"Para","t":2.871,"d":0.279},{"w":"devolver","t":3.15,"d":0.485},{"w":"la","t":3.635,"d":0.176},{"w":"música,","t":3.811,"d":0.382},{"w":"tienen","t":4.48,"d":0.451},{"w":"que","t":4.931,"d":0.268},{"w":"decir","t":5.199,"d":0.39},{"w":"lo","t":5.588,"d":0.207},{"w":"que","t":5.795,"d":0.268},{"w":"les","t":6.063,"d":0.268},{"w":"gusta.","t":6.331,"d":0.39},{"w":"¡Vamos!","t":7.085,"d":0.39}]}]}],"sfx":[{"t":0,"f":"ui/swoosh-in"},{"t":0.2,"f":"rpg/spell-magic"},{"t":0.8,"f":"ui/star"},{"t":2.871,"f":"ui/pop"},{"t":7.274,"f":"rpg/level-up"}]};
+      /*/GEN:plan*/
+    </script>
+    <script>
+      (function () {
+        var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage;
+        gsap.registerPlugin(MotionPathPlugin);
+        var tl = gsap.timeline({ paused: true });
+        var root = document.getElementById("root");
+        C.initPlayer();
+        var $ = function (s) { return document.querySelector(s); };
+        var mkp = function (layer, cls, html, x, y) { var d = S.mk(layer, cls, html); d.setAttribute("data-layout-allow-overflow", ""); d.setAttribute("data-layout-ignore", ""); gsap.set(d, { x: x, y: y }); return d; };
+        var P = C.planOf(PLAN, 4), LQ = P.lines[0], LS = P.lines[1], T = PLAN.total;
+        var set = Q.baSanTelmo({ uid: "bt" });
+        var room = S.set($("#stage"), set, { below: "#7A5C3E", motes: 10 });
+        S.drift(tl, room, T);
+
+        // ---------- Sol (guitare) a gauche, Don Aníbal et son bandoneon au centre ----------
+        var sol = S.chr(room.actors, "sol", 2130, 1040, 330);
+        S.prop(room.actors, "guitarra", 2170, 770, 118); var gt = room.actors.lastChild; gsap.set(gt, { rotation: 18, transformOrigin: "50% 50%" });
+        var ani = S.chr(room.actors, "anibal", 2640, 1040, 340);
+        S.breathe(tl, sol, 0, T, 0.7); S.breathe(tl, ani, 0.1, T, 0.7); Q.charBlink(tl, sol.svg, 5.2); Q.charBlink(tl, ani.svg, 3.6);
+        Q.charEmote(tl, sol.svg, 0.3, "worry", 0.3); Q.charEmote(tl, ani.svg, 0.3, "worry", 0.3);
+        var bd = S.mk(room.actors, "band", Q.baProp("bandoneon", { width: 400, uid: "bn" })); bd.setAttribute("data-layout-allow-overflow", ""); bd.setAttribute("data-layout-ignore", ""); gsap.set(bd, { x: 2440, y: 760, rotation: -4, transformOrigin: "50% 50%" });
+        var bel = bd.querySelector(".ba-bellows"), rgt = bd.querySelector(".ba-right"), glow = bd.querySelector(".ba-glow");
+        // le soufflet s'entrouvre : un reflet vert entre les plis (halo lent, jamais plus de 0,9, montee 0,9 s)
+        tl.to(bel, { scaleX: 1.35, svgOrigin: "100 150", duration: 0.9, ease: "sine.inOut" }, 0.3);
+        tl.to(rgt, { x: 200 * 0.35, duration: 0.9, ease: "sine.inOut" }, 0.3);
+        tl.fromTo(glow, { opacity: 0 }, { opacity: 0.85, duration: 0.9, ease: "sine.inOut", immediateRender: false }, LQ.t - 0.5);
+        tl.to(glow, { opacity: 0.5, duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: C.reps(T - LQ.t, 1.8) + 1 }, LQ.t + 0.45);
+        for (var s = 0; s < 6; s++) {
+          var sp = mkp(room.actors, "spk q-fx", '<svg width="46" height="46" viewBox="-23 -23 46 46"><path d="' + Q.sparklePath(0, 0, 20, 5) + '" fill="#b6ffd9"/></svg>', 2600 + (s % 3) * 70, 860 - (s % 2) * 40);
+          tl.fromTo(sp, { scale: 0, opacity: 0 }, { scale: 0.8, opacity: 0.9, duration: 0.5, ease: "power2.out", immediateRender: false }, LQ.t + 0.2 + s * 0.35);
+          tl.to(sp, { scale: 0, opacity: 0, duration: 0.5, ease: "power2.in" }, LQ.t + 0.8 + s * 0.35);
+        }
+
+        // ---------- le Quetzal arrive en vol et se pose sur le coin du bandoneon ----------
+        var qz = S.quetzal(room.actors, 2540, 770, 190, "perched", false, "qh5");
+        var tQ = 0.2;
+        tl.set(qz, { opacity: 0 }, 0);
+        tl.fromTo(qz, { opacity: 0, x: -520, y: -190, scale: 0.6 }, { opacity: 1, x: 0, y: 0, scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false }, tQ);
+        Q.quetzalPoseTo(tl, qz, "fly", tQ, 0.3);
+        Q.quetzalFlap(tl, qz, tQ + 0.1, 5, 0.3, 0.8);
+        Q.quetzalPoseTo(tl, qz, "perched", tQ + 1.15, 0.4);
+        Q.quetzalSway(tl, qz, tQ + 1.6, T - tQ - 1.8, 1);
+        C.talkQuetzal(tl, qz, LQ);
+        // Sol serre sa guitare et hoche la tete
+        C.talkChar(tl, sol, LS); C.talkBounce(tl, sol.b, LS, 5);
+        Q.charEmote(tl, sol.svg, LS.t, "happy", 0.3);
+        tl.to(gt, { rotation: 8, duration: 0.5, ease: "sine.inOut" }, LS.t);
+        S.hop(tl, sol, C.wordT(PLAN, 4, 2, 13), 30);
+
+        // ---------- camera : gros plan sur le soufflet ----------
+        S.camSet(room, 2420, 800, 1.2);
+        S.cam(tl, room, 2540, 850, 1.75, 0, LQ.t + 1.6, "power2.inOut");
+        S.cam(tl, room, 2400, 830, 1.5, LS.t - 0.3, 1.2, "sine.inOut");
+
+        var fr = C.frame(tl, root, PLAN, { seed: 9, fadeOut: 0.3 });
+        if (fr.garland) fr.garland.setAttribute("data-layout-allow-overflow", "");
+        C.subs(tl, root, PLAN, {});
+        window.__timelines["u07-historia-5"] = tl;
+      })();
+    </script>
+  </body>
+</html>
