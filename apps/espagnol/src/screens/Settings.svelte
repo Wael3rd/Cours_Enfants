@@ -100,7 +100,7 @@
       <PrimaryButton variant="turquesa" onclick={() => nav.go({ name: 'credits' })}>Créditos</PrimaryButton>
       <div class="gate">
         <span class="gl">Adultos: mantén pulsado 3 segundos</span>
-        <ParentGate onpass={openParent} label="Mantén pulsado 3 segundos (adultos)"><Icon name="lock" size={30} /></ParentGate>
+        <ParentGate onpass={openParent} label="Adultos"><Icon name="lock" size={30} /></ParentGate>
       </div>
     </section>
   </div>

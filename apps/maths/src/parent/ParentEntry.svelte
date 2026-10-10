@@ -1,5 +1,5 @@
 <script lang="ts">
-  /** Porte de l'espace parent : appui long 3 s (ParentGate) + petit calcul de grand. */
+  /** Porte de l'espace parent : toucher (ParentGate) + petit calcul de grand. */
   import { ParentGate, Modal } from '@ce/core';
   import ParentSpace from './ParentSpace.svelte';
 
@@ -31,7 +31,7 @@
   }
 </script>
 
-<div class="entry"><ParentGate {onpass} label="Espace parent : maintenir 3 secondes" /></div>
+<div class="entry"><ParentGate {onpass} label="Espace parent" /></div>
 
 <Modal bind:open={askOpen} title="Espace parent">
   <form class="calc" onsubmit={submit}>
