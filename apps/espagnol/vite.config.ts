@@ -16,7 +16,7 @@ const cfg = appConfig({
   precacheIgnore: ['audio/**'],
   runtimeCaching: [
     {
-      urlPattern: ({ url }: { url: URL }) => url.pathname.includes('/quetzal/audio/') && url.pathname.endsWith('.mp3'),
+      urlPattern: ({ url }: { url: URL }) => url.pathname.includes('/audio/') && url.pathname.endsWith('.mp3'),
       handler: 'CacheFirst',
       options: {
         cacheName: 'espagnol-audio-v1',

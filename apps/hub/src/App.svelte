@@ -8,7 +8,6 @@
   import stadiumUrl from './stadium.webp';
 
   let { updater }: { updater: Updater } = $props();
-  const base = import.meta.env.BASE_URL;
   const LICENSES = 'https://github.com/Wael3rd/Cours_Enfants/blob/main/assets/LICENSES.md';
 
   const striker = bust({ primary: '#1B6BFF', secondary: '#FFD23F', pose: 'idle', kit: 'bande', number: 10, skin: 2, hairColor: 1, expr: 'joy' });
@@ -24,7 +23,7 @@
   </header>
 
   <nav class="cards" aria-label="Applications">
-    <a class="card maths" href="{base}maths/" style="--i:0">
+    <a class="card maths" href="https://calcul-champion.wael3rd.pages.dev/" style="--i:0">
       <div class="bg stadium" style="background-image:url({stadiumUrl})" aria-hidden="true"></div>
       <div class="bg shade" aria-hidden="true"></div>
       <div class="pitch" aria-hidden="true"></div>
@@ -36,7 +35,7 @@
       </div>
     </a>
 
-    <a class="card espagnol" href="{base}quetzal/" style="--i:1">
+    <a class="card espagnol" href="https://quetzal.wael3rd.pages.dev/" style="--i:1">
       <div class="bg dusk" aria-hidden="true"></div>
       <div class="bunting" aria-hidden="true">{@html bunting}</div>
       <svg class="trail" viewBox="0 0 400 200" aria-hidden="true" preserveAspectRatio="none">
@@ -51,7 +50,7 @@
       </div>
     </a>
 
-    <a class="card calcul" href="{base}calcul/" style="--i:2">
+    <a class="card calcul" href="https://calcul.wael3rd.pages.dev/" style="--i:2">
       <div class="text">
         <strong>Calcul — Entraînement</strong>
         <span>Additions et soustractions, sans histoire ni décor</span>

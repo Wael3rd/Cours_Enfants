@@ -28,13 +28,18 @@ export interface AppOptions {
  * Variables d'env (positionnees par scripts/build-all.mjs) :
  *  CE_OUT_DIR    dossier de sortie (defaut dist/<app>)
  *  CE_PUBLIC_DIR dossier public de build (copie sans les _shared dupliques, voir scripts/cinematics.mjs)
+ *  CE_FORCE_BASE force base (et id/start_url/scope) pour une app seule sur son origine ; ex. '/'
  *  CE_BASE_PREFIX prefixe du site (ex. '/Cours_Enfants/' pour GitHub Pages ; defaut '/')
  */
 export function appConfig(o: AppOptions): UserConfig {
   const isHub = o.base === '/';
   const prefix = (process.env.CE_BASE_PREFIX ?? '/').replace(/\/?$/, '/');
   const withPrefix = (p: string) => prefix + p.replace(/^\//, '');
-  o = { ...o, base: withPrefix(o.base), foreignScopes: (o.foreignScopes ?? []).map(withPrefix) };
+  // CE_FORCE_BASE=/ : l'app est seule sur son origine (Cloudflare Pages, scripts/deploy-cf.mjs) -> base/id/start_url/scope = '/'.
+  const forced = process.env.CE_FORCE_BASE ? process.env.CE_FORCE_BASE.replace(/\/?$/, '/') : null;
+  o = forced
+    ? { ...o, base: forced, manifestId: o.manifestId ?? '/', foreignScopes: [] }
+    : { ...o, base: withPrefix(o.base), foreignScopes: (o.foreignScopes ?? []).map(withPrefix) };
   return defineConfig({
     base: o.base,
     publicDir: process.env.CE_PUBLIC_DIR ?? resolve(o.dir, 'public'),

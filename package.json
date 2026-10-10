@@ -22,7 +22,8 @@
     "perf:frames": "node tools/perf/frame-times.mjs",
     "cinematics:sync": "node scripts/cinematics.mjs sync",
     "icons": "node scripts/make-icons.mjs",
-    "voices": "node tools/tts/maths-manifest.mjs"
+    "voices": "node tools/tts/maths-manifest.mjs",
+    "deploy:cf": "node scripts/deploy-cf.mjs"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
