@@ -8,6 +8,8 @@ export interface AppOptions {
   dir: string;
   /** '/', '/maths/', '/espagnol/' */
   base: string;
+  /** Identifiant PWA explicite (relatif a start_url) ; defaut = base. Changer = nouvelle app pour Android. */
+  manifestId?: string;
   name: string;
   shortName: string;
   description: string;
@@ -43,7 +45,7 @@ export function appConfig(o: AppOptions): UserConfig {
         registerType: 'prompt',
         injectRegister: false, // enregistrement via virtual:pwa-register (setupUpdater)
         manifest: {
-          id: o.base,
+          id: o.manifestId ?? o.base,
           name: o.name,
           short_name: o.shortName,
           description: o.description,

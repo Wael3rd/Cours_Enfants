@@ -4,6 +4,7 @@ import { writeIndex } from '../../tools/content/build-units-index.mjs';
 const cfg = appConfig({
   dir: import.meta.dirname,
   base: '/espagnol/',
+  manifestId: 'leyenda-del-quetzal', // nouvel id : contourne un etat "deja installee" bloque sur la tablette
   name: 'La Leyenda del Quetzal',
   shortName: 'Quetzal',
   description: "Espagnol 5e - aventure RPG",
