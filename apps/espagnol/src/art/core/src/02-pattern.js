@@ -66,6 +66,8 @@ export function papelPicado(opts) {
 export const FRIEZE_PAL = {
   madrid: { a: '#1D2160', b: '#2F6FD0', c: '#FFC83D', d: '#F5E6C8', band: '#F5E6C8', edge: '#14173F', pen: ['#F5E6C8', '#C9573B', '#FFC83D', '#2B318A'] },
   salamanca: { a: '#7A3A24', b: '#E9B25A', c: '#F5E6C8', d: '#F5E6C8', band: '#EBD7A8', edge: '#4A2417', pen: ['#F5E6C8', '#C9573B', '#E9B25A', '#7A3A24'] },
+  valencia: { a: '#F5E6C8', b: '#0E7F82', c: '#FF9F1C', d: '#2F6FD0', band: '#FFFDF4', edge: '#0E5A6B', pen: ['#FFFDF4', '#19B7AA', '#FF9F1C', '#2F8FD0'] },
+  madridnoche: { a: '#5A1424', b: '#D93A4A', c: '#FFC83D', d: '#F5E6C8', band: '#F5E6C8', edge: '#2A0A12', pen: ['#F5E6C8', '#D81E3A', '#FFC83D', '#1F7F6A'] },
   sevilla: { a: '#0E7F82', b: '#2B318A', c: '#FFC83D', d: '#FFFFFF', band: '#FFFDF4', edge: '#14173F', pen: ['#FFFDF4', '#2B318A', '#FFC83D', '#19B7AA'] },
 };
 /**
@@ -104,10 +106,43 @@ export function azulejoFrieze(opts) {
 ${arcs}
 ${withPen ? `<path d="${rope}" stroke="${P.edge}" stroke-width="3" fill="none" opacity=".75"/>${pen}` : ''}</svg>`;
 }
+/** Frise argentine (filete porteno) : bandeau sombre aux volutes rouges / or / bleues / vertes, bord festonne, medaillons de filete suspendus (.m-flag, pivot haut-centre). opts : w, n, seed. */
+export const FILETE_PAL = { bg: '#12304A', red: '#D8352A', gold: '#F4B63A', blue: '#3A9AE0', green: '#1E9E6A', cream: '#FFF1CC', edge: '#0B1B2B' };
+export function fileteFrieze(opts) {
+  opts = opts || {};
+  const W = opts.w || 1920, P = FILETE_PAL, BH = 84, ARC = 24, n = opts.n || 16, rnd = rng(opts.seed || 5);
+  const nM = 16, st = W / nM, cy = 44;
+  let motifs = '';
+  for (let i = 0; i < nM; i++) {
+    const cx = st * (i + 0.5), a = i % 2 ? P.red : P.gold, b = i % 2 ? P.gold : P.blue;
+    const scroll = (s) => `<path d="M${r1(cx + s * 12)} ${cy}Q${r1(cx + s * 40)} ${cy - 28} ${r1(cx + s * 66)} ${cy - 8}Q${r1(cx + s * 82)} ${cy + 10} ${r1(cx + s * 62)} ${cy + 20}" stroke="${a}" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M${r1(cx + s * 30)} ${cy - 14}Q${r1(cx + s * 44)} ${cy + 10} ${r1(cx + s * 24)} ${cy + 22}" stroke="${b}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M${r1(cx + s * 62)} ${cy + 20}q${s * 10} 6 ${s * 16} -4q${-s * 4} -12 ${-s * 16} 4Z" fill="${P.green}"/>`;
+    const dots = [0, 1, 2, 3].map((k) => `<circle cx="${r1(cx + Math.cos(k * 1.571) * 24)}" cy="${r1(cy + Math.sin(k * 1.571) * 24)}" r="3" fill="${P.cream}"/>`).join('');
+    motifs += scroll(1) + scroll(-1) + `<circle cx="${r1(cx)}" cy="${cy}" r="17" fill="${P.cream}"/><circle cx="${r1(cx)}" cy="${cy}" r="12" fill="${a}"/><circle cx="${r1(cx)}" cy="${cy}" r="5" fill="${P.gold}"/>${dots}`;
+  }
+  let arcs = '';
+  const nArc = Math.round(W / (ARC * 2)), aw = W / nArc;
+  for (let i = 0; i < nArc; i++) {
+    const x0 = aw * i, x1 = aw * (i + 1), cx = (x0 + x1) / 2;
+    arcs += `<path d="M${r1(x0)} ${BH - 2}H${r1(x1)}Q${r1(x1)} ${BH + ARC} ${r1(cx)} ${BH + ARC}Q${r1(x0)} ${BH + ARC} ${r1(x0)} ${BH - 2}Z" fill="${i % 2 ? P.red : P.blue}"/><circle cx="${r1(cx)}" cy="${BH + 4}" r="4.5" fill="${P.gold}"/>`;
+  }
+  const ry = BH + ARC + 4, sag = 14, step = W / n, ropeY = (x) => ry + sag * Math.sin((Math.PI * x) / W);
+  let rope = `M0 ${r1(ropeY(0))}`;
+  for (let x = 40; x <= W; x += 40) rope += `L${x} ${r1(ropeY(x))}`;
+  let pen = '';
+  for (let i = 0; i < n; i++) {
+    const cx = step * (i + 0.5), y0 = ropeY(cx), c = [P.red, P.gold, P.blue, P.green][i % 4], hh = 58 * (0.92 + rnd() * 0.16), fw = step * 0.5;
+    pen += `<g class="m-flag" data-px="${r1(cx)}" data-py="${r1(y0)}"><path d="M${r1(cx - fw / 2)} ${r1(y0)}H${r1(cx + fw / 2)}V${r1(y0 + hh * 0.55)}Q${r1(cx + fw / 2)} ${r1(y0 + hh * 0.9)} ${r1(cx)} ${r1(y0 + hh)}Q${r1(cx - fw / 2)} ${r1(y0 + hh * 0.9)} ${r1(cx - fw / 2)} ${r1(y0 + hh * 0.55)}Z" fill="${c}" stroke="${P.cream}" stroke-width="3"/><circle cx="${r1(cx)}" cy="${r1(y0 + hh * 0.42)}" r="${r1(fw * 0.17)}" fill="${P.cream}"/><circle cx="${r1(cx)}" cy="${r1(y0 + hh * 0.42)}" r="${r1(fw * 0.08)}" fill="${c}"/></g>`;
+  }
+  const H = BH + ARC + 4 + 14 + 76;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="q-frieze q-filete" aria-hidden="true"><g opacity=".28" transform="translate(0 7)"><rect width="${W}" height="${BH}" fill="#000"/></g><rect width="${W}" height="${BH}" fill="${P.bg}"/><rect y="0" width="${W}" height="8" fill="${P.edge}"/><rect y="8" width="${W}" height="3" fill="${P.gold}"/><rect y="${BH - 14}" width="${W}" height="14" fill="${P.edge}"/><rect y="${BH - 10}" width="${W}" height="3" fill="${P.red}"/>${motifs}${arcs}<path d="${rope}" stroke="${P.edge}" stroke-width="3" fill="none" opacity=".75"/>${pen}</svg>`;
+}
 /** Motif de bordure par region : 'mexico' -> papel picado ; sinon (Espagne : 'madrid' | 'salamanca' | 'sevilla' | 'espana') -> frise d'azulejos + fanions. */
 export function bunting(region, opts) {
   opts = opts || {};
   if (region === 'mexico' || region === 'oaxaca' || region === 'cdmx' || region === 'muertos') return papelPicado(opts);
+  if (region === 'argentina' || region === 'baires') return fileteFrieze(opts);
+  if (region === 'colombia' || region === 'bogota') return colombiaFrieze(opts);
+  if (region === 'andes' || region === 'cusco') return andesFrieze(opts);
   return azulejoFrieze({ ...opts, region: region === 'espana' ? 'madrid' : region });
 }
 
