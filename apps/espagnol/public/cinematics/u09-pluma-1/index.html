@@ -44,7 +44,6 @@
     </script>
     <script>
       (function () {
-        var fitSubs = function (tl, root, plan, o) { var r = C.subs(tl, root, plan, o || {}); r.lines.forEach(function (l) { var n = l.data.es.length, t = l.el.querySelector(".sub-txt"); if (n > 130) t.style.fontSize = "40px"; else if (n > 92) t.style.fontSize = "46px"; }); return r; };
         var PLAN = window.PLAN, Q = window.QArt, C = window.QCine, S = window.QStage, Cap = window.QCap;
         gsap.registerPlugin(MotionPathPlugin);
         var tl = gsap.timeline({ paused: true });
@@ -109,7 +108,7 @@
         tl.to("#stB", { opacity: 1, duration: 0.35, ease: "sine.inOut" }, tCut - 0.3);
         tl.set("#stA", { visibility: "hidden" }, tCut + 0.08);
         C.frame(tl, root, PLAN, { seed: 41, fadeOut: 0.3 });
-        fitSubs(tl, root, PLAN, {});
+        C.subs(tl, root, PLAN, {});
         window.__timelines["u09-pluma-1"] = tl;
       })();
     </script>

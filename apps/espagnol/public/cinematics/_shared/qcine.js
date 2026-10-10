@@ -110,7 +110,7 @@
     '.sub-orn{position:absolute;width:46px;height:46px;z-index:2}' +
     '.sub-line{position:absolute;left:0;right:0;bottom:0;height:178px;display:flex;align-items:center;justify-content:center;padding:0 54px 0 54px;box-sizing:border-box;opacity:0;z-index:3}' +
     '.sub-line.has-p{padding-left:268px}' +
-    '.sub-txt{font:900 56px/1.22 Nunito,sans-serif;color:#F5E6C8;text-align:center;max-width:1500px;text-shadow:0 3px 0 rgba(0,0,0,.35)}' +
+    '.sub-txt{font:900 56px/1.22 Nunito,sans-serif;color:#F5E6C8;text-align:center;max-width:1620px;text-shadow:0 3px 0 rgba(0,0,0,.35)}' +
     '.sub-line.has-p .sub-txt{text-align:left}' +
     '.sub-txt{white-space:normal;word-spacing:0}' +
     '.sub-txt .w{display:inline-block;white-space:pre;font:inherit;letter-spacing:0}' +
@@ -192,6 +192,19 @@
       if (s) { who = el('div', 'sub-who', '<span style="background:linear-gradient(180deg,#FFF1B5,' + s.color + ')"' + (s.player ? ' class="pname"' : '') + '>' + s.name + '</span>', host); }
       lines.push({ el: ln, who: who, words: words, data: l, plan: f.p, speaker: l.who });
     });
+    // ajustement deterministe : taille de depart 56 px, reduite par pas de 2 px jusqu'a ce que le texte tienne dans la plaque
+    // (hauteur utile = plaque - marges). Mesure sans transform (offsetHeight) ; refaite quand la police ou le prenom changent.
+    var fit = function () {
+      var avail = 178 - 26;
+      lines.forEach(function (L) {
+        var t = L.el.querySelector('.sub-txt'), sz = 56;
+        t.style.fontSize = sz + 'px';
+        while (sz > 30 && t.offsetHeight > avail) { sz -= 2; t.style.fontSize = sz + 'px'; }
+      });
+    };
+    fit();
+    Q.nameHooks.push(fit);
+    try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit); } catch (e) { /* ignore */ }
     // groupes (plaque affichee tant que les repliques s'enchainent, ecart < 1.4 s)
     var groups = [], g = null;
     lines.forEach(function (L) {
