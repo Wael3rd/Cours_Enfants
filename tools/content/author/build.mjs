@@ -9,7 +9,7 @@ import { dirname } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 mkdirSync(UNITS_DIR, { recursive: true });
-const names = readdirSync(dirname(fileURLToPath(import.meta.url))).filter((f) => /^[ue]dd.mjs$/.test(f)).map((f) => f.slice(0, 3)).sort();
+const names = readdirSync(dirname(fileURLToPath(import.meta.url))).filter((f) => /^[ue]\d\d\.mjs$/.test(f)).map((f) => f.slice(0, 3)).sort();
 for (const n of names) {
   const f = join(here, `${n}.mjs`);
   if (!existsSync(f)) continue;
