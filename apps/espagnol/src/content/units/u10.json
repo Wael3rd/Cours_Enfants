@@ -1,0 +1,4890 @@
+{
+  "id": "u10",
+  "numero": 10,
+  "titulo": "Leyendas y héroes",
+  "lugar": "Cusco",
+  "emoji": "🦙",
+  "ejes": [
+    4,
+    5
+  ],
+  "periodo": "mai-juin",
+  "objetivos": [
+    {
+      "es": "Contar un cuento sencillo con «había una vez», «un día», «primero», «luego» y «al final».",
+      "fr": "Raconter un conte simple avec « había una vez », « un día », « primero », « luego » et « al final »."
+    },
+    {
+      "es": "Unir ideas con «pero», «además», «porque» y «entonces».",
+      "fr": "Relier des idées avec « pero », « además », « porque » et « entonces »."
+    },
+    {
+      "es": "Conocer leyendas y héroes de los Andes y de América.",
+      "fr": "Connaître des légendes et des héros des Andes et d’Amérique."
+    },
+    {
+      "es": "Conocer Machu Picchu, Cusco, los incas y el quechua.",
+      "fr": "Connaître Machu Picchu, Cusco, les Incas et le quechua."
+    },
+    {
+      "es": "Saber dónde y cuánta gente habla español en el mundo: «se habla».",
+      "fr": "Savoir où et combien de personnes parlent espagnol dans le monde : « se habla »."
+    },
+    {
+      "es": "Hablar de mis idiomas y escribir mi propia leyenda.",
+      "fr": "Parler de mes langues et écrire ma propre légende."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "leyenda",
+      "es": "leyenda",
+      "fr": "légende",
+      "genero": "f",
+      "plural": "leyendas",
+      "emoji": "📜",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "Cusco tiene muchas leyendas.",
+        "fr": "Cusco a beaucoup de légendes.",
+        "voz": "huaman",
+        "audio": "huaman.20e8dee9ae"
+      },
+      "audio": "huaman.27f47f6acc",
+      "voz": "huaman"
+    },
+    {
+      "id": "cuento",
+      "es": "cuento",
+      "fr": "conte, histoire",
+      "genero": "m",
+      "plural": "cuentos",
+      "emoji": "📖",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "Mi abuelo cuenta un cuento cada noche.",
+        "fr": "Mon grand-père raconte un conte chaque soir.",
+        "voz": "narrador",
+        "audio": "narrador.5479154942"
+      },
+      "audio": "narrador.5949d2e9d8"
+    },
+    {
+      "id": "cuentacuentos",
+      "es": "cuentacuentos",
+      "fr": "conteur, conteuse (invariable)",
+      "genero": "mf",
+      "emoji": "🎙️",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "Don Huamán es cuentacuentos.",
+        "fr": "Don Huamán est conteur.",
+        "voz": "narrador",
+        "audio": "narrador.57cb6e2833"
+      },
+      "audio": "narrador.1a44b29673"
+    },
+    {
+      "id": "heroe",
+      "es": "héroe",
+      "fr": "héros",
+      "genero": "m",
+      "plural": "héroes",
+      "femenino": "heroína",
+      "emoji": "🦸",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "El héroe es valiente y generoso.",
+        "fr": "Le héros est courageux et généreux.",
+        "voz": "narrador",
+        "audio": "narrador.5603bd7fe7"
+      },
+      "audio": "narrador.57fcbe5875"
+    },
+    {
+      "id": "personaje",
+      "es": "personaje",
+      "fr": "personnage (d’une histoire)",
+      "genero": "m",
+      "plural": "personajes",
+      "emoji": "🎭",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "El Quetzal es el personaje principal.",
+        "fr": "Le Quetzal est le personnage principal.",
+        "voz": "narrador",
+        "audio": "narrador.826476e061"
+      },
+      "audio": "narrador.de64b18f4f"
+    },
+    {
+      "id": "rey",
+      "es": "rey",
+      "fr": "roi (pluriel : reyes)",
+      "genero": "m",
+      "plural": "reyes",
+      "femenino": "reina",
+      "emoji": "👑",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "El rey vive en un castillo.",
+        "fr": "Le roi vit dans un château.",
+        "voz": "narrador",
+        "audio": "narrador.2346cdb7b6"
+      },
+      "audio": "narrador.9fc518ef19"
+    },
+    {
+      "id": "tesoro",
+      "es": "tesoro",
+      "fr": "trésor",
+      "genero": "m",
+      "plural": "tesoros",
+      "emoji": "💎",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "El héroe busca un tesoro.",
+        "fr": "Le héros cherche un trésor.",
+        "voz": "narrador",
+        "audio": "narrador.16b2582824"
+      },
+      "audio": "narrador.b484fa1a7e"
+    },
+    {
+      "id": "magia",
+      "es": "magia",
+      "fr": "magie",
+      "genero": "f",
+      "emoji": "🪄",
+      "tags": [
+        "cuentos"
+      ],
+      "ejemplo": {
+        "es": "En los cuentos hay mucha magia.",
+        "fr": "Dans les contes, il y a beaucoup de magie.",
+        "voz": "narrador",
+        "audio": "narrador.0ec294be3c"
+      },
+      "audio": "narrador.faaa051793"
+    },
+    {
+      "id": "valle",
+      "es": "valle",
+      "fr": "vallée",
+      "genero": "m",
+      "plural": "valles",
+      "emoji": "🏞️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "Machu Picchu está sobre un valle.",
+        "fr": "Machu Picchu est au-dessus d’une vallée.",
+        "voz": "narrador",
+        "audio": "narrador.cfaf53185a"
+      },
+      "audio": "narrador.c7c813cb88"
+    },
+    {
+      "id": "lago",
+      "es": "lago",
+      "fr": "lac",
+      "genero": "m",
+      "plural": "lagos",
+      "ilustracion": "Un grand lac bleu entouré de montagnes, avec une petite barque de roseaux",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El lago Titicaca es enorme.",
+        "fr": "Le lac Titicaca est énorme.",
+        "voz": "narrador",
+        "audio": "narrador.c419b9867b"
+      },
+      "audio": "narrador.4e68e95b58"
+    },
+    {
+      "id": "sol",
+      "es": "sol",
+      "fr": "soleil",
+      "genero": "m",
+      "emoji": "☀️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "Para los incas, el sol es un dios.",
+        "fr": "Pour les Incas, le soleil est un dieu.",
+        "voz": "narrador",
+        "audio": "narrador.b377ebc849"
+      },
+      "audio": "narrador.fbb93bb966"
+    },
+    {
+      "id": "luna",
+      "es": "luna",
+      "fr": "lune",
+      "genero": "f",
+      "emoji": "🌙",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "Killa significa «luna».",
+        "fr": "Killa veut dire « lune ».",
+        "voz": "narrador",
+        "audio": "narrador.ca45647bc8"
+      },
+      "audio": "narrador.4b7fad4f3f"
+    },
+    {
+      "id": "cielo",
+      "es": "cielo",
+      "fr": "ciel",
+      "genero": "m",
+      "plural": "cielos",
+      "emoji": "🌌",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El cóndor vuela en el cielo.",
+        "fr": "Le condor vole dans le ciel.",
+        "voz": "narrador",
+        "audio": "narrador.b24336cb7b"
+      },
+      "audio": "narrador.b54cfda898"
+    },
+    {
+      "id": "condor",
+      "es": "cóndor",
+      "fr": "condor (grand oiseau des Andes ; mot d’origine quechua)",
+      "genero": "m",
+      "plural": "cóndores",
+      "emoji": "🦅",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El cóndor es muy grande.",
+        "fr": "Le condor est très grand.",
+        "voz": "narrador",
+        "audio": "narrador.3c7ee6807b"
+      },
+      "audio": "narrador.c9cd845fad"
+    },
+    {
+      "id": "puma",
+      "es": "puma",
+      "fr": "puma (mot d’origine quechua)",
+      "genero": "m",
+      "plural": "pumas",
+      "emoji": "🐆",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El puma vive en las montañas.",
+        "fr": "Le puma vit dans les montagnes.",
+        "voz": "narrador",
+        "audio": "narrador.634aa462dc"
+      },
+      "audio": "narrador.d58099906c"
+    },
+    {
+      "id": "llama",
+      "es": "llama",
+      "fr": "lama (mot d’origine quechua)",
+      "genero": "f",
+      "plural": "llamas",
+      "emoji": "🦙",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "La llama lleva la carga en la montaña.",
+        "fr": "Le lama porte la charge dans la montagne.",
+        "voz": "narrador",
+        "audio": "narrador.5fbc494934"
+      },
+      "audio": "narrador.ad4ba4cc53"
+    },
+    {
+      "id": "viento",
+      "es": "viento",
+      "fr": "vent",
+      "genero": "m",
+      "plural": "vientos",
+      "emoji": "🌬️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "Hay mucho viento en la montaña.",
+        "fr": "Il y a beaucoup de vent dans la montagne.",
+        "voz": "narrador",
+        "audio": "narrador.4f647c60a8"
+      },
+      "audio": "narrador.03a2a4eac2"
+    },
+    {
+      "id": "nube",
+      "es": "nube",
+      "fr": "nuage",
+      "genero": "f",
+      "plural": "nubes",
+      "emoji": "☁️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "Hay nubes bajas sobre Machu Picchu.",
+        "fr": "Il y a des nuages bas sur Machu Picchu.",
+        "voz": "narrador",
+        "audio": "narrador.66a80f88a9"
+      },
+      "audio": "narrador.fcf84a84d0"
+    },
+    {
+      "id": "camino",
+      "es": "camino",
+      "fr": "chemin, route",
+      "genero": "m",
+      "plural": "caminos",
+      "emoji": "🛤️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El Camino Inca llega a Machu Picchu.",
+        "fr": "Le chemin de l’Inca arrive à Machu Picchu.",
+        "voz": "narrador",
+        "audio": "narrador.6dbacef2c3"
+      },
+      "audio": "narrador.4c2b2db03d"
+    },
+    {
+      "id": "oro",
+      "es": "oro",
+      "fr": "or",
+      "genero": "m",
+      "emoji": "🥇",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "El bastón es de oro.",
+        "fr": "Le bâton est en or.",
+        "voz": "narrador",
+        "audio": "narrador.710a324bce"
+      },
+      "audio": "narrador.b198acf272"
+    },
+    {
+      "id": "cima",
+      "es": "cima",
+      "fr": "sommet",
+      "genero": "f",
+      "plural": "cimas",
+      "emoji": "🏔️",
+      "tags": [
+        "andes"
+      ],
+      "ejemplo": {
+        "es": "En la cima hace mucho frío.",
+        "fr": "Au sommet, il fait très froid.",
+        "voz": "narrador",
+        "audio": "narrador.15361efcdf"
+      },
+      "audio": "narrador.bb3d4abbb7"
+    },
+    {
+      "id": "quechua",
+      "es": "quechua",
+      "fr": "quechua : langue des Incas, encore parlée dans les Andes",
+      "genero": "m",
+      "emoji": "🗣️",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Killa habla quechua en casa.",
+        "fr": "Killa parle quechua à la maison.",
+        "voz": "killa",
+        "audio": "killa.7243b34959"
+      },
+      "audio": "killa.0a754c1ac7",
+      "voz": "killa"
+    },
+    {
+      "id": "inca",
+      "es": "inca",
+      "fr": "inca (peuple et adjectif ; « los incas »)",
+      "genero": "mf",
+      "plural": "incas",
+      "clase": "adj",
+      "ilustracion": "Un empereur inca avec une grande coiffe dorée et des bijoux, de profil",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Machu Picchu es una ciudad inca.",
+        "fr": "Machu Picchu est une ville inca.",
+        "voz": "narrador",
+        "audio": "narrador.6b03dddb72"
+      },
+      "audio": "narrador.f45e50f5b1"
+    },
+    {
+      "id": "pachamama",
+      "es": "Pachamama",
+      "fr": "Pachamama : la Terre-Mère, dans les croyances des Andes",
+      "genero": "f",
+      "emoji": "🌎",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Para los incas, la Pachamama es la madre Tierra.",
+        "fr": "Pour les Incas, la Pachamama est la Terre-Mère.",
+        "voz": "narrador",
+        "audio": "narrador.3e342212ff"
+      },
+      "audio": "narrador.6f53cf8a49"
+    },
+    {
+      "id": "papa",
+      "es": "papa",
+      "fr": "pomme de terre (en Espagne : « patata ») ; attention : « el papa » = le pape, « papá » = papa",
+      "genero": "f",
+      "plural": "papas",
+      "emoji": "🥔",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "En Perú hay miles de tipos de papa.",
+        "fr": "Au Pérou, il y a des milliers de variétés de pomme de terre.",
+        "voz": "paulina",
+        "audio": "paulina.5c7b6735e9"
+      },
+      "audio": "paulina.f722f20fc5",
+      "voz": "paulina"
+    },
+    {
+      "id": "quinua",
+      "es": "quinua",
+      "fr": "quinoa (mot d’origine quechua ; « quinoa » aussi)",
+      "genero": "f",
+      "ilustracion": "Un épi de quinoa rouge et jaune dans un champ, montagnes en fond",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La quinua es un cereal de los Andes.",
+        "fr": "Le quinoa est une céréale des Andes.",
+        "voz": "narrador",
+        "audio": "narrador.f5d3cd91b3"
+      },
+      "audio": "narrador.d65c4e7aef"
+    },
+    {
+      "id": "lana",
+      "es": "lana",
+      "fr": "laine",
+      "genero": "f",
+      "emoji": "🧶",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "La lana de alpaca es muy suave.",
+        "fr": "La laine d’alpaga est très douce.",
+        "voz": "narrador",
+        "audio": "narrador.7c670beba2"
+      },
+      "audio": "narrador.cbf61ffd8c"
+    },
+    {
+      "id": "tejido",
+      "es": "tejido",
+      "fr": "tissu tissé, tissage ; « tejer » = tisser",
+      "genero": "m",
+      "plural": "tejidos",
+      "ilustracion": "Un tissage péruvien aux couleurs vives, avec des motifs géométriques et des animaux",
+      "tags": [
+        "cultura"
+      ],
+      "ejemplo": {
+        "es": "Los tejidos de Chinchero tienen colores vivos.",
+        "fr": "Les tissages de Chinchero ont des couleurs vives.",
+        "voz": "paulina",
+        "audio": "paulina.a03f8b05a9"
+      },
+      "audio": "paulina.6e9ba2ace7",
+      "voz": "paulina"
+    },
+    {
+      "id": "idioma",
+      "es": "idioma",
+      "fr": "langue (= « lengua ») ; attention : le mot finit par -a mais « idioma » est masculin",
+      "genero": "m",
+      "plural": "idiomas",
+      "emoji": "🌐",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "El español es un idioma muy hablado.",
+        "fr": "L’espagnol est une langue très parlée.",
+        "voz": "narrador",
+        "audio": "narrador.d7850d280e"
+      },
+      "audio": "narrador.113cff8ac7"
+    },
+    {
+      "id": "palabra",
+      "es": "palabra",
+      "fr": "mot",
+      "genero": "f",
+      "plural": "palabras",
+      "emoji": "🔤",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "Mi palabra favorita es «mariposa».",
+        "fr": "Mon mot préféré est « mariposa ».",
+        "voz": "narrador",
+        "audio": "narrador.0daf45251f"
+      },
+      "audio": "narrador.00787666ba"
+    },
+    {
+      "id": "mundo",
+      "es": "mundo",
+      "fr": "monde",
+      "genero": "m",
+      "emoji": "🌍",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "El español se habla en todo el mundo.",
+        "fr": "L’espagnol se parle dans le monde entier.",
+        "voz": "narrador",
+        "audio": "narrador.2801cf122e"
+      },
+      "audio": "narrador.5956a2b28d"
+    },
+    {
+      "id": "pais",
+      "es": "país",
+      "fr": "pays",
+      "genero": "m",
+      "plural": "países",
+      "emoji": "🏳️",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "Perú es un país de los Andes.",
+        "fr": "Le Pérou est un pays des Andes.",
+        "voz": "narrador",
+        "audio": "narrador.a172b3c827"
+      },
+      "audio": "narrador.8b83c17f6e"
+    },
+    {
+      "id": "hablante",
+      "es": "hablante",
+      "fr": "locuteur, personne qui parle une langue",
+      "genero": "mf",
+      "plural": "hablantes",
+      "emoji": "🧑‍🤝‍🧑",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "Hay millones de hablantes de español.",
+        "fr": "Il y a des millions de locuteurs d’espagnol.",
+        "voz": "narrador",
+        "audio": "narrador.e42b0538a6"
+      },
+      "audio": "narrador.c17b3de8aa"
+    },
+    {
+      "id": "continente",
+      "es": "continente",
+      "fr": "continent",
+      "genero": "m",
+      "plural": "continentes",
+      "emoji": "🗺️",
+      "tags": [
+        "mundo"
+      ],
+      "ejemplo": {
+        "es": "América es un continente grande.",
+        "fr": "L’Amérique est un grand continent.",
+        "voz": "narrador",
+        "audio": "narrador.87b2827a8f"
+      },
+      "audio": "narrador.62bb0c89c8"
+    },
+    {
+      "id": "pero",
+      "es": "pero",
+      "fr": "mais",
+      "ilustracion": "Deux flèches qui s’opposent, une verte et une rouge",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Quiero volar, pero no tengo plumas.",
+        "fr": "Je veux voler, mais je n’ai pas de plumes.",
+        "voz": "narrador",
+        "audio": "narrador.b88692134e"
+      },
+      "audio": "narrador.98fc7b3476"
+    },
+    {
+      "id": "ademas",
+      "es": "además",
+      "fr": "en plus, de plus",
+      "ilustracion": "Un signe plus lumineux qui ajoute une étoile à une autre",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Killa es simpática y además es muy lista.",
+        "fr": "Killa est sympa et en plus elle est très maligne.",
+        "voz": "narrador",
+        "audio": "narrador.2c207e0f4b"
+      },
+      "audio": "narrador.e5bb58cd94"
+    },
+    {
+      "id": "entonces",
+      "es": "entonces",
+      "fr": "alors, donc, à ce moment-là",
+      "ilustracion": "Une flèche qui mène d’un nuage de pluie à un parapluie ouvert",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Hay tormenta, entonces el héroe espera.",
+        "fr": "Il y a un orage, alors le héros attend.",
+        "voz": "narrador",
+        "audio": "narrador.28125838ab"
+      },
+      "audio": "narrador.256580b217"
+    },
+    {
+      "id": "primero",
+      "es": "primero",
+      "fr": "d’abord, en premier",
+      "ilustracion": "Un chiffre 1 doré au début d’un chemin",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Primero busco el camino.",
+        "fr": "D’abord, je cherche le chemin.",
+        "voz": "narrador",
+        "audio": "narrador.72546bd6bb"
+      },
+      "audio": "narrador.2e146f6319"
+    },
+    {
+      "id": "luego",
+      "es": "luego",
+      "fr": "ensuite, puis",
+      "ilustracion": "Un chiffre 2 doré au milieu d’un chemin",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Luego subo a la cima.",
+        "fr": "Ensuite, je monte au sommet.",
+        "voz": "narrador",
+        "audio": "narrador.917c21e781"
+      },
+      "audio": "narrador.11e6ab9f3c"
+    },
+    {
+      "id": "al_final",
+      "es": "al final",
+      "fr": "à la fin, finalement",
+      "ilustracion": "Un drapeau d’arrivée au bout d’un chemin",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Al final, el héroe salva a todos.",
+        "fr": "À la fin, le héros sauve tout le monde.",
+        "voz": "narrador",
+        "audio": "narrador.5355f95625"
+      },
+      "audio": "narrador.74aa37b152"
+    },
+    {
+      "id": "un_dia",
+      "es": "un día",
+      "fr": "un jour (dans un récit)",
+      "emoji": "📆",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Un día, el héroe encuentra un tesoro.",
+        "fr": "Un jour, le héros trouve un trésor.",
+        "voz": "huaman",
+        "audio": "huaman.b4c3b4599a"
+      },
+      "audio": "huaman.2a0f0869ec",
+      "voz": "huaman"
+    },
+    {
+      "id": "habia_una_vez",
+      "es": "había una vez",
+      "fr": "il était une fois (formule pour commencer un conte)",
+      "emoji": "🏰",
+      "tags": [
+        "conectores"
+      ],
+      "ejemplo": {
+        "es": "Había una vez un héroe muy valiente.",
+        "fr": "Il était une fois un héros très courageux.",
+        "voz": "huaman",
+        "audio": "huaman.5317b58cd2"
+      },
+      "audio": "huaman.94f639a438",
+      "voz": "huaman"
+    },
+    {
+      "id": "contar",
+      "es": "contar",
+      "fr": "raconter ; compter (yo cuento : o → ue)",
+      "emoji": "🗣️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Mi abuelo cuenta leyendas.",
+        "fr": "Mon grand-père raconte des légendes.",
+        "voz": "narrador",
+        "audio": "narrador.0e722dde68"
+      },
+      "audio": "narrador.42f51a5908"
+    },
+    {
+      "id": "salvar",
+      "es": "salvar",
+      "fr": "sauver",
+      "emoji": "🛟",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "El héroe salva a la princesa.",
+        "fr": "Le héros sauve la princesse.",
+        "voz": "narrador",
+        "audio": "narrador.dc1c6379fd"
+      },
+      "audio": "narrador.4a40c34875"
+    },
+    {
+      "id": "encontrar",
+      "es": "encontrar",
+      "fr": "trouver, rencontrer (yo encuentro : o → ue)",
+      "emoji": "🔎",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "El héroe encuentra un camino.",
+        "fr": "Le héros trouve un chemin.",
+        "voz": "narrador",
+        "audio": "narrador.14a70aa60a"
+      },
+      "audio": "narrador.11977b1063"
+    },
+    {
+      "id": "volar",
+      "es": "volar",
+      "fr": "voler (dans les airs ; yo vuelo : o → ue)",
+      "emoji": "🕊️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "El cóndor vuela muy alto.",
+        "fr": "Le condor vole très haut.",
+        "voz": "narrador",
+        "audio": "narrador.ce97414d73"
+      },
+      "audio": "narrador.9510a0c1fd"
+    },
+    {
+      "id": "luchar",
+      "es": "luchar",
+      "fr": "lutter, se battre",
+      "emoji": "🥊",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "El héroe lucha por su pueblo.",
+        "fr": "Le héros se bat pour son peuple.",
+        "voz": "narrador",
+        "audio": "narrador.df9f9b46e1"
+      },
+      "audio": "narrador.3500a5d327"
+    },
+    {
+      "id": "buscar",
+      "es": "buscar",
+      "fr": "chercher",
+      "emoji": "🔍",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Busco una pluma verde.",
+        "fr": "Je cherche une plume verte.",
+        "voz": "narrador",
+        "audio": "narrador.cd257479de"
+      },
+      "audio": "narrador.ac55cf0cc2"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_conectores",
+      "titulo": {
+        "es": "Pero, además, porque, entonces",
+        "fr": "Les connecteurs : relier ses idées"
+      },
+      "ejemplos": [
+        {
+          "es": "Quiero volar, pero no tengo plumas.",
+          "fr": "Je veux voler, mais je n’ai pas de plumes.",
+          "voz": "quetzal",
+          "audio": "quetzal.b88692134e",
+          "resaltar": [
+            "pero"
+          ]
+        },
+        {
+          "es": "Killa es simpática y además es muy lista.",
+          "fr": "Killa est sympa et en plus elle est très maligne.",
+          "voz": "killa",
+          "audio": "killa.2c207e0f4b",
+          "resaltar": [
+            "además"
+          ]
+        },
+        {
+          "es": "El Quetzal no vuela porque no tiene todas sus plumas.",
+          "fr": "Le Quetzal ne vole pas parce qu’il n’a pas toutes ses plumes.",
+          "voz": "marina",
+          "audio": "marina.21d913d981",
+          "resaltar": [
+            "porque"
+          ]
+        },
+        {
+          "es": "Hay una tormenta. Entonces el héroe busca un camino.",
+          "fr": "Il y a un orage. Alors le héros cherche un chemin.",
+          "voz": "huaman",
+          "audio": "huaman.3d72b7461e",
+          "resaltar": [
+            "Entonces"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «pero» decimos lo contrario. Con «además» añadimos algo más. Con «porque» damos la razón. Con «entonces» decimos la consecuencia.",
+        "fr": "Avec « pero », on dit le contraire (mais). Avec « además », on ajoute quelque chose (en plus). Avec « porque », on donne la raison (parce que). Avec « entonces », on dit la conséquence (alors).",
+        "voz": "narrador",
+        "audio": "narrador.e7f3ae356b"
+      },
+      "pista": "Ces quatre petits mots rendent tes phrases beaucoup plus riches. PERO oppose deux idées (es pequeño, pero fuerte). ADEMÁS ajoute (es pequeño y además es rápido) ; il porte un accent sur le dernier a. PORQUE donne la cause et répond à « ¿por qué? » : — ¿Por qué estudias español? — Porque me gusta. Attention : « por qué » en deux mots avec accent sur « qué » sert à poser la question ; « porque » en un mot, sans accent, sert à répondre. ENTONCES donne la suite logique (llueve, entonces cojo el paraguas) et sert aussi à enchaîner un récit (entonces, el héroe sale).",
+      "tabla": {
+        "encabezado": [
+          "Conector",
+          "Sirve para…",
+          "Ejemplo"
+        ],
+        "filas": [
+          [
+            "pero",
+            "oponer",
+            "Es difícil, pero bonito."
+          ],
+          [
+            "además",
+            "añadir",
+            "Es bonito y además útil."
+          ],
+          [
+            "porque",
+            "dar la razón",
+            "Estudio porque me gusta."
+          ],
+          [
+            "entonces",
+            "decir la consecuencia",
+            "Llueve, entonces espero."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_cuento",
+      "titulo": {
+        "es": "Había una vez…",
+        "fr": "Raconter une histoire"
+      },
+      "ejemplos": [
+        {
+          "es": "Había una vez un héroe muy valiente.",
+          "fr": "Il était une fois un héros très courageux.",
+          "voz": "huaman",
+          "audio": "huaman.5317b58cd2",
+          "resaltar": [
+            "Había una vez"
+          ]
+        },
+        {
+          "es": "Un día, el héroe encuentra un tesoro.",
+          "fr": "Un jour, le héros trouve un trésor.",
+          "voz": "huaman",
+          "audio": "huaman.b4c3b4599a",
+          "resaltar": [
+            "Un día"
+          ]
+        },
+        {
+          "es": "Primero busca un camino y luego sube a la montaña.",
+          "fr": "D’abord il cherche un chemin et ensuite il monte à la montagne.",
+          "voz": "killa",
+          "audio": "killa.e63728d9a4",
+          "resaltar": [
+            "Primero",
+            "luego"
+          ]
+        },
+        {
+          "es": "Al final, el héroe salva a todos.",
+          "fr": "À la fin, le héros sauve tout le monde.",
+          "voz": "huaman",
+          "audio": "huaman.5355f95625",
+          "resaltar": [
+            "Al final"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para contar un cuento: «Había una vez…», «un día…», «primero… luego… entonces…», «al final…». Contamos en presente.",
+        "fr": "Pour raconter un conte : « Había una vez… » (il était une fois), « un día… » (un jour), « primero… luego… entonces… » (d’abord… ensuite… alors…), « al final… » (à la fin). Ici, on raconte au présent.",
+        "voz": "narrador",
+        "audio": "narrador.13721c8be5"
+      },
+      "pista": "Un récit simple = un petit plan : 1) la formule d'ouverture HABÍA UNA VEZ (à apprendre par cœur, comme « il était une fois » ; « había » est un temps du passé que tu étudieras plus tard) ; 2) UN DÍA, il se passe quelque chose ; 3) PRIMERO… LUEGO… ENTONCES… pour les étapes ; 4) AL FINAL pour la fin. À ton niveau, on raconte les actions au PRÉSENT (le héros busca, sube, encuentra) : c'est le « présent de narration », très courant, aussi en français. Les contes espagnols se terminent souvent par « Y colorín colorado, este cuento se ha acabado » (comme « et ils vécurent heureux »). Rappel : les verbes à diphtongue o → ue changent au présent sauf à nosotros : cuento, cuentas, cuenta, contamos ; encuentro, encuentras, encuentra, encontramos.",
+      "tabla": {
+        "encabezado": [
+          "Etapa",
+          "Se dice",
+          "Ejemplo"
+        ],
+        "filas": [
+          [
+            "Principio",
+            "Había una vez…",
+            "Había una vez un héroe."
+          ],
+          [
+            "Problema",
+            "Un día…",
+            "Un día, aparece un monstruo."
+          ],
+          [
+            "Acciones",
+            "Primero… luego… entonces…",
+            "Primero busca, luego sube."
+          ],
+          [
+            "Final",
+            "Al final…",
+            "Al final, salva a todos."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_se_habla",
+      "titulo": {
+        "es": "Se habla español",
+        "fr": "Dire « on parle » : se habla / se hablan"
+      },
+      "ejemplos": [
+        {
+          "es": "En Perú se habla español y quechua.",
+          "fr": "Au Pérou, on parle espagnol et quechua.",
+          "voz": "killa",
+          "audio": "killa.aa72402408",
+          "resaltar": [
+            "se habla"
+          ]
+        },
+        {
+          "es": "En México se hablan muchas lenguas indígenas.",
+          "fr": "Au Mexique, on parle beaucoup de langues indigènes.",
+          "voz": "itzel",
+          "audio": "itzel.78c632d104",
+          "resaltar": [
+            "se hablan"
+          ]
+        },
+        {
+          "es": "El español se habla en veinte países.",
+          "fr": "L’espagnol se parle dans vingt pays.",
+          "voz": "marina",
+          "audio": "marina.929fa1286d",
+          "resaltar": [
+            "se habla"
+          ]
+        },
+        {
+          "es": "¿Qué idioma se habla en Colombia?",
+          "fr": "Quelle langue parle-t-on en Colombie ?",
+          "voz": "camila",
+          "audio": "camila.7704920927",
+          "resaltar": [
+            "se habla"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Con «se habla» decimos «la gente habla»: se habla español. Si hablamos de varias lenguas, decimos «se hablan»: se hablan dos lenguas.",
+        "fr": "Avec « se habla », on dit « les gens parlent » (on parle) : se habla español. Pour plusieurs langues, on dit « se hablan » : se hablan dos lenguas.",
+        "voz": "narrador",
+        "audio": "narrador.19604af5ba"
+      },
+      "pista": "Le petit mot SE + verbe à la 3e personne permet de parler de ce que « on » fait en général, sans dire qui : se habla español (on parle espagnol / l'espagnol se parle). Le verbe s'accorde avec la chose dont on parle : se HABLA español (une langue → singulier), se HABLAN español y quechua (deux langues → pluriel). C'est la même construction pour d'autres phrases utiles : « se dice » (on dit), « se escribe » (ça s'écrit), « se come » (on mange). Ne confonds pas avec « me llamo / se llama », où « se » est le pronom de « llamarse ».",
+      "tabla": {
+        "encabezado": [
+          "País",
+          "Se habla…"
+        ],
+        "filas": [
+          [
+            "Perú",
+            "español y quechua"
+          ],
+          [
+            "México",
+            "español y muchas lenguas indígenas"
+          ],
+          [
+            "Guinea Ecuatorial",
+            "español (¡en África!)"
+          ],
+          [
+            "España",
+            "español, catalán, gallego, euskera"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_numeros_grandes",
+      "titulo": {
+        "es": "Cien, mil, un millón",
+        "fr": "Les grands nombres (cien, mil, millón)"
+      },
+      "ejemplos": [
+        {
+          "es": "Cusco está a más de tres mil metros.",
+          "fr": "Cusco est à plus de trois mille mètres d’altitude.",
+          "voz": "killa",
+          "audio": "killa.30ee75e2a4",
+          "resaltar": [
+            "tres mil"
+          ]
+        },
+        {
+          "es": "Machu Picchu tiene más de quinientos años.",
+          "fr": "Machu Picchu a plus de cinq cents ans.",
+          "voz": "huaman",
+          "audio": "huaman.79d6d07c93",
+          "resaltar": [
+            "quinientos"
+          ]
+        },
+        {
+          "es": "Más de quinientos millones de personas hablan español.",
+          "fr": "Plus de cinq cents millions de personnes parlent espagnol.",
+          "voz": "marina",
+          "audio": "marina.84ea22a521",
+          "resaltar": [
+            "quinientos millones de"
+          ]
+        },
+        {
+          "es": "Hay doscientas llamas en la montaña.",
+          "fr": "Il y a deux cents lamas dans la montagne.",
+          "voz": "killa",
+          "audio": "killa.b44c86c1a3",
+          "resaltar": [
+            "doscientas"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Cien = 100 (ciento + otro número: ciento veinte). Doscientos, trescientos… hasta novecientos. Mil = 1000. Un millón de + nombre.",
+        "fr": "Cien = 100 (ciento + autre nombre : ciento veinte). Doscientos, trescientos… jusqu’à novecientos. Mil = 1000. Un millón de + nom.",
+        "voz": "narrador",
+        "audio": "narrador.6c2ad2b10f"
+      },
+      "pista": "Au-delà de 100, l'espagnol ajoute : 100 cien (seul) / ciento veinte (suivi d'un autre nombre) ; 200 doscientos, 300 trescientos, 400 cuatrocientos, 500 QUINIENTOS (et non « cincocientos »), 600 seiscientos, 700 SETECIENTOS, 800 ochocientos, 900 NOVECIENTOS. Les centaines s'accordent avec le nom féminin : doscientas llamas. MIL ne change jamais (tres mil, pas « tres miles »). MILLÓN est un nom : on dit « un millón DE personas », « dos millones DE personas » (avec de et pluriel, accent perdu à millones). Ce n'est pas au programme de 5e : retiens simplement de LES RECONNAÎTRE quand tu lis des chiffres.",
+      "tabla": {
+        "encabezado": [
+          "Número",
+          "Se escribe"
+        ],
+        "filas": [
+          [
+            "100",
+            "cien"
+          ],
+          [
+            "200",
+            "doscientos"
+          ],
+          [
+            "500",
+            "quinientos"
+          ],
+          [
+            "1000",
+            "mil"
+          ],
+          [
+            "1 000 000",
+            "un millón de"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u10-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Cusco",
+      "emoji": "🦙",
+      "intro": {
+        "es": "¡Bienvenidos al Cusco! Yo soy Killa. Mi nombre significa «luna» en quechua.",
+        "fr": "Bienvenue à Cusco ! Moi, c’est Killa. Mon nom veut dire « lune » en quechua. (Les PNJ de cette unité parlent espagnol du Pérou ; ils disent « ustedes » pour « vous » au pluriel.)",
+        "voz": "killa",
+        "audio": "killa.bc42fedf85"
+      },
+      "pista": "Arrivée à Cusco, dans les Andes : tu rencontres Killa et Don Huamán, un conteur qui a perdu sa voix. La dernière plume est tout près !",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u10-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u10-intro",
+          "escena": {
+            "id": "u10-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 10 · Leyendas y héroes · Cusco",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée quitte le Yucatán, longe la côte pacifique et grimpe dans les Andes du Pérou ; carte-titre « Capítulo 10 · Leyendas y héroes · Cusco ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 10 · Leyendas y héroes · Cusco",
+                "lineas": [
+                  {
+                    "es": "Capítulo diez: leyendas y héroes.",
+                    "fr": "Chapitre dix : légendes et héros.",
+                    "voz": "narrador",
+                    "audio": "narrador.b34f9c4d15"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Cusco à l’heure dorée : toits de tuiles rouges, Plaza de Armas et sa cathédrale, murs de pierre inca parfaitement ajustés, des lamas sur un sentier, les montagnes violettes au loin et, très haut, un nuage qui cache Machu Picchu.",
+                "camara": "panoramique lent puis descente vers la place",
+                "lineas": [
+                  {
+                    "es": "Cusco, en los Andes de Perú, a más de tres mil metros de altura.",
+                    "fr": "Cusco, dans les Andes du Pérou, à plus de trois mille mètres d’altitude.",
+                    "voz": "narrador",
+                    "audio": "narrador.55fdea9495"
+                  },
+                  {
+                    "es": "Aquí está la antigua capital de los incas.",
+                    "fr": "Ici se trouve l’ancienne capitale des Incas.",
+                    "voz": "narrador",
+                    "audio": "narrador.1623ac966e"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u10-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Cusco está en Perú.",
+            "fr": "Cusco est au Pérou.",
+            "voz": "narrador",
+            "audio": "narrador.16834a9671"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Cusco está en la playa.",
+            "fr": "Cusco est à la plage. (Faux : Cusco est dans les montagnes des Andes.)",
+            "voz": "narrador",
+            "audio": "narrador.489a6efaf7"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u10-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u10-historia",
+          "escena": {
+            "id": "u10-historia",
+            "tipo": "historia",
+            "titulo": "El cuentacuentos sin voz",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "La Plaza de Armas de Cusco. Le Quetzal, presque entièrement vert, sort de la poche de Marina. Killa, 12 ans, avec un châle coloré (lliclla) et un petit lama tenu en laisse, vient à leur rencontre.",
+                "camara": "plan large puis plan moyen sur Killa",
+                "personajes": [
+                  "quetzal",
+                  "killa",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Nueve plumas. Solo falta una.",
+                    "fr": "Neuf plumes. Il n’en manque plus qu’une.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.e7598c7434"
+                  },
+                  {
+                    "es": "¡Hola! Me llamo Killa. En quechua, «killa» significa «luna». ¡Bienvenidos al Cusco!",
+                    "fr": "Salut ! Je m’appelle Killa. En quechua, « killa » veut dire « lune ». Bienvenue à Cusco ! (« ustedes » est la forme de politesse au pluriel en Amérique latine.)",
+                    "voz": "killa",
+                    "audio": "killa.317dfe53f7"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus.",
+                "camara": "plans rapprochés sur les enfants et sur le conteur",
+                "personajes": [
+                  "killa",
+                  "huaman"
+                ],
+                "lineas": [
+                  {
+                    "es": "Don Huamán es el mejor cuentacuentos de Cusco, pero hoy no tiene voz.",
+                    "fr": "Don Huamán est le meilleur conteur de Cusco, mais aujourd’hui il n’a plus de voix.",
+                    "voz": "killa",
+                    "audio": "killa.56c2cdb6aa"
+                  },
+                  {
+                    "es": "…las leyendas han desaparecido de mi memoria.",
+                    "fr": "… les légendes ont disparu de ma mémoire. (comme dans l’unité 9 : « han desaparecido » = ont disparu)",
+                    "voz": "huaman",
+                    "audio": "huaman.e6289c1d1b"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Sur un mur inca, la Sombra : petite, silencieuse, la voix lasse. Elle regarde les enfants sans oser s’approcher.",
+                "personajes": [
+                  "sombra"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin cuentos, nadie recuerda. Sin recuerdos, nadie habla.",
+                    "fr": "Sans contes, personne ne se souvient. Sans souvenirs, personne ne parle.",
+                    "voz": "sombra",
+                    "audio": "sombra.667bdb0fe3"
+                  },
+                  {
+                    "es": "Nadie cuenta cuentos para mí.",
+                    "fr": "Personne ne raconte de contes pour moi. (Elle a l’air triste et seule.)",
+                    "voz": "sombra",
+                    "audio": "sombra.bdb0e18495"
+                  }
+                ],
+                "musica": "tension douce, flûte andine et charango"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Les montagnes dans la brume : au loin, au milieu des nuages, un point vert brille sur Machu Picchu. Le Quetzal le montre du bec.",
+                "personajes": [
+                  "quetzal",
+                  "killa",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "La última pluma… está en Machu Picchu.",
+                    "fr": "La dernière plume… est à Machu Picchu.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.fd0eb07b4c"
+                  },
+                  {
+                    "es": "Para devolver las leyendas a Don Huamán, tienen que contar una historia. ¡Vamos a Machu Picchu!",
+                    "fr": "Pour rendre les légendes à Don Huamán, il faut raconter une histoire. Allons à Machu Picchu !",
+                    "voz": "killa",
+                    "audio": "killa.72b05170d8"
+                  }
+                ],
+                "musica": "thème d’aventure, quena et charango"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u10-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Don Huamán es el mejor cuentacuentos de la ciudad, pero hoy no puede hablar.",
+            "voz": "killa",
+            "audio": "killa.29e8b061f0"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hoy el cuentacuentos está en silencio.",
+              "correcta": true
+            },
+            {
+              "texto": "Don Huamán cuenta tres leyendas esta mañana.",
+              "correcta": false
+            },
+            {
+              "texto": "Los niños no quieren escuchar al cuentacuentos.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q01-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "La última pluma está en Machu Picchu, en las montañas.",
+            "voz": "killa",
+            "audio": "killa.bd9d82f288"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El Quetzal tiene que subir a las alturas.",
+              "correcta": true
+            },
+            {
+              "texto": "La pluma está en una playa del Caribe.",
+              "correcta": false
+            },
+            {
+              "texto": "La pluma está en el mercado de Cusco.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q01-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Killa significa «luna» en quechua.",
+            "fr": "Killa veut dire « lune » en quechua.",
+            "voz": "narrador",
+            "audio": "narrador.98eebd4892"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q01-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "killa",
+          "replica": {
+            "es": "¡Hola! Yo soy Killa. ¿Y tú, cómo te llamas? ¿De dónde eres?",
+            "fr": "Salut ! Moi, c’est Killa. Et toi, comment tu t’appelles ? Tu es d’où ?",
+            "voz": "killa",
+            "audio": "killa.61efe16674"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex y soy de París.",
+                "voz": "viajero",
+                "audio": "viajero.f65b0a200b"
+              },
+              "fr": "Je m’appelle Álex et je suis de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué chévere! Vienen de muy lejos. ¡Bienvenidos!",
+                "fr": "Trop bien ! (« chévere » = super, courant aussi au Pérou). Vous venez de très loin. Bienvenue !",
+                "voz": "killa",
+                "audio": "killa.ab1bf796ae",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy una llama.",
+                "voz": "viajero",
+                "audio": "viajero.286bb9835c"
+              },
+              "fr": "Je suis un lama.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una llama? ¡Yo tengo una llama también!",
+                "fr": "Un lama ? Moi aussi, j’ai un lama !",
+                "voz": "killa",
+                "audio": "killa.e2b5af3075",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo mil años.",
+                "voz": "viajero",
+                "audio": "viajero.12e068d4f5"
+              },
+              "fr": "J’ai mille ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Mil años? ¡Entonces eres más viejo que Machu Picchu!",
+                "fr": "Mille ans ? Alors tu es plus vieux que Machu Picchu !",
+                "voz": "killa",
+                "audio": "killa.fad7735680",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q01-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Cusco",
+            "está",
+            "en",
+            "los",
+            "Andes."
+          ],
+          "habla": {
+            "es": "Cusco está en los Andes.",
+            "voz": "killa",
+            "audio": "killa.f00e042938"
+          },
+          "fr": "Cusco est dans les Andes."
+        },
+        {
+          "id": "u10-q01-s10",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex y estoy en Cusco.",
+            "fr": "Salut, je m’appelle Álex et je suis à Cusco. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.4a31d71972"
+          },
+          "aceptadas": [
+            "hola me llamo álex y estoy en cusco"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} y estoy en cusco"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la montaña",
+            "efecto": "Un viento suave mueve las nubes de los Andes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u10-q02",
+      "tipo": "vocabulario",
+      "titulo": "Palabras de leyenda",
+      "emoji": "📜",
+      "intro": {
+        "es": "Había una vez… Así empiezan las leyendas de los Andes. Aprendan las palabras de los cuentos.",
+        "fr": "Il était une fois… Ainsi commencent les légendes des Andes. Apprenez les mots des contes.",
+        "voz": "huaman",
+        "audio": "huaman.b1866115b1"
+      },
+      "pista": "Le vocabulaire des contes et de la nature des Andes : héros, trésor, soleil, condor, puma, lama… Tu lis, tu écoutes et tu parles de TON héros préféré.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u10-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "leyenda",
+            "cuento",
+            "cuentacuentos",
+            "heroe",
+            "personaje",
+            "rey",
+            "tesoro"
+          ]
+        },
+        {
+          "id": "u10-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "magia",
+            "valle",
+            "lago",
+            "sol",
+            "luna",
+            "estrella",
+            "cielo"
+          ]
+        },
+        {
+          "id": "u10-q02-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "condor",
+            "puma",
+            "llama",
+            "viento",
+            "nube",
+            "camino",
+            "oro"
+          ]
+        },
+        {
+          "id": "u10-q02-s04",
+          "tipo": "flashcard",
+          "vocab": [
+            "cima"
+          ]
+        },
+        {
+          "id": "u10-q02-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "condor"
+            },
+            {
+              "vocab": "puma"
+            },
+            {
+              "vocab": "llama"
+            },
+            {
+              "vocab": "sol"
+            },
+            {
+              "vocab": "luna"
+            },
+            {
+              "vocab": "estrella"
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "cóndor",
+            "voz": "narrador",
+            "audio": "narrador.c9cd845fad"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "puma",
+              "correcta": false
+            },
+            {
+              "vocab": "condor",
+              "correcta": true
+            },
+            {
+              "vocab": "llama",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "El cóndor vuela alto, entre las nubes.",
+            "voz": "huaman",
+            "audio": "huaman.958e80e57e"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "puma",
+              "correcta": false
+            },
+            {
+              "vocab": "condor",
+              "correcta": true
+            },
+            {
+              "vocab": "llama",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El rey busca un tesoro de oro en la montaña.",
+            "voz": "huaman",
+            "audio": "huaman.39e4e7de65"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Una persona importante busca oro en las alturas.",
+              "correcta": true
+            },
+            {
+              "texto": "Un niño busca una pluma en el mar.",
+              "correcta": false
+            },
+            {
+              "texto": "Un animal grande vive en el valle.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es una estrella.",
+            "fr": "C’est une étoile.",
+            "voz": "narrador",
+            "audio": "narrador.90c686fd0d"
+          },
+          "correcta": true,
+          "imagen": "estrella"
+        },
+        {
+          "id": "u10-q02-s10",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "El condor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.",
+            "fr": "Le condor, le puma et le serpent sont trois animaux sacrés pour les Incas. Le condor vit dans le ciel, le puma vit sur la terre et le serpent vit sous la terre. Pour les Incas, le monde a trois parties. (Les trois mondes : Hanan Pacha, le ciel ; Kay Pacha, la terre ; Ukhu Pacha, le monde d’en bas.)",
+            "voz": "huaman",
+            "audio": "huaman.f228c5d135"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde vive el cóndor?",
+                "fr": "Où vit le condor ?",
+                "voz": "narrador",
+                "audio": "narrador.61907972cc"
+              },
+              "opciones": [
+                {
+                  "texto": "En el cielo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Bajo la tierra.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En el lago.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántas partes tiene el mundo para los incas?",
+                "fr": "Combien de parties le monde a-t-il pour les Incas ?",
+                "voz": "narrador",
+                "audio": "narrador.acb32db67b"
+              },
+              "opciones": [
+                {
+                  "texto": "Tres.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Dos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Diez.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué animal vive bajo la tierra?",
+                "fr": "Quel animal vit sous la terre ?",
+                "voz": "narrador",
+                "audio": "narrador.2df883a3b0"
+              },
+              "opciones": [
+                {
+                  "texto": "La serpiente.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El puma.",
+                  "correcta": false
+                },
+                {
+                  "texto": "La llama.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El ___ vuela en el cielo de los Andes.",
+          "respuesta": "cóndor",
+          "opciones": [
+            "cóndor",
+            "puma",
+            "lago"
+          ],
+          "habla": {
+            "es": "El cóndor vuela en el cielo de los Andes.",
+            "voz": "huaman",
+            "audio": "huaman.c067058add"
+          },
+          "fr": "Le condor vole dans le ciel des Andes."
+        },
+        {
+          "id": "u10-q02-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En el cuento, el héroe busca un ___ de oro.",
+          "respuesta": "tesoro",
+          "opciones": [
+            "tesoro",
+            "camino",
+            "viento"
+          ],
+          "habla": {
+            "es": "En el cuento, el héroe busca un tesoro de oro.",
+            "voz": "huaman",
+            "audio": "huaman.d718cf12fc"
+          },
+          "fr": "Dans le conte, le héros cherche un trésor en or."
+        },
+        {
+          "id": "u10-q02-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "huaman",
+          "replica": {
+            "es": "¿Quién es tu héroe o tu heroína favorito? ¿Por qué?",
+            "fr": "Qui est ton héros ou ton héroïne préféré(e) ? Pourquoi ?",
+            "voz": "huaman",
+            "audio": "huaman.c3c0c735d9"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi héroe es el Quetzal, porque es muy valiente.",
+                "voz": "viajero",
+                "audio": "viajero.a72acee46a"
+              },
+              "fr": "Mon héros, c’est le Quetzal, parce qu’il est très courageux.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué buen héroe! Un pájaro valiente, claro que sí.",
+                "fr": "Quel bon héros ! Un oiseau courageux, bien sûr.",
+                "voz": "huaman",
+                "audio": "huaman.cfbab8f709",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi héroe es una piedra.",
+                "voz": "viajero",
+                "audio": "viajero.2a6ec2e863"
+              },
+              "fr": "Mon héros est une pierre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una piedra? Mmm… no es muy ágil.",
+                "fr": "Une pierre ? Mmm… ce n’est pas très agile.",
+                "voz": "huaman",
+                "audio": "huaman.0ca2284a78",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi heroína porque.",
+                "voz": "viajero",
+                "audio": "viajero.e7ecb722eb"
+              },
+              "fr": "Mon héroïne parce que.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… ¿tu heroína por qué? Dime una frase completa.",
+                "fr": "Mmm… ton héroïne pourquoi ? Dis-moi une phrase complète.",
+                "voz": "huaman",
+                "audio": "huaman.ec0d03b59e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q02-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU cuento favorito.",
+            "fr": "Écoute et dis quel est TON conte (ou livre, ou film) préféré : Harry Potter, el Principito, Caperucita Roja…",
+            "voz": "narrador",
+            "audio": "narrador.6a4b81accb"
+          },
+          "objetivo": {
+            "es": "Mi cuento favorito es la leyenda.",
+            "fr": "Mon conte préféré est la légende. (dis le tien : el Principito, Caperucita Roja…)",
+            "voz": "viajero",
+            "audio": "viajero.c5758a9e57"
+          },
+          "aceptadas": [
+            "mi cuento favorito es la leyenda"
+          ],
+          "patrones": [
+            "mi cuento favorito es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del cuento",
+            "efecto": "Un libro de oro se abre en el aire"
+          }
+        },
+        {
+          "id": "u10-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "El cóndor vuela en el cielo.",
+            "voz": "huaman",
+            "audio": "huaman.b24336cb7b"
+          },
+          "respuesta": "El cóndor vuela en el cielo."
+        }
+      ]
+    },
+    {
+      "id": "u10-q03",
+      "tipo": "escucha",
+      "titulo": "La leyenda de Manco Cápac",
+      "emoji": "🌞",
+      "intro": {
+        "es": "Escuchen esta leyenda de los incas: la leyenda de la fundación de Cusco.",
+        "fr": "Écoutez cette légende des Incas : la légende de la fondation de Cusco.",
+        "voz": "huaman",
+        "audio": "huaman.bfe2dcba2f"
+      },
+      "pista": "Les verbes et les connecteurs du récit, puis une légende inca racontée par morceaux : tu écoutes et tu comprends l’histoire de la fondation de Cusco.",
+      "stats": [
+        "escuchar",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u10-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "contar",
+            "salvar",
+            "ayudar",
+            "encontrar",
+            "volar",
+            "luchar",
+            "buscar"
+          ]
+        },
+        {
+          "id": "u10-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "cantar",
+            "pero",
+            "ademas",
+            "entonces",
+            "primero",
+            "luego",
+            "al_final"
+          ]
+        },
+        {
+          "id": "u10-q03-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "un_dia",
+            "habia_una_vez"
+          ]
+        },
+        {
+          "id": "u10-q03-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Había una vez un dios, Inti, el sol. Inti mira la tierra y ve a las personas tristes, sin casa y sin comida.",
+            "voz": "huaman",
+            "audio": "huaman.875a026119"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los habitantes de la tierra necesitan ayuda.",
+              "correcta": true
+            },
+            {
+              "texto": "Inti vive en un lago.",
+              "correcta": false
+            },
+            {
+              "texto": "Las personas están muy contentas.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Entonces Inti envía a su hijo Manco Cápac y a su hija Mama Ocllo. Salen del lago Titicaca con un bastón de oro.",
+            "voz": "huaman",
+            "audio": "huaman.39f9d523fd"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Dos hijos del sol llegan desde un lago.",
+              "correcta": true
+            },
+            {
+              "texto": "Inti viaja solo a la montaña.",
+              "correcta": false
+            },
+            {
+              "texto": "Los hijos de Inti salen de una cueva sin nada.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Caminan mucho. Un día, el bastón de oro entra en la tierra. Es el lugar perfecto: allí fundan Cusco.",
+            "voz": "huaman",
+            "audio": "huaman.087d05b758"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Al final de su viaje, nace una ciudad.",
+              "correcta": true
+            },
+            {
+              "texto": "Los hijos de Inti vuelven al lago.",
+              "correcta": false
+            },
+            {
+              "texto": "El bastón se pierde en el mar.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q03-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Inti es el dios del sol.",
+            "fr": "Inti est le dieu du soleil.",
+            "voz": "narrador",
+            "audio": "narrador.a277505ccc"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q03-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Manco Cápac y Mama Ocllo salen del lago Titicaca.",
+            "fr": "Manco Cápac et Mama Ocllo sortent du lac Titicaca.",
+            "voz": "narrador",
+            "audio": "narrador.eca548b79f"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q03-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los hijos de Inti fundan Madrid.",
+            "fr": "Les enfants d’Inti fondent Madrid. (Faux : ils fondent Cusco.)",
+            "voz": "narrador",
+            "audio": "narrador.593c86f1c1"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u10-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Manco Cápac y Mama Ocllo salen del ___ Titicaca.",
+          "respuesta": "lago",
+          "opciones": [
+            "lago",
+            "cielo",
+            "mercado"
+          ],
+          "habla": {
+            "es": "Manco Cápac y Mama Ocllo salen del lago Titicaca.",
+            "voz": "huaman",
+            "audio": "huaman.eca548b79f"
+          },
+          "fr": "Manco Cápac et Mama Ocllo sortent du lac Titicaca."
+        },
+        {
+          "id": "u10-q03-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El bastón es de ___.",
+          "respuesta": "oro",
+          "opciones": [
+            "oro",
+            "papa",
+            "nube"
+          ],
+          "habla": {
+            "es": "El bastón es de oro.",
+            "voz": "huaman",
+            "audio": "huaman.710a324bce"
+          },
+          "fr": "Le bâton est en or."
+        },
+        {
+          "id": "u10-q03-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Primero",
+            "buscan",
+            "un",
+            "lugar",
+            "y",
+            "luego",
+            "fundan",
+            "una",
+            "ciudad."
+          ],
+          "habla": {
+            "es": "Primero buscan un lugar y luego fundan una ciudad.",
+            "voz": "killa",
+            "audio": "killa.576b8e4d43"
+          },
+          "fr": "D’abord ils cherchent un endroit et ensuite ils fondent une ville."
+        },
+        {
+          "id": "u10-q03-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "huaman",
+          "replica": {
+            "es": "¿Te gusta la leyenda? ¿Cuál es tu parte favorita?",
+            "fr": "Tu aimes la légende ? Quelle est ta partie préférée ?",
+            "voz": "huaman",
+            "audio": "huaman.5b0c48dddc"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me gusta la parte del bastón de oro.",
+                "voz": "viajero",
+                "audio": "viajero.ac0d1bd25f"
+              },
+              "fr": "J’aime la partie du bâton d’or.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Esa también es mi parte favorita! El oro brilla en la tierra.",
+                "fr": "C’est aussi ma partie préférée ! L’or brille dans la terre.",
+                "voz": "huaman",
+                "audio": "huaman.529fcf56f4",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me gusta el bastón de papa.",
+                "voz": "viajero",
+                "audio": "viajero.33a353d13f"
+              },
+              "fr": "J’aime le bâton de pomme de terre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿De papa? ¡Qué bastón más raro!",
+                "fr": "En pomme de terre ? Quel drôle de bâton !",
+                "voz": "huaman",
+                "audio": "huaman.b82f99bc58",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy la leyenda favorita.",
+                "voz": "viajero",
+                "audio": "viajero.c84c6e6541"
+              },
+              "fr": "Je suis la légende préférée.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú eres una leyenda? ¡Todavía no!",
+                "fr": "Toi, tu es une légende ? Pas encore !",
+                "voz": "huaman",
+                "audio": "huaman.bc17227a40",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q03-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU héroe favorito.",
+            "fr": "Écoute et dis quel est TON héros (ou héroïne) préféré(e) : Spiderman, Messi, mi abuela…",
+            "voz": "narrador",
+            "audio": "narrador.44f03beee1"
+          },
+          "objetivo": {
+            "es": "Mi héroe favorito es Manco Cápac.",
+            "fr": "Mon héros préféré est Manco Cápac. (dis le tien)",
+            "voz": "viajero",
+            "audio": "viajero.660fc7d12b"
+          },
+          "aceptadas": [
+            "mi héroe favorito es manco cápac"
+          ],
+          "patrones": [
+            "mi héroe favorito es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del héroe",
+            "efecto": "Una corona de luz aparece sobre tu cabeza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u10-q04",
+      "tipo": "forja",
+      "titulo": "La Forja: el cuento",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Pero. Además. Porque. Entonces. ¡Forja el cuento conmigo!",
+        "fr": "Mais. En plus. Parce que. Alors. Forge le conte avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.954639edb4"
+      },
+      "pista": "Les connecteurs pero / además / porque / entonces et la structure d’un récit simple (había una vez, un día, primero, luego, al final). Verbes à diphtongue : cuento, encuentro.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u10-q04-s01",
+          "tipo": "grammar_card",
+          "ref": "g_conectores"
+        },
+        {
+          "id": "u10-q04-s02",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Quiero volar, ___ no tengo plumas.",
+          "respuesta": "pero",
+          "opciones": [
+            "pero",
+            "además",
+            "entonces"
+          ],
+          "habla": {
+            "es": "Quiero volar, pero no tengo plumas.",
+            "voz": "quetzal",
+            "audio": "quetzal.b88692134e"
+          },
+          "fr": "Je veux voler, mais je n’ai pas de plumes."
+        },
+        {
+          "id": "u10-q04-s03",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Killa es simpática y ___ es muy lista.",
+          "respuesta": "además",
+          "opciones": [
+            "además",
+            "pero",
+            "porque"
+          ],
+          "habla": {
+            "es": "Killa es simpática y además es muy lista.",
+            "voz": "killa",
+            "audio": "killa.2c207e0f4b"
+          },
+          "fr": "Killa est sympa et en plus elle est très maligne."
+        },
+        {
+          "id": "u10-q04-s04",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El Quetzal no vuela ___ no tiene todas sus plumas.",
+          "respuesta": "porque",
+          "opciones": [
+            "porque",
+            "pero",
+            "entonces"
+          ],
+          "habla": {
+            "es": "El Quetzal no vuela porque no tiene todas sus plumas.",
+            "voz": "marina",
+            "audio": "marina.21d913d981"
+          },
+          "fr": "Le Quetzal ne vole pas parce qu’il n’a pas toutes ses plumes."
+        },
+        {
+          "id": "u10-q04-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hay una tormenta. ___ el héroe busca un camino.",
+          "respuesta": "Entonces",
+          "opciones": [
+            "Entonces",
+            "Porque",
+            "Pero"
+          ],
+          "habla": {
+            "es": "Hay una tormenta. Entonces el héroe busca un camino.",
+            "voz": "huaman",
+            "audio": "huaman.3d72b7461e"
+          },
+          "fr": "Il y a un orage. Alors le héros cherche un chemin."
+        },
+        {
+          "id": "u10-q04-s06",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "El",
+            "héroe",
+            "es",
+            "valiente,",
+            "pero",
+            "tiene",
+            "miedo."
+          ],
+          "habla": {
+            "es": "El héroe es valiente, pero tiene miedo.",
+            "voz": "huaman",
+            "audio": "huaman.4e7f4659f0"
+          },
+          "fr": "Le héros est courageux, mais il a peur."
+        },
+        {
+          "id": "u10-q04-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "huaman",
+          "replica": {
+            "es": "¿Por qué te gustan las leyendas?",
+            "fr": "Pourquoi aimes-tu les légendes ?",
+            "voz": "huaman",
+            "audio": "huaman.1e40c9f657"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Porque son historias de héroes.",
+                "voz": "viajero",
+                "audio": "viajero.7ae57aa003"
+              },
+              "fr": "Parce que ce sont des histoires de héros.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Los héroes nos enseñan a ser valientes.",
+                "fr": "Exact ! Les héros nous apprennent à être courageux.",
+                "voz": "huaman",
+                "audio": "huaman.f7e162c203",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Por qué son historias de héroes.",
+                "voz": "viajero",
+                "audio": "viajero.bd3263f2e0"
+              },
+              "fr": "Pourquoi ce sont des histoires de héros.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Para dar la razón se escribe «porque», en una palabra y sin acento.",
+                "fr": "Pour donner la raison, on écrit « porque », en un seul mot et sans accent.",
+                "voz": "huaman",
+                "audio": "huaman.64bf1fad22",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Pero las leyendas son héroes.",
+                "voz": "viajero",
+                "audio": "viajero.f1aa1b8c47"
+              },
+              "fr": "Mais les légendes sont des héros.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… «pero» no responde a «¿por qué?».",
+                "fr": "Mmm… « pero » ne répond pas à « ¿por qué? ».",
+                "voz": "huaman",
+                "audio": "huaman.b1b08a77cf",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q04-s08",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "contar",
+          "sujeto": "yo",
+          "radical": "cuent",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "amos",
+            "an"
+          ],
+          "forma": "cuento",
+          "habla": {
+            "es": "yo cuento",
+            "voz": "huaman",
+            "audio": "huaman.7714ec91d8"
+          },
+          "fr": "Moi, je raconte… (o → ue)"
+        },
+        {
+          "id": "u10-q04-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "contar",
+          "sujeto": "nosotros",
+          "radical": "cont",
+          "terminacion": "amos",
+          "terminaciones": [
+            "amos",
+            "o",
+            "an"
+          ],
+          "forma": "contamos",
+          "habla": {
+            "es": "nosotros contamos",
+            "voz": "huaman",
+            "audio": "huaman.68b9aff363"
+          },
+          "fr": "Nous, nous racontons… (ici, pas de diphtongue)"
+        },
+        {
+          "id": "u10-q04-s10",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "encontrar",
+          "sujeto": "él",
+          "radical": "encuentr",
+          "terminacion": "a",
+          "terminaciones": [
+            "a",
+            "o",
+            "amos"
+          ],
+          "forma": "encuentra",
+          "habla": {
+            "es": "él encuentra",
+            "voz": "killa",
+            "audio": "killa.3d69d585af"
+          },
+          "fr": "Lui, il trouve… (o → ue)"
+        },
+        {
+          "id": "u10-q04-s11",
+          "tipo": "grammar_card",
+          "ref": "g_cuento"
+        },
+        {
+          "id": "u10-q04-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Primero cuento la leyenda y ___ canto una canción.",
+          "respuesta": "luego",
+          "opciones": [
+            "luego",
+            "pero",
+            "porque"
+          ],
+          "habla": {
+            "es": "Primero cuento la leyenda y luego canto una canción.",
+            "voz": "killa",
+            "audio": "killa.a457ace17d"
+          },
+          "fr": "D’abord je raconte la légende et ensuite je chante une chanson."
+        },
+        {
+          "id": "u10-q04-s13",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Al ___, el héroe salva a todos.",
+          "respuesta": "final",
+          "opciones": [
+            "final",
+            "día",
+            "vez"
+          ],
+          "habla": {
+            "es": "Al final, el héroe salva a todos.",
+            "voz": "huaman",
+            "audio": "huaman.5355f95625"
+          },
+          "fr": "À la fin, le héros sauve tout le monde."
+        },
+        {
+          "id": "u10-q04-s14",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Había",
+            "una",
+            "vez",
+            "un",
+            "héroe",
+            "muy",
+            "valiente."
+          ],
+          "habla": {
+            "es": "Había una vez un héroe muy valiente.",
+            "voz": "huaman",
+            "audio": "huaman.5317b58cd2"
+          },
+          "fr": "Il était une fois un héros très courageux."
+        },
+        {
+          "id": "u10-q04-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Primero busca el camino y luego sube.",
+            "voz": "killa",
+            "audio": "killa.75bb5a7ba0"
+          },
+          "respuesta": "Primero busca el camino y luego sube."
+        }
+      ]
+    },
+    {
+      "id": "u10-q05",
+      "tipo": "lectura",
+      "titulo": "Machu Picchu",
+      "emoji": "🏔️",
+      "intro": {
+        "es": "Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!",
+        "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici l’air est très rare. Allons doucement !",
+        "voz": "huaman",
+        "audio": "huaman.b63ca5ed4c"
+      },
+      "pista": "Lecture sur Machu Picchu et sur Cusco, découverte des grands nombres (mil, quinientos, millón) à reconnaître, puis tu dis quel endroit TOI tu aimerais visiter.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "cultura"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u10-q05-s01",
+          "tipo": "grammar_card",
+          "ref": "g_numeros_grandes"
+        },
+        {
+          "id": "u10-q05-s02",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Cusco está a más de tres ___ metros.",
+          "respuesta": "mil",
+          "opciones": [
+            "mil",
+            "cien",
+            "millón"
+          ],
+          "habla": {
+            "es": "Cusco está a más de tres mil metros.",
+            "voz": "killa",
+            "audio": "killa.30ee75e2a4"
+          },
+          "fr": "Cusco est à plus de trois mille mètres d’altitude."
+        },
+        {
+          "id": "u10-q05-s03",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hay más de quinientos ___ de personas que hablan español.",
+          "respuesta": "millones",
+          "opciones": [
+            "millones",
+            "millón",
+            "miles"
+          ],
+          "habla": {
+            "es": "Hay más de quinientos millones de personas que hablan español.",
+            "voz": "marina",
+            "audio": "marina.ccf69acbca"
+          },
+          "fr": "Il y a plus de cinq cents millions de personnes qui parlent espagnol."
+        },
+        {
+          "id": "u10-q05-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Machu Picchu tiene más de quinientos años.",
+            "voz": "huaman",
+            "audio": "huaman.79d6d07c93"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Machu Picchu es muy antiguo.",
+              "correcta": true
+            },
+            {
+              "texto": "Machu Picchu es una ciudad moderna.",
+              "correcta": false
+            },
+            {
+              "texto": "Machu Picchu es un edificio nuevo.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q05-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Cusco está a más de tres mil metros de altura.",
+            "voz": "killa",
+            "audio": "killa.9923a0d710"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Cusco está muy alto, en las montañas.",
+              "correcta": true
+            },
+            {
+              "texto": "Cusco está al nivel del mar.",
+              "correcta": false
+            },
+            {
+              "texto": "Cusco está debajo de una montaña.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q05-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Machu Picchu es una ciudad inca en las montañas de Perú. Está a unos dos mil cuatrocientos metros de altura. Los incas la construyen hace más de quinientos años, con piedras enormes. Hoy es patrimonio mundial y miles de turistas la visitan cada año.",
+            "fr": "Machu Picchu est une ville inca dans les montagnes du Pérou. Elle est à environ deux mille quatre cents mètres d’altitude. Les Incas la construisent il y a plus de cinq cents ans, avec d’énormes pierres. Aujourd’hui, c’est un patrimoine mondial et des milliers de touristes la visitent chaque année. (Machu Picchu fait partie des « Nouvelles sept merveilles du monde » depuis 2007.)",
+            "voz": "huaman",
+            "audio": "huaman.dc67496ed4"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde está Machu Picchu?",
+                "fr": "Où est Machu Picchu ?",
+                "voz": "narrador",
+                "audio": "narrador.525aab88bd"
+              },
+              "opciones": [
+                {
+                  "texto": "En las montañas de Perú.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En una playa de México.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En el centro de Madrid.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quiénes construyen Machu Picchu?",
+                "fr": "Qui construit Machu Picchu ?",
+                "voz": "narrador",
+                "audio": "narrador.6252ed07aa"
+              },
+              "opciones": [
+                {
+                  "texto": "Los incas.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Los aztecas.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Los mayas.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es Machu Picchu hoy?",
+                "fr": "Que est Machu Picchu aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.ac446cdc8c"
+              },
+              "opciones": [
+                {
+                  "texto": "Patrimonio mundial.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un mercado.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un colegio.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q05-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Cusco es la antigua capital de los incas. Está a más de tres mil metros de altura. Cada 24 de junio, la gente celebra el Inti Raymi, la fiesta del sol. Hay música, bailes y trajes de colores. ¡Es una fiesta muy bonita!",
+            "fr": "Cusco est l’ancienne capitale des Incas. Elle est à plus de trois mille mètres d’altitude. Chaque 24 juin, les gens célèbrent l’Inti Raymi, la fête du soleil. Il y a de la musique, des danses et des costumes colorés. C’est une très belle fête ! (24 juin : solstice d’hiver dans l’hémisphère sud, le jour le plus court de l’année.)",
+            "voz": "killa",
+            "audio": "killa.314f6bda2d"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué es el Inti Raymi?",
+                "fr": "Qu’est-ce que l’Inti Raymi ?",
+                "voz": "narrador",
+                "audio": "narrador.2ed50bdfaa"
+              },
+              "opciones": [
+                {
+                  "texto": "La fiesta del sol.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un animal.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un plato típico.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo es el Inti Raymi?",
+                "fr": "Quand a lieu l’Inti Raymi ?",
+                "voz": "narrador",
+                "audio": "narrador.b544ace767"
+              },
+              "opciones": [
+                {
+                  "texto": "El 24 de junio.",
+                  "correcta": true
+                },
+                {
+                  "texto": "El 25 de diciembre.",
+                  "correcta": false
+                },
+                {
+                  "texto": "El 1 de enero.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hay en la fiesta?",
+                "fr": "Qu’y a-t-il à la fête ?",
+                "voz": "narrador",
+                "audio": "narrador.7f5f978159"
+              },
+              "opciones": [
+                {
+                  "texto": "Música, bailes y trajes de colores.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo comida.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Nada.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q05-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Machu Picchu está en Perú.",
+            "fr": "Machu Picchu est au Pérou.",
+            "voz": "narrador",
+            "audio": "narrador.fe4d10a322"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q05-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Machu Picchu está en el mar.",
+            "fr": "Machu Picchu est dans la mer. (Faux : il est dans les montagnes.)",
+            "voz": "narrador",
+            "audio": "narrador.7b0e0fbf5f"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u10-q05-s10",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Cusco es la antigua capital de los incas.",
+            "fr": "Cusco est l’ancienne capitale des Incas.",
+            "voz": "narrador",
+            "audio": "narrador.0681cca2e4"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q05-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Machu",
+            "Picchu",
+            "está",
+            "entre",
+            "las",
+            "nubes."
+          ],
+          "habla": {
+            "es": "Machu Picchu está entre las nubes.",
+            "voz": "huaman",
+            "audio": "huaman.bf17261d75"
+          },
+          "fr": "Machu Picchu est entre les nuages."
+        },
+        {
+          "id": "u10-q05-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "huaman",
+          "replica": {
+            "es": "Estamos muy altos. ¿Cómo estás? ¿Estás cansado?",
+            "fr": "Nous sommes très haut. Comment vas-tu ? Tu es fatigué ?",
+            "voz": "huaman",
+            "audio": "huaman.62c86761aa"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Estoy un poco cansado, pero contento.",
+                "voz": "viajero",
+                "audio": "viajero.95be5375eb"
+              },
+              "fr": "Je suis un peu fatigué, mais content.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Con un poquito de té de coca se pasa todo.",
+                "fr": "Parfait ! Avec un peu de thé de coca, tout passe. (Dans les Andes, on boit du « mate de coca » contre le mal des montagnes, le « soroche ».)",
+                "voz": "huaman",
+                "audio": "huaman.8c5a00aab5",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy cansado.",
+                "voz": "viajero",
+                "audio": "viajero.146bbbbd35"
+              },
+              "fr": "Je suis (ser) fatigué.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «cansado» usamos «estar»: «estoy cansado».",
+                "fr": "Avec « cansado », on utilise « estar » : « estoy cansado ».",
+                "voz": "huaman",
+                "audio": "huaman.4ecc4b55d3",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Estoy muy alto en el cielo.",
+                "voz": "viajero",
+                "audio": "viajero.646afac960"
+              },
+              "fr": "Je suis très haut dans le ciel.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡Casi! Pero se dice «estamos en las montañas».",
+                "fr": "Presque ! Mais on dit « nous sommes dans les montagnes ».",
+                "voz": "huaman",
+                "audio": "huaman.cd666e9263",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q05-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué lugar te gustaría visitar a TI.",
+            "fr": "Écoute et dis quel endroit TU aimerais visiter (Madrid, Cartagena, Buenos Aires…). « Me gustaría » = j’aimerais.",
+            "voz": "narrador",
+            "audio": "narrador.5a1bd20c0a"
+          },
+          "objetivo": {
+            "es": "Me gustaría visitar Machu Picchu.",
+            "fr": "J’aimerais visiter Machu Picchu. (dis le tien)",
+            "voz": "viajero",
+            "audio": "viajero.4207d682fe"
+          },
+          "aceptadas": [
+            "me gustaría visitar machu picchu"
+          ],
+          "patrones": [
+            "me gustaría visitar {nombre}"
+          ],
+          "foco": "Machu Picchu : le « ch » se dit « tch » (MA-tchou PIK-tchou). Le « cc » de « Picchu » n’existe pas en espagnol : c’est un « cch », donc « tch ».",
+          "hechizo": {
+            "nombre": "Hechizo del viaje",
+            "efecto": "Un camino dorado aparece entre las nubes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u10-q06",
+      "tipo": "dialogo",
+      "titulo": "El español en el mundo",
+      "emoji": "🌍",
+      "intro": {
+        "es": "En mi casa hablamos quechua, pero en el colegio hablamos español. ¿Y tú, qué idiomas hablas?",
+        "fr": "À la maison, nous parlons quechua, mais au collège nous parlons espagnol. Et toi, quelles langues parles-tu ?",
+        "voz": "killa",
+        "audio": "killa.c5e8d17f8f"
+      },
+      "pista": "L’espagnol dans le monde (se habla, vingt pays, plus de cinq cents millions de locuteurs), le quechua et ses mots dans nos langues ; puis tu parles de TES langues.",
+      "stats": [
+        "hablar",
+        "leer",
+        "escribir",
+        "cultura"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u10-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "idioma",
+            "palabra",
+            "mundo",
+            "pais",
+            "hablante",
+            "continente",
+            "quechua"
+          ]
+        },
+        {
+          "id": "u10-q06-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "inca",
+            "pachamama",
+            "papa",
+            "quinua",
+            "lana",
+            "tejido"
+          ]
+        },
+        {
+          "id": "u10-q06-s03",
+          "tipo": "grammar_card",
+          "ref": "g_se_habla"
+        },
+        {
+          "id": "u10-q06-s04",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En Perú ___ español y quechua.",
+          "respuesta": "se habla",
+          "opciones": [
+            "se habla",
+            "se hablan",
+            "hablan"
+          ],
+          "habla": {
+            "es": "En Perú se habla español y quechua.",
+            "voz": "killa",
+            "audio": "killa.aa72402408"
+          },
+          "fr": "Au Pérou, on parle espagnol et quechua."
+        },
+        {
+          "id": "u10-q06-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En México ___ muchas lenguas indígenas.",
+          "respuesta": "se hablan",
+          "opciones": [
+            "se habla",
+            "se hablan",
+            "hablo"
+          ],
+          "habla": {
+            "es": "En México se hablan muchas lenguas indígenas.",
+            "voz": "itzel",
+            "audio": "itzel.78c632d104"
+          },
+          "fr": "Au Mexique, on parle beaucoup de langues indigènes. (plusieurs langues → se hablan)"
+        },
+        {
+          "id": "u10-q06-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "El español es la lengua oficial de veinte países. Se habla en España, en América y también en África, en Guinea Ecuatorial. Más de quinientos millones de personas hablan español. Es uno de los idiomas más hablados del mundo.",
+            "fr": "L’espagnol est la langue officielle de vingt pays. On le parle en Espagne, en Amérique et aussi en Afrique, en Guinée équatoriale. Plus de cinq cents millions de personnes parlent espagnol. C’est une des langues les plus parlées au monde. (Vingt pays, plus Porto Rico, territoire des États-Unis.)",
+            "voz": "killa",
+            "audio": "killa.4d0ece1a80"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿En cuántos países es oficial el español?",
+                "fr": "Dans combien de pays l’espagnol est-il officiel ?",
+                "voz": "narrador",
+                "audio": "narrador.85c774831e"
+              },
+              "opciones": [
+                {
+                  "texto": "En veinte.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En tres.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En mil.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde se habla español en África?",
+                "fr": "Où parle-t-on espagnol en Afrique ?",
+                "voz": "narrador",
+                "audio": "narrador.206ac317cd"
+              },
+              "opciones": [
+                {
+                  "texto": "En Guinea Ecuatorial.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En Marruecos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En Egipto.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántas personas hablan español?",
+                "fr": "Combien de personnes parlent espagnol ?",
+                "voz": "narrador",
+                "audio": "narrador.334c5a791d"
+              },
+              "opciones": [
+                {
+                  "texto": "Más de quinientos millones.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Cien personas.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Dos mil.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q06-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡También en francés decimos lama, puma, condor y quinoa!",
+            "fr": "À la maison, nous parlons quechua, mais au collège nous parlons espagnol. Le quechua est une langue des Andes et des millions de personnes le parlent. Beaucoup de mots espagnols viennent du quechua : pomme de terre, lama, puma, condor, quinoa. En français aussi, on dit lama, puma, condor et quinoa ! (« papa » = pomme de terre en Amérique latine ; en Espagne, on dit « patata ».)",
+            "voz": "killa",
+            "audio": "killa.10c0ec1420"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué hablan en casa de Killa?",
+                "fr": "Que parle-t-on chez Killa ?",
+                "voz": "narrador",
+                "audio": "narrador.ad365c6796"
+              },
+              "opciones": [
+                {
+                  "texto": "Quechua.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Francés.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Inglés.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué significa «papa» en América?",
+                "fr": "Que veut dire « papa » en Amérique ?",
+                "voz": "narrador",
+                "audio": "narrador.125076bc62"
+              },
+              "opciones": [
+                {
+                  "texto": "Pomme de terre.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pain.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Tomate.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué palabras del quechua usamos también en francés?",
+                "fr": "Quels mots du quechua utilise-t-on aussi en français ?",
+                "voz": "narrador",
+                "audio": "narrador.bcbd77f8ab"
+              },
+              "opciones": [
+                {
+                  "texto": "Puma y cóndor.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Casa y mesa.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Libro y silla.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q06-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El quechua es una lengua de los Andes.",
+            "fr": "Le quechua est une langue des Andes.",
+            "voz": "narrador",
+            "audio": "narrador.8ab909d03e"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q06-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El español solo se habla en España.",
+            "fr": "L’espagnol ne se parle qu’en Espagne. (Faux : il se parle en Espagne, en Amérique latine et en Guinée équatoriale.)",
+            "voz": "narrador",
+            "audio": "narrador.a853723bdd"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u10-q06-s10",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En mi casa hablamos quechua y en el colegio hablamos español.",
+            "voz": "killa",
+            "audio": "killa.1827f2762a"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Killa usa un idioma diferente en casa y en el cole.",
+              "correcta": true
+            },
+            {
+              "texto": "Killa solo habla inglés.",
+              "correcta": false
+            },
+            {
+              "texto": "Killa no va al colegio.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q06-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "killa",
+          "replica": {
+            "es": "¿Qué idiomas hablas tú?",
+            "fr": "Quelles langues parles-tu ?",
+            "voz": "killa",
+            "audio": "killa.ba10808f21"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Hablo francés y un poco de español.",
+                "voz": "viajero",
+                "audio": "viajero.cd52f0ceb1"
+              },
+              "fr": "Je parle français et un peu d’espagnol.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Genial! Con dos idiomas tienes dos mundos.",
+                "fr": "Génial ! Avec deux langues, tu as deux mondes.",
+                "voz": "killa",
+                "audio": "killa.02bcf9decd",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Hablo piedras y pirámides.",
+                "voz": "viajero",
+                "audio": "viajero.3148fe9a1c"
+              },
+              "fr": "Je parle pierres et pyramides.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Piedras? Mmm… las piedras no hablan.",
+                "fr": "Des pierres ? Mmm… les pierres ne parlent pas.",
+                "voz": "killa",
+                "audio": "killa.c9a8e138db",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Hablo hablo.",
+                "voz": "viajero",
+                "audio": "viajero.5feb6c5b5e"
+              },
+              "fr": "Je parle je parle.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No entiendo. ¿Qué idiomas?",
+                "fr": "Je ne comprends pas. Quelles langues ?",
+                "voz": "killa",
+                "audio": "killa.f96b89546e",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q06-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué idiomas hablas TÚ.",
+            "fr": "Écoute et dis quelles langues TU parles (francés, inglés, español, árabe, italiano…). Tu peux en citer jusqu’à trois mots.",
+            "voz": "narrador",
+            "audio": "narrador.83b239232d"
+          },
+          "objetivo": {
+            "es": "Hablo francés y español.",
+            "fr": "Je parle français et espagnol. (dis tes langues)",
+            "voz": "viajero",
+            "audio": "viajero.5c25bed266"
+          },
+          "aceptadas": [
+            "hablo francés y español"
+          ],
+          "patrones": [
+            "hablo {nombre}"
+          ],
+          "foco": "Le « ñ » de « español » : comme « gn » dans « montagne ». Le « ll » de « llama » : comme un « y » (YA-ma).",
+          "hechizo": {
+            "nombre": "Hechizo de las lenguas",
+            "efecto": "Muchas lenguas bailan alrededor de tu cabeza"
+          }
+        },
+        {
+          "id": "u10-q06-s13",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe sobre tus idiomas.",
+            "fr": "Écris sur tes langues.",
+            "voz": "narrador",
+            "audio": "narrador.a0d27b3340"
+          },
+          "plantilla": "Hablo ___. Quiero aprender ___. Mi palabra favorita en español es ___.",
+          "campos": [
+            {
+              "id": "hablo",
+              "pista": "Les langues que tu parles (francés, inglés, español…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "aprender",
+              "pista": "Une langue que tu veux apprendre (italiano, quechua, japonés…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "palabra",
+              "pista": "Ton mot préféré en espagnol (mariposa, chévere, amigo…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Hablo francés y un poco de español. Quiero aprender italiano. Mi palabra favorita en español es mariposa.",
+            "fr": "Je parle français et un peu d’espagnol. Je veux apprendre l’italien. Mon mot préféré en espagnol est mariposa.",
+            "voz": "viajero",
+            "audio": "viajero.f8721af04f"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u10-q07",
+      "tipo": "cultura",
+      "titulo": "Contar una leyenda",
+      "emoji": "🔥",
+      "intro": {
+        "es": "Mis tejidos cuentan historias: cada dibujo tiene un significado. ¿Y tú, qué historia cuentas?",
+        "fr": "Mes tissages racontent des histoires : chaque dessin a un sens. Et toi, quelle histoire racontes-tu ?",
+        "voz": "paulina",
+        "audio": "paulina.8a1fab50da"
+      },
+      "pista": "Machu Picchu et le quechua en images ; la légende du quetzal au Guatemala (Tecún Umán) ; puis TOI, tu inventes et tu racontes ta propre légende.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u10-q07-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u10-capsula-machu-picchu",
+          "escena": {
+            "id": "u10-capsula-machu-picchu",
+            "tipo": "capsula",
+            "titulo": "Machu Picchu, los incas y el quechua",
+            "duracion": 24,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : une carte du Pérou, les Andes en relief, deux points : Cusco et Machu Picchu ; un curseur d’altitude affiche « 2 430 m ».",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Machu Picchu es una ciudad inca en las montañas de los Andes, a unos dos mil cuatrocientos metros de altura.",
+                    "fr": "Machu Picchu est une ville inca dans les montagnes des Andes, à environ deux mille quatre cents mètres d’altitude.",
+                    "voz": "narrador",
+                    "audio": "narrador.76b2a3d163"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Les terrasses de Machu Picchu, des lamas qui broutent, des murs de pierre sans mortier ; un calendrier retourne les siècles jusqu’au XVe.",
+                "lineas": [
+                  {
+                    "es": "Los incas construyen Machu Picchu hace más de quinientos años. Hoy es patrimonio mundial.",
+                    "fr": "Les Incas construisent Machu Picchu il y a plus de cinq cents ans. Aujourd’hui, c’est un patrimoine mondial (UNESCO, 1983).",
+                    "voz": "narrador",
+                    "audio": "narrador.d3be7190f0"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Un soleil doré qui monte derrière une pierre sculptée (l’Intihuatana), puis une terre verte qui pousse : le soleil et la Terre-Mère.",
+                "lineas": [
+                  {
+                    "es": "Para los incas, Inti, el sol, es un dios. Y la Pachamama es la madre Tierra.",
+                    "fr": "Pour les Incas, Inti, le soleil, est un dieu. Et la Pachamama est la Terre-Mère.",
+                    "voz": "narrador",
+                    "audio": "narrador.0b676f0d32"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Des mots quechuas flottent sur la carte des Andes : « Inti » (soleil), « Killa » (lune), « Wasi » (maison), « Mayu » (rivière) ; une bouche qui parle.",
+                "lineas": [
+                  {
+                    "es": "Los incas hablan quechua. Hoy, millones de personas todavía lo hablan en los Andes.",
+                    "fr": "Les Incas parlent quechua. Aujourd’hui, des millions de personnes le parlent encore dans les Andes.",
+                    "voz": "narrador",
+                    "audio": "narrador.e18bcc3b76"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 5,
+                "vista": "Cinq mots qui voyagent d’un nuage « quechua » vers un nuage « español » puis un nuage « français » : papa, llama, puma, cóndor, quinua.",
+                "lineas": [
+                  {
+                    "es": "Muchas palabras españolas vienen del quechua: llama, cóndor, puma, papa, quinua.",
+                    "fr": "Beaucoup de mots espagnols viennent du quechua : lama, condor, puma, pomme de terre, quinoa.",
+                    "voz": "narrador",
+                    "audio": "narrador.6b47e1bfde"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u10-q07-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Machu Picchu es una ciudad inca.",
+            "fr": "Machu Picchu est une ville inca.",
+            "voz": "narrador",
+            "audio": "narrador.6b03dddb72"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los incas hablan quechua.",
+            "fr": "Les Incas parlent quechua.",
+            "voz": "narrador",
+            "audio": "narrador.934204e82f"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "La papa es de origen quechua.",
+            "fr": "Le mot « papa » vient du quechua. (« papa » = pomme de terre, et c’est un aliment originaire des Andes.)",
+            "voz": "narrador",
+            "audio": "narrador.084b961350"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u10-q07-s05",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae, un quetzal vuela hasta él, y desde ese día su pecho es rojo. Por eso, el quetzal es un símbolo de libertad.",
+            "fr": "Au Guatemala, le quetzal est l’oiseau national et aussi le nom de la monnaie. Il y a une légende : Tecún Umán, un héros maya, est très courageux et défend son peuple. Quand il tombe, un quetzal vole jusqu’à lui, et depuis ce jour sa poitrine est rouge. C’est pourquoi le quetzal est un symbole de liberté. (Tecún Umán est un chef k’iche’ du XVIe siècle ; l’histoire de l’oiseau est une légende.)",
+            "voz": "paulina",
+            "audio": "paulina.630e0c076c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué es el quetzal en Guatemala?",
+                "fr": "Qu’est-ce que le quetzal au Guatemala ?",
+                "voz": "narrador",
+                "audio": "narrador.67b7934742"
+              },
+              "opciones": [
+                {
+                  "texto": "El pájaro nacional y la moneda.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Una montaña.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un plato típico.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo es Tecún Umán?",
+                "fr": "Comment est Tecún Umán ?",
+                "voz": "narrador",
+                "audio": "narrador.b3e1dd14d5"
+              },
+              "opciones": [
+                {
+                  "texto": "Un héroe muy valiente.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un rey muy rico.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un monstruo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿De qué color es el pecho del quetzal en la leyenda?",
+                "fr": "De quelle couleur est la poitrine du quetzal dans la légende ?",
+                "voz": "narrador",
+                "audio": "narrador.808cae35ec"
+              },
+              "opciones": [
+                {
+                  "texto": "Rojo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Azul.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Negro.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q07-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Cuando Tecún Umán cae, un quetzal vuela hasta él.",
+            "voz": "paulina",
+            "audio": "paulina.f493a4fbee"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Un pájaro acompaña al héroe en su final.",
+              "correcta": true
+            },
+            {
+              "texto": "El héroe llega a un lago.",
+              "correcta": false
+            },
+            {
+              "texto": "Un puma ayuda a un niño.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q07-s07",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "paulina",
+          "replica": {
+            "es": "Cada dibujo de mis tejidos cuenta algo: la montaña, el sol, el cóndor… ¿Qué dibujas tú?",
+            "fr": "Chaque dessin de mes tissages raconte quelque chose : la montagne, le soleil, le condor… Et toi, que dessines-tu ?",
+            "voz": "paulina",
+            "audio": "paulina.909528461a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Dibujo mi casa y mi familia.",
+                "voz": "viajero",
+                "audio": "viajero.f58d80e05b"
+              },
+              "fr": "Je dessine ma maison et ma famille.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué hermoso! Una familia también es una historia.",
+                "fr": "Que c’est beau ! Une famille aussi est une histoire. (« hermoso » = beau, très courant en Amérique latine)",
+                "voz": "paulina",
+                "audio": "paulina.4152c18bf1",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Dibujo una pizza voladora.",
+                "voz": "viajero",
+                "audio": "viajero.1cbf162b4c"
+              },
+              "fr": "Je dessine une pizza volante.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué divertido! En un tejido cabe todo.",
+                "fr": "Comme c’est amusant ! Dans un tissage, tout a sa place.",
+                "voz": "paulina",
+                "audio": "paulina.a7567ce564",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Dibujo hablo.",
+                "voz": "viajero",
+                "audio": "viajero.39f7815068"
+              },
+              "fr": "Je dessine je parle.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no entiendo. ¿Qué dibujas?",
+                "fr": "Mmm… je ne comprends pas. Que dessines-tu ?",
+                "voz": "paulina",
+                "audio": "paulina.6063aca7e1",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q07-s08",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mis",
+            "tejidos",
+            "cuentan",
+            "historias",
+            "de",
+            "los",
+            "Andes."
+          ],
+          "habla": {
+            "es": "Mis tejidos cuentan historias de los Andes.",
+            "voz": "paulina",
+            "audio": "paulina.f588546669"
+          },
+          "fr": "Mes tissages racontent des histoires des Andes."
+        },
+        {
+          "id": "u10-q07-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Para los incas, el ___ es un dios.",
+          "respuesta": "sol",
+          "opciones": [
+            "sol",
+            "tejido",
+            "lago"
+          ],
+          "habla": {
+            "es": "Para los incas, el sol es un dios.",
+            "voz": "killa",
+            "audio": "killa.b377ebc849"
+          },
+          "fr": "Pour les Incas, le soleil est un dieu."
+        },
+        {
+          "id": "u10-q07-s10",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe tu leyenda.",
+            "fr": "Écris ta légende.",
+            "voz": "narrador",
+            "audio": "narrador.61537c871c"
+          },
+          "plantilla": "Había una vez un héroe que se llama ___. Es muy ___. Un día, ___. Al final, ___.",
+          "campos": [
+            {
+              "id": "heroe",
+              "pista": "Le nom de ton héros ou de ton héroïne (Quetzal, Killa, Marina, ton prénom…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "como",
+              "pista": "Comment est-il ? (valiente, inteligente, fuerte, simpático… ; au féminin : valiente, inteligente, fuerte, simpática)",
+              "tipo": "texto"
+            },
+            {
+              "id": "accion",
+              "pista": "Ce qui se passe un jour : une phrase au présent (encuentra un tesoro, busca un camino, vuela hasta la cima…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "final",
+              "pista": "La fin : une phrase au présent (salva a todos, canta una canción, vuelve a casa…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Había una vez un héroe que se llama Quetzal. Es muy valiente. Un día, encuentra un tesoro. Al final, salva a todos.",
+            "fr": "Il était une fois un héros qui s’appelle Quetzal. Il est très courageux. Un jour, il trouve un trésor. À la fin, il sauve tout le monde.",
+            "voz": "viajero",
+            "audio": "viajero.e55c057494"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u10-q07-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y cuenta tu cuento: ¿cómo es TU héroe?",
+            "fr": "Écoute puis commence TON conte à voix haute : change « valiente » par un autre adjectif (inteligente, fuerte, simpático…).",
+            "voz": "narrador",
+            "audio": "narrador.0a279ad548"
+          },
+          "objetivo": {
+            "es": "Había una vez un héroe muy valiente.",
+            "fr": "Il était une fois un héros très courageux. (change l’adjectif)",
+            "voz": "viajero",
+            "audio": "viajero.5317b58cd2"
+          },
+          "aceptadas": [
+            "había una vez un héroe muy valiente"
+          ],
+          "patrones": [
+            "había una vez un héroe muy {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del cuento",
+            "efecto": "Tu héroe aparece en la montaña, lleno de luz"
+          }
+        },
+        {
+          "id": "u10-q07-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y termina TU cuento.",
+            "fr": "Écoute et termine TON conte : remplace « salva » par une autre action (canta, vuela, ayuda…). Pas de pression : l’important, c’est de parler !",
+            "voz": "narrador",
+            "audio": "narrador.9b5dd8528e"
+          },
+          "objetivo": {
+            "es": "Al final, el héroe salva a todos.",
+            "fr": "À la fin, le héros sauve tout le monde. (change l’action)",
+            "voz": "viajero",
+            "audio": "viajero.5355f95625"
+          },
+          "aceptadas": [
+            "al final el héroe salva a todos"
+          ],
+          "patrones": [
+            "al final el héroe {nombre} a todos"
+          ]
+        },
+        {
+          "id": "u10-q07-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Y colorín colorado, este cuento se ha acabado.",
+            "voz": "huaman",
+            "audio": "huaman.1e261fb7c1"
+          },
+          "respuesta": "Y colorín colorado, este cuento se ha acabado.",
+          "aceptadas": [
+            "y colorín colorado este cuento se ha acabado"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u10-q08",
+      "tipo": "desafio",
+      "titulo": "La Sombra del Silencio",
+      "emoji": "👤",
+      "intro": {
+        "es": "Sin cuentos, nadie recuerda. Sin palabras, nadie me molesta. Este es mi último silencio.",
+        "fr": "Sans contes, personne ne se souvient. Sans mots, personne ne me dérange. Voici mon dernier silence.",
+        "voz": "sombra",
+        "audio": "sombra.f1ce3424d6"
+      },
+      "pista": "Boss final de la légende : révision mixte des unités 1 à 10 (présentation, description, maison, présent, goûts, lieux, légendes) pour affronter la Sombra du Silence… et l’écouter.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 12
+      },
+      "steps": [
+        {
+          "id": "u10-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Sin nombre no hay cuento. ¿Cómo te llamas y de dónde eres?",
+            "fr": "Sans nom, pas de conte. Comment tu t’appelles et d’où viens-tu ?",
+            "voz": "sombra",
+            "audio": "sombra.babce6568a"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex y soy de París.",
+                "voz": "viajero",
+                "audio": "viajero.f65b0a200b"
+              },
+              "fr": "Je m’appelle Álex et je suis de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Un nombre… Hace mucho que nadie me dice su nombre.",
+                "fr": "Grr ! Un nom… Ça fait longtemps que personne ne me dit son nom.",
+                "voz": "sombra",
+                "audio": "sombra.e6de11c37d",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años y tres amigos.",
+                "voz": "viajero",
+                "audio": "viajero.45cef46488"
+              },
+              "fr": "J’ai douze ans et trois amis.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No es lo que pregunto. Responde bien.",
+                "fr": "Ce n’est pas ce que je demande. Réponds correctement.",
+                "voz": "sombra",
+                "audio": "sombra.de74fdaf51",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós, hasta luego.",
+                "voz": "viajero",
+                "audio": "viajero.41a052948e"
+              },
+              "fr": "Au revoir, à tout à l’heure.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te vas sin responder.",
+                "fr": "Tu ne pars pas sans répondre.",
+                "voz": "sombra",
+                "audio": "sombra.0c306a1a68",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Cómo eres? ¿Qué llevas hoy?",
+            "fr": "Comment es-tu ? Que portes-tu aujourd’hui ?",
+            "voz": "sombra",
+            "audio": "sombra.9fe37ad3cf"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy simpático y llevo una camiseta azul.",
+                "voz": "viajero",
+                "audio": "viajero.b881822d56"
+              },
+              "fr": "Je suis sympathique et je porte un tee-shirt bleu.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Una cara más que vuelve… Es raro. No es desagradable.",
+                "fr": "Aaah ! Encore un visage qui revient… C’est étrange. Ce n’est pas désagréable.",
+                "voz": "sombra",
+                "audio": "sombra.f06f106f02",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo simpático y soy una camiseta.",
+                "voz": "viajero",
+                "audio": "viajero.bc2fced940"
+              },
+              "fr": "J’ai sympathique et je suis un tee-shirt.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Llevo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.22dceb50e9"
+              },
+              "fr": "Je porte douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¡No! La edad se dice con «tener». ¡Otra vez!",
+                "fr": "Non ! L’âge se dit avec « tener ». Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.082d232aa0",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Son las tres y media.",
+            "voz": "sombra",
+            "audio": "sombra.600582e3e3"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "3:30",
+              "correcta": true
+            },
+            {
+              "texto": "3:15",
+              "correcta": false
+            },
+            {
+              "texto": "2:30",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s04",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "A mí me ___ los cuentos de héroes.",
+          "respuesta": "gustan",
+          "opciones": [
+            "gusta",
+            "gustan",
+            "gustas"
+          ],
+          "habla": {
+            "es": "A mí me gustan los cuentos de héroes.",
+            "voz": "marina",
+            "audio": "marina.1251425d8d"
+          },
+          "fr": "J’aime les contes de héros. (« los cuentos » est pluriel → gustan)"
+        },
+        {
+          "id": "u10-q08-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Quiero volar, ___ no tengo plumas.",
+          "respuesta": "pero",
+          "opciones": [
+            "pero",
+            "además",
+            "porque"
+          ],
+          "habla": {
+            "es": "Quiero volar, pero no tengo plumas.",
+            "voz": "quetzal",
+            "audio": "quetzal.b88692134e"
+          },
+          "fr": "Je veux voler, mais je n’ai pas de plumes."
+        },
+        {
+          "id": "u10-q08-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En Perú se habla español y quechua.",
+            "voz": "sombra",
+            "audio": "sombra.aa72402408"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "En Perú hay dos lenguas.",
+              "correcta": true
+            },
+            {
+              "texto": "En Perú solo se habla inglés.",
+              "correcta": false
+            },
+            {
+              "texto": "En Perú no hay idiomas.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s07",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "condor"
+            },
+            {
+              "vocab": "puma"
+            },
+            {
+              "vocab": "llama"
+            },
+            {
+              "vocab": "estrella"
+            },
+            {
+              "vocab": "nube"
+            },
+            {
+              "vocab": "lago"
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Machu Picchu ___ en las montañas de Perú.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "hay"
+          ],
+          "habla": {
+            "es": "Machu Picchu está en las montañas de Perú.",
+            "voz": "killa",
+            "audio": "killa.eb6ceefa84"
+          },
+          "fr": "Machu Picchu est dans les montagnes du Pérou."
+        },
+        {
+          "id": "u10-q08-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Bogotá es ___ grande que Salamanca.",
+          "respuesta": "más",
+          "opciones": [
+            "más",
+            "menos",
+            "mejor"
+          ],
+          "habla": {
+            "es": "Bogotá es más grande que Salamanca.",
+            "voz": "camila",
+            "audio": "camila.9bbc55a373"
+          },
+          "fr": "Bogotá est plus grande que Salamanque."
+        },
+        {
+          "id": "u10-q08-s10",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ir",
+          "sujeto": "nosotros",
+          "radical": "",
+          "terminacion": "vamos",
+          "terminaciones": [
+            "vamos",
+            "vais",
+            "van"
+          ],
+          "forma": "vamos",
+          "habla": {
+            "es": "nosotros vamos",
+            "voz": "marina",
+            "audio": "marina.25b2bd5f70"
+          },
+          "fr": "Nous, nous allons…"
+        },
+        {
+          "id": "u10-q08-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Primero",
+            "busco",
+            "el",
+            "camino",
+            "y",
+            "luego",
+            "subo",
+            "a",
+            "la",
+            "cima."
+          ],
+          "habla": {
+            "es": "Primero busco el camino y luego subo a la cima.",
+            "voz": "killa",
+            "audio": "killa.210f586d4c"
+          },
+          "fr": "D’abord je cherche le chemin et ensuite je monte au sommet."
+        },
+        {
+          "id": "u10-q08-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Por qué quieres hablar con los demás?",
+            "fr": "Pourquoi veux-tu parler avec les autres ?",
+            "voz": "sombra",
+            "audio": "sombra.8b83bc620b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Porque con las palabras tengo amigos.",
+                "voz": "viajero",
+                "audio": "viajero.70fa0e75ff"
+              },
+              "fr": "Parce qu’avec les mots, j’ai des amis.",
+              "correcta": true,
+              "reaccion": {
+                "es": "Amigos… Yo no tengo ninguno. Estoy sola.",
+                "fr": "Des amis… Moi, je n’en ai aucun. Je suis seule. (« sola » : elle est une femme, féminin de « solo »)",
+                "voz": "sombra",
+                "audio": "sombra.b902c36efc",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Porque soy una montaña.",
+                "voz": "viajero",
+                "audio": "viajero.90be8c3461"
+              },
+              "fr": "Parce que je suis une montagne.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una montaña? Las montañas también se quedan solas.",
+                "fr": "Une montagne ? Les montagnes aussi restent seules.",
+                "voz": "sombra",
+                "audio": "sombra.be1043df6d",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Porque no me gusta nada.",
+                "voz": "viajero",
+                "audio": "viajero.544bb70a6e"
+              },
+              "fr": "Parce que je n’aime rien.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Entonces… ¿para qué hablas?",
+                "fr": "Alors… pourquoi parles-tu ?",
+                "voz": "sombra",
+                "audio": "sombra.5d5cd70131",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s13",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Soy la Sombra del Silencio. Vivo en la montaña desde hace mucho tiempo. Nadie habla conmigo porque todos tienen miedo. Estoy sola y triste. Por eso quiero un mundo sin palabras: así nadie se ríe de mí.",
+            "fr": "Je suis l’Ombre du Silence. Je vis dans la montagne depuis très longtemps. Personne ne me parle parce que tout le monde a peur. Je suis seule et triste. C’est pourquoi je veux un monde sans mots : comme ça, personne ne se moque de moi.",
+            "voz": "sombra",
+            "audio": "sombra.75532ac31d"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo está la Sombra?",
+                "fr": "Comment va l’Ombre ?",
+                "voz": "narrador",
+                "audio": "narrador.41585e3c3b"
+              },
+              "opciones": [
+                {
+                  "texto": "Sola y triste.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Contenta y cansada.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Enfadada y valiente.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Por qué nadie habla con ella?",
+                "fr": "Pourquoi personne ne lui parle-t-elle ?",
+                "voz": "narrador",
+                "audio": "narrador.ae998e07a3"
+              },
+              "opciones": [
+                {
+                  "texto": "Porque todos tienen miedo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Porque vive en el mar.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Porque es muy pequeña.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué quiere la Sombra?",
+                "fr": "Que veut l’Ombre ?",
+                "voz": "narrador",
+                "audio": "narrador.20ef19a18a"
+              },
+              "opciones": [
+                {
+                  "texto": "Un mundo sin palabras.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un tesoro de oro.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una casa nueva.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u10-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex y te escucho.",
+            "fr": "Salut, je m’appelle Álex et je t’écoute. (dis ton prénom ; c’est ton dernier sort)",
+            "voz": "viajero",
+            "audio": "viajero.7186a6d2f5"
+          },
+          "aceptadas": [
+            "hola me llamo álex y te escucho"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} y te escucho"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "Tu voz abre la última puerta del silencio"
+          }
+        },
+        {
+          "id": "u10-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u10-finale",
+          "escena": {
+            "id": "u10-finale",
+            "tipo": "pluma",
+            "titulo": "Décima pluma · El final de la leyenda",
+            "duracion": 13,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Au sommet de Machu Picchu, à l’aube, une mer de nuages. La Sombra, toute petite, face à Álex. Elle n’a plus de voix menaçante : seulement une voix très fragile.",
+                "camara": "plan serré sur la Sombra, puis plan large",
+                "personajes": [
+                  "sombra",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Estoy sola. Nadie me escucha.",
+                    "fr": "Je suis seule. Personne ne m’écoute.",
+                    "voz": "sombra",
+                    "audio": "sombra.9585a5d469"
+                  },
+                  {
+                    "es": "Nosotros te escuchamos.",
+                    "fr": "Nous, nous t’écoutons.",
+                    "voz": "viajero",
+                    "audio": "viajero.40edc5a798"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "La Sombra se dissout en lumière dorée. Sa voix devient un écho qui traverse la vallée : le premier mot du voyage, « hola », renvoyé par les montagnes.",
+                "personajes": [
+                  "sombra"
+                ],
+                "lineas": [
+                  {
+                    "es": "Gracias… hola… hola…",
+                    "fr": "Merci… salut… salut… (l’écho répète « hola », le premier mot que tu as appris)",
+                    "voz": "sombra",
+                    "audio": "sombra.62ab88932a"
+                  }
+                ],
+                "musica": "thème du début du voyage, repris à la flûte andine"
+              },
+              {
+                "n": 3,
+                "duracion": 4,
+                "vista": "La dixième plume verte tombe dans la main d’Álex, qui la pose sur le Quetzal. Il déploie une longue queue éclatante : il est entier. Il s’envole au-dessus des nuages, la vallée entière ouverte sous lui.",
+                "camara": "plan montant avec le Quetzal, vol libre",
+                "personajes": [
+                  "quetzal",
+                  "viajero",
+                  "marina"
+                ],
+                "lineas": [
+                  {
+                    "es": "Diez plumas. Ya puedo volar, cantar y hablar. Gracias, amigos.",
+                    "fr": "Dix plumes. Maintenant je peux voler, chanter et parler. Merci, mes amis. (Le Quetzal parle enfin en phrases complètes.)",
+                    "voz": "quetzal",
+                    "audio": "quetzal.a2b08a527a"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 3,
+                "vista": "Sur le sommet, Don Ignacio apparaît en hologramme, ému, tandis que Marina et Álex regardent le Quetzal disparaître dans la lumière. Carton final : « La leyenda del Quetzal · Fin ».",
+                "personajes": [
+                  "ignacio",
+                  "marina",
+                  "viajero"
+                ],
+                "rotulo": "La leyenda del Quetzal · Fin",
+                "lineas": [
+                  {
+                    "es": "¡Bravo, viajeros! Y ahora… ¿dónde están mis gafas?",
+                    "fr": "Bravo, voyageurs ! Et maintenant… où sont mes lunettes ?",
+                    "voz": "ignacio",
+                    "audio": "ignacio.c8c6531b45"
+                  },
+                  {
+                    "es": "En tu sombrero, Don Ignacio.",
+                    "fr": "Sur ton chapeau, Don Ignacio.",
+                    "voz": "marina",
+                    "audio": "marina.51d44cc4b6"
+                  }
+                ],
+                "musica": "thème final, tous les instruments"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 10,
+    "nombre": "Pluma del Eco",
+    "descripcion": {
+      "es": "Diez plumas. Ya tengo mi voz, mis alas… y muchos amigos.",
+      "fr": "Dix plumes. J’ai ma voix, mes ailes… et beaucoup d’amis.",
+      "voz": "quetzal",
+      "audio": "quetzal.5363565f70"
+    }
+  }
+}

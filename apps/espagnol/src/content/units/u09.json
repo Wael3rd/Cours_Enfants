@@ -1,0 +1,4870 @@
+{
+  "id": "u09",
+  "numero": 9,
+  "titulo": "¡Viva México!",
+  "lugar": "Yucatán",
+  "emoji": "🌴",
+  "ejes": [
+    6
+  ],
+  "periodo": "mars-avr",
+  "objetivos": [
+    {
+      "es": "Hablar de la naturaleza de México: selva, cenotes, animales.",
+      "fr": "Parler de la nature du Mexique : forêt tropicale, cénotes, animaux."
+    },
+    {
+      "es": "Conocer el patrimonio maya y azteca: Chichén Itzá, Tenochtitlan, el calendario.",
+      "fr": "Connaître le patrimoine maya et aztèque : Chichén Itzá, Tenochtitlan, le calendrier."
+    },
+    {
+      "es": "Conocer la gastronomía mexicana: maíz, tortilla, cacao, chile.",
+      "fr": "Connaître la gastronomie mexicaine : maïs, tortilla, cacao, piment."
+    },
+    {
+      "es": "Repasar el presente de los verbos regulares y de hago, veo, conozco.",
+      "fr": "Réviser le présent des verbes réguliers et de hago, veo, conozco."
+    },
+    {
+      "es": "Descubrir el pasado compuesto: he visitado, has probado, ha nadado.",
+      "fr": "Découvrir le passé composé : he visitado, has probado, ha nadado."
+    },
+    {
+      "es": "Describir un lugar con «es», «está» y «hay».",
+      "fr": "Décrire un lieu avec « es », « está » et « hay »."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "selva",
+      "es": "selva",
+      "fr": "forêt tropicale, jungle",
+      "genero": "f",
+      "plural": "selvas",
+      "emoji": "🌴",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "En Yucatán hay una selva muy grande.",
+        "fr": "Au Yucatán, il y a une très grande forêt tropicale.",
+        "voz": "narrador",
+        "audio": "narrador.79280361d4"
+      },
+      "audio": "narrador.540e358b3a"
+    },
+    {
+      "id": "cenote",
+      "es": "cenote",
+      "fr": "cénote : puits naturel rempli d’eau, typique du Yucatán",
+      "genero": "m",
+      "plural": "cenotes",
+      "ilustracion": "Un cénote : un grand trou rond dans la roche, avec de l’eau turquoise et un rayon de lumière qui tombe du plafond",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "Itzel nada en el cenote.",
+        "fr": "Itzel nage dans le cénote.",
+        "voz": "itzel",
+        "audio": "itzel.4fda16fb15"
+      },
+      "audio": "itzel.8403bd6821",
+      "voz": "itzel"
+    },
+    {
+      "id": "playa",
+      "es": "playa",
+      "fr": "plage",
+      "genero": "f",
+      "plural": "playas",
+      "emoji": "🏖️",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "La playa tiene el mar azul.",
+        "fr": "La plage a la mer bleue.",
+        "voz": "narrador",
+        "audio": "narrador.e42629a4c8"
+      },
+      "audio": "narrador.abd5cf4ffb"
+    },
+    {
+      "id": "mar",
+      "es": "mar",
+      "fr": "mer (« el mar » ; on dit parfois « la mar » en poésie)",
+      "genero": "mf",
+      "emoji": "🌊",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "El mar es cálido en Yucatán.",
+        "fr": "La mer est chaude au Yucatán.",
+        "voz": "narrador",
+        "audio": "narrador.ccaa6b1e1b"
+      },
+      "audio": "narrador.1418c40237"
+    },
+    {
+      "id": "rio",
+      "es": "río",
+      "fr": "fleuve, rivière",
+      "genero": "m",
+      "plural": "ríos",
+      "ilustracion": "Une rivière qui serpente entre des arbres verts",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "En Yucatán hay ríos bajo la tierra.",
+        "fr": "Au Yucatán, il y a des rivières sous la terre.",
+        "voz": "narrador",
+        "audio": "narrador.5eb8ee1de0"
+      },
+      "audio": "narrador.348f83686b"
+    },
+    {
+      "id": "piedra",
+      "es": "piedra",
+      "fr": "pierre",
+      "genero": "f",
+      "plural": "piedras",
+      "emoji": "🪨",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "La pirámide es de piedra.",
+        "fr": "La pyramide est en pierre.",
+        "voz": "narrador",
+        "audio": "narrador.f7228a25d7"
+      },
+      "audio": "narrador.d9ff65bc92"
+    },
+    {
+      "id": "planta",
+      "es": "planta",
+      "fr": "plante",
+      "genero": "f",
+      "plural": "plantas",
+      "emoji": "🌿",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "En la selva hay muchas plantas.",
+        "fr": "Dans la forêt tropicale, il y a beaucoup de plantes.",
+        "voz": "narrador",
+        "audio": "narrador.8d7d994cd6"
+      },
+      "audio": "narrador.7d1a6177ae"
+    },
+    {
+      "id": "animal",
+      "es": "animal",
+      "fr": "animal",
+      "genero": "m",
+      "plural": "animales",
+      "emoji": "🐾",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "El jaguar es un animal grande.",
+        "fr": "Le jaguar est un grand animal.",
+        "voz": "narrador",
+        "audio": "narrador.1d9bed8106"
+      },
+      "audio": "narrador.3199ea0562"
+    },
+    {
+      "id": "jaguar",
+      "es": "jaguar",
+      "fr": "jaguar",
+      "genero": "m",
+      "plural": "jaguares",
+      "ilustracion": "Un jaguar au pelage orange tacheté de noir, assis sur une branche dans la forêt",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "El jaguar vive en la selva.",
+        "fr": "Le jaguar vit dans la forêt tropicale.",
+        "voz": "narrador",
+        "audio": "narrador.e8b486ff43"
+      },
+      "audio": "narrador.f001f96576"
+    },
+    {
+      "id": "flamenco",
+      "es": "flamenco",
+      "fr": "flamant rose",
+      "genero": "m",
+      "plural": "flamencos",
+      "emoji": "🦩",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "Los flamencos son rosas.",
+        "fr": "Les flamants sont roses.",
+        "voz": "narrador",
+        "audio": "narrador.7d22f4ede6"
+      },
+      "audio": "narrador.80ed2e4422"
+    },
+    {
+      "id": "tortuga",
+      "es": "tortuga",
+      "fr": "tortue",
+      "genero": "f",
+      "plural": "tortugas",
+      "emoji": "🐢",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "La tortuga nada en el mar.",
+        "fr": "La tortue nage dans la mer.",
+        "voz": "narrador",
+        "audio": "narrador.87d331c4dd"
+      },
+      "audio": "narrador.a9ca5ac710"
+    },
+    {
+      "id": "serpiente",
+      "es": "serpiente",
+      "fr": "serpent",
+      "genero": "f",
+      "plural": "serpientes",
+      "emoji": "🐍",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "Kukulcán es una serpiente con plumas.",
+        "fr": "Kukulcán est un serpent à plumes.",
+        "voz": "narrador",
+        "audio": "narrador.b1433f015d"
+      },
+      "audio": "narrador.3d355f393c"
+    },
+    {
+      "id": "pajaro",
+      "es": "pájaro",
+      "fr": "oiseau",
+      "genero": "m",
+      "plural": "pájaros",
+      "emoji": "🐦",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "El Quetzal es un pájaro sagrado.",
+        "fr": "Le Quetzal est un oiseau sacré.",
+        "voz": "narrador",
+        "audio": "narrador.81a385c5eb"
+      },
+      "audio": "narrador.dab7ac367f"
+    },
+    {
+      "id": "mono",
+      "es": "mono",
+      "fr": "singe",
+      "genero": "m",
+      "plural": "monos",
+      "emoji": "🐒",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "Hay monos en los árboles.",
+        "fr": "Il y a des singes dans les arbres.",
+        "voz": "narrador",
+        "audio": "narrador.b901ecd7f2"
+      },
+      "audio": "narrador.68caafb2fa"
+    },
+    {
+      "id": "sagrado",
+      "es": "sagrado",
+      "fr": "sacré",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "sagrada",
+      "emoji": "✨",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "Para los mayas, el cenote es un lugar sagrado.",
+        "fr": "Pour les Mayas, le cénote est un lieu sacré.",
+        "voz": "narrador",
+        "audio": "narrador.9ff57e4db3"
+      },
+      "audio": "narrador.d092214e78"
+    },
+    {
+      "id": "lluvia",
+      "es": "lluvia",
+      "fr": "pluie",
+      "genero": "f",
+      "emoji": "🌧️",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "En la selva hay mucha lluvia.",
+        "fr": "Dans la forêt tropicale, il y a beaucoup de pluie.",
+        "voz": "narrador",
+        "audio": "narrador.11c61fd8d4"
+      },
+      "audio": "narrador.b16f5946e4"
+    },
+    {
+      "id": "calor",
+      "es": "calor",
+      "fr": "chaleur (hace calor = il fait chaud)",
+      "genero": "m",
+      "emoji": "🥵",
+      "tags": [
+        "naturaleza"
+      ],
+      "ejemplo": {
+        "es": "En Yucatán hace mucho calor.",
+        "fr": "Au Yucatán, il fait très chaud.",
+        "voz": "narrador",
+        "audio": "narrador.0d1b30be6b"
+      },
+      "audio": "narrador.5821615670"
+    },
+    {
+      "id": "maya",
+      "es": "maya",
+      "fr": "maya (peuple et adjectif ; « los mayas »)",
+      "genero": "mf",
+      "plural": "mayas",
+      "clase": "adj",
+      "ilustracion": "Un portrait en pierre sculptée d’un dignitaire maya avec une grande coiffe de plumes",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Los mayas construyen pirámides.",
+        "fr": "Les Mayas construisent des pyramides.",
+        "voz": "chan",
+        "audio": "chan.9a315b51da"
+      },
+      "audio": "chan.13e51919bd",
+      "voz": "chan"
+    },
+    {
+      "id": "azteca",
+      "es": "azteca",
+      "fr": "aztèque (peuple et adjectif ; ils se nomment eux-mêmes « mexicas »)",
+      "genero": "mf",
+      "plural": "aztecas",
+      "clase": "adj",
+      "ilustracion": "Un guerrier aztèque avec un grand casque de plumes vertes et un bouclier rond",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Los aztecas viven en el centro de México.",
+        "fr": "Les Aztèques vivent au centre du Mexique.",
+        "voz": "narrador",
+        "audio": "narrador.f19a9ccccb"
+      },
+      "audio": "narrador.5bfde0fa12"
+    },
+    {
+      "id": "piramide",
+      "es": "pirámide",
+      "fr": "pyramide",
+      "genero": "f",
+      "plural": "pirámides",
+      "ilustracion": "Une pyramide maya à degrés avec un temple au sommet, sous un ciel bleu",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "La pirámide de Chichén Itzá es muy famosa.",
+        "fr": "La pyramide de Chichén Itzá est très célèbre.",
+        "voz": "narrador",
+        "audio": "narrador.a47d0ab7e1"
+      },
+      "audio": "narrador.0b964cc86c"
+    },
+    {
+      "id": "templo",
+      "es": "templo",
+      "fr": "temple",
+      "genero": "m",
+      "plural": "templos",
+      "ilustracion": "Un petit temple en pierre avec des colonnes sculptées, au milieu de la jungle",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Hay un templo en lo alto de la pirámide.",
+        "fr": "Il y a un temple en haut de la pyramide.",
+        "voz": "narrador",
+        "audio": "narrador.1aa0cf7892"
+      },
+      "audio": "narrador.a466fa200d"
+    },
+    {
+      "id": "ruinas",
+      "es": "ruinas",
+      "fr": "ruines",
+      "genero": "f",
+      "soloPlural": true,
+      "emoji": "🏚️",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Visitamos las ruinas de una ciudad maya.",
+        "fr": "Nous visitons les ruines d’une ville maya.",
+        "voz": "narrador",
+        "audio": "narrador.4117a8ff86"
+      },
+      "audio": "narrador.b50bc2318e"
+    },
+    {
+      "id": "dios",
+      "es": "dios",
+      "fr": "dieu (pluriel : dioses)",
+      "genero": "m",
+      "plural": "dioses",
+      "ilustracion": "Un masque de dieu maya en pierre sculptée, avec un grand nez et des yeux ronds",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Chaac es el dios maya de la lluvia.",
+        "fr": "Chaac est le dieu maya de la pluie.",
+        "voz": "chan",
+        "audio": "chan.1ed68aa4ea"
+      },
+      "audio": "chan.46ffd5161b",
+      "voz": "chan"
+    },
+    {
+      "id": "calendario",
+      "es": "calendario",
+      "fr": "calendrier",
+      "genero": "m",
+      "plural": "calendarios",
+      "emoji": "📅",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Los mayas tienen un calendario muy preciso.",
+        "fr": "Les Mayas ont un calendrier très précis.",
+        "voz": "narrador",
+        "audio": "narrador.bc304b902a"
+      },
+      "audio": "narrador.e3dd4cdb7c"
+    },
+    {
+      "id": "imperio",
+      "es": "imperio",
+      "fr": "empire",
+      "genero": "m",
+      "plural": "imperios",
+      "ilustracion": "Une carte ancienne avec une grande zone dorée qui s’étend, entourée de petites villes",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Los aztecas tienen un gran imperio.",
+        "fr": "Les Aztèques ont un grand empire.",
+        "voz": "narrador",
+        "audio": "narrador.7595b9fdaf"
+      },
+      "audio": "narrador.e351a77535"
+    },
+    {
+      "id": "pueblo",
+      "es": "pueblo",
+      "fr": "village ; aussi « peuple » (los pueblos indígenas)",
+      "genero": "m",
+      "plural": "pueblos",
+      "emoji": "🏘️",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Itzel vive en un pueblo cerca de Chichén Itzá.",
+        "fr": "Itzel vit dans un village près de Chichén Itzá.",
+        "voz": "narrador",
+        "audio": "narrador.b2a0a8de8c"
+      },
+      "audio": "narrador.40e61a659e"
+    },
+    {
+      "id": "turista",
+      "es": "turista",
+      "fr": "touriste",
+      "genero": "mf",
+      "plural": "turistas",
+      "emoji": "📸",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Hay muchos turistas en Chichén Itzá.",
+        "fr": "Il y a beaucoup de touristes à Chichén Itzá.",
+        "voz": "narrador",
+        "audio": "narrador.a976477ba7"
+      },
+      "audio": "narrador.4ec76f2e1d"
+    },
+    {
+      "id": "escalon",
+      "es": "escalón",
+      "fr": "marche (d’un escalier)",
+      "genero": "m",
+      "plural": "escalones",
+      "ilustracion": "De grandes marches de pierre qui montent le long d’une pyramide",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "La pirámide tiene muchos escalones.",
+        "fr": "La pyramide a beaucoup de marches.",
+        "voz": "narrador",
+        "audio": "narrador.1821cc2c45"
+      },
+      "audio": "narrador.d0a09089cd"
+    },
+    {
+      "id": "guia",
+      "es": "guía",
+      "fr": "guide (personne) ; une « guía » = aussi un guide de voyage",
+      "genero": "mf",
+      "plural": "guías",
+      "ilustracion": "Un guide avec un chapeau de paille qui montre une pyramide à un petit groupe",
+      "tags": [
+        "patrimonio"
+      ],
+      "ejemplo": {
+        "es": "Don Chan es guía de Chichén Itzá.",
+        "fr": "Don Chan est guide à Chichén Itzá.",
+        "voz": "chan",
+        "audio": "chan.7c8b4c07c9"
+      },
+      "audio": "chan.37e717342a",
+      "voz": "chan"
+    },
+    {
+      "id": "maiz",
+      "es": "maíz",
+      "fr": "maïs",
+      "genero": "m",
+      "emoji": "🌽",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "El maíz es la base de la cocina mexicana.",
+        "fr": "Le maïs est la base de la cuisine mexicaine.",
+        "voz": "narrador",
+        "audio": "narrador.df3b005dea"
+      },
+      "audio": "narrador.b0fdf052c4"
+    },
+    {
+      "id": "tortilla_mx",
+      "es": "tortilla de maíz",
+      "fr": "tortilla mexicaine : galette de maïs (en Espagne, « tortilla » seule = omelette !)",
+      "genero": "f",
+      "plural": "tortillas de maíz",
+      "emoji": "🫓",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Chabela hace tortillas de maíz todos los días.",
+        "fr": "Chabela fait des tortillas de maïs tous les jours.",
+        "voz": "chabela",
+        "audio": "chabela.884bc3aaed"
+      },
+      "audio": "chabela.b8e233c557",
+      "voz": "chabela"
+    },
+    {
+      "id": "cacao",
+      "es": "cacao",
+      "fr": "cacao",
+      "genero": "m",
+      "ilustracion": "Une cabosse de cacao jaune et rouge ouverte, avec ses graines brunes à l’intérieur",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "El cacao es una planta de México.",
+        "fr": "Le cacao est une plante du Mexique.",
+        "voz": "narrador",
+        "audio": "narrador.92b7dc6c7d"
+      },
+      "audio": "narrador.676d1d6dc8"
+    },
+    {
+      "id": "frijoles",
+      "es": "frijoles",
+      "fr": "haricots (secs, rouges ou noirs) ; en Espagne, on dit « judías » ou « alubias »",
+      "genero": "m",
+      "soloPlural": true,
+      "emoji": "🫘",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Comemos tortillas con frijoles.",
+        "fr": "Nous mangeons des tortillas avec des haricots.",
+        "voz": "chabela",
+        "audio": "chabela.715bdd585b"
+      },
+      "audio": "chabela.1934376163",
+      "voz": "chabela"
+    },
+    {
+      "id": "tomate",
+      "es": "tomate",
+      "fr": "tomate (le mot vient du nahuatl « tomatl »)",
+      "genero": "m",
+      "plural": "tomates",
+      "emoji": "🍅",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "La salsa lleva tomate y chile.",
+        "fr": "La sauce contient de la tomate et du piment.",
+        "voz": "narrador",
+        "audio": "narrador.a278858dfb"
+      },
+      "audio": "narrador.13f20098aa"
+    },
+    {
+      "id": "aguacate",
+      "es": "aguacate",
+      "fr": "avocat (le mot vient du nahuatl « ahuacatl » ; en Argentine : « palta »)",
+      "genero": "m",
+      "plural": "aguacates",
+      "emoji": "🥑",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Me gusta el aguacate con tortilla.",
+        "fr": "J’aime l’avocat avec de la tortilla.",
+        "voz": "narrador",
+        "audio": "narrador.a9fd5ba996"
+      },
+      "audio": "narrador.4cae96760e"
+    },
+    {
+      "id": "chile",
+      "es": "chile",
+      "fr": "piment (légume) ; attention : « Chile » avec majuscule est le pays !",
+      "genero": "m",
+      "plural": "chiles",
+      "emoji": "🌶️",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Este chile es muy picante.",
+        "fr": "Ce piment est très piquant.",
+        "voz": "narrador",
+        "audio": "narrador.4afd1c46b4"
+      },
+      "audio": "narrador.ae34a7cc97"
+    },
+    {
+      "id": "taco",
+      "es": "taco",
+      "fr": "taco : tortilla garnie et pliée",
+      "genero": "m",
+      "plural": "tacos",
+      "emoji": "🌮",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Quiero un taco de pollo.",
+        "fr": "Je veux un taco au poulet.",
+        "voz": "narrador",
+        "audio": "narrador.08a5609b9c"
+      },
+      "audio": "narrador.9dc4319c27"
+    },
+    {
+      "id": "salsa",
+      "es": "salsa",
+      "fr": "sauce (souvent piquante au Mexique)",
+      "genero": "f",
+      "plural": "salsas",
+      "ilustracion": "Un bol en terre cuite rempli d’une sauce rouge avec des tomates et des piments",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "La salsa de Chabela es muy picante.",
+        "fr": "La sauce de Chabela est très piquante.",
+        "voz": "chabela",
+        "audio": "chabela.7ea354c631"
+      },
+      "audio": "chabela.2880c73550",
+      "voz": "chabela"
+    },
+    {
+      "id": "cochinita",
+      "es": "cochinita pibil",
+      "fr": "cochinita pibil : porc mariné cuit dans un four sous terre, plat typique du Yucatán",
+      "genero": "f",
+      "ilustracion": "Un plat de viande de porc effilochée rouge-orangé avec des oignons roses, servie avec des tortillas",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "La cochinita pibil es un plato típico de Yucatán.",
+        "fr": "La cochinita pibil est un plat typique du Yucatán.",
+        "voz": "narrador",
+        "audio": "narrador.0bc9868a90"
+      },
+      "audio": "narrador.fcc30aaabb"
+    },
+    {
+      "id": "picante",
+      "es": "picante",
+      "fr": "piquant, épicé",
+      "genero": "mf",
+      "plural": "picantes",
+      "clase": "adj",
+      "emoji": "🔥",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "La salsa habanero es muy picante.",
+        "fr": "La sauce habanero est très piquante.",
+        "voz": "narrador",
+        "audio": "narrador.22c54f88f6"
+      },
+      "audio": "narrador.203addd5cc"
+    },
+    {
+      "id": "delicioso",
+      "es": "delicioso",
+      "fr": "délicieux (en Espagne on dit aussi « rico »)",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "deliciosa",
+      "emoji": "😋",
+      "tags": [
+        "gastronomia"
+      ],
+      "ejemplo": {
+        "es": "Los tacos están deliciosos.",
+        "fr": "Les tacos sont délicieux.",
+        "voz": "narrador",
+        "audio": "narrador.8389f8dc65"
+      },
+      "audio": "narrador.0d10601977"
+    },
+    {
+      "id": "visitar",
+      "es": "visitar",
+      "fr": "visiter, rendre visite à",
+      "emoji": "🧭",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Visitamos Chichén Itzá.",
+        "fr": "Nous visitons Chichén Itzá.",
+        "voz": "narrador",
+        "audio": "narrador.c23c23fdde"
+      },
+      "audio": "narrador.3e0b9f9658"
+    },
+    {
+      "id": "hacer",
+      "es": "hacer",
+      "fr": "faire (yo hago)",
+      "emoji": "🛠️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Hago tortillas con mi abuela.",
+        "fr": "Je fais des tortillas avec ma grand-mère.",
+        "voz": "narrador",
+        "audio": "narrador.161d51a222"
+      },
+      "audio": "narrador.44f7a54b02"
+    },
+    {
+      "id": "conocer",
+      "es": "conocer",
+      "fr": "connaître ; faire la connaissance de (yo conozco)",
+      "emoji": "🤝",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Conozco la ciudad de Mérida.",
+        "fr": "Je connais la ville de Mérida.",
+        "voz": "narrador",
+        "audio": "narrador.730bbdcebd"
+      },
+      "audio": "narrador.b61e0db66a"
+    },
+    {
+      "id": "haber",
+      "es": "haber",
+      "fr": "avoir (auxiliaire, pour le passé composé) : he, has, ha, hemos, habéis, han",
+      "emoji": "🧩",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "He visitado Chichén Itzá.",
+        "fr": "J’ai visité Chichén Itzá.",
+        "voz": "narrador",
+        "audio": "narrador.83bc5665e1"
+      },
+      "audio": "narrador.1b94c09aba"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_repaso_presente",
+      "titulo": {
+        "es": "Hablo, como, vivo",
+        "fr": "Révision du présent : -ar, -er, -ir"
+      },
+      "ejemplos": [
+        {
+          "es": "Itzel habla maya y español.",
+          "fr": "Itzel parle maya et espagnol.",
+          "voz": "itzel",
+          "audio": "itzel.211ae36df6",
+          "resaltar": [
+            "habla"
+          ]
+        },
+        {
+          "es": "Comemos tortillas con frijoles.",
+          "fr": "Nous mangeons des tortillas avec des haricots.",
+          "voz": "chabela",
+          "audio": "chabela.715bdd585b",
+          "resaltar": [
+            "Comemos"
+          ]
+        },
+        {
+          "es": "Mis abuelos viven en un pueblo.",
+          "fr": "Mes grands-parents vivent dans un village.",
+          "voz": "itzel",
+          "audio": "itzel.6021c6f68e",
+          "resaltar": [
+            "viven"
+          ]
+        },
+        {
+          "es": "Visito Chichén Itzá con mi familia.",
+          "fr": "Je visite Chichén Itzá avec ma famille.",
+          "voz": "viajero",
+          "audio": "viajero.b07c286599",
+          "resaltar": [
+            "Visito"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Los verbos en -ar, -er, -ir tienen la misma terminación en «yo» (-o). Después cambian: -as / -es, -a / -e, -amos / -emos / -imos, -an / -en.",
+        "fr": "Les verbes en -ar, -er, -ir ont la même terminaison à « yo » (-o). Ensuite elles changent : -as / -es, -a / -e, -amos / -emos / -imos, -an / -en.",
+        "voz": "narrador",
+        "audio": "narrador.c71513dcba"
+      },
+      "pista": "Révision : on enlève -ar / -er / -ir et on ajoute la terminaison. Piège classique : « nosotros » garde la voyelle du verbe (-AMOS, -EMOS, -IMOS) et « ellos » prend -an pour les verbes en -ar mais -en pour -er et -ir (hablan, comen, viven). « Tú » : -as pour -ar, -es pour -er / -ir. Vosotros (Espagne seulement) : -áis, -éis, -ís ; au Mexique et dans toute l'Amérique latine, on dit « ustedes » + forme en -an / -en (ustedes hablan). Le sujet est souvent omis car la terminaison suffit : « hablo » = « yo hablo ».",
+      "tabla": {
+        "encabezado": [
+          "",
+          "hablar",
+          "comer",
+          "vivir"
+        ],
+        "filas": [
+          [
+            "yo",
+            "hablo",
+            "como",
+            "vivo"
+          ],
+          [
+            "tú",
+            "hablas",
+            "comes",
+            "vives"
+          ],
+          [
+            "él / ella",
+            "habla",
+            "come",
+            "vive"
+          ],
+          [
+            "nosotros",
+            "hablamos",
+            "comemos",
+            "vivimos"
+          ],
+          [
+            "vosotros",
+            "habláis",
+            "coméis",
+            "vivís"
+          ],
+          [
+            "ellos / ustedes",
+            "hablan",
+            "comen",
+            "viven"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_yo_irregular",
+      "titulo": {
+        "es": "Hago, veo, conozco",
+        "fr": "Verbes irréguliers seulement à « yo »"
+      },
+      "ejemplos": [
+        {
+          "es": "Hago tortillas con mi abuela.",
+          "fr": "Je fais des tortillas avec ma grand-mère.",
+          "voz": "chabela",
+          "audio": "chabela.161d51a222",
+          "resaltar": [
+            "Hago"
+          ]
+        },
+        {
+          "es": "Veo un jaguar en la selva.",
+          "fr": "Je vois un jaguar dans la forêt tropicale.",
+          "voz": "itzel",
+          "audio": "itzel.017aaa413f",
+          "resaltar": [
+            "Veo"
+          ]
+        },
+        {
+          "es": "Conozco Mérida, pero no conozco Cusco.",
+          "fr": "Je connais Mérida, mais je ne connais pas Cusco.",
+          "voz": "itzel",
+          "audio": "itzel.d8fbc4f019",
+          "resaltar": [
+            "Conozco",
+            "conozco"
+          ]
+        },
+        {
+          "es": "Tú haces, ella hace, nosotros hacemos.",
+          "fr": "Toi, tu fais ; elle, elle fait ; nous, nous faisons.",
+          "voz": "marina",
+          "audio": "marina.fd63700353",
+          "resaltar": [
+            "haces",
+            "hace",
+            "hacemos"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Algunos verbos son irregulares solo en «yo»: hacer → hago, ver → veo, conocer → conozco. Las otras personas son regulares.",
+        "fr": "Certains verbes sont irréguliers seulement à « yo » : hacer → hago, ver → veo, conocer → conozco. Les autres personnes sont régulières.",
+        "voz": "narrador",
+        "audio": "narrador.8e836e08b5"
+      },
+      "pista": "À connaître : hacer (hago, haces, hace, hacemos, hacéis, hacen), ver (veo, ves, ve, vemos, veis, ven), conocer (conozco, conoces, conoce…). Seul « yo » change ; le reste suit la règle régulière. « Conocer » = connaître une personne ou un lieu (conozco Mérida) ; « saber » = savoir quelque chose (sé nadar). Autres verbes de la même famille que tu rencontreras : saber (sé), poner (pongo), salir (salgo). Attention à « ver » : veo, mais vemos (pas « vemos » avec accent) ; « veis » ne prend pas d'accent.",
+      "tabla": {
+        "encabezado": [
+          "",
+          "hacer",
+          "ver",
+          "conocer"
+        ],
+        "filas": [
+          [
+            "yo",
+            "hago",
+            "veo",
+            "conozco"
+          ],
+          [
+            "tú",
+            "haces",
+            "ves",
+            "conoces"
+          ],
+          [
+            "él / ella",
+            "hace",
+            "ve",
+            "conoce"
+          ],
+          [
+            "nosotros",
+            "hacemos",
+            "vemos",
+            "conocemos"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_describir_lugar",
+      "titulo": {
+        "es": "Es, está, hay",
+        "fr": "Décrire un lieu : ser, estar, hay"
+      },
+      "ejemplos": [
+        {
+          "es": "Yucatán es una región caliente y verde.",
+          "fr": "Le Yucatán est une région chaude et verte.",
+          "voz": "itzel",
+          "audio": "itzel.584bd845e9",
+          "resaltar": [
+            "es"
+          ]
+        },
+        {
+          "es": "Yucatán está en el sureste de México.",
+          "fr": "Le Yucatán est dans le sud-est du Mexique.",
+          "voz": "itzel",
+          "audio": "itzel.8d0d7cd60e",
+          "resaltar": [
+            "está"
+          ]
+        },
+        {
+          "es": "En Yucatán hay miles de cenotes.",
+          "fr": "Au Yucatán, il y a des milliers de cénotes.",
+          "voz": "itzel",
+          "audio": "itzel.f23dea6d3d",
+          "resaltar": [
+            "hay"
+          ]
+        },
+        {
+          "es": "Los cenotes son muy bonitos y están en la selva.",
+          "fr": "Les cénotes sont très beaux et ils sont dans la forêt tropicale.",
+          "voz": "chan",
+          "audio": "chan.1d51cb3894",
+          "resaltar": [
+            "son",
+            "están"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para describir un lugar usamos tres palabras: «es» (cómo es), «está» (dónde está) y «hay» (qué hay).",
+        "fr": "Pour décrire un lieu, on utilise trois mots : « es » (comment il est), « está » (où il est) et « hay » (ce qu’il y a).",
+        "voz": "narrador",
+        "audio": "narrador.2d52f654ee"
+      },
+      "pista": "Un petit rappel qui réunit les unités 4 et 8. SER décrit comment est un lieu (es grande, es bonito, es caliente). ESTAR le situe (está en Yucatán, está cerca del mar). HAY dit ce qu'il contient (hay selva, hay cenotes, hay playas), toujours avec un, una, dos, muchos… et jamais avec l'article défini. Test rapide : ¿Cómo es? → es… ; ¿Dónde está? → está… ; ¿Qué hay? → hay…",
+      "tabla": {
+        "encabezado": [
+          "Pregunta",
+          "Palabra",
+          "Ejemplo"
+        ],
+        "filas": [
+          [
+            "¿Cómo es?",
+            "es / son",
+            "Es verde."
+          ],
+          [
+            "¿Dónde está?",
+            "está / están",
+            "Está en Yucatán."
+          ],
+          [
+            "¿Qué hay?",
+            "hay",
+            "Hay cenotes."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_pasado_compuesto",
+      "titulo": {
+        "es": "He visitado, has comido",
+        "fr": "Premier contact avec le passé composé"
+      },
+      "ejemplos": [
+        {
+          "es": "He visitado Chichén Itzá.",
+          "fr": "J’ai visité Chichén Itzá.",
+          "voz": "viajero",
+          "audio": "viajero.83bc5665e1",
+          "resaltar": [
+            "He visitado"
+          ]
+        },
+        {
+          "es": "¿Has probado la cochinita pibil?",
+          "fr": "As-tu goûté la cochinita pibil ?",
+          "voz": "itzel",
+          "audio": "itzel.57c225f203",
+          "resaltar": [
+            "Has probado"
+          ]
+        },
+        {
+          "es": "Itzel ha nadado en el cenote.",
+          "fr": "Itzel a nagé dans le cénote.",
+          "voz": "marina",
+          "audio": "marina.d91c3122ed",
+          "resaltar": [
+            "ha nadado"
+          ]
+        },
+        {
+          "es": "Hemos comido muchos tacos.",
+          "fr": "Nous avons mangé beaucoup de tacos.",
+          "voz": "chabela",
+          "audio": "chabela.b65a1f9061",
+          "resaltar": [
+            "Hemos comido"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para hablar de lo que hemos hecho: he / has / ha / hemos / han + participio. -ar → -ado (hablado), -er / -ir → -ido (comido, vivido).",
+        "fr": "Pour parler de ce qu’on a fait : he / has / ha / hemos / han + participe. -ar → -ado (hablado), -er / -ir → -ido (comido, vivido).",
+        "voz": "narrador",
+        "audio": "narrador.fa7c49c262"
+      },
+      "pista": "Ce n'est qu'une première découverte : retiens simplement de RECONNAÎTRE la forme. Le passé composé espagnol se forme comme en français : auxiliaire HABER (he, has, ha, hemos, habéis, han) + participe passé. Participe : -ar → -ADO (visitar → visitado), -er et -ir → -IDO (comer → comido, vivir → vivido). Deux irréguliers très courants : hacer → hecho (he hecho), ver → visto (he visto). Le participe ne s'accorde pas avec le sujet. Contrairement au français, on ne sépare jamais « he » du participe (pas de « he siempre visto »). Remarque importante : en Espagne, on emploie ce temps pour le passé récent (hoy he comido) ; au Mexique et dans toute l'Amérique latine, on préfère souvent un autre passé (« ¿Ya comiste? », « Hoy comí ») que tu apprendras plus tard.",
+      "tabla": {
+        "encabezado": [
+          "haber",
+          "participio"
+        ],
+        "filas": [
+          [
+            "yo he",
+            "visitado / comido / vivido"
+          ],
+          [
+            "tú has",
+            "visitado / comido / vivido"
+          ],
+          [
+            "él / ella ha",
+            "visitado / comido / vivido"
+          ],
+          [
+            "nosotros hemos",
+            "visitado / comido / vivido"
+          ],
+          [
+            "ellos han",
+            "hecho · visto (irregulares)"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u09-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Yucatán",
+      "emoji": "🌴",
+      "intro": {
+        "es": "¡Bienvenidos a Yucatán! Yo soy Itzel. Estamos en la selva maya.",
+        "fr": "Bienvenue au Yucatán ! Moi, c’est Itzel. Nous sommes dans la forêt tropicale maya. (Au Mexique, on dit « ustedes » pour « vous » au pluriel.)",
+        "voz": "itzel",
+        "audio": "itzel.fef77f26c4"
+      },
+      "pista": "Arrivée au Yucatán, chez le Quetzal : tu rencontres Itzel et Don Chan, et tu découvres le problème des pierres sans dessins. Les PNJ parlent espagnol du Mexique.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u09-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u09-intro",
+          "escena": {
+            "id": "u09-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 9 · ¡Viva México! · Yucatán",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée quitte Bogotá, franchit la mer des Caraïbes et vient se poser sur la péninsule du Yucatán ; carte-titre « Capítulo 9 · ¡Viva México! · Yucatán ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 9 · ¡Viva México! · Yucatán",
+                "lineas": [
+                  {
+                    "es": "Capítulo nueve: ¡Viva México!",
+                    "fr": "Chapitre neuf : vive le Mexique !",
+                    "voz": "narrador",
+                    "audio": "narrador.d5787a7324"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Vue aérienne de la forêt tropicale du Yucatán : la canopée verte, la pyramide de pierre qui sort des arbres, un cénote turquoise et, au bord d’une lagune, des flamants roses qui s’envolent.",
+                "camara": "survol lent en drone, puis descente vers la pyramide",
+                "lineas": [
+                  {
+                    "es": "Yucatán, en el sureste de México.",
+                    "fr": "Le Yucatán, dans le sud-est du Mexique.",
+                    "voz": "narrador",
+                    "audio": "narrador.95ab89f56b"
+                  },
+                  {
+                    "es": "Selva, cenotes y pirámides: aquí viven los mayas desde hace siglos.",
+                    "fr": "Forêt tropicale, cénotes et pyramides : ici vivent les Mayas depuis des siècles.",
+                    "voz": "narrador",
+                    "audio": "narrador.00fc05460c"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u09-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Yucatán está en México.",
+            "fr": "Le Yucatán est au Mexique.",
+            "voz": "narrador",
+            "audio": "narrador.7179510a73"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u09-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Yucatán está en Argentina.",
+            "fr": "Le Yucatán est en Argentine.",
+            "voz": "narrador",
+            "audio": "narrador.503552a685"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u09-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u09-historia",
+          "escena": {
+            "id": "u09-historia",
+            "tipo": "historia",
+            "titulo": "Las piedras mudas",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Un sentier dans la forêt tropicale, lumière verte. Le Quetzal sort du sac de Marina et vole d’un arbre à l’autre. Itzel, 12 ans, huipil blanc brodé de fleurs, un panier au bras, les accueille en souriant.",
+                "camara": "plan large dans les arbres puis plan moyen sur Itzel",
+                "personajes": [
+                  "quetzal",
+                  "itzel",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "México… ¡Estoy en casa! Pero la selva está muy callada.",
+                    "fr": "Le Mexique… Je suis chez moi ! Mais la forêt est très silencieuse.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.fb13f00af9"
+                  },
+                  {
+                    "es": "¡Hola! Me llamo Itzel y vivo cerca de Chichén Itzá. Hablo maya con mi abuela y español con mis amigos.",
+                    "fr": "Salut ! Je m’appelle Itzel et j’habite près de Chichén Itzá. Je parle maya avec ma grand-mère et espagnol avec mes amis.",
+                    "voz": "itzel",
+                    "audio": "itzel.1d18bc18bc"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Au pied d’El Castillo, la grande pyramide : les murs de pierre sont lisses, sans aucun dessin. Don Chan, le guide, un chapeau de paille sur la tête, passe la main sur la pierre vide.",
+                "camara": "travelling le long du mur lisse",
+                "personajes": [
+                  "chan",
+                  "itzel"
+                ],
+                "lineas": [
+                  {
+                    "es": "Las piedras hablaban, pero ahora están mudas. Los dibujos de los mayas han desaparecido.",
+                    "fr": "Les pierres parlaient, mais maintenant elles sont muettes. Les dessins des Mayas ont disparu.",
+                    "voz": "chan",
+                    "audio": "chan.b8a79ce57b"
+                  },
+                  {
+                    "es": "Es la Sombra. Se lleva las historias.",
+                    "fr": "C’est l’Ombre. Elle emporte les histoires.",
+                    "voz": "itzel",
+                    "audio": "itzel.32be336be6"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Tout en haut de l’escalier, la Sombra aspire les derniers glyphes qui coulent comme de l’encre noire hors de la pierre.",
+                "personajes": [
+                  "sombra",
+                  "chan"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin historia, no hay memoria. Sin memoria, nadie habla.",
+                    "fr": "Sans histoire, pas de mémoire. Sans mémoire, personne ne parle.",
+                    "voz": "sombra",
+                    "audio": "sombra.bc267bf264"
+                  },
+                  {
+                    "es": "¡No! Esas piedras tienen mil años.",
+                    "fr": "Non ! Ces pierres ont mille ans.",
+                    "voz": "chan",
+                    "audio": "chan.8d5a819a5f"
+                  }
+                ],
+                "musica": "tension douce, flûtes de roseau et tambour"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Dans la forêt, un puits de lumière : un cénote turquoise où brille un reflet vert tout au fond. Le Quetzal le montre du bec.",
+                "personajes": [
+                  "quetzal",
+                  "itzel",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma… está en el agua.",
+                    "fr": "La plume… est dans l’eau.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.cc0a07a8d1"
+                  },
+                  {
+                    "es": "Es el cenote sagrado. Para devolver la memoria a las piedras, tienen que conocer la historia de México. ¡Vamos!",
+                    "fr": "C’est le cénote sacré. Pour rendre la mémoire aux pierres, il faut connaître l’histoire du Mexique. Allons-y !",
+                    "voz": "itzel",
+                    "audio": "itzel.b93bb3d976"
+                  }
+                ],
+                "musica": "thème d’aventure, marimba et flûte"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u09-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hablo maya con mi abuela y español en el colegio.",
+            "voz": "itzel",
+            "audio": "itzel.6d6603744c"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Itzel habla dos lenguas.",
+              "correcta": true
+            },
+            {
+              "texto": "Itzel solo habla español.",
+              "correcta": false
+            },
+            {
+              "texto": "Itzel habla francés con su abuela.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q01-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Las piedras no tienen dibujos. Alguien los ha borrado.",
+            "voz": "chan",
+            "audio": "chan.e933793f90"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los dibujos de la pirámide ya no están.",
+              "correcta": true
+            },
+            {
+              "texto": "La pirámide tiene dibujos nuevos.",
+              "correcta": false
+            },
+            {
+              "texto": "Los dibujos están en el cenote.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q01-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Quetzal está en México.",
+            "fr": "Le Quetzal est au Mexique.",
+            "voz": "narrador",
+            "audio": "narrador.b1d1fbc548"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u09-q01-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "itzel",
+          "replica": {
+            "es": "¡Qué onda! Soy Itzel. ¿Y ustedes, cómo se llaman?",
+            "fr": "Salut ! (« ¡Qué onda! » = salut, familier mexicain). Moi, c’est Itzel. Et vous, comment vous appelez-vous ?",
+            "voz": "itzel",
+            "audio": "itzel.24e58733df"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex y ella es Marina.",
+                "voz": "viajero",
+                "audio": "viajero.81ac5fc077"
+              },
+              "fr": "Je m’appelle Álex et elle, c’est Marina.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Mucho gusto, Álex! ¡Mucho gusto, Marina!",
+                "fr": "Enchantée, Álex ! Enchantée, Marina ! (« mucho gusto » est la formule habituelle au Mexique)",
+                "voz": "itzel",
+                "audio": "itzel.5831502bad",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Está bien, pero ¿cómo se llaman?",
+                "fr": "C’est bien, mais comment vous appelez-vous ?",
+                "voz": "itzel",
+                "audio": "itzel.929587c7e3",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Me llamo selva.",
+                "voz": "viajero",
+                "audio": "viajero.8f84cd268f"
+              },
+              "fr": "Je m’appelle forêt.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Te llamas Selva? ¡Qué nombre tan bonito!",
+                "fr": "Tu t’appelles Forêt ? Quel joli prénom !",
+                "voz": "itzel",
+                "audio": "itzel.c59f381dad",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q01-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Yucatán",
+            "está",
+            "en",
+            "el",
+            "sureste",
+            "de",
+            "México."
+          ],
+          "habla": {
+            "es": "Yucatán está en el sureste de México.",
+            "voz": "itzel",
+            "audio": "itzel.8d0d7cd60e"
+          },
+          "fr": "Le Yucatán est dans le sud-est du Mexique."
+        },
+        {
+          "id": "u09-q01-s10",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Mucho gusto, me llamo Álex.",
+            "fr": "Enchanté, je m’appelle Álex. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.84d7d692d9"
+          },
+          "aceptadas": [
+            "mucho gusto me llamo álex"
+          ],
+          "patrones": [
+            "mucho gusto me llamo {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la selva",
+            "efecto": "Los árboles de la selva se llenan de pájaros"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u09-q02",
+      "tipo": "vocabulario",
+      "titulo": "Selva y cenotes",
+      "emoji": "🦩",
+      "intro": {
+        "es": "Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.",
+        "fr": "Regarde la forêt tropicale : il y a des jaguars, des flamants, des tortues… et des milliers de cénotes.",
+        "voz": "itzel",
+        "audio": "itzel.3042c94106"
+      },
+      "pista": "La nature du Yucatán : forêt, mer, animaux et cénotes. Tu lis, tu écoutes et tu parles de ta nature à toi.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u09-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "selva",
+            "cenote",
+            "playa",
+            "mar",
+            "rio",
+            "piedra",
+            "planta"
+          ]
+        },
+        {
+          "id": "u09-q02-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "animal",
+            "jaguar",
+            "flamenco",
+            "tortuga",
+            "serpiente",
+            "pajaro",
+            "mono"
+          ]
+        },
+        {
+          "id": "u09-q02-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "sagrado",
+            "lluvia",
+            "calor"
+          ]
+        },
+        {
+          "id": "u09-q02-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "jaguar"
+            },
+            {
+              "vocab": "flamenco"
+            },
+            {
+              "vocab": "tortuga"
+            },
+            {
+              "vocab": "serpiente"
+            },
+            {
+              "vocab": "mono"
+            },
+            {
+              "vocab": "pajaro"
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "flamenco",
+            "voz": "narrador",
+            "audio": "narrador.80ed2e4422"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "flamenco",
+              "correcta": true
+            },
+            {
+              "vocab": "tortuga",
+              "correcta": false
+            },
+            {
+              "vocab": "mono",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Hay un jaguar en la selva.",
+            "voz": "itzel",
+            "audio": "itzel.0a9e954311"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "serpiente",
+              "correcta": false
+            },
+            {
+              "vocab": "jaguar",
+              "correcta": true
+            },
+            {
+              "vocab": "tortuga",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El jaguar es un animal grande y vive en la selva.",
+            "voz": "itzel",
+            "audio": "itzel.0b6f31d32e"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El jaguar vive en un bosque tropical.",
+              "correcta": true
+            },
+            {
+              "texto": "El jaguar vive en el mar.",
+              "correcta": false
+            },
+            {
+              "texto": "El jaguar es un animal pequeño.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es un flamenco.",
+            "fr": "C’est un flamant rose.",
+            "voz": "narrador",
+            "audio": "narrador.32bd91f862"
+          },
+          "correcta": true,
+          "imagen": "flamenco"
+        },
+        {
+          "id": "u09-q02-s09",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en ellos.",
+            "fr": "Au Yucatán, il n’y a pas de rivières en surface, mais il y a des milliers de cénotes. Un cénote est un puits naturel avec une eau très propre. Pour les Mayas, les cénotes sont des lieux sacrés. Aujourd’hui, tu peux y nager. (Les rivières du Yucatán coulent sous la terre, dans la roche calcaire.)",
+            "voz": "itzel",
+            "audio": "itzel.c75086330f"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué es un cenote?",
+                "fr": "Qu’est-ce qu’un cénote ?",
+                "voz": "narrador",
+                "audio": "narrador.554ca3b833"
+              },
+              "opciones": [
+                {
+                  "texto": "Un pozo natural con agua.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Una pirámide.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un animal.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Para los mayas, cómo son los cenotes?",
+                "fr": "Pour les Mayas, comment sont les cénotes ?",
+                "voz": "narrador",
+                "audio": "narrador.b28f7924a3"
+              },
+              "opciones": [
+                {
+                  "texto": "Sagrados.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Peligrosos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Pequeños.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué puedes hacer hoy en un cenote?",
+                "fr": "Que peux-tu faire aujourd’hui dans un cénote ?",
+                "voz": "narrador",
+                "audio": "narrador.8a08fc6994"
+              },
+              "opciones": [
+                {
+                  "texto": "Nadar.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Dormir.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Comprar ropa.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Los flamencos son de color ___.",
+          "respuesta": "rosa",
+          "opciones": [
+            "rosa",
+            "negro",
+            "azul"
+          ],
+          "habla": {
+            "es": "Los flamencos son de color rosa.",
+            "voz": "itzel",
+            "audio": "itzel.6c7a63d9b0"
+          },
+          "fr": "Les flamants roses sont de couleur rose."
+        },
+        {
+          "id": "u09-q02-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Un ___ es un pozo natural con agua.",
+          "respuesta": "cenote",
+          "opciones": [
+            "cenote",
+            "jaguar",
+            "taco"
+          ],
+          "habla": {
+            "es": "Un cenote es un pozo natural con agua.",
+            "voz": "itzel",
+            "audio": "itzel.dace535c95"
+          },
+          "fr": "Un cénote est un puits naturel avec de l’eau."
+        },
+        {
+          "id": "u09-q02-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "itzel",
+          "replica": {
+            "es": "En tu país, ¿hay selvas o montañas?",
+            "fr": "Dans ton pays, il y a des forêts tropicales ou des montagnes ?",
+            "voz": "itzel",
+            "audio": "itzel.a2f6778c1d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "En Francia hay montañas, playas y ríos.",
+                "voz": "viajero",
+                "audio": "viajero.45e6cd9789"
+              },
+              "fr": "En France, il y a des montagnes, des plages et des rivières.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Hay de todo.",
+                "fr": "Super ! Il y en a de toutes sortes.",
+                "voz": "itzel",
+                "audio": "itzel.1cdc7bf59e",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "En Francia hay selvas con jaguares.",
+                "voz": "viajero",
+                "audio": "viajero.27d758bc03"
+              },
+              "fr": "En France, il y a des forêts tropicales avec des jaguars.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no creo. Los jaguares viven en América.",
+                "fr": "Mmm… je ne crois pas. Les jaguars vivent en Amérique.",
+                "voz": "itzel",
+                "audio": "itzel.81570dfa09",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "En Francia soy un río.",
+                "voz": "viajero",
+                "audio": "viajero.5196c985df"
+              },
+              "fr": "En France, je suis un fleuve.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú eres un río? ¡Qué cosa más rara!",
+                "fr": "Toi, tu es un fleuve ? Quelle drôle de chose !",
+                "voz": "itzel",
+                "audio": "itzel.397f3ee49d",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q02-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU animal favorito.",
+            "fr": "Écoute et dis quel est TON animal préféré (el perro, el gato, el caballo…).",
+            "voz": "narrador",
+            "audio": "narrador.e6c453d7d5"
+          },
+          "objetivo": {
+            "es": "Mi animal favorito es el jaguar.",
+            "fr": "Mon animal préféré est le jaguar. (dis le tien)",
+            "voz": "viajero",
+            "audio": "viajero.1a102a1f1b"
+          },
+          "aceptadas": [
+            "mi animal favorito es el jaguar"
+          ],
+          "patrones": [
+            "mi animal favorito es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del animal",
+            "efecto": "Tu animal favorito aparece entre las plantas"
+          }
+        },
+        {
+          "id": "u09-q02-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe sobre la naturaleza de tu país.",
+            "fr": "Écris sur la nature de ton pays.",
+            "voz": "narrador",
+            "audio": "narrador.e41eb4cd72"
+          },
+          "plantilla": "En mi país hay ___. Mi animal favorito es ___.",
+          "campos": [
+            {
+              "id": "natura",
+              "pista": "Ce qu’il y a dans ton pays (montañas, playas, ríos, bosques…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "animal",
+              "pista": "Ton animal préféré, avec l’article (el perro, el gato, la tortuga…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "En mi país hay montañas y playas. Mi animal favorito es el gato.",
+            "fr": "Dans mon pays, il y a des montagnes et des plages. Mon animal préféré est le chat.",
+            "voz": "marina",
+            "audio": "marina.8ccad9d550"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u09-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Los flamencos son rosas.",
+            "voz": "itzel",
+            "audio": "itzel.7d22f4ede6"
+          },
+          "respuesta": "Los flamencos son rosas."
+        }
+      ]
+    },
+    {
+      "id": "u09-q03",
+      "tipo": "escucha",
+      "titulo": "Mayas y aztecas",
+      "emoji": "🏛️",
+      "intro": {
+        "es": "Soy Don Chan, guía de Chichén Itzá. Esta ciudad es de los mayas. Es muy, muy antigua.",
+        "fr": "Je suis Don Chan, guide de Chichén Itzá. Cette ville est maya. Elle est très, très ancienne.",
+        "voz": "chan",
+        "audio": "chan.720404e94a"
+      },
+      "pista": "Mayas et Aztèques : pyramides, temples, calendrier, empire. Tu écoutes le guide, tu lis une histoire courte, puis tu dis quel endroit TOI tu veux visiter.",
+      "stats": [
+        "escuchar",
+        "leer",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u09-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "maya",
+            "azteca",
+            "piramide",
+            "templo",
+            "ruinas",
+            "dios",
+            "calendario"
+          ]
+        },
+        {
+          "id": "u09-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "imperio",
+            "pueblo",
+            "turista",
+            "escalon",
+            "guia"
+          ]
+        },
+        {
+          "id": "u09-q03-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "maya"
+            },
+            {
+              "vocab": "azteca"
+            },
+            {
+              "vocab": "piramide"
+            },
+            {
+              "vocab": "templo"
+            },
+            {
+              "vocab": "ruinas"
+            },
+            {
+              "vocab": "calendario"
+            }
+          ]
+        },
+        {
+          "id": "u09-q03-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "pirámide",
+            "voz": "narrador",
+            "audio": "narrador.0b964cc86c"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "templo",
+              "correcta": false
+            },
+            {
+              "vocab": "piramide",
+              "correcta": true
+            },
+            {
+              "vocab": "ruinas",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los mayas estudian el sol y las estrellas para hacer un calendario.",
+            "voz": "chan",
+            "audio": "chan.0ac227b0aa"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Los mayas miran el cielo para saber qué día es.",
+              "correcta": true
+            },
+            {
+              "texto": "Los mayas no tienen calendario.",
+              "correcta": false
+            },
+            {
+              "texto": "Los mayas estudian en un museo de Madrid.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q03-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Los mayas viven en el sureste de México desde hace muchos siglos. Construyen pirámides y templos de piedra. Estudian el sol y las estrellas y tienen un calendario muy preciso. Los aztecas viven en el centro de México. Su capital se llama Tenochtitlan y hoy es Ciudad de México.",
+            "fr": "Les Mayas vivent dans le sud-est du Mexique depuis de nombreux siècles. Ils construisent des pyramides et des temples en pierre. Ils étudient le soleil et les étoiles et ont un calendrier très précis. Les Aztèques vivent au centre du Mexique. Leur capitale s’appelle Tenochtitlan et aujourd’hui c’est Mexico. (Le texte est au présent : c’est le « présent de narration » pour raconter l’histoire.)",
+            "voz": "chan",
+            "audio": "chan.54d16eceb7"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde viven los mayas?",
+                "fr": "Où vivent les Mayas ?",
+                "voz": "narrador",
+                "audio": "narrador.1cea972515"
+              },
+              "opciones": [
+                {
+                  "texto": "En el sureste de México.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En el centro de México.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En Madrid.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo se llama la capital de los aztecas?",
+                "fr": "Comment s’appelle la capitale des Aztèques ?",
+                "voz": "narrador",
+                "audio": "narrador.f82d85d5c2"
+              },
+              "opciones": [
+                {
+                  "texto": "Tenochtitlan.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Chichén Itzá.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Bogotá.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué ciudad es hoy Tenochtitlan?",
+                "fr": "Quelle ville est aujourd’hui Tenochtitlan ?",
+                "voz": "narrador",
+                "audio": "narrador.e11a54178d"
+              },
+              "opciones": [
+                {
+                  "texto": "Ciudad de México.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Mérida.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Cancún.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q03-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Chichén Itzá es una ciudad maya.",
+            "fr": "Chichén Itzá est une ville maya.",
+            "voz": "narrador",
+            "audio": "narrador.eb4e8b8710"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u09-q03-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los aztecas viven en Yucatán.",
+            "fr": "Les Aztèques vivent au Yucatán. (Faux : ils vivaient au centre du Mexique.)",
+            "voz": "narrador",
+            "audio": "narrador.e84b14464d"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u09-q03-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La capital de los aztecas se llama ___.",
+          "respuesta": "Tenochtitlan",
+          "opciones": [
+            "Tenochtitlan",
+            "Chichén Itzá",
+            "Bogotá"
+          ],
+          "habla": {
+            "es": "La capital de los aztecas se llama Tenochtitlan.",
+            "voz": "chan",
+            "audio": "chan.cc0e55d92f"
+          },
+          "fr": "La capitale des Aztèques s’appelle Tenochtitlan."
+        },
+        {
+          "id": "u09-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Los mayas construyen ___ de piedra.",
+          "respuesta": "pirámides",
+          "opciones": [
+            "pirámides",
+            "nevera",
+            "bicicletas"
+          ],
+          "habla": {
+            "es": "Los mayas construyen pirámides de piedra.",
+            "voz": "chan",
+            "audio": "chan.9379a94833"
+          },
+          "fr": "Les Mayas construisent des pyramides en pierre."
+        },
+        {
+          "id": "u09-q03-s11",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chan",
+          "replica": {
+            "es": "Mira esta pirámide. ¿Qué es? ¿Un templo o un mercado?",
+            "fr": "Regarde cette pyramide. Qu’est-ce que c’est ? Un temple ou un marché ?",
+            "voz": "chan",
+            "audio": "chan.b1a019ce44"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Es un templo maya.",
+                "voz": "viajero",
+                "audio": "viajero.f128d0da9b"
+              },
+              "fr": "C’est un temple maya.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Aquí hay un templo en lo alto.",
+                "fr": "Exact ! Ici, il y a un temple tout en haut.",
+                "voz": "chan",
+                "audio": "chan.7a5de57d21",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es un mercado grande.",
+                "voz": "viajero",
+                "audio": "viajero.aa9cb9ae39"
+              },
+              "fr": "C’est un grand marché.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, no. En un mercado hay frutas, no dioses.",
+                "fr": "Non, non. Dans un marché, il y a des fruits, pas des dieux.",
+                "voz": "chan",
+                "audio": "chan.7a4a445518",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Es una pizza.",
+                "voz": "viajero",
+                "audio": "viajero.dce4261ad3"
+              },
+              "fr": "C’est une pizza.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una pizza de piedra? ¡Qué idea!",
+                "fr": "Une pizza en pierre ? Quelle idée !",
+                "voz": "chan",
+                "audio": "chan.bd1a5a18cc",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q03-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Los",
+            "aztecas",
+            "viven",
+            "en",
+            "el",
+            "centro",
+            "de",
+            "México."
+          ],
+          "habla": {
+            "es": "Los aztecas viven en el centro de México.",
+            "voz": "chan",
+            "audio": "chan.f19a9ccccb"
+          },
+          "fr": "Les Aztèques vivent au centre du Mexique."
+        },
+        {
+          "id": "u09-q03-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué lugar quieres visitar TÚ.",
+            "fr": "Écoute et dis quel endroit TU veux visiter (Machu Picchu, Madrid, Cartagena…).",
+            "voz": "narrador",
+            "audio": "narrador.50ce09d2da"
+          },
+          "objetivo": {
+            "es": "Quiero visitar Chichén Itzá.",
+            "fr": "Je veux visiter Chichén Itzá. (dis ton endroit)",
+            "voz": "viajero",
+            "audio": "viajero.ee0e4b85ed"
+          },
+          "aceptadas": [
+            "quiero visitar chichén itzá"
+          ],
+          "patrones": [
+            "quiero visitar {nombre}"
+          ],
+          "foco": "Chichén Itzá : le « ch » se dit comme en français « tch » (tchi-TCHEN it-SA). Le dernier « á » porte l’accent : it-SÁ.",
+          "hechizo": {
+            "nombre": "Hechizo del viaje",
+            "efecto": "Un mapa dorado se despliega ante ti"
+          }
+        },
+        {
+          "id": "u09-q03-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Los mayas tienen un calendario.",
+            "voz": "chan",
+            "audio": "chan.50e8fb14c2"
+          },
+          "respuesta": "Los mayas tienen un calendario."
+        }
+      ]
+    },
+    {
+      "id": "u09-q04",
+      "tipo": "vocabulario",
+      "titulo": "Maíz, cacao y chile",
+      "emoji": "🌽",
+      "intro": {
+        "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.",
+        "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a mille ans.",
+        "voz": "chabela",
+        "audio": "chabela.9da5457cd3"
+      },
+      "pista": "Les saveurs du Mexique : maïs, tortillas, cacao, piment, cochinita pibil. Tu lis, tu goûtes (en mots) et tu dis ce que TOI tu aimes manger.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir",
+        "cultura"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u09-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "maiz",
+            "tortilla_mx",
+            "cacao",
+            "chocolate_nav",
+            "frijoles",
+            "tomate",
+            "aguacate"
+          ]
+        },
+        {
+          "id": "u09-q04-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "chile",
+            "taco",
+            "salsa",
+            "cochinita",
+            "picante",
+            "dulce_nav",
+            "delicioso"
+          ]
+        },
+        {
+          "id": "u09-q04-s03",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "maiz"
+            },
+            {
+              "vocab": "tortilla_mx"
+            },
+            {
+              "vocab": "chocolate_nav"
+            },
+            {
+              "vocab": "tomate"
+            },
+            {
+              "vocab": "aguacate"
+            },
+            {
+              "vocab": "chile"
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "aguacate",
+            "voz": "narrador",
+            "audio": "narrador.4cae96760e"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "tomate",
+              "correcta": false
+            },
+            {
+              "vocab": "aguacate",
+              "correcta": true
+            },
+            {
+              "vocab": "maiz",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "La salsa de chile habanero es muy picante.",
+            "voz": "chabela",
+            "audio": "chabela.c7286f3c2d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Esa salsa tiene mucho picante.",
+              "correcta": true
+            },
+            {
+              "texto": "Esa salsa es dulce.",
+              "correcta": false
+            },
+            {
+              "texto": "Esa salsa no lleva chile.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hago tortillas todos los días con maíz. Primero preparo la masa y después hago las tortillas en el comal. Comemos las tortillas con frijoles y salsa. Los mayas y los aztecas también comen maíz desde hace miles de años. ¡Es la base de la cocina mexicana!",
+            "fr": "Je fais des tortillas tous les jours avec du maïs. D’abord je prépare la pâte (« la masa ») et ensuite je fais les tortillas sur le « comal » (la plaque de cuisson). Nous mangeons les tortillas avec des haricots et de la sauce. Les Mayas et les Aztèques mangent aussi du maïs depuis des milliers d’années. C’est la base de la cuisine mexicaine !",
+            "voz": "chabela",
+            "audio": "chabela.3c29321e3a"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Con qué hace Chabela las tortillas?",
+                "fr": "Avec quoi Chabela fait-elle les tortillas ?",
+                "voz": "narrador",
+                "audio": "narrador.58bd335a1a"
+              },
+              "opciones": [
+                {
+                  "texto": "Con maíz.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Con chocolate.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Con tomate.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué comen con las tortillas?",
+                "fr": "Que mangent-ils avec les tortillas ?",
+                "voz": "narrador",
+                "audio": "narrador.cccc7ed239"
+              },
+              "opciones": [
+                {
+                  "texto": "Frijoles y salsa.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pan y jamón.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Helado.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Desde cuándo comen maíz en México?",
+                "fr": "Depuis quand mange-t-on du maïs au Mexique ?",
+                "voz": "narrador",
+                "audio": "narrador.d8f7ecc8dd"
+              },
+              "opciones": [
+                {
+                  "texto": "Desde hace miles de años.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Desde ayer.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Desde 1950.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "El cacao es una planta de México. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.",
+            "fr": "Le cacao est une plante du Mexique. Les Mayas et les Aztèques boivent du chocolat, mais leur chocolat n’est pas sucré : il contient du piment et il est un peu amer. Pour les Aztèques, les graines de cacao sont aussi de l’argent.",
+            "voz": "chabela",
+            "audio": "chabela.8d8199923f"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿El chocolate de los mayas es dulce?",
+                "fr": "Le chocolat des Mayas est-il sucré ?",
+                "voz": "narrador",
+                "audio": "narrador.c36b7ca62f"
+              },
+              "opciones": [
+                {
+                  "texto": "No.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Sí, mucho.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Solo en Navidad.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué lleva el chocolate antiguo?",
+                "fr": "Que contient le chocolat ancien ?",
+                "voz": "narrador",
+                "audio": "narrador.8cf9f77cc9"
+              },
+              "opciones": [
+                {
+                  "texto": "Chile.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Queso.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Aguacate.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué más son los granos de cacao para los aztecas?",
+                "fr": "Que sont aussi les graines de cacao pour les Aztèques ?",
+                "voz": "narrador",
+                "audio": "narrador.5a4316d903"
+              },
+              "opciones": [
+                {
+                  "texto": "Dinero.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Zapatos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un animal.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hago tortillas con ___.",
+          "respuesta": "maíz",
+          "opciones": [
+            "maíz",
+            "chocolate",
+            "tomate"
+          ],
+          "habla": {
+            "es": "Hago tortillas con maíz.",
+            "voz": "chabela",
+            "audio": "chabela.b34a5b481c"
+          },
+          "fr": "Je fais des tortillas avec du maïs."
+        },
+        {
+          "id": "u09-q04-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "El chocolate de los mayas no es ___.",
+          "respuesta": "dulce",
+          "opciones": [
+            "dulce",
+            "picante",
+            "rojo"
+          ],
+          "habla": {
+            "es": "El chocolate de los mayas no es dulce.",
+            "voz": "chabela",
+            "audio": "chabela.d27af6433c"
+          },
+          "fr": "Le chocolat des Mayas n’est pas sucré."
+        },
+        {
+          "id": "u09-q04-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chabela",
+          "replica": {
+            "es": "¿Quieres probar una salsa? Es un poco picante.",
+            "fr": "Tu veux goûter une sauce ? Elle est un peu piquante.",
+            "voz": "chabela",
+            "audio": "chabela.731cc730d2"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, gracias. Me gusta el picante.",
+                "voz": "viajero",
+                "audio": "viajero.4b58548e0c"
+              },
+              "fr": "Oui, merci. J’aime le piquant.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bueno! Aquí tienes. Con tortilla está más rica.",
+                "fr": "Super ! Tiens. Avec de la tortilla, elle est encore meilleure. (« rica » = délicieuse)",
+                "voz": "chabela",
+                "audio": "chabela.390ab6a545",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, gracias, pero solo un poquito.",
+                "voz": "viajero",
+                "audio": "viajero.4aeafe528c"
+              },
+              "fr": "Oui, merci, mais juste un petit peu.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Muy bien! Un poquito de salsa, y mucha tortilla.",
+                "fr": "Très bien ! Un tout petit peu de sauce, et beaucoup de tortilla.",
+                "voz": "chabela",
+                "audio": "chabela.935f7b7c36",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, gracias, yo soy una tortilla.",
+                "voz": "viajero",
+                "audio": "viajero.1e3ffcbce9"
+              },
+              "fr": "Non, merci, je suis une tortilla.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Una tortilla? ¡Entonces te como yo!",
+                "fr": "Une tortilla ? Alors c’est moi qui te mange !",
+                "voz": "chabela",
+                "audio": "chabela.c0a77ac6a4",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q04-s11",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU comida favorita.",
+            "fr": "Écoute et dis quel est TON plat préféré (los espaguetis, el pollo, las crepes…).",
+            "voz": "narrador",
+            "audio": "narrador.a60635d850"
+          },
+          "objetivo": {
+            "es": "Mi comida favorita es la pizza.",
+            "fr": "Mon plat préféré est la pizza. (dis le tien)",
+            "voz": "viajero",
+            "audio": "viajero.eaa119ea0b"
+          },
+          "aceptadas": [
+            "mi comida favorita es la pizza"
+          ],
+          "patrones": [
+            "mi comida favorita es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la cocina",
+            "efecto": "Tu plato favorito aparece humeante sobre la mesa"
+          }
+        },
+        {
+          "id": "u09-q04-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe qué te gusta comer.",
+            "fr": "Écris ce que tu aimes manger.",
+            "voz": "narrador",
+            "audio": "narrador.065baba276"
+          },
+          "plantilla": "Mi comida favorita es ___. Me gusta ___. No me gusta ___.",
+          "campos": [
+            {
+              "id": "favorita",
+              "pista": "Ton plat préféré, avec l’article (la pizza, el pollo…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "gusta",
+              "pista": "Ce que tu aimes (el chocolate, el aguacate, los tacos…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "nogusta",
+              "pista": "Ce que tu n’aimes pas (el picante, el tomate…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi comida favorita es la pizza. Me gusta el chocolate. No me gusta el picante.",
+            "fr": "Mon plat préféré est la pizza. J’aime le chocolat. Je n’aime pas le piquant.",
+            "voz": "viajero",
+            "audio": "viajero.73bd6bd174"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u09-q04-s13",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "La cochinita pibil es muy deliciosa.",
+            "voz": "chabela",
+            "audio": "chabela.746e69f9b0"
+          },
+          "respuesta": "La cochinita pibil es muy deliciosa."
+        }
+      ]
+    },
+    {
+      "id": "u09-q05",
+      "tipo": "forja",
+      "titulo": "La Forja: el presente",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Hablo. Como. Vivo. ¡Forja el presente conmigo!",
+        "fr": "Je parle. Je mange. J’habite. Forge le présent avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.1486cd14b9"
+      },
+      "pista": "Révision du présent (-ar, -er, -ir) et trois verbes irréguliers seulement à « yo » : hago, veo, conozco.",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u09-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "visitar",
+            "probar_nav",
+            "nadar_dep",
+            "ver_tv",
+            "hacer",
+            "conocer"
+          ]
+        },
+        {
+          "id": "u09-q05-s02",
+          "tipo": "grammar_card",
+          "ref": "g_repaso_presente"
+        },
+        {
+          "id": "u09-q05-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "visitar",
+          "sujeto": "yo",
+          "radical": "visit",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "as",
+            "a"
+          ],
+          "forma": "visito",
+          "habla": {
+            "es": "yo visito",
+            "voz": "viajero",
+            "audio": "viajero.cc0c4ace85"
+          },
+          "fr": "Moi, je visite…"
+        },
+        {
+          "id": "u09-q05-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "comer",
+          "sujeto": "nosotros",
+          "radical": "com",
+          "terminacion": "emos",
+          "terminaciones": [
+            "emos",
+            "amos",
+            "imos"
+          ],
+          "forma": "comemos",
+          "habla": {
+            "es": "nosotros comemos",
+            "voz": "chabela",
+            "audio": "chabela.57256fc5e7"
+          },
+          "fr": "Nous, nous mangeons…"
+        },
+        {
+          "id": "u09-q05-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "ellos",
+          "radical": "viv",
+          "terminacion": "en",
+          "terminaciones": [
+            "en",
+            "an",
+            "es"
+          ],
+          "forma": "viven",
+          "habla": {
+            "es": "ellos viven",
+            "voz": "itzel",
+            "audio": "itzel.d6dce4cf0f"
+          },
+          "fr": "Eux, ils habitent…"
+        },
+        {
+          "id": "u09-q05-s06",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "preparar",
+          "sujeto": "ella",
+          "radical": "prepar",
+          "terminacion": "a",
+          "terminaciones": [
+            "o",
+            "a",
+            "amos"
+          ],
+          "forma": "prepara",
+          "habla": {
+            "es": "ella prepara",
+            "voz": "chabela",
+            "audio": "chabela.e103e6e5be"
+          },
+          "fr": "Elle prépare…"
+        },
+        {
+          "id": "u09-q05-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Tú ___ en el cenote.",
+          "respuesta": "nadas",
+          "opciones": [
+            "nado",
+            "nadas",
+            "nada"
+          ],
+          "habla": {
+            "es": "Tú nadas en el cenote.",
+            "voz": "itzel",
+            "audio": "itzel.648a870e60"
+          },
+          "fr": "Toi, tu nages dans le cénote."
+        },
+        {
+          "id": "u09-q05-s08",
+          "tipo": "grammar_card",
+          "ref": "g_yo_irregular"
+        },
+        {
+          "id": "u09-q05-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "hacer",
+          "sujeto": "yo",
+          "radical": "hag",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "go",
+            "zo"
+          ],
+          "forma": "hago",
+          "habla": {
+            "es": "yo hago",
+            "voz": "chabela",
+            "audio": "chabela.de9b403f9f"
+          },
+          "fr": "Moi, je fais…"
+        },
+        {
+          "id": "u09-q05-s10",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "ver",
+          "sujeto": "yo",
+          "radical": "ve",
+          "terminacion": "o",
+          "terminaciones": [
+            "o",
+            "a",
+            "e"
+          ],
+          "forma": "veo",
+          "habla": {
+            "es": "yo veo",
+            "voz": "itzel",
+            "audio": "itzel.6d1fddbab4"
+          },
+          "fr": "Moi, je vois…"
+        },
+        {
+          "id": "u09-q05-s11",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "conocer",
+          "sujeto": "yo",
+          "radical": "cono",
+          "terminacion": "zco",
+          "terminaciones": [
+            "zco",
+            "co",
+            "zo"
+          ],
+          "forma": "conozco",
+          "habla": {
+            "es": "yo conozco",
+            "voz": "itzel",
+            "audio": "itzel.749a85e6a7"
+          },
+          "fr": "Moi, je connais…"
+        },
+        {
+          "id": "u09-q05-s12",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Yo ___ tortillas con mi abuela.",
+          "respuesta": "hago",
+          "opciones": [
+            "hago",
+            "hace",
+            "hacer"
+          ],
+          "habla": {
+            "es": "Yo hago tortillas con mi abuela.",
+            "voz": "chabela",
+            "audio": "chabela.20a0b8c592"
+          },
+          "fr": "Je fais des tortillas avec ma grand-mère."
+        },
+        {
+          "id": "u09-q05-s13",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Tú ___ la ciudad de Mérida?",
+          "respuesta": "conoces",
+          "opciones": [
+            "conozco",
+            "conoces",
+            "conoce"
+          ],
+          "habla": {
+            "es": "¿Tú conoces la ciudad de Mérida?",
+            "voz": "itzel",
+            "audio": "itzel.1817492486"
+          },
+          "fr": "Tu connais la ville de Mérida ?"
+        },
+        {
+          "id": "u09-q05-s14",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Veo",
+            "un",
+            "flamenco",
+            "rosa",
+            "en",
+            "el",
+            "mar."
+          ],
+          "habla": {
+            "es": "Veo un flamenco rosa en el mar.",
+            "voz": "itzel",
+            "audio": "itzel.3b18945c7c"
+          },
+          "fr": "Je vois un flamant rose dans la mer."
+        },
+        {
+          "id": "u09-q05-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Mis primos viven en Mérida.",
+            "voz": "itzel",
+            "audio": "itzel.db3e912cb3"
+          },
+          "respuesta": "Mis primos viven en Mérida."
+        }
+      ]
+    },
+    {
+      "id": "u09-q06",
+      "tipo": "lectura",
+      "titulo": "¿Has probado…?",
+      "emoji": "🧩",
+      "intro": {
+        "es": "¿Has visto un jaguar? ¿Has probado la cochinita pibil? ¡Cuéntame!",
+        "fr": "Tu as déjà vu un jaguar ? Tu as déjà goûté la cochinita pibil ? Raconte-moi !",
+        "voz": "itzel",
+        "audio": "itzel.ee1d4407f8"
+      },
+      "pista": "Première découverte du passé composé (he visitado, has probado, ha nadado) : tu reconnais la forme, tu lis un petit récit et tu dis ce que TOI tu as fait. Aucune exigence de maîtrise.",
+      "stats": [
+        "leer",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u09-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "haber"
+          ]
+        },
+        {
+          "id": "u09-q06-s02",
+          "tipo": "grammar_card",
+          "ref": "g_pasado_compuesto"
+        },
+        {
+          "id": "u09-q06-s03",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hoy ___ visitado la pirámide.",
+          "respuesta": "he",
+          "opciones": [
+            "he",
+            "has",
+            "ha"
+          ],
+          "habla": {
+            "es": "Hoy he visitado la pirámide.",
+            "voz": "viajero",
+            "audio": "viajero.ec752435fe"
+          },
+          "fr": "Aujourd’hui, j’ai visité la pyramide."
+        },
+        {
+          "id": "u09-q06-s04",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Itzel ___ nadado en el cenote.",
+          "respuesta": "ha",
+          "opciones": [
+            "he",
+            "has",
+            "ha"
+          ],
+          "habla": {
+            "es": "Itzel ha nadado en el cenote.",
+            "voz": "marina",
+            "audio": "marina.d91c3122ed"
+          },
+          "fr": "Itzel a nagé dans le cénote."
+        },
+        {
+          "id": "u09-q06-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "¿Has ___ la cochinita pibil?",
+          "respuesta": "probado",
+          "opciones": [
+            "probado",
+            "probar",
+            "probo"
+          ],
+          "habla": {
+            "es": "¿Has probado la cochinita pibil?",
+            "voz": "itzel",
+            "audio": "itzel.57c225f203"
+          },
+          "fr": "As-tu goûté la cochinita pibil ?"
+        },
+        {
+          "id": "u09-q06-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Hemos ___ muchos tacos.",
+          "respuesta": "comido",
+          "opciones": [
+            "comido",
+            "comado",
+            "comer"
+          ],
+          "habla": {
+            "es": "Hemos comido muchos tacos.",
+            "voz": "chabela",
+            "audio": "chabela.b65a1f9061"
+          },
+          "fr": "Nous avons mangé beaucoup de tacos."
+        },
+        {
+          "id": "u09-q06-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Hoy he visto un jaguar en la selva.",
+            "voz": "itzel",
+            "audio": "itzel.cf272ac024"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Itzel ha visto un animal grande.",
+              "correcta": true
+            },
+            {
+              "texto": "Itzel ha comido un taco.",
+              "correcta": false
+            },
+            {
+              "texto": "Itzel ha nadado en el mar.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q06-s08",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hoy hemos visitado Chichén Itzá. Hemos visto la pirámide y hemos nadado en un cenote. Álex ha probado un taco muy picante. ¡Ha bebido mucha agua después!",
+            "fr": "Aujourd’hui, nous avons visité Chichén Itzá. Nous avons vu la pyramide et nous avons nagé dans un cénote. Álex a goûté un taco très piquant. Il a bu beaucoup d’eau ensuite ! (« bebido » vient de « beber » ; ce sont des phrases à comprendre, pas à produire.)",
+            "voz": "itzel",
+            "audio": "itzel.29dedb19d2"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué han visitado hoy?",
+                "fr": "Qu’ont-ils visité aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.4d4062e2d7"
+              },
+              "opciones": [
+                {
+                  "texto": "Chichén Itzá.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Madrid.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una biblioteca.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde han nadado?",
+                "fr": "Où ont-ils nagé ?",
+                "voz": "narrador",
+                "audio": "narrador.af2efb5c5d"
+              },
+              "opciones": [
+                {
+                  "texto": "En un cenote.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En una piscina.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En el río de Bogotá.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué ha probado Álex?",
+                "fr": "Qu’a goûté Álex ?",
+                "voz": "narrador",
+                "audio": "narrador.1f66cf1bc2"
+              },
+              "opciones": [
+                {
+                  "texto": "Un taco picante.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un chocolate dulce.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un jaguar.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q06-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Para «comer», el participio es «comido».",
+            "fr": "Pour « comer », le participe est « comido » (j’ai mangé = he comido).",
+            "voz": "narrador",
+            "audio": "narrador.63f43d3989"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u09-q06-s10",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Para «hablar», el participio es «hablido».",
+            "fr": "Pour « hablar », le participe est « hablado » (les verbes en -ar font -ado).",
+            "voz": "narrador",
+            "audio": "narrador.4b09d69398"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u09-q06-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Hemos",
+            "visitado",
+            "Chichén",
+            "Itzá."
+          ],
+          "habla": {
+            "es": "Hemos visitado Chichén Itzá.",
+            "voz": "itzel",
+            "audio": "itzel.ebf5e2657c"
+          },
+          "fr": "Nous avons visité Chichén Itzá."
+        },
+        {
+          "id": "u09-q06-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "itzel",
+          "replica": {
+            "es": "¿Has probado la cochinita pibil?",
+            "fr": "Tu as déjà goûté la cochinita pibil ?",
+            "voz": "itzel",
+            "audio": "itzel.57c225f203"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, he probado la cochinita pibil. ¡Es deliciosa!",
+                "voz": "viajero",
+                "audio": "viajero.a389484791"
+              },
+              "fr": "Oui, j’ai goûté la cochinita pibil. Elle est délicieuse !",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bueno! Es el plato más típico de Yucatán.",
+                "fr": "Super ! C’est le plat le plus typique du Yucatán.",
+                "voz": "itzel",
+                "audio": "itzel.cb5a28f299",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, no he probado la cochinita pibil.",
+                "voz": "viajero",
+                "audio": "viajero.323a0af93c"
+              },
+              "fr": "Non, je n’ai pas goûté la cochinita pibil.",
+              "correcta": true,
+              "reaccion": {
+                "es": "No hay problema. ¡Hoy la vas a probar!",
+                "fr": "Pas de problème. Aujourd’hui, tu vas la goûter !",
+                "voz": "itzel",
+                "audio": "itzel.9065d53409",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, he sido una cochinita.",
+                "voz": "viajero",
+                "audio": "viajero.e29240707f"
+              },
+              "fr": "Oui, j’ai été une cochinita.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú, una cochinita? ¡Qué divertido!",
+                "fr": "Toi, une cochinita ? Comme c’est drôle !",
+                "voz": "itzel",
+                "audio": "itzel.95b8b800f2",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q06-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué has probado TÚ.",
+            "fr": "Écoute et dis ce que TU as déjà goûté (los espaguetis, la paella, el chocolate…). Tu peux dire une vérité ou t’amuser.",
+            "voz": "narrador",
+            "audio": "narrador.4fcade77f4"
+          },
+          "objetivo": {
+            "es": "He probado los tacos.",
+            "fr": "J’ai goûté les tacos. (dis ce que tu as goûté)",
+            "voz": "viajero",
+            "audio": "viajero.23c0cd6d45"
+          },
+          "aceptadas": [
+            "he probado los tacos"
+          ],
+          "patrones": [
+            "he probado {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del sabor",
+            "efecto": "Un perfume de especias llena el aire"
+          }
+        },
+        {
+          "id": "u09-q06-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe qué has hecho en tu vida.",
+            "fr": "Écris ce que tu as déjà fait dans ta vie.",
+            "voz": "narrador",
+            "audio": "narrador.183dc5c389"
+          },
+          "plantilla": "He visitado ___. He probado ___. He visto ___.",
+          "campos": [
+            {
+              "id": "lugar",
+              "pista": "Un endroit que tu as visité (París, Madrid, un museo…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "comida",
+              "pista": "Un plat que tu as goûté (la paella, los tacos, el chocolate…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "cosa",
+              "pista": "Quelque chose que tu as vu (un delfín, un volcán, un castillo…, avec l’article)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "He visitado Madrid. He probado los tacos. He visto un delfín.",
+            "fr": "J’ai visité Madrid. J’ai goûté les tacos. J’ai vu un dauphin.",
+            "voz": "viajero",
+            "audio": "viajero.9a1cabdf45"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u09-q07",
+      "tipo": "cultura",
+      "titulo": "Chichén Itzá y los cenotes",
+      "emoji": "🔺",
+      "intro": {
+        "es": "Esta es la pirámide de Kukulcán, la serpiente con plumas. ¡Como el Quetzal!",
+        "fr": "Voici la pyramide de Kukulcán, le serpent à plumes. Comme le Quetzal !",
+        "voz": "chan",
+        "audio": "chan.7b2ea06666"
+      },
+      "pista": "Chichén Itzá (patrimoine mondial), Kukulcán, les cénotes, les Mayas d’aujourd’hui ; puis tu décris un lieu de TON pays avec es, está et hay.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u09-q07-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u09-capsula-mayas",
+          "escena": {
+            "id": "u09-capsula-mayas",
+            "tipo": "capsula",
+            "titulo": "Mayas y aztecas",
+            "duracion": 24,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : une carte du Mexique, le sud-est en vert pour les Mayas, le centre en orange pour les Aztèques.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Mayas y aztecas son dos pueblos de México. Los mayas viven en el sureste y los aztecas en el centro.",
+                    "fr": "Mayas et Aztèques sont deux peuples du Mexique. Les Mayas vivent dans le sud-est et les Aztèques au centre.",
+                    "voz": "narrador",
+                    "audio": "narrador.21b4e7a74c"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "La pyramide d’El Castillo vue de face ; quatre escaliers s’illuminent, un compteur affiche « 91 × 4 + 1 = 365 ».",
+                "lineas": [
+                  {
+                    "es": "La pirámide de Chichén Itzá tiene trescientos sesenta y cinco escalones, como los días del año.",
+                    "fr": "La pyramide de Chichén Itzá a trois cent soixante-cinq marches, comme les jours de l’année.",
+                    "voz": "narrador",
+                    "audio": "narrador.075f7b4c62"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "À l’équinoxe de printemps ou d’automne, une ombre en dents de scie descend l’escalier nord de la pyramide et rejoint la tête de serpent en pierre au pied de l’escalier.",
+                "lineas": [
+                  {
+                    "es": "En primavera y en otoño, la sombra de una serpiente baja por la pirámide.",
+                    "fr": "Au printemps et en automne, l’ombre d’un serpent descend le long de la pyramide.",
+                    "voz": "narrador",
+                    "audio": "narrador.3c65aaea0a"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Une île au milieu d’un lac, des chaussées, des canaux : Tenochtitlan ; fondu enchaîné vers un plan de Ciudad de México avec ses gratte-ciel.",
+                "lineas": [
+                  {
+                    "es": "Los aztecas construyen Tenochtitlan en un lago. Hoy esa ciudad es Ciudad de México.",
+                    "fr": "Les Aztèques construisent Tenochtitlan sur un lac. Aujourd’hui, cette ville est Mexico.",
+                    "voz": "narrador",
+                    "audio": "narrador.f363744878"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 5,
+                "vista": "Des grains de cacao, un épi de maïs, des tortillas qui tournent ; une tasse de chocolat fumant avec un piment à côté.",
+                "lineas": [
+                  {
+                    "es": "Mayas y aztecas comen maíz y beben chocolate. ¡Pero su chocolate no es dulce!",
+                    "fr": "Mayas et Aztèques mangent du maïs et boivent du chocolat. Mais leur chocolat n’est pas sucré !",
+                    "voz": "narrador",
+                    "audio": "narrador.951b2d84f6"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u09-q07-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Kukulcán es una serpiente con plumas.",
+            "fr": "Kukulcán est un serpent à plumes.",
+            "voz": "narrador",
+            "audio": "narrador.b1433f015d"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u09-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los cenotes están en Argentina.",
+            "fr": "Les cénotes sont en Argentine. (Faux : ils sont au Yucatán, au Mexique.)",
+            "voz": "narrador",
+            "audio": "narrador.526357bf76"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u09-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Hoy ya no hay mayas en México.",
+            "fr": "Aujourd’hui, il n’y a plus de Mayas au Mexique. (Faux : des millions de Mayas vivent au Mexique et au Guatemala, et beaucoup parlent encore le maya.)",
+            "voz": "narrador",
+            "audio": "narrador.cbf9da61dc"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u09-q07-s05",
+          "tipo": "grammar_card",
+          "ref": "g_describir_lugar"
+        },
+        {
+          "id": "u09-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, la sombra del sol dibuja una serpiente en la escalera de la pirámide.",
+            "fr": "Chichén Itzá est une ancienne ville maya au Yucatán. Sa pyramide la plus célèbre s’appelle El Castillo ou pyramide de Kukulcán. Kukulcán est un serpent à plumes, comme le Quetzal. Au printemps et en automne, l’ombre du soleil dessine un serpent sur l’escalier de la pyramide. (Chichén Itzá est inscrite au patrimoine mondial de l’UNESCO depuis 1988 ; son nom vient du maya « chi’ chʼen », la bouche du puits.)",
+            "voz": "chan",
+            "audio": "chan.b4c3749267"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde está Chichén Itzá?",
+                "fr": "Où est Chichén Itzá ?",
+                "voz": "narrador",
+                "audio": "narrador.325a04d85c"
+              },
+              "opciones": [
+                {
+                  "texto": "En Yucatán.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En Perú.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En Colombia.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quién es Kukulcán?",
+                "fr": "Qui est Kukulcán ?",
+                "voz": "narrador",
+                "audio": "narrador.3cd4045533"
+              },
+              "opciones": [
+                {
+                  "texto": "Una serpiente con plumas.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un jaguar enorme.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un guía de museo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuándo aparece la serpiente de sombra?",
+                "fr": "Quand apparaît le serpent d’ombre ?",
+                "voz": "narrador",
+                "audio": "narrador.a5b9cd4197"
+              },
+              "opciones": [
+                {
+                  "texto": "En primavera y en otoño.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo en Navidad.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Todos los lunes.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q07-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Un cenote es un pozo natural. En Yucatán hay miles. El agua es muy limpia y fresca. Para los mayas, los cenotes son lugares sagrados: allí viven los dioses del agua y de la lluvia. Hoy muchos turistas nadan en ellos, pero tienen que cuidar el agua.",
+            "fr": "Un cénote est un puits naturel. Au Yucatán, il y en a des milliers. L’eau est très propre et fraîche. Pour les Mayas, les cénotes sont des lieux sacrés : les dieux de l’eau et de la pluie y vivent. Aujourd’hui, de nombreux touristes y nagent, mais ils doivent protéger l’eau.",
+            "voz": "itzel",
+            "audio": "itzel.3b21bcc99d"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo es el agua de un cenote?",
+                "fr": "Comment est l’eau d’un cénote ?",
+                "voz": "narrador",
+                "audio": "narrador.eb284e422e"
+              },
+              "opciones": [
+                {
+                  "texto": "Limpia y fresca.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Caliente y sucia.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Dulce y roja.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Quién vive allí, para los mayas?",
+                "fr": "Qui y vit, pour les Mayas ?",
+                "voz": "narrador",
+                "audio": "narrador.222a998ca7"
+              },
+              "opciones": [
+                {
+                  "texto": "Los dioses del agua y de la lluvia.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Los aztecas.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Los jaguares blancos.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q07-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Muchos mayas de hoy hablan maya y español.",
+            "voz": "chan",
+            "audio": "chan.8ad7ab4417"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hoy en México hay personas que hablan dos lenguas.",
+              "correcta": true
+            },
+            {
+              "texto": "Los mayas ya no existen.",
+              "correcta": false
+            },
+            {
+              "texto": "Todos hablan solo maya.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "chan",
+          "replica": {
+            "es": "Yucatán es una región caliente. ¿Cómo es tu región?",
+            "fr": "Le Yucatán est une région chaude. Comment est ta région ?",
+            "voz": "chan",
+            "audio": "chan.23c45f52fc"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Mi región es tranquila y verde.",
+                "voz": "viajero",
+                "audio": "viajero.4df650f0a2"
+              },
+              "fr": "Ma région est calme et verte.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bonito! Me gustaría visitarla.",
+                "fr": "Que c’est beau ! J’aimerais la visiter.",
+                "voz": "chan",
+                "audio": "chan.afec4268bf",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi región está caliente y verde.",
+                "voz": "viajero",
+                "audio": "viajero.d1ea29075b"
+              },
+              "fr": "Ma région est (estar) chaude et verte.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Se dice «es verde»: la región es verde, no «está».",
+                "fr": "On dit « es verde » : la région est verte (c’est une caractéristique), pas « está ».",
+                "voz": "chan",
+                "audio": "chan.19b37e39bc",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi región hay montañas.",
+                "voz": "viajero",
+                "audio": "viajero.3841f31244"
+              },
+              "fr": "Ma région il y a des montagnes.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «hay» no decimos «mi región hay». ¡Otra vez!",
+                "fr": "Avec « hay », on ne dit pas « mi región hay ». Encore une fois !",
+                "voz": "chan",
+                "audio": "chan.5a1ebc0e12",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q07-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En Yucatán ___ miles de cenotes.",
+          "respuesta": "hay",
+          "opciones": [
+            "hay",
+            "es",
+            "está"
+          ],
+          "habla": {
+            "es": "En Yucatán hay miles de cenotes.",
+            "voz": "itzel",
+            "audio": "itzel.f23dea6d3d"
+          },
+          "fr": "Au Yucatán, il y a des milliers de cénotes."
+        },
+        {
+          "id": "u09-q07-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Chichén Itzá ___ en el sureste de México.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "hay"
+          ],
+          "habla": {
+            "es": "Chichén Itzá está en el sureste de México.",
+            "voz": "chan",
+            "audio": "chan.36e41549e1"
+          },
+          "fr": "Chichén Itzá est dans le sud-est du Mexique."
+        },
+        {
+          "id": "u09-q07-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Describe tu ciudad.",
+            "fr": "Décris ta ville.",
+            "voz": "narrador",
+            "audio": "narrador.38d85937c0"
+          },
+          "plantilla": "Mi ciudad es ___. Está en ___. Hay ___.",
+          "campos": [
+            {
+              "id": "como",
+              "pista": "Comment est ta ville ? (grande, bonita, tranquila, antigua…, au féminin)",
+              "tipo": "texto"
+            },
+            {
+              "id": "donde",
+              "pista": "Où est-elle ? (el norte de Francia, el centro del país…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "hay",
+              "pista": "Ce qu’il y a (un río, muchos parques, un museo…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi ciudad es grande y bonita. Está en el centro de Francia. Hay un río y muchos parques.",
+            "fr": "Ma ville est grande et jolie. Elle est au centre de la France. Il y a une rivière et beaucoup de parcs.",
+            "voz": "viajero",
+            "audio": "viajero.4913de7056"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u09-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cómo es TU ciudad.",
+            "fr": "Écoute et dis comment est TA ville (muy bonita, pequeña, tranquila…). Attention : « ciudad » est féminin.",
+            "voz": "narrador",
+            "audio": "narrador.691f7794a9"
+          },
+          "objetivo": {
+            "es": "Mi ciudad es muy grande.",
+            "fr": "Ma ville est très grande. (dis comment est la tienne)",
+            "voz": "viajero",
+            "audio": "viajero.627af81220"
+          },
+          "aceptadas": [
+            "mi ciudad es muy grande"
+          ],
+          "patrones": [
+            "mi ciudad es {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del lugar",
+            "efecto": "Tu ciudad aparece en un cenote de luz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u09-q08",
+      "tipo": "desafio",
+      "titulo": "El silencio de las piedras",
+      "emoji": "🗿",
+      "intro": {
+        "es": "Sin historia, nadie habla. Yo guardo las piedras mudas.",
+        "fr": "Sans histoire, personne ne parle. Je garde les pierres muettes.",
+        "voz": "sombra",
+        "audio": "sombra.69c48e578e"
+      },
+      "pista": "Boss du Yucatán : révision mixte des unités 1 à 9 (présentation, description, maison, présent, nature, gastronomie, premier passé composé) pour rendre la parole aux pierres.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 10
+      },
+      "steps": [
+        {
+          "id": "u09-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Cómo te llamas? ¿Cómo eres?",
+            "fr": "Comment tu t’appelles ? Comment es-tu ?",
+            "voz": "sombra",
+            "audio": "sombra.0583c5e5b3"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex. Tengo el pelo corto y soy simpático.",
+                "voz": "viajero",
+                "audio": "viajero.af9c211078"
+              },
+              "fr": "Je m’appelle Álex. J’ai les cheveux courts et je suis sympathique.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Ya conozco tu cara…",
+                "fr": "Grr ! Je connais déjà ton visage…",
+                "voz": "sombra",
+                "audio": "sombra.db739184f6",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy el pelo y tengo simpático.",
+                "voz": "viajero",
+                "audio": "viajero.59049b7e49"
+              },
+              "fr": "Je suis les cheveux et j’ai sympathique.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós.",
+                "voz": "viajero",
+                "audio": "viajero.9961cceabf"
+              },
+              "fr": "Au revoir.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te vas sin responder.",
+                "fr": "Tu ne pars pas sans répondre.",
+                "voz": "sombra",
+                "audio": "sombra.0c306a1a68",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Qué comes en México?",
+            "fr": "Que manges-tu au Mexique ?",
+            "voz": "sombra",
+            "audio": "sombra.d40bbd05b3"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Como tacos y tortillas de maíz.",
+                "voz": "viajero",
+                "audio": "viajero.1d4fc4d9da"
+              },
+              "fr": "Je mange des tacos et des tortillas de maïs.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Un sabor más que vuelve…",
+                "fr": "Aaah ! Encore une saveur qui revient…",
+                "voz": "sombra",
+                "audio": "sombra.77284d6dc7",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Como piedras y pirámides.",
+                "voz": "viajero",
+                "audio": "viajero.76c0479f46"
+              },
+              "fr": "Je mange des pierres et des pyramides.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… ¿tienes tanta hambre?",
+                "fr": "Mmm… tu as si faim que ça ?",
+                "voz": "sombra",
+                "audio": "sombra.ab16ad05cc",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Como el cenote.",
+                "voz": "viajero",
+                "audio": "viajero.1eded5f811"
+              },
+              "fr": "Je mange le cénote.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no se come. ¡Otra vez!",
+                "fr": "Ça ne se mange pas. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5947224ba0",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "cenote",
+            "voz": "itzel",
+            "audio": "itzel.8403bd6821"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "selva",
+              "correcta": false
+            },
+            {
+              "vocab": "cenote",
+              "correcta": true
+            },
+            {
+              "vocab": "playa",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los mayas y los aztecas beben chocolate con chile.",
+            "voz": "sombra",
+            "audio": "sombra.2ef6e44c7f"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "El chocolate antiguo de México es picante.",
+              "correcta": true
+            },
+            {
+              "texto": "El chocolate antiguo de México es muy dulce.",
+              "correcta": false
+            },
+            {
+              "texto": "El chocolate antiguo de México es azul.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "maiz"
+            },
+            {
+              "vocab": "tortilla_mx"
+            },
+            {
+              "vocab": "cacao"
+            },
+            {
+              "vocab": "chocolate_nav"
+            },
+            {
+              "vocab": "aguacate"
+            },
+            {
+              "vocab": "chile"
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Chichén Itzá ___ en Yucatán.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "hay"
+          ],
+          "habla": {
+            "es": "Chichén Itzá está en Yucatán.",
+            "voz": "itzel",
+            "audio": "itzel.68327d6d59"
+          },
+          "fr": "Chichén Itzá est au Yucatán."
+        },
+        {
+          "id": "u09-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mis primos ___ en México.",
+          "respuesta": "viven",
+          "opciones": [
+            "viven",
+            "vive",
+            "vivo"
+          ],
+          "habla": {
+            "es": "Mis primos viven en México.",
+            "voz": "marina",
+            "audio": "marina.2e98ace206"
+          },
+          "fr": "Mes cousins habitent au Mexique."
+        },
+        {
+          "id": "u09-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Itzel ___ maya y español.",
+          "respuesta": "habla",
+          "opciones": [
+            "habla",
+            "hablo",
+            "hablan"
+          ],
+          "habla": {
+            "es": "Itzel habla maya y español.",
+            "voz": "itzel",
+            "audio": "itzel.211ae36df6"
+          },
+          "fr": "Itzel parle maya et espagnol."
+        },
+        {
+          "id": "u09-q08-s09",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "conocer",
+          "sujeto": "yo",
+          "radical": "cono",
+          "terminacion": "zco",
+          "terminaciones": [
+            "zco",
+            "co",
+            "zo"
+          ],
+          "forma": "conozco",
+          "habla": {
+            "es": "yo conozco",
+            "voz": "itzel",
+            "audio": "itzel.749a85e6a7"
+          },
+          "fr": "Moi, je connais…"
+        },
+        {
+          "id": "u09-q08-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Álex ___ probado un taco picante.",
+          "respuesta": "ha",
+          "opciones": [
+            "he",
+            "has",
+            "ha"
+          ],
+          "habla": {
+            "es": "Álex ha probado un taco picante.",
+            "voz": "marina",
+            "audio": "marina.7e5a84aef7"
+          },
+          "fr": "Álex a goûté un taco piquant."
+        },
+        {
+          "id": "u09-q08-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Los",
+            "mayas",
+            "construyen",
+            "pirámides",
+            "de",
+            "piedra."
+          ],
+          "habla": {
+            "es": "Los mayas construyen pirámides de piedra.",
+            "voz": "chan",
+            "audio": "chan.9379a94833"
+          },
+          "fr": "Les Mayas construisent des pyramides en pierre."
+        },
+        {
+          "id": "u09-q08-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi cumpleaños es el veintiuno de marzo.",
+            "voz": "itzel",
+            "audio": "itzel.f58f014d62"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "21 de marzo",
+              "correcta": true
+            },
+            {
+              "texto": "12 de marzo",
+              "correcta": false
+            },
+            {
+              "texto": "21 de mayo",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s13",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Itzel. Tengo doce años y vivo cerca de Chichén Itzá. Mi casa es pequeña, con un patio y muchas flores. Mi abuela hace tortillas todos los días. Hoy estoy muy contenta: he conocido a dos viajeros.",
+            "fr": "Salut, c’est Itzel. J’ai douze ans et j’habite près de Chichén Itzá. Ma maison est petite, avec un patio et beaucoup de fleurs. Ma grand-mère fait des tortillas tous les jours. Aujourd’hui, je suis très contente : j’ai fait la connaissance de deux voyageurs.",
+            "voz": "itzel",
+            "audio": "itzel.a153697bd8"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde vive Itzel?",
+                "fr": "Où habite Itzel ?",
+                "voz": "narrador",
+                "audio": "narrador.37baf9c44c"
+              },
+              "opciones": [
+                {
+                  "texto": "Cerca de Chichén Itzá.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En Bogotá.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En Madrid.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo es su casa?",
+                "fr": "Comment est sa maison ?",
+                "voz": "narrador",
+                "audio": "narrador.3b5c47b723"
+              },
+              "opciones": [
+                {
+                  "texto": "Pequeña, con un patio.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Muy alta, sin patio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Grande, con piscina.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Por qué está contenta hoy?",
+                "fr": "Pourquoi est-elle contente aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.3355349706"
+              },
+              "opciones": [
+                {
+                  "texto": "Ha conocido a dos viajeros.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Ha ganado un premio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Tiene un jaguar.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u09-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Vivo en París y hoy estoy en México.",
+            "fr": "Salut, je m’appelle Álex. J’habite à Paris et aujourd’hui je suis au Mexique. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.6078d7b38b"
+          },
+          "aceptadas": [
+            "hola me llamo álex vivo en parís y hoy estoy en méxico"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} vivo en parís y hoy estoy en méxico"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Las piedras de la pirámide recuperan sus dibujos!"
+          }
+        },
+        {
+          "id": "u09-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u09-pluma",
+          "escena": {
+            "id": "u09-pluma",
+            "tipo": "pluma",
+            "titulo": "Novena pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Dans le cénote, la plume verte monte lentement dans l’eau turquoise jusqu’au rayon de lumière. Là-haut, les dessins reviennent sur les pierres de la pyramide, un à un.",
+                "personajes": [
+                  "itzel"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Las piedras hablan otra vez! ¡Gracias!",
+                    "fr": "Les pierres parlent de nouveau ! Merci !",
+                    "voz": "itzel",
+                    "audio": "itzel.21bbb64f82"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal survole la forêt, la queue très longue et brillante, pour la première fois presque entier.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Nueve plumas. ¡Una más y vuelvo a volar con todo mi cuerpo!",
+                    "fr": "Neuf plumes. Une de plus et je vole de nouveau avec tout mon corps !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.b9d73b43cd"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse longe la côte pacifique et grimpe vers les Andes du Pérou.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La última pluma está en Perú, en los Andes. ¡Vamos a Cusco!",
+                    "fr": "La dernière plume est au Pérou, dans les Andes. Direction Cusco !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.e5f7dc96de"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 9,
+    "nombre": "Pluma de la Memoria",
+    "descripcion": {
+      "es": "Nueve plumas. Las piedras hablan… ¡y yo recuerdo mi casa!",
+      "fr": "Neuf plumes. Les pierres parlent… et je me souviens de ma maison !",
+      "voz": "quetzal",
+      "audio": "quetzal.e9b7378596"
+    }
+  }
+}

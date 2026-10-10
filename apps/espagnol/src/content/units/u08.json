@@ -1,0 +1,4960 @@
+{
+  "id": "u08",
+  "numero": 8,
+  "titulo": "Mi casa y mi barrio",
+  "lugar": "Bogotá",
+  "emoji": "🏙️",
+  "ejes": [
+    2
+  ],
+  "periodo": "fév-mars",
+  "objetivos": [
+    {
+      "es": "Describir mi casa y mi dormitorio.",
+      "fr": "Décrire ma maison et ma chambre."
+    },
+    {
+      "es": "Decir qué hay en mi barrio y en mi ciudad.",
+      "fr": "Dire ce qu’il y a dans mon quartier et dans ma ville."
+    },
+    {
+      "es": "Situar un lugar o un objeto: cerca de, detrás de, a la derecha de…",
+      "fr": "Situer un lieu ou un objet : près de, derrière, à droite de…"
+    },
+    {
+      "es": "Usar bien «hay» (hay un parque) y «está» (el parque está cerca).",
+      "fr": "Bien employer « hay » (hay un parque) et « está » (el parque está cerca)."
+    },
+    {
+      "es": "Comparar con «más… que», «menos… que» y «tan… como».",
+      "fr": "Comparer avec « más… que », « menos… que » et « tan… como »."
+    },
+    {
+      "es": "Conocer Bogotá (La Candelaria, Monserrate, la Ciclovía) y comparar ciudades hispánicas.",
+      "fr": "Connaître Bogotá (La Candelaria, Monserrate, la Ciclovía) et comparer des villes hispaniques."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "apartamento",
+      "es": "apartamento",
+      "fr": "appartement (en Espagne on dit plutôt « piso »)",
+      "genero": "m",
+      "plural": "apartamentos",
+      "emoji": "🏢",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Camila vive en un apartamento.",
+        "fr": "Camila habite dans un appartement.",
+        "voz": "narrador",
+        "audio": "narrador.28746a8719"
+      },
+      "audio": "narrador.af51e888f8"
+    },
+    {
+      "id": "piso",
+      "es": "piso",
+      "fr": "étage ; en Espagne, aussi « appartement »",
+      "genero": "m",
+      "plural": "pisos",
+      "ilustracion": "Un immeuble coupé en tranches qui montre trois étages empilés",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Mi dormitorio está en el segundo piso.",
+        "fr": "Ma chambre est au deuxième étage.",
+        "voz": "narrador",
+        "audio": "narrador.bf9bee7bbd"
+      },
+      "audio": "narrador.90d94ae30f"
+    },
+    {
+      "id": "ventana",
+      "es": "ventana",
+      "fr": "fenêtre",
+      "genero": "f",
+      "plural": "ventanas",
+      "emoji": "🪟",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "La ventana está abierta.",
+        "fr": "La fenêtre est ouverte.",
+        "voz": "narrador",
+        "audio": "narrador.5d75a51630"
+      },
+      "audio": "narrador.39252f2ffc"
+    },
+    {
+      "id": "puerta",
+      "es": "puerta",
+      "fr": "porte",
+      "genero": "f",
+      "plural": "puertas",
+      "emoji": "🚪",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "La puerta de mi casa es azul.",
+        "fr": "La porte de ma maison est bleue.",
+        "voz": "narrador",
+        "audio": "narrador.964b74337b"
+      },
+      "audio": "narrador.16924b922b"
+    },
+    {
+      "id": "balcon",
+      "es": "balcón",
+      "fr": "balcon",
+      "genero": "m",
+      "plural": "balcones",
+      "ilustracion": "Un balcon en fer forgé avec des pots de fleurs sur une façade colorée",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Hay flores en el balcón.",
+        "fr": "Il y a des fleurs sur le balcon.",
+        "voz": "narrador",
+        "audio": "narrador.168b1ffdf3"
+      },
+      "audio": "narrador.4528aefc9d"
+    },
+    {
+      "id": "escalera",
+      "es": "escalera",
+      "fr": "escalier (souvent « las escaleras » au pluriel)",
+      "genero": "f",
+      "plural": "escaleras",
+      "ilustracion": "Un escalier en bois qui monte vers l’étage",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Subo por la escalera.",
+        "fr": "Je monte par l’escalier.",
+        "voz": "narrador",
+        "audio": "narrador.cd1bce3db7"
+      },
+      "audio": "narrador.67bf02296f"
+    },
+    {
+      "id": "pared",
+      "es": "pared",
+      "fr": "mur (d’une pièce)",
+      "genero": "f",
+      "plural": "paredes",
+      "emoji": "🧱",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Hay un cuadro en la pared.",
+        "fr": "Il y a un tableau sur le mur.",
+        "voz": "narrador",
+        "audio": "narrador.b691f0bcac"
+      },
+      "audio": "narrador.ce9bd87a42"
+    },
+    {
+      "id": "cama",
+      "es": "cama",
+      "fr": "lit",
+      "genero": "f",
+      "plural": "camas",
+      "emoji": "🛏️",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Mi cama es muy grande.",
+        "fr": "Mon lit est très grand.",
+        "voz": "narrador",
+        "audio": "narrador.597f90b308"
+      },
+      "audio": "narrador.1bef95abfc"
+    },
+    {
+      "id": "sofa",
+      "es": "sofá",
+      "fr": "canapé",
+      "genero": "m",
+      "plural": "sofás",
+      "emoji": "🛋️",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "El sofá del salón es verde.",
+        "fr": "Le canapé du salon est vert.",
+        "voz": "narrador",
+        "audio": "narrador.da819e5dc8"
+      },
+      "audio": "narrador.b6190998af"
+    },
+    {
+      "id": "armario",
+      "es": "armario",
+      "fr": "armoire, placard",
+      "genero": "m",
+      "plural": "armarios",
+      "ilustracion": "Une grande armoire en bois ouverte avec des vêtements pliés",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "Mi ropa está en el armario.",
+        "fr": "Mes vêtements sont dans l’armoire.",
+        "voz": "narrador",
+        "audio": "narrador.8cae1077b5"
+      },
+      "audio": "narrador.2b9379369a"
+    },
+    {
+      "id": "lampara",
+      "es": "lámpara",
+      "fr": "lampe",
+      "genero": "f",
+      "plural": "lámparas",
+      "emoji": "💡",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "La lámpara está encendida.",
+        "fr": "La lampe est allumée.",
+        "voz": "narrador",
+        "audio": "narrador.035b168a8e"
+      },
+      "audio": "narrador.87801c5ce3"
+    },
+    {
+      "id": "nevera",
+      "es": "nevera",
+      "fr": "réfrigérateur (au Mexique : « refrigerador »)",
+      "genero": "f",
+      "plural": "neveras",
+      "ilustracion": "Un réfrigérateur blanc ouvert, avec du lait et des fruits à l’intérieur",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "La leche está en la nevera.",
+        "fr": "Le lait est dans le réfrigérateur.",
+        "voz": "marta",
+        "audio": "marta.581c123808"
+      },
+      "audio": "marta.81919f80d6",
+      "voz": "marta"
+    },
+    {
+      "id": "alfombra",
+      "es": "alfombra",
+      "fr": "tapis",
+      "genero": "f",
+      "plural": "alfombras",
+      "ilustracion": "Un tapis rond coloré posé sur un parquet",
+      "tags": [
+        "casa"
+      ],
+      "ejemplo": {
+        "es": "El gato duerme en la alfombra.",
+        "fr": "Le chat dort sur le tapis.",
+        "voz": "narrador",
+        "audio": "narrador.037eb83950"
+      },
+      "audio": "narrador.22015a1bac"
+    },
+    {
+      "id": "barrio",
+      "es": "barrio",
+      "fr": "quartier",
+      "genero": "m",
+      "plural": "barrios",
+      "emoji": "🏘️",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Mi barrio es muy tranquilo.",
+        "fr": "Mon quartier est très calme.",
+        "voz": "camila",
+        "audio": "camila.369bd8564a"
+      },
+      "audio": "camila.2ce33323f0",
+      "voz": "camila"
+    },
+    {
+      "id": "ciudad",
+      "es": "ciudad",
+      "fr": "ville",
+      "genero": "f",
+      "plural": "ciudades",
+      "emoji": "🏙️",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Bogotá es una ciudad muy grande.",
+        "fr": "Bogotá est une très grande ville.",
+        "voz": "narrador",
+        "audio": "narrador.564ec6744d"
+      },
+      "audio": "narrador.7227e71007"
+    },
+    {
+      "id": "calle",
+      "es": "calle",
+      "fr": "rue",
+      "genero": "f",
+      "plural": "calles",
+      "ilustracion": "Une rue étroite aux pavés, bordée de maisons colorées",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Mi casa está en esta calle.",
+        "fr": "Ma maison est dans cette rue.",
+        "voz": "narrador",
+        "audio": "narrador.6891f1917b"
+      },
+      "audio": "narrador.8f9f97eb45"
+    },
+    {
+      "id": "plaza",
+      "es": "plaza",
+      "fr": "place (d’une ville)",
+      "genero": "f",
+      "plural": "plazas",
+      "ilustracion": "Une grande place pavée avec une fontaine et des pigeons",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "La plaza tiene una fuente.",
+        "fr": "La place a une fontaine.",
+        "voz": "narrador",
+        "audio": "narrador.2cd490740d"
+      },
+      "audio": "narrador.2366c31fc3"
+    },
+    {
+      "id": "parque",
+      "es": "parque",
+      "fr": "parc",
+      "genero": "m",
+      "plural": "parques",
+      "emoji": "🏞️",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Hay un parque cerca de mi casa.",
+        "fr": "Il y a un parc près de chez moi.",
+        "voz": "narrador",
+        "audio": "narrador.f14959aee9"
+      },
+      "audio": "narrador.6aa440a467"
+    },
+    {
+      "id": "iglesia",
+      "es": "iglesia",
+      "fr": "église",
+      "genero": "f",
+      "plural": "iglesias",
+      "emoji": "⛪",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "La iglesia es muy antigua.",
+        "fr": "L’église est très ancienne.",
+        "voz": "narrador",
+        "audio": "narrador.5d805fee8a"
+      },
+      "audio": "narrador.f163153f77"
+    },
+    {
+      "id": "biblioteca",
+      "es": "biblioteca",
+      "fr": "bibliothèque",
+      "genero": "f",
+      "plural": "bibliotecas",
+      "emoji": "📚",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Leo libros en la biblioteca.",
+        "fr": "Je lis des livres à la bibliothèque.",
+        "voz": "narrador",
+        "audio": "narrador.b7919f0741"
+      },
+      "audio": "narrador.973f3077d2"
+    },
+    {
+      "id": "tienda",
+      "es": "tienda",
+      "fr": "magasin, boutique",
+      "genero": "f",
+      "plural": "tiendas",
+      "emoji": "🏪",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "La tienda abre a las nueve.",
+        "fr": "Le magasin ouvre à neuf heures.",
+        "voz": "narrador",
+        "audio": "narrador.05efdfecfa"
+      },
+      "audio": "narrador.5863769637"
+    },
+    {
+      "id": "mercado",
+      "es": "mercado",
+      "fr": "marché",
+      "genero": "m",
+      "plural": "mercados",
+      "ilustracion": "Un marché animé avec des étals de fruits et de légumes colorés",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "En el mercado hay frutas de colores.",
+        "fr": "Au marché, il y a des fruits colorés.",
+        "voz": "narrador",
+        "audio": "narrador.154c4bad3d"
+      },
+      "audio": "narrador.a822bd0a82"
+    },
+    {
+      "id": "farmacia",
+      "es": "farmacia",
+      "fr": "pharmacie",
+      "genero": "f",
+      "plural": "farmacias",
+      "emoji": "💊",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "La farmacia está en la esquina.",
+        "fr": "La pharmacie est au coin de la rue.",
+        "voz": "narrador",
+        "audio": "narrador.584f79ca8a"
+      },
+      "audio": "narrador.fb430e74e5"
+    },
+    {
+      "id": "panaderia",
+      "es": "panadería",
+      "fr": "boulangerie",
+      "genero": "f",
+      "plural": "panaderías",
+      "emoji": "🥖",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "En la panadería hay pan caliente.",
+        "fr": "À la boulangerie, il y a du pain chaud.",
+        "voz": "narrador",
+        "audio": "narrador.a143462251"
+      },
+      "audio": "narrador.90c4483bc7"
+    },
+    {
+      "id": "cine",
+      "es": "cine",
+      "fr": "cinéma",
+      "genero": "m",
+      "plural": "cines",
+      "emoji": "🎬",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "El cine está al lado del parque.",
+        "fr": "Le cinéma est à côté du parc.",
+        "voz": "narrador",
+        "audio": "narrador.c89d37c204"
+      },
+      "audio": "narrador.2ffb113581"
+    },
+    {
+      "id": "estacion",
+      "es": "estación",
+      "fr": "gare, station",
+      "genero": "f",
+      "plural": "estaciones",
+      "emoji": "🚉",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "La estación de autobuses es grande.",
+        "fr": "La gare routière est grande.",
+        "voz": "narrador",
+        "audio": "narrador.2e91ea1ca4"
+      },
+      "audio": "narrador.1ccac4ca60"
+    },
+    {
+      "id": "edificio",
+      "es": "edificio",
+      "fr": "immeuble, bâtiment",
+      "genero": "m",
+      "plural": "edificios",
+      "emoji": "🏢",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Vivo en un edificio alto.",
+        "fr": "J’habite dans un immeuble élevé.",
+        "voz": "narrador",
+        "audio": "narrador.5860f682e2"
+      },
+      "audio": "narrador.affe4c6c96"
+    },
+    {
+      "id": "autobus",
+      "es": "autobús",
+      "fr": "bus, autocar (en Colombie, « bus » ; au Mexique, « camión »)",
+      "genero": "m",
+      "plural": "autobuses",
+      "emoji": "🚌",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "El autobús rojo pasa por mi calle.",
+        "fr": "Le bus rouge passe dans ma rue.",
+        "voz": "narrador",
+        "audio": "narrador.ecfe7c3a6c"
+      },
+      "audio": "narrador.75b2634ad9"
+    },
+    {
+      "id": "bicicleta",
+      "es": "bicicleta",
+      "fr": "vélo (familier : « bici »)",
+      "genero": "f",
+      "plural": "bicicletas",
+      "emoji": "🚲",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Los domingos voy en bicicleta.",
+        "fr": "Le dimanche, je vais à vélo.",
+        "voz": "narrador",
+        "audio": "narrador.5d127044a8"
+      },
+      "audio": "narrador.ae970b2f45"
+    },
+    {
+      "id": "teleferico",
+      "es": "teleférico",
+      "fr": "télécabine, téléphérique",
+      "genero": "m",
+      "plural": "teleféricos",
+      "emoji": "🚡",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "El teleférico sube a Monserrate.",
+        "fr": "Le téléphérique monte à Monserrate.",
+        "voz": "hernan",
+        "audio": "hernan.705f4a259b"
+      },
+      "audio": "hernan.b52d5e5d53",
+      "voz": "hernan"
+    },
+    {
+      "id": "montana",
+      "es": "montaña",
+      "fr": "montagne",
+      "genero": "f",
+      "plural": "montañas",
+      "emoji": "⛰️",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Bogotá está entre montañas.",
+        "fr": "Bogotá est entre des montagnes.",
+        "voz": "narrador",
+        "audio": "narrador.705877f190"
+      },
+      "audio": "narrador.9a5807ec4d"
+    },
+    {
+      "id": "esquina",
+      "es": "esquina",
+      "fr": "coin de rue",
+      "genero": "f",
+      "plural": "esquinas",
+      "ilustracion": "Le coin d’une rue avec un lampadaire et deux façades de maisons",
+      "tags": [
+        "ciudad"
+      ],
+      "ejemplo": {
+        "es": "Hay una tienda en la esquina.",
+        "fr": "Il y a un magasin au coin de la rue.",
+        "voz": "narrador",
+        "audio": "narrador.0f8d0937aa"
+      },
+      "audio": "narrador.d29ae7b14f"
+    },
+    {
+      "id": "hay",
+      "es": "hay",
+      "fr": "il y a (invariable : hay un parque, hay dos tiendas)",
+      "emoji": "👆",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "En mi barrio hay un parque.",
+        "fr": "Dans mon quartier, il y a un parc.",
+        "voz": "narrador",
+        "audio": "narrador.5e8c18d569"
+      },
+      "audio": "narrador.ebddd6b268"
+    },
+    {
+      "id": "cerca",
+      "es": "cerca",
+      "fr": "près (on dit « cerca de »)",
+      "ilustracion": "Deux maisons très proches, un petit repère « près » avec une flèche courte",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "Mi colegio está cerca de mi casa.",
+        "fr": "Mon collège est près de chez moi.",
+        "voz": "narrador",
+        "audio": "narrador.939bc047b8"
+      },
+      "audio": "narrador.34bbe760fd"
+    },
+    {
+      "id": "lejos",
+      "es": "lejos",
+      "fr": "loin (on dit « lejos de »)",
+      "ilustracion": "Deux maisons très éloignées avec une longue flèche entre elles",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El museo está lejos del parque.",
+        "fr": "Le musée est loin du parc.",
+        "voz": "narrador",
+        "audio": "narrador.40c216a0a0"
+      },
+      "audio": "narrador.96b5d8f2ac"
+    },
+    {
+      "id": "al_lado",
+      "es": "al lado de",
+      "fr": "à côté de",
+      "ilustracion": "Deux maisons côte à côte, un petit repère entre elles",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "La farmacia está al lado de la panadería.",
+        "fr": "La pharmacie est à côté de la boulangerie.",
+        "voz": "narrador",
+        "audio": "narrador.fcccf4fd45"
+      },
+      "audio": "narrador.58b2fedc77"
+    },
+    {
+      "id": "delante",
+      "es": "delante de",
+      "fr": "devant",
+      "ilustracion": "Un chien devant une maison vue de côté",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El perro está delante de la casa.",
+        "fr": "Le chien est devant la maison.",
+        "voz": "narrador",
+        "audio": "narrador.7abdcc3bb2"
+      },
+      "audio": "narrador.81ef9fa741"
+    },
+    {
+      "id": "detras",
+      "es": "detrás de",
+      "fr": "derrière",
+      "ilustracion": "Un chat caché derrière une maison, on voit juste sa queue",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El jardín está detrás de la casa.",
+        "fr": "Le jardin est derrière la maison.",
+        "voz": "narrador",
+        "audio": "narrador.b75f0fa76a"
+      },
+      "audio": "narrador.87c00dbd6a"
+    },
+    {
+      "id": "encima",
+      "es": "encima de",
+      "fr": "sur, au-dessus de",
+      "ilustracion": "Un chat assis sur une boîte en carton",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El gato está encima de la cama.",
+        "fr": "Le chat est sur le lit.",
+        "voz": "narrador",
+        "audio": "narrador.f60bd53c8c"
+      },
+      "audio": "narrador.50a6db6446"
+    },
+    {
+      "id": "debajo",
+      "es": "debajo de",
+      "fr": "sous, en dessous de",
+      "ilustracion": "Un chat sous une table en bois",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "La mochila está debajo de la mesa.",
+        "fr": "Le sac à dos est sous la table.",
+        "voz": "narrador",
+        "audio": "narrador.fc20a6db38"
+      },
+      "audio": "narrador.24760d1c35"
+    },
+    {
+      "id": "entre",
+      "es": "entre",
+      "fr": "entre",
+      "ilustracion": "Une maison au milieu de deux autres maisons",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "La panadería está entre la farmacia y la iglesia.",
+        "fr": "La boulangerie est entre la pharmacie et l’église.",
+        "voz": "narrador",
+        "audio": "narrador.8e444925d0"
+      },
+      "audio": "narrador.ed7ad1f659"
+    },
+    {
+      "id": "enfrente",
+      "es": "enfrente de",
+      "fr": "en face de",
+      "ilustracion": "Deux maisons face à face de chaque côté d’une rue",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El parque está enfrente de mi casa.",
+        "fr": "Le parc est en face de chez moi.",
+        "voz": "narrador",
+        "audio": "narrador.f8e3b59a03"
+      },
+      "audio": "narrador.bae92a23fc"
+    },
+    {
+      "id": "derecha",
+      "es": "a la derecha de",
+      "fr": "à droite de",
+      "ilustracion": "Une flèche rouge qui pointe vers la droite",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "El banco está a la derecha de la iglesia.",
+        "fr": "La banque est à droite de l’église.",
+        "voz": "narrador",
+        "audio": "narrador.6b0fde531b"
+      },
+      "audio": "narrador.daa661ed3f"
+    },
+    {
+      "id": "izquierda",
+      "es": "a la izquierda de",
+      "fr": "à gauche de",
+      "ilustracion": "Une flèche bleue qui pointe vers la gauche",
+      "tags": [
+        "lugar"
+      ],
+      "ejemplo": {
+        "es": "La tienda está a la izquierda de la iglesia.",
+        "fr": "Le magasin est à gauche de l’église.",
+        "voz": "narrador",
+        "audio": "narrador.2cdd7baa56"
+      },
+      "audio": "narrador.796ff206e3"
+    },
+    {
+      "id": "subir",
+      "es": "subir",
+      "fr": "monter",
+      "emoji": "⬆️",
+      "tags": [
+        "verbos"
+      ],
+      "ejemplo": {
+        "es": "Vamos a subir a Monserrate.",
+        "fr": "Nous allons monter à Monserrate.",
+        "voz": "hernan",
+        "audio": "hernan.738548767c"
+      },
+      "audio": "hernan.56a8d2e65d",
+      "voz": "hernan"
+    },
+    {
+      "id": "mas",
+      "es": "más",
+      "fr": "plus (más… que = plus… que)",
+      "emoji": "➕",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Bogotá es más grande que Salamanca.",
+        "fr": "Bogotá est plus grande que Salamanque.",
+        "voz": "narrador",
+        "audio": "narrador.9bbc55a373"
+      },
+      "audio": "narrador.917ac70939"
+    },
+    {
+      "id": "menos",
+      "es": "menos",
+      "fr": "moins (menos… que = moins… que)",
+      "emoji": "➖",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Mi calle es menos ruidosa que la plaza.",
+        "fr": "Ma rue est moins bruyante que la place.",
+        "voz": "narrador",
+        "audio": "narrador.3436e0289d"
+      },
+      "audio": "narrador.4e16c8aa2c"
+    },
+    {
+      "id": "antiguo",
+      "es": "antiguo",
+      "fr": "ancien, vieux (bâtiment, quartier)",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "antigua",
+      "ilustracion": "Un vieux bâtiment colonial blanc avec un toit de tuiles",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "La Candelaria es un barrio antiguo.",
+        "fr": "La Candelaria est un quartier ancien.",
+        "voz": "narrador",
+        "audio": "narrador.2e877e5b90"
+      },
+      "audio": "narrador.bd17811d32"
+    },
+    {
+      "id": "moderno",
+      "es": "moderno",
+      "fr": "moderne",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "moderna",
+      "emoji": "🏙️",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "El centro tiene edificios modernos.",
+        "fr": "Le centre a des immeubles modernes.",
+        "voz": "narrador",
+        "audio": "narrador.f23dfa1d63"
+      },
+      "audio": "narrador.0ef46ceaeb"
+    },
+    {
+      "id": "bonito",
+      "es": "bonito",
+      "fr": "joli",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "bonita",
+      "emoji": "🌷",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Esta calle es muy bonita.",
+        "fr": "Cette rue est très jolie.",
+        "voz": "narrador",
+        "audio": "narrador.2ebade7118"
+      },
+      "audio": "narrador.bc3942446a"
+    },
+    {
+      "id": "tranquilo",
+      "es": "tranquilo",
+      "fr": "calme, tranquille",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "tranquila",
+      "emoji": "😌",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Mi barrio es muy tranquilo.",
+        "fr": "Mon quartier est très calme.",
+        "voz": "narrador",
+        "audio": "narrador.369bd8564a"
+      },
+      "audio": "narrador.719e9ce230"
+    },
+    {
+      "id": "ruidoso",
+      "es": "ruidoso",
+      "fr": "bruyant",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "ruidosa",
+      "emoji": "📢",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "El mercado es muy ruidoso.",
+        "fr": "Le marché est très bruyant.",
+        "voz": "narrador",
+        "audio": "narrador.91f2c81191"
+      },
+      "audio": "narrador.6b03007a94"
+    },
+    {
+      "id": "caro",
+      "es": "caro",
+      "fr": "cher",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "cara",
+      "emoji": "💸",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Esta casa es muy cara.",
+        "fr": "Cette maison est très chère.",
+        "voz": "narrador",
+        "audio": "narrador.cf55a13cec"
+      },
+      "audio": "narrador.732849d5bc"
+    },
+    {
+      "id": "barato",
+      "es": "barato",
+      "fr": "bon marché",
+      "genero": "m",
+      "clase": "adj",
+      "femenino": "barata",
+      "emoji": "🏷️",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "El mercado es más barato que la tienda.",
+        "fr": "Le marché est moins cher que le magasin.",
+        "voz": "narrador",
+        "audio": "narrador.8c08216ea5"
+      },
+      "audio": "narrador.33e8c86f39"
+    },
+    {
+      "id": "mejor",
+      "es": "mejor",
+      "fr": "meilleur, mieux (pas de « más bueno » ; mejor ne change pas au féminin)",
+      "genero": "mf",
+      "plural": "mejores",
+      "clase": "adj",
+      "emoji": "🏅",
+      "tags": [
+        "comparar"
+      ],
+      "ejemplo": {
+        "es": "Este chocolate es mejor que el otro.",
+        "fr": "Ce chocolat est meilleur que l’autre.",
+        "voz": "narrador",
+        "audio": "narrador.e1411e1b9b"
+      },
+      "audio": "narrador.da7ca0bc14"
+    }
+  ],
+  "gramatica": [
+    {
+      "id": "g_estar_lugar",
+      "titulo": {
+        "es": "¿Dónde está?",
+        "fr": "Estar pour dire où se trouve quelque chose"
+      },
+      "ejemplos": [
+        {
+          "es": "La catedral está en la Plaza de Bolívar.",
+          "fr": "La cathédrale est sur la place Bolívar.",
+          "voz": "camila",
+          "audio": "camila.e025e5280d",
+          "resaltar": [
+            "está"
+          ]
+        },
+        {
+          "es": "Las flores están en el balcón.",
+          "fr": "Les fleurs sont sur le balcon.",
+          "voz": "marta",
+          "audio": "marta.a5402d82e6",
+          "resaltar": [
+            "están"
+          ]
+        },
+        {
+          "es": "Yo estoy en Bogotá.",
+          "fr": "Moi, je suis à Bogotá.",
+          "voz": "viajero",
+          "audio": "viajero.cd16c87ae9",
+          "resaltar": [
+            "estoy"
+          ]
+        },
+        {
+          "es": "¿Dónde está el museo?",
+          "fr": "Où est le musée ?",
+          "voz": "marina",
+          "audio": "marina.8e1c942ea8",
+          "resaltar": [
+            "está"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para decir dónde está una cosa o una persona, usamos «estar»: está (uno), están (varios).",
+        "fr": "Pour dire où se trouve une chose ou une personne, on utilise « estar » : está (un seul), están (plusieurs).",
+        "voz": "narrador",
+        "audio": "narrador.4cdb8a447a"
+      },
+      "pista": "ESTAR sert à situer (¿Dónde está…? → Está en…). Il s'accorde avec ce qu'on situe : la catedral ESTÁ, las flores ESTÁN, yo ESTOY. Rappel : estoy, estás, está, estamos, estáis, están (accents sur estás, está, estáis, están). Attention : on ne dit pas « es en la plaza » mais « está en la plaza ». On peut aussi dire « ¿Dónde queda…? » en Colombie (queda = se trouve) ; « está » marche partout.",
+      "tabla": {
+        "encabezado": [
+          "Pregunta",
+          "Respuesta"
+        ],
+        "filas": [
+          [
+            "¿Dónde está el parque?",
+            "Está en la plaza."
+          ],
+          [
+            "¿Dónde están las tiendas?",
+            "Están en la calle."
+          ],
+          [
+            "¿Dónde estás tú?",
+            "Estoy en casa."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_hay_esta",
+      "titulo": {
+        "es": "Hay y está",
+        "fr": "Hay ou está : présenter ou situer"
+      },
+      "ejemplos": [
+        {
+          "es": "En mi barrio hay un parque.",
+          "fr": "Dans mon quartier, il y a un parc.",
+          "voz": "camila",
+          "audio": "camila.5e8c18d569",
+          "resaltar": [
+            "hay un parque"
+          ]
+        },
+        {
+          "es": "El parque está cerca de mi casa.",
+          "fr": "Le parc est près de chez moi.",
+          "voz": "camila",
+          "audio": "camila.c8979cf1e4",
+          "resaltar": [
+            "está cerca"
+          ]
+        },
+        {
+          "es": "Hay dos museos en La Candelaria.",
+          "fr": "Il y a deux musées à La Candelaria.",
+          "voz": "hernan",
+          "audio": "hernan.cee4459276",
+          "resaltar": [
+            "Hay dos museos"
+          ]
+        },
+        {
+          "es": "Los museos están en el centro.",
+          "fr": "Les musées sont dans le centre.",
+          "voz": "hernan",
+          "audio": "hernan.3278dd5c50",
+          "resaltar": [
+            "están en el centro"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "«Hay» presenta algo nuevo: hay un parque, hay dos museos. «Está» o «están» sitúa algo que ya conocemos: el parque está cerca.",
+        "fr": "« Hay » présente quelque chose de nouveau : hay un parque, hay dos museos. « Está / están » situe quelque chose qu’on connaît déjà : el parque está cerca.",
+        "voz": "narrador",
+        "audio": "narrador.b61380fe33"
+      },
+      "pista": "HAY = il y a. On l'utilise pour dire qu'une chose existe quelque part, avec un, una, dos, muchos, no… mais JAMAIS avec el / la / mi / le nom d'un lieu précis : on dit « hay un parque » (pas « hay el parque »). Hay ne change jamais : hay un parque, hay tres parques. Quand on parle d'une chose précise, déjà connue (el parque, mi casa, La Candelaria), on la situe avec ESTÁ / ESTÁN : « el parque está cerca ». Astuce : « ¿Qué hay en tu barrio? » → hay… ; « ¿Dónde está el parque? » → está…",
+      "tabla": {
+        "encabezado": [
+          "",
+          "hay",
+          "está / están"
+        ],
+        "filas": [
+          [
+            "article",
+            "un, una, dos, muchos, no…",
+            "el, la, los, las, mi, nom propre"
+          ],
+          [
+            "exemple",
+            "Hay una farmacia.",
+            "La farmacia está aquí."
+          ],
+          [
+            "exemple",
+            "Hay tres bancos.",
+            "Los bancos están allí."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_preposiciones",
+      "titulo": {
+        "es": "Cerca, lejos, al lado…",
+        "fr": "Les prépositions de lieu"
+      },
+      "ejemplos": [
+        {
+          "es": "El gato está encima de la cama.",
+          "fr": "Le chat est sur le lit.",
+          "voz": "marta",
+          "audio": "marta.f60bd53c8c",
+          "resaltar": [
+            "encima de"
+          ]
+        },
+        {
+          "es": "Mi casa está al lado del parque.",
+          "fr": "Ma maison est à côté du parc.",
+          "voz": "camila",
+          "audio": "camila.b27e8f56ae",
+          "resaltar": [
+            "al lado del"
+          ]
+        },
+        {
+          "es": "La farmacia está enfrente de la iglesia.",
+          "fr": "La pharmacie est en face de l’église.",
+          "voz": "hernan",
+          "audio": "hernan.5bdd572f98",
+          "resaltar": [
+            "enfrente de"
+          ]
+        },
+        {
+          "es": "El banco está a la derecha de la panadería.",
+          "fr": "La banque est à droite de la boulangerie.",
+          "voz": "camila",
+          "audio": "camila.52c8136725",
+          "resaltar": [
+            "a la derecha de"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para situar usamos: cerca de, lejos de, al lado de, delante de, detrás de, encima de, debajo de, entre, enfrente de, a la derecha de, a la izquierda de.",
+        "fr": "Pour situer, on utilise : cerca de (près de), lejos de (loin de), al lado de (à côté de), delante de (devant), detrás de (derrière), encima de (sur), debajo de (sous), entre (entre), enfrente de (en face de), a la derecha / izquierda de (à droite / gauche de).",
+        "voz": "narrador",
+        "audio": "narrador.7d933b1c36"
+      },
+      "pista": "Presque toutes ces expressions finissent par DE : cerca DE, lejos DE, al lado DE, delante DE… Sauf « entre » (entre la farmacia y la iglesia). Piège : DE + EL = DEL (al lado del parque, pas « de el parque ») ; mais de la / de los / de las ne changent pas (al lado de la iglesia). Ne confonds pas « encima de » (sur) et « debajo de » (sous). On dit toujours « a la derecha de » / « a la izquierda de » (avec « a la »).",
+      "tabla": {
+        "encabezado": [
+          "Contrario",
+          "Contrario"
+        ],
+        "filas": [
+          [
+            "cerca de",
+            "lejos de"
+          ],
+          [
+            "delante de",
+            "detrás de"
+          ],
+          [
+            "encima de",
+            "debajo de"
+          ],
+          [
+            "a la derecha de",
+            "a la izquierda de"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g_comparativo",
+      "titulo": {
+        "es": "Más grande que…",
+        "fr": "Le comparatif simple"
+      },
+      "ejemplos": [
+        {
+          "es": "Bogotá es más grande que Salamanca.",
+          "fr": "Bogotá est plus grande que Salamanque.",
+          "voz": "camila",
+          "audio": "camila.9bbc55a373",
+          "resaltar": [
+            "más grande que"
+          ]
+        },
+        {
+          "es": "Mi calle es menos ruidosa que la plaza.",
+          "fr": "Ma rue est moins bruyante que la place.",
+          "voz": "camila",
+          "audio": "camila.3436e0289d",
+          "resaltar": [
+            "menos ruidosa que"
+          ]
+        },
+        {
+          "es": "Este chocolate es mejor que el otro.",
+          "fr": "Ce chocolat est meilleur que l’autre.",
+          "voz": "marta",
+          "audio": "marta.e1411e1b9b",
+          "resaltar": [
+            "mejor que"
+          ]
+        },
+        {
+          "es": "La casa de Marta es tan bonita como la casa de Camila.",
+          "fr": "La maison de Marta est aussi jolie que la maison de Camila.",
+          "voz": "hernan",
+          "audio": "hernan.35eed43fca",
+          "resaltar": [
+            "tan bonita como"
+          ]
+        }
+      ],
+      "regla": {
+        "es": "Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. «Mejor» es «más bueno».",
+        "fr": "Pour comparer : más + adjectif + que (plus… que), menos + adjectif + que (moins… que). Pour dire « aussi… que » : tan + adjectif + como. « Mejor » veut dire « meilleur » (on ne dit pas « más bueno »).",
+        "voz": "narrador",
+        "audio": "narrador.500da71922"
+      },
+      "pista": "Le comparatif de supériorité/infériorité : MÁS / MENOS + adjectif + QUE (pas « de » ni « comme »). L'adjectif s'accorde avec le premier nom : la plaza es más grande que el parque ; las casas son más bonitas que los edificios. Égalité : TAN + adjectif + COMO (tan bonito como). Irréguliers à connaître : bueno → mejor (meilleur), malo → peor (pire) ; mejor et peor ne changent pas au féminin (una casa mejor) mais prennent -es au pluriel (mejores). Attention : « más » porte un accent (sans accent, « mas » signifie « mais » en littérature), et on dit « más que » devant un nom ou un adjectif, mais « más de » devant un nombre (más de cien).",
+      "tabla": {
+        "encabezado": [
+          "Se dice",
+          "Ejemplo"
+        ],
+        "filas": [
+          [
+            "más… que",
+            "más grande que"
+          ],
+          [
+            "menos… que",
+            "menos ruidoso que"
+          ],
+          [
+            "tan… como",
+            "tan bonito como"
+          ],
+          [
+            "mejor que",
+            "mejor que el otro"
+          ]
+        ]
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "u08-q01",
+      "tipo": "cinematica",
+      "titulo": "Llegada a Bogotá",
+      "emoji": "🏔️",
+      "intro": {
+        "es": "¡Bienvenidos a Bogotá! Yo soy Camila y esta es mi calle.",
+        "fr": "Bienvenue à Bogotá ! Moi, c’est Camila et voici ma rue. (Les PNJ de cette unité parlent espagnol de Colombie : ils disent « ustedes » pour « vous » au pluriel ; leurs mots qui diffèrent de l’Espagne sont signalés.)",
+        "voz": "camila",
+        "audio": "camila.568124294c"
+      },
+      "pista": "Arrivée à Bogotá : tu rencontres Camila et tu découvres le problème des rues sans nom. Les PNJ parlent espagnol de Colombie.",
+      "stats": [
+        "escuchar",
+        "cultura",
+        "hablar"
+      ],
+      "minutos": 10,
+      "steps": [
+        {
+          "id": "u08-q01-s01",
+          "tipo": "cinematic_ref",
+          "cinematica": "u08-intro",
+          "escena": {
+            "id": "u08-intro",
+            "tipo": "intro",
+            "titulo": "Capítulo 8 · Mi casa y mi barrio · Bogotá",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "La carte du monde en papel picado : la ligne dorée quitte Buenos Aires, remonte vers le nord au-dessus des Andes et plonge sur la Colombie ; carte-titre « Capítulo 8 · Mi casa y mi barrio · Bogotá ».",
+                "camara": "zoom avant progressif",
+                "rotulo": "Capítulo 8 · Mi casa y mi barrio · Bogotá",
+                "lineas": [
+                  {
+                    "es": "Capítulo ocho: mi casa y mi barrio.",
+                    "fr": "Chapitre huit : ma maison et mon quartier.",
+                    "voz": "narrador",
+                    "audio": "narrador.81046a88c0"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Bogotá au crépuscule : la colline de Monserrate avec le sanctuaire blanc tout en haut, les toits de tuiles rouges de La Candelaria, les façades colorées avec leurs balcons, un bus rouge qui passe, des nuages bas sur la montagne.",
+                "camara": "panoramique lent puis descente vers les toits",
+                "lineas": [
+                  {
+                    "es": "Bogotá, la capital de Colombia, entre las montañas de los Andes.",
+                    "fr": "Bogotá, la capitale de la Colombie, entre les montagnes des Andes.",
+                    "voz": "narrador",
+                    "audio": "narrador.4eacf55906"
+                  },
+                  {
+                    "es": "Aquí, cada barrio tiene su historia.",
+                    "fr": "Ici, chaque quartier a son histoire.",
+                    "voz": "narrador",
+                    "audio": "narrador.95271cc9f8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u08-q01-s02",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Bogotá es la capital de Colombia.",
+            "fr": "Bogotá est la capitale de la Colombie.",
+            "voz": "narrador",
+            "audio": "narrador.e25fe8ca09"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q01-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Bogotá está en España.",
+            "fr": "Bogotá est en Espagne.",
+            "voz": "narrador",
+            "audio": "narrador.f2a43fbac4"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u08-q01-s04",
+          "tipo": "cinematic_ref",
+          "cinematica": "u08-historia",
+          "escena": {
+            "id": "u08-historia",
+            "tipo": "historia",
+            "titulo": "Las calles sin nombre",
+            "duracion": 28,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 7,
+                "vista": "Une rue pavée de La Candelaria : maisons blanches, jaunes et bleues, balcons de bois. Le Quetzal sort la tête du sac de Marina et regarde les montagnes. Camila, 12 ans, avec une ruana (poncho de laine) rouge, arrive en courant.",
+                "camara": "travelling dans la rue puis plan moyen sur Camila",
+                "personajes": [
+                  "quetzal",
+                  "camila",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "Siete plumas… ¡Ya falta poco!",
+                    "fr": "Sept plumes… Il n’en manque plus beaucoup !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.9bf96bc52c"
+                  },
+                  {
+                    "es": "¡Hola! Me llamo Camila y soy de Bogotá. ¡Bienvenidos a La Candelaria!",
+                    "fr": "Salut ! Je m’appelle Camila et je suis de Bogotá. Bienvenue à La Candelaria ! (« Bienvenidos » : en Colombie comme au Mexique, on s’adresse à plusieurs personnes avec « ustedes ».)",
+                    "voz": "camila",
+                    "audio": "camila.955395c0b5"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 7,
+                "vista": "Camila montre les panneaux de rue : tout blancs, sans une lettre. Sur une grande carte de la ville, il n’y a plus de noms. Des passants tournent en rond, perdus.",
+                "camara": "plans de détail sur les panneaux vides",
+                "personajes": [
+                  "camila",
+                  "marina"
+                ],
+                "lineas": [
+                  {
+                    "es": "Pero hay un problema: los letreros no tienen letras y los mapas están en blanco.",
+                    "fr": "Mais il y a un problème : les panneaux n’ont plus de lettres et les plans sont vierges.",
+                    "voz": "camila",
+                    "audio": "camila.5a6f2d2592"
+                  },
+                  {
+                    "es": "¿Y quién roba las letras?",
+                    "fr": "Et qui vole les lettres ?",
+                    "voz": "marina",
+                    "audio": "marina.7a52ec38e9"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 7,
+                "vista": "Sur un toit voisin, la Sombra aspire les lettres d’un panneau comme de l’encre ; une flaque d’ombre glisse le long de la façade.",
+                "personajes": [
+                  "sombra",
+                  "camila"
+                ],
+                "lineas": [
+                  {
+                    "es": "Sin palabras, no hay mapas. Sin mapas, nadie sabe dónde está.",
+                    "fr": "Sans mots, pas de plans. Sans plans, personne ne sait où il est.",
+                    "voz": "sombra",
+                    "audio": "sombra.e7623f2940"
+                  },
+                  {
+                    "es": "¡Todos se pierden!",
+                    "fr": "Tout le monde se perd !",
+                    "voz": "camila",
+                    "audio": "camila.e6b7f83438"
+                  }
+                ],
+                "musica": "tension douce, flûte andine et guitare"
+              },
+              {
+                "n": 4,
+                "duracion": 7,
+                "vista": "Vue vers le haut : la colline de Monserrate dans la brume et, sur le sanctuaire, un point vert qui brille. Le Quetzal le montre du bec.",
+                "personajes": [
+                  "quetzal",
+                  "camila",
+                  "marina",
+                  "viajero"
+                ],
+                "lineas": [
+                  {
+                    "es": "La pluma… está arriba, en Monserrate.",
+                    "fr": "La plume… est là-haut, à Monserrate.",
+                    "voz": "quetzal",
+                    "audio": "quetzal.4c86057236"
+                  },
+                  {
+                    "es": "Para devolver las palabras a las calles, tienen que decir dónde está cada cosa. ¡Vamos!",
+                    "fr": "Pour rendre les mots aux rues, il faut dire où se trouve chaque chose. Allons-y !",
+                    "voz": "camila",
+                    "audio": "camila.579b47878b"
+                  }
+                ],
+                "musica": "thème d’aventure, flûte et charango"
+              }
+            ]
+          }
+        },
+        {
+          "id": "u08-q01-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Vivo en un barrio con casas de colores, cerca de la Plaza de Bolívar.",
+            "voz": "camila",
+            "audio": "camila.5b8f77745f"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Camila vive en un barrio muy bonito.",
+              "correcta": true
+            },
+            {
+              "texto": "Camila vive lejos de Bogotá.",
+              "correcta": false
+            },
+            {
+              "texto": "Camila vive en una casa sin colores.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q01-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Los letreros no tienen letras y los mapas están en blanco.",
+            "voz": "camila",
+            "audio": "camila.c22fc18090"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Nadie sabe dónde está cada calle.",
+              "correcta": true
+            },
+            {
+              "texto": "Los mapas tienen muchos colores.",
+              "correcta": false
+            },
+            {
+              "texto": "Hay letreros nuevos en todas las calles.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q01-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El Quetzal busca una pluma en Bogotá.",
+            "fr": "Le Quetzal cherche une plume à Bogotá.",
+            "voz": "narrador",
+            "audio": "narrador.4ce4f24f30"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q01-s08",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "camila",
+          "replica": {
+            "es": "¡Hola! Yo soy Camila. ¿Y tú, de dónde eres?",
+            "fr": "Salut ! Moi, c’est Camila. Et toi, tu es d’où ?",
+            "voz": "camila",
+            "audio": "camila.c251ea8870"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Soy de París, en Francia.",
+                "voz": "viajero",
+                "audio": "viajero.501873cfeb"
+              },
+              "fr": "Je suis de Paris, en France.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué chévere! Vienen de muy lejos.",
+                "fr": "Trop bien ! (« chévere » = super, très courant en Colombie). Vous venez de très loin.",
+                "voz": "camila",
+                "audio": "camila.51a5651d43",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años.",
+                "voz": "viajero",
+                "audio": "viajero.ab00c4f584"
+              },
+              "fr": "J’ai douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Muy bien, pero ¿de dónde eres?",
+                "fr": "Très bien, mais tu es d’où ?",
+                "voz": "camila",
+                "audio": "camila.c6e86a0a06",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy de Bogotá.",
+                "voz": "viajero",
+                "audio": "viajero.890d58c422"
+              },
+              "fr": "Je suis de Bogotá.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿De Bogotá? ¡Pero si yo no te conozco!",
+                "fr": "De Bogotá ? Mais je ne te connais pas !",
+                "voz": "camila",
+                "audio": "camila.e65a6f50a4",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q01-s09",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Bogotá",
+            "está",
+            "en",
+            "Colombia."
+          ],
+          "habla": {
+            "es": "Bogotá está en Colombia.",
+            "voz": "camila",
+            "audio": "camila.91642d2248"
+          },
+          "fr": "Bogotá est en Colombie."
+        },
+        {
+          "id": "u08-q01-s10",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Vivo en París.",
+            "fr": "Salut, je m’appelle Álex. J’habite à Paris. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.3b0dfa94c7"
+          },
+          "aceptadas": [
+            "hola me llamo álex vivo en parís"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} vivo en parís"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la bienvenida",
+            "efecto": "Los letreros de la calle se iluminan"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u08-q02",
+      "tipo": "vocabulario",
+      "titulo": "La casa de Doña Marta",
+      "emoji": "🏠",
+      "intro": {
+        "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.",
+        "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, deux chambres et un balcon.",
+        "voz": "marta",
+        "audio": "marta.43ade8abbb"
+      },
+      "pista": "Les pièces et les objets de la maison, avec Doña Marta : tu décris ta propre maison à l’oral et à l’écrit.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar",
+        "escribir"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u08-q02-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "apartamento",
+            "piso",
+            "ventana",
+            "puerta",
+            "balcon",
+            "escalera",
+            "pared"
+          ]
+        },
+        {
+          "id": "u08-q02-s02",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "balcón",
+            "voz": "narrador",
+            "audio": "narrador.4528aefc9d"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "ventana",
+              "correcta": false
+            },
+            {
+              "vocab": "puerta",
+              "correcta": false
+            },
+            {
+              "vocab": "balcon",
+              "correcta": true
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "cama",
+            "sofa",
+            "armario",
+            "lampara",
+            "nevera",
+            "alfombra"
+          ]
+        },
+        {
+          "id": "u08-q02-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "ventana"
+            },
+            {
+              "vocab": "puerta"
+            },
+            {
+              "vocab": "cama"
+            },
+            {
+              "vocab": "sofa"
+            },
+            {
+              "vocab": "lampara"
+            },
+            {
+              "vocab": "nevera"
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "nevera",
+            "voz": "marta",
+            "audio": "marta.81919f80d6"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "sofa",
+              "correcta": false
+            },
+            {
+              "vocab": "nevera",
+              "correcta": true
+            },
+            {
+              "vocab": "cama",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s06",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es una cama.",
+            "fr": "C’est un lit.",
+            "voz": "narrador",
+            "audio": "narrador.f4987d6a98"
+          },
+          "correcta": true,
+          "imagen": "cama"
+        },
+        {
+          "id": "u08-q02-s07",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es un sofá.",
+            "fr": "C’est un canapé. (Faux : c’est un armario.)",
+            "voz": "narrador",
+            "audio": "narrador.5bb876ec7e"
+          },
+          "correcta": false,
+          "imagen": "armario"
+        },
+        {
+          "id": "u08-q02-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En la cocina hay una ___.",
+          "respuesta": "nevera",
+          "opciones": [
+            "nevera",
+            "cama",
+            "escalera"
+          ],
+          "habla": {
+            "es": "En la cocina hay una nevera.",
+            "voz": "marta",
+            "audio": "marta.3a37add9c3"
+          },
+          "fr": "Dans la cuisine, il y a un réfrigérateur."
+        },
+        {
+          "id": "u08-q02-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Para subir al segundo piso, uso la ___.",
+          "respuesta": "escalera",
+          "opciones": [
+            "escalera",
+            "ventana",
+            "alfombra"
+          ],
+          "habla": {
+            "es": "Para subir al segundo piso, uso la escalera.",
+            "voz": "marta",
+            "audio": "marta.e5aef16df2"
+          },
+          "fr": "Pour monter au deuxième étage, j’utilise l’escalier."
+        },
+        {
+          "id": "u08-q02-s10",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi casa tiene una cocina, un baño y tres dormitorios.",
+            "voz": "marta",
+            "audio": "marta.3e576561ba"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Marta tiene tres dormitorios.",
+              "correcta": true
+            },
+            {
+              "texto": "Marta tiene un solo dormitorio.",
+              "correcta": false
+            },
+            {
+              "texto": "La casa de Marta no tiene baño.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s11",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Mi casa es pequeña, pero muy bonita. Tiene dos pisos. En el primer piso hay un salón y una cocina. En el segundo piso hay tres dormitorios. Y tiene un balcón con muchas flores.",
+            "fr": "Ma maison est petite, mais très jolie. Elle a deux étages. Au premier étage (« el primer piso » = le rez-de-chaussée en Colombie, comme souvent en Amérique latine ; en Espagne, la planta baja est à part), il y a un salon et une cuisine. Au deuxième étage, il y a trois chambres. Et elle a un balcon avec beaucoup de fleurs.",
+            "voz": "marta",
+            "audio": "marta.c0fd81147a"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cuántos pisos tiene la casa?",
+                "fr": "Combien d’étages a la maison ?",
+                "voz": "narrador",
+                "audio": "narrador.ff6e35b761"
+              },
+              "opciones": [
+                {
+                  "texto": "Uno.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Dos.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Tres.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuántos dormitorios hay?",
+                "fr": "Combien de chambres y a-t-il ?",
+                "voz": "narrador",
+                "audio": "narrador.cc0b5aaeaf"
+              },
+              "opciones": [
+                {
+                  "texto": "Dos.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Tres.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Cuatro.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hay en el balcón?",
+                "fr": "Qu’y a-t-il sur le balcon ?",
+                "voz": "narrador",
+                "audio": "narrador.b348c917ae"
+              },
+              "opciones": [
+                {
+                  "texto": "Flores.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Una cama.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una nevera.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "marta",
+          "replica": {
+            "es": "Y tu casa, ¿cómo es? ¿Es grande?",
+            "fr": "Et ta maison, elle est comment ? Elle est grande ?",
+            "voz": "marta",
+            "audio": "marta.e328b0cf1d"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Es pequeña, pero muy bonita.",
+                "voz": "viajero",
+                "audio": "viajero.e8a89faa12"
+              },
+              "fr": "Elle est petite, mais très jolie.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué lindo! Las casas pequeñas son muy cómodas.",
+                "fr": "Que c’est joli ! (« lindo » = joli, très courant en Colombie et en Amérique latine ; en Espagne, plutôt « bonito »). Les petites maisons sont très confortables.",
+                "voz": "marta",
+                "audio": "marta.4cec5803bf",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Soy grande y bonita.",
+                "voz": "viajero",
+                "audio": "viajero.25678615bc"
+              },
+              "fr": "Je suis grande et jolie.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú eres una casa? ¡Qué cosa más rara!",
+                "fr": "Toi, tu es une maison ? Quelle drôle de chose !",
+                "voz": "marta",
+                "audio": "marta.506cfa37d9",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi casa tiene doce años.",
+                "voz": "viajero",
+                "audio": "viajero.f25c3106d4"
+              },
+              "fr": "Ma maison a douze ans.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Doce años… ¡qué casa tan joven!",
+                "fr": "Douze ans… quelle jeune maison !",
+                "voz": "marta",
+                "audio": "marta.456920cdda",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q02-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di dónde vives TÚ.",
+            "fr": "Écoute et dis où TU habites (una casa, un piso, un apartamento…).",
+            "voz": "narrador",
+            "audio": "narrador.955f0bc3ee"
+          },
+          "objetivo": {
+            "es": "Vivo en un apartamento.",
+            "fr": "J’habite dans un appartement. (dis où tu habites)",
+            "voz": "viajero",
+            "audio": "viajero.334a42594a"
+          },
+          "aceptadas": [
+            "vivo en un apartamento"
+          ],
+          "patrones": [
+            "vivo en {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la casa",
+            "efecto": "Las ventanas de la casa se abren solas"
+          }
+        },
+        {
+          "id": "u08-q02-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe cómo es tu casa.",
+            "fr": "Écris comment est ta maison.",
+            "voz": "narrador",
+            "audio": "narrador.b73fd387b8"
+          },
+          "plantilla": "Mi casa es ___. Tiene ___. En mi dormitorio hay ___.",
+          "campos": [
+            {
+              "id": "tamano",
+              "pista": "Comment est ta maison ? (grande, pequeña, bonita, antigua…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "partes",
+              "pista": "Ce qu’elle a (un salón y una cocina, dos dormitorios, un balcón…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "objetos",
+              "pista": "Ce qu’il y a dans ta chambre (una cama y una lámpara, un armario…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi casa es pequeña. Tiene dos dormitorios y un balcón. En mi dormitorio hay una cama y una lámpara.",
+            "fr": "Ma maison est petite. Elle a deux chambres et un balcon. Dans ma chambre, il y a un lit et une lampe.",
+            "voz": "marina",
+            "audio": "marina.ef622fbee3"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u08-q02-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "La nevera está en la cocina.",
+            "voz": "marta",
+            "audio": "marta.6ef97b07cf"
+          },
+          "respuesta": "La nevera está en la cocina."
+        }
+      ]
+    },
+    {
+      "id": "u08-q03",
+      "tipo": "escucha",
+      "titulo": "La ciudad de Camila",
+      "emoji": "🏙️",
+      "intro": {
+        "es": "Mi barrio tiene de todo: parques, tiendas, iglesias… ¿Quieren verlo?",
+        "fr": "Mon quartier a de tout : des parcs, des magasins, des églises… Vous voulez le voir ?",
+        "voz": "camila",
+        "audio": "camila.34eb047caf"
+      },
+      "pista": "Le vocabulaire de la ville : lieux, magasins et transports. Tu écoutes Camila décrire son quartier, puis tu décris le tien.",
+      "stats": [
+        "escuchar",
+        "leer",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u08-q03-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "barrio",
+            "ciudad",
+            "calle",
+            "plaza",
+            "parque",
+            "iglesia",
+            "biblioteca"
+          ]
+        },
+        {
+          "id": "u08-q03-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "tienda",
+            "mercado",
+            "farmacia",
+            "panaderia",
+            "cine",
+            "estacion",
+            "edificio"
+          ]
+        },
+        {
+          "id": "u08-q03-s03",
+          "tipo": "flashcard",
+          "vocab": [
+            "autobus",
+            "bicicleta",
+            "teleferico",
+            "montana",
+            "esquina"
+          ]
+        },
+        {
+          "id": "u08-q03-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "parque"
+            },
+            {
+              "vocab": "iglesia"
+            },
+            {
+              "vocab": "farmacia"
+            },
+            {
+              "vocab": "panaderia"
+            },
+            {
+              "vocab": "cine"
+            },
+            {
+              "vocab": "autobus"
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "farmacia",
+            "voz": "narrador",
+            "audio": "narrador.fb430e74e5"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "panaderia",
+              "correcta": false
+            },
+            {
+              "vocab": "farmacia",
+              "correcta": true
+            },
+            {
+              "vocab": "cine",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "Hay muchos libros en la biblioteca.",
+            "voz": "camila",
+            "audio": "camila.2517c7aaa5"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "biblioteca",
+              "correcta": true
+            },
+            {
+              "vocab": "iglesia",
+              "correcta": false
+            },
+            {
+              "vocab": "tienda",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s07",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "En mi barrio hay un parque, una biblioteca y un cine.",
+            "voz": "camila",
+            "audio": "camila.061da8fbfe"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "En el barrio de Camila hay tres lugares.",
+              "correcta": true
+            },
+            {
+              "texto": "En el barrio de Camila no hay parque.",
+              "correcta": false
+            },
+            {
+              "texto": "En el barrio de Camila hay dos iglesias.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Es una farmacia.",
+            "fr": "C’est une pharmacie.",
+            "voz": "narrador",
+            "audio": "narrador.1eb9dbc09e"
+          },
+          "correcta": true,
+          "imagen": "farmacia"
+        },
+        {
+          "id": "u08-q03-s09",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Me llamo Camila y vivo en La Candelaria, un barrio de Bogotá. En mi calle hay una panadería, una farmacia y una tienda pequeña. Hay un parque cerca de mi casa. Mi colegio está en la plaza grande.",
+            "fr": "Je m’appelle Camila et j’habite à La Candelaria, un quartier de Bogotá. Dans ma rue, il y a une boulangerie, une pharmacie et un petit magasin. Il y a un parc près de chez moi. Mon collège est sur la grande place.",
+            "voz": "camila",
+            "audio": "camila.48e3f3d34d"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué hay en la calle de Camila?",
+                "fr": "Qu’y a-t-il dans la rue de Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.d03ba1067c"
+              },
+              "opciones": [
+                {
+                  "texto": "Una panadería, una farmacia y una tienda.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Un cine y un estadio.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una iglesia y un museo.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde está el colegio de Camila?",
+                "fr": "Où est le collège de Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.96402b7f7e"
+              },
+              "opciones": [
+                {
+                  "texto": "En la plaza.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En el parque.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En la estación.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde vive Camila?",
+                "fr": "Où habite Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.8720f6cf87"
+              },
+              "opciones": [
+                {
+                  "texto": "En La Candelaria.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En Madrid.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En México.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Los libros están en la ___.",
+          "respuesta": "biblioteca",
+          "opciones": [
+            "biblioteca",
+            "farmacia",
+            "panadería"
+          ],
+          "habla": {
+            "es": "Los libros están en la biblioteca.",
+            "voz": "camila",
+            "audio": "camila.2c2474a48e"
+          },
+          "fr": "Les livres sont à la bibliothèque."
+        },
+        {
+          "id": "u08-q03-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Bogotá es una ___ muy grande y tiene muchos barrios.",
+          "respuesta": "ciudad",
+          "opciones": [
+            "ciudad",
+            "calle",
+            "esquina"
+          ],
+          "habla": {
+            "es": "Bogotá es una ciudad muy grande y tiene muchos barrios.",
+            "voz": "camila",
+            "audio": "camila.61e2fa79c5"
+          },
+          "fr": "Bogotá est une très grande ville et elle a beaucoup de quartiers."
+        },
+        {
+          "id": "u08-q03-s12",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "camila",
+          "replica": {
+            "es": "¿Qué hay en tu barrio?",
+            "fr": "Qu’y a-t-il dans ton quartier ?",
+            "voz": "camila",
+            "audio": "camila.35992ee631"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "En mi barrio hay un parque y una biblioteca.",
+                "voz": "viajero",
+                "audio": "viajero.7fe96e7e9c"
+              },
+              "fr": "Dans mon quartier, il y a un parc et une bibliothèque.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué bien! Un barrio con parque y biblioteca es perfecto.",
+                "fr": "Super ! Un quartier avec un parc et une bibliothèque, c’est parfait.",
+                "voz": "camila",
+                "audio": "camila.93ef7120d0",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "En mi barrio soy un parque.",
+                "voz": "viajero",
+                "audio": "viajero.a979f6b698"
+              },
+              "fr": "Dans mon quartier, je suis un parc.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Tú eres un parque? ¡Qué divertido!",
+                "fr": "Toi, tu es un parc ? Comme c’est drôle !",
+                "voz": "camila",
+                "audio": "camila.bad6667799",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi barrio hay.",
+                "voz": "viajero",
+                "audio": "viajero.18db57a862"
+              },
+              "fr": "Mon quartier il y a.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… ¿qué hay en tu barrio? Dime una frase completa.",
+                "fr": "Mmm… qu’y a-t-il dans ton quartier ? Dis-moi une phrase complète.",
+                "voz": "camila",
+                "audio": "camila.1b23d32f69",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q03-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di qué hay en TU barrio.",
+            "fr": "Écoute et dis ce qu’il y a dans TON quartier (una panadería, una biblioteca, un cine…).",
+            "voz": "narrador",
+            "audio": "narrador.4787721f8b"
+          },
+          "objetivo": {
+            "es": "En mi barrio hay un parque.",
+            "fr": "Dans mon quartier, il y a un parc. (dis ce qu’il y a dans le tien)",
+            "voz": "viajero",
+            "audio": "viajero.5e8c18d569"
+          },
+          "aceptadas": [
+            "en mi barrio hay un parque"
+          ],
+          "patrones": [
+            "en mi barrio hay {nombre}"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del barrio",
+            "efecto": "Tu barrio aparece dibujado en el aire"
+          }
+        },
+        {
+          "id": "u08-q03-s14",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Hay una panadería en mi calle.",
+            "voz": "camila",
+            "audio": "camila.e04f95fc33"
+          },
+          "respuesta": "Hay una panadería en mi calle."
+        }
+      ]
+    },
+    {
+      "id": "u08-q04",
+      "tipo": "forja",
+      "titulo": "La Forja: hay y está",
+      "emoji": "⚒️",
+      "intro": {
+        "es": "Hay. Está. Están. ¡Forja conmigo!",
+        "fr": "Hay. Est. Sont. Forge avec moi !",
+        "voz": "quetzal",
+        "audio": "quetzal.b40396af19"
+      },
+      "pista": "Estar pour situer (¿dónde está?) et la différence entre hay (il y a) et está(n) (il est / ils sont).",
+      "stats": [
+        "escribir",
+        "leer"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u08-q04-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "hay"
+          ]
+        },
+        {
+          "id": "u08-q04-s02",
+          "tipo": "grammar_card",
+          "ref": "g_estar_lugar"
+        },
+        {
+          "id": "u08-q04-s03",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "yo",
+          "radical": "est",
+          "terminacion": "oy",
+          "terminaciones": [
+            "oy",
+            "ás",
+            "á"
+          ],
+          "forma": "estoy",
+          "habla": {
+            "es": "yo estoy",
+            "voz": "viajero",
+            "audio": "viajero.a99974a1e2"
+          },
+          "fr": "Moi, je suis (à tel endroit)…"
+        },
+        {
+          "id": "u08-q04-s04",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "ella",
+          "radical": "est",
+          "terminacion": "á",
+          "terminaciones": [
+            "oy",
+            "ás",
+            "á"
+          ],
+          "forma": "está",
+          "habla": {
+            "es": "ella está",
+            "voz": "camila",
+            "audio": "camila.a8a3cb0b15"
+          },
+          "fr": "Elle est (à tel endroit)…"
+        },
+        {
+          "id": "u08-q04-s05",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "estar",
+          "sujeto": "ellos",
+          "radical": "est",
+          "terminacion": "án",
+          "terminaciones": [
+            "án",
+            "amos",
+            "áis"
+          ],
+          "forma": "están",
+          "habla": {
+            "es": "ellos están",
+            "voz": "hernan",
+            "audio": "hernan.e0da597f1a"
+          },
+          "fr": "Eux, ils sont (à tel endroit)…"
+        },
+        {
+          "id": "u08-q04-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La catedral ___ en la plaza.",
+          "respuesta": "está",
+          "opciones": [
+            "está",
+            "están",
+            "hay"
+          ],
+          "habla": {
+            "es": "La catedral está en la plaza.",
+            "voz": "camila",
+            "audio": "camila.0c9fb6e5f2"
+          },
+          "fr": "La cathédrale est sur la place."
+        },
+        {
+          "id": "u08-q04-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Las tiendas ___ en la calle.",
+          "respuesta": "están",
+          "opciones": [
+            "está",
+            "están",
+            "hay"
+          ],
+          "habla": {
+            "es": "Las tiendas están en la calle.",
+            "voz": "camila",
+            "audio": "camila.8230911186"
+          },
+          "fr": "Les magasins sont dans la rue."
+        },
+        {
+          "id": "u08-q04-s08",
+          "tipo": "grammar_card",
+          "ref": "g_hay_esta"
+        },
+        {
+          "id": "u08-q04-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En mi barrio ___ una biblioteca.",
+          "respuesta": "hay",
+          "opciones": [
+            "hay",
+            "está",
+            "están"
+          ],
+          "habla": {
+            "es": "En mi barrio hay una biblioteca.",
+            "voz": "camila",
+            "audio": "camila.24acaf9c04"
+          },
+          "fr": "Dans mon quartier, il y a une bibliothèque. (une bibliothèque qu’on présente → hay)"
+        },
+        {
+          "id": "u08-q04-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La biblioteca ___ en la plaza.",
+          "respuesta": "está",
+          "opciones": [
+            "hay",
+            "está",
+            "están"
+          ],
+          "habla": {
+            "es": "La biblioteca está en la plaza.",
+            "voz": "camila",
+            "audio": "camila.8f25e11bfa"
+          },
+          "fr": "La bibliothèque est sur la place. (la bibliothèque précise → está)"
+        },
+        {
+          "id": "u08-q04-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En el parque ___ muchos árboles.",
+          "respuesta": "hay",
+          "opciones": [
+            "hay",
+            "está",
+            "están"
+          ],
+          "habla": {
+            "es": "En el parque hay muchos árboles.",
+            "voz": "hernan",
+            "audio": "hernan.674c6bb8ed"
+          },
+          "fr": "Dans le parc, il y a beaucoup d’arbres."
+        },
+        {
+          "id": "u08-q04-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "En",
+            "la",
+            "plaza",
+            "hay",
+            "una",
+            "iglesia."
+          ],
+          "habla": {
+            "es": "En la plaza hay una iglesia.",
+            "voz": "camila",
+            "audio": "camila.775ba03738"
+          },
+          "fr": "Sur la place, il y a une église."
+        },
+        {
+          "id": "u08-q04-s13",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "La",
+            "iglesia",
+            "está",
+            "en",
+            "la",
+            "plaza."
+          ],
+          "habla": {
+            "es": "La iglesia está en la plaza.",
+            "voz": "camila",
+            "audio": "camila.b000de4120"
+          },
+          "fr": "L’église est sur la place."
+        },
+        {
+          "id": "u08-q04-s14",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "hernan",
+          "replica": {
+            "es": "Buenos días. ¿Busca algo? ¿Una farmacia, tal vez?",
+            "fr": "Bonjour. Vous cherchez quelque chose ? Une pharmacie, peut-être ? (À Bogotá, on se dit « usted » facilement, même avec des enfants, par politesse.)",
+            "voz": "hernan",
+            "audio": "hernan.3d537f2516"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, ¿dónde está la farmacia?",
+                "voz": "viajero",
+                "audio": "viajero.3cdda2dbcd"
+              },
+              "fr": "Oui, où est la pharmacie ?",
+              "correcta": true,
+              "reaccion": {
+                "es": "Está en la esquina, a su izquierda.",
+                "fr": "Elle est au coin de la rue, sur votre gauche. (« su » = votre, forme de politesse)",
+                "voz": "hernan",
+                "audio": "hernan.b63f0f562f",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, ¿dónde hay la farmacia?",
+                "voz": "viajero",
+                "audio": "viajero.8b997bf315"
+              },
+              "fr": "Oui, où il y a la pharmacie ?",
+              "correcta": false,
+              "reaccion": {
+                "es": "Se dice «¿dónde está la farmacia?». Con «la» usamos «está».",
+                "fr": "On dit « ¿dónde está la farmacia? ». Avec « la », on utilise « está ».",
+                "voz": "hernan",
+                "audio": "hernan.40aa263b84",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, la farmacia soy.",
+                "voz": "viajero",
+                "audio": "viajero.8394894fd0"
+              },
+              "fr": "Oui, la pharmacie je suis.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Usted es la farmacia? ¡Qué cosa!",
+                "fr": "Vous, vous êtes la pharmacie ? Quelle histoire !",
+                "voz": "hernan",
+                "audio": "hernan.4e1d1b43fd",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q04-s15",
+          "tipo": "dictado",
+          "consigna": {
+            "es": "Escucha y escribe.",
+            "fr": "Écoute et écris.",
+            "voz": "narrador",
+            "audio": "narrador.214c0f0f93"
+          },
+          "habla": {
+            "es": "Hay un parque en la plaza.",
+            "voz": "camila",
+            "audio": "camila.410de46c61"
+          },
+          "respuesta": "Hay un parque en la plaza."
+        }
+      ]
+    },
+    {
+      "id": "u08-q05",
+      "tipo": "lectura",
+      "titulo": "¿Dónde está todo?",
+      "emoji": "📍",
+      "intro": {
+        "es": "Buenos días. Soy Hernán, conductor del teleférico. Les enseño dónde está todo.",
+        "fr": "Bonjour. Je suis Hernán, conducteur du téléphérique. Je vous montre où se trouve chaque chose.",
+        "voz": "hernan",
+        "audio": "hernan.7460f89710"
+      },
+      "pista": "Les prépositions de lieu (cerca de, detrás de, a la derecha de…) : tu lis et tu écoutes des descriptions d’une place, puis tu situes ta maison.",
+      "stats": [
+        "leer",
+        "escuchar",
+        "hablar"
+      ],
+      "minutos": 15,
+      "steps": [
+        {
+          "id": "u08-q05-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "cerca",
+            "lejos",
+            "al_lado",
+            "delante",
+            "detras",
+            "encima",
+            "debajo"
+          ]
+        },
+        {
+          "id": "u08-q05-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "entre",
+            "enfrente",
+            "derecha",
+            "izquierda"
+          ]
+        },
+        {
+          "id": "u08-q05-s03",
+          "tipo": "grammar_card",
+          "ref": "g_preposiciones"
+        },
+        {
+          "id": "u08-q05-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "encima"
+            },
+            {
+              "vocab": "debajo"
+            },
+            {
+              "vocab": "delante"
+            },
+            {
+              "vocab": "detras"
+            },
+            {
+              "vocab": "al_lado"
+            },
+            {
+              "vocab": "entre"
+            }
+          ]
+        },
+        {
+          "id": "u08-q05-s05",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "debajo de",
+            "voz": "narrador",
+            "audio": "narrador.24760d1c35"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "encima",
+              "correcta": false
+            },
+            {
+              "vocab": "debajo",
+              "correcta": true
+            },
+            {
+              "vocab": "detras",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q05-s06",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi casa está entre la panadería y la farmacia.",
+            "voz": "hernan",
+            "audio": "hernan.c1beff7499"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hay dos tiendas cerca de mi casa.",
+              "correcta": true
+            },
+            {
+              "texto": "Mi casa está lejos de las tiendas.",
+              "correcta": false
+            },
+            {
+              "texto": "Mi casa está encima de la farmacia.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q05-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "La plaza de mi barrio es muy bonita. En el centro hay un árbol grande. A la derecha del árbol está la iglesia. A la izquierda hay una panadería. Enfrente de la iglesia está la biblioteca. Mi casa está detrás de la panadería, cerca de la plaza.",
+            "fr": "La place de mon quartier est très jolie. Au centre, il y a un grand arbre. À droite de l’arbre, il y a l’église. À gauche, il y a une boulangerie. En face de l’église, il y a la bibliothèque. Ma maison est derrière la boulangerie, près de la place.",
+            "voz": "hernan",
+            "audio": "hernan.2ebc95b57c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde está la iglesia?",
+                "fr": "Où est l’église ?",
+                "voz": "narrador",
+                "audio": "narrador.68117509fb"
+              },
+              "opciones": [
+                {
+                  "texto": "A la derecha del árbol.",
+                  "correcta": true
+                },
+                {
+                  "texto": "A la izquierda del árbol.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Detrás de la panadería.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué hay a la izquierda del árbol?",
+                "fr": "Qu’y a-t-il à gauche de l’arbre ?",
+                "voz": "narrador",
+                "audio": "narrador.25b1046931"
+              },
+              "opciones": [
+                {
+                  "texto": "Una panadería.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Una iglesia.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Una biblioteca.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde está la casa del narrador?",
+                "fr": "Où est la maison de celui qui parle ?",
+                "voz": "narrador",
+                "audio": "narrador.f666744c9f"
+              },
+              "opciones": [
+                {
+                  "texto": "Detrás de la panadería.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Delante de la iglesia.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Encima de la biblioteca.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q05-s08",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "El número dos está entre el uno y el tres.",
+            "fr": "Le nombre deux est entre le un et le trois.",
+            "voz": "narrador",
+            "audio": "narrador.d59eb7f273"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q05-s09",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "En el alfabeto, la «z» está delante de la «a».",
+            "fr": "Dans l’alphabet, le « z » est devant le « a ». (Faux : le « z » est à la fin, après le « a ».)",
+            "voz": "narrador",
+            "audio": "narrador.7e9463fad6"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u08-q05-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La biblioteca está ___ de la iglesia.",
+          "respuesta": "enfrente",
+          "opciones": [
+            "enfrente",
+            "entre",
+            "encima"
+          ],
+          "habla": {
+            "es": "La biblioteca está enfrente de la iglesia.",
+            "voz": "hernan",
+            "audio": "hernan.28dacd333e"
+          },
+          "fr": "La bibliothèque est en face de l’église."
+        },
+        {
+          "id": "u08-q05-s11",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La farmacia está ___ la panadería y la iglesia.",
+          "respuesta": "entre",
+          "opciones": [
+            "entre",
+            "detrás",
+            "lejos"
+          ],
+          "habla": {
+            "es": "La farmacia está entre la panadería y la iglesia.",
+            "voz": "hernan",
+            "audio": "hernan.e4066eecee"
+          },
+          "fr": "La pharmacie est entre la boulangerie et l’église."
+        },
+        {
+          "id": "u08-q05-s12",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "Mi",
+            "casa",
+            "está",
+            "al",
+            "lado",
+            "del",
+            "parque."
+          ],
+          "habla": {
+            "es": "Mi casa está al lado del parque.",
+            "voz": "camila",
+            "audio": "camila.b27e8f56ae"
+          },
+          "fr": "Ma maison est à côté du parc."
+        },
+        {
+          "id": "u08-q05-s13",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "hernan",
+          "replica": {
+            "es": "Mi casa está cerca de la estación. ¿Y su casa? ¿Está cerca de su colegio?",
+            "fr": "Ma maison est près de la gare. Et la vôtre ? Est-elle près de votre collège ?",
+            "voz": "hernan",
+            "audio": "hernan.70220adc08"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, mi casa está cerca de mi colegio.",
+                "voz": "viajero",
+                "audio": "viajero.579995a56c"
+              },
+              "fr": "Oui, ma maison est près de mon collège.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Qué suerte! Así no llega tarde.",
+                "fr": "Quelle chance ! Comme ça, vous n’arrivez pas en retard.",
+                "voz": "hernan",
+                "audio": "hernan.958e796be2",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi casa hay cerca.",
+                "voz": "viajero",
+                "audio": "viajero.a63978ad7a"
+              },
+              "fr": "Ma maison il y a près.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «mi casa» usamos «está»: «mi casa está cerca».",
+                "fr": "Avec « mi casa », on utilise « está » : « mi casa está cerca ».",
+                "voz": "hernan",
+                "audio": "hernan.7e9f25f621",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Estoy casa cerca.",
+                "voz": "viajero",
+                "audio": "viajero.c954101814"
+              },
+              "fr": "Je suis maison près.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No entiendo muy bien. ¡Otra vez!",
+                "fr": "Je ne comprends pas très bien. Encore une fois !",
+                "voz": "hernan",
+                "audio": "hernan.d7e2b75451",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q05-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di si tu colegio está cerca o lejos de TU casa.",
+            "fr": "Écoute et dis si ton collège est près ou loin de TA maison (cerca / lejos).",
+            "voz": "narrador",
+            "audio": "narrador.c70426d18d"
+          },
+          "objetivo": {
+            "es": "Mi colegio está cerca de mi casa.",
+            "fr": "Mon collège est près de chez moi. (dis « lejos » si c’est loin)",
+            "voz": "viajero",
+            "audio": "viajero.939bc047b8"
+          },
+          "aceptadas": [
+            "mi colegio está cerca de mi casa"
+          ],
+          "patrones": [
+            "mi colegio está {nombre} de mi casa"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo del lugar",
+            "efecto": "Una flecha dorada te indica el camino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u08-q06",
+      "tipo": "dialogo",
+      "titulo": "Más grande que…",
+      "emoji": "⚖️",
+      "intro": {
+        "es": "En Bogotá hay barrios antiguos y barrios modernos. ¿Comparamos?",
+        "fr": "À Bogotá, il y a des quartiers anciens et des quartiers modernes. On compare ?",
+        "voz": "camila",
+        "audio": "camila.e4b71770a4"
+      },
+      "pista": "Le comparatif simple (más… que, menos… que, tan… como, mejor) : tu compares des villes et des quartiers, puis ton propre quartier.",
+      "stats": [
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u08-q06-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "mas",
+            "menos",
+            "antiguo",
+            "moderno",
+            "bonito",
+            "tranquilo",
+            "ruidoso"
+          ]
+        },
+        {
+          "id": "u08-q06-s02",
+          "tipo": "flashcard",
+          "vocab": [
+            "caro",
+            "barato",
+            "mejor"
+          ]
+        },
+        {
+          "id": "u08-q06-s03",
+          "tipo": "grammar_card",
+          "ref": "g_comparativo"
+        },
+        {
+          "id": "u08-q06-s04",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "antiguo"
+            },
+            {
+              "vocab": "moderno"
+            },
+            {
+              "vocab": "tranquilo"
+            },
+            {
+              "vocab": "ruidoso"
+            },
+            {
+              "vocab": "caro"
+            },
+            {
+              "vocab": "barato"
+            }
+          ]
+        },
+        {
+          "id": "u08-q06-s05",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Bogotá es ___ grande que Salamanca.",
+          "respuesta": "más",
+          "opciones": [
+            "más",
+            "menos",
+            "tan"
+          ],
+          "habla": {
+            "es": "Bogotá es más grande que Salamanca.",
+            "voz": "camila",
+            "audio": "camila.9bbc55a373"
+          },
+          "fr": "Bogotá est plus grande que Salamanque."
+        },
+        {
+          "id": "u08-q06-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Salamanca es ___ grande que Bogotá.",
+          "respuesta": "menos",
+          "opciones": [
+            "más",
+            "menos",
+            "mejor"
+          ],
+          "habla": {
+            "es": "Salamanca es menos grande que Bogotá.",
+            "voz": "camila",
+            "audio": "camila.1b01de599f"
+          },
+          "fr": "Salamanque est moins grande que Bogotá."
+        },
+        {
+          "id": "u08-q06-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi calle es más tranquila ___ la plaza.",
+          "respuesta": "que",
+          "opciones": [
+            "que",
+            "como",
+            "de"
+          ],
+          "habla": {
+            "es": "Mi calle es más tranquila que la plaza.",
+            "voz": "camila",
+            "audio": "camila.1ca9d93b97"
+          },
+          "fr": "Ma rue est plus calme que la place."
+        },
+        {
+          "id": "u08-q06-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "El mercado es más ruidoso que el parque.",
+            "voz": "camila",
+            "audio": "camila.5e84cf56a8"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Para estar tranquilo, es mejor ir al parque.",
+              "correcta": true
+            },
+            {
+              "texto": "En el parque hay más gente que en el mercado.",
+              "correcta": false
+            },
+            {
+              "texto": "El mercado es tan tranquilo como el parque.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q06-s09",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En mi ciudad hay barrios modernos y barrios antiguos. Mi barrio es antiguo: las casas son más bajas que los edificios del centro, pero son más bonitas. Mi calle es menos ruidosa que la plaza y mi casa es más barata que los apartamentos modernos.",
+            "fr": "Dans ma ville, il y a des quartiers modernes et des quartiers anciens. Mon quartier est ancien : les maisons sont plus basses que les immeubles du centre, mais elles sont plus jolies. Ma rue est moins bruyante que la place et ma maison est moins chère que les appartements modernes.",
+            "voz": "camila",
+            "audio": "camila.47dacc15b6"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Cómo es el barrio de Camila?",
+                "fr": "Comment est le quartier de Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.995ebb5bcc"
+              },
+              "opciones": [
+                {
+                  "texto": "Antiguo.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Moderno.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Muy ruidoso.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué es más bajo?",
+                "fr": "Qu’est-ce qui est plus bas ?",
+                "voz": "narrador",
+                "audio": "narrador.28ff6b6cd1"
+              },
+              "opciones": [
+                {
+                  "texto": "Las casas del barrio.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Los edificios del centro.",
+                  "correcta": false
+                },
+                {
+                  "texto": "El teleférico.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo es la calle de Camila?",
+                "fr": "Comment est la rue de Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.4b19e137bd"
+              },
+              "opciones": [
+                {
+                  "texto": "Menos ruidosa que la plaza.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Más ruidosa que la plaza.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Más grande que la plaza.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q06-s10",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "camila",
+          "replica": {
+            "es": "Salamanca es más grande que Bogotá, ¿verdad?",
+            "fr": "Salamanque est plus grande que Bogotá, n’est-ce pas ?",
+            "voz": "camila",
+            "audio": "camila.c012c916fd"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "No, Salamanca es más pequeña que Bogotá.",
+                "voz": "viajero",
+                "audio": "viajero.8666e07f2d"
+              },
+              "fr": "Non, Salamanque est plus petite que Bogotá.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Exacto! Bogotá es una ciudad enorme.",
+                "fr": "Exact ! Bogotá est une ville énorme. (environ huit millions d’habitants, contre environ cent cinquante mille à Salamanque)",
+                "voz": "camila",
+                "audio": "camila.3293e30a48",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, Salamanca es más grande.",
+                "voz": "viajero",
+                "audio": "viajero.a1dc09b1a7"
+              },
+              "fr": "Oui, Salamanque est plus grande.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Mmm… no. Bogotá tiene muchos más habitantes.",
+                "fr": "Mmm… non. Bogotá a beaucoup plus d’habitants.",
+                "voz": "camila",
+                "audio": "camila.023fb33b08",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Salamanca es tan grande como una casa.",
+                "voz": "viajero",
+                "audio": "viajero.76aa26301d"
+              },
+              "fr": "Salamanque est aussi grande qu’une maison.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿Como una casa? ¡Qué ciudad tan pequeña!",
+                "fr": "Comme une maison ? Quelle toute petite ville !",
+                "voz": "camila",
+                "audio": "camila.c007761669",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q06-s11",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Un edificio es más alto que una casa.",
+            "fr": "Un immeuble est plus haut qu’une maison.",
+            "voz": "narrador",
+            "audio": "narrador.b2a7901f87"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q06-s12",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y compara TU calle con la plaza.",
+            "fr": "Écoute et compare TA rue à la place (tranquila / ruidosa, bonita…). Attention à l’accord avec « calle » (féminin).",
+            "voz": "narrador",
+            "audio": "narrador.106a37052d"
+          },
+          "objetivo": {
+            "es": "Mi calle es más tranquila que la plaza.",
+            "fr": "Ma rue est plus calme que la place. (dis ce qui est vrai pour toi)",
+            "voz": "viajero",
+            "audio": "viajero.1ca9d93b97"
+          },
+          "aceptadas": [
+            "mi calle es más tranquila que la plaza"
+          ],
+          "patrones": [
+            "mi calle es más {nombre} que la plaza"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo de la comparación",
+            "efecto": "Dos balanzas de luz suben y bajan"
+          }
+        },
+        {
+          "id": "u08-q06-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y compara TU casa con tu colegio.",
+            "fr": "Écoute et compare TA maison à ton collège (más grande / más pequeña que mi colegio).",
+            "voz": "narrador",
+            "audio": "narrador.06e5cf66e9"
+          },
+          "objetivo": {
+            "es": "Mi casa es más pequeña que mi colegio.",
+            "fr": "Ma maison est plus petite que mon collège. (dis ce qui est vrai pour toi)",
+            "voz": "viajero",
+            "audio": "viajero.4a707e1bf7"
+          },
+          "aceptadas": [
+            "mi casa es más pequeña que mi colegio"
+          ],
+          "patrones": [
+            "mi casa es más {nombre} que mi colegio"
+          ]
+        },
+        {
+          "id": "u08-q06-s14",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe cómo es tu barrio.",
+            "fr": "Écris comment est ton quartier.",
+            "voz": "narrador",
+            "audio": "narrador.a0b0df2a95"
+          },
+          "plantilla": "Mi barrio es ___. Mi calle es más ___ que la plaza. Mi ciudad es ___.",
+          "campos": [
+            {
+              "id": "barrio",
+              "pista": "Comment est ton quartier ? (tranquilo, ruidoso, bonito, moderno, antiguo…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "calle",
+              "pista": "Ta rue est plus… que la place (tranquila, ruidosa, bonita…, au féminin)",
+              "tipo": "texto"
+            },
+            {
+              "id": "ciudad",
+              "pista": "Comment est ta ville ? (grande, pequeña, bonita…)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Mi barrio es tranquilo. Mi calle es más bonita que la plaza. Mi ciudad es grande.",
+            "fr": "Mon quartier est calme. Ma rue est plus jolie que la place. Ma ville est grande.",
+            "voz": "viajero",
+            "audio": "viajero.8398363134"
+          },
+          "guardarEn": "perfil"
+        }
+      ]
+    },
+    {
+      "id": "u08-q07",
+      "tipo": "cultura",
+      "titulo": "La Candelaria y Monserrate",
+      "emoji": "⛰️",
+      "intro": {
+        "es": "Esta es La Candelaria, el corazón histórico de Bogotá. Hoy vamos a subir a Monserrate.",
+        "fr": "Voici La Candelaria, le cœur historique de Bogotá. Aujourd’hui, nous allons monter à Monserrate.",
+        "voz": "camila",
+        "audio": "camila.8eac9fb7fe"
+      },
+      "pista": "La Candelaria, Monserrate, la Ciclovía ; puis un tour des villes hispaniques (Madrid, Bogotá, Buenos Aires) et ta propre fiche de quartier.",
+      "stats": [
+        "cultura",
+        "leer",
+        "escribir",
+        "hablar"
+      ],
+      "minutos": 14,
+      "steps": [
+        {
+          "id": "u08-q07-s01",
+          "tipo": "flashcard",
+          "vocab": [
+            "subir"
+          ]
+        },
+        {
+          "id": "u08-q07-s02",
+          "tipo": "cinematic_ref",
+          "cinematica": "u08-capsula-candelaria",
+          "escena": {
+            "id": "u08-capsula-candelaria",
+            "tipo": "capsula",
+            "titulo": "La Candelaria y Monserrate",
+            "duracion": 24,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 4,
+                "vista": "Style explainer, papier découpé : une carte de la Colombie, un point sur Bogotá, l’année « 1538 » s’inscrit en gros chiffres.",
+                "camara": "plan fixe, animations de papier découpé",
+                "lineas": [
+                  {
+                    "es": "Bogotá nace en 1538, en el barrio de La Candelaria.",
+                    "fr": "Bogotá est fondée en 1538, dans le quartier de La Candelaria.",
+                    "voz": "narrador",
+                    "audio": "narrador.e4d2c60d05"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 5,
+                "vista": "Les rues de La Candelaria : pavés, maisons de couleurs, balcons, graffitis ; puis la Plaza de Bolívar avec la cathédrale et les pigeons.",
+                "lineas": [
+                  {
+                    "es": "Es el barrio histórico: tiene calles de piedra, casas de colores y balcones.",
+                    "fr": "C’est le quartier historique : il a des rues de pierre, des maisons de couleur et des balcons.",
+                    "voz": "narrador",
+                    "audio": "narrador.363c0a6495"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 5,
+                "vista": "Vitrine du Museo del Oro : masques, colliers et petits personnages en or ; un compteur monte jusqu’à « +55 000 ».",
+                "lineas": [
+                  {
+                    "es": "En el Museo del Oro hay más de cincuenta mil piezas de los pueblos indígenas.",
+                    "fr": "Au Museo del Oro, il y a plus de cinquante mille pièces des peuples indigènes.",
+                    "voz": "narrador",
+                    "audio": "narrador.6de8b1a574"
+                  }
+                ]
+              },
+              {
+                "n": 4,
+                "duracion": 5,
+                "vista": "Le téléphérique et le funiculaire montent vers Monserrate, un panneau indique « 3 152 m » ; la ville s’étend en bas.",
+                "lineas": [
+                  {
+                    "es": "Monserrate es una montaña con un santuario en la cima. Está a más de tres mil metros.",
+                    "fr": "Monserrate est une montagne avec un sanctuaire au sommet. Elle est à plus de trois mille mètres d’altitude.",
+                    "voz": "narrador",
+                    "audio": "narrador.cb6cd791ed"
+                  }
+                ]
+              },
+              {
+                "n": 5,
+                "duracion": 5,
+                "vista": "Un dimanche, de grandes avenues fermées aux voitures : des centaines de cyclistes, des familles qui marchent et courent.",
+                "lineas": [
+                  {
+                    "es": "Los domingos, más de cien kilómetros de calles están cerradas a los coches: ¡es la Ciclovía!",
+                    "fr": "Le dimanche, plus de cent kilomètres de rues sont fermés aux voitures : c’est la Ciclovía !",
+                    "voz": "narrador",
+                    "audio": "narrador.fb05da86de"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "u08-q07-s03",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Bogotá nace en 1538 en el barrio de La Candelaria.",
+            "fr": "Bogotá est fondée en 1538 dans le quartier de La Candelaria.",
+            "voz": "narrador",
+            "audio": "narrador.a9d2689cfa"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q07-s04",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Monserrate es una playa del Caribe.",
+            "fr": "Monserrate est une plage des Caraïbes. (Faux : c’est une montagne.)",
+            "voz": "narrador",
+            "audio": "narrador.d53a2e5f75"
+          },
+          "correcta": false
+        },
+        {
+          "id": "u08-q07-s05",
+          "tipo": "true_false",
+          "consigna": {
+            "es": "¿Verdadero o falso?",
+            "fr": "Vrai ou faux ?",
+            "voz": "narrador",
+            "audio": "narrador.d92741ae05"
+          },
+          "afirmacion": {
+            "es": "Los domingos, en Bogotá, hay una Ciclovía: muchas calles están cerradas a los coches.",
+            "fr": "Le dimanche, à Bogotá, il y a une Ciclovía : beaucoup de rues sont fermées aux voitures.",
+            "voz": "narrador",
+            "audio": "narrador.2303159b28"
+          },
+          "correcta": true
+        },
+        {
+          "id": "u08-q07-s06",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "En el mundo hispano hay ciudades muy diferentes. Madrid es la capital de España y está en el centro del país. Bogotá es la capital de Colombia y está entre montañas. Buenos Aires es la capital de Argentina y está cerca de un río muy ancho, el Río de la Plata.",
+            "fr": "Dans le monde hispanique, il y a des villes très différentes. Madrid est la capitale de l’Espagne et se trouve au centre du pays. Bogotá est la capitale de la Colombie et se trouve entre des montagnes. Buenos Aires est la capitale de l’Argentine et se trouve près d’un fleuve très large, le Río de la Plata.",
+            "voz": "camila",
+            "audio": "camila.682f9f717c"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Qué ciudad está entre montañas?",
+                "fr": "Quelle ville est entre des montagnes ?",
+                "voz": "narrador",
+                "audio": "narrador.019b0379e7"
+              },
+              "opciones": [
+                {
+                  "texto": "Bogotá.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Madrid.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Buenos Aires.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde está Buenos Aires?",
+                "fr": "Où est Buenos Aires ?",
+                "voz": "narrador",
+                "audio": "narrador.e258720260"
+              },
+              "opciones": [
+                {
+                  "texto": "Cerca del Río de la Plata.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En el centro de España.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Entre montañas.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cuál es la capital de Argentina?",
+                "fr": "Quelle est la capitale de l’Argentine ?",
+                "voz": "narrador",
+                "audio": "narrador.4690effc76"
+              },
+              "opciones": [
+                {
+                  "texto": "Buenos Aires.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Bogotá.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Madrid.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q07-s07",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es un plato típico de Bogotá.",
+            "fr": "Le dimanche, à Bogotá, il y a une Ciclovía. Beaucoup de rues sont fermées aux voitures. Les familles vont à vélo, marchent et jouent dans la rue. En Colombie, beaucoup de gens boivent du chocolat chaud avec du fromage : c’est une spécialité typique de Bogotá.",
+            "voz": "camila",
+            "audio": "camila.5c4d927572"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Quién usa las calles los domingos?",
+                "fr": "Qui utilise les rues le dimanche ?",
+                "voz": "narrador",
+                "audio": "narrador.2e452391bc"
+              },
+              "opciones": [
+                {
+                  "texto": "Las bicicletas y las familias.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Solo los coches.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Solo los autobuses.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Qué toman con el chocolate en Bogotá?",
+                "fr": "Qu’ajoute-t-on au chocolat à Bogotá ?",
+                "voz": "narrador",
+                "audio": "narrador.94a69644a0"
+              },
+              "opciones": [
+                {
+                  "texto": "Queso.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Pan con jamón.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Un helado.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q07-s08",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Para subir a Monserrate hay un teleférico y también un funicular.",
+            "voz": "hernan",
+            "audio": "hernan.22e42d5eb8"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Se puede subir a la montaña de dos maneras.",
+              "correcta": true
+            },
+            {
+              "texto": "Solo se sube a pie por la calle.",
+              "correcta": false
+            },
+            {
+              "texto": "No hay forma de llegar a la cima.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q07-s09",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "hernan",
+          "replica": {
+            "es": "Para subir a Monserrate hay un teleférico. ¿Subimos juntos?",
+            "fr": "Pour monter à Monserrate, il y a un téléphérique. On monte ensemble ?",
+            "voz": "hernan",
+            "audio": "hernan.70d28ff304"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Sí, vamos a subir en el teleférico.",
+                "voz": "viajero",
+                "audio": "viajero.8d64afde87"
+              },
+              "fr": "Oui, nous allons monter en téléphérique.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Perfecto! Suban, que la vista es increíble.",
+                "fr": "Parfait ! Montez, la vue est incroyable.",
+                "voz": "hernan",
+                "audio": "hernan.99bd2883f0",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Sí, subo la ventana.",
+                "voz": "viajero",
+                "audio": "viajero.7c5628081a"
+              },
+              "fr": "Oui, je monte la fenêtre.",
+              "correcta": false,
+              "reaccion": {
+                "es": "¿La ventana? Mmm… Mejor el teleférico.",
+                "fr": "La fenêtre ? Mmm… Plutôt le téléphérique.",
+                "voz": "hernan",
+                "audio": "hernan.ae1b9c4a15",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "No, Monserrate está en París.",
+                "voz": "viajero",
+                "audio": "viajero.6ada816e0a"
+              },
+              "fr": "Non, Monserrate est à Paris.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No, no. Monserrate está aquí, en Bogotá.",
+                "fr": "Non, non. Monserrate est ici, à Bogotá.",
+                "voz": "hernan",
+                "audio": "hernan.c1c5781ab6",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q07-s10",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Monserrate es una ___ de más de tres mil metros.",
+          "respuesta": "montaña",
+          "opciones": [
+            "montaña",
+            "ciudad",
+            "iglesia"
+          ],
+          "habla": {
+            "es": "Monserrate es una montaña de más de tres mil metros.",
+            "voz": "camila",
+            "audio": "camila.b7385ea42c"
+          },
+          "fr": "Monserrate est une montagne de plus de trois mille mètres."
+        },
+        {
+          "id": "u08-q07-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "La",
+            "Candelaria",
+            "es",
+            "un",
+            "barrio",
+            "antiguo."
+          ],
+          "habla": {
+            "es": "La Candelaria es un barrio antiguo.",
+            "voz": "camila",
+            "audio": "camila.2e877e5b90"
+          },
+          "fr": "La Candelaria est un quartier ancien."
+        },
+        {
+          "id": "u08-q07-s12",
+          "tipo": "write_free",
+          "consigna": {
+            "es": "Escribe la ficha de tu barrio.",
+            "fr": "Écris la fiche de ton quartier.",
+            "voz": "narrador",
+            "audio": "narrador.54ea932d00"
+          },
+          "plantilla": "Vivo en ___. En mi barrio hay ___. Mi lugar favorito es ___.",
+          "campos": [
+            {
+              "id": "ciudad",
+              "pista": "Ta ville (París, Lyon…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "hay",
+              "pista": "Ce qu’il y a dans ton quartier (un parque, una biblioteca, un cine…)",
+              "tipo": "texto"
+            },
+            {
+              "id": "favorito",
+              "pista": "Ton endroit préféré (el parque, la plaza, mi casa…, avec l’article)",
+              "tipo": "texto"
+            }
+          ],
+          "modelo": {
+            "es": "Vivo en París. En mi barrio hay un parque y una panadería. Mi lugar favorito es el parque.",
+            "fr": "J’habite à Paris. Dans mon quartier, il y a un parc et une boulangerie. Mon endroit préféré est le parc.",
+            "voz": "viajero",
+            "audio": "viajero.c2d1493213"
+          },
+          "guardarEn": "perfil"
+        },
+        {
+          "id": "u08-q07-s13",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y di cuál es TU lugar favorito.",
+            "fr": "Écoute et dis quel est TON endroit préféré (la biblioteca, mi casa, la plaza…).",
+            "voz": "narrador",
+            "audio": "narrador.0ea151dd5d"
+          },
+          "objetivo": {
+            "es": "Mi lugar favorito es el parque.",
+            "fr": "Mon endroit préféré est le parc. (dis le tien)",
+            "voz": "viajero",
+            "audio": "viajero.1491e43e38"
+          },
+          "aceptadas": [
+            "mi lugar favorito es el parque"
+          ],
+          "patrones": [
+            "mi lugar favorito es {nombre}"
+          ],
+          "foco": "Le « v » espagnol (fa-vo-RI-to) se prononce comme un « b » doux, pas comme le « v » français. Et la « ll » de « calle » se dit comme un « y » : CA-ye.",
+          "hechizo": {
+            "nombre": "Hechizo del mapa",
+            "efecto": "Tu lugar favorito brilla en el mapa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "u08-q08",
+      "tipo": "desafio",
+      "titulo": "El mapa de la Sombra",
+      "emoji": "🗺️",
+      "intro": {
+        "es": "Sin mapa, nadie sabe dónde está. Yo borro las calles, los nombres y las palabras.",
+        "fr": "Sans plan, personne ne sait où il est. J’efface les rues, les noms et les mots.",
+        "voz": "sombra",
+        "audio": "sombra.2da3ace681"
+      },
+      "pista": "Boss de Bogotá : révision mixte des unités 1 à 8 (présentation, école, famille, description, ser / estar, maison, lieux, comparatif) pour rendre leurs noms aux rues.",
+      "stats": [
+        "escuchar",
+        "hablar",
+        "leer",
+        "escribir"
+      ],
+      "minutos": 15,
+      "jefe": {
+        "personaje": "sombra",
+        "vidas": 9
+      },
+      "steps": [
+        {
+          "id": "u08-q08-s01",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "Sin nombre no hay calle. ¿Cómo te llamas y de dónde eres?",
+            "fr": "Sans nom, pas de rue. Comment tu t’appelles et d’où viens-tu ?",
+            "voz": "sombra",
+            "audio": "sombra.bb27c26453"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Me llamo Álex y soy de París.",
+                "voz": "viajero",
+                "audio": "viajero.f65b0a200b"
+              },
+              "fr": "Je m’appelle Álex et je suis de Paris.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Grr! Ya tengo un nombre menos…",
+                "fr": "Grr ! Voilà un nom de moins…",
+                "voz": "sombra",
+                "audio": "sombra.8bece45e4c",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Tengo doce años y tres amigos.",
+                "voz": "viajero",
+                "audio": "viajero.45cef46488"
+              },
+              "fr": "J’ai douze ans et trois amis.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No es lo que pregunto. Responde bien.",
+                "fr": "Ce n’est pas ce que je demande. Réponds correctement.",
+                "voz": "sombra",
+                "audio": "sombra.de74fdaf51",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Adiós, hasta luego.",
+                "voz": "viajero",
+                "audio": "viajero.41a052948e"
+              },
+              "fr": "Au revoir, à tout à l’heure.",
+              "correcta": false,
+              "reaccion": {
+                "es": "No te vas sin responder.",
+                "fr": "Tu ne pars pas sans répondre.",
+                "voz": "sombra",
+                "audio": "sombra.0c306a1a68",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s02",
+          "tipo": "dialogue_choice",
+          "consigna": {
+            "es": "Responde.",
+            "fr": "Réponds.",
+            "voz": "narrador",
+            "audio": "narrador.4858aa0f81"
+          },
+          "pnj": "sombra",
+          "replica": {
+            "es": "¿Dónde vives? ¿Cómo es tu casa?",
+            "fr": "Où habites-tu ? Comment est ta maison ?",
+            "voz": "sombra",
+            "audio": "sombra.bdb61cfa6b"
+          },
+          "opciones": [
+            {
+              "habla": {
+                "es": "Vivo en un apartamento en París. Tiene un balcón.",
+                "voz": "viajero",
+                "audio": "viajero.463388a224"
+              },
+              "fr": "J’habite dans un appartement à Paris. Il a un balcon.",
+              "correcta": true,
+              "reaccion": {
+                "es": "¡Aaah! Una casa más que vuelve…",
+                "fr": "Aaah ! Encore une maison qui revient…",
+                "voz": "sombra",
+                "audio": "sombra.e60b0d332e",
+                "emoji": "😄"
+              }
+            },
+            {
+              "habla": {
+                "es": "Vivo es un apartamento.",
+                "voz": "viajero",
+                "audio": "viajero.502efe6a87"
+              },
+              "fr": "J’habite est un appartement.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Eso no tiene sentido. ¡Otra vez!",
+                "fr": "Ça n’a aucun sens. Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.5949828b50",
+                "emoji": "🤨"
+              }
+            },
+            {
+              "habla": {
+                "es": "Mi casa hay una cama.",
+                "voz": "viajero",
+                "audio": "viajero.0f448152da"
+              },
+              "fr": "Ma maison il y a un lit.",
+              "correcta": false,
+              "reaccion": {
+                "es": "Con «hay» no decimos «mi casa hay». ¡Otra vez!",
+                "fr": "Avec « hay », on ne dit pas « mi casa hay ». Encore une fois !",
+                "voz": "sombra",
+                "audio": "sombra.43b8fd666d",
+                "emoji": "🤨"
+              }
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s03",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige la imagen.",
+            "fr": "Écoute et choisis l'image.",
+            "voz": "narrador",
+            "audio": "narrador.34edf25feb"
+          },
+          "habla": {
+            "es": "armario",
+            "voz": "narrador",
+            "audio": "narrador.2b9379369a"
+          },
+          "modo": "imagen",
+          "opciones": [
+            {
+              "vocab": "armario",
+              "correcta": true
+            },
+            {
+              "vocab": "nevera",
+              "correcta": false
+            },
+            {
+              "vocab": "lampara",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s04",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "La panadería está enfrente de la farmacia, al lado del parque.",
+            "voz": "sombra",
+            "audio": "sombra.9bee3f5d2d"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "Hay un parque cerca de la panadería.",
+              "correcta": true
+            },
+            {
+              "texto": "La farmacia está lejos del parque.",
+              "correcta": false
+            },
+            {
+              "texto": "La panadería está detrás de la iglesia.",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s05",
+          "tipo": "match_image",
+          "consigna": {
+            "es": "Une cada palabra con su imagen.",
+            "fr": "Relie chaque mot à son image.",
+            "voz": "narrador",
+            "audio": "narrador.26ce1d8f3e"
+          },
+          "pares": [
+            {
+              "vocab": "ventana"
+            },
+            {
+              "vocab": "cama"
+            },
+            {
+              "vocab": "sofa"
+            },
+            {
+              "vocab": "lampara"
+            },
+            {
+              "vocab": "nevera"
+            },
+            {
+              "vocab": "balcon"
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s06",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Mi hermano ___ doce años.",
+          "respuesta": "tiene",
+          "opciones": [
+            "es",
+            "tiene",
+            "está"
+          ],
+          "habla": {
+            "es": "Mi hermano tiene doce años.",
+            "voz": "marina",
+            "audio": "marina.44c3555975"
+          },
+          "fr": "Mon frère a douze ans. (l’âge → tener)"
+        },
+        {
+          "id": "u08-q08-s07",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "En mi mochila ___ un cuaderno y dos libros.",
+          "respuesta": "hay",
+          "opciones": [
+            "hay",
+            "está",
+            "es"
+          ],
+          "habla": {
+            "es": "En mi mochila hay un cuaderno y dos libros.",
+            "voz": "diego",
+            "audio": "diego.f60b3a4ef8"
+          },
+          "fr": "Dans mon sac à dos, il y a un cahier et deux livres."
+        },
+        {
+          "id": "u08-q08-s08",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "La Candelaria ___ en Bogotá.",
+          "respuesta": "está",
+          "opciones": [
+            "es",
+            "está",
+            "hay"
+          ],
+          "habla": {
+            "es": "La Candelaria está en Bogotá.",
+            "voz": "camila",
+            "audio": "camila.83562f98eb"
+          },
+          "fr": "La Candelaria est à Bogotá."
+        },
+        {
+          "id": "u08-q08-s09",
+          "tipo": "fill_blank",
+          "consigna": {
+            "es": "Completa la frase.",
+            "fr": "Complète la phrase.",
+            "voz": "narrador",
+            "audio": "narrador.c8dfcbb8f1"
+          },
+          "frase": "Bogotá es ___ grande que Salamanca.",
+          "respuesta": "más",
+          "opciones": [
+            "más",
+            "menos",
+            "tan"
+          ],
+          "habla": {
+            "es": "Bogotá es más grande que Salamanca.",
+            "voz": "camila",
+            "audio": "camila.9bbc55a373"
+          },
+          "fr": "Bogotá est plus grande que Salamanque."
+        },
+        {
+          "id": "u08-q08-s10",
+          "tipo": "conjugar",
+          "consigna": {
+            "es": "Forja la palabra correcta.",
+            "fr": "Forge le bon mot.",
+            "voz": "narrador",
+            "audio": "narrador.dfa305f4c5"
+          },
+          "verbo": "vivir",
+          "sujeto": "tú",
+          "radical": "viv",
+          "terminacion": "es",
+          "terminaciones": [
+            "es",
+            "as",
+            "imos"
+          ],
+          "forma": "vives",
+          "habla": {
+            "es": "tú vives",
+            "voz": "marina",
+            "audio": "marina.494fd33712"
+          },
+          "fr": "Toi, tu habites…"
+        },
+        {
+          "id": "u08-q08-s11",
+          "tipo": "reorder_words",
+          "consigna": {
+            "es": "Ordena las palabras.",
+            "fr": "Remets les mots dans l’ordre.",
+            "voz": "narrador",
+            "audio": "narrador.e7f9fa50cc"
+          },
+          "palabras": [
+            "La",
+            "farmacia",
+            "está",
+            "detrás",
+            "de",
+            "la",
+            "iglesia."
+          ],
+          "habla": {
+            "es": "La farmacia está detrás de la iglesia.",
+            "voz": "sombra",
+            "audio": "sombra.7479faef57"
+          },
+          "fr": "La pharmacie est derrière l’église."
+        },
+        {
+          "id": "u08-q08-s12",
+          "tipo": "listen_choose",
+          "consigna": {
+            "es": "Escucha y elige.",
+            "fr": "Écoute et choisis.",
+            "voz": "narrador",
+            "audio": "narrador.fd721521ac"
+          },
+          "habla": {
+            "es": "Mi cumpleaños es el trece de marzo.",
+            "voz": "camila",
+            "audio": "camila.7da94ece40"
+          },
+          "modo": "texto",
+          "opciones": [
+            {
+              "texto": "13 de marzo",
+              "correcta": true
+            },
+            {
+              "texto": "30 de marzo",
+              "correcta": false
+            },
+            {
+              "texto": "13 de mayo",
+              "correcta": false
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s13",
+          "tipo": "read_answer",
+          "consigna": {
+            "es": "Lee y contesta.",
+            "fr": "Lis et réponds.",
+            "voz": "narrador",
+            "audio": "narrador.ac777068b4"
+          },
+          "texto": {
+            "es": "Hola, soy Camila. Tengo doce años y vivo en un apartamento en La Candelaria. Mi madre es médica y mi padre es cocinero. Mi calle es muy bonita y tranquila. Mi colegio está cerca de mi casa, al lado de la iglesia. Hoy estoy un poco cansada, pero estoy contenta.",
+            "fr": "Salut, c’est Camila. J’ai douze ans et j’habite dans un appartement à La Candelaria. Ma mère est médecin et mon père est cuisinier. Ma rue est très jolie et calme. Mon collège est près de chez moi, à côté de l’église. Aujourd’hui, je suis un peu fatiguée, mais je suis contente.",
+            "voz": "camila",
+            "audio": "camila.55979576ae"
+          },
+          "preguntas": [
+            {
+              "pregunta": {
+                "es": "¿Dónde vive Camila?",
+                "fr": "Où habite Camila ?",
+                "voz": "narrador",
+                "audio": "narrador.8720f6cf87"
+              },
+              "opciones": [
+                {
+                  "texto": "En un apartamento.",
+                  "correcta": true
+                },
+                {
+                  "texto": "En una casa grande.",
+                  "correcta": false
+                },
+                {
+                  "texto": "En un teleférico.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Dónde está su colegio?",
+                "fr": "Où est son collège ?",
+                "voz": "narrador",
+                "audio": "narrador.c20f8666bf"
+              },
+              "opciones": [
+                {
+                  "texto": "Al lado de la iglesia.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Lejos de su casa.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Encima del mercado.",
+                  "correcta": false
+                }
+              ]
+            },
+            {
+              "pregunta": {
+                "es": "¿Cómo está Camila hoy?",
+                "fr": "Comment va Camila aujourd’hui ?",
+                "voz": "narrador",
+                "audio": "narrador.d93bffadcb"
+              },
+              "opciones": [
+                {
+                  "texto": "Cansada, pero contenta.",
+                  "correcta": true
+                },
+                {
+                  "texto": "Triste y enfadada.",
+                  "correcta": false
+                },
+                {
+                  "texto": "Muy tímida.",
+                  "correcta": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u08-q08-s14",
+          "tipo": "speak",
+          "consigna": {
+            "es": "Escucha y repite el hechizo con tu nombre.",
+            "fr": "Écoute et répète le sort en disant TON prénom.",
+            "voz": "narrador",
+            "audio": "narrador.2a1641197d"
+          },
+          "objetivo": {
+            "es": "Hola, me llamo Álex. Vivo en París y mi barrio es tranquilo.",
+            "fr": "Salut, je m’appelle Álex. J’habite à Paris et mon quartier est calme. (dis ton prénom)",
+            "voz": "viajero",
+            "audio": "viajero.27edf7d9c7"
+          },
+          "aceptadas": [
+            "hola me llamo álex vivo en parís y mi barrio es tranquilo"
+          ],
+          "patrones": [
+            "hola me llamo {nombre} vivo en parís y mi barrio es tranquilo"
+          ],
+          "hechizo": {
+            "nombre": "Hechizo final",
+            "efecto": "¡Las calles recuperan su nombre y sus letras!"
+          }
+        },
+        {
+          "id": "u08-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u08-pluma",
+          "escena": {
+            "id": "u08-pluma",
+            "tipo": "pluma",
+            "titulo": "Octava pluma",
+            "duracion": 8,
+            "planos": [
+              {
+                "n": 1,
+                "duracion": 3,
+                "vista": "Au sommet de Monserrate, dans le jardin du sanctuaire, la plume verte brille. En bas, les panneaux de la ville retrouvent leurs lettres, une à une.",
+                "personajes": [
+                  "camila"
+                ],
+                "lineas": [
+                  {
+                    "es": "¡Las calles tienen nombre otra vez! ¡Gracias!",
+                    "fr": "Les rues ont de nouveau un nom ! Merci !",
+                    "voz": "camila",
+                    "audio": "camila.e2526f1974"
+                  }
+                ]
+              },
+              {
+                "n": 2,
+                "duracion": 3,
+                "vista": "Le Quetzal s’envole au-dessus des nuages, ses plumes éclatent de vert.",
+                "personajes": [
+                  "quetzal"
+                ],
+                "lineas": [
+                  {
+                    "es": "Ocho plumas. ¡Casi vuelo hasta las nubes!",
+                    "fr": "Huit plumes. Je vole presque jusqu’aux nuages !",
+                    "voz": "quetzal",
+                    "audio": "quetzal.a39e38d836"
+                  }
+                ]
+              },
+              {
+                "n": 3,
+                "duracion": 2,
+                "vista": "Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse traverse l’océan Atlantique vers le Mexique.",
+                "personajes": [
+                  "ignacio"
+                ],
+                "lineas": [
+                  {
+                    "es": "La siguiente pluma está en México, en Yucatán. ¡Volvemos a casa del Quetzal!",
+                    "fr": "La prochaine plume est au Mexique, dans le Yucatán. Nous retournons chez le Quetzal !",
+                    "voz": "ignacio",
+                    "audio": "ignacio.8c5096b2f8"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "pluma": {
+    "numero": 8,
+    "nombre": "Pluma del Mapa",
+    "descripcion": {
+      "es": "Ocho plumas. Las calles tienen nombre… ¡y mis alas tienen fuerza!",
+      "fr": "Huit plumes. Les rues ont un nom… et mes ailes ont de la force !",
+      "voz": "quetzal",
+      "audio": "quetzal.3fc98a44cf"
+    }
+  }
+}
