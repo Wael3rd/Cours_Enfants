@@ -1492,10 +1492,10 @@
     "titulo": "La casa de Doña Marta",
     "emoji": "🏠",
     "intro": {
-     "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.",
-     "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, deux chambres et un balcon.",
+     "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, tres dormitorios y un balcón.",
+     "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, trois chambres et un balcon.",
      "voz": "marta",
-     "audio": "marta.43ade8abbb"
+     "audio": "marta.3fadffa326"
     },
     "pista": "Les pièces et les objets de la maison, avec Doña Marta : tu décris ta propre maison à l’oral et à l’écrit.",
     "stats": [
@@ -1534,7 +1534,7 @@
     "emoji": "⚒️",
     "intro": {
      "es": "Hay. Está. Están. ¡Forja conmigo!",
-     "fr": "Hay. Est. Sont. Forge avec moi !",
+     "fr": "Il y a. Il est. Ils sont. Forge avec moi !",
      "voz": "quetzal",
      "audio": "quetzal.b40396af19"
     },
@@ -1682,10 +1682,10 @@
     "titulo": "Selva y cenotes",
     "emoji": "🦩",
     "intro": {
-     "es": "Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.",
-     "fr": "Regarde la forêt tropicale : il y a des jaguars, des flamants, des tortues… et des milliers de cénotes.",
+     "es": "Mira: en Yucatán hay jaguares en la selva, flamencos en las lagunas, tortugas en el mar… ¡y miles de cenotes!",
+     "fr": "Regarde : au Yucatán, il y a des jaguars dans la forêt, des flamants roses dans les lagunes, des tortues dans la mer… et des milliers de cénotes !",
      "voz": "itzel",
-     "audio": "itzel.3042c94106"
+     "audio": "itzel.17fcae995d"
     },
     "pista": "La nature du Yucatán : forêt, mer, animaux et cénotes. Tu lis, tu écoutes et tu parles de ta nature à toi.",
     "stats": [
@@ -1724,10 +1724,10 @@
     "titulo": "Maíz, cacao y chile",
     "emoji": "🌽",
     "intro": {
-     "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.",
-     "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a mille ans.",
+     "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace miles de años.",
+     "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a des milliers d’années.",
      "voz": "chabela",
-     "audio": "chabela.9da5457cd3"
+     "audio": "chabela.5cca37194c"
     },
     "pista": "Les saveurs du Mexique : maïs, tortillas, cacao, piment, cochinita pibil. Tu lis, tu goûtes (en mots) et tu dis ce que TOI tu aimes manger.",
     "stats": [
@@ -1935,10 +1935,10 @@
     "titulo": "Machu Picchu",
     "emoji": "🏔️",
     "intro": {
-     "es": "Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!",
-     "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici l’air est très rare. Allons doucement !",
+     "es": "Estamos en los Andes, a más de tres mil metros. Aquí hay poco oxígeno. ¡Vamos despacio!",
+     "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici, il y a peu d’oxygène. Allons doucement !",
      "voz": "huaman",
-     "audio": "huaman.b63ca5ed4c"
+     "audio": "huaman.cb8cab3326"
     },
     "pista": "Lecture sur Machu Picchu et sur Cusco, découverte des grands nombres (mil, quinientos, millón) à reconnaître, puis tu dis quel endroit TOI tu aimerais visiter.",
     "stats": [

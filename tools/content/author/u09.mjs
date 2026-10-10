@@ -19,8 +19,8 @@ export default function build() {
     // naturaleza
     W('selva', 'selva', 'forêt tropicale, jungle', '🌴', 'naturaleza', 'En Yucatán hay una selva muy grande.', 'Au Yucatán, il y a une très grande forêt tropicale.', { genero: 'f', plural: 'selvas' }),
     W('cenote', 'cenote', 'cénote : puits naturel rempli d’eau, typique du Yucatán', null, 'naturaleza', 'Itzel nada en el cenote.', 'Itzel nage dans le cénote.', { genero: 'm', plural: 'cenotes', ...ilu('Un cénote : un grand trou rond dans la roche, avec de l’eau turquoise et un rayon de lumière qui tombe du plafond'), voz: 'itzel', exVoz: 'itzel' }),
-    W('playa', 'playa', 'plage', '🏖️', 'naturaleza', 'La playa tiene el mar azul.', 'La plage a la mer bleue.', { genero: 'f', plural: 'playas' }),
-    W('mar', 'mar', 'mer (« el mar » ; on dit parfois « la mar » en poésie)', '🌊', 'naturaleza', 'El mar es cálido en Yucatán.', 'La mer est chaude au Yucatán.', { genero: 'mf' }),
+    W('playa', 'playa', 'plage', '🏖️', 'naturaleza', 'En Yucatán hay playas muy bonitas.', 'Au Yucatán, il y a de très belles plages.', { genero: 'f', plural: 'playas' }),
+    W('mar', 'mar', 'mer (« el mar » ; on dit parfois « la mar » en poésie)', '🌊', 'naturaleza', 'El mar es cálido en Yucatán.', 'La mer est chaude au Yucatán.', { genero: 'm' }),
     W('rio', 'río', 'fleuve, rivière', null, 'naturaleza', 'En Yucatán hay ríos bajo la tierra.', 'Au Yucatán, il y a des rivières sous la terre.', { genero: 'm', plural: 'ríos', ...ilu('Une rivière qui serpente entre des arbres verts') }),
     W('piedra', 'piedra', 'pierre', '🪨', 'naturaleza', 'La pirámide es de piedra.', 'La pyramide est en pierre.', { genero: 'f', plural: 'piedras' }),
     W('planta', 'planta', 'plante', '🌿', 'naturaleza', 'En la selva hay muchas plantas.', 'Dans la forêt tropicale, il y a beaucoup de plantes.', { genero: 'f', plural: 'plantas' }),
@@ -36,7 +36,7 @@ export default function build() {
     W('calor', 'calor', 'chaleur (hace calor = il fait chaud)', '🥵', 'naturaleza', 'En Yucatán hace mucho calor.', 'Au Yucatán, il fait très chaud.', { genero: 'm' }),
     // patrimonio
     W('maya', 'maya', 'maya (peuple et adjectif ; « los mayas »)', null, 'patrimonio', 'Los mayas construyen pirámides.', 'Les Mayas construisent des pyramides.', { adj: true, genero: 'mf', plural: 'mayas', ...ilu('Un portrait en pierre sculptée d’un dignitaire maya avec une grande coiffe de plumes'), voz: 'chan', exVoz: 'chan' }),
-    W('azteca', 'azteca', 'aztèque (peuple et adjectif ; ils se nomment eux-mêmes « mexicas »)', null, 'patrimonio', 'Los aztecas viven en el centro de México.', 'Les Aztèques vivent au centre du Mexique.', { adj: true, genero: 'mf', plural: 'aztecas', ...ilu('Un guerrier aztèque avec un grand casque de plumes vertes et un bouclier rond') }),
+    W('azteca', 'azteca', 'aztèque (peuple et adjectif ; eux-mêmes se nommaient « mexicas »)', null, 'patrimonio', 'Los aztecas viven en el centro de México.', 'Les Aztèques vivent au centre du Mexique.', { adj: true, genero: 'mf', plural: 'aztecas', ...ilu('Un guerrier aztèque avec un grand casque de plumes vertes et un bouclier rond') }),
     W('piramide', 'pirámide', 'pyramide', null, 'patrimonio', 'La pirámide de Chichén Itzá es muy famosa.', 'La pyramide de Chichén Itzá est très célèbre.', { genero: 'f', plural: 'pirámides', ...ilu('Une pyramide maya à degrés avec un temple au sommet, sous un ciel bleu') }),
     W('templo', 'templo', 'temple', null, 'patrimonio', 'Hay un templo en lo alto de la pirámide.', 'Il y a un temple en haut de la pyramide.', { genero: 'm', plural: 'templos', ...ilu('Un petit temple en pierre avec des colonnes sculptées, au milieu de la jungle') }),
     W('ruinas', 'ruinas', 'ruines', '🏚️', 'patrimonio', 'Visitamos las ruinas de una ciudad maya.', 'Nous visitons les ruines d’une ville maya.', { genero: 'f', soloPlural: true }),
@@ -50,7 +50,7 @@ export default function build() {
     // gastronomía
     W('maiz', 'maíz', 'maïs', '🌽', 'gastronomia', 'El maíz es la base de la cocina mexicana.', 'Le maïs est la base de la cuisine mexicaine.', { genero: 'm' }),
     W('tortilla_mx', 'tortilla de maíz', 'tortilla mexicaine : galette de maïs (en Espagne, « tortilla » seule = omelette !)', '🫓', 'gastronomia', 'Chabela hace tortillas de maíz todos los días.', 'Chabela fait des tortillas de maïs tous les jours.', { genero: 'f', plural: 'tortillas de maíz', voz: 'chabela', exVoz: 'chabela' }),
-    W('cacao', 'cacao', 'cacao', null, 'gastronomia', 'El cacao es una planta de México.', 'Le cacao est une plante du Mexique.', { genero: 'm', ...ilu('Une cabosse de cacao jaune et rouge ouverte, avec ses graines brunes à l’intérieur') }),
+    W('cacao', 'cacao', 'cacao', null, 'gastronomia', 'Los mayas cultivan el cacao.', 'Les Mayas cultivent le cacao.', { genero: 'm', ...ilu('Une cabosse de cacao jaune et rouge ouverte, avec ses graines brunes à l’intérieur') }),
     Wx('chocolate_nav', 'chocolate', 'chocolate', 'chocolat', '🍫', 'gastronomia', 'El chocolate de los mayas no es dulce.', 'Le chocolat des Mayas n’est pas sucré.', { genero: 'm', plural: 'chocolates' }),
     W('frijoles', 'frijoles', 'haricots (secs, rouges ou noirs) ; en Espagne, on dit « judías » ou « alubias »', '🫘', 'gastronomia', 'Comemos tortillas con frijoles.', 'Nous mangeons des tortillas avec des haricots.', { genero: 'm', soloPlural: true, voz: 'chabela', exVoz: 'chabela' }),
     W('tomate', 'tomate', 'tomate (le mot vient du nahuatl « tomatl »)', '🍅', 'gastronomia', 'La salsa lleva tomate y chile.', 'La sauce contient de la tomate et du piment.', { genero: 'm', plural: 'tomates' }),
@@ -59,9 +59,9 @@ export default function build() {
     W('taco', 'taco', 'taco : tortilla garnie et pliée', '🌮', 'gastronomia', 'Quiero un taco de pollo.', 'Je veux un taco au poulet.', { genero: 'm', plural: 'tacos' }),
     W('salsa', 'salsa', 'sauce (souvent piquante au Mexique)', null, 'gastronomia', 'La salsa de Chabela es muy picante.', 'La sauce de Chabela est très piquante.', { genero: 'f', plural: 'salsas', ...ilu('Un bol en terre cuite rempli d’une sauce rouge avec des tomates et des piments'), voz: 'chabela', exVoz: 'chabela' }),
     W('cochinita', 'cochinita pibil', 'cochinita pibil : porc mariné cuit dans un four sous terre, plat typique du Yucatán', null, 'gastronomia', 'La cochinita pibil es un plato típico de Yucatán.', 'La cochinita pibil est un plat typique du Yucatán.', { genero: 'f', ...ilu('Un plat de viande de porc effilochée rouge-orangé avec des oignons roses, servie avec des tortillas') }),
-    W('picante', 'picante', 'piquant, épicé', '🔥', 'gastronomia', 'La salsa habanero es muy picante.', 'La sauce habanero est très piquante.', { adj: true, genero: 'mf', plural: 'picantes' }),
+    W('picante', 'picante', 'piquant, épicé', '🔥', 'gastronomia', 'La salsa de chile habanero es muy picante.', 'La sauce au piment habanero est très piquante.', { adj: true, genero: 'mf', plural: 'picantes' }),
     Wx('dulce_nav', 'dulce', 'dulce', 'sucré, doux', '🍬', 'gastronomia', 'Este chocolate es muy dulce.', 'Ce chocolat est très sucré.', { adj: true, genero: 'mf', plural: 'dulces' }),
-    W('delicioso', 'delicioso', 'délicieux (en Espagne on dit aussi « rico »)', '😋', 'gastronomia', 'Los tacos están deliciosos.', 'Les tacos sont délicieux.', { adj: true, genero: 'm', femenino: 'deliciosa' }),
+    W('delicioso', 'delicioso', 'délicieux (on dit aussi « rico », en Espagne comme en Amérique)', '😋', 'gastronomia', 'Los tacos están deliciosos.', 'Les tacos sont délicieux.', { adj: true, genero: 'm', femenino: 'deliciosa' }),
     // verbos
     W('visitar', 'visitar', 'visiter, rendre visite à', '🧭', 'verbos', 'Visitamos Chichén Itzá.', 'Nous visitons Chichén Itzá.'),
     Wx('probar_nav', 'probar', 'probar', 'goûter, essayer (verbe à diphtongue : pruebo)', '👅', 'verbos', 'Quiero probar la salsa.', 'Je veux goûter la sauce.'),
@@ -90,16 +90,16 @@ export default function build() {
       ['Tú haces, ella hace, nosotros hacemos.', 'Toi, tu fais ; elle, elle fait ; nous, nous faisons.', 'marina', ['haces', 'hace', 'hacemos']],
     ], 'Algunos verbos son irregulares solo en «yo»: hacer → hago, ver → veo, conocer → conozco. Las otras personas son regulares.',
     'Certains verbes sont irréguliers seulement à « yo » : hacer → hago, ver → veo, conocer → conozco. Les autres personnes sont régulières.',
-    "À connaître : hacer (hago, haces, hace, hacemos, hacéis, hacen), ver (veo, ves, ve, vemos, veis, ven), conocer (conozco, conoces, conoce…). Seul « yo » change ; le reste suit la règle régulière. « Conocer » = connaître une personne ou un lieu (conozco Mérida) ; « saber » = savoir quelque chose (sé nadar). Autres verbes de la même famille que tu rencontreras : saber (sé), poner (pongo), salir (salgo). Attention à « ver » : veo, mais vemos (pas « vemos » avec accent) ; « veis » ne prend pas d'accent.",
+    "À connaître : hacer (hago, haces, hace, hacemos, hacéis, hacen), ver (veo, ves, ve, vemos, veis, ven), conocer (conozco, conoces, conoce…). Seul « yo » change ; le reste suit la règle régulière. « Conocer » = connaître une personne ou un lieu (conozco Mérida) ; « saber » = savoir quelque chose (sé nadar). Autres verbes de la même famille que tu rencontreras : saber (sé), poner (pongo), salir (salgo). Attention à l'orthographe de « ver » : ves, ve, vemos, veis, ven s'écrivent sans accent.",
     { encabezado: ['', 'hacer', 'ver', 'conocer'], filas: [['yo', 'hago', 'veo', 'conozco'], ['tú', 'haces', 'ves', 'conoces'], ['él / ella', 'hace', 've', 'conoce'], ['nosotros', 'hacemos', 'vemos', 'conocemos']] }),
     G('g_describir_lugar', 'Es, está, hay', 'Décrire un lieu : ser, estar, hay', [
-      ['Yucatán es una región caliente y verde.', 'Le Yucatán est une région chaude et verte.', 'itzel', ['es']],
+      ['Yucatán es una región cálida y verde.', 'Le Yucatán est une région chaude et verte.', 'itzel', ['es']],
       ['Yucatán está en el sureste de México.', 'Le Yucatán est dans le sud-est du Mexique.', 'itzel', ['está']],
       ['En Yucatán hay miles de cenotes.', 'Au Yucatán, il y a des milliers de cénotes.', 'itzel', ['hay']],
       ['Los cenotes son muy bonitos y están en la selva.', 'Les cénotes sont très beaux et ils sont dans la forêt tropicale.', 'chan', ['son', 'están']],
     ], 'Para describir un lugar usamos tres palabras: «es» (cómo es), «está» (dónde está) y «hay» (qué hay).',
     'Pour décrire un lieu, on utilise trois mots : « es » (comment il est), « está » (où il est) et « hay » (ce qu’il y a).',
-    "Un petit rappel qui réunit les unités 4 et 8. SER décrit comment est un lieu (es grande, es bonito, es caliente). ESTAR le situe (está en Yucatán, está cerca del mar). HAY dit ce qu'il contient (hay selva, hay cenotes, hay playas), toujours avec un, una, dos, muchos… et jamais avec l'article défini. Test rapide : ¿Cómo es? → es… ; ¿Dónde está? → está… ; ¿Qué hay? → hay…",
+    "Un petit rappel qui réunit les unités 4 et 8. SER décrit comment est un lieu (es grande, es bonito, es verde). Pour le climat, on dit « hace calor » ou « es una región cálida » (« caliente » s'emploie plutôt pour un objet : el café está caliente). ESTAR le situe (está en Yucatán, está cerca del mar). HAY dit ce qu'il contient (hay selva, hay cenotes, hay playas), toujours avec un, una, dos, muchos… et jamais avec l'article défini. Test rapide : ¿Cómo es? → es… ; ¿Dónde está? → está… ; ¿Qué hay? → hay…",
     { encabezado: ['Pregunta', 'Palabra', 'Ejemplo'], filas: [['¿Cómo es?', 'es / son', 'Es verde.'], ['¿Dónde está?', 'está / están', 'Está en Yucatán.'], ['¿Qué hay?', 'hay', 'Hay cenotes.']] }),
     G('g_pasado_compuesto', 'He visitado, has comido', 'Premier contact avec le passé composé', [
       ['He visitado Chichén Itzá.', 'J’ai visité Chichén Itzá.', 'viajero', ['He visitado']],
@@ -108,14 +108,14 @@ export default function build() {
       ['Hemos comido muchos tacos.', 'Nous avons mangé beaucoup de tacos.', 'chabela', ['Hemos comido']],
     ], 'Para hablar de lo que hemos hecho: he / has / ha / hemos / han + participio. -ar → -ado (hablado), -er / -ir → -ido (comido, vivido).',
     'Pour parler de ce qu’on a fait : he / has / ha / hemos / han + participe. -ar → -ado (hablado), -er / -ir → -ido (comido, vivido).',
-    "Ce n'est qu'une première découverte : retiens simplement de RECONNAÎTRE la forme. Le passé composé espagnol se forme comme en français : auxiliaire HABER (he, has, ha, hemos, habéis, han) + participe passé. Participe : -ar → -ADO (visitar → visitado), -er et -ir → -IDO (comer → comido, vivir → vivido). Deux irréguliers très courants : hacer → hecho (he hecho), ver → visto (he visto). Le participe ne s'accorde pas avec le sujet. Contrairement au français, on ne sépare jamais « he » du participe (pas de « he siempre visto »). Remarque importante : en Espagne, on emploie ce temps pour le passé récent (hoy he comido) ; au Mexique et dans toute l'Amérique latine, on préfère souvent un autre passé (« ¿Ya comiste? », « Hoy comí ») que tu apprendras plus tard.",
-    { encabezado: ['haber', 'participio'], filas: [['yo he', 'visitado / comido / vivido'], ['tú has', 'visitado / comido / vivido'], ['él / ella ha', 'visitado / comido / vivido'], ['nosotros hemos', 'visitado / comido / vivido'], ['ellos han', 'hecho · visto (irregulares)']] }),
+    "Ce n'est qu'une première découverte : retiens simplement de RECONNAÎTRE la forme. Le passé composé espagnol se forme presque comme en français : auxiliaire + participe passé. Mais l'auxiliaire est TOUJOURS HABER (he, has, ha, hemos, habéis, han), même là où le français prend « être » : he ido = je suis allé. Participe : -ar → -ADO (visitar → visitado), -er et -ir → -IDO (comer → comido, vivir → vivido). Deux irréguliers très courants : hacer → hecho (he hecho), ver → visto (he visto). Le participe ne s'accorde pas avec le sujet. Contrairement au français, on ne sépare jamais « he » du participe (pas de « he siempre visto »). Remarque importante : en Espagne, on emploie ce temps pour le passé récent (hoy he comido) ; au Mexique et dans toute l'Amérique latine, on préfère souvent un autre passé (« ¿Ya comiste? », « Hoy comí ») que tu apprendras plus tard.",
+    { encabezado: ['haber', 'participio'], filas: [['yo he', 'visitado / comido / vivido'], ['tú has', 'visitado / comido / vivido'], ['él / ella ha', 'visitado / comido / vivido'], ['nosotros hemos', 'visitado / comido / vivido'], ['ellos han', 'visitado / comido / vivido'], ['irregulares', 'hecho (hacer) · visto (ver)']] }),
   ];
 
   // ───────────── Cinemáticas ─────────────
   const intro = cine('u09-intro', 'intro', 'Capítulo 9 · ¡Viva México! · Yucatán', [
     P(3, 'La carte du monde en papel picado : la ligne dorée quitte Bogotá, franchit la mer des Caraïbes et vient se poser sur la péninsule du Yucatán ; carte-titre « Capítulo 9 · ¡Viva México! · Yucatán ».', [L(N, 'Capítulo nueve: ¡Viva México!', 'Chapitre neuf : vive le Mexique !')], { rotulo: 'Capítulo 9 · ¡Viva México! · Yucatán', camara: 'zoom avant progressif' }),
-    P(5, 'Vue aérienne de la forêt tropicale du Yucatán : la canopée verte, la pyramide de pierre qui sort des arbres, un cénote turquoise et, au bord d’une lagune, des flamants roses qui s’envolent.', [L(N, 'Yucatán, en el sureste de México.', 'Le Yucatán, dans le sud-est du Mexique.'), L(N, 'Selva, cenotes y pirámides: aquí viven los mayas desde hace siglos.', 'Forêt tropicale, cénotes et pyramides : ici vivent les Mayas depuis des siècles.')], { camara: 'survol lent en drone, puis descente vers la pyramide' }),
+    P(5, 'Vue aérienne de la forêt tropicale du Yucatán : la canopée verte, la pyramide de pierre qui sort des arbres, un cénote turquoise et, au bord d’une lagune, des flamants roses qui s’envolent.', [L(N, 'Yucatán, en el sureste de México.', 'Le Yucatán, dans le sud-est du Mexique.'), L(N, 'Selva, cenotes y pirámides: aquí viven los mayas desde hace miles de años.', 'Forêt tropicale, cénotes et pyramides : ici vivent les Mayas depuis des milliers d’années.')], { camara: 'survol lent en drone, puis descente vers la pyramide' }),
   ]);
   const historia = cine('u09-historia', 'historia', 'Las piedras mudas', [
     P(7, 'Un sentier dans la forêt tropicale, lumière verte. Le Quetzal sort du sac de Marina et vole d’un arbre à l’autre. Itzel, 12 ans, huipil blanc brodé de fleurs, un panier au bras, les accueille en souriant.', [
@@ -138,13 +138,13 @@ export default function build() {
   const capsula = cine('u09-capsula-mayas', 'capsula', 'Mayas y aztecas', [
     P(4, 'Style explainer, papier découpé : une carte du Mexique, le sud-est en vert pour les Mayas, le centre en orange pour les Aztèques.', [L(N, 'Mayas y aztecas son dos pueblos de México. Los mayas viven en el sureste y los aztecas en el centro.', 'Mayas et Aztèques sont deux peuples du Mexique. Les Mayas vivent dans le sud-est et les Aztèques au centre.')], { camara: 'plan fixe, animations de papier découpé' }),
     P(5, 'La pyramide d’El Castillo vue de face ; quatre escaliers s’illuminent, un compteur affiche « 91 × 4 + 1 = 365 ».', [L(N, 'La pirámide de Chichén Itzá tiene trescientos sesenta y cinco escalones, como los días del año.', 'La pyramide de Chichén Itzá a trois cent soixante-cinq marches, comme les jours de l’année.')]),
-    P(5, 'À l’équinoxe de printemps ou d’automne, une ombre en dents de scie descend l’escalier nord de la pyramide et rejoint la tête de serpent en pierre au pied de l’escalier.', [L(N, 'En primavera y en otoño, la sombra de una serpiente baja por la pirámide.', 'Au printemps et en automne, l’ombre d’un serpent descend le long de la pyramide.')]),
+    P(5, 'À l’équinoxe de printemps ou d’automne, une ombre en dents de scie descend l’escalier nord de la pyramide et rejoint la tête de serpent en pierre au pied de l’escalier.', [L(N, 'En primavera y en otoño, la sombra de una serpiente baja por la pirámide: es Kukulcán.', 'Au printemps et en automne, l’ombre d’un serpent descend le long de la pyramide : c’est Kukulcán, le serpent à plumes.')]),
     P(5, 'Une île au milieu d’un lac, des chaussées, des canaux : Tenochtitlan ; fondu enchaîné vers un plan de Ciudad de México avec ses gratte-ciel.', [L(N, 'Los aztecas construyen Tenochtitlan en un lago. Hoy esa ciudad es Ciudad de México.', 'Les Aztèques construisent Tenochtitlan sur un lac. Aujourd’hui, cette ville est Mexico.')]),
     P(5, 'Des grains de cacao, un épi de maïs, des tortillas qui tournent ; une tasse de chocolat fumant avec un piment à côté.', [L(N, 'Mayas y aztecas comen maíz y beben chocolate. ¡Pero su chocolate no es dulce!', 'Mayas et Aztèques mangent du maïs et boivent du chocolat. Mais leur chocolat n’est pas sucré !')]),
   ]);
   const pluma = cine('u09-pluma', 'pluma', 'Novena pluma', [
     P(3, 'Dans le cénote, la plume verte monte lentement dans l’eau turquoise jusqu’au rayon de lumière. Là-haut, les dessins reviennent sur les pierres de la pyramide, un à un.', [L('itzel', '¡Las piedras hablan otra vez! ¡Gracias!', 'Les pierres parlent de nouveau ! Merci !')], { personajes: ['itzel'] }),
-    P(3, 'Le Quetzal survole la forêt, la queue très longue et brillante, pour la première fois presque entier.', [L('quetzal', 'Nueve plumas. ¡Una más y vuelvo a volar con todo mi cuerpo!', 'Neuf plumes. Une de plus et je vole de nouveau avec tout mon corps !')], { personajes: ['quetzal'] }),
+    P(3, 'Le Quetzal survole la forêt, la queue très longue et brillante, pour la première fois presque entier.', [L('quetzal', 'Nueve plumas. ¡Con una más, vuelvo a ser el gran Quetzal!', 'Neuf plumes. Avec une de plus, je redeviens le grand Quetzal !')], { personajes: ['quetzal'] }),
     P(2, 'Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse longe la côte pacifique et grimpe vers les Andes du Pérou.', [L('ignacio', 'La última pluma está en Perú, en los Andes. ¡Vamos a Cusco!', 'La dernière plume est au Pérou, dans les Andes. Direction Cusco !')], { personajes: ['ignacio'] }),
   ]);
 
@@ -173,7 +173,7 @@ export default function build() {
 
   // 2 — Naturaleza
   quests.push(quest('u09', 2, 'vocabulario', 'Selva y cenotes', '🦩',
-    ['itzel', 'Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.', 'Regarde la forêt tropicale : il y a des jaguars, des flamants, des tortues… et des milliers de cénotes.'],
+    ['itzel', 'Mira: en Yucatán hay jaguares en la selva, flamencos en las lagunas, tortugas en el mar… ¡y miles de cenotes!', 'Regarde : au Yucatán, il y a des jaguars dans la forêt, des flamants roses dans les lagunes, des tortues dans la mer… et des milliers de cénotes !'],
     'La nature du Yucatán : forêt, mer, animaux et cénotes. Tu lis, tu écoutes et tu parles de ta nature à toi.', ['leer', 'escuchar', 'hablar', 'escribir'], 15, [
       flash('selva', 'cenote', 'playa', 'mar', 'rio', 'piedra', 'planta'),
       flash('animal', 'jaguar', 'flamenco', 'tortuga', 'serpiente', 'pajaro', 'mono'),
@@ -183,8 +183,8 @@ export default function build() {
       lcI('Hay un jaguar en la selva.', 'itzel', 'jaguar', ['serpiente', 'jaguar', 'tortuga']),
       lcT('El jaguar es un animal grande y vive en la selva.', 'itzel', ['El jaguar vive en un bosque tropical.', 'El jaguar vive en el mar.', 'El jaguar es un animal pequeño.'], 0),
       tf('Es un flamenco.', true, N, { img: 'flamenco', tr: 'C’est un flamant rose.' }),
-      read('En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en ellos.', 'itzel',
-        'Au Yucatán, il n’y a pas de rivières en surface, mais il y a des milliers de cénotes. Un cénote est un puits naturel avec une eau très propre. Pour les Mayas, les cénotes sont des lieux sacrés. Aujourd’hui, tu peux y nager. (Les rivières du Yucatán coulent sous la terre, dans la roche calcaire.)', [
+      read('En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en muchos cenotes.', 'itzel',
+        'Au Yucatán, il n’y a pas de rivières en surface, mais il y a des milliers de cénotes. Un cénote est un puits naturel avec une eau très propre. Pour les Mayas, les cénotes sont des lieux sacrés. Aujourd’hui, tu peux nager dans beaucoup de cénotes. (Les rivières du Yucatán coulent sous la terre, dans la roche calcaire.)', [
           ['¿Qué es un cenote?', 'Qu’est-ce qu’un cénote ?', ['Un pozo natural con agua.', 'Una pirámide.', 'Un animal.'], 0],
           ['¿Para los mayas, cómo son los cenotes?', 'Pour les Mayas, comment sont les cénotes ?', ['Sagrados.', 'Peligrosos.', 'Pequeños.'], 0],
           ['¿Qué puedes hacer hoy en un cenote?', 'Que peux-tu faire aujourd’hui dans un cénote ?', ['Nadar.', 'Dormir.', 'Comprar ropa.'], 0],
@@ -193,7 +193,7 @@ export default function build() {
       fill('Un ___ es un pozo natural con agua.', 'cenote', 'itzel', { opts: ['cenote', 'jaguar', 'taco'], tr: 'Un cénote est un puits naturel avec de l’eau.' }),
       dlg('itzel', 'En tu país, ¿hay selvas o montañas?', 'Dans ton pays, il y a des forêts tropicales ou des montagnes ?', [
         ['En Francia hay montañas, playas y ríos.', 1, '¡Qué bien! Hay de todo.', 'Super ! Il y en a de toutes sortes.', 'En France, il y a des montagnes, des plages et des rivières.'],
-        ['En Francia hay selvas con jaguares.', 0, 'Mmm… no creo. Los jaguares viven en América.', 'Mmm… je ne crois pas. Les jaguars vivent en Amérique.', 'En France, il y a des forêts tropicales avec des jaguars.'],
+        ['En París hay selvas con jaguares.', 0, '¿En París? Mmm… no creo. Los jaguares viven en la selva.', 'À Paris ? Mmm… je ne crois pas. Les jaguars vivent dans la forêt tropicale.', 'À Paris, il y a des forêts tropicales avec des jaguars.'],
         ['En Francia soy un río.', 0, '¿Tú eres un río? ¡Qué cosa más rara!', 'Toi, tu es un fleuve ? Quelle drôle de chose !', 'En France, je suis un fleuve.'],
       ]),
       speak('Mi animal favorito es el jaguar.', 'viajero', { libre: 'el jaguar', es: 'Escucha y di cuál es TU animal favorito.', fr: 'Écoute et dis quel est TON animal préféré (el perro, el gato, el caballo…).', tr: 'Mon animal préféré est le jaguar. (dis le tien)', hechizo: ['Hechizo del animal', 'Tu animal favorito aparece entre las plantas'] }),
@@ -222,20 +222,20 @@ export default function build() {
       tf('Chichén Itzá es una ciudad maya.', true, N, { tr: 'Chichén Itzá est une ville maya.' }),
       tf('Los aztecas viven en Yucatán.', false, N, { tr: 'Les Aztèques vivent au Yucatán. (Faux : ils vivaient au centre du Mexique.)' }),
       fill('La capital de los aztecas se llama ___.', 'Tenochtitlan', 'chan', { opts: ['Tenochtitlan', 'Chichén Itzá', 'Bogotá'], tr: 'La capitale des Aztèques s’appelle Tenochtitlan.' }),
-      fill('Los mayas construyen ___ de piedra.', 'pirámides', 'chan', { opts: ['pirámides', 'nevera', 'bicicletas'], tr: 'Les Mayas construisent des pyramides en pierre.' }),
+      fill('Los mayas construyen ___ de piedra.', 'pirámides', 'chan', { opts: ['pirámides', 'neveras', 'bicicletas'], tr: 'Les Mayas construisent des pyramides en pierre.' }),
       dlg('chan', 'Mira esta pirámide. ¿Qué es? ¿Un templo o un mercado?', 'Regarde cette pyramide. Qu’est-ce que c’est ? Un temple ou un marché ?', [
         ['Es un templo maya.', 1, '¡Exacto! Aquí hay un templo en lo alto.', 'Exact ! Ici, il y a un temple tout en haut.', 'C’est un temple maya.'],
         ['Es un mercado grande.', 0, 'No, no. En un mercado hay frutas, no dioses.', 'Non, non. Dans un marché, il y a des fruits, pas des dieux.', 'C’est un grand marché.'],
         ['Es una pizza.', 0, '¿Una pizza de piedra? ¡Qué idea!', 'Une pizza en pierre ? Quelle idée !', 'C’est une pizza.'],
       ]),
       reord('Los aztecas viven en el centro de México.', 'chan', { tr: 'Les Aztèques vivent au centre du Mexique.' }),
-      speak('Quiero visitar Chichén Itzá.', 'viajero', { libre: 'Chichén Itzá', es: 'Escucha y di qué lugar quieres visitar TÚ.', fr: 'Écoute et dis quel endroit TU veux visiter (Machu Picchu, Madrid, Cartagena…).', tr: 'Je veux visiter Chichén Itzá. (dis ton endroit)', foco: 'Chichén Itzá : le « ch » se dit comme en français « tch » (tchi-TCHEN it-SA). Le dernier « á » porte l’accent : it-SÁ.', hechizo: ['Hechizo del viaje', 'Un mapa dorado se despliega ante ti'] }),
+      speak('Quiero visitar Chichén Itzá.', 'viajero', { libre: 'Chichén Itzá', es: 'Escucha y di qué lugar quieres visitar TÚ.', fr: 'Écoute et dis quel endroit TU veux visiter (Machu Picchu, Madrid, Cartagena…).', tr: 'Je veux visiter Chichén Itzá. (dis ton endroit)', foco: 'Chichén Itzá : le « ch » se dit « tch » (tchi-TCHEN it-SÁ), avec l’accent sur « chén » et sur « zá ». Le « z » se dit « s » au Mexique (et comme le « th » anglais en Espagne).', hechizo: ['Hechizo del viaje', 'Un mapa dorado se despliega ante ti'] }),
       dict('Los mayas tienen un calendario.', 'chan'),
     ]));
 
   // 4 — Gastronomía
   quests.push(quest('u09', 4, 'vocabulario', 'Maíz, cacao y chile', '🌽',
-    ['chabela', '¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.', 'Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a mille ans.'],
+    ['chabela', '¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace miles de años.', 'Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a des milliers d’années.'],
     'Les saveurs du Mexique : maïs, tortillas, cacao, piment, cochinita pibil. Tu lis, tu goûtes (en mots) et tu dis ce que TOI tu aimes manger.', ['leer', 'escuchar', 'hablar', 'escribir', 'cultura'], 15, [
       flash('maiz', 'tortilla_mx', 'cacao', CHOC, 'frijoles', 'tomate', 'aguacate'),
       flash('chile', 'taco', 'salsa', 'cochinita', 'picante', DULCE, 'delicioso'),
@@ -248,8 +248,8 @@ export default function build() {
           ['¿Qué comen con las tortillas?', 'Que mangent-ils avec les tortillas ?', ['Frijoles y salsa.', 'Pan y jamón.', 'Helado.'], 0],
           ['¿Desde cuándo comen maíz en México?', 'Depuis quand mange-t-on du maïs au Mexique ?', ['Desde hace miles de años.', 'Desde ayer.', 'Desde 1950.'], 0],
         ]),
-      read('El cacao es una planta de México. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.', 'chabela',
-        'Le cacao est une plante du Mexique. Les Mayas et les Aztèques boivent du chocolat, mais leur chocolat n’est pas sucré : il contient du piment et il est un peu amer. Pour les Aztèques, les graines de cacao sont aussi de l’argent.', [
+      read('El cacao es una planta de América. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.', 'chabela',
+        'Le cacao est une plante d’Amérique. Les Mayas et les Aztèques boivent du chocolat, mais leur chocolat n’est pas sucré : il contient du piment et il est un peu amer. Pour les Aztèques, les graines de cacao sont aussi de l’argent.', [
           ['¿El chocolate de los mayas es dulce?', 'Le chocolat des Mayas est-il sucré ?', ['No.', 'Sí, mucho.', 'Solo en Navidad.'], 0],
           ['¿Qué lleva el chocolate antiguo?', 'Que contient le chocolat ancien ?', ['Chile.', 'Queso.', 'Aguacate.'], 0],
           ['¿Qué más son los granos de cacao para los aztecas?', 'Que sont aussi les graines de cacao pour les Aztèques ?', ['Dinero.', 'Zapatos.', 'Un animal.'], 0],
@@ -258,7 +258,7 @@ export default function build() {
       fill('El chocolate de los mayas no es ___.', 'dulce', 'chabela', { opts: ['dulce', 'picante', 'rojo'], tr: 'Le chocolat des Mayas n’est pas sucré.' }),
       dlg('chabela', '¿Quieres probar una salsa? Es un poco picante.', 'Tu veux goûter une sauce ? Elle est un peu piquante.', [
         ['Sí, gracias. Me gusta el picante.', 1, '¡Qué bueno! Aquí tienes. Con tortilla está más rica.', 'Super ! Tiens. Avec de la tortilla, elle est encore meilleure. (« rica » = délicieuse)', 'Oui, merci. J’aime le piquant.'],
-        ['Sí, gracias, pero solo un poquito.', 1, '¡Muy bien! Un poquito de salsa, y mucha tortilla.', 'Très bien ! Un tout petit peu de sauce, et beaucoup de tortilla.', 'Oui, merci, mais juste un petit peu.'],
+        ['Sí, gracias. Soy muy picante.', 0, '¿Tú eres picante? ¡Ja, ja! Querrás decir: «me gusta el picante».', 'Toi, tu es piquant ? Ha, ha ! Tu veux dire : « me gusta el picante » (j’aime le piquant).', 'Oui, merci. Je suis très piquant.'],
         ['No, gracias, yo soy una tortilla.', 0, '¿Una tortilla? ¡Entonces te como yo!', 'Une tortilla ? Alors c’est moi qui te mange !', 'Non, merci, je suis une tortilla.'],
       ]),
       speak('Mi comida favorita es la pizza.', 'viajero', { libre: 'la pizza', es: 'Escucha y di cuál es TU comida favorita.', fr: 'Écoute et dis quel est TON plat préféré (los espaguetis, el pollo, las crepes…).', tr: 'Mon plat préféré est la pizza. (dis le tien)', hechizo: ['Hechizo de la cocina', 'Tu plato favorito aparece humeante sobre la mesa'] }),
@@ -267,7 +267,7 @@ export default function build() {
         { id: 'gusta', pista: 'Ce que tu aimes (el chocolate, el aguacate, los tacos…)', tipo: 'texto' },
         { id: 'nogusta', pista: 'Ce que tu n’aimes pas (el picante, el tomate…)', tipo: 'texto' },
       ], 'Mi comida favorita es la pizza. Me gusta el chocolate. No me gusta el picante.', 'Mon plat préféré est la pizza. J’aime le chocolat. Je n’aime pas le piquant.', 'viajero', C('Escribe qué te gusta comer.', 'Écris ce que tu aimes manger.')),
-      dict('La cochinita pibil es muy deliciosa.', 'chabela'),
+      dict('La cochinita pibil es deliciosa.', 'chabela'),
     ]));
 
   // 5 — Forja : repaso del presente
@@ -299,11 +299,11 @@ export default function build() {
       gram('g_pasado_compuesto'),
       fill('Hoy ___ visitado la pirámide.', 'he', 'viajero', { opts: ['he', 'has', 'ha'], tr: 'Aujourd’hui, j’ai visité la pyramide.' }),
       fill('Itzel ___ nadado en el cenote.', 'ha', 'marina', { opts: ['he', 'has', 'ha'], tr: 'Itzel a nagé dans le cénote.' }),
-      fill('¿Has ___ la cochinita pibil?', 'probado', 'itzel', { opts: ['probado', 'probar', 'probo'], tr: 'As-tu goûté la cochinita pibil ?' }),
+      fill('¿Has ___ la cochinita pibil?', 'probado', 'itzel', { opts: ['probado', 'probar', 'pruebo'], tr: 'As-tu goûté la cochinita pibil ?' }),
       fill('Hemos ___ muchos tacos.', 'comido', 'chabela', { opts: ['comido', 'comado', 'comer'], tr: 'Nous avons mangé beaucoup de tacos.' }),
       lcT('Hoy he visto un jaguar en la selva.', 'itzel', ['Itzel ha visto un animal grande.', 'Itzel ha comido un taco.', 'Itzel ha nadado en el mar.'], 0),
       read('Hoy hemos visitado Chichén Itzá. Hemos visto la pirámide y hemos nadado en un cenote. Álex ha probado un taco muy picante. ¡Ha bebido mucha agua después!', 'itzel',
-        'Aujourd’hui, nous avons visité Chichén Itzá. Nous avons vu la pyramide et nous avons nagé dans un cénote. Álex a goûté un taco très piquant. Il a bu beaucoup d’eau ensuite ! (« bebido » vient de « beber » ; ce sont des phrases à comprendre, pas à produire.)', [
+        'Aujourd’hui, nous avons visité Chichén Itzá. Nous avons vu la pyramide et nous avons nagé dans un cénote. Álex a goûté un taco très piquant. Il a bu beaucoup d’eau ensuite ! (« bebido » vient de « beber » ; ce sont des phrases à comprendre, pas à produire. Itzel parle ici comme en Espagne pour t’aider : au Mexique, on dirait plutôt « hoy visitamos », un autre passé que tu apprendras plus tard.)', [
           ['¿Qué han visitado hoy?', 'Qu’ont-ils visité aujourd’hui ?', ['Chichén Itzá.', 'Madrid.', 'Una biblioteca.'], 0],
           ['¿Dónde han nadado?', 'Où ont-ils nagé ?', ['En un cenote.', 'En una piscina.', 'En el río de Bogotá.'], 0],
           ['¿Qué ha probado Álex?', 'Qu’a goûté Álex ?', ['Un taco picante.', 'Un chocolate dulce.', 'Un jaguar.'], 0],
@@ -313,7 +313,7 @@ export default function build() {
       reord('Hemos visitado Chichén Itzá.', 'itzel', { tr: 'Nous avons visité Chichén Itzá.' }),
       dlg('itzel', '¿Has probado la cochinita pibil?', 'Tu as déjà goûté la cochinita pibil ?', [
         ['Sí, he probado la cochinita pibil. ¡Es deliciosa!', 1, '¡Qué bueno! Es el plato más típico de Yucatán.', 'Super ! C’est le plat le plus typique du Yucatán.', 'Oui, j’ai goûté la cochinita pibil. Elle est délicieuse !'],
-        ['No, no he probado la cochinita pibil.', 1, 'No hay problema. ¡Hoy la vas a probar!', 'Pas de problème. Aujourd’hui, tu vas la goûter !', 'Non, je n’ai pas goûté la cochinita pibil.'],
+        ['Sí, he probar la cochinita pibil.', 0, 'Casi… Se dice «he probado»: haber + participio.', 'Presque… On dit « he probado » : haber + participe.', 'Oui, j’ai goûter la cochinita pibil.'],
         ['Sí, he sido una cochinita.', 0, '¿Tú, una cochinita? ¡Qué divertido!', 'Toi, une cochinita ? Comme c’est drôle !', 'Oui, j’ai été une cochinita.'],
       ]),
       speak('He probado los tacos.', 'viajero', { libre: 'los tacos', es: 'Escucha y di qué has probado TÚ.', fr: 'Écoute et dis ce que TU as déjà goûté (los espaguetis, la paella, el chocolate…). Tu peux dire une vérité ou t’amuser.', tr: 'J’ai goûté les tacos. (dis ce que tu as goûté)', hechizo: ['Hechizo del sabor', 'Un perfume de especias llena el aire'] }),
@@ -333,8 +333,8 @@ export default function build() {
       tf('Los cenotes están en Argentina.', false, N, { tr: 'Les cénotes sont en Argentine. (Faux : ils sont au Yucatán, au Mexique.)' }),
       tf('Hoy ya no hay mayas en México.', false, N, { tr: 'Aujourd’hui, il n’y a plus de Mayas au Mexique. (Faux : des millions de Mayas vivent au Mexique et au Guatemala, et beaucoup parlent encore le maya.)' }),
       gram('g_describir_lugar'),
-      read('Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, la sombra del sol dibuja una serpiente en la escalera de la pirámide.', 'chan',
-        'Chichén Itzá est une ancienne ville maya au Yucatán. Sa pyramide la plus célèbre s’appelle El Castillo ou pyramide de Kukulcán. Kukulcán est un serpent à plumes, comme le Quetzal. Au printemps et en automne, l’ombre du soleil dessine un serpent sur l’escalier de la pyramide. (Chichén Itzá est inscrite au patrimoine mondial de l’UNESCO depuis 1988 ; son nom vient du maya « chi’ chʼen », la bouche du puits.)', [
+      read('Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, el sol y la sombra dibujan una serpiente en la escalera de la pirámide.', 'chan',
+        'Chichén Itzá est une ancienne ville maya au Yucatán. Sa pyramide la plus célèbre s’appelle El Castillo ou pyramide de Kukulcán. Kukulcán est un serpent à plumes, comme le Quetzal. Au printemps et en automne, le soleil et l’ombre dessinent un serpent sur l’escalier de la pyramide. (Chichén Itzá est inscrite au patrimoine mondial de l’UNESCO depuis 1988 ; son nom vient du maya : « à la bouche du puits des Itzá ».)', [
           ['¿Dónde está Chichén Itzá?', 'Où est Chichén Itzá ?', ['En Yucatán.', 'En Perú.', 'En Colombia.'], 0],
           ['¿Quién es Kukulcán?', 'Qui est Kukulcán ?', ['Una serpiente con plumas.', 'Un jaguar enorme.', 'Un guía de museo.'], 0],
           ['¿Cuándo aparece la serpiente de sombra?', 'Quand apparaît le serpent d’ombre ?', ['En primavera y en otoño.', 'Solo en Navidad.', 'Todos los lunes.'], 0],
@@ -345,9 +345,9 @@ export default function build() {
           ['¿Quién vive allí, para los mayas?', 'Qui y vit, pour les Mayas ?', ['Los dioses del agua y de la lluvia.', 'Los aztecas.', 'Los jaguares blancos.'], 0],
         ]),
       lcT('Muchos mayas de hoy hablan maya y español.', 'chan', ['Hoy en México hay personas que hablan dos lenguas.', 'Los mayas ya no existen.', 'Todos hablan solo maya.'], 0),
-      dlg('chan', 'Yucatán es una región caliente. ¿Cómo es tu región?', 'Le Yucatán est une région chaude. Comment est ta région ?', [
+      dlg('chan', 'En Yucatán hace mucho calor. ¿Cómo es tu región?', 'Au Yucatán, il fait très chaud. Comment est ta région ?', [
         ['Mi región es tranquila y verde.', 1, '¡Qué bonito! Me gustaría visitarla.', 'Que c’est beau ! J’aimerais la visiter.', 'Ma région est calme et verte.'],
-        ['Mi región está caliente y verde.', 0, 'Se dice «es verde»: la región es verde, no «está».', 'On dit « es verde » : la région est verte (c’est une caractéristique), pas « está ».', 'Ma région est (estar) chaude et verte.'],
+        ['Mi región está verde y grande.', 0, 'Para decir cómo es, usamos «es»: mi región es verde y grande.', 'Pour dire comment elle est, on utilise « es » : mi región es verde y grande (ce sont des caractéristiques).', 'Ma région est (estar) verte et grande.'],
         ['Mi región hay montañas.', 0, 'Con «hay» no decimos «mi región hay». ¡Otra vez!', 'Avec « hay », on ne dit pas « mi región hay ». Encore une fois !', 'Ma région il y a des montagnes.'],
       ]),
       fill('En Yucatán ___ miles de cenotes.', 'hay', 'itzel', { opts: ['hay', 'es', 'está'], tr: 'Au Yucatán, il y a des milliers de cénotes.' }),

@@ -1107,12 +1107,12 @@
           ]
         },
         {
-          "es": "Hay dos museos en La Candelaria.",
-          "fr": "Il y a deux musées à La Candelaria.",
+          "es": "Hay muchos museos en La Candelaria.",
+          "fr": "Il y a beaucoup de musées à La Candelaria.",
           "voz": "hernan",
-          "audio": "hernan.cee4459276",
+          "audio": "hernan.5ada3ae269",
           "resaltar": [
-            "Hay dos museos"
+            "Hay muchos museos"
           ]
         },
         {
@@ -1278,12 +1278,12 @@
         }
       ],
       "regla": {
-        "es": "Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. «Mejor» es «más bueno».",
+        "es": "Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. De «bueno» decimos «mejor» (no «más bueno»).",
         "fr": "Pour comparer : más + adjectif + que (plus… que), menos + adjectif + que (moins… que). Pour dire « aussi… que » : tan + adjectif + como. « Mejor » veut dire « meilleur » (on ne dit pas « más bueno »).",
         "voz": "narrador",
-        "audio": "narrador.500da71922"
+        "audio": "narrador.184fd35858"
       },
-      "pista": "Le comparatif de supériorité/infériorité : MÁS / MENOS + adjectif + QUE (pas « de » ni « comme »). L'adjectif s'accorde avec le premier nom : la plaza es más grande que el parque ; las casas son más bonitas que los edificios. Égalité : TAN + adjectif + COMO (tan bonito como). Irréguliers à connaître : bueno → mejor (meilleur), malo → peor (pire) ; mejor et peor ne changent pas au féminin (una casa mejor) mais prennent -es au pluriel (mejores). Attention : « más » porte un accent (sans accent, « mas » signifie « mais » en littérature), et on dit « más que » devant un nom ou un adjectif, mais « más de » devant un nombre (más de cien).",
+      "pista": "Le comparatif de supériorité/infériorité : MÁS / MENOS + adjectif + QUE (pas « de » ni « comme »). L'adjectif s'accorde avec le premier nom : la plaza es más grande que el parque ; las casas son más bonitas que los edificios. Égalité : TAN + adjectif + COMO (tan bonito como). Irréguliers à connaître : bueno → mejor (meilleur), malo → peor (pire) ; mejor et peor ne changent pas au féminin (una casa mejor) mais prennent -es au pluriel (mejores). Attention : « más » porte un accent (sans accent, « mas » signifie « mais » en littérature). Et devant un nombre, on dit « más de » et non « más que » : más de cien personas, más de tres mil metros.",
       "tabla": {
         "encabezado": [
           "Se dice",
@@ -1442,7 +1442,7 @@
                   },
                   {
                     "es": "¡Hola! Me llamo Camila y soy de Bogotá. ¡Bienvenidos a La Candelaria!",
-                    "fr": "Salut ! Je m’appelle Camila et je suis de Bogotá. Bienvenue à La Candelaria ! (« Bienvenidos » : en Colombie comme au Mexique, on s’adresse à plusieurs personnes avec « ustedes ».)",
+                    "fr": "Salut ! Je m’appelle Camila et je suis de Bogotá. Bienvenue à La Candelaria ! (« Bienvenidos » est au pluriel : elle vous accueille tous les deux.)",
                     "voz": "camila",
                     "audio": "camila.955395c0b5"
                   }
@@ -1542,15 +1542,15 @@
           "modo": "texto",
           "opciones": [
             {
-              "texto": "Camila vive en un barrio muy bonito.",
+              "texto": "Camila vive cerca de la Plaza de Bolívar.",
               "correcta": true
             },
             {
-              "texto": "Camila vive lejos de Bogotá.",
+              "texto": "Camila vive lejos de la Plaza de Bolívar.",
               "correcta": false
             },
             {
-              "texto": "Camila vive en una casa sin colores.",
+              "texto": "En el barrio de Camila, todas las casas son blancas.",
               "correcta": false
             }
           ]
@@ -1725,10 +1725,10 @@
       "titulo": "La casa de Doña Marta",
       "emoji": "🏠",
       "intro": {
-        "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.",
-        "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, deux chambres et un balcon.",
+        "es": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, tres dormitorios y un balcón.",
+        "fr": "Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, trois chambres et un balcon.",
         "voz": "marta",
-        "audio": "marta.43ade8abbb"
+        "audio": "marta.3fadffa326"
       },
       "pista": "Les pièces et les objets de la maison, avec Doña Marta : tu décris ta propre maison à l’oral et à l’écrit.",
       "stats": [
@@ -1977,7 +1977,7 @@
           },
           "texto": {
             "es": "Mi casa es pequeña, pero muy bonita. Tiene dos pisos. En el primer piso hay un salón y una cocina. En el segundo piso hay tres dormitorios. Y tiene un balcón con muchas flores.",
-            "fr": "Ma maison est petite, mais très jolie. Elle a deux étages. Au premier étage (« el primer piso » = le rez-de-chaussée en Colombie, comme souvent en Amérique latine ; en Espagne, la planta baja est à part), il y a un salon et une cuisine. Au deuxième étage, il y a trois chambres. Et elle a un balcon avec beaucoup de fleurs.",
+            "fr": "Ma maison est petite, mais très jolie. Elle a deux niveaux. Au rez-de-chaussée, il y a un salon et une cuisine. À l’étage, il y a trois chambres. Et elle a un balcon avec beaucoup de fleurs. (En Colombie, comme dans une grande partie de l’Amérique latine, « el primer piso » = le rez-de-chaussée et « el segundo piso » = notre 1er étage ; en Espagne, le rez-de-chaussée s’appelle « la planta baja ».)",
             "voz": "marta",
             "audio": "marta.c0fd81147a"
           },
@@ -2638,7 +2638,7 @@
       "emoji": "⚒️",
       "intro": {
         "es": "Hay. Está. Están. ¡Forja conmigo!",
-        "fr": "Hay. Est. Sont. Forge avec moi !",
+        "fr": "Il y a. Il est. Ils sont. Forge avec moi !",
         "voz": "quetzal",
         "audio": "quetzal.b40396af19"
       },
@@ -3140,7 +3140,7 @@
           },
           "texto": {
             "es": "La plaza de mi barrio es muy bonita. En el centro hay un árbol grande. A la derecha del árbol está la iglesia. A la izquierda hay una panadería. Enfrente de la iglesia está la biblioteca. Mi casa está detrás de la panadería, cerca de la plaza.",
-            "fr": "La place de mon quartier est très jolie. Au centre, il y a un grand arbre. À droite de l’arbre, il y a l’église. À gauche, il y a une boulangerie. En face de l’église, il y a la bibliothèque. Ma maison est derrière la boulangerie, près de la place.",
+            "fr": "La place de mon quartier est très jolie. Au centre, il y a un grand arbre. À droite de l’arbre se trouve l’église. À gauche, il y a une boulangerie. En face de l’église se trouve la bibliothèque. Ma maison est derrière la boulangerie, près de la place.",
             "voz": "hernan",
             "audio": "hernan.2ebc95b57c"
           },
@@ -3908,7 +3908,7 @@
               {
                 "n": 3,
                 "duracion": 5,
-                "vista": "Vitrine du Museo del Oro : masques, colliers et petits personnages en or ; un compteur monte jusqu’à « +55 000 ».",
+                "vista": "Vitrine du Museo del Oro : masques, colliers et petits personnages en or ; un compteur monte jusqu’à « +50 000 ».",
                 "lineas": [
                   {
                     "es": "En el Museo del Oro hay más de cincuenta mil piezas de los pueblos indígenas.",
@@ -4092,10 +4092,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es un plato típico de Bogotá.",
-            "fr": "Le dimanche, à Bogotá, il y a une Ciclovía. Beaucoup de rues sont fermées aux voitures. Les familles vont à vélo, marchent et jouent dans la rue. En Colombie, beaucoup de gens boivent du chocolat chaud avec du fromage : c’est une spécialité typique de Bogotá.",
+            "es": "Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es una costumbre típica de Bogotá.",
+            "fr": "Le dimanche, à Bogotá, il y a une Ciclovía. Beaucoup de rues sont fermées aux voitures. Les familles vont à vélo, marchent et jouent dans la rue. En Colombie, beaucoup de gens boivent du chocolat chaud avec du fromage : c’est une tradition typique de Bogotá (on fait fondre le fromage dans la tasse).",
             "voz": "camila",
-            "audio": "camila.5c4d927572"
+            "audio": "camila.0e7848a223"
           },
           "preguntas": [
             {
@@ -4344,7 +4344,7 @@
           "patrones": [
             "mi lugar favorito es {nombre}"
           ],
-          "foco": "Le « v » espagnol (fa-vo-RI-to) se prononce comme un « b » doux, pas comme le « v » français. Et la « ll » de « calle » se dit comme un « y » : CA-ye.",
+          "foco": "Le « v » espagnol (fa-vo-RI-to) se prononce comme un « b » doux, pas comme le « v » français. Et « lugar » : accent sur la dernière syllabe (lu-GAR).",
           "hechizo": {
             "nombre": "Hechizo del mapa",
             "efecto": "Tu lugar favorito brilla en el mapa"
@@ -4928,7 +4928,7 @@
               {
                 "n": 3,
                 "duracion": 2,
-                "vista": "Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse traverse l’océan Atlantique vers le Mexique.",
+                "vista": "Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse traverse la mer des Caraïbes vers le Mexique.",
                 "personajes": [
                   "ignacio"
                 ],

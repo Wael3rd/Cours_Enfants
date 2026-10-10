@@ -86,7 +86,7 @@ export default function build() {
     G('g_hay_esta', 'Hay y está', 'Hay ou está : présenter ou situer', [
       ['En mi barrio hay un parque.', 'Dans mon quartier, il y a un parc.', 'camila', ['hay un parque']],
       ['El parque está cerca de mi casa.', 'Le parc est près de chez moi.', 'camila', ['está cerca']],
-      ['Hay dos museos en La Candelaria.', 'Il y a deux musées à La Candelaria.', 'hernan', ['Hay dos museos']],
+      ['Hay muchos museos en La Candelaria.', 'Il y a beaucoup de musées à La Candelaria.', 'hernan', ['Hay muchos museos']],
       ['Los museos están en el centro.', 'Les musées sont dans le centre.', 'hernan', ['están en el centro']],
     ], '«Hay» presenta algo nuevo: hay un parque, hay dos museos. «Está» o «están» sitúa algo que ya conocemos: el parque está cerca.',
     '« Hay » présente quelque chose de nouveau : hay un parque, hay dos museos. « Está / están » situe quelque chose qu’on connaît déjà : el parque está cerca.',
@@ -106,9 +106,9 @@ export default function build() {
       ['Mi calle es menos ruidosa que la plaza.', 'Ma rue est moins bruyante que la place.', 'camila', ['menos ruidosa que']],
       ['Este chocolate es mejor que el otro.', 'Ce chocolat est meilleur que l’autre.', 'marta', ['mejor que']],
       ['La casa de Marta es tan bonita como la casa de Camila.', 'La maison de Marta est aussi jolie que la maison de Camila.', 'hernan', ['tan bonita como']],
-    ], 'Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. «Mejor» es «más bueno».',
+    ], 'Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. De «bueno» decimos «mejor» (no «más bueno»).',
     'Pour comparer : más + adjectif + que (plus… que), menos + adjectif + que (moins… que). Pour dire « aussi… que » : tan + adjectif + como. « Mejor » veut dire « meilleur » (on ne dit pas « más bueno »).',
-    "Le comparatif de supériorité/infériorité : MÁS / MENOS + adjectif + QUE (pas « de » ni « comme »). L'adjectif s'accorde avec le premier nom : la plaza es más grande que el parque ; las casas son más bonitas que los edificios. Égalité : TAN + adjectif + COMO (tan bonito como). Irréguliers à connaître : bueno → mejor (meilleur), malo → peor (pire) ; mejor et peor ne changent pas au féminin (una casa mejor) mais prennent -es au pluriel (mejores). Attention : « más » porte un accent (sans accent, « mas » signifie « mais » en littérature), et on dit « más que » devant un nom ou un adjectif, mais « más de » devant un nombre (más de cien).",
+    "Le comparatif de supériorité/infériorité : MÁS / MENOS + adjectif + QUE (pas « de » ni « comme »). L'adjectif s'accorde avec le premier nom : la plaza es más grande que el parque ; las casas son más bonitas que los edificios. Égalité : TAN + adjectif + COMO (tan bonito como). Irréguliers à connaître : bueno → mejor (meilleur), malo → peor (pire) ; mejor et peor ne changent pas au féminin (una casa mejor) mais prennent -es au pluriel (mejores). Attention : « más » porte un accent (sans accent, « mas » signifie « mais » en littérature). Et devant un nombre, on dit « más de » et non « más que » : más de cien personas, más de tres mil metros.",
     { encabezado: ['Se dice', 'Ejemplo'], filas: [['más… que', 'más grande que'], ['menos… que', 'menos ruidoso que'], ['tan… como', 'tan bonito como'], ['mejor que', 'mejor que el otro']] }),
   ];
 
@@ -120,7 +120,7 @@ export default function build() {
   const historia = cine('u08-historia', 'historia', 'Las calles sin nombre', [
     P(7, 'Une rue pavée de La Candelaria : maisons blanches, jaunes et bleues, balcons de bois. Le Quetzal sort la tête du sac de Marina et regarde les montagnes. Camila, 12 ans, avec une ruana (poncho de laine) rouge, arrive en courant.', [
       L('quetzal', 'Siete plumas… ¡Ya falta poco!', 'Sept plumes… Il n’en manque plus beaucoup !'),
-      L('camila', '¡Hola! Me llamo Camila y soy de Bogotá. ¡Bienvenidos a La Candelaria!', 'Salut ! Je m’appelle Camila et je suis de Bogotá. Bienvenue à La Candelaria ! (« Bienvenidos » : en Colombie comme au Mexique, on s’adresse à plusieurs personnes avec « ustedes ».)'),
+      L('camila', '¡Hola! Me llamo Camila y soy de Bogotá. ¡Bienvenidos a La Candelaria!', 'Salut ! Je m’appelle Camila et je suis de Bogotá. Bienvenue à La Candelaria ! (« Bienvenidos » est au pluriel : elle vous accueille tous les deux.)'),
     ], { personajes: ['quetzal', 'camila', 'marina', 'viajero'], camara: 'travelling dans la rue puis plan moyen sur Camila' }),
     P(7, 'Camila montre les panneaux de rue : tout blancs, sans une lettre. Sur une grande carte de la ville, il n’y a plus de noms. Des passants tournent en rond, perdus.', [
       L('camila', 'Pero hay un problema: los letreros no tienen letras y los mapas están en blanco.', 'Mais il y a un problème : les panneaux n’ont plus de lettres et les plans sont vierges.'),
@@ -138,14 +138,14 @@ export default function build() {
   const capsula = cine('u08-capsula-candelaria', 'capsula', 'La Candelaria y Monserrate', [
     P(4, 'Style explainer, papier découpé : une carte de la Colombie, un point sur Bogotá, l’année « 1538 » s’inscrit en gros chiffres.', [L(N, 'Bogotá nace en 1538, en el barrio de La Candelaria.', 'Bogotá est fondée en 1538, dans le quartier de La Candelaria.')], { camara: 'plan fixe, animations de papier découpé' }),
     P(5, 'Les rues de La Candelaria : pavés, maisons de couleurs, balcons, graffitis ; puis la Plaza de Bolívar avec la cathédrale et les pigeons.', [L(N, 'Es el barrio histórico: tiene calles de piedra, casas de colores y balcones.', 'C’est le quartier historique : il a des rues de pierre, des maisons de couleur et des balcons.')]),
-    P(5, 'Vitrine du Museo del Oro : masques, colliers et petits personnages en or ; un compteur monte jusqu’à « +55 000 ».', [L(N, 'En el Museo del Oro hay más de cincuenta mil piezas de los pueblos indígenas.', 'Au Museo del Oro, il y a plus de cinquante mille pièces des peuples indigènes.')]),
+    P(5, 'Vitrine du Museo del Oro : masques, colliers et petits personnages en or ; un compteur monte jusqu’à « +50 000 ».', [L(N, 'En el Museo del Oro hay más de cincuenta mil piezas de los pueblos indígenas.', 'Au Museo del Oro, il y a plus de cinquante mille pièces des peuples indigènes.')]),
     P(5, 'Le téléphérique et le funiculaire montent vers Monserrate, un panneau indique « 3 152 m » ; la ville s’étend en bas.', [L(N, 'Monserrate es una montaña con un santuario en la cima. Está a más de tres mil metros.', 'Monserrate est une montagne avec un sanctuaire au sommet. Elle est à plus de trois mille mètres d’altitude.')]),
     P(5, 'Un dimanche, de grandes avenues fermées aux voitures : des centaines de cyclistes, des familles qui marchent et courent.', [L(N, 'Los domingos, más de cien kilómetros de calles están cerradas a los coches: ¡es la Ciclovía!', 'Le dimanche, plus de cent kilomètres de rues sont fermés aux voitures : c’est la Ciclovía !')]),
   ]);
   const pluma = cine('u08-pluma', 'pluma', 'Octava pluma', [
     P(3, 'Au sommet de Monserrate, dans le jardin du sanctuaire, la plume verte brille. En bas, les panneaux de la ville retrouvent leurs lettres, une à une.', [L('camila', '¡Las calles tienen nombre otra vez! ¡Gracias!', 'Les rues ont de nouveau un nom ! Merci !')], { personajes: ['camila'] }),
     P(3, 'Le Quetzal s’envole au-dessus des nuages, ses plumes éclatent de vert.', [L('quetzal', 'Ocho plumas. ¡Casi vuelo hasta las nubes!', 'Huit plumes. Je vole presque jusqu’aux nuages !')], { personajes: ['quetzal'] }),
-    P(2, 'Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse traverse l’océan Atlantique vers le Mexique.', [L('ignacio', 'La siguiente pluma está en México, en Yucatán. ¡Volvemos a casa del Quetzal!', 'La prochaine plume est au Mexique, dans le Yucatán. Nous retournons chez le Quetzal !')], { personajes: ['ignacio'] }),
+    P(2, 'Don Ignacio apparaît en hologramme au-dessus de la carte ; l’empreinte lumineuse traverse la mer des Caraïbes vers le Mexique.', [L('ignacio', 'La siguiente pluma está en México, en Yucatán. ¡Volvemos a casa del Quetzal!', 'La prochaine plume est au Mexique, dans le Yucatán. Nous retournons chez le Quetzal !')], { personajes: ['ignacio'] }),
   ]);
 
   // ───────────── Misiones ─────────────
@@ -159,7 +159,7 @@ export default function build() {
       tf('Bogotá es la capital de Colombia.', true, N, { tr: 'Bogotá est la capitale de la Colombie.' }),
       tf('Bogotá está en España.', false, N, { tr: 'Bogotá est en Espagne.' }),
       historia,
-      lcT('Vivo en un barrio con casas de colores, cerca de la Plaza de Bolívar.', 'camila', ['Camila vive en un barrio muy bonito.', 'Camila vive lejos de Bogotá.', 'Camila vive en una casa sin colores.'], 0),
+      lcT('Vivo en un barrio con casas de colores, cerca de la Plaza de Bolívar.', 'camila', ['Camila vive cerca de la Plaza de Bolívar.', 'Camila vive lejos de la Plaza de Bolívar.', 'En el barrio de Camila, todas las casas son blancas.'], 0),
       lcT('Los letreros no tienen letras y los mapas están en blanco.', 'camila', ['Nadie sabe dónde está cada calle.', 'Los mapas tienen muchos colores.', 'Hay letreros nuevos en todas las calles.'], 0),
       tf('El Quetzal busca una pluma en Bogotá.', true, N, { tr: 'Le Quetzal cherche une plume à Bogotá.' }),
       dlg('camila', '¡Hola! Yo soy Camila. ¿Y tú, de dónde eres?', 'Salut ! Moi, c’est Camila. Et toi, tu es d’où ?', [
@@ -173,7 +173,7 @@ export default function build() {
 
   // 2 — La casa
   quests.push(quest('u08', 2, 'vocabulario', 'La casa de Doña Marta', '🏠',
-    ['marta', '¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.', 'Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, deux chambres et un balcon.'],
+    ['marta', '¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, tres dormitorios y un balcón.', 'Entrez, entrez ! Voici ma maison. Elle a un salon, une cuisine, trois chambres et un balcon.'],
     'Les pièces et les objets de la maison, avec Doña Marta : tu décris ta propre maison à l’oral et à l’écrit.', ['leer', 'escuchar', 'hablar', 'escribir'], 15, [
       flash('apartamento', 'piso', 'ventana', 'puerta', 'balcon', 'escalera', 'pared'),
       lcV('balcon', ['ventana', 'puerta', 'balcon']),
@@ -186,7 +186,7 @@ export default function build() {
       fill('Para subir al segundo piso, uso la ___.', 'escalera', 'marta', { opts: ['escalera', 'ventana', 'alfombra'], tr: 'Pour monter au deuxième étage, j’utilise l’escalier.' }),
       lcT('Mi casa tiene una cocina, un baño y tres dormitorios.', 'marta', ['Marta tiene tres dormitorios.', 'Marta tiene un solo dormitorio.', 'La casa de Marta no tiene baño.'], 0),
       read('Mi casa es pequeña, pero muy bonita. Tiene dos pisos. En el primer piso hay un salón y una cocina. En el segundo piso hay tres dormitorios. Y tiene un balcón con muchas flores.', 'marta',
-        'Ma maison est petite, mais très jolie. Elle a deux étages. Au premier étage (« el primer piso » = le rez-de-chaussée en Colombie, comme souvent en Amérique latine ; en Espagne, la planta baja est à part), il y a un salon et une cuisine. Au deuxième étage, il y a trois chambres. Et elle a un balcon avec beaucoup de fleurs.', [
+        'Ma maison est petite, mais très jolie. Elle a deux niveaux. Au rez-de-chaussée, il y a un salon et une cuisine. À l’étage, il y a trois chambres. Et elle a un balcon avec beaucoup de fleurs. (En Colombie, comme dans une grande partie de l’Amérique latine, « el primer piso » = le rez-de-chaussée et « el segundo piso » = notre 1er étage ; en Espagne, le rez-de-chaussée s’appelle « la planta baja ».)', [
           ['¿Cuántos pisos tiene la casa?', 'Combien d’étages a la maison ?', ['Uno.', 'Dos.', 'Tres.'], 1],
           ['¿Cuántos dormitorios hay?', 'Combien de chambres y a-t-il ?', ['Dos.', 'Tres.', 'Cuatro.'], 1],
           ['¿Qué hay en el balcón?', 'Qu’y a-t-il sur le balcon ?', ['Flores.', 'Una cama.', 'Una nevera.'], 0],
@@ -236,7 +236,7 @@ export default function build() {
 
   // 4 — Forja : estar / hay
   quests.push(quest('u08', 4, 'forja', 'La Forja: hay y está', '⚒️',
-    ['quetzal', 'Hay. Está. Están. ¡Forja conmigo!', 'Hay. Est. Sont. Forge avec moi !'],
+    ['quetzal', 'Hay. Está. Están. ¡Forja conmigo!', 'Il y a. Il est. Ils sont. Forge avec moi !'],
     'Estar pour situer (¿dónde está?) et la différence entre hay (il y a) et está(n) (il est / ils sont).', ['escribir', 'leer'], 15, [
       flash('hay'),
       gram('g_estar_lugar'),
@@ -270,7 +270,7 @@ export default function build() {
       lcV('debajo', ['encima', 'debajo', 'detras']),
       lcT('Mi casa está entre la panadería y la farmacia.', 'hernan', ['Hay dos tiendas cerca de mi casa.', 'Mi casa está lejos de las tiendas.', 'Mi casa está encima de la farmacia.'], 0),
       read('La plaza de mi barrio es muy bonita. En el centro hay un árbol grande. A la derecha del árbol está la iglesia. A la izquierda hay una panadería. Enfrente de la iglesia está la biblioteca. Mi casa está detrás de la panadería, cerca de la plaza.', 'hernan',
-        'La place de mon quartier est très jolie. Au centre, il y a un grand arbre. À droite de l’arbre, il y a l’église. À gauche, il y a une boulangerie. En face de l’église, il y a la bibliothèque. Ma maison est derrière la boulangerie, près de la place.', [
+        'La place de mon quartier est très jolie. Au centre, il y a un grand arbre. À droite de l’arbre se trouve l’église. À gauche, il y a une boulangerie. En face de l’église se trouve la bibliothèque. Ma maison est derrière la boulangerie, près de la place.', [
           ['¿Dónde está la iglesia?', 'Où est l’église ?', ['A la derecha del árbol.', 'A la izquierda del árbol.', 'Detrás de la panadería.'], 0],
           ['¿Qué hay a la izquierda del árbol?', 'Qu’y a-t-il à gauche de l’arbre ?', ['Una panadería.', 'Una iglesia.', 'Una biblioteca.'], 0],
           ['¿Dónde está la casa del narrador?', 'Où est la maison de celui qui parle ?', ['Detrás de la panadería.', 'Delante de la iglesia.', 'Encima de la biblioteca.'], 0],
@@ -336,8 +336,8 @@ export default function build() {
           ['¿Dónde está Buenos Aires?', 'Où est Buenos Aires ?', ['Cerca del Río de la Plata.', 'En el centro de España.', 'Entre montañas.'], 0],
           ['¿Cuál es la capital de Argentina?', 'Quelle est la capitale de l’Argentine ?', ['Buenos Aires.', 'Bogotá.', 'Madrid.'], 0],
         ]),
-      read('Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es un plato típico de Bogotá.', 'camila',
-        'Le dimanche, à Bogotá, il y a une Ciclovía. Beaucoup de rues sont fermées aux voitures. Les familles vont à vélo, marchent et jouent dans la rue. En Colombie, beaucoup de gens boivent du chocolat chaud avec du fromage : c’est une spécialité typique de Bogotá.', [
+      read('Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es una costumbre típica de Bogotá.', 'camila',
+        'Le dimanche, à Bogotá, il y a une Ciclovía. Beaucoup de rues sont fermées aux voitures. Les familles vont à vélo, marchent et jouent dans la rue. En Colombie, beaucoup de gens boivent du chocolat chaud avec du fromage : c’est une tradition typique de Bogotá (on fait fondre le fromage dans la tasse).', [
           ['¿Quién usa las calles los domingos?', 'Qui utilise les rues le dimanche ?', ['Las bicicletas y las familias.', 'Solo los coches.', 'Solo los autobuses.'], 0],
           ['¿Qué toman con el chocolate en Bogotá?', 'Qu’ajoute-t-on au chocolat à Bogotá ?', ['Queso.', 'Pan con jamón.', 'Un helado.'], 0],
         ]),
@@ -354,7 +354,7 @@ export default function build() {
         { id: 'hay', pista: 'Ce qu’il y a dans ton quartier (un parque, una biblioteca, un cine…)', tipo: 'texto' },
         { id: 'favorito', pista: 'Ton endroit préféré (el parque, la plaza, mi casa…, avec l’article)', tipo: 'texto' },
       ], 'Vivo en París. En mi barrio hay un parque y una panadería. Mi lugar favorito es el parque.', 'J’habite à Paris. Dans mon quartier, il y a un parc et une boulangerie. Mon endroit préféré est le parc.', 'viajero', C('Escribe la ficha de tu barrio.', 'Écris la fiche de ton quartier.')),
-      speak('Mi lugar favorito es el parque.', 'viajero', { libre: 'el parque', es: 'Escucha y di cuál es TU lugar favorito.', fr: 'Écoute et dis quel est TON endroit préféré (la biblioteca, mi casa, la plaza…).', tr: 'Mon endroit préféré est le parc. (dis le tien)', foco: 'Le « v » espagnol (fa-vo-RI-to) se prononce comme un « b » doux, pas comme le « v » français. Et la « ll » de « calle » se dit comme un « y » : CA-ye.', hechizo: ['Hechizo del mapa', 'Tu lugar favorito brilla en el mapa'] }),
+      speak('Mi lugar favorito es el parque.', 'viajero', { libre: 'el parque', es: 'Escucha y di cuál es TU lugar favorito.', fr: 'Écoute et dis quel est TON endroit préféré (la biblioteca, mi casa, la plaza…).', tr: 'Mon endroit préféré est le parc. (dis le tien)', foco: 'Le « v » espagnol (fa-vo-RI-to) se prononce comme un « b » doux, pas comme le « v » français. Et « lugar » : accent sur la dernière syllabe (lu-GAR).', hechizo: ['Hechizo del mapa', 'Tu lugar favorito brilla en el mapa'] }),
     ]));
 
   // 8 — Desafío

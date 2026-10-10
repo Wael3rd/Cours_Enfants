@@ -41,7 +41,7 @@ export default function build() {
     W('inca', 'inca', 'inca (peuple et adjectif ; « los incas »)', null, 'cultura', 'Machu Picchu es una ciudad inca.', 'Machu Picchu est une ville inca.', { adj: true, genero: 'mf', plural: 'incas', ...ilu('Un empereur inca avec une grande coiffe dorée et des bijoux, de profil') }),
     W('pachamama', 'Pachamama', 'Pachamama : la Terre-Mère, dans les croyances des Andes', '🌎', 'cultura', 'Para los incas, la Pachamama es la madre Tierra.', 'Pour les Incas, la Pachamama est la Terre-Mère.', { genero: 'f' }),
     W('papa', 'papa', 'pomme de terre (en Espagne : « patata ») ; attention : « el papa » = le pape, « papá » = papa', '🥔', 'cultura', 'En Perú hay miles de tipos de papa.', 'Au Pérou, il y a des milliers de variétés de pomme de terre.', { genero: 'f', plural: 'papas', voz: 'paulina', exVoz: 'paulina' }),
-    W('quinua', 'quinua', 'quinoa (mot d’origine quechua ; « quinoa » aussi)', null, 'cultura', 'La quinua es un cereal de los Andes.', 'Le quinoa est une céréale des Andes.', { genero: 'f', ...ilu('Un épi de quinoa rouge et jaune dans un champ, montagnes en fond') }),
+    W('quinua', 'quinua', 'quinoa (mot d’origine quechua ; « quinoa » aussi)', null, 'cultura', 'La quinua es un alimento de los Andes.', 'Le quinoa est un aliment des Andes (une petite graine, cultivée depuis des milliers d’années).', { genero: 'f', ...ilu('Un épi de quinoa rouge et jaune dans un champ, montagnes en fond') }),
     W('lana', 'lana', 'laine', '🧶', 'cultura', 'La lana de alpaca es muy suave.', 'La laine d’alpaga est très douce.', { genero: 'f' }),
     W('tejido', 'tejido', 'tissu tissé, tissage ; « tejer » = tisser', null, 'cultura', 'Los tejidos de Chinchero tienen colores vivos.', 'Les tissages de Chinchero ont des couleurs vives.', { genero: 'm', plural: 'tejidos', ...ilu('Un tissage péruvien aux couleurs vives, avec des motifs géométriques et des animaux'), voz: 'paulina', exVoz: 'paulina' }),
     // el español en el mundo
@@ -80,7 +80,7 @@ export default function build() {
       ['Hay una tormenta. Entonces el héroe busca un camino.', 'Il y a un orage. Alors le héros cherche un chemin.', 'huaman', ['Entonces']],
     ], 'Con «pero» decimos lo contrario. Con «además» añadimos algo más. Con «porque» damos la razón. Con «entonces» decimos la consecuencia.',
     'Avec « pero », on dit le contraire (mais). Avec « además », on ajoute quelque chose (en plus). Avec « porque », on donne la raison (parce que). Avec « entonces », on dit la conséquence (alors).',
-    "Ces quatre petits mots rendent tes phrases beaucoup plus riches. PERO oppose deux idées (es pequeño, pero fuerte). ADEMÁS ajoute (es pequeño y además es rápido) ; il porte un accent sur le dernier a. PORQUE donne la cause et répond à « ¿por qué? » : — ¿Por qué estudias español? — Porque me gusta. Attention : « por qué » en deux mots avec accent sur « qué » sert à poser la question ; « porque » en un mot, sans accent, sert à répondre. ENTONCES donne la suite logique (llueve, entonces cojo el paraguas) et sert aussi à enchaîner un récit (entonces, el héroe sale).",
+    "Ces quatre petits mots rendent tes phrases beaucoup plus riches. PERO oppose deux idées (es pequeño, pero fuerte). ADEMÁS ajoute (es pequeño y además es rápido) ; il porte un accent sur le dernier a. PORQUE donne la cause et répond à « ¿por qué? » : — ¿Por qué estudias español? — Porque me gusta. Attention : « por qué » en deux mots avec accent sur « qué » sert à poser la question ; « porque » en un mot, sans accent, sert à répondre. ENTONCES donne la suite logique (llueve, entonces me quedo en casa) et sert aussi à enchaîner un récit (entonces, el héroe sale).",
     { encabezado: ['Conector', 'Sirve para…', 'Ejemplo'], filas: [['pero', 'oponer', 'Es difícil, pero bonito.'], ['además', 'añadir', 'Es bonito y además útil.'], ['porque', 'dar la razón', 'Estudio porque me gusta.'], ['entonces', 'decir la consecuencia', 'Llueve, entonces espero.']] }),
     G('g_cuento', 'Había una vez…', 'Raconter une histoire', [
       ['Había una vez un héroe muy valiente.', 'Il était une fois un héros très courageux.', 'huaman', ['Había una vez']],
@@ -92,14 +92,14 @@ export default function build() {
     "Un récit simple = un petit plan : 1) la formule d'ouverture HABÍA UNA VEZ (à apprendre par cœur, comme « il était une fois » ; « había » est un temps du passé que tu étudieras plus tard) ; 2) UN DÍA, il se passe quelque chose ; 3) PRIMERO… LUEGO… ENTONCES… pour les étapes ; 4) AL FINAL pour la fin. À ton niveau, on raconte les actions au PRÉSENT (le héros busca, sube, encuentra) : c'est le « présent de narration », très courant, aussi en français. Les contes espagnols se terminent souvent par « Y colorín colorado, este cuento se ha acabado » (comme « et ils vécurent heureux »). Rappel : les verbes à diphtongue o → ue changent au présent sauf à nosotros : cuento, cuentas, cuenta, contamos ; encuentro, encuentras, encuentra, encontramos.",
     { encabezado: ['Etapa', 'Se dice', 'Ejemplo'], filas: [['Principio', 'Había una vez…', 'Había una vez un héroe.'], ['Problema', 'Un día…', 'Un día, aparece un monstruo.'], ['Acciones', 'Primero… luego… entonces…', 'Primero busca, luego sube.'], ['Final', 'Al final…', 'Al final, salva a todos.']] }),
     G('g_se_habla', 'Se habla español', 'Dire « on parle » : se habla / se hablan', [
-      ['En Perú se habla español y quechua.', 'Au Pérou, on parle espagnol et quechua.', 'killa', ['se habla']],
+      ['En Perú se habla español.', 'Au Pérou, on parle espagnol.', 'killa', ['se habla']],
       ['En México se hablan muchas lenguas indígenas.', 'Au Mexique, on parle beaucoup de langues indigènes.', 'itzel', ['se hablan']],
-      ['El español se habla en veinte países.', 'L’espagnol se parle dans vingt pays.', 'marina', ['se habla']],
+      ['En Argentina se habla español.', 'En Argentine, on parle espagnol.', 'marina', ['se habla']],
       ['¿Qué idioma se habla en Colombia?', 'Quelle langue parle-t-on en Colombie ?', 'camila', ['se habla']],
     ], 'Con «se habla» decimos «la gente habla»: se habla español. Si hablamos de varias lenguas, decimos «se hablan»: se hablan dos lenguas.',
     'Avec « se habla », on dit « les gens parlent » (on parle) : se habla español. Pour plusieurs langues, on dit « se hablan » : se hablan dos lenguas.',
-    "Le petit mot SE + verbe à la 3e personne permet de parler de ce que « on » fait en général, sans dire qui : se habla español (on parle espagnol / l'espagnol se parle). Le verbe s'accorde avec la chose dont on parle : se HABLA español (une langue → singulier), se HABLAN español y quechua (deux langues → pluriel). C'est la même construction pour d'autres phrases utiles : « se dice » (on dit), « se escribe » (ça s'écrit), « se come » (on mange). Ne confonds pas avec « me llamo / se llama », où « se » est le pronom de « llamarse ».",
-    { encabezado: ['País', 'Se habla…'], filas: [['Perú', 'español y quechua'], ['México', 'español y muchas lenguas indígenas'], ['Guinea Ecuatorial', 'español (¡en África!)'], ['España', 'español, catalán, gallego, euskera']] }),
+    "Le petit mot SE + verbe à la 3e personne permet de parler de ce que « on » fait en général, sans dire qui : se habla español (on parle espagnol / l'espagnol se parle). Le verbe s'accorde avec la chose dont on parle : se HABLA español (une langue → singulier), se HABLAN muchas lenguas (plusieurs langues → pluriel). Avec deux langues reliées par « y », on entend souvent le singulier (« en Perú se habla español y quechua ») : c'est correct aussi. C'est la même construction pour d'autres phrases utiles : « se dice » (on dit), « se escribe » (ça s'écrit), « se come » (on mange). Ne confonds pas avec « me llamo / se llama », où « se » est le pronom de « llamarse ».",
+    { encabezado: ['País', 'Se habla…'], filas: [['Perú', 'español, quechua, aimara…'], ['México', 'español y muchas lenguas indígenas'], ['Guinea Ecuatorial', 'español (¡en África!)'], ['España', 'español, catalán, gallego, euskera']] }),
     G('g_numeros_grandes', 'Cien, mil, un millón', 'Les grands nombres (cien, mil, millón)', [
       ['Cusco está a más de tres mil metros.', 'Cusco est à plus de trois mille mètres d’altitude.', 'killa', ['tres mil']],
       ['Machu Picchu tiene más de quinientos años.', 'Machu Picchu a plus de cinq cents ans.', 'huaman', ['quinientos']],
@@ -119,9 +119,9 @@ export default function build() {
   const historia = cine('u10-historia', 'historia', 'El cuentacuentos sin voz', [
     P(7, 'La Plaza de Armas de Cusco. Le Quetzal, presque entièrement vert, sort de la poche de Marina. Killa, 12 ans, avec un châle coloré (lliclla) et un petit lama tenu en laisse, vient à leur rencontre.', [
       L('quetzal', 'Nueve plumas. Solo falta una.', 'Neuf plumes. Il n’en manque plus qu’une.'),
-      L('killa', '¡Hola! Me llamo Killa. En quechua, «killa» significa «luna». ¡Bienvenidos al Cusco!', 'Salut ! Je m’appelle Killa. En quechua, « killa » veut dire « lune ». Bienvenue à Cusco ! (« ustedes » est la forme de politesse au pluriel en Amérique latine.)'),
+      L('killa', '¡Hola! Me llamo Killa. En quechua, «killa» significa «luna». ¡Bienvenidos al Cusco!', 'Salut ! Je m’appelle Killa. En quechua, « killa » veut dire « lune ». Bienvenue à Cusco ! (Les habitants disent souvent « el Cusco », avec l’article.)'),
     ], { personajes: ['quetzal', 'killa', 'marina', 'viajero'], camara: 'plan large puis plan moyen sur Killa' }),
-    P(7, 'Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus.', [
+    P(7, 'Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus. Il finit par murmurer, d’une voix presque éteinte.', [
       L('killa', 'Don Huamán es el mejor cuentacuentos de Cusco, pero hoy no tiene voz.', 'Don Huamán est le meilleur conteur de Cusco, mais aujourd’hui il n’a plus de voix.'),
       L('huaman', '…las leyendas han desaparecido de mi memoria.', '… les légendes ont disparu de ma mémoire. (comme dans l’unité 9 : « han desaparecido » = ont disparu)'),
     ], { personajes: ['killa', 'huaman'], camara: 'plans rapprochés sur les enfants et sur le conteur' }),
@@ -141,20 +141,23 @@ export default function build() {
     P(5, 'Des mots quechuas flottent sur la carte des Andes : « Inti » (soleil), « Killa » (lune), « Wasi » (maison), « Mayu » (rivière) ; une bouche qui parle.', [L(N, 'Los incas hablan quechua. Hoy, millones de personas todavía lo hablan en los Andes.', 'Les Incas parlent quechua. Aujourd’hui, des millions de personnes le parlent encore dans les Andes.')]),
     P(5, 'Cinq mots qui voyagent d’un nuage « quechua » vers un nuage « español » puis un nuage « français » : papa, llama, puma, cóndor, quinua.', [L(N, 'Muchas palabras españolas vienen del quechua: llama, cóndor, puma, papa, quinua.', 'Beaucoup de mots espagnols viennent du quechua : lama, condor, puma, pomme de terre, quinoa.')]),
   ]);
-  const finale = cine('u10-finale', 'pluma', 'Décima pluma · El final de la leyenda', [
-    P(3, 'Au sommet de Machu Picchu, à l’aube, une mer de nuages. La Sombra, toute petite, face à Álex. Elle n’a plus de voix menaçante : seulement une voix très fragile.', [
+  // Finale découpée en deux scènes courtes (le type « pluma » reste ≤ 8 s) : l'écho de la Sombra, puis la dernière plume.
+  const finaleSombra = cine('u10-finale-sombra', 'pluma', 'El eco de la Sombra', [
+    P(4, 'Au sommet de Machu Picchu, à l’aube, une mer de nuages. La Sombra, toute petite, face à Álex. Elle n’a plus de voix menaçante : seulement une voix très fragile.', [
       L('sombra', 'Estoy sola. Nadie me escucha.', 'Je suis seule. Personne ne m’écoute.'),
       L('viajero', 'Nosotros te escuchamos.', 'Nous, nous t’écoutons.'),
     ], { personajes: ['sombra', 'viajero'], camara: 'plan serré sur la Sombra, puis plan large' }),
-    P(3, 'La Sombra se dissout en lumière dorée. Sa voix devient un écho qui traverse la vallée : le premier mot du voyage, « hola », renvoyé par les montagnes.', [
-      L('sombra', 'Gracias… hola… hola…', 'Merci… salut… salut… (l’écho répète « hola », le premier mot que tu as appris)'),
+    P(2, 'La Sombra se dissout en lumière dorée. Sa voix devient un écho qui traverse la vallée : le premier mot du voyage, « hola », renvoyé par les montagnes.', [
+      L('sombra', 'Gracias… hola…', 'Merci… salut… (l’écho répète « hola », le premier mot que tu as appris)'),
     ], { personajes: ['sombra'], musica: 'thème du début du voyage, repris à la flûte andine' }),
+  ]);
+  const finale = cine('u10-finale', 'pluma', 'Décima pluma · El final de la leyenda', [
     P(4, 'La dixième plume verte tombe dans la main d’Álex, qui la pose sur le Quetzal. Il déploie une longue queue éclatante : il est entier. Il s’envole au-dessus des nuages, la vallée entière ouverte sous lui.', [
       L('quetzal', 'Diez plumas. Ya puedo volar, cantar y hablar. Gracias, amigos.', 'Dix plumes. Maintenant je peux voler, chanter et parler. Merci, mes amis. (Le Quetzal parle enfin en phrases complètes.)'),
     ], { personajes: ['quetzal', 'viajero', 'marina'], camara: 'plan montant avec le Quetzal, vol libre' }),
     P(3, 'Sur le sommet, Don Ignacio apparaît en hologramme, ému, tandis que Marina et Álex regardent le Quetzal disparaître dans la lumière. Carton final : « La leyenda del Quetzal · Fin ».', [
       L('ignacio', '¡Bravo, viajeros! Y ahora… ¿dónde están mis gafas?', 'Bravo, voyageurs ! Et maintenant… où sont mes lunettes ?'),
-      L('marina', 'En tu sombrero, Don Ignacio.', 'Sur ton chapeau, Don Ignacio.'),
+      L('marina', 'Encima de tu sombrero, Don Ignacio.', 'Sur ton chapeau, Don Ignacio.'),
     ], { personajes: ['ignacio', 'marina', 'viajero'], rotulo: 'La leyenda del Quetzal · Fin', musica: 'thème final, tous les instruments' }),
   ]);
 
@@ -173,7 +176,7 @@ export default function build() {
       lcT('La última pluma está en Machu Picchu, en las montañas.', 'killa', ['El Quetzal tiene que subir a las alturas.', 'La pluma está en una playa del Caribe.', 'La pluma está en el mercado de Cusco.'], 0),
       tf('Killa significa «luna» en quechua.', true, N, { tr: 'Killa veut dire « lune » en quechua.' }),
       dlg('killa', '¡Hola! Yo soy Killa. ¿Y tú, cómo te llamas? ¿De dónde eres?', 'Salut ! Moi, c’est Killa. Et toi, comment tu t’appelles ? Tu es d’où ?', [
-        ['Me llamo Álex y soy de París.', 1, '¡Qué chévere! Vienen de muy lejos. ¡Bienvenidos!', 'Trop bien ! (« chévere » = super, courant aussi au Pérou). Vous venez de très loin. Bienvenue !', 'Je m’appelle Álex et je suis de Paris.'],
+        ['Me llamo Álex y soy de París.', 1, '¡Qué bacán! Vienen de muy lejos. ¡Bienvenidos!', 'Trop bien ! (« bacán » = super, très courant au Pérou). Vous venez de très loin. Bienvenue !', 'Je m’appelle Álex et je suis de Paris.'],
         ['Soy una llama.', 0, '¿Una llama? ¡Yo tengo una llama también!', 'Un lama ? Moi aussi, j’ai un lama !', 'Je suis un lama.'],
         ['Tengo mil años.', 0, '¿Mil años? ¡Entonces eres más viejo que Machu Picchu!', 'Mille ans ? Alors tu es plus vieux que Machu Picchu !', 'J’ai mille ans.'],
       ]),
@@ -194,7 +197,7 @@ export default function build() {
       lcI('El cóndor vuela alto, entre las nubes.', 'huaman', 'condor', ['puma', 'condor', 'llama']),
       lcT('El rey busca un tesoro de oro en la montaña.', 'huaman', ['Una persona importante busca oro en las alturas.', 'Un niño busca una pluma en el mar.', 'Un animal grande vive en el valle.'], 0),
       tf('Es una estrella.', true, N, { img: 'estrella', tr: 'C’est une étoile.' }),
-      read('El condor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.', 'huaman',
+      read('El cóndor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.', 'huaman',
         'Le condor, le puma et le serpent sont trois animaux sacrés pour les Incas. Le condor vit dans le ciel, le puma vit sur la terre et le serpent vit sous la terre. Pour les Incas, le monde a trois parties. (Les trois mondes : Hanan Pacha, le ciel ; Kay Pacha, la terre ; Ukhu Pacha, le monde d’en bas.)', [
           ['¿Dónde vive el cóndor?', 'Où vit le condor ?', ['En el cielo.', 'Bajo la tierra.', 'En el lago.'], 0],
           ['¿Cuántas partes tiene el mundo para los incas?', 'Combien de parties le monde a-t-il pour les Incas ?', ['Tres.', 'Dos.', 'Diez.'], 0],
@@ -202,12 +205,12 @@ export default function build() {
         ]),
       fill('El ___ vuela en el cielo de los Andes.', 'cóndor', 'huaman', { opts: ['cóndor', 'puma', 'lago'], tr: 'Le condor vole dans le ciel des Andes.' }),
       fill('En el cuento, el héroe busca un ___ de oro.', 'tesoro', 'huaman', { opts: ['tesoro', 'camino', 'viento'], tr: 'Dans le conte, le héros cherche un trésor en or.' }),
-      dlg('huaman', '¿Quién es tu héroe o tu heroína favorito? ¿Por qué?', 'Qui est ton héros ou ton héroïne préféré(e) ? Pourquoi ?', [
+      dlg('huaman', '¿Quién es tu héroe favorito o tu heroína favorita? ¿Por qué?', 'Qui est ton héros ou ton héroïne préféré(e) ? Pourquoi ?', [
         ['Mi héroe es el Quetzal, porque es muy valiente.', 1, '¡Qué buen héroe! Un pájaro valiente, claro que sí.', 'Quel bon héros ! Un oiseau courageux, bien sûr.', 'Mon héros, c’est le Quetzal, parce qu’il est très courageux.'],
         ['Mi héroe es una piedra.', 0, '¿Una piedra? Mmm… no es muy ágil.', 'Une pierre ? Mmm… ce n’est pas très agile.', 'Mon héros est une pierre.'],
         ['Mi heroína porque.', 0, 'Mmm… ¿tu heroína por qué? Dime una frase completa.', 'Mmm… ton héroïne pourquoi ? Dis-moi une phrase complète.', 'Mon héroïne parce que.'],
       ]),
-      speak('Mi cuento favorito es la leyenda.', 'viajero', { libre: 'la leyenda', es: 'Escucha y di cuál es TU cuento favorito.', fr: 'Écoute et dis quel est TON conte (ou livre, ou film) préféré : Harry Potter, el Principito, Caperucita Roja…', tr: 'Mon conte préféré est la légende. (dis le tien : el Principito, Caperucita Roja…)', hechizo: ['Hechizo del cuento', 'Un libro de oro se abre en el aire'] }),
+      speak('Mi cuento favorito es Caperucita Roja.', 'viajero', { libre: 'Caperucita Roja', es: 'Escucha y di cuál es TU cuento favorito.', fr: 'Écoute et dis quel est TON conte (ou livre, ou film) préféré : Harry Potter, el Principito, Caperucita Roja…', tr: 'Mon conte préféré est Le Petit Chaperon rouge. (dis le tien : el Principito, Harry Potter…)', hechizo: ['Hechizo del cuento', 'Un libro de oro se abre en el aire'] }),
       dict('El cóndor vuela en el cielo.', 'huaman'),
     ]));
 
@@ -262,7 +265,7 @@ export default function build() {
 
   // 5 — Lectura : Machu Picchu
   quests.push(quest('u10', 5, 'lectura', 'Machu Picchu', '🏔️',
-    ['huaman', 'Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!', 'Nous sommes dans les Andes, à plus de trois mille mètres. Ici l’air est très rare. Allons doucement !'],
+    ['huaman', 'Estamos en los Andes, a más de tres mil metros. Aquí hay poco oxígeno. ¡Vamos despacio!', 'Nous sommes dans les Andes, à plus de trois mille mètres. Ici, il y a peu d’oxygène. Allons doucement !'],
     'Lecture sur Machu Picchu et sur Cusco, découverte des grands nombres (mil, quinientos, millón) à reconnaître, puis tu dis quel endroit TOI tu aimerais visiter.', ['leer', 'escuchar', 'hablar', 'cultura'], 14, [
       gram('g_numeros_grandes'),
       fill('Cusco está a más de tres ___ metros.', 'mil', 'killa', { opts: ['mil', 'cien', 'millón'], tr: 'Cusco est à plus de trois mille mètres d’altitude.' }),
@@ -276,7 +279,7 @@ export default function build() {
           ['¿Qué es Machu Picchu hoy?', 'Que est Machu Picchu aujourd’hui ?', ['Patrimonio mundial.', 'Un mercado.', 'Un colegio.'], 0],
         ]),
       read('Cusco es la antigua capital de los incas. Está a más de tres mil metros de altura. Cada 24 de junio, la gente celebra el Inti Raymi, la fiesta del sol. Hay música, bailes y trajes de colores. ¡Es una fiesta muy bonita!', 'killa',
-        'Cusco est l’ancienne capitale des Incas. Elle est à plus de trois mille mètres d’altitude. Chaque 24 juin, les gens célèbrent l’Inti Raymi, la fête du soleil. Il y a de la musique, des danses et des costumes colorés. C’est une très belle fête ! (24 juin : solstice d’hiver dans l’hémisphère sud, le jour le plus court de l’année.)', [
+        'Cusco est l’ancienne capitale des Incas. Elle est à plus de trois mille mètres d’altitude. Chaque 24 juin, les gens célèbrent l’Inti Raymi, la fête du soleil. Il y a de la musique, des danses et des costumes colorés. C’est une très belle fête ! (Fin juin, c’est le solstice d’hiver dans l’hémisphère sud : les jours les plus courts de l’année. Les Incas fêtaient le retour du soleil.)', [
           ['¿Qué es el Inti Raymi?', 'Qu’est-ce que l’Inti Raymi ?', ['La fiesta del sol.', 'Un animal.', 'Un plato típico.'], 0],
           ['¿Cuándo es el Inti Raymi?', 'Quand a lieu l’Inti Raymi ?', ['El 24 de junio.', 'El 25 de diciembre.', 'El 1 de enero.'], 0],
           ['¿Qué hay en la fiesta?', 'Qu’y a-t-il à la fête ?', ['Música, bailes y trajes de colores.', 'Solo comida.', 'Nada.'], 0],
@@ -285,12 +288,12 @@ export default function build() {
       tf('Machu Picchu está en el mar.', false, N, { tr: 'Machu Picchu est dans la mer. (Faux : il est dans les montagnes.)' }),
       tf('Cusco es la antigua capital de los incas.', true, N, { tr: 'Cusco est l’ancienne capitale des Incas.' }),
       reord('Machu Picchu está entre las nubes.', 'huaman', { tr: 'Machu Picchu est entre les nuages.' }),
-      dlg('huaman', 'Estamos muy altos. ¿Cómo estás? ¿Estás cansado?', 'Nous sommes très haut. Comment vas-tu ? Tu es fatigué ?', [
-        ['Estoy un poco cansado, pero contento.', 1, '¡Perfecto! Con un poquito de té de coca se pasa todo.', 'Parfait ! Avec un peu de thé de coca, tout passe. (Dans les Andes, on boit du « mate de coca » contre le mal des montagnes, le « soroche ».)', 'Je suis un peu fatigué, mais content.'],
+      dlg('huaman', 'Estamos a mucha altura. ¿Cómo estás? ¿Estás cansado?', 'Nous sommes très haut. Comment vas-tu ? Tu es fatigué ?', [
+        ['Estoy un poco cansado, pero contento.', 1, '¡Perfecto! En la altura hay que caminar despacio y tomar mucha agua.', 'Parfait ! En altitude, il faut marcher lentement et boire beaucoup d’eau. (Au Pérou, le mal des montagnes s’appelle le « soroche ».)', 'Je suis un peu fatigué, mais content.'],
         ['Soy cansado.', 0, 'Con «cansado» usamos «estar»: «estoy cansado».', 'Avec « cansado », on utilise « estar » : « estoy cansado ».', 'Je suis (ser) fatigué.'],
         ['Estoy muy alto en el cielo.', 0, '¡Casi! Pero se dice «estamos en las montañas».', 'Presque ! Mais on dit « nous sommes dans les montagnes ».', 'Je suis très haut dans le ciel.'],
       ]),
-      speak('Me gustaría visitar Machu Picchu.', 'viajero', { libre: 'Machu Picchu', es: 'Escucha y di qué lugar te gustaría visitar a TI.', fr: 'Écoute et dis quel endroit TU aimerais visiter (Madrid, Cartagena, Buenos Aires…). « Me gustaría » = j’aimerais.', tr: 'J’aimerais visiter Machu Picchu. (dis le tien)', foco: 'Machu Picchu : le « ch » se dit « tch » (MA-tchou PIK-tchou). Le « cc » de « Picchu » n’existe pas en espagnol : c’est un « cch », donc « tch ».', hechizo: ['Hechizo del viaje', 'Un camino dorado aparece entre las nubes'] }),
+      speak('Me gustaría visitar Machu Picchu.', 'viajero', { libre: 'Machu Picchu', es: 'Escucha y di qué lugar te gustaría visitar a TI.', fr: 'Écoute et dis quel endroit TU aimerais visiter (Madrid, Cartagena, Buenos Aires…). « Me gustaría » = j’aimerais.', tr: 'J’aimerais visiter Machu Picchu. (dis le tien)', foco: 'Machu Picchu : le « ch » se dit « tch » (MA-tchou PIK-tchou). Le « cch » de « Picchu » (mot quechua) se dit « k-tch » : PIK-tchou.', hechizo: ['Hechizo del viaje', 'Un camino dorado aparece entre las nubes'] }),
     ]));
 
   // 6 — Diálogo : el español en el mundo y el quechua
@@ -300,7 +303,7 @@ export default function build() {
       flash('idioma', 'palabra', 'mundo', 'pais', 'hablante', 'continente', 'quechua'),
       flash('inca', 'pachamama', 'papa', 'quinua', 'lana', 'tejido'),
       gram('g_se_habla'),
-      fill('En Perú ___ español y quechua.', 'se habla', 'killa', { opts: ['se habla', 'se hablan', 'hablan'], tr: 'Au Pérou, on parle espagnol et quechua.' }),
+      fill('En Perú ___ español.', 'se habla', 'killa', { opts: ['se habla', 'se hablan', 'hablo'], tr: 'Au Pérou, on parle espagnol. (une langue → se habla)' }),
       fill('En México ___ muchas lenguas indígenas.', 'se hablan', 'itzel', { opts: ['se habla', 'se hablan', 'hablo'], tr: 'Au Mexique, on parle beaucoup de langues indigènes. (plusieurs langues → se hablan)' }),
       read('El español es la lengua oficial de veinte países. Se habla en España, en América y también en África, en Guinea Ecuatorial. Más de quinientos millones de personas hablan español. Es uno de los idiomas más hablados del mundo.', 'killa',
         'L’espagnol est la langue officielle de vingt pays. On le parle en Espagne, en Amérique et aussi en Afrique, en Guinée équatoriale. Plus de cinq cents millions de personnes parlent espagnol. C’est une des langues les plus parlées au monde. (Vingt pays, plus Porto Rico, territoire des États-Unis.)', [
@@ -308,10 +311,10 @@ export default function build() {
           ['¿Dónde se habla español en África?', 'Où parle-t-on espagnol en Afrique ?', ['En Guinea Ecuatorial.', 'En Marruecos.', 'En Egipto.'], 0],
           ['¿Cuántas personas hablan español?', 'Combien de personnes parlent espagnol ?', ['Más de quinientos millones.', 'Cien personas.', 'Dos mil.'], 0],
         ]),
-      read('En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡También en francés decimos lama, puma, condor y quinoa!', 'killa',
+      read('En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡Y en francés también se dice lama, puma, condor y quinoa!', 'killa',
         'À la maison, nous parlons quechua, mais au collège nous parlons espagnol. Le quechua est une langue des Andes et des millions de personnes le parlent. Beaucoup de mots espagnols viennent du quechua : pomme de terre, lama, puma, condor, quinoa. En français aussi, on dit lama, puma, condor et quinoa ! (« papa » = pomme de terre en Amérique latine ; en Espagne, on dit « patata ».)', [
           ['¿Qué hablan en casa de Killa?', 'Que parle-t-on chez Killa ?', ['Quechua.', 'Francés.', 'Inglés.'], 0],
-          ['¿Qué significa «papa» en América?', 'Que veut dire « papa » en Amérique ?', ['Pomme de terre.', 'Pain.', 'Tomate.'], 0],
+          ['En España, ¿cómo se dice «papa»?', 'En Espagne, comment dit-on « papa » (pomme de terre) ?', ['Patata.', 'Pan.', 'Tomate.'], 0],
           ['¿Qué palabras del quechua usamos también en francés?', 'Quels mots du quechua utilise-t-on aussi en français ?', ['Puma y cóndor.', 'Casa y mesa.', 'Libro y silla.'], 0],
         ]),
       tf('El quechua es una lengua de los Andes.', true, N, { tr: 'Le quechua est une langue des Andes.' }),
@@ -322,7 +325,7 @@ export default function build() {
         ['Hablo piedras y pirámides.', 0, '¿Piedras? Mmm… las piedras no hablan.', 'Des pierres ? Mmm… les pierres ne parlent pas.', 'Je parle pierres et pyramides.'],
         ['Hablo hablo.', 0, 'No entiendo. ¿Qué idiomas?', 'Je ne comprends pas. Quelles langues ?', 'Je parle je parle.'],
       ]),
-      speak('Hablo francés y español.', 'viajero', { libre: 'francés y español', es: 'Escucha y di qué idiomas hablas TÚ.', fr: 'Écoute et dis quelles langues TU parles (francés, inglés, español, árabe, italiano…). Tu peux en citer jusqu’à trois mots.', tr: 'Je parle français et espagnol. (dis tes langues)', foco: 'Le « ñ » de « español » : comme « gn » dans « montagne ». Le « ll » de « llama » : comme un « y » (YA-ma).', hechizo: ['Hechizo de las lenguas', 'Muchas lenguas bailan alrededor de tu cabeza'] }),
+      speak('Hablo francés y español.', 'viajero', { libre: 'francés y español', es: 'Escucha y di qué idiomas hablas TÚ.', fr: 'Écoute et dis quelles langues TU parles (francés, inglés, español, árabe, italiano…). Tu peux en citer jusqu’à trois mots.', tr: 'Je parle français et espagnol. (dis tes langues)', foco: 'Le « ñ » de « español » : comme « gn » dans « montagne » (es-pa-ÑOL). Et « francés » : accent sur la dernière syllabe (fran-CÉS).', hechizo: ['Hechizo de las lenguas', 'Muchas lenguas bailan alrededor de tu cabeza'] }),
       writeFree('Hablo ___. Quiero aprender ___. Mi palabra favorita en español es ___.', [
         { id: 'hablo', pista: 'Les langues que tu parles (francés, inglés, español…)', tipo: 'texto' },
         { id: 'aprender', pista: 'Une langue que tu veux apprendre (italiano, quechua, japonés…)', tipo: 'texto' },
@@ -337,9 +340,9 @@ export default function build() {
       capsula,
       tf('Machu Picchu es una ciudad inca.', true, N, { tr: 'Machu Picchu est une ville inca.' }),
       tf('Los incas hablan quechua.', true, N, { tr: 'Les Incas parlent quechua.' }),
-      tf('La papa es de origen quechua.', true, N, { tr: 'Le mot « papa » vient du quechua. (« papa » = pomme de terre, et c’est un aliment originaire des Andes.)' }),
-      read('En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae, un quetzal vuela hasta él, y desde ese día su pecho es rojo. Por eso, el quetzal es un símbolo de libertad.', 'paulina',
-        'Au Guatemala, le quetzal est l’oiseau national et aussi le nom de la monnaie. Il y a une légende : Tecún Umán, un héros maya, est très courageux et défend son peuple. Quand il tombe, un quetzal vole jusqu’à lui, et depuis ce jour sa poitrine est rouge. C’est pourquoi le quetzal est un symbole de liberté. (Tecún Umán est un chef k’iche’ du XVIe siècle ; l’histoire de l’oiseau est une légende.)', [
+      tf('La palabra «papa» viene del quechua.', true, N, { tr: 'Le mot « papa » vient du quechua. (« papa » = pomme de terre, un aliment originaire des Andes.)' }),
+      read('En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae en la batalla, un quetzal vuela hasta él. Según la leyenda, desde ese día el pecho del quetzal es rojo. Hoy el quetzal es un símbolo de libertad.', 'paulina',
+        'Au Guatemala, le quetzal est l’oiseau national et aussi le nom de la monnaie. Il y a une légende : Tecún Umán, un héros maya, est très courageux et défend son peuple. Quand il tombe au combat, un quetzal vole jusqu’à lui. Selon la légende, depuis ce jour, la poitrine du quetzal est rouge. Aujourd’hui, le quetzal est un symbole de liberté. (Tecún Umán serait un chef maya k’iche’ mort en 1524 en combattant les conquistadors espagnols ; on sait très peu de choses sûres sur lui, et l’histoire de l’oiseau est une légende.)', [
           ['¿Qué es el quetzal en Guatemala?', 'Qu’est-ce que le quetzal au Guatemala ?', ['El pájaro nacional y la moneda.', 'Una montaña.', 'Un plato típico.'], 0],
           ['¿Cómo es Tecún Umán?', 'Comment est Tecún Umán ?', ['Un héroe muy valiente.', 'Un rey muy rico.', 'Un monstruo.'], 0],
           ['¿De qué color es el pecho del quetzal en la leyenda?', 'De quelle couleur est la poitrine du quetzal dans la légende ?', ['Rojo.', 'Azul.', 'Negro.'], 0],
@@ -347,7 +350,7 @@ export default function build() {
       lcT('Cuando Tecún Umán cae, un quetzal vuela hasta él.', 'paulina', ['Un pájaro acompaña al héroe en su final.', 'El héroe llega a un lago.', 'Un puma ayuda a un niño.'], 0),
       dlg('paulina', 'Cada dibujo de mis tejidos cuenta algo: la montaña, el sol, el cóndor… ¿Qué dibujas tú?', 'Chaque dessin de mes tissages raconte quelque chose : la montagne, le soleil, le condor… Et toi, que dessines-tu ?', [
         ['Dibujo mi casa y mi familia.', 1, '¡Qué hermoso! Una familia también es una historia.', 'Que c’est beau ! Une famille aussi est une histoire. (« hermoso » = beau, très courant en Amérique latine)', 'Je dessine ma maison et ma famille.'],
-        ['Dibujo una pizza voladora.', 1, '¡Qué divertido! En un tejido cabe todo.', 'Comme c’est amusant ! Dans un tissage, tout a sa place.', 'Je dessine une pizza volante.'],
+        ['Dibuja mi casa.', 0, '¿Dibuja? Con «yo» se dice «dibujo»: yo dibujo.', 'Dibuja ? Avec « yo », on dit « dibujo » : yo dibujo (je dessine).', 'Il dessine ma maison.'],
         ['Dibujo hablo.', 0, 'Mmm… no entiendo. ¿Qué dibujas?', 'Mmm… je ne comprends pas. Que dessines-tu ?', 'Je dessine je parle.'],
       ]),
       reord('Mis tejidos cuentan historias de los Andes.', 'paulina', { tr: 'Mes tissages racontent des histoires des Andes.' }),
@@ -379,25 +382,25 @@ export default function build() {
       ]),
       lcT('Son las tres y media.', 'sombra', ['3:30', '3:15', '2:30'], 0),
       fill('A mí me ___ los cuentos de héroes.', 'gustan', 'marina', { opts: ['gusta', 'gustan', 'gustas'], tr: 'J’aime les contes de héros. (« los cuentos » est pluriel → gustan)' }),
-      fill('Quiero volar, ___ no tengo plumas.', 'pero', 'quetzal', { opts: ['pero', 'además', 'porque'], tr: 'Je veux voler, mais je n’ai pas de plumes.' }),
-      lcT('En Perú se habla español y quechua.', 'sombra', ['En Perú hay dos lenguas.', 'En Perú solo se habla inglés.', 'En Perú no hay idiomas.'], 0),
+      lcT('Killa habla quechua en casa y español en el colegio.', 'sombra', ['Killa habla dos lenguas.', 'Killa solo habla inglés.', 'Killa no habla español.'], 0),
       match(['condor', 'puma', 'llama', 'estrella', 'nube', 'lago']),
       fill('Machu Picchu ___ en las montañas de Perú.', 'está', 'killa', { opts: ['es', 'está', 'hay'], tr: 'Machu Picchu est dans les montagnes du Pérou.' }),
       fill('Bogotá es ___ grande que Salamanca.', 'más', 'camila', { opts: ['más', 'menos', 'mejor'], tr: 'Bogotá est plus grande que Salamanque.' }),
       conj('ir', 'nosotros', '', 'vamos', ['vamos', 'vais', 'van'], 'marina', { tr: 'Nous, nous allons…' }),
       reord('Primero busco el camino y luego subo a la cima.', 'killa', { tr: 'D’abord je cherche le chemin et ensuite je monte au sommet.' }),
       dlg('sombra', '¿Por qué quieres hablar con los demás?', 'Pourquoi veux-tu parler avec les autres ?', [
-        ['Porque con las palabras tengo amigos.', 1, 'Amigos… Yo no tengo ninguno. Estoy sola.', 'Des amis… Moi, je n’en ai aucun. Je suis seule. (« sola » : elle est une femme, féminin de « solo »)', 'Parce qu’avec les mots, j’ai des amis.'],
+        ['Porque con las palabras tengo amigos.', 1, 'Amigos… Yo no tengo ninguno. Estoy sola.', 'Des amis… Moi, je n’en ai aucun. Je suis seule. (« sola » au féminin, car on dit « la Sombra »)', 'Parce qu’avec les mots, j’ai des amis.'],
         ['Porque soy una montaña.', 0, '¿Una montaña? Las montañas también se quedan solas.', 'Une montagne ? Les montagnes aussi restent seules.', 'Parce que je suis une montagne.'],
         ['Porque no me gusta nada.', 0, 'Entonces… ¿para qué hablas?', 'Alors… pourquoi parles-tu ?', 'Parce que je n’aime rien.'],
       ]),
       read('Soy la Sombra del Silencio. Vivo en la montaña desde hace mucho tiempo. Nadie habla conmigo porque todos tienen miedo. Estoy sola y triste. Por eso quiero un mundo sin palabras: así nadie se ríe de mí.', 'sombra',
         'Je suis l’Ombre du Silence. Je vis dans la montagne depuis très longtemps. Personne ne me parle parce que tout le monde a peur. Je suis seule et triste. C’est pourquoi je veux un monde sans mots : comme ça, personne ne se moque de moi.', [
           ['¿Cómo está la Sombra?', 'Comment va l’Ombre ?', ['Sola y triste.', 'Contenta y cansada.', 'Enfadada y valiente.'], 0],
-          ['¿Por qué nadie habla con ella?', 'Pourquoi personne ne lui parle-t-elle ?', ['Porque todos tienen miedo.', 'Porque vive en el mar.', 'Porque es muy pequeña.'], 0],
+          ['¿Por qué nadie habla con ella?', 'Pourquoi personne ne lui parle ?', ['Porque todos tienen miedo.', 'Porque vive en el mar.', 'Porque es muy pequeña.'], 0],
           ['¿Qué quiere la Sombra?', 'Que veut l’Ombre ?', ['Un mundo sin palabras.', 'Un tesoro de oro.', 'Una casa nueva.'], 0],
         ]),
       speak('Hola, me llamo Álex y te escucho.', 'viajero', { nombre: 'Álex', tr: 'Salut, je m’appelle Álex et je t’écoute. (dis ton prénom ; c’est ton dernier sort)', hechizo: ['Hechizo final', 'Tu voz abre la última puerta del silencio'] }),
+      finaleSombra,
       finale,
     ], { jefe: { personaje: 'sombra', vidas: 12 } }));
 

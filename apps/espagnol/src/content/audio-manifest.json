@@ -21843,15 +21843,15 @@
     "pitch": "+16Hz"
   },
   {
-    "key": "hernan.cee4459276",
-    "text": "Hay dos museos en La Candelaria.",
+    "key": "hernan.5ada3ae269",
+    "text": "Hay muchos museos en La Candelaria.",
     "voice": "es-CO-GonzaloNeural",
     "rate": "-6%",
     "pitch": "-10Hz"
   },
   {
-    "key": "hernan.cee4459276.lento",
-    "text": "Hay dos museos en La Candelaria.",
+    "key": "hernan.5ada3ae269.lento",
+    "text": "Hay muchos museos en La Candelaria.",
     "voice": "es-CO-GonzaloNeural",
     "rate": "-31%",
     "pitch": "-10Hz"
@@ -21995,8 +21995,8 @@
     "pitch": "-10Hz"
   },
   {
-    "key": "narrador.500da71922",
-    "text": "Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. «Mejor» es «más bueno».",
+    "key": "narrador.184fd35858",
+    "text": "Para comparar: más + adjetivo + que, menos + adjetivo + que. Para decir «igual»: tan + adjetivo + como. De «bueno» decimos «mejor» (no «más bueno»).",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -22174,8 +22174,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "marta.43ade8abbb",
-    "text": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, dos dormitorios y un balcón.",
+    "key": "marta.3fadffa326",
+    "text": "¡Pasen, pasen! Esta es mi casa. Tiene un salón, una cocina, tres dormitorios y un balcón.",
     "voice": "es-CO-SalomeNeural",
     "rate": "-10%",
     "pitch": "-14Hz"
@@ -22958,8 +22958,8 @@
     "rate": "-4%"
   },
   {
-    "key": "camila.5c4d927572",
-    "text": "Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es un plato típico de Bogotá.",
+    "key": "camila.0e7848a223",
+    "text": "Los domingos, en Bogotá, hay una Ciclovía. Muchas calles están cerradas a los coches. Las familias van en bicicleta, caminan y juegan en la calle. En Colombia, mucha gente toma chocolate caliente con queso: es una costumbre típica de Bogotá.",
     "voice": "es-CO-SalomeNeural",
     "rate": "+4%",
     "pitch": "+16Hz"
@@ -23308,14 +23308,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.e42629a4c8",
-    "text": "La playa tiene el mar azul.",
+    "key": "narrador.d0e5bdb16d",
+    "text": "En Yucatán hay playas muy bonitas.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.e42629a4c8.lento",
-    "text": "La playa tiene el mar azul.",
+    "key": "narrador.d0e5bdb16d.lento",
+    "text": "En Yucatán hay playas muy bonitas.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -24020,14 +24020,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.92b7dc6c7d",
-    "text": "El cacao es una planta de México.",
+    "key": "narrador.2c9a91a266",
+    "text": "Los mayas cultivan el cacao.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.92b7dc6c7d.lento",
-    "text": "El cacao es una planta de México.",
+    "key": "narrador.2c9a91a266.lento",
+    "text": "Los mayas cultivan el cacao.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -24220,14 +24220,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.22c54f88f6",
-    "text": "La salsa habanero es muy picante.",
+    "key": "narrador.c7286f3c2d",
+    "text": "La salsa de chile habanero es muy picante.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.22c54f88f6.lento",
-    "text": "La salsa habanero es muy picante.",
+    "key": "narrador.c7286f3c2d.lento",
+    "text": "La salsa de chile habanero es muy picante.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -24461,15 +24461,15 @@
     "rate": "-4%"
   },
   {
-    "key": "itzel.584bd845e9",
-    "text": "Yucatán es una región caliente y verde.",
+    "key": "itzel.1504ffe1fc",
+    "text": "Yucatán es una región cálida y verde.",
     "voice": "es-MX-DaliaNeural",
     "rate": "+6%",
     "pitch": "+24Hz"
   },
   {
-    "key": "itzel.584bd845e9.lento",
-    "text": "Yucatán es una región caliente y verde.",
+    "key": "itzel.1504ffe1fc.lento",
+    "text": "Yucatán es una región cálida y verde.",
     "voice": "es-MX-DaliaNeural",
     "rate": "-19%",
     "pitch": "+24Hz"
@@ -24603,8 +24603,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.00fc05460c",
-    "text": "Selva, cenotes y pirámides: aquí viven los mayas desde hace siglos.",
+    "key": "narrador.b14280bfb0",
+    "text": "Selva, cenotes y pirámides: aquí viven los mayas desde hace miles de años.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -24731,8 +24731,8 @@
     "pitch": "+24Hz"
   },
   {
-    "key": "itzel.3042c94106",
-    "text": "Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.",
+    "key": "itzel.17fcae995d",
+    "text": "Mira: en Yucatán hay jaguares en la selva, flamencos en las lagunas, tortugas en el mar… ¡y miles de cenotes!",
     "voice": "es-MX-DaliaNeural",
     "rate": "+6%",
     "pitch": "+24Hz"
@@ -24758,8 +24758,8 @@
     "rate": "-4%"
   },
   {
-    "key": "itzel.c75086330f",
-    "text": "En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en ellos.",
+    "key": "itzel.438d806174",
+    "text": "En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en muchos cenotes.",
     "voice": "es-MX-DaliaNeural",
     "rate": "+6%",
     "pitch": "+24Hz"
@@ -24817,14 +24817,14 @@
     "pitch": "+24Hz"
   },
   {
-    "key": "viajero.27d758bc03",
-    "text": "En Francia hay selvas con jaguares.",
+    "key": "viajero.efede89d28",
+    "text": "En París hay selvas con jaguares.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "itzel.81570dfa09",
-    "text": "Mmm… no creo. Los jaguares viven en América.",
+    "key": "itzel.7a9b42874b",
+    "text": "¿En París? Mmm… no creo. Los jaguares viven en la selva.",
     "voice": "es-MX-DaliaNeural",
     "rate": "+6%",
     "pitch": "+24Hz"
@@ -25033,8 +25033,8 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "chabela.9da5457cd3",
-    "text": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.",
+    "key": "chabela.5cca37194c",
+    "text": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace miles de años.",
     "voice": "es-MX-DaliaNeural",
     "rate": "-12%",
     "pitch": "-6Hz"
@@ -25072,8 +25072,8 @@
     "rate": "-4%"
   },
   {
-    "key": "chabela.8d8199923f",
-    "text": "El cacao es una planta de México. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.",
+    "key": "chabela.db10e6d6ca",
+    "text": "El cacao es una planta de América. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.",
     "voice": "es-MX-DaliaNeural",
     "rate": "-12%",
     "pitch": "-6Hz"
@@ -25131,14 +25131,14 @@
     "pitch": "-6Hz"
   },
   {
-    "key": "viajero.4aeafe528c",
-    "text": "Sí, gracias, pero solo un poquito.",
+    "key": "viajero.97a9ba0a0c",
+    "text": "Sí, gracias. Soy muy picante.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "chabela.935f7b7c36",
-    "text": "¡Muy bien! Un poquito de salsa, y mucha tortilla.",
+    "key": "chabela.399b59978f",
+    "text": "¿Tú eres picante? ¡Ja, ja! Querrás decir: «me gusta el picante».",
     "voice": "es-MX-DaliaNeural",
     "rate": "-12%",
     "pitch": "-6Hz"
@@ -25195,8 +25195,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "chabela.746e69f9b0",
-    "text": "La cochinita pibil es muy deliciosa.",
+    "key": "chabela.f2367a76d0",
+    "text": "La cochinita pibil es deliciosa.",
     "voice": "es-MX-DaliaNeural",
     "rate": "-12%",
     "pitch": "-6Hz"
@@ -25369,14 +25369,14 @@
     "pitch": "+24Hz"
   },
   {
-    "key": "viajero.323a0af93c",
-    "text": "No, no he probado la cochinita pibil.",
+    "key": "viajero.ebf0f8c3af",
+    "text": "Sí, he probar la cochinita pibil.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "itzel.9065d53409",
-    "text": "No hay problema. ¡Hoy la vas a probar!",
+    "key": "itzel.7f6ba2dc9a",
+    "text": "Casi… Se dice «he probado»: haber + participio.",
     "voice": "es-MX-DaliaNeural",
     "rate": "+6%",
     "pitch": "+24Hz"
@@ -25452,8 +25452,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.3c65aaea0a",
-    "text": "En primavera y en otoño, la sombra de una serpiente baja por la pirámide.",
+    "key": "narrador.808fc64441",
+    "text": "En primavera y en otoño, la sombra de una serpiente baja por la pirámide: es Kukulcán.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -25482,8 +25482,8 @@
     "rate": "-4%"
   },
   {
-    "key": "chan.b4c3749267",
-    "text": "Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, la sombra del sol dibuja una serpiente en la escalera de la pirámide.",
+    "key": "chan.d5773f27c2",
+    "text": "Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, el sol y la sombra dibujan una serpiente en la escalera de la pirámide.",
     "voice": "es-MX-JorgeNeural",
     "rate": "-8%",
     "pitch": "-20Hz"
@@ -25533,8 +25533,8 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "chan.23c45f52fc",
-    "text": "Yucatán es una región caliente. ¿Cómo es tu región?",
+    "key": "chan.7360836ee8",
+    "text": "En Yucatán hace mucho calor. ¿Cómo es tu región?",
     "voice": "es-MX-JorgeNeural",
     "rate": "-8%",
     "pitch": "-20Hz"
@@ -25553,14 +25553,14 @@
     "pitch": "-20Hz"
   },
   {
-    "key": "viajero.d1ea29075b",
-    "text": "Mi región está caliente y verde.",
+    "key": "viajero.518b9fdde4",
+    "text": "Mi región está verde y grande.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "chan.19b37e39bc",
-    "text": "Se dice «es verde»: la región es verde, no «está».",
+    "key": "chan.0c1b46d7c4",
+    "text": "Para decir cómo es, usamos «es»: mi región es verde y grande.",
     "voice": "es-MX-JorgeNeural",
     "rate": "-8%",
     "pitch": "-20Hz"
@@ -25783,8 +25783,8 @@
     "pitch": "+24Hz"
   },
   {
-    "key": "quetzal.b9d73b43cd",
-    "text": "Nueve plumas. ¡Una más y vuelvo a volar con todo mi cuerpo!",
+    "key": "quetzal.35797cc258",
+    "text": "Nueve plumas. ¡Con una más, vuelvo a ser el gran Quetzal!",
     "voice": "es-MX-JorgeNeural",
     "rate": "-6%",
     "pitch": "+22Hz"
@@ -26421,14 +26421,14 @@
     "rate": "-29%"
   },
   {
-    "key": "narrador.f5d3cd91b3",
-    "text": "La quinua es un cereal de los Andes.",
+    "key": "narrador.0df9011fac",
+    "text": "La quinua es un alimento de los Andes.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "narrador.f5d3cd91b3.lento",
-    "text": "La quinua es un cereal de los Andes.",
+    "key": "narrador.0df9011fac.lento",
+    "text": "La quinua es un alimento de los Andes.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-29%"
   },
@@ -27069,15 +27069,15 @@
     "rate": "-4%"
   },
   {
-    "key": "killa.aa72402408",
-    "text": "En Perú se habla español y quechua.",
+    "key": "killa.280a287326",
+    "text": "En Perú se habla español.",
     "voice": "es-PE-CamilaNeural",
     "rate": "+4%",
     "pitch": "+18Hz"
   },
   {
-    "key": "killa.aa72402408.lento",
-    "text": "En Perú se habla español y quechua.",
+    "key": "killa.280a287326.lento",
+    "text": "En Perú se habla español.",
     "voice": "es-PE-CamilaNeural",
     "rate": "-21%",
     "pitch": "+18Hz"
@@ -27097,15 +27097,15 @@
     "pitch": "+24Hz"
   },
   {
-    "key": "marina.929fa1286d",
-    "text": "El español se habla en veinte países.",
+    "key": "marina.c33cb40296",
+    "text": "En Argentina se habla español.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"
   },
   {
-    "key": "marina.929fa1286d.lento",
-    "text": "El español se habla en veinte países.",
+    "key": "marina.c33cb40296.lento",
+    "text": "En Argentina se habla español.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-17%",
     "pitch": "+25Hz"
@@ -27313,8 +27313,8 @@
     "pitch": "+18Hz"
   },
   {
-    "key": "killa.ab1bf796ae",
-    "text": "¡Qué chévere! Vienen de muy lejos. ¡Bienvenidos!",
+    "key": "killa.fdc243cbdc",
+    "text": "¡Qué bacán! Vienen de muy lejos. ¡Bienvenidos!",
     "voice": "es-PE-CamilaNeural",
     "rate": "+4%",
     "pitch": "+18Hz"
@@ -27393,8 +27393,8 @@
     "rate": "-4%"
   },
   {
-    "key": "huaman.f228c5d135",
-    "text": "El condor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.",
+    "key": "huaman.360b28dfd2",
+    "text": "El cóndor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.",
     "voice": "es-PE-AlexNeural",
     "rate": "-8%",
     "pitch": "-12Hz"
@@ -27432,8 +27432,8 @@
     "pitch": "-12Hz"
   },
   {
-    "key": "huaman.c3c0c735d9",
-    "text": "¿Quién es tu héroe o tu heroína favorito? ¿Por qué?",
+    "key": "huaman.6c31fa1776",
+    "text": "¿Quién es tu héroe favorito o tu heroína favorita? ¿Por qué?",
     "voice": "es-PE-AlexNeural",
     "rate": "-8%",
     "pitch": "-12Hz"
@@ -27484,14 +27484,14 @@
     "rate": "-4%"
   },
   {
-    "key": "viajero.c5758a9e57",
-    "text": "Mi cuento favorito es la leyenda.",
+    "key": "viajero.ae16d92435",
+    "text": "Mi cuento favorito es Caperucita Roja.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "viajero.c5758a9e57.lento",
-    "text": "Mi cuento favorito es la leyenda.",
+    "key": "viajero.ae16d92435.lento",
+    "text": "Mi cuento favorito es Caperucita Roja.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-25%",
     "pitch": "+28Hz"
@@ -27731,8 +27731,8 @@
     "pitch": "+18Hz"
   },
   {
-    "key": "huaman.b63ca5ed4c",
-    "text": "Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!",
+    "key": "huaman.cb8cab3326",
+    "text": "Estamos en los Andes, a más de tres mil metros. Aquí hay poco oxígeno. ¡Vamos despacio!",
     "voice": "es-PE-AlexNeural",
     "rate": "-8%",
     "pitch": "-12Hz"
@@ -27827,8 +27827,8 @@
     "pitch": "-12Hz"
   },
   {
-    "key": "huaman.62c86761aa",
-    "text": "Estamos muy altos. ¿Cómo estás? ¿Estás cansado?",
+    "key": "huaman.d32651876a",
+    "text": "Estamos a mucha altura. ¿Cómo estás? ¿Estás cansado?",
     "voice": "es-PE-AlexNeural",
     "rate": "-8%",
     "pitch": "-12Hz"
@@ -27840,8 +27840,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "huaman.8c5a00aab5",
-    "text": "¡Perfecto! Con un poquito de té de coca se pasa todo.",
+    "key": "huaman.3a231c2178",
+    "text": "¡Perfecto! En la altura hay que caminar despacio y tomar mucha agua.",
     "voice": "es-PE-AlexNeural",
     "rate": "-8%",
     "pitch": "-12Hz"
@@ -27924,8 +27924,8 @@
     "rate": "-4%"
   },
   {
-    "key": "killa.10c0ec1420",
-    "text": "En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡También en francés decimos lama, puma, condor y quinoa!",
+    "key": "killa.c4844b7799",
+    "text": "En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡Y en francés también se dice lama, puma, condor y quinoa!",
     "voice": "es-PE-CamilaNeural",
     "rate": "+4%",
     "pitch": "+18Hz"
@@ -27937,8 +27937,8 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.125076bc62",
-    "text": "¿Qué significa «papa» en América?",
+    "key": "narrador.087eb62912",
+    "text": "En España, ¿cómo se dice «papa»?",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
@@ -28095,14 +28095,14 @@
     "rate": "-4%"
   },
   {
-    "key": "narrador.084b961350",
-    "text": "La papa es de origen quechua.",
+    "key": "narrador.403c4b9298",
+    "text": "La palabra «papa» viene del quechua.",
     "voice": "es-ES-ElviraNeural",
     "rate": "-4%"
   },
   {
-    "key": "paulina.630e0c076c",
-    "text": "En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae, un quetzal vuela hasta él, y desde ese día su pecho es rojo. Por eso, el quetzal es un símbolo de libertad.",
+    "key": "paulina.4f15dfb2b6",
+    "text": "En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae en la batalla, un quetzal vuela hasta él. Según la leyenda, desde ese día el pecho del quetzal es rojo. Hoy el quetzal es un símbolo de libertad.",
     "voice": "es-PE-CamilaNeural",
     "rate": "-12%",
     "pitch": "-14Hz"
@@ -28153,14 +28153,14 @@
     "pitch": "-14Hz"
   },
   {
-    "key": "viajero.1cbf162b4c",
-    "text": "Dibujo una pizza voladora.",
+    "key": "viajero.02d3460f80",
+    "text": "Dibuja mi casa.",
     "voice": "es-ES-AlvaroNeural",
     "pitch": "+28Hz"
   },
   {
-    "key": "paulina.a7567ce564",
-    "text": "¡Qué divertido! En un tejido cabe todo.",
+    "key": "paulina.3ee78500eb",
+    "text": "¿Dibuja? Con «yo» se dice «dibujo»: yo dibujo.",
     "voice": "es-PE-CamilaNeural",
     "rate": "-12%",
     "pitch": "-14Hz"
@@ -28325,8 +28325,8 @@
     "pitch": "+25Hz"
   },
   {
-    "key": "sombra.aa72402408",
-    "text": "En Perú se habla español y quechua.",
+    "key": "sombra.276089b8ba",
+    "text": "Killa habla quechua en casa y español en el colegio.",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-18%",
     "pitch": "-45Hz"
@@ -28450,8 +28450,8 @@
     "pitch": "+28Hz"
   },
   {
-    "key": "sombra.62ab88932a",
-    "text": "Gracias… hola… hola…",
+    "key": "sombra.76c06e70be",
+    "text": "Gracias… hola…",
     "voice": "es-ES-AlvaroNeural",
     "rate": "-18%",
     "pitch": "-45Hz"
@@ -28471,8 +28471,8 @@
     "pitch": "-10Hz"
   },
   {
-    "key": "marina.51d44cc4b6",
-    "text": "En tu sombrero, Don Ignacio.",
+    "key": "marina.7be0883ed5",
+    "text": "Encima de tu sombrero, Don Ignacio.",
     "voice": "es-ES-ElviraNeural",
     "rate": "+8%",
     "pitch": "+25Hz"

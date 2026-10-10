@@ -83,10 +83,10 @@
         "naturaleza"
       ],
       "ejemplo": {
-        "es": "La playa tiene el mar azul.",
-        "fr": "La plage a la mer bleue.",
+        "es": "En Yucatán hay playas muy bonitas.",
+        "fr": "Au Yucatán, il y a de très belles plages.",
         "voz": "narrador",
-        "audio": "narrador.e42629a4c8"
+        "audio": "narrador.d0e5bdb16d"
       },
       "audio": "narrador.abd5cf4ffb"
     },
@@ -94,7 +94,7 @@
       "id": "mar",
       "es": "mar",
       "fr": "mer (« el mar » ; on dit parfois « la mar » en poésie)",
-      "genero": "mf",
+      "genero": "m",
       "emoji": "🌊",
       "tags": [
         "naturaleza"
@@ -363,7 +363,7 @@
     {
       "id": "azteca",
       "es": "azteca",
-      "fr": "aztèque (peuple et adjectif ; ils se nomment eux-mêmes « mexicas »)",
+      "fr": "aztèque (peuple et adjectif ; eux-mêmes se nommaient « mexicas »)",
       "genero": "mf",
       "plural": "aztecas",
       "clase": "adj",
@@ -607,10 +607,10 @@
         "gastronomia"
       ],
       "ejemplo": {
-        "es": "El cacao es una planta de México.",
-        "fr": "Le cacao est une plante du Mexique.",
+        "es": "Los mayas cultivan el cacao.",
+        "fr": "Les Mayas cultivent le cacao.",
         "voz": "narrador",
-        "audio": "narrador.92b7dc6c7d"
+        "audio": "narrador.2c9a91a266"
       },
       "audio": "narrador.676d1d6dc8"
     },
@@ -753,17 +753,17 @@
         "gastronomia"
       ],
       "ejemplo": {
-        "es": "La salsa habanero es muy picante.",
-        "fr": "La sauce habanero est très piquante.",
+        "es": "La salsa de chile habanero es muy picante.",
+        "fr": "La sauce au piment habanero est très piquante.",
         "voz": "narrador",
-        "audio": "narrador.22c54f88f6"
+        "audio": "narrador.c7286f3c2d"
       },
       "audio": "narrador.203addd5cc"
     },
     {
       "id": "delicioso",
       "es": "delicioso",
-      "fr": "délicieux (en Espagne on dit aussi « rico »)",
+      "fr": "délicieux (on dit aussi « rico », en Espagne comme en Amérique)",
       "genero": "m",
       "clase": "adj",
       "femenino": "deliciosa",
@@ -996,7 +996,7 @@
         "voz": "narrador",
         "audio": "narrador.8e836e08b5"
       },
-      "pista": "À connaître : hacer (hago, haces, hace, hacemos, hacéis, hacen), ver (veo, ves, ve, vemos, veis, ven), conocer (conozco, conoces, conoce…). Seul « yo » change ; le reste suit la règle régulière. « Conocer » = connaître une personne ou un lieu (conozco Mérida) ; « saber » = savoir quelque chose (sé nadar). Autres verbes de la même famille que tu rencontreras : saber (sé), poner (pongo), salir (salgo). Attention à « ver » : veo, mais vemos (pas « vemos » avec accent) ; « veis » ne prend pas d'accent.",
+      "pista": "À connaître : hacer (hago, haces, hace, hacemos, hacéis, hacen), ver (veo, ves, ve, vemos, veis, ven), conocer (conozco, conoces, conoce…). Seul « yo » change ; le reste suit la règle régulière. « Conocer » = connaître une personne ou un lieu (conozco Mérida) ; « saber » = savoir quelque chose (sé nadar). Autres verbes de la même famille que tu rencontreras : saber (sé), poner (pongo), salir (salgo). Attention à l'orthographe de « ver » : ves, ve, vemos, veis, ven s'écrivent sans accent.",
       "tabla": {
         "encabezado": [
           "",
@@ -1040,10 +1040,10 @@
       },
       "ejemplos": [
         {
-          "es": "Yucatán es una región caliente y verde.",
+          "es": "Yucatán es una región cálida y verde.",
           "fr": "Le Yucatán est une région chaude et verte.",
           "voz": "itzel",
-          "audio": "itzel.584bd845e9",
+          "audio": "itzel.1504ffe1fc",
           "resaltar": [
             "es"
           ]
@@ -1083,7 +1083,7 @@
         "voz": "narrador",
         "audio": "narrador.2d52f654ee"
       },
-      "pista": "Un petit rappel qui réunit les unités 4 et 8. SER décrit comment est un lieu (es grande, es bonito, es caliente). ESTAR le situe (está en Yucatán, está cerca del mar). HAY dit ce qu'il contient (hay selva, hay cenotes, hay playas), toujours avec un, una, dos, muchos… et jamais avec l'article défini. Test rapide : ¿Cómo es? → es… ; ¿Dónde está? → está… ; ¿Qué hay? → hay…",
+      "pista": "Un petit rappel qui réunit les unités 4 et 8. SER décrit comment est un lieu (es grande, es bonito, es verde). Pour le climat, on dit « hace calor » ou « es una región cálida » (« caliente » s'emploie plutôt pour un objet : el café está caliente). ESTAR le situe (está en Yucatán, está cerca del mar). HAY dit ce qu'il contient (hay selva, hay cenotes, hay playas), toujours avec un, una, dos, muchos… et jamais avec l'article défini. Test rapide : ¿Cómo es? → es… ; ¿Dónde está? → está… ; ¿Qué hay? → hay…",
       "tabla": {
         "encabezado": [
           "Pregunta",
@@ -1159,7 +1159,7 @@
         "voz": "narrador",
         "audio": "narrador.fa7c49c262"
       },
-      "pista": "Ce n'est qu'une première découverte : retiens simplement de RECONNAÎTRE la forme. Le passé composé espagnol se forme comme en français : auxiliaire HABER (he, has, ha, hemos, habéis, han) + participe passé. Participe : -ar → -ADO (visitar → visitado), -er et -ir → -IDO (comer → comido, vivir → vivido). Deux irréguliers très courants : hacer → hecho (he hecho), ver → visto (he visto). Le participe ne s'accorde pas avec le sujet. Contrairement au français, on ne sépare jamais « he » du participe (pas de « he siempre visto »). Remarque importante : en Espagne, on emploie ce temps pour le passé récent (hoy he comido) ; au Mexique et dans toute l'Amérique latine, on préfère souvent un autre passé (« ¿Ya comiste? », « Hoy comí ») que tu apprendras plus tard.",
+      "pista": "Ce n'est qu'une première découverte : retiens simplement de RECONNAÎTRE la forme. Le passé composé espagnol se forme presque comme en français : auxiliaire + participe passé. Mais l'auxiliaire est TOUJOURS HABER (he, has, ha, hemos, habéis, han), même là où le français prend « être » : he ido = je suis allé. Participe : -ar → -ADO (visitar → visitado), -er et -ir → -IDO (comer → comido, vivir → vivido). Deux irréguliers très courants : hacer → hecho (he hecho), ver → visto (he visto). Le participe ne s'accorde pas avec le sujet. Contrairement au français, on ne sépare jamais « he » du participe (pas de « he siempre visto »). Remarque importante : en Espagne, on emploie ce temps pour le passé récent (hoy he comido) ; au Mexique et dans toute l'Amérique latine, on préfère souvent un autre passé (« ¿Ya comiste? », « Hoy comí ») que tu apprendras plus tard.",
       "tabla": {
         "encabezado": [
           "haber",
@@ -1184,7 +1184,11 @@
           ],
           [
             "ellos han",
-            "hecho · visto (irregulares)"
+            "visitado / comido / vivido"
+          ],
+          [
+            "irregulares",
+            "hecho (hacer) · visto (ver)"
           ]
         ]
       }
@@ -1248,10 +1252,10 @@
                     "audio": "narrador.95ab89f56b"
                   },
                   {
-                    "es": "Selva, cenotes y pirámides: aquí viven los mayas desde hace siglos.",
-                    "fr": "Forêt tropicale, cénotes et pyramides : ici vivent les Mayas depuis des siècles.",
+                    "es": "Selva, cenotes y pirámides: aquí viven los mayas desde hace miles de años.",
+                    "fr": "Forêt tropicale, cénotes et pyramides : ici vivent les Mayas depuis des milliers d’années.",
                     "voz": "narrador",
-                    "audio": "narrador.00fc05460c"
+                    "audio": "narrador.b14280bfb0"
                   }
                 ]
               }
@@ -1608,10 +1612,10 @@
       "titulo": "Selva y cenotes",
       "emoji": "🦩",
       "intro": {
-        "es": "Mira la selva: hay jaguares, flamencos, tortugas… y miles de cenotes.",
-        "fr": "Regarde la forêt tropicale : il y a des jaguars, des flamants, des tortues… et des milliers de cénotes.",
+        "es": "Mira: en Yucatán hay jaguares en la selva, flamencos en las lagunas, tortugas en el mar… ¡y miles de cenotes!",
+        "fr": "Regarde : au Yucatán, il y a des jaguars dans la forêt, des flamants roses dans les lagunes, des tortues dans la mer… et des milliers de cénotes !",
         "voz": "itzel",
-        "audio": "itzel.3042c94106"
+        "audio": "itzel.17fcae995d"
       },
       "pista": "La nature du Yucatán : forêt, mer, animaux et cénotes. Tu lis, tu écoutes et tu parles de ta nature à toi.",
       "stats": [
@@ -1805,10 +1809,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en ellos.",
-            "fr": "Au Yucatán, il n’y a pas de rivières en surface, mais il y a des milliers de cénotes. Un cénote est un puits naturel avec une eau très propre. Pour les Mayas, les cénotes sont des lieux sacrés. Aujourd’hui, tu peux y nager. (Les rivières du Yucatán coulent sous la terre, dans la roche calcaire.)",
+            "es": "En Yucatán no hay ríos en la superficie, pero hay miles de cenotes. Un cenote es un pozo natural con agua muy limpia. Para los mayas, los cenotes son lugares sagrados. Hoy puedes nadar en muchos cenotes.",
+            "fr": "Au Yucatán, il n’y a pas de rivières en surface, mais il y a des milliers de cénotes. Un cénote est un puits naturel avec une eau très propre. Pour les Mayas, les cénotes sont des lieux sacrés. Aujourd’hui, tu peux nager dans beaucoup de cénotes. (Les rivières du Yucatán coulent sous la terre, dans la roche calcaire.)",
             "voz": "itzel",
-            "audio": "itzel.c75086330f"
+            "audio": "itzel.438d806174"
           },
           "preguntas": [
             {
@@ -1960,17 +1964,17 @@
             },
             {
               "habla": {
-                "es": "En Francia hay selvas con jaguares.",
+                "es": "En París hay selvas con jaguares.",
                 "voz": "viajero",
-                "audio": "viajero.27d758bc03"
+                "audio": "viajero.efede89d28"
               },
-              "fr": "En France, il y a des forêts tropicales avec des jaguars.",
+              "fr": "À Paris, il y a des forêts tropicales avec des jaguars.",
               "correcta": false,
               "reaccion": {
-                "es": "Mmm… no creo. Los jaguares viven en América.",
-                "fr": "Mmm… je ne crois pas. Les jaguars vivent en Amérique.",
+                "es": "¿En París? Mmm… no creo. Los jaguares viven en la selva.",
+                "fr": "À Paris ? Mmm… je ne crois pas. Les jaguars vivent dans la forêt tropicale.",
                 "voz": "itzel",
-                "audio": "itzel.81570dfa09",
+                "audio": "itzel.7a9b42874b",
                 "emoji": "🤨"
               }
             },
@@ -2354,7 +2358,7 @@
           "respuesta": "pirámides",
           "opciones": [
             "pirámides",
-            "nevera",
+            "neveras",
             "bicicletas"
           ],
           "habla": {
@@ -2478,7 +2482,7 @@
           "patrones": [
             "quiero visitar {nombre}"
           ],
-          "foco": "Chichén Itzá : le « ch » se dit comme en français « tch » (tchi-TCHEN it-SA). Le dernier « á » porte l’accent : it-SÁ.",
+          "foco": "Chichén Itzá : le « ch » se dit « tch » (tchi-TCHEN it-SÁ), avec l’accent sur « chén » et sur « zá ». Le « z » se dit « s » au Mexique (et comme le « th » anglais en Espagne).",
           "hechizo": {
             "nombre": "Hechizo del viaje",
             "efecto": "Un mapa dorado se despliega ante ti"
@@ -2508,10 +2512,10 @@
       "titulo": "Maíz, cacao y chile",
       "emoji": "🌽",
       "intro": {
-        "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace mil años.",
-        "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a mille ans.",
+        "es": "¡Pasen a mi cocina! Hoy hacemos tortillas con maíz, como hace miles de años.",
+        "fr": "Entrez dans ma cuisine ! Aujourd’hui, on fait des tortillas avec du maïs, comme il y a des milliers d’années.",
         "voz": "chabela",
-        "audio": "chabela.9da5457cd3"
+        "audio": "chabela.5cca37194c"
       },
       "pista": "Les saveurs du Mexique : maïs, tortillas, cacao, piment, cochinita pibil. Tu lis, tu goûtes (en mots) et tu dis ce que TOI tu aimes manger.",
       "stats": [
@@ -2733,10 +2737,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "El cacao es una planta de México. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.",
-            "fr": "Le cacao est une plante du Mexique. Les Mayas et les Aztèques boivent du chocolat, mais leur chocolat n’est pas sucré : il contient du piment et il est un peu amer. Pour les Aztèques, les graines de cacao sont aussi de l’argent.",
+            "es": "El cacao es una planta de América. Los mayas y los aztecas beben chocolate, pero su chocolate no es dulce: lleva chile y es un poco amargo. Para los aztecas, los granos de cacao también son dinero.",
+            "fr": "Le cacao est une plante d’Amérique. Les Mayas et les Aztèques boivent du chocolat, mais leur chocolat n’est pas sucré : il contient du piment et il est un peu amer. Pour les Aztèques, les graines de cacao sont aussi de l’argent.",
             "voz": "chabela",
-            "audio": "chabela.8d8199923f"
+            "audio": "chabela.db10e6d6ca"
           },
           "preguntas": [
             {
@@ -2888,18 +2892,18 @@
             },
             {
               "habla": {
-                "es": "Sí, gracias, pero solo un poquito.",
+                "es": "Sí, gracias. Soy muy picante.",
                 "voz": "viajero",
-                "audio": "viajero.4aeafe528c"
+                "audio": "viajero.97a9ba0a0c"
               },
-              "fr": "Oui, merci, mais juste un petit peu.",
-              "correcta": true,
+              "fr": "Oui, merci. Je suis très piquant.",
+              "correcta": false,
               "reaccion": {
-                "es": "¡Muy bien! Un poquito de salsa, y mucha tortilla.",
-                "fr": "Très bien ! Un tout petit peu de sauce, et beaucoup de tortilla.",
+                "es": "¿Tú eres picante? ¡Ja, ja! Querrás decir: «me gusta el picante».",
+                "fr": "Toi, tu es piquant ? Ha, ha ! Tu veux dire : « me gusta el picante » (j’aime le piquant).",
                 "voz": "chabela",
-                "audio": "chabela.935f7b7c36",
-                "emoji": "😄"
+                "audio": "chabela.399b59978f",
+                "emoji": "🤨"
               }
             },
             {
@@ -2991,11 +2995,11 @@
             "audio": "narrador.214c0f0f93"
           },
           "habla": {
-            "es": "La cochinita pibil es muy deliciosa.",
+            "es": "La cochinita pibil es deliciosa.",
             "voz": "chabela",
-            "audio": "chabela.746e69f9b0"
+            "audio": "chabela.f2367a76d0"
           },
-          "respuesta": "La cochinita pibil es muy deliciosa."
+          "respuesta": "La cochinita pibil es deliciosa."
         }
       ]
     },
@@ -3424,7 +3428,7 @@
           "opciones": [
             "probado",
             "probar",
-            "probo"
+            "pruebo"
           ],
           "habla": {
             "es": "¿Has probado la cochinita pibil?",
@@ -3497,7 +3501,7 @@
           },
           "texto": {
             "es": "Hoy hemos visitado Chichén Itzá. Hemos visto la pirámide y hemos nadado en un cenote. Álex ha probado un taco muy picante. ¡Ha bebido mucha agua después!",
-            "fr": "Aujourd’hui, nous avons visité Chichén Itzá. Nous avons vu la pyramide et nous avons nagé dans un cénote. Álex a goûté un taco très piquant. Il a bu beaucoup d’eau ensuite ! (« bebido » vient de « beber » ; ce sont des phrases à comprendre, pas à produire.)",
+            "fr": "Aujourd’hui, nous avons visité Chichén Itzá. Nous avons vu la pyramide et nous avons nagé dans un cénote. Álex a goûté un taco très piquant. Il a bu beaucoup d’eau ensuite ! (« bebido » vient de « beber » ; ce sont des phrases à comprendre, pas à produire. Itzel parle ici comme en Espagne pour t’aider : au Mexique, on dirait plutôt « hoy visitamos », un autre passé que tu apprendras plus tard.)",
             "voz": "itzel",
             "audio": "itzel.29dedb19d2"
           },
@@ -3661,18 +3665,18 @@
             },
             {
               "habla": {
-                "es": "No, no he probado la cochinita pibil.",
+                "es": "Sí, he probar la cochinita pibil.",
                 "voz": "viajero",
-                "audio": "viajero.323a0af93c"
+                "audio": "viajero.ebf0f8c3af"
               },
-              "fr": "Non, je n’ai pas goûté la cochinita pibil.",
-              "correcta": true,
+              "fr": "Oui, j’ai goûter la cochinita pibil.",
+              "correcta": false,
               "reaccion": {
-                "es": "No hay problema. ¡Hoy la vas a probar!",
-                "fr": "Pas de problème. Aujourd’hui, tu vas la goûter !",
+                "es": "Casi… Se dice «he probado»: haber + participio.",
+                "fr": "Presque… On dit « he probado » : haber + participe.",
                 "voz": "itzel",
-                "audio": "itzel.9065d53409",
-                "emoji": "😄"
+                "audio": "itzel.7f6ba2dc9a",
+                "emoji": "🤨"
               }
             },
             {
@@ -3819,10 +3823,10 @@
                 "vista": "À l’équinoxe de printemps ou d’automne, une ombre en dents de scie descend l’escalier nord de la pyramide et rejoint la tête de serpent en pierre au pied de l’escalier.",
                 "lineas": [
                   {
-                    "es": "En primavera y en otoño, la sombra de una serpiente baja por la pirámide.",
-                    "fr": "Au printemps et en automne, l’ombre d’un serpent descend le long de la pyramide.",
+                    "es": "En primavera y en otoño, la sombra de una serpiente baja por la pirámide: es Kukulcán.",
+                    "fr": "Au printemps et en automne, l’ombre d’un serpent descend le long de la pyramide : c’est Kukulcán, le serpent à plumes.",
                     "voz": "narrador",
-                    "audio": "narrador.3c65aaea0a"
+                    "audio": "narrador.808fc64441"
                   }
                 ]
               },
@@ -3921,10 +3925,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, la sombra del sol dibuja una serpiente en la escalera de la pirámide.",
-            "fr": "Chichén Itzá est une ancienne ville maya au Yucatán. Sa pyramide la plus célèbre s’appelle El Castillo ou pyramide de Kukulcán. Kukulcán est un serpent à plumes, comme le Quetzal. Au printemps et en automne, l’ombre du soleil dessine un serpent sur l’escalier de la pyramide. (Chichén Itzá est inscrite au patrimoine mondial de l’UNESCO depuis 1988 ; son nom vient du maya « chi’ chʼen », la bouche du puits.)",
+            "es": "Chichén Itzá es una antigua ciudad maya en Yucatán. Su pirámide más famosa se llama El Castillo o pirámide de Kukulcán. Kukulcán es una serpiente con plumas, como el Quetzal. En primavera y en otoño, el sol y la sombra dibujan una serpiente en la escalera de la pirámide.",
+            "fr": "Chichén Itzá est une ancienne ville maya au Yucatán. Sa pyramide la plus célèbre s’appelle El Castillo ou pyramide de Kukulcán. Kukulcán est un serpent à plumes, comme le Quetzal. Au printemps et en automne, le soleil et l’ombre dessinent un serpent sur l’escalier de la pyramide. (Chichén Itzá est inscrite au patrimoine mondial de l’UNESCO depuis 1988 ; son nom vient du maya : « à la bouche du puits des Itzá ».)",
             "voz": "chan",
-            "audio": "chan.b4c3749267"
+            "audio": "chan.d5773f27c2"
           },
           "preguntas": [
             {
@@ -4098,10 +4102,10 @@
           },
           "pnj": "chan",
           "replica": {
-            "es": "Yucatán es una región caliente. ¿Cómo es tu región?",
-            "fr": "Le Yucatán est une région chaude. Comment est ta région ?",
+            "es": "En Yucatán hace mucho calor. ¿Cómo es tu región?",
+            "fr": "Au Yucatán, il fait très chaud. Comment est ta région ?",
             "voz": "chan",
-            "audio": "chan.23c45f52fc"
+            "audio": "chan.7360836ee8"
           },
           "opciones": [
             {
@@ -4122,17 +4126,17 @@
             },
             {
               "habla": {
-                "es": "Mi región está caliente y verde.",
+                "es": "Mi región está verde y grande.",
                 "voz": "viajero",
-                "audio": "viajero.d1ea29075b"
+                "audio": "viajero.518b9fdde4"
               },
-              "fr": "Ma région est (estar) chaude et verte.",
+              "fr": "Ma région est (estar) verte et grande.",
               "correcta": false,
               "reaccion": {
-                "es": "Se dice «es verde»: la región es verde, no «está».",
-                "fr": "On dit « es verde » : la région est verte (c’est une caractéristique), pas « está ».",
+                "es": "Para decir cómo es, usamos «es»: mi región es verde y grande.",
+                "fr": "Pour dire comment elle est, on utilise « es » : mi región es verde y grande (ce sont des caractéristiques).",
                 "voz": "chan",
-                "audio": "chan.19b37e39bc",
+                "audio": "chan.0c1b46d7c4",
                 "emoji": "🤨"
               }
             },
@@ -4828,10 +4832,10 @@
                 ],
                 "lineas": [
                   {
-                    "es": "Nueve plumas. ¡Una más y vuelvo a volar con todo mi cuerpo!",
-                    "fr": "Neuf plumes. Une de plus et je vole de nouveau avec tout mon corps !",
+                    "es": "Nueve plumas. ¡Con una más, vuelvo a ser el gran Quetzal!",
+                    "fr": "Neuf plumes. Avec une de plus, je redeviens le grand Quetzal !",
                     "voz": "quetzal",
-                    "audio": "quetzal.b9d73b43cd"
+                    "audio": "quetzal.35797cc258"
                   }
                 ]
               },

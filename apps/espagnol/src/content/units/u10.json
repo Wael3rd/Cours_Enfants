@@ -495,10 +495,10 @@
         "cultura"
       ],
       "ejemplo": {
-        "es": "La quinua es un cereal de los Andes.",
-        "fr": "Le quinoa est une céréale des Andes.",
+        "es": "La quinua es un alimento de los Andes.",
+        "fr": "Le quinoa est un aliment des Andes (une petite graine, cultivée depuis des milliers d’années).",
         "voz": "narrador",
-        "audio": "narrador.f5d3cd91b3"
+        "audio": "narrador.0df9011fac"
       },
       "audio": "narrador.d65c4e7aef"
     },
@@ -923,7 +923,7 @@
         "voz": "narrador",
         "audio": "narrador.e7f3ae356b"
       },
-      "pista": "Ces quatre petits mots rendent tes phrases beaucoup plus riches. PERO oppose deux idées (es pequeño, pero fuerte). ADEMÁS ajoute (es pequeño y además es rápido) ; il porte un accent sur le dernier a. PORQUE donne la cause et répond à « ¿por qué? » : — ¿Por qué estudias español? — Porque me gusta. Attention : « por qué » en deux mots avec accent sur « qué » sert à poser la question ; « porque » en un mot, sans accent, sert à répondre. ENTONCES donne la suite logique (llueve, entonces cojo el paraguas) et sert aussi à enchaîner un récit (entonces, el héroe sale).",
+      "pista": "Ces quatre petits mots rendent tes phrases beaucoup plus riches. PERO oppose deux idées (es pequeño, pero fuerte). ADEMÁS ajoute (es pequeño y además es rápido) ; il porte un accent sur le dernier a. PORQUE donne la cause et répond à « ¿por qué? » : — ¿Por qué estudias español? — Porque me gusta. Attention : « por qué » en deux mots avec accent sur « qué » sert à poser la question ; « porque » en un mot, sans accent, sert à répondre. ENTONCES donne la suite logique (llueve, entonces me quedo en casa) et sert aussi à enchaîner un récit (entonces, el héroe sale).",
       "tabla": {
         "encabezado": [
           "Conector",
@@ -1044,10 +1044,10 @@
       },
       "ejemplos": [
         {
-          "es": "En Perú se habla español y quechua.",
-          "fr": "Au Pérou, on parle espagnol et quechua.",
+          "es": "En Perú se habla español.",
+          "fr": "Au Pérou, on parle espagnol.",
           "voz": "killa",
-          "audio": "killa.aa72402408",
+          "audio": "killa.280a287326",
           "resaltar": [
             "se habla"
           ]
@@ -1062,10 +1062,10 @@
           ]
         },
         {
-          "es": "El español se habla en veinte países.",
-          "fr": "L’espagnol se parle dans vingt pays.",
+          "es": "En Argentina se habla español.",
+          "fr": "En Argentine, on parle espagnol.",
           "voz": "marina",
-          "audio": "marina.929fa1286d",
+          "audio": "marina.c33cb40296",
           "resaltar": [
             "se habla"
           ]
@@ -1086,7 +1086,7 @@
         "voz": "narrador",
         "audio": "narrador.19604af5ba"
       },
-      "pista": "Le petit mot SE + verbe à la 3e personne permet de parler de ce que « on » fait en général, sans dire qui : se habla español (on parle espagnol / l'espagnol se parle). Le verbe s'accorde avec la chose dont on parle : se HABLA español (une langue → singulier), se HABLAN español y quechua (deux langues → pluriel). C'est la même construction pour d'autres phrases utiles : « se dice » (on dit), « se escribe » (ça s'écrit), « se come » (on mange). Ne confonds pas avec « me llamo / se llama », où « se » est le pronom de « llamarse ».",
+      "pista": "Le petit mot SE + verbe à la 3e personne permet de parler de ce que « on » fait en général, sans dire qui : se habla español (on parle espagnol / l'espagnol se parle). Le verbe s'accorde avec la chose dont on parle : se HABLA español (une langue → singulier), se HABLAN muchas lenguas (plusieurs langues → pluriel). Avec deux langues reliées par « y », on entend souvent le singulier (« en Perú se habla español y quechua ») : c'est correct aussi. C'est la même construction pour d'autres phrases utiles : « se dice » (on dit), « se escribe » (ça s'écrit), « se come » (on mange). Ne confonds pas avec « me llamo / se llama », où « se » est le pronom de « llamarse ».",
       "tabla": {
         "encabezado": [
           "País",
@@ -1095,7 +1095,7 @@
         "filas": [
           [
             "Perú",
-            "español y quechua"
+            "español, quechua, aimara…"
           ],
           [
             "México",
@@ -1325,7 +1325,7 @@
                   },
                   {
                     "es": "¡Hola! Me llamo Killa. En quechua, «killa» significa «luna». ¡Bienvenidos al Cusco!",
-                    "fr": "Salut ! Je m’appelle Killa. En quechua, « killa » veut dire « lune ». Bienvenue à Cusco ! (« ustedes » est la forme de politesse au pluriel en Amérique latine.)",
+                    "fr": "Salut ! Je m’appelle Killa. En quechua, « killa » veut dire « lune ». Bienvenue à Cusco ! (Les habitants disent souvent « el Cusco », avec l’article.)",
                     "voz": "killa",
                     "audio": "killa.317dfe53f7"
                   }
@@ -1334,7 +1334,7 @@
               {
                 "n": 2,
                 "duracion": 7,
-                "vista": "Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus.",
+                "vista": "Sur les marches d’une église, Don Huamán, un vieux conteur au bonnet tricoté, entouré d’enfants. Il ouvre la bouche pour raconter, mais aucun son ne sort ; les enfants attendent, déçus. Il finit par murmurer, d’une voix presque éteinte.",
                 "camara": "plans rapprochés sur les enfants et sur le conteur",
                 "personajes": [
                   "killa",
@@ -1510,10 +1510,10 @@
               "fr": "Je m’appelle Álex et je suis de Paris.",
               "correcta": true,
               "reaccion": {
-                "es": "¡Qué chévere! Vienen de muy lejos. ¡Bienvenidos!",
-                "fr": "Trop bien ! (« chévere » = super, courant aussi au Pérou). Vous venez de très loin. Bienvenue !",
+                "es": "¡Qué bacán! Vienen de muy lejos. ¡Bienvenidos!",
+                "fr": "Trop bien ! (« bacán » = super, très courant au Pérou). Vous venez de très loin. Bienvenue !",
                 "voz": "killa",
-                "audio": "killa.ab1bf796ae",
+                "audio": "killa.fdc243cbdc",
                 "emoji": "😄"
               }
             },
@@ -1815,10 +1815,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "El condor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.",
+            "es": "El cóndor, el puma y la serpiente son tres animales sagrados para los incas. El cóndor vive en el cielo, el puma vive en la tierra y la serpiente vive bajo la tierra. Para los incas, el mundo tiene tres partes.",
             "fr": "Le condor, le puma et le serpent sont trois animaux sacrés pour les Incas. Le condor vit dans le ciel, le puma vit sur la terre et le serpent vit sous la terre. Pour les Incas, le monde a trois parties. (Les trois mondes : Hanan Pacha, le ciel ; Kay Pacha, la terre ; Ukhu Pacha, le monde d’en bas.)",
             "voz": "huaman",
-            "audio": "huaman.f228c5d135"
+            "audio": "huaman.360b28dfd2"
           },
           "preguntas": [
             {
@@ -1946,10 +1946,10 @@
           },
           "pnj": "huaman",
           "replica": {
-            "es": "¿Quién es tu héroe o tu heroína favorito? ¿Por qué?",
+            "es": "¿Quién es tu héroe favorito o tu heroína favorita? ¿Por qué?",
             "fr": "Qui est ton héros ou ton héroïne préféré(e) ? Pourquoi ?",
             "voz": "huaman",
-            "audio": "huaman.c3c0c735d9"
+            "audio": "huaman.6c31fa1776"
           },
           "opciones": [
             {
@@ -2012,13 +2012,13 @@
             "audio": "narrador.6a4b81accb"
           },
           "objetivo": {
-            "es": "Mi cuento favorito es la leyenda.",
-            "fr": "Mon conte préféré est la légende. (dis le tien : el Principito, Caperucita Roja…)",
+            "es": "Mi cuento favorito es Caperucita Roja.",
+            "fr": "Mon conte préféré est Le Petit Chaperon rouge. (dis le tien : el Principito, Harry Potter…)",
             "voz": "viajero",
-            "audio": "viajero.c5758a9e57"
+            "audio": "viajero.ae16d92435"
           },
           "aceptadas": [
-            "mi cuento favorito es la leyenda"
+            "mi cuento favorito es caperucita roja"
           ],
           "patrones": [
             "mi cuento favorito es {nombre}"
@@ -2793,10 +2793,10 @@
       "titulo": "Machu Picchu",
       "emoji": "🏔️",
       "intro": {
-        "es": "Estamos en los Andes, a más de tres mil metros. Aquí el aire es muy fino. ¡Vamos despacio!",
-        "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici l’air est très rare. Allons doucement !",
+        "es": "Estamos en los Andes, a más de tres mil metros. Aquí hay poco oxígeno. ¡Vamos despacio!",
+        "fr": "Nous sommes dans les Andes, à plus de trois mille mètres. Ici, il y a peu d’oxygène. Allons doucement !",
         "voz": "huaman",
-        "audio": "huaman.b63ca5ed4c"
+        "audio": "huaman.cb8cab3326"
       },
       "pista": "Lecture sur Machu Picchu et sur Cusco, découverte des grands nombres (mil, quinientos, millón) à reconnaître, puis tu dis quel endroit TOI tu aimerais visiter.",
       "stats": [
@@ -3013,7 +3013,7 @@
           },
           "texto": {
             "es": "Cusco es la antigua capital de los incas. Está a más de tres mil metros de altura. Cada 24 de junio, la gente celebra el Inti Raymi, la fiesta del sol. Hay música, bailes y trajes de colores. ¡Es una fiesta muy bonita!",
-            "fr": "Cusco est l’ancienne capitale des Incas. Elle est à plus de trois mille mètres d’altitude. Chaque 24 juin, les gens célèbrent l’Inti Raymi, la fête du soleil. Il y a de la musique, des danses et des costumes colorés. C’est une très belle fête ! (24 juin : solstice d’hiver dans l’hémisphère sud, le jour le plus court de l’année.)",
+            "fr": "Cusco est l’ancienne capitale des Incas. Elle est à plus de trois mille mètres d’altitude. Chaque 24 juin, les gens célèbrent l’Inti Raymi, la fête du soleil. Il y a de la musique, des danses et des costumes colorés. C’est une très belle fête ! (Fin juin, c’est le solstice d’hiver dans l’hémisphère sud : les jours les plus courts de l’année. Les Incas fêtaient le retour du soleil.)",
             "voz": "killa",
             "audio": "killa.314f6bda2d"
           },
@@ -3172,10 +3172,10 @@
           },
           "pnj": "huaman",
           "replica": {
-            "es": "Estamos muy altos. ¿Cómo estás? ¿Estás cansado?",
+            "es": "Estamos a mucha altura. ¿Cómo estás? ¿Estás cansado?",
             "fr": "Nous sommes très haut. Comment vas-tu ? Tu es fatigué ?",
             "voz": "huaman",
-            "audio": "huaman.62c86761aa"
+            "audio": "huaman.d32651876a"
           },
           "opciones": [
             {
@@ -3187,10 +3187,10 @@
               "fr": "Je suis un peu fatigué, mais content.",
               "correcta": true,
               "reaccion": {
-                "es": "¡Perfecto! Con un poquito de té de coca se pasa todo.",
-                "fr": "Parfait ! Avec un peu de thé de coca, tout passe. (Dans les Andes, on boit du « mate de coca » contre le mal des montagnes, le « soroche ».)",
+                "es": "¡Perfecto! En la altura hay que caminar despacio y tomar mucha agua.",
+                "fr": "Parfait ! En altitude, il faut marcher lentement et boire beaucoup d’eau. (Au Pérou, le mal des montagnes s’appelle le « soroche ».)",
                 "voz": "huaman",
-                "audio": "huaman.8c5a00aab5",
+                "audio": "huaman.3a231c2178",
                 "emoji": "😄"
               }
             },
@@ -3249,7 +3249,7 @@
           "patrones": [
             "me gustaría visitar {nombre}"
           ],
-          "foco": "Machu Picchu : le « ch » se dit « tch » (MA-tchou PIK-tchou). Le « cc » de « Picchu » n’existe pas en espagnol : c’est un « cch », donc « tch ».",
+          "foco": "Machu Picchu : le « ch » se dit « tch » (MA-tchou PIK-tchou). Le « cch » de « Picchu » (mot quechua) se dit « k-tch » : PIK-tchou.",
           "hechizo": {
             "nombre": "Hechizo del viaje",
             "efecto": "Un camino dorado aparece entre las nubes"
@@ -3316,19 +3316,19 @@
             "voz": "narrador",
             "audio": "narrador.c8dfcbb8f1"
           },
-          "frase": "En Perú ___ español y quechua.",
+          "frase": "En Perú ___ español.",
           "respuesta": "se habla",
           "opciones": [
             "se habla",
             "se hablan",
-            "hablan"
+            "hablo"
           ],
           "habla": {
-            "es": "En Perú se habla español y quechua.",
+            "es": "En Perú se habla español.",
             "voz": "killa",
-            "audio": "killa.aa72402408"
+            "audio": "killa.280a287326"
           },
-          "fr": "Au Pérou, on parle espagnol et quechua."
+          "fr": "Au Pérou, on parle espagnol. (une langue → se habla)"
         },
         {
           "id": "u10-q06-s05",
@@ -3447,10 +3447,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡También en francés decimos lama, puma, condor y quinoa!",
+            "es": "En mi casa hablamos quechua, pero en el colegio hablamos español. El quechua es una lengua de los Andes y millones de personas lo hablan. Muchas palabras españolas vienen del quechua: papa, llama, puma, cóndor, quinua. ¡Y en francés también se dice lama, puma, condor y quinoa!",
             "fr": "À la maison, nous parlons quechua, mais au collège nous parlons espagnol. Le quechua est une langue des Andes et des millions de personnes le parlent. Beaucoup de mots espagnols viennent du quechua : pomme de terre, lama, puma, condor, quinoa. En français aussi, on dit lama, puma, condor et quinoa ! (« papa » = pomme de terre en Amérique latine ; en Espagne, on dit « patata ».)",
             "voz": "killa",
-            "audio": "killa.10c0ec1420"
+            "audio": "killa.c4844b7799"
           },
           "preguntas": [
             {
@@ -3477,18 +3477,18 @@
             },
             {
               "pregunta": {
-                "es": "¿Qué significa «papa» en América?",
-                "fr": "Que veut dire « papa » en Amérique ?",
+                "es": "En España, ¿cómo se dice «papa»?",
+                "fr": "En Espagne, comment dit-on « papa » (pomme de terre) ?",
                 "voz": "narrador",
-                "audio": "narrador.125076bc62"
+                "audio": "narrador.087eb62912"
               },
               "opciones": [
                 {
-                  "texto": "Pomme de terre.",
+                  "texto": "Patata.",
                   "correcta": true
                 },
                 {
-                  "texto": "Pain.",
+                  "texto": "Pan.",
                   "correcta": false
                 },
                 {
@@ -3673,7 +3673,7 @@
           "patrones": [
             "hablo {nombre}"
           ],
-          "foco": "Le « ñ » de « español » : comme « gn » dans « montagne ». Le « ll » de « llama » : comme un « y » (YA-ma).",
+          "foco": "Le « ñ » de « español » : comme « gn » dans « montagne » (es-pa-ÑOL). Et « francés » : accent sur la dernière syllabe (fran-CÉS).",
           "hechizo": {
             "nombre": "Hechizo de las lenguas",
             "efecto": "Muchas lenguas bailan alrededor de tu cabeza"
@@ -3859,10 +3859,10 @@
             "audio": "narrador.d92741ae05"
           },
           "afirmacion": {
-            "es": "La papa es de origen quechua.",
-            "fr": "Le mot « papa » vient du quechua. (« papa » = pomme de terre, et c’est un aliment originaire des Andes.)",
+            "es": "La palabra «papa» viene del quechua.",
+            "fr": "Le mot « papa » vient du quechua. (« papa » = pomme de terre, un aliment originaire des Andes.)",
             "voz": "narrador",
-            "audio": "narrador.084b961350"
+            "audio": "narrador.403c4b9298"
           },
           "correcta": true
         },
@@ -3876,10 +3876,10 @@
             "audio": "narrador.ac777068b4"
           },
           "texto": {
-            "es": "En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae, un quetzal vuela hasta él, y desde ese día su pecho es rojo. Por eso, el quetzal es un símbolo de libertad.",
-            "fr": "Au Guatemala, le quetzal est l’oiseau national et aussi le nom de la monnaie. Il y a une légende : Tecún Umán, un héros maya, est très courageux et défend son peuple. Quand il tombe, un quetzal vole jusqu’à lui, et depuis ce jour sa poitrine est rouge. C’est pourquoi le quetzal est un symbole de liberté. (Tecún Umán est un chef k’iche’ du XVIe siècle ; l’histoire de l’oiseau est une légende.)",
+            "es": "En Guatemala, el quetzal es el pájaro nacional y también el nombre de la moneda. Hay una leyenda: Tecún Umán, un héroe maya, es muy valiente y defiende a su pueblo. Cuando cae en la batalla, un quetzal vuela hasta él. Según la leyenda, desde ese día el pecho del quetzal es rojo. Hoy el quetzal es un símbolo de libertad.",
+            "fr": "Au Guatemala, le quetzal est l’oiseau national et aussi le nom de la monnaie. Il y a une légende : Tecún Umán, un héros maya, est très courageux et défend son peuple. Quand il tombe au combat, un quetzal vole jusqu’à lui. Selon la légende, depuis ce jour, la poitrine du quetzal est rouge. Aujourd’hui, le quetzal est un symbole de liberté. (Tecún Umán serait un chef maya k’iche’ mort en 1524 en combattant les conquistadors espagnols ; on sait très peu de choses sûres sur lui, et l’histoire de l’oiseau est une légende.)",
             "voz": "paulina",
-            "audio": "paulina.630e0c076c"
+            "audio": "paulina.4f15dfb2b6"
           },
           "preguntas": [
             {
@@ -4015,18 +4015,18 @@
             },
             {
               "habla": {
-                "es": "Dibujo una pizza voladora.",
+                "es": "Dibuja mi casa.",
                 "voz": "viajero",
-                "audio": "viajero.1cbf162b4c"
+                "audio": "viajero.02d3460f80"
               },
-              "fr": "Je dessine une pizza volante.",
-              "correcta": true,
+              "fr": "Il dessine ma maison.",
+              "correcta": false,
               "reaccion": {
-                "es": "¡Qué divertido! En un tejido cabe todo.",
-                "fr": "Comme c’est amusant ! Dans un tissage, tout a sa place.",
+                "es": "¿Dibuja? Con «yo» se dice «dibujo»: yo dibujo.",
+                "fr": "Dibuja ? Avec « yo », on dit « dibujo » : yo dibujo (je dessine).",
                 "voz": "paulina",
-                "audio": "paulina.a7567ce564",
-                "emoji": "😄"
+                "audio": "paulina.3ee78500eb",
+                "emoji": "🤨"
               }
             },
             {
@@ -4417,29 +4417,6 @@
         },
         {
           "id": "u10-q08-s05",
-          "tipo": "fill_blank",
-          "consigna": {
-            "es": "Completa la frase.",
-            "fr": "Complète la phrase.",
-            "voz": "narrador",
-            "audio": "narrador.c8dfcbb8f1"
-          },
-          "frase": "Quiero volar, ___ no tengo plumas.",
-          "respuesta": "pero",
-          "opciones": [
-            "pero",
-            "además",
-            "porque"
-          ],
-          "habla": {
-            "es": "Quiero volar, pero no tengo plumas.",
-            "voz": "quetzal",
-            "audio": "quetzal.b88692134e"
-          },
-          "fr": "Je veux voler, mais je n’ai pas de plumes."
-        },
-        {
-          "id": "u10-q08-s06",
           "tipo": "listen_choose",
           "consigna": {
             "es": "Escucha y elige.",
@@ -4448,28 +4425,28 @@
             "audio": "narrador.fd721521ac"
           },
           "habla": {
-            "es": "En Perú se habla español y quechua.",
+            "es": "Killa habla quechua en casa y español en el colegio.",
             "voz": "sombra",
-            "audio": "sombra.aa72402408"
+            "audio": "sombra.276089b8ba"
           },
           "modo": "texto",
           "opciones": [
             {
-              "texto": "En Perú hay dos lenguas.",
+              "texto": "Killa habla dos lenguas.",
               "correcta": true
             },
             {
-              "texto": "En Perú solo se habla inglés.",
+              "texto": "Killa solo habla inglés.",
               "correcta": false
             },
             {
-              "texto": "En Perú no hay idiomas.",
+              "texto": "Killa no habla español.",
               "correcta": false
             }
           ]
         },
         {
-          "id": "u10-q08-s07",
+          "id": "u10-q08-s06",
           "tipo": "match_image",
           "consigna": {
             "es": "Une cada palabra con su imagen.",
@@ -4499,7 +4476,7 @@
           ]
         },
         {
-          "id": "u10-q08-s08",
+          "id": "u10-q08-s07",
           "tipo": "fill_blank",
           "consigna": {
             "es": "Completa la frase.",
@@ -4522,7 +4499,7 @@
           "fr": "Machu Picchu est dans les montagnes du Pérou."
         },
         {
-          "id": "u10-q08-s09",
+          "id": "u10-q08-s08",
           "tipo": "fill_blank",
           "consigna": {
             "es": "Completa la frase.",
@@ -4545,7 +4522,7 @@
           "fr": "Bogotá est plus grande que Salamanque."
         },
         {
-          "id": "u10-q08-s10",
+          "id": "u10-q08-s09",
           "tipo": "conjugar",
           "consigna": {
             "es": "Forja la palabra correcta.",
@@ -4571,7 +4548,7 @@
           "fr": "Nous, nous allons…"
         },
         {
-          "id": "u10-q08-s11",
+          "id": "u10-q08-s10",
           "tipo": "reorder_words",
           "consigna": {
             "es": "Ordena las palabras.",
@@ -4599,7 +4576,7 @@
           "fr": "D’abord je cherche le chemin et ensuite je monte au sommet."
         },
         {
-          "id": "u10-q08-s12",
+          "id": "u10-q08-s11",
           "tipo": "dialogue_choice",
           "consigna": {
             "es": "Responde.",
@@ -4625,7 +4602,7 @@
               "correcta": true,
               "reaccion": {
                 "es": "Amigos… Yo no tengo ninguno. Estoy sola.",
-                "fr": "Des amis… Moi, je n’en ai aucun. Je suis seule. (« sola » : elle est une femme, féminin de « solo »)",
+                "fr": "Des amis… Moi, je n’en ai aucun. Je suis seule. (« sola » au féminin, car on dit « la Sombra »)",
                 "voz": "sombra",
                 "audio": "sombra.b902c36efc",
                 "emoji": "😄"
@@ -4666,7 +4643,7 @@
           ]
         },
         {
-          "id": "u10-q08-s13",
+          "id": "u10-q08-s12",
           "tipo": "read_answer",
           "consigna": {
             "es": "Lee y contesta.",
@@ -4706,7 +4683,7 @@
             {
               "pregunta": {
                 "es": "¿Por qué nadie habla con ella?",
-                "fr": "Pourquoi personne ne lui parle-t-elle ?",
+                "fr": "Pourquoi personne ne lui parle ?",
                 "voz": "narrador",
                 "audio": "narrador.ae998e07a3"
               },
@@ -4750,7 +4727,7 @@
           ]
         },
         {
-          "id": "u10-q08-s14",
+          "id": "u10-q08-s13",
           "tipo": "speak",
           "consigna": {
             "es": "Escucha y repite el hechizo con tu nombre.",
@@ -4776,18 +4753,18 @@
           }
         },
         {
-          "id": "u10-q08-s15",
+          "id": "u10-q08-s14",
           "tipo": "cinematic_ref",
-          "cinematica": "u10-finale",
+          "cinematica": "u10-finale-sombra",
           "escena": {
-            "id": "u10-finale",
+            "id": "u10-finale-sombra",
             "tipo": "pluma",
-            "titulo": "Décima pluma · El final de la leyenda",
-            "duracion": 13,
+            "titulo": "El eco de la Sombra",
+            "duracion": 6,
             "planos": [
               {
                 "n": 1,
-                "duracion": 3,
+                "duracion": 4,
                 "vista": "Au sommet de Machu Picchu, à l’aube, une mer de nuages. La Sombra, toute petite, face à Álex. Elle n’a plus de voix menaçante : seulement une voix très fragile.",
                 "camara": "plan serré sur la Sombra, puis plan large",
                 "personajes": [
@@ -4811,23 +4788,36 @@
               },
               {
                 "n": 2,
-                "duracion": 3,
+                "duracion": 2,
                 "vista": "La Sombra se dissout en lumière dorée. Sa voix devient un écho qui traverse la vallée : le premier mot du voyage, « hola », renvoyé par les montagnes.",
                 "personajes": [
                   "sombra"
                 ],
                 "lineas": [
                   {
-                    "es": "Gracias… hola… hola…",
-                    "fr": "Merci… salut… salut… (l’écho répète « hola », le premier mot que tu as appris)",
+                    "es": "Gracias… hola…",
+                    "fr": "Merci… salut… (l’écho répète « hola », le premier mot que tu as appris)",
                     "voz": "sombra",
-                    "audio": "sombra.62ab88932a"
+                    "audio": "sombra.76c06e70be"
                   }
                 ],
                 "musica": "thème du début du voyage, repris à la flûte andine"
-              },
+              }
+            ]
+          }
+        },
+        {
+          "id": "u10-q08-s15",
+          "tipo": "cinematic_ref",
+          "cinematica": "u10-finale",
+          "escena": {
+            "id": "u10-finale",
+            "tipo": "pluma",
+            "titulo": "Décima pluma · El final de la leyenda",
+            "duracion": 7,
+            "planos": [
               {
-                "n": 3,
+                "n": 1,
                 "duracion": 4,
                 "vista": "La dixième plume verte tombe dans la main d’Álex, qui la pose sur le Quetzal. Il déploie une longue queue éclatante : il est entier. Il s’envole au-dessus des nuages, la vallée entière ouverte sous lui.",
                 "camara": "plan montant avec le Quetzal, vol libre",
@@ -4846,7 +4836,7 @@
                 ]
               },
               {
-                "n": 4,
+                "n": 2,
                 "duracion": 3,
                 "vista": "Sur le sommet, Don Ignacio apparaît en hologramme, ému, tandis que Marina et Álex regardent le Quetzal disparaître dans la lumière. Carton final : « La leyenda del Quetzal · Fin ».",
                 "personajes": [
@@ -4863,10 +4853,10 @@
                     "audio": "ignacio.c8c6531b45"
                   },
                   {
-                    "es": "En tu sombrero, Don Ignacio.",
+                    "es": "Encima de tu sombrero, Don Ignacio.",
                     "fr": "Sur ton chapeau, Don Ignacio.",
                     "voz": "marina",
-                    "audio": "marina.51d44cc4b6"
+                    "audio": "marina.7be0883ed5"
                   }
                 ],
                 "musica": "thème final, tous les instruments"
