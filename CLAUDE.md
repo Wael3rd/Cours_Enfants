@@ -18,6 +18,8 @@ PWA éducatives pour les enfants de Wael, tablette Android, hors-ligne, animatio
 - Toute ressource externe est notée avec sa licence dans `assets/LICENSES.md`. Aucune marque / vraie star / IP tierce.
 - UI enfant : cibles ≥ 64 px, feedback < 50 ms, n'animer que transform/opacity, 60 fps sur tablette.
 
+- Fin de tâche : arrêter tout serveur lancé (vite dev/preview, hyperframes preview, Chrome headless) — un vite dev oublié a tourné 17 h à 88 % CPU.
+
 ## State
 
 - 2026-10-09 : specs écrites, HyperFrames installé (plugin projet). Fondations en cours.
